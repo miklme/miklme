@@ -18,10 +18,10 @@ development:
   adapter: mysql
   encoding: utf8
   reconnect: false
-  database: Miklme_development
+  database: miklme_development
   pool: 5
   username: root
-  password: 
+  password: fdbbf2gsb5
   host: localhost
 
 # Warning: The database defined as "test" will be erased and
@@ -34,7 +34,7 @@ test:
   database: Miklme_test
   pool: 5
   username: root
-  password: 
+  password: fdbbf2gsb5
   host: localhost
 
 production:
@@ -43,6 +43,6 @@ production:
   reconnect: false
   database: miklme_production
   pool: 5
-  username: miklme_miklme
+  username: miklme
   password: fdbbf2gsb5
 
