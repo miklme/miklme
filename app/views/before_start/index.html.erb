@@ -15,9 +15,15 @@
     <div id="sidebar">
       <div id="sidebar_top"></div>
       <div id="sidebar_text">
-        <h2>关于三体模型</h2>
-        <h2>关于价值</h2>
-        <h2>关于社会网络</h2>
+        <h2>
+          <%= link_to "关于三体模型",:popup => ['请稍等', 'height=300,width=300']%>
+        </h2>
+        <h2>
+          <%=link_to "关于价值",:popup => ['请稍等', 'height=300,width=600']%>
+        </h2>
+        <h2>
+          <%=link_to "关于社会网络", :popup => ['请稍等', 'height=300,width=600']%>
+        </h2>
       </div>
       <div id="sidebar_bottom"></div>
     </div>

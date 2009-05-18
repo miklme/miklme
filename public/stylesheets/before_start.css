@@ -21,6 +21,7 @@ a:hover { text-decoration:none;}
     font-size: 14px;
     line-height: 20px;
 }
+
 #text p { margin:7px 0 7px 0;}
 #text li {background:url(../images/li.gif) no-repeat 0px 7px;}
 #sidebar {float:right; width:227px; background-color:#0b0e10; margin:50px 10px 0 0;

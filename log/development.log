@@ -7275,3 +7275,687 @@ ActionController::RoutingError (No route matches "/images/li.gif" with {:method=
   
 
 Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 21:01:06) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 21:01:06) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#about_sns (for 127.0.0.1 at 2009-05-18 21:01:09) [GET]
+  Parameters: {"action"=>"about_sns", "controller"=>"before_start"}
+
+ActionController::UnknownAction (No action responded to about_sns. Actions: ):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 21:01:53) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 21:01:53) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#about_three_body (for 127.0.0.1 at 2009-05-18 21:01:53) [GET]
+  Parameters: {"action"=>"about_three_body", "controller"=>"before_start", "message"=>"sdf"}
+
+ActionController::UnknownAction (No action responded to about_three_body. Actions: ):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 21:03:38) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 21:03:38) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#about_three_body (for 127.0.0.1 at 2009-05-18 21:03:38) [GET]
+  Parameters: {"popup"=>["请稍等", "height=300,width=600"], "action"=>"about_three_body", "controller"=>"before_start"}
+
+ActionController::UnknownAction (No action responded to about_three_body. Actions: ):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 21:04:07) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 21:04:08) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 21:04:08) [GET]
+  Parameters: {"popup"=>["请稍等", "height=300,width=600"], "action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/?popup%5B%5D=%E8%AF%B7%E7%A8%8D%E7%AD%89&popup%5B%5D=height%3D300%2Cwidth%3D600]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 21:04:08) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 21:04:10) [GET]
+  Parameters: {"popup"=>["请稍等", "height=300,width=600"], "action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/?popup%5B%5D=%E8%AF%B7%E7%A8%8D%E7%AD%89&popup%5B%5D=height%3D300%2Cwidth%3D600]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 21:04:10) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 21:04:12) [GET]
+  Parameters: {"popup"=>["请稍等", "height=300,width=600"], "action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/?popup%5B%5D=%E8%AF%B7%E7%A8%8D%E7%AD%89&popup%5B%5D=height%3D300%2Cwidth%3D600]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 21:04:12) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 21:04:13) [GET]
+  Parameters: {"popup"=>["请稍等", "height=300,width=600"], "action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 5ms (View: 2, DB: 0) | 200 OK [http://localhost/?popup%5B%5D=%E8%AF%B7%E7%A8%8D%E7%AD%89&popup%5B%5D=height%3D300%2Cwidth%3D600]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 21:04:13) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 21:06:39) [GET]
+  Parameters: {"popup"=>["请稍等", "height=300,width=600"], "action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/?popup%5B%5D=%E8%AF%B7%E7%A8%8D%E7%AD%89&popup%5B%5D=height%3D300%2Cwidth%3D600]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 21:06:40) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 21:06:42) [GET]
+  Parameters: {"query"=>"ruby on rails"}
+
+ActionController::RoutingError (No route matches "/searches" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 21:07:04) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 21:07:06) [GET]
+  Parameters: {"popup"=>["请稍等", "height=300,width=600"], "action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/?popup%5B%5D=%E8%AF%B7%E7%A8%8D%E7%AD%89&popup%5B%5D=height%3D300%2Cwidth%3D600]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 21:07:06) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#about_value (for 127.0.0.1 at 2009-05-18 21:07:07) [GET]
+  Parameters: {"popup"=>["请稍等", "height=300,width=600"], "action"=>"about_value", "controller"=>"before_start"}
+
+ActionController::UnknownAction (No action responded to about_value. Actions: ):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#about_sns (for 127.0.0.1 at 2009-05-18 21:07:10) [GET]
+  Parameters: {"popup"=>["请稍等", "height=300,width=600"], "action"=>"about_sns", "controller"=>"before_start"}
+
+ActionController::UnknownAction (No action responded to about_sns. Actions: ):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 21:07:13) [GET]
+  Parameters: {"popup"=>["请稍等", "height=300,width=600"], "action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/?popup%5B%5D=%E8%AF%B7%E7%A8%8D%E7%AD%89&popup%5B%5D=height%3D300%2Cwidth%3D600]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 21:07:13) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 21:07:30) [GET]
+  Parameters: {"popup"=>["请稍等", "height=300,width=600"], "action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/?popup%5B%5D=%E8%AF%B7%E7%A8%8D%E7%AD%89&popup%5B%5D=height%3D300%2Cwidth%3D600]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 21:07:30) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 21:07:31) [GET]
+  Parameters: {"popup"=>["请稍等", "height=300,width=600"], "action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/?popup%5B%5D=%E8%AF%B7%E7%A8%8D%E7%AD%89&popup%5B%5D=height%3D300%2Cwidth%3D600]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 21:07:31) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 21:07:33) [GET]
+  Parameters: {"popup"=>["请稍等", "height=300,width=600"], "action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/?popup%5B%5D=%E8%AF%B7%E7%A8%8D%E7%AD%89&popup%5B%5D=height%3D300%2Cwidth%3D600]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 21:07:33) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 21:41:48) [GET]
+  Parameters: {"popup"=>["请稍等", "height=300,width=600"], "action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/?popup%5B%5D=%E8%AF%B7%E7%A8%8D%E7%AD%89&popup%5B%5D=height%3D300%2Cwidth%3D600]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 21:41:48) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 21:41:50) [GET]
+  Parameters: {"popup"=>["请稍等", "height=300,width=600"], "action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/?popup%5B%5D=%E8%AF%B7%E7%A8%8D%E7%AD%89&popup%5B%5D=height%3D300%2Cwidth%3D600]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 21:41:50) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 21:41:52) [GET]
+  Parameters: {"popup"=>["请稍等", "height=300,width=600"], "action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/?popup%5B%5D=%E8%AF%B7%E7%A8%8D%E7%AD%89&popup%5B%5D=height%3D300%2Cwidth%3D600]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 21:41:52) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 21:41:59) [GET]
+  Parameters: {"popup"=>["请稍等", "height=300,width=600"], "action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/?popup%5B%5D=%E8%AF%B7%E7%A8%8D%E7%AD%89&popup%5B%5D=height%3D300%2Cwidth%3D600]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 21:41:59) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 21:45:11) [GET]
+  Parameters: {"popup"=>["请稍等", "height=300,width=600"], "action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.4ms)
+Completed in 13ms (View: 11, DB: 0) | 200 OK [http://localhost/?popup%5B%5D=%E8%AF%B7%E7%A8%8D%E7%AD%89&popup%5B%5D=height%3D300%2Cwidth%3D600]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 21:45:11) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 21:45:12) [GET]
+
+ActionController::RoutingError (No route matches "/about_three_body.html.erb" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 21:45:21) [GET]
+
+ActionController::RoutingError (No route matches "/about_three_body.html.erb" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 21:45:31) [GET]
+
+ActionController::RoutingError (No route matches "/about_three_body.html.erb" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 21:46:14) [GET]
+  Parameters: {"popup"=>["请稍等", "height=300,width=600"], "action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/?popup%5B%5D=%E8%AF%B7%E7%A8%8D%E7%AD%89&popup%5B%5D=height%3D300%2Cwidth%3D600]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 21:46:15) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 21:46:15) [GET]
+
+ActionController::RoutingError (No route matches "/before_start/about_three_body.html.erb" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 21:46:23) [GET]
+
+ActionController::RoutingError (No route matches "/before_start/about_three_body.html.erb" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 21:48:16) [GET]
+
+ActionController::RoutingError (No route matches "/before_start/about_three_body.html.erb" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 21:48:23) [GET]
+
+ActionController::RoutingError (No route matches "/before_start/about_three_body.html.erb" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 21:48:43) [GET]
+  Parameters: {"popup"=>["请稍等", "height=300,width=600"], "action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/?popup%5B%5D=%E8%AF%B7%E7%A8%8D%E7%AD%89&popup%5B%5D=height%3D300%2Cwidth%3D600]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 21:48:43) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#about_three_body (for 127.0.0.1 at 2009-05-18 21:48:45) [GET]
+  Parameters: {"popup"=>["请稍等", "height=300,width=300"], "action"=>"about_three_body", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/about_three_body
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/before_start/about_three_body?popup%5B%5D=%E8%AF%B7%E7%A8%8D%E7%AD%89&popup%5B%5D=height%3D300%2Cwidth%3D300]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#about_three_body (for 127.0.0.1 at 2009-05-18 21:48:49) [GET]
+  Parameters: {"popup"=>["请稍等", "height=300,width=300"], "action"=>"about_three_body", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/about_three_body
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/before_start/about_three_body?popup%5B%5D=%E8%AF%B7%E7%A8%8D%E7%AD%89&popup%5B%5D=height%3D300%2Cwidth%3D300]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 21:49:23) [GET]
+  Parameters: {"popup"=>["请稍等", "height=300,width=600"], "action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/?popup%5B%5D=%E8%AF%B7%E7%A8%8D%E7%AD%89&popup%5B%5D=height%3D300%2Cwidth%3D600]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 21:49:24) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#about_three_body (for 127.0.0.1 at 2009-05-18 21:49:26) [GET]
+  Parameters: {"popup"=>["请稍等", "height=300,width=300"], "action"=>"about_three_body", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/about_three_body
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/before_start/about_three_body?popup%5B%5D=%E8%AF%B7%E7%A8%8D%E7%AD%89&popup%5B%5D=height%3D300%2Cwidth%3D300]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 21:51:34) [GET]
+  Parameters: {"popup"=>["请稍等", "height=300,width=600"], "action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Rendered before_start/_main_footer (0.1ms)
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/?popup%5B%5D=%E8%AF%B7%E7%A8%8D%E7%AD%89&popup%5B%5D=height%3D300%2Cwidth%3D600]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 21:51:34) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 21:51:37) [GET]
+  Parameters: {"popup"=>["请稍等", "height=300,width=600"], "action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Rendered before_start/_main_footer (0.1ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/?popup%5B%5D=%E8%AF%B7%E7%A8%8D%E7%AD%89&popup%5B%5D=height%3D300%2Cwidth%3D600]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 21:51:37) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 21:53:40) [GET]
+  Parameters: {"popup"=>["请稍等", "height=300,width=600"], "action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/?popup%5B%5D=%E8%AF%B7%E7%A8%8D%E7%AD%89&popup%5B%5D=height%3D300%2Cwidth%3D600]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 21:53:40) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#about_three_body (for 127.0.0.1 at 2009-05-18 21:53:41) [GET]
+  Parameters: {"popup"=>["请稍等", "height=300,width=300"], "action"=>"about_three_body", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/about_three_body
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/before_start/about_three_body?popup%5B%5D=%E8%AF%B7%E7%A8%8D%E7%AD%89&popup%5B%5D=height%3D300%2Cwidth%3D300]
