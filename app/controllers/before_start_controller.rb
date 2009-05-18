@@ -1,0 +1,2 @@
+class BeforeStartController < ApplicationController
+end

@@ -5475,3 +5475,1803 @@ ActionController::RoutingError (No route matches "/images/li.gif" with {:method=
   
 
 Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 17:09:12) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 17:09:12) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/h1_bckg.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 17:09:12) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 17:24:06) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.4ms)
+Completed in 16ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 17:24:06) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/h1_bckg.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 17:24:06) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 17:28:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 17:28:41) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 17:29:51) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 17:29:51) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 17:38:52) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 17:38:52) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 17:39:21) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 17:39:21) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 17:46:52) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 17:46:52) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 17:48:17) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 17:48:17) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 17:49:13) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 17:49:13) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 17:49:30) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 29ms (View: 27, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 17:49:30) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 17:50:00) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 17:50:00) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 17:51:37) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 17:51:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 17:51:41) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 17:56:33) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 17:56:34) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 18:01:08) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 18:01:57) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 19:47:28) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.4ms)
+Completed in 16ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 19:47:28) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 19:51:46) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 19:51:46) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 19:53:28) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 19:53:28) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 19:54:00) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 19:54:00) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 19:54:37) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 19:54:38) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 19:54:40) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 19:54:40) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 19:55:09) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 19:55:09) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 19:56:17) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 19:56:17) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 19:57:24) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 19:57:24) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 19:59:57) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 19:59:57) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:00:42) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:00:42) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:03:13) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:03:13) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:03:59) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:03:59) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:04:51) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:04:52) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:05:25) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:05:25) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:05:27) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:05:27) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:05:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:05:41) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:06:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:06:22) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:07:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:07:22) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:07:42) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:07:42) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:07:43) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:07:43) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:08:08) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:08:08) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:08:57) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:08:57) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:09:45) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:09:45) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:14:23) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:14:23) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:15:42) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:15:42) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:16:23) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:16:23) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:16:44) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:16:44) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:16:52) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:16:53) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:17:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:17:41) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:17:42) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:17:42) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:19:07) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:19:07) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:21:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:21:41) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:21:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 5ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:21:42) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:24:47) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.4ms)
+Completed in 44ms (View: 42, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:24:47) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:25:17) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:25:17) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:25:37) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 4ms (View: 2, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:25:37) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:25:38) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:25:38) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:25:39) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:25:39) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:25:39) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:25:55) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 30ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:25:55) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:25:57) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:25:57) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:25:57) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:25:57) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:26:26) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:26:26) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:26:28) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:26:29) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:26:29) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:26:29) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:26:52) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:26:52) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:28:08) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:28:08) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:28:54) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:28:54) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:29:45) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:29:46) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:29:57) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:29:57) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:30:05) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:30:05) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:30:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:30:41) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:31:50) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 42ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:31:50) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:33:13) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:33:13) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:33:26) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:33:26) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:34:14) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:34:15) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (2.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:35:00) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 7ms (View: 5, DB: 3) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:35:00) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:35:01) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:35:02) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:36:07) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:36:07) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:36:35) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:36:35) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:38:05) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 42ms (View: 40, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:38:05) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:38:44) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:38:44) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:38:59) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:38:59) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:40:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:40:22) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:40:35) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:40:36) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:40:42) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:40:42) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:40:47) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:40:47) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:42:11) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:42:11) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:47:00) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 40ms (View: 38, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:47:00) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:48:04) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:48:04) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:48:47) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.1ms)
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:48:48) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:49:38) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.4ms)
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:49:38) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:49:55) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.4ms)
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:49:56) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BeforeStartController#index (for 127.0.0.1 at 2009-05-18 20:50:05) [GET]
+  Parameters: {"action"=>"index", "controller"=>"before_start"}
+Rendering template within layouts/before_start
+Rendering before_start/index
+Rendered before_start/_main_footer (0.4ms)
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-18 20:50:05) [GET]
+
+ActionController::RoutingError (No route matches "/images/li.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
