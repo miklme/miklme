@@ -22,13 +22,13 @@
       <div id="sidebar_top"></div>
       <div id="sidebar_text">
         <h2>
-          <%= link_to_remote "关于三体模型"%>
+          <%= link_to_remote "关于三体模型",:url=>{:action=>"about_three_body"}%>
         </h2>
         <h2>
-          <%=link_to_remote "关于价值"%>
+          <%=link_to_remote "关于价值",:url=>{:action=>"about_value"}%>
         </h2>
         <h2>
-          <%=link_to_remote "关于社会网络"%>
+          <%=link_to_remote "关于普遍的社会网络",:url=>{:action=>"about_sns"}%>
         </h2>
       </div>
       <div id="sidebar_bottom"></div>
