@@ -40,6 +40,7 @@ doc\:clobber_rails=Remove rdoc products
 doc\:guides=Generate Rails guides
 doc\:plugins=Generate documentation for all installed plugins
 doc\:plugins\:exception_notification=Generate documentation for the exception_notification plugin
+doc\:plugins\:growl4rails=Generate documentation for the growl4rails plugin
 doc\:plugins\:restful_authentication=Generate documentation for the restful_authentication plugin
 doc\:plugins\:white_list=Generate documentation for the white_list plugin
 doc\:rails=Build the RDOC HTML Files
