@@ -1,6 +1,0 @@
-set :user, "miklme"
-set :domain, "miklme@mikl.me"
-set :application, "miklme"
-set :repository, "git@github.com:miklme/miklme.git"
-set :scm,"git"
-set :branch,"master"
