@@ -1,3 +1,4 @@
+auth\:gen\:site_key=Generates config/initializers/site_keys.rb
 db\:abort_if_pending_migrations=Raises an error if there are pending migrations
 db\:charset=Retrieves the charset for the current environment's database
 db\:collation=Retrieves the collation for the current environment's database
@@ -39,8 +40,10 @@ doc\:clobber_plugins=Remove plugin documentation
 doc\:clobber_rails=Remove rdoc products
 doc\:guides=Generate Rails guides
 doc\:plugins=Generate documentation for all installed plugins
+doc\:plugins\:dcrec1-restful-authentication-i18n=Generate documentation for the dcrec1-restful-authentication-i18n plugin
 doc\:plugins\:exception_notification=Generate documentation for the exception_notification plugin
 doc\:plugins\:growl4rails=Generate documentation for the growl4rails plugin
+doc\:plugins\:newrelic_rpm=Generate documentation for the newrelic_rpm plugin
 doc\:plugins\:restful_authentication=Generate documentation for the restful_authentication plugin
 doc\:plugins\:white_list=Generate documentation for the white_list plugin
 doc\:rails=Build the RDOC HTML Files
@@ -56,6 +59,7 @@ gems\:unpack=Unpacks all required gems into vendor/gems.
 gems\:unpack\:dependencies=Unpacks all required gems and their dependencies into vendor/gems.
 log\:clear=Truncates all *.log files in log/ to zero bytes
 middleware=Prints out your Rack middleware stack
+newrelic\:install=install a default config/newrelic.yml file
 notes=Enumerate all annotations
 notes\:custom=Enumerate a custom annotation, specify with ANNOTATION=WTFHAX
 notes\:fixme=Enumerate all FIXME annotations
@@ -79,6 +83,7 @@ test=Run all unit, functional and integration tests
 test\:benchmark=Run tests for benchmarkdb:test:prepare / Benchmark the performance tests
 test\:functionals=Run tests for functionalsdb:test:prepare / Run the functional tests in test/functional
 test\:integration=Run tests for integrationdb:test:prepare / Run the integration tests in test/integration
+test\:newrelic=Run tests for newrelic / Run the unit tests for the Agent
 test\:plugins=Run tests for pluginsenvironment / Run the plugin tests in vendor/plugins/*/**/test (or specify with PLUGIN=name)
 test\:profile=Run tests for profiledb:test:prepare / Profile the performance tests
 test\:recent=Run tests for recentdb:test:prepare / Test recent changes

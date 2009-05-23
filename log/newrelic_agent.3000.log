@@ -1,0 +1,16 @@
+# Logfile created on Sat May 23 18:38:06 +0800 2009 by /
+[05/23/09 18:38:06 (15738)] INFO : Runtime environment: mongrel
+[05/23/09 18:38:06 (15738)] INFO : Error collector is enabled in agent config
+[05/23/09 18:38:06 (15738)] INFO : Transaction tracing is enabled in agent config
+[05/23/09 18:38:06 (15738)] INFO : New Relic RPM Agent 2.8.11 Initialized: pid = 15738, handler = mongrel
+[05/23/09 18:38:06 (15738)] INFO : Agent Log is found in /home/michael/miklme/log/newrelic_agent.3000.log
+[05/23/09 21:27:27 (23325)] INFO : Runtime environment: mongrel
+[05/23/09 21:27:27 (23325)] INFO : Error collector is enabled in agent config
+[05/23/09 21:27:27 (23325)] INFO : Transaction tracing is enabled in agent config
+[05/23/09 21:27:27 (23325)] INFO : New Relic RPM Agent 2.8.11 Initialized: pid = 23325, handler = mongrel
+[05/23/09 21:27:27 (23325)] INFO : Agent Log is found in /home/michael/miklme/log/newrelic_agent.3000.log
+[05/23/09 22:12:03 (26321)] INFO : Runtime environment: mongrel
+[05/23/09 22:12:03 (26321)] INFO : Error collector is enabled in agent config
+[05/23/09 22:12:03 (26321)] INFO : Transaction tracing is enabled in agent config
+[05/23/09 22:12:03 (26321)] INFO : New Relic RPM Agent 2.8.11 Initialized: pid = 26321, handler = mongrel
+[05/23/09 22:12:03 (26321)] INFO : Agent Log is found in /home/michael/miklme/log/newrelic_agent.3000.log

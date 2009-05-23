@@ -1,6 +1,0 @@
-# TODO Operate on the page object
-page.visual_effect(:fade,"text")
-page.delay(1.2) do
-  page.replace_html "text", :partial=>"michael"
-  page.visual_effect(:appear,"text")
-end
