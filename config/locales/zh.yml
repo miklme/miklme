@@ -1,4 +1,4 @@
-"zh-CN":
+"zh":
   date:
     formats:
       default: "%Y-%m-%d"
@@ -102,9 +102,9 @@
     errors:
       template:
         header:
-          one: "有 1 个错误发生导致{{model}}无法被保存。"
-          other: "有 {{count}} 个错误发生导致{{model}}无法被保存。"
-        body: "如下字段出现错误："
+          one: "有 1 个小问题.."
+          other: "有几个小问题.."
+        body: "以下的几个地方出了问题："
       messages:
         inclusion: "不包含于列表中"
         exclusion: "是保留关键字"

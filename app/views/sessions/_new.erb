@@ -1,0 +1,16 @@
+<h2>登入</h2>
+
+<% form_tag session_path do -%>
+  <p><%= label_tag 'email','登录邮箱名' %><br />
+  <%= text_field_tag 'email', @login %></p>
+
+  <p><%= label_tag 'password','密码' %><br/>
+  <%= password_field_tag 'password', nil %></p>
+
+
+  <p> <%= check_box_tag 'remember_me', '1', @remember_me %>
+    <%= label_tag 'remember_me', '在这台电脑上记住我' %>
+  </p>
+
+  <p><%= submit_tag '登录' %></p>
+<% end -%>

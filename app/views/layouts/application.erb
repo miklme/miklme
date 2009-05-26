@@ -9,30 +9,30 @@
     </title>
   </head>
   <body>
-    <div id="container">
-      <div id="header">
-        <div id="logo">
-          <%= link_to(image_tag('logo.png',:alt=>"Mikl.me",:mouse_over=>"images/logo_mouse_over.png"),"/")%>
-        </div>
-        <% if logged_in? -%>
-          <%= link_to 'Logout', session_path, :method => :delete %>
-        <% else -%>
-          <%= link_to 'Login', new_session_path %>
-        <% end -%>
+
+    <div id="header">
+      <div id="logo">
+        <%= link_to(image_tag('logo.png',:alt=>"Mikl.me",:mouse_over=>"images/logo_mouse_over.png"),"/")%>
       </div>
-      <div id="content">
-        <%if flash[:notice]-%>
-          <div id="notice"><%=flash[:notice]%>
-          </div>
-        <%end%>
-        <%if flash[:error] -%>
-          <div id="error"><%=flash[:error]%>
-          </div>
-        <%end%>
-      </div>
+      <% if logged_in? -%>
+        <%= link_to '登出', session_path, :method => :delete %>
+      <%end%>
     </div>
-
-    <%=@content_for_layout%>
-
+    <div id="notice">
+      <%if flash[:notice]-%>
+        <div id="notice"><%=flash[:notice]%>
+        </div>
+      <%end%>
+      <%if flash[:error] -%>
+        <div id="error"><%=flash[:error]%>
+        </div>
+      <%end%>
+    </div>
+    <div id="body">
+      <%=yield :layout%>
+    </div>
+    <div id="footer">
+      <%=render :partial=>"sessions/footer"%>
+    </div>
   </body>
 </html>

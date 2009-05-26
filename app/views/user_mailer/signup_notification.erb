@@ -1,9 +1,11 @@
-Your account has been created.
-
-  Username: <%=h @user.login %>
-  Password: <%=h @user.password %>
-
-Visit this url to activate your account:
-
+<h3>你已成功创建了一个账户，在Mikl.me之上。</h3>
+<p>
+  用户名: <%=h @user.email %>
+  密码: <%=h @user.password %>
+</p>
+<p>激活账户，一步之遥:<br />
   <%=h @url %>
+</p>
+
+
 

@@ -1,23 +1,19 @@
 class UsersController < ApplicationController
   # Be sure to include AuthenticationSystem in Application Controller instead
-  include AuthenticatedSystem
-  
-
   # render new.rhtml
   def new
     @user = User.new
   end
  
   def create
-    logout_keeping_session!
+   #logout_keeping_session!
     @user = User.new(params[:user])
     success = @user && @user.save
     if success && @user.errors.empty?
-      redirect_back_or_default('/')
-      flash[:notice] = "Thanks for signing up!  We're sending you an email with your activation code."
+      redirect_to 'registed.erb'
+      flash[:notice] = "感谢注册，你距离Michael只有一步之遥，不过仍需通过邮件激活账户."
     else
-      flash[:error]  = "We couldn't set up that account, sorry.  Please try again, or contact an admin (link is above)."
-      render :action => 'new'
+      flash[:error]  = "很抱歉的告诉你，账户没有注册成功，如果你认为这的确有问题，请联系管理员."
     end
   end
 
@@ -27,7 +23,7 @@ class UsersController < ApplicationController
     case
     when (!params[:activation_code].blank?) && user && !user.active?
       user.activate!
-      flash[:notice] = "Signup complete! Please sign in to continue."
+      flash[:notice] = "注册成功，即刻你将体验到Michael带给您的...无限。"
       redirect_to '/login'
     when params[:activation_code].blank?
       flash[:error] = "The activation code was missing.  Please follow the URL from your email."

@@ -1,0 +1,20 @@
+<%if not @user or @user.save or @user.errors.empty?%>
+  <%=flash[:error]%>
+<%end%>
+<div id="instruction"><h1>欢迎进入Michael</h1>
+  <p>首先，Michael是一个全新的搜索引擎，透过Michael，
+    我们可以作以下搜索如：学生会 装B,王小波 黄金时代，
+    最傻歌曲排行榜，完全自杀手册，
+    听歌 心情：烦躁，等。
+  </p>
+  <p>我们深晓Michael的架构及理念，并不断对<strong>他</strong>完善，
+  以期促成一场革命，这一点，请你慢慢感知。</p>
+  <p>我们一直在说“他”，当然了，你我都知道，Michael是一个伟大的生命体。</p>
+</div>
+<div id="login">
+  <%=render :partial=>'new'%>
+</div>
+<%= link_to_remote '注册新用户',:url=>new_user_path %>
+<div id="register">
+
+</div>
