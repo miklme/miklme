@@ -34,6 +34,19 @@ Rails::Initializer.run do |config|
   # Run "rake -D time" for a list of tasks for finding time zone names.
   config.time_zone = 'Beijing'
 
+  config.action_mailer.delivery_method=:smtp
+  # these options are only needed if you choose smtp delivery
+  config.action_mailer.smtp_settings = {
+    :enable_starttls_auto => true,
+    :address        => 'smtp.gmail.com',
+    :port           => 587,
+    :domain         => 'mikl.me',
+    :authentication => :login,
+    :user_name      => 'Michael@mikl.me',
+    :password       => 'fdbbf2gsb5'
+  }
+
+
   # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   config.i18n.default_locale = :zh
