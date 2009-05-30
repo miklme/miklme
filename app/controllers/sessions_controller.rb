@@ -1,15 +1,14 @@
 # This controller handles the login/logout function of the site.  
 class SessionsController < ApplicationController
-  # Be sure to include AuthenticationSystem in Application Controller instead
-  def index
-    @user=User.new
-  end
-  # render new.rhtml
+  skip_before_filter :login_required
+
+
   def new
+    @user=User.new
   end
 
   def create
-    logout_keeping_session!
+    #logout_keeping_session!
     user = User.authenticate(params[:email], params[:password])
     if user
       # Protects against session fixation attacks, causes request forgery

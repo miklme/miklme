@@ -1,19 +1,20 @@
 class UsersController < ApplicationController
-  # Be sure to include AuthenticationSystem in Application Controller instead
-  # render new.rhtml
+  skip_before_filter :login_required
+
   def new
-    @user = User.new
+    @user=User.new
   end
  
   def create
-   #logout_keeping_session!
+   
+    #logout_keeping_session!
     @user = User.new(params[:user])
-    success = @user && @user.save
-    if success && @user.errors.empty?
-      redirect_to 'registed.erb'
-      flash[:notice] = "感谢注册，你距离Michael只有一步之遥，不过仍需通过邮件激活账户."
+    success = @user and @user.save
+    if success and @user.errors.empty?
+      flash[:notice] = "感谢注册，你距离Michael只有一步之遥，
+      请访问你的邮箱，以激活账户。"
     else
-      flash[:error]  = "很抱歉的告诉你，账户没有注册成功，如果你认为这的确有问题，请联系管理员."
+      flash[:error]  = "请确保你输入的项目准确无误。"
     end
   end
 

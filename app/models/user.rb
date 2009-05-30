@@ -62,9 +62,9 @@ class User < ActiveRecord::Base
 
   protected
     
-    def make_activation_code
-        self.activation_code = self.class.make_token
-    end
+  def make_activation_code
+    self.activation_code = self.class.make_token
+  end
 
 
 end

@@ -67,7 +67,7 @@
     currency:
       format:
         format: "%u %n"
-        unit: "CN¥"
+        unit: "¥"
         separator: "."
         delimiter: ","
         precision: 2

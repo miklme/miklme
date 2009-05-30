@@ -111,7 +111,7 @@ input{ display:inline;
     border-right-width: 1px;
     background-color: #BED7E6;
 }
-input:hover {    background-color: #fefefe;
+input:hover,input:focus {    background-color: #fefefe;
 }
 #register {
     text-align: right;

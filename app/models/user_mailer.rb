@@ -1,14 +1,12 @@
 class UserMailer < ActionMailer::Base
-  def signup_notification(user)
+  def activation(user)
     setup_email(user)
-    @subject    += '请激活你的账户'
     @body[:url]  = "http://mikl.me/activate/#{user.activation_code}"
   
   end
   
-  def activation(user)
+  def signup_notification(user)
     setup_email(user)
-    @subject    += '账户已成功激活，即将体验Michael的世界。'
     @body[:url]  = "http://mikl.me/"
   end
   

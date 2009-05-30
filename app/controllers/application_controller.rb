@@ -3,4 +3,11 @@
 
 class ApplicationController < ActionController::Base
   include AuthenticatedSystem
+  before_filter :login_required
+
+  def login_required
+    if not logged_in?
+      redirect_to new_session_path
+    end
+  end
 end
