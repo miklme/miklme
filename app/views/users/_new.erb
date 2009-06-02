@@ -9,17 +9,19 @@
 <h2>从这里开始..</h2>
 <% @user.password = @user.password_confirmation = nil %>
 
-<%= error_messages_for :user %>
 <% form_for @user do |f| -%>
+  <p><%=flash[:error]%></p>
   <p><%= f.label :email,'请输入你的Email，用于登入Mikl.me' %><br/>
   <%= f.text_field :email %></p>
 
-  <p><%= f.label :password,'进入Michael的密码' %><br/>
+  <p><%= f.label :password,'进入Michael的密码,6-20位' %><br/>
   <%= f.password_field :password %></p>
 
   <p><%= f.label :password_confirmation, '确认密码' %><br/>
   <%= f.password_field :password_confirmation %></p>
 
-  <p><%= submit_tag '注册（需邮件确认）' %></p>
+
+  <p><%=submit_to_remote 'user','注册（需邮件确认)',:action=>'create'%>
+  </p>
 <% end -%>
 

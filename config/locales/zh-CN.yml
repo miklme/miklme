@@ -1,4 +1,7 @@
-"zh":
+# Chinese (China) translations for Ruby on Rails 
+# by tsechingho (http://github.com/tsechingho)
+
+"zh-CN":
   date:
     formats:
       default: "%Y-%m-%d"
@@ -9,7 +12,7 @@
     month_names: [~, 一月, 二月, 三月, 四月, 五月, 六月, 七月, 八月, 九月, 十月, 十一月, 十二月]
     abbr_month_names: [~, 1月, 2月, 3月, 4月, 5月, 6月, 7月, 8月, 9月, 10月, 11月, 12月]
     order: [ :year, :month, :day ]
-
+  
   time:
     formats:
       default: "%Y年%b%d日 %A %H:%M:%S %Z"
@@ -17,19 +20,19 @@
       long: "%Y年%b%d日 %H:%M"
     am: "上午"
     pm: "下午"
-
+  
   datetime:
     distance_in_words:
       half_a_minute: "半分钟"
       less_than_x_seconds:
-        one: "一秒内"
-        other: "少于 {{count}} 秒"
+        one: "不到一秒"
+        other: "不到 {{count}} 秒"
       x_seconds:
         one: "一秒"
         other: "{{count}} 秒"
       less_than_x_minutes:
-        one: "一分钟内"
-        other: "少于 {{count}} 分钟"
+        one: "不到一分钟"
+        other: "不到 {{count}} 分钟"
       x_minutes:
         one: "一分钟"
         other: "{{count}} 分钟"
@@ -49,8 +52,8 @@
         one: "大约一年"
         other: "大约 {{count}} 年"
       over_x_years:
-        one: "一年以上"
-        other: "{{count}} 年以上"
+        one: "一年多"
+        other: "{{count}} 年多"
     prompts:
       year:   "年"
       month:  "月"
@@ -58,7 +61,7 @@
       hour:   "时"
       minute: "分"
       second: "秒"
-
+  
   number:
     format:
       separator: "."
@@ -67,7 +70,7 @@
     currency:
       format:
         format: "%u %n"
-        unit: "¥"
+        unit: "CN¥"
         separator: "."
         delimiter: ","
         precision: 2
@@ -91,20 +94,20 @@
           mb: "MB"
           gb: "GB"
           tb: "TB"
-
+  
   support:
     array:
       words_connector: ", "
       two_words_connector: " 和 "
       last_word_connector: ", 和 "
-
+  
   activerecord:
     errors:
       template:
         header:
-          one: "有 1 个小问题.."
-          other: "有几个小问题.."
-        body: "以下的几个地方出了问题："
+          one: "出现了一个小问题.."
+          other: "出现了几个小问题.."
+        body: "几个地方出错了："
       messages:
         inclusion: "不包含于列表中"
         exclusion: "是保留关键字"

@@ -4,17 +4,21 @@ class UsersController < ApplicationController
   def new
     @user=User.new
   end
- 
   def create
    
     #logout_keeping_session!
     @user = User.new(params[:user])
-    success = @user and @user.save
-    if success and @user.errors.empty?
-      flash[:notice] = "感谢注册，你距离Michael只有一步之遥，
+ 
+     respond_to do |format|
+      if @user.save
+        flash[:notice] = "感谢注册，你距离Michael只有一步之遥，
       请访问你的邮箱，以激活账户。"
-    else
-      flash[:error]  = "请确保你输入的项目准确无误。"
+        format.html { redirect_to(@article) }
+        format.xml  { render :xml => @article, :status => :created, :location => @article }
+      else
+        format.html { render "_new_user_error" }
+        format.xml  { render :xml => @article.errors, :status => :unprocessable_entity }
+      end
     end
   end
 

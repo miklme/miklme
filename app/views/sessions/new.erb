@@ -1,7 +1,7 @@
 <body>
   <div id="header">
     <div id="logo"> <div id="login">
-        <% form_tag login_path do -%>
+        <% form_tag new_session_path do -%>
   <p id="login_email"><%= label_tag 'email','登录邮箱名'%><br />
   <%= text_field_tag 'email', @login %></p>
 
@@ -17,7 +17,7 @@
 <% end -%>
 
       </div>
-    <%=link_to '欢迎进入Michael',login_path%> </div>
+    <%=link_to '欢迎进入Michael',new_session_path%> </div>
     <%if logged_in? -%>
       <%= link_to '登出', logout_path %>
     <%end%>
@@ -52,7 +52,7 @@
 
       </div>
       <div id="register">
-        <%= link_to_remote '注册新用户',:url=>new_user_path %>
+        <%=render new_user_path %>
       </div>
     </div>
     <!-- footer -->

@@ -1,0 +1,2 @@
+# TODO Operate on the page object
+page.insert_html(:bottom,'new_user',:partial=>'new_user_error')

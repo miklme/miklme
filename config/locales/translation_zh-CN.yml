@@ -1,0 +1,16 @@
+zh-CN: 
+  activerecord: 
+    models: 
+      user: "用户"  #g
+
+    attributes: 
+      user: 
+        name: "名字"  #g
+        email: "电邮"  #g
+        crypted_password: "Crypted密码"  #g
+        salt: "盐"  #g
+        remember_token: "记住令牌"  #g
+        remember_token_expires_at: "记住凭证到期"  #g
+        activation_code: "激活码"  #g
+        activated_at: "激活"  #g
+

@@ -1,2 +1,0 @@
-# TODO Operate on the page object
-page.replace_html :register, :partial=>'new'
