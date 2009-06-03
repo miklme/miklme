@@ -1,3 +1,5 @@
+<%@page_title='( Mikl.me )'%>
+
 <body>
   <div id="header">
     <div id="logo"> <div id="login">
@@ -21,9 +23,7 @@
     <%if logged_in? -%>
       <%= link_to '登出', logout_path %>
     <%end%>
-    <%if not @user or @user.save or @user.errors.empty?%>
-      <%=flash[:error]%>
-    <%end%>
+  <%=flash[:notice]%>
     <!--
    <div id="menu">
       <ul>
@@ -52,7 +52,7 @@
 
       </div>
       <div id="register">
-        <%=render new_user_path %>
+        <%=link_to '新用户注册',new_user_path %>
       </div>
     </div>
     <!-- footer -->

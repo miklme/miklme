@@ -10,3 +10,4 @@ function checkPresence(field) {
         new Insertion.After(field, content);
     }
 }
+

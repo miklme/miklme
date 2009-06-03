@@ -10,7 +10,8 @@
 <% @user.password = @user.password_confirmation = nil %>
 
 
-<% remote_form_for @user do |f| -%>
+<% form_for @user do |f| -%>
+  <p><%=f.error_messages %>
   <p><%= f.label :email,'请输入你的Email，用于登入Mikl.me' %><br/>
   <%= f.text_field :email %></p>
 
@@ -19,7 +20,7 @@
 
   <p><%= f.label :password_confirmation, '确认密码' %><br/>
   <%= f.password_field :password_confirmation %></p>
-  <p><%=f.submit '注册（需邮件确认)'%>
+  <p><%=f.submit '注册（需邮件确认)' %>
   </p>
 <% end -%>
 

@@ -15,8 +15,7 @@ class User < ActiveRecord::Base
 
   validates_length_of :password,:within=>6...20
 
-  before_create :make_activation_code
-
+  before_create :show_success_message,:make_activation_code
   # HACK HACK HACK -- how to do attr_accessible from here?
   # prevents a user from submitting a crafted form that bypasses activation
   # anything else you want your user to change should be added here.
@@ -63,5 +62,8 @@ class User < ActiveRecord::Base
     self.activation_code = self.class.make_token
   end
 
+  def show_success_message
+
+  end
 
 end
