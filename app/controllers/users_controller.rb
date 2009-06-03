@@ -8,14 +8,18 @@ class UsersController < ApplicationController
   def create
     #logout_keeping_session!
     @user = User.new(params[:user])
-    if @user.save
-      render :partial=>'user_created'
-      email=UserMailer.create_activation(@user)
-      email.set_content_type('text/html')
-      UserMailer.deliver(email)
-    else
-      redirect_to :back
+    respond_to do |format|
+      if @user.save
+        flash[:notice] = 'Article was successfully created.'
+        format.html { redirect_to(@user) }
+        email=UserMailer.create_activation(@user)
+        email.set_content_type('text/html')
+        UserMailer.deliver(email)
+      else
+        format.html { render :controller=>:sessions,:action=>:new }
+      end
     end
+     
   end
 
 
