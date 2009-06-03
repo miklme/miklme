@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    #logout_keeping_session!
+    session[:user_id]=nil
     @user = User.new(params[:user])
     respond_to do |format|
       if @user.save
