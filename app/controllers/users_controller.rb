@@ -13,6 +13,8 @@ class UsersController < ApplicationController
       email=UserMailer.create_activation(@user)
       email.set_content_type('text/html')
       UserMailer.deliver(email)
+    else
+      redirect_to :back
     end
   end
 

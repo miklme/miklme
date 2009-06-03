@@ -9,7 +9,6 @@
 <h2>从这里开始..</h2>
 <% @user.password = @user.password_confirmation = nil %>
 
-
 <% form_for @user do |f| -%>
   <p><%=f.error_messages %>
   <p><%= f.label :email,'请输入你的Email，用于登入Mikl.me' %><br/>
