@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   skip_before_filter :login_required
-
+  layout 'sessions'
   def new
     @user=User.new
   end
@@ -10,13 +10,14 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     respond_to do |format|
       if @user.save
-        flash[:notice] = 'Article was successfully created.'
-        format.html { redirect_to(@user) }
+        flash[:notice] = "感谢注册，你距离Michael只有一步之遥，
+    请访问你的邮箱#{@user.email}，以激活账户。"
+        format.html { redirect_to new_session_path }
         email=UserMailer.create_activation(@user)
         email.set_content_type('text/html')
         UserMailer.deliver(email)
       else
-        format.html { render :controller=>:sessions,:action=>:new }
+        format.html { render new_user_path,:layout=>'sessions' }
       end
     end
      
@@ -32,10 +33,11 @@ class UsersController < ApplicationController
       flash[:notice] = "注册成功，即刻将体验Michael带给您的...无限。"
       redirect_to '/login'
     when params[:activation_code].blank?
-      flash[:error] = "The activation code was missing.  Please follow the URL from your email."
+      flash[:error] = "激活码不存在，请点击邮件中的链接来激活。"
       redirect_back_or_default('/')
     else
-      flash[:error]  = "We couldn't find a user with that activation code -- check your email? Or maybe you've already activated -- try signing in."
+      flash[:error]  = "那个激活码不能激活任何账户——确认电子邮件中的链接是这个吗？
+或者你已经激活过了，请登录。"
       redirect_back_or_default('/')
     end
   end

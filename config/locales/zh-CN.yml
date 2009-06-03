@@ -105,9 +105,9 @@
     errors:
       template:
         header:
-          one: "出现了一个小问题.."
-          other: "出现了几个小问题.."
-        body: "几个地方出错了："
+          one: ""
+          other: ""
+        body: "以下几个地方有点小问题..."
       messages:
         inclusion: "不包含于列表中"
         exclusion: "是保留关键字"
