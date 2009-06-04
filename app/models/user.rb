@@ -5,21 +5,19 @@ class User < ActiveRecord::Base
   include Authentication::ByPassword
   include Authentication::ByCookieToken
 
-  validates_format_of       :name,     :with => Authentication.name_regex,  :message => Authentication.bad_name_message, :allow_nil => true
-  validates_length_of       :name,     :maximum => 100
+  validates_format_of :name,:with => Authentication.name_regex,:message => Authentication.bad_name_message, :allow_nil => true
+  validates_length_of :name,:maximum => 100
 
-  validates_presence_of     :email
-  validates_length_of       :email,    :within => 6..100 #r@a.wk
-  validates_uniqueness_of   :email
-  validates_format_of       :email,    :with => Authentication.email_regex, :message => Authentication.bad_email_message
-
-  validates_length_of :password,:within=>6...25
+  validates_presence_of :email
+  validates_length_of :email,:within => 6..100 #r@a.wk
+  validates_uniqueness_of :email
+  validates_format_of :email,:with => Authentication.email_regex,:message => Authentication.bad_email_message
 
   before_create :make_activation_code
   # HACK HACK HACK -- how to do attr_accessible from here?
   # prevents a user from submitting a crafted form that bypasses activation
   # anything else you want your user to change should be added here.
-  attr_accessible :email, :name, :password, :password_confirmation
+  attr_accessible :email,:password
 
 
   # Activates the user in the database.
@@ -40,6 +38,9 @@ class User < ActiveRecord::Base
     activation_code.nil?
   end
 
+  def inactived
+    activation_code.exist?
+  end
   # Authenticates a user by their login name and unencrypted password.  Returns the user or nil.
   #
   # uff.  this is really an authorization, not authentication routine.  
@@ -56,7 +57,13 @@ class User < ActiveRecord::Base
     write_attribute :email, (value ? value.downcase : nil)
   end
 
-  protected
+  def check_activation_status(email)
+    if User.find_by_email(email) and !User.find_by_email(email).active?
+      User.find_by_email(email).destroy
+    end
+  end
+  
+  private
     
   def make_activation_code
     self.activation_code = self.class.make_token

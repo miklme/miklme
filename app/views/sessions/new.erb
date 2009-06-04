@@ -40,7 +40,7 @@
   <div id="main">
     <div id="content">
       <%if flash[:notice]%>
-        <h2 id="registered_notice"><%=flash[:notice]%></h2>
+        <p id="registered_notice"><%=flash[:notice]%></p>
       <%end%>
       <div id="text">
         <h1>基于<strong>价值</strong>的搜索引擎<br />来自另一端的引擎</h1>
@@ -63,7 +63,7 @@
           <div id="sidebar_bottom"></div>
         </div>
         <h2>从这里开始..</h2>
-        <% @user.password = @user.password_confirmation = nil %>
+        <% @user.password = nil %>
 
         <% form_for @user do |f| -%>
           <p><%=f.error_messages %>
@@ -73,8 +73,6 @@
           <p><%= f.label :password,'进入Michael的密码,至少6位' %><br/>
           <%= f.password_field :password %></p>
 
-          <p><%= f.label :password_confirmation, '确认密码' %><br/>
-          <%= f.password_field :password_confirmation %></p>
           <p><%=f.submit '注册（需邮件确认)' %>
           </p>
         <% end -%>
