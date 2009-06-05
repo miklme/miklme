@@ -42,6 +42,9 @@
       <%if flash[:notice]%>
         <p id="registered_notice"><%=flash[:notice]%></p>
       <%end%>
+      <%if flash[:error]%>
+        <p id="registered_notice"><%=flash[:error]%></p>
+      <%end%>
       <div id="text">
         <h1>基于<strong>价值</strong>的搜索引擎<br />来自另一端的引擎</h1>
         <p>Michael是一个全新的搜索引擎，透过Michael，

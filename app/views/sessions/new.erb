@@ -6,7 +6,6 @@
         <% form_tag new_session_path do -%>
           <p id="login_email"><%= label_tag 'email','登录邮箱名'%><br />
           <%= text_field_tag 'email', @login %></p>
-
           <p id="login_password"><%= label_tag 'password','密码'%><br/>
           <%= password_field_tag 'password', nil%></p>
 
@@ -41,6 +40,9 @@
     <div id="content">
       <%if flash[:notice]%>
         <p id="registered_notice"><%=flash[:notice]%></p>
+      <%end%>
+      <%if flash[:error]%>
+        <p id="registered_notice"><%=flash[:error]%></p>
       <%end%>
       <div id="text">
         <h1>基于<strong>价值</strong>的搜索引擎<br />来自另一端的引擎</h1>

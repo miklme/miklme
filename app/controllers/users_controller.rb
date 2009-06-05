@@ -22,25 +22,24 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user=User.find_by_activation_code(params[:activation_code])
+    @user=User.find(params[:id])
   end
 
 
   def activate
     session[:user_id]=nil
     user = User.find_by_activation_code(params[:activation_code]) unless params[:activation_code].blank?
-    user.email=user.email.from(1)
     if (!params[:activation_code].blank?) and user and !user.active?
       user.activate!
       flash[:notice] = "激活成功，即刻将体验Michael带给您的...无限。"
       redirect_to edit_user_path(user)
     elsif params[:activation_code].blank?
       flash[:error] = "激活码不存在，请点击邮件中的链接来激活。"
-      redirect_back_or_default('/')
+      redirect_to new_session_path
     else
       flash[:error]  = "那个激活码不能激活任何账户——确认电子邮件中的链接是这个吗？
 或者你已经激活过了，请登录。"
-      redirect_back_or_default('/')
+      redirect_to new_session_path
     end
   end
 end

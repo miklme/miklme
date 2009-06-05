@@ -14,7 +14,7 @@ class User < ActiveRecord::Base
   validates_format_of :email,:with => Authentication.email_regex,:message => Authentication.bad_email_message
 
   before_create :make_activation_code
-  # HACK HACK HACK -- how to do attr_accessible from here?
+  # how to do attr_accessible from here?
   # prevents a user from submitting a crafted form that bypasses activation
   # anything else you want your user to change should be added here.
   attr_accessible :email,:password
@@ -62,7 +62,6 @@ class User < ActiveRecord::Base
       User.find_by_email(email).destroy
     end
   end
-  
   private
     
   def make_activation_code
