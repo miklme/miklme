@@ -1,11 +1,16 @@
-<h1>New portrait</h1>
-
-<% form_for(@portrait) do |f| %>
-  <%= f.error_messages %>
+<% form_for @portrait, :html => { :multipart => true } do |f| %>
+  <p>
+    <b>Upload Image</b><br />
+    <%= f.file_field :image_file %>
+    <%= f.hidden_field :image_file_temp %>
+  </p>
 
   <p>
-    <%= f.submit 'Create' %>
+    <%= f.submit "Create" %>
   </p>
-<% end %>
+  <p>
+  <b>图片预览：</b><br />
+  <%= embedded_image_tag(@portrait.operate { |img| img.resize 100 }) if @portrait.has_image? %>
+</p>
 
-<%= link_to 'Back', portraits_path %>
+<% end %>

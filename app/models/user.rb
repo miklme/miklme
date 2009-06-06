@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
   include Authentication::ByPassword
   include Authentication::ByCookieToken
 
+  has_one :portrait
   validates_format_of :name,:with => Authentication.name_regex,:message => Authentication.bad_name_message, :allow_nil => true
   validates_length_of :name,:maximum => 100
 

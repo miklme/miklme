@@ -1,7 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :portraits
-
-  map.resources :users
+  map.resource :portrait,:belongs_to=>:user
+  map.resources :users,:has_one=>:portrait
   map.resource :session
 
 

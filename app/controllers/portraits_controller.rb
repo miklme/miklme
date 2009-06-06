@@ -48,6 +48,7 @@ class PortraitsController < ApplicationController
         format.html { redirect_to(@portrait) }
         format.xml  { render :xml => @portrait, :status => :created, :location => @portrait }
       else
+        flash[:notice]='上传的图片不符合要求，请看清楚要求后重新上传.'
         format.html { render :action => "new" }
         format.xml  { render :xml => @portrait.errors, :status => :unprocessable_entity }
       end
