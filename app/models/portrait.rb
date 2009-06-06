@@ -1,5 +1,7 @@
 class Portrait < ActiveRecord::Base
-  acts_as_fleximage :image_directory => 'public/upload'
+  belongs_to :user
+
+  acts_as_fleximage :image_directory => 'public/upload_portraits'
   use_creation_date_based_directories true
   image_storage_format :jpg
   require_image true

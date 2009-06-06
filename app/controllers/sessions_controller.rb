@@ -2,13 +2,12 @@
 class SessionsController < ApplicationController
   skip_before_filter :login_required
 
-
   def new
     @user=User.new
   end
 
   def create
-    #logout_keeping_session!
+    session[:user_id]=nil
     user = User.authenticate(params[:email], params[:password])
     if user
       # Protects against session fixation attacks, causes request forgery
@@ -17,9 +16,9 @@ class SessionsController < ApplicationController
       # reset_session
       self.current_user = user
       new_cookie_flag = (params[:remember_me] == "1")
-      handle_remember_cookie! new_cookie_flag
+      new_cookie_flag
       redirect_back_or_default('/')
-      flash[:notice] = "成功登入，即将体验Michael带给你的...无限"
+      flash[:notice] = "成功登入，即刻将体验Michael带给你的...无限"
     else
       note_failed_signin
       @email       = params[:email]
@@ -29,15 +28,15 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    logout_killing_session!
-    flash[:notice] = "You have been logged out."
-    redirect_back_or_default('/')
+    session[:user_id]=nil
+    flash[:notice] = "成功离开Michael"
+    redirect_to new_session_path
   end
 
   protected
   # Track failed login attempts
   def note_failed_signin
-    flash[:error] = "Couldn't log you in as '#{params[:email]}'"
+    flash[:error] = "恩...出了点小问题，'#{params[:email]}'的账户无法登入."
     logger.warn "Failed login for '#{params[:email]}' from #{request.remote_ip} at #{Time.now.utc}"
   end
 end

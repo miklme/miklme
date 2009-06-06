@@ -1,64 +1,40 @@
 class PortraitsController < ApplicationController
-  # GET /portraits
-  # GET /portraits.xml
-  def index
-    @portraits = Portrait.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @portraits }
-    end
-  end
-
-  # GET /portraits/1
-  # GET /portraits/1.xml
+  caches_page :show
   def show
-    @portrait = Portrait.find(params[:id])
-
+    @portrait = current_user.portrait.find(params[:id])
     respond_to do |format|
+      format.jpg   # show.jpg.flexi (http://mysite.com/photos/123.jpg)
       format.html # show.html.erb
-      format.xml  { render :xml => @portrait }
+      format.xml  { render :xml => @photo }
     end
+
   end
 
-  # GET /portraits/new
-  # GET /portraits/new.xml
   def new
-    @portrait = Portrait.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @portrait }
-    end
+    @portrait = current_user.portrait.new
   end
 
   # GET /portraits/1/edit
   def edit
-    @portrait = Portrait.find(params[:id])
+    @portrait = current_user.portrait.find(params[:id])
   end
 
   # POST /portraits
   # POST /portraits.xml
   def create
-    @portrait = Portrait.new(params[:portrait])
-
-    respond_to do |format|
-      if @portrait.save
-        flash[:notice] = 'Portrait was successfully created.'
-        format.html { redirect_to(@portrait) }
-        format.xml  { render :xml => @portrait, :status => :created, :location => @portrait }
-      else
-        flash[:notice]='上传的图片不符合要求，请看清楚要求后重新上传.'
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @portrait.errors, :status => :unprocessable_entity }
-      end
+    @portrait = current_user.portrait.new(params[:portrait])
+    if @portrait.save
+      redirect_to :action => "new"
+    else
+      flash[:notice] = '恩...仍然有点小问题，请按照要求重新上传。'
+      render :action => 'new'
     end
   end
 
   # PUT /portraits/1
   # PUT /portraits/1.xml
   def update
-    @portrait = Portrait.find(params[:id])
+    @portrait = current_user.find(params[:id])
 
     respond_to do |format|
       if @portrait.update_attributes(params[:portrait])
@@ -70,17 +46,20 @@ class PortraitsController < ApplicationController
         format.xml  { render :xml => @portrait.errors, :status => :unprocessable_entity }
       end
     end
+    expire_portrait(@portrait)
   end
 
   # DELETE /portraits/1
   # DELETE /portraits/1.xml
   def destroy
-    @portrait = Portrait.find(params[:id])
+    @portrait = current_user.portrait.find(params[:id])
     @portrait.destroy
-
-    respond_to do |format|
-      format.html { redirect_to(portraits_url) }
-      format.xml  { head :ok }
-    end
+    expire_portrait(@portrait)
   end
+
+  private
+  def expire_photo(photo)
+    expire_page user_portrait_path(photo, :format => :jpg)
+  end
+
 end

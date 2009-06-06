@@ -1,16 +1,16 @@
+<%= flash[:notice] if flash[:notice] %>
 <% form_for @portrait, :html => { :multipart => true } do |f| %>
+  <p>上传一个图片，作为头像:<br />
+  <%= f.file_field :image_file %></p>
+  <p>或者提供一个图片链接:<br />
+  <%= f.text_field :image_file_url %></p>
+  <p><%= f.hidden_field :image_file_temp %></p>
   <p>
-    <b>Upload Image</b><br />
-    <%= f.file_field :image_file %>
-    <%= f.hidden_field :image_file_temp %>
+    <%= f.submit "就这样" %>
   </p>
-
   <p>
-    <%= f.submit "Create" %>
+    <b>图片预览：</b><br />
+    <%= embedded_image_tag(@portrait.operate { |img| img.resize 200 }) if @portrait.has_image? %>
   </p>
-  <p>
-  <b>图片预览：</b><br />
-  <%= embedded_image_tag(@portrait.operate { |img| img.resize 100 }) if @portrait.has_image? %>
-</p>
 
 <% end %>

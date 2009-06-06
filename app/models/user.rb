@@ -50,7 +50,7 @@ class User < ActiveRecord::Base
   #
   def self.authenticate(email, password)
     return nil if email.blank? or password.blank?
-    u = find :first, :conditions => ['login = ? and activated_at IS NOT NULL', login] # need to get the salt
+    u = find :first, :conditions => ['email = ? and activated_at IS NOT NULL', email] # need to get the salt
     u && u.authenticated?(password) ? u : nil
   end
 
@@ -63,6 +63,7 @@ class User < ActiveRecord::Base
       User.find_by_email(email).destroy
     end
   end
+
   private
     
   def make_activation_code

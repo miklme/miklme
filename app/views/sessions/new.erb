@@ -3,25 +3,20 @@
 <body>
   <div id="header">
     <div id="logo"> <div id="login">
-        <% form_tag new_session_path do -%>
+        <% form_tag session_path do -%>
           <p id="login_email"><%= label_tag 'email','登录邮箱名'%><br />
-          <%= text_field_tag 'email', @login %></p>
+          <%= text_field_tag 'email',params[:email] %></p>
           <p id="login_password"><%= label_tag 'password','密码'%><br/>
-          <%= password_field_tag 'password', nil%></p>
-
-
+          <%= password_field_tag 'password',params[:password]%></p>
           <div><p> <%= check_box_tag 'remember_me', '1', @remember_me %>
               <%= label_tag 'remember_me', '在这台电脑上记住我' %>
             </p>
-
-          <p><%= submit_tag '登录',:id=>:login_button %></p></div>
+            <p><%= submit_tag '登录',:id=>:login_button %></p></div>
         <% end -%>
 
       </div>
     <%=link_to '欢迎进入Michael',new_session_path%> </div>
-    <%if logged_in? -%>
-      <%= link_to '登出', logout_path %>
-    <%end%>
+
     <!--
    <div id="menu">
       <ul>
@@ -38,6 +33,9 @@
   <!-- main -->
   <div id="main">
     <div id="content">
+      <%if logged_in? -%>
+        <%= link_to '登出', logout_path %>
+      <%end%>
       <%if flash[:notice]%>
         <p id="registered_notice"><%=flash[:notice]%></p>
       <%end%>
@@ -49,35 +47,14 @@
         <p>Michael是一个全新的搜索引擎，透过Michael，
           我们可以作以下搜索如：<strong>学生会 装B,王小波 黄金时代，
             我出门拿伞吗，科学松鼠会，
-        听歌 心情:烦躁</strong>，等。</p>
+            听歌 心情:烦躁</strong>，等。</p>
         <p>我们深晓Michael的架构及理念，并不断对<strong>他</strong>完善，
-        以期促成一场革命，这一点，请你慢慢感知。</p>
+          以期促成一场革命，这一点，请你慢慢感知。</p>
         <p>我们一直在说<strong>他</strong>，当然了，你我都知道，Michael是一个伟大的生命体。</p>
 
       </div>
       <div id="register">
-        <div id="sidebar">
-          <div id="sidebar_top"></div>
-          <div id="sidebar_text">
-            <h2>仍有所困惑或怀疑？</h2>
-            <p>想要进一步了解Michael及Mikl.me，呵，请猛击<strong>>>>这里<<<</strong>。</p>
-          </div>
-          <div id="sidebar_bottom"></div>
-        </div>
-        <h2>从这里开始..</h2>
-        <% @user.password = nil %>
-
-        <% form_for @user do |f| -%>
-          <p><%=f.error_messages %>
-          <p><%= f.label :email,'请输入你的Email，用于登入Mikl.me' %><br/>
-          <%= f.text_field :email %></p>
-
-          <p><%= f.label :password,'进入Michael的密码,至少6位' %><br/>
-          <%= f.password_field :password %></p>
-
-          <p><%=f.submit '注册（需邮件确认)' %>
-          </p>
-        <% end -%>
+        <%= link_to '注册新用户' ,new_user_path%>
       </div>
     </div>
     <!-- footer -->
