@@ -9,9 +9,9 @@
 
 <% for photo_file in @photo_files %>
   <tr>
-    <td><%=h photo_file.image_filename %></td>
-    <td><%=h photo_file.image_width %></td>
-    <td><%=h photo_file.image_height %></td>
+    <td><%= photo_file.image_filename %></td>
+    <td><%= photo_file.image_width %></td>
+    <td><%= photo_file.image_height %></td>
     <td><%= link_to 'Show', photo_file %></td>
     <td><%= link_to 'Edit', edit_photo_file_path(photo_file) %></td>
     <td><%= link_to 'Destroy', photo_file, :confirm => 'Are you sure?', :method => :delete %></td>

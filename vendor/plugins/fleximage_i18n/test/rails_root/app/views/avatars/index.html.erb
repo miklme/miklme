@@ -7,7 +7,7 @@
 
 <% for avatar in @avatars %>
   <tr>
-    <td><%=h avatar.username %></td>
+    <td><%= avatar.username %></td>
     <td><%= link_to 'Show', avatar %></td>
     <td><%= link_to 'Edit', edit_avatar_path(avatar) %></td>
     <td><%= link_to 'Destroy', avatar, :confirm => 'Are you sure?', :method => :delete %></td>

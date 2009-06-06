@@ -183,11 +183,11 @@ A photo HTML view may look like this:
   </p>
   <p>
     <b>Name:</b>
-    <%=h @photo.name %>
+    <%= @photo.name %>
   </p>
   <p>
     <b>Author:</b>
-    <%=h @photo.author %>
+    <%= @photo.author %>
   </p>
 
 That image tag uses a Rails route as its +src+.  In this case, that route corresponds to the <tt>.jpg</tt> format of the +photo+ resource, which would give us a URL like:

@@ -62,7 +62,7 @@ class PortraitsController < ApplicationController
 
     respond_to do |format|
       if @portrait.update_attributes(params[:portrait])
-        flash[:notice] = 'Portrait was successfully updated.'
+        flash[:notice] = '头像已更新.'
         format.html { redirect_to(@portrait) }
         format.xml  { head :ok }
       else

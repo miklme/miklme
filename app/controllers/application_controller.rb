@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
 
   def login_required
     if not logged_in?
+      flash[:notice]='请登录以继续...'
       redirect_to new_session_path
     end
   end
