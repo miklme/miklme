@@ -1,0 +1,12 @@
+<h1>Editing portrait</h1>
+
+<% form_for(@portrait) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @portrait %> |
+<%= link_to 'Back', portraits_path %>
