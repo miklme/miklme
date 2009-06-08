@@ -36,7 +36,7 @@ class SessionsController < ApplicationController
   protected
   # Track failed login attempts
   def note_failed_signin
-    flash[:error] = "恩...出了点小问题，'#{params[:email]}'的账户无法登入."
+    flash[:error] = "恩...出了点小问题，检查一下是否邮箱名和密码有错误."
     logger.warn "Failed login for '#{params[:email]}' from #{request.remote_ip} at #{Time.now.utc}"
   end
 end

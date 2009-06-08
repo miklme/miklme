@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  skip_before_filter :login_required
+  skip_before_filter :login_required,:only=>[:new,:create,:activate]
   layout 'sessions',:only =>:new
   
   def new
@@ -23,9 +23,19 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user=User.find(params[:id])
+    @user=User.find(session[:user_id])
   end
 
+  def update
+    @user = User.find(session[:user_id])
+    respond_to do |format|
+      if @user.update_attributes(params[:user])
+        format.html { redirect_to(@user) }
+      else
+        format.html { render :action => "edit" }
+      end
+    end
+  end
 
   def activate
     session[:user_id]=nil
@@ -42,5 +52,9 @@ class UsersController < ApplicationController
 或者你已经激活过了，请登录。"
       redirect_to new_session_path
     end
+  end
+
+   def show
+    @user =User.find(session[:user_id])
   end
 end

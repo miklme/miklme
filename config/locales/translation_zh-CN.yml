@@ -5,7 +5,8 @@ zh-CN:
 
     attributes: 
       user: 
-        name: "名字"  #g
+        name: "姓名"  #g
+        nick_name: "名号"
         email: "Email" 
         crypted_password: "密码确认"  #g
         salt: "盐"  #g
