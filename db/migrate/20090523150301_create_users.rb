@@ -10,7 +10,6 @@ class CreateUsers < ActiveRecord::Migration
       t.string :activation_code, :limit => 40
       t.datetime :activated_at
       t.string :nick_name,:limit=>100
-      
       t.date :birthday
       t.string :province
       t.string :city

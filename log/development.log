@@ -23422,3 +23422,2512 @@ Rendering template within layouts/sessions
 Rendering sessions/new
 Rendered shared/_footer (0.6ms)
 Completed in 11ms (View: 3, DB: 0) | 200 OK [http://localhost/session]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-06-06 23:39:13) [POST]
+  Parameters: {"commit"=>"登录", "password"=>"dasdas", "email"=>"xxmikl.mexx@"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (email = 'xxmikl.mexx@' and activated_at IS NOT NULL) LIMIT 1[0m
+Failed login for 'xxmikl.mexx@' from 127.0.0.1 at Sat Jun 06 15:39:13 UTC 2009
+Rendering template within layouts/sessions
+Rendering sessions/new
+Rendered shared/_footer (0.7ms)
+Completed in 61ms (View: 3, DB: 0) | 200 OK [http://localhost/session]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-06-06 23:39:17) [POST]
+  Parameters: {"commit"=>"登录", "password"=>"dasdas", "email"=>"xxmikl.mexx@gmail.com"}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (email = 'xxmikl.mexx@gmail.com' and activated_at IS NOT NULL) LIMIT 1[0m
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Failed login for 'xxmikl.mexx@gmail.com' from 127.0.0.1 at Sat Jun 06 15:39:17 UTC 2009
+Rendering template within layouts/sessions
+Rendering sessions/new
+Rendered shared/_footer (0.6ms)
+Completed in 16ms (View: 3, DB: 1) | 200 OK [http://localhost/session]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-06-06 23:39:20) [POST]
+  Parameters: {"commit"=>"登录", "password"=>"111111", "email"=>"xxmikl.mexx@gmail.com"}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (email = 'xxmikl.mexx@gmail.com' and activated_at IS NOT NULL) LIMIT 1[0m
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Redirected to http://localhost:3000/
+Completed in 13ms (DB: 1) | 302 Found [http://localhost/session]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-06 23:39:20) [GET]
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering sessions/new
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered shared/_footer (0.6ms)
+Completed in 13ms (View: 4, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-06 23:39:23) [GET]
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering sessions/new
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered shared/_footer (0.6ms)
+Completed in 14ms (View: 4, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-06 23:39:25) [GET]
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering sessions/new
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered shared/_footer (0.6ms)
+Completed in 14ms (View: 4, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-06 23:39:26) [GET]
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering sessions/new
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered shared/_footer (0.6ms)
+Completed in 70ms (View: 60, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-06 23:39:26) [GET]
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering sessions/new
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered shared/_footer (0.7ms)
+Completed in 15ms (View: 4, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-06 23:39:27) [GET]
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering sessions/new
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered shared/_footer (0.6ms)
+Completed in 14ms (View: 4, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-06 23:39:27) [GET]
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering sessions/new
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered shared/_footer (0.7ms)
+Completed in 35ms (View: 25, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-06 23:39:28) [GET]
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering sessions/new
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered shared/_footer (0.6ms)
+Completed in 14ms (View: 4, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-06-06 23:39:33) [POST]
+  Parameters: {"commit"=>"登录", "password"=>"111111", "email"=>"xxmikl.mexx@gmail.com"}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (email = 'xxmikl.mexx@gmail.com' and activated_at IS NOT NULL) LIMIT 1[0m
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Redirected to http://localhost:3000/
+Completed in 12ms (DB: 1) | 302 Found [http://localhost/session]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-06 23:39:33) [GET]
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering sessions/new
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered shared/_footer (0.6ms)
+Completed in 13ms (View: 4, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-06 23:39:38) [GET]
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering users/new
+Rendered shared/_footer (0.6ms)
+Completed in 17ms (View: 6, DB: 1) | 200 OK [http://localhost/users/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-06-06 23:40:39) [POST]
+  Parameters: {"commit"=>"登录", "password"=>"dasdas", "email"=>"xxmikl.mexx@"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (email = 'xxmikl.mexx@' and activated_at IS NOT NULL) LIMIT 1[0m
+Failed login for 'xxmikl.mexx@' from 127.0.0.1 at Sat Jun 06 15:40:39 UTC 2009
+Rendering template within layouts/sessions
+Rendering sessions/new
+Rendered shared/_footer (0.6ms)
+Completed in 11ms (View: 3, DB: 0) | 200 OK [http://localhost/session]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-06 23:40:45) [GET]
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering sessions/new
+Rendered shared/_footer (0.6ms)
+Completed in 13ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-06-06 23:40:52) [POST]
+  Parameters: {"remember_me"=>"1", "commit"=>"登录", "password"=>"dasdas", "email"=>"xxmikl.mexx@gmail.com"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (email = 'xxmikl.mexx@gmail.com' and activated_at IS NOT NULL) LIMIT 1[0m
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Failed login for 'xxmikl.mexx@gmail.com' from 127.0.0.1 at Sat Jun 06 15:40:52 UTC 2009
+Rendering template within layouts/sessions
+Rendering sessions/new
+Rendered shared/_footer (0.6ms)
+Completed in 16ms (View: 3, DB: 1) | 200 OK [http://localhost/session]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-06-06 23:40:56) [POST]
+  Parameters: {"remember_me"=>"1", "commit"=>"登录", "password"=>"111111", "email"=>"xxmikl.mexx@gmail.com"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (email = 'xxmikl.mexx@gmail.com' and activated_at IS NOT NULL) LIMIT 1[0m
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Redirected to http://localhost:3000/
+Completed in 12ms (DB: 1) | 302 Found [http://localhost/session]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-06 23:40:56) [GET]
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering sessions/new
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered shared/_footer (0.7ms)
+Completed in 13ms (View: 4, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-06 23:41:19) [GET]
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering users/new
+Rendered shared/_footer (0.6ms)
+Completed in 62ms (View: 6, DB: 1) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-06-06 23:41:28) [POST]
+  Parameters: {"commit"=>"注册（需邮件确认)", "user"=>{"password"=>"dasdas", "email"=>"xxmikl.mexx@"}}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'xxmikl.mexx@') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Exists (0.1ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'xxmikl.mexx@') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/sessions
+Rendering /users/new
+Rendered shared/_footer (0.9ms)
+Completed in 27ms (View: 6, DB: 1) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-06 23:45:13) [GET]
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering sessions/new
+Rendered shared/_footer (0.6ms)
+Completed in 13ms (View: 3, DB: 1) | 200 OK [http://localhost/sessions/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (9.9ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#activate (for 127.0.0.1 at 2009-06-06 23:45:20) [GET]
+  Parameters: {"activation_code"=>"sfd"}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`activation_code` = 'sfd') LIMIT 1[0m
+Redirected to http://localhost:3000/session/new
+Completed in 11ms (DB: 11) | 302 Found [http://localhost/activate/sfd]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-06 23:45:20) [GET]
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering sessions/new
+Rendered shared/_footer (0.6ms)
+Completed in 12ms (View: 3, DB: 1) | 200 OK [http://localhost/session/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#activate (for 127.0.0.1 at 2009-06-06 23:45:31) [GET]
+  Parameters: {"activation_code"=>"asdf12"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`activation_code` = 'asdf12') LIMIT 1[0m
+Redirected to http://localhost:3000/session/new
+Completed in 11ms (DB: 1) | 302 Found [http://localhost/activate/asdf12]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-06 23:45:31) [GET]
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering sessions/new
+Rendered shared/_footer (0.6ms)
+Completed in 60ms (View: 3, DB: 1) | 200 OK [http://localhost/session/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-06 23:45:37) [GET]
+
+ActionController::RoutingError (No route matches "/activate" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-06 23:45:45) [GET]
+
+ActionController::RoutingError (No route matches "/activate" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-06 23:46:06) [GET]
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering users/new
+Rendered shared/_footer (0.6ms)
+Completed in 16ms (View: 6, DB: 1) | 200 OK [http://localhost/users/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-06 23:46:31) [GET]
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering users/new
+Rendered shared/_footer (0.6ms)
+Completed in 15ms (View: 6, DB: 1) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-06 23:47:15) [GET]
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering users/new
+Rendered shared/_footer (0.6ms)
+Completed in 15ms (View: 5, DB: 1) | 200 OK [http://localhost/users/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-06 23:47:24) [GET]
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering users/new
+Rendered shared/_footer (0.6ms)
+Completed in 19ms (View: 9, DB: 1) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-06-06 23:50:45) [POST]
+  Parameters: {"commit"=>"注册（需邮件确认)", "user"=>{"password"=>"dasdas", "email"=>"xxmikl.mexx@"}}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'xxmikl.mexx@') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Exists (0.1ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'xxmikl.mexx@') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/sessions
+Rendering /users/new
+Rendered shared/_footer (0.6ms)
+Completed in 71ms (View: 4, DB: 1) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-06 23:50:52) [GET]
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering sessions/new
+Rendered shared/_footer (0.6ms)
+Completed in 13ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-08 11:54:27) [GET]
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering sessions/new
+Rendered shared/_footer (32.8ms)
+Completed in 233ms (View: 189, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-08 11:55:16) [GET]
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering users/new
+Rendered shared/_footer (0.8ms)
+Completed in 41ms (View: 32, DB: 1) | 200 OK [http://localhost/users/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-06-08 11:55:28) [POST]
+  Parameters: {"commit"=>"登录", "password"=>"dasdas", "email"=>"xxmikl.mexx@gmail.com"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (email = 'xxmikl.mexx@gmail.com' and activated_at IS NOT NULL) LIMIT 1[0m
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Failed login for 'xxmikl.mexx@gmail.com' from 127.0.0.1 at Mon Jun 08 03:55:28 UTC 2009
+Rendering template within layouts/sessions
+Rendering sessions/new
+Rendered shared/_footer (0.8ms)
+Completed in 16ms (View: 3, DB: 1) | 200 OK [http://localhost/session]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-06-08 11:56:10) [POST]
+  Parameters: {"commit"=>"登录", "password"=>"dasdas", "email"=>"xxmikl.mexx@gmail.com"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (email = 'xxmikl.mexx@gmail.com' and activated_at IS NOT NULL) LIMIT 1[0m
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Failed login for 'xxmikl.mexx@gmail.com' from 127.0.0.1 at Mon Jun 08 03:56:10 UTC 2009
+Rendering template within layouts/sessions
+Rendering sessions/new
+Rendered shared/_footer (0.6ms)
+Completed in 15ms (View: 3, DB: 1) | 200 OK [http://localhost/session]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-06-08 11:56:14) [POST]
+  Parameters: {"commit"=>"登录", "password"=>"111111", "email"=>"xxmikl.mexx@gmail.com"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (email = 'xxmikl.mexx@gmail.com' and activated_at IS NOT NULL) LIMIT 1[0m
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Redirected to http://localhost:3000/
+Completed in 13ms (DB: 1) | 302 Found [http://localhost/session]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-08 11:56:14) [GET]
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering sessions/new
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered shared/_footer (0.6ms)
+Completed in 71ms (View: 59, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-06-08 11:56:17) [GET]
+Redirected to http://localhost:3000/session/new
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/logout]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-08 11:56:17) [GET]
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering sessions/new
+Rendered shared/_footer (0.6ms)
+Completed in 12ms (View: 3, DB: 1) | 200 OK [http://localhost/session/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-06-08 11:56:55) [POST]
+  Parameters: {"commit"=>"登录", "password"=>"dasdas", "email"=>"xxmikl.mexx@gmail.com"}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (email = 'xxmikl.mexx@gmail.com' and activated_at IS NOT NULL) LIMIT 1[0m
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Failed login for 'xxmikl.mexx@gmail.com' from 127.0.0.1 at Mon Jun 08 03:56:55 UTC 2009
+Rendering template within layouts/sessions
+Rendering sessions/new
+Rendered shared/_footer (0.7ms)
+Completed in 21ms (View: 3, DB: 1) | 200 OK [http://localhost/session]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-06-08 11:56:59) [POST]
+  Parameters: {"commit"=>"登录", "password"=>"111111", "email"=>"xxmikl.mexx@gmail.com"}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (email = 'xxmikl.mexx@gmail.com' and activated_at IS NOT NULL) LIMIT 1[0m
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Redirected to http://localhost:3000/
+Completed in 12ms (DB: 1) | 302 Found [http://localhost/session]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-08 11:56:59) [GET]
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering sessions/new
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered shared/_footer (0.6ms)
+Completed in 14ms (View: 4, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-08 11:57:50) [GET]
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering sessions/new
+ERROR: compiling _run_erb_app47views47sessions47new46erb RAISED compile error
+/home/michael/miklme/app/views/sessions/new.erb:10: syntax error, unexpected ']', expecting ')'
+...password_field_tag 'password']).to_s); @output_buffer.concat...
+                              ^
+Function body:           def _run_erb_app47views47sessions47new46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @page_title='( Mikl.me )'; @output_buffer.concat "\n\n<body>\n  <div id=\"header\">\n    <div id=\"logo\"> <div id=\"login\">\n        "
+
+
+
+
+;  form_tag session_path do 
+@output_buffer.concat "          <p id=\"login_email\">"; @output_buffer.concat(( label_tag 'email','登录邮箱名').to_s); @output_buffer.concat "<br />\n          "
+; @output_buffer.concat(( text_field_tag 'email').to_s); @output_buffer.concat "</p>\n          <p id=\"login_password\">"
+; @output_buffer.concat(( label_tag 'password','密码').to_s); @output_buffer.concat "<br/>\n          "
+; @output_buffer.concat(( password_field_tag 'password']).to_s); @output_buffer.concat "</p>\n          <div><p> "
+; @output_buffer.concat(( check_box_tag 'remember_me', '1', @remember_me ).to_s); @output_buffer.concat "\n              "
+; @output_buffer.concat(( label_tag 'remember_me', '在这台电脑上记住我' ).to_s); @output_buffer.concat "\n            </p>\n            <p>"
+
+; @output_buffer.concat(( submit_tag '登录',:id=>:login_button ).to_s); @output_buffer.concat "</p></div>\n        "
+;  end 
+@output_buffer.concat "\n      </div>\n    "
+
+; @output_buffer.concat((link_to '欢迎进入Michael',new_session_path).to_s); @output_buffer.concat " </div>\n\n    <!--\n   <div id=\"menu\">\n      <ul>\n        <li><a href=\"#\">home</a></li>\n        <li><a href=\"#\">about us</a></li>\n        <li><a href=\"#\">services</a></li>\n        <li><a href=\"#\">pricing</a></li>\n        <li><a href=\"#\">contacts</a></li>\n      </ul>\n    </div>\n    -->\n  </div>\n  <!--end header -->\n  <!-- main -->\n  <div id=\"main\">\n    <div id=\"content\">\n      "
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+; if logged_in? 
+@output_buffer.concat "        "; @output_buffer.concat(( link_to '登出', logout_path ).to_s); @output_buffer.concat "\n      "
+; end; @output_buffer.concat "\n      "
+; if flash[:notice]; @output_buffer.concat "\n        <p id=\"registered_notice\">"
+; @output_buffer.concat((flash[:notice]).to_s); @output_buffer.concat "</p>\n      "
+; end; @output_buffer.concat "\n      "
+; if flash[:error]; @output_buffer.concat "\n        <p id=\"registered_notice\">"
+; @output_buffer.concat((flash[:error]).to_s); @output_buffer.concat "</p>\n      "
+; end; @output_buffer.concat "\n      <div id=\"text\">\n        <h1>\345\237\272\344\272\216<strong>\344\273\267\345\200\274</strong>\347\232\204\346\220\234\347\264\242\345\274\225\346\223\216<br />\346\235\245\350\207\252\345\217\246\344\270\200\347\253\257\347\232\204\345\274\225\346\223\216</h1>\n        <p>Michael\346\230\257\344\270\200\344\270\252\345\205\250\346\226\260\347\232\204\346\220\234\347\264\242\345\274\225\346\223\216\357\274\214\351\200\217\350\277\207Michael\357\274\214\n          \346\210\221\344\273\254\345\217\257\344\273\245\344\275\234\344\273\245\344\270\213\346\220\234\347\264\242\345\246\202\357\274\232<strong>\345\255\246\347\224\237\344\274\232 \350\243\205B,\347\216\213\345\260\217\346\263\242 \351\273\204\351\207\221\346\227\266\344\273\243\357\274\214\n            \346\210\221\345\207\272\351\227\250\346\213\277\344\274\236\345\220\227\357\274\214\347\247\221\345\255\246\346\235\276\351\274\240\344\274\232\357\274\214\n            \345\220\254\346\255\214 \345\277\203\346\203\205:\347\203\246\350\272\201</strong>\357\274\214\347\255\211\343\200\202</p>\n        <p>\346\210\221\344\273\254\346\267\261\346\231\223Michael\347\232\204\346\236\266\346\236\204\345\217\212\347\220\206\345\277\265\357\274\214\345\271\266\344\270\215\346\226\255\345\257\271<strong>\344\273\226</strong>\345\256\214\345\226\204\357\274\214\n          \344\273\245\346\234\237\344\277\203\346\210\220\344\270\200\345\234\272\351\235\251\345\221\275\357\274\214\350\277\231\344\270\200\347\202\271\357\274\214\350\257\267\344\275\240\346\205\242\346\205\242\346\204\237\347\237\245\343\200\202</p>\n        <p>\346\210\221\344\273\254\344\270\200\347\233\264\345\234\250\350\257\264<strong>\344\273\226</strong>\357\274\214\345\275\223\347\204\266\344\272\206\357\274\214\344\275\240\346\210\221\351\203\275\347\237\245\351\201\223\357\274\214Michael\346\230\257\344\270\200\344\270\252\344\274\237\345\244\247\347\232\204\347\224\237\345\221\275\344\275\223\343\200\202</p>\n\n      </div>\n      <div id=\"register\">\n        "
+
+
+
+
+
+
+
+
+
+
+
+
+; @output_buffer.concat(( link_to '注册新用户' ,new_user_path).to_s); @output_buffer.concat "\n      </div>\n    </div>\n    <!-- footer -->\n    "
+
+
+
+; @output_buffer.concat((render :partial=>'shared/footer').to_s); @output_buffer.concat "\n    <!-- end footer -->\n  </div>\n  <!-- end main -->\n\n</body>"
+
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/michael/miklme/app/views/sessions/new.erb:69:in `compile!'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:343:in `_render_with_layout'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:257:in `render'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:937:in `render_without_benchmark'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1317:in `default_render'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1323:in `perform_action_without_filters'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/home/michael/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/home/michael/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/home/michael/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/home/michael/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/home/michael/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/home/michael/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/home/michael/.gem/ruby/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+/home/michael/.gem/ruby/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/webrick.rb:46:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/webrick.rb:13:in `run'
+/home/michael/.gem/ruby/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/home/michael/miklme/app/views/sessions/new.erb:10: syntax error, unexpected ']', expecting ')'
+...password_field_tag 'password']).to_s); @output_buffer.concat...
+                              ^) on line #10 of app/views/sessions/new.erb:
+7:           <p id="login_email"><%= label_tag 'email','登录邮箱名'%><br />
+8:           <%= text_field_tag 'email'%></p>
+9:           <p id="login_password"><%= label_tag 'password','密码'%><br/>
+10:           <%= password_field_tag 'password']%></p>
+11:           <div><p> <%= check_box_tag 'remember_me', '1', @remember_me %>
+12:               <%= label_tag 'remember_me', '在这台电脑上记住我' %>
+13:             </p>
+
+    app/views/sessions/new.erb:69:in `compile!'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (40.1ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (3.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-08 11:57:59) [GET]
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering sessions/new
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered shared/_footer (0.6ms)
+Completed in 33ms (View: 24, DB: 5) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (16.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-06-08 11:58:03) [POST]
+  Parameters: {"commit"=>"登录", "password"=>"dasdas", "email"=>""}
+Failed login for '' from 127.0.0.1 at Mon Jun 08 03:58:03 UTC 2009
+Rendering template within layouts/sessions
+Rendering sessions/new
+Rendered shared/_footer (0.6ms)
+Completed in 65ms (View: 3, DB: 17) | 200 OK [http://localhost/session]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-06-08 11:58:37) [POST]
+  Parameters: {"commit"=>"登录", "password"=>"dasdas", "email"=>"xxmikl.mexx@gmail.com"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (email = 'xxmikl.mexx@gmail.com' and activated_at IS NOT NULL) LIMIT 1[0m
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Failed login for 'xxmikl.mexx@gmail.com' from 127.0.0.1 at Mon Jun 08 03:58:37 UTC 2009
+Rendering template within layouts/sessions
+Rendering sessions/new
+Rendered shared/_footer (0.6ms)
+Completed in 19ms (View: 7, DB: 1) | 200 OK [http://localhost/session]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-06-08 11:58:41) [POST]
+  Parameters: {"remember_me"=>"1", "commit"=>"登录", "password"=>"dasdas", "email"=>"xxmikl.mexx@gmail.com"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (email = 'xxmikl.mexx@gmail.com' and activated_at IS NOT NULL) LIMIT 1[0m
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Failed login for 'xxmikl.mexx@gmail.com' from 127.0.0.1 at Mon Jun 08 03:58:41 UTC 2009
+Rendering template within layouts/sessions
+Rendering sessions/new
+Rendered shared/_footer (0.6ms)
+Completed in 15ms (View: 3, DB: 1) | 200 OK [http://localhost/session]
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-08 11:59:20) [GET]
+
+ActionController::RoutingError (No route matches "/activation/123" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-08 11:59:22) [GET]
+
+ActionController::RoutingError (No route matches "/activation/123" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#activate (for 127.0.0.1 at 2009-06-08 11:59:28) [GET]
+  Parameters: {"activation_code"=>"23"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`activation_code` = '23') LIMIT 1[0m
+Redirected to http://localhost:3000/session/new
+Completed in 10ms (DB: 1) | 302 Found [http://localhost/activate/23]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-08 11:59:28) [GET]
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering sessions/new
+Rendered shared/_footer (0.6ms)
+Completed in 12ms (View: 3, DB: 1) | 200 OK [http://localhost/session/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-08 11:59:42) [GET]
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering users/new
+Rendered shared/_footer (0.7ms)
+Completed in 63ms (View: 54, DB: 1) | 200 OK [http://localhost/users/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-06-08 11:59:45) [POST]
+  Parameters: {"commit"=>"注册（需邮件确认)", "user"=>{"password"=>"dasdas", "email"=>"xxmikl.mexx@123.cc"}}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` = 'xxmikl.mexx@123.cc') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'xxmikl.mexx@123.cc') LIMIT 1[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO `users` (`name`, `salt`, `city`, `activated_at`, `created_at`, `crypted_password`, `remember_token_expires_at`, `updated_at`, `activation_code`, `value`, `remember_token`, `nick_name`, `birthday`, `province`, `email`) VALUES('', '075c442ac79c1416e0490f4f058922c982403c57', NULL, NULL, '2009-06-08 03:59:45', '0cd1645c54466c1c3b2e9a53aeafc68ee73b26fa', NULL, '2009-06-08 03:59:45', 'd5561f2cbc8d50dc8c99759abf10ec863892027b', 0, NULL, NULL, NULL, NULL, 'xxmikl.mexx@123.cc')[0m
+  [4;35;1mSQL (70.7ms)[0m   [0mCOMMIT[0m
+Sent mail to 
+
+Date: Mon, 8 Jun 2009 11:59:45 +0800
+From: Michael@mikl.me
+To: xxmikl.mexx@123.cc
+Subject: =?utf-8?Q?=5B=E6=9D=A5=E8=87=AA=E4=BA=8EMikl=2Eme=E7=9A=84=E4=BF=A1=E4=BB=B6=5D_?=
+Mime-Version: 1.0
+Content-Type: text/html
+
+<div align="center">
+  <h3 style="font-size: 14pt"><strong>你已成功创建了一个账户，在Mikl.me之上。</strong>
+  </h3>
+  请记住你的用户名和密码,不要让他人看到这封邮件：
+  <p>
+    用户名: xxmikl.mexx@123.cc
+    密码: dasdas
+  </p>
+  <p>请即刻访问以下网址，激活你的账户:<br />
+    http://mikl.me/activate/d5561f2cbc8d50dc8c99759abf10ec863892027b
+  </p>
+  如果需要联系我们，可以随时回复此邮件，能解决你的问题我们会很开心。
+</div>
+
+Redirected to http://localhost:3000/session/new
+Completed in 6366ms (DB: 73) | 302 Found [http://localhost/users]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-08 11:59:52) [GET]
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering sessions/new
+Rendered shared/_footer (0.6ms)
+Completed in 14ms (View: 3, DB: 1) | 200 OK [http://localhost/session/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#activate (for 127.0.0.1 at 2009-06-08 12:00:34) [GET]
+  Parameters: {"activation_code"=>"d5561f2cbc8d50dc8c99759abf10ec863892027b"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`activation_code` = 'd5561f2cbc8d50dc8c99759abf10ec863892027b') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-06-08 04:00:34', `activated_at` = '2009-06-08 04:00:34', `activation_code` = NULL WHERE `id` = 2[0m
+  [4;35;1mSQL (49.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/users/2/edit
+Completed in 172ms (DB: 51) | 302 Found [http://localhost/activate/d5561f2cbc8d50dc8c99759abf10ec863892027b]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-06-08 12:00:34) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+Rendering template within layouts/sessions
+Rendering users/edit
+Rendered shared/_footer (57.0ms)
+Completed in 74ms (View: 62, DB: 1) | 200 OK [http://localhost/users/2/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-06-08 12:02:53) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+Rendering template within layouts/sessions
+Rendering users/edit
+Rendered shared/_footer (0.7ms)
+Completed in 42ms (View: 5, DB: 1) | 200 OK [http://localhost/users/2/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-06-08 12:05:21) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+Rendering users/edit
+Rendered shared/_footer (0.7ms)
+Completed in 11ms (View: 2, DB: 1) | 200 OK [http://localhost/users/2/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#2 (for 127.0.0.1 at 2009-06-08 12:05:28) [GET]
+  Parameters: {"id"=>"new"}
+
+ActionController::UnknownAction (No action responded to 2. Actions: activate, create, edit, login_required, and new):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-06-08 12:05:32) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+Rendering users/edit
+Rendered shared/_footer (0.7ms)
+Completed in 11ms (View: 2, DB: 1) | 200 OK [http://localhost/users/2/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#activate (for 127.0.0.1 at 2009-06-08 12:05:38) [GET]
+  Parameters: {"activation_code"=>"1232"}
+  [4;36;1mUser Columns (16.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`activation_code` = '1232') LIMIT 1[0m
+Redirected to http://localhost:3000/session/new
+Completed in 26ms (DB: 17) | 302 Found [http://localhost/activate/1232]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-08 12:05:39) [GET]
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering sessions/new
+Rendered shared/_footer (0.6ms)
+Completed in 12ms (View: 3, DB: 1) | 200 OK [http://localhost/session/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-08 12:08:29) [GET]
+
+ActionController::RoutingError (No route matches "/portrait/new" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-08 12:08:38) [GET]
+
+ActionController::RoutingError (No route matches "/user/1/edit/portrait/new" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-08 12:08:45) [GET]
+
+ActionController::RoutingError (No route matches "/user/1/portrait/new" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-08 12:08:47) [GET]
+
+ActionController::RoutingError (No route matches "/user/1/portrait/new" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-08 12:08:48) [GET]
+
+ActionController::RoutingError (No route matches "/user/1/portrait/new" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-08 12:08:49) [GET]
+
+ActionController::RoutingError (No route matches "/user/1/portrait/new" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-08 12:09:39) [GET]
+  [4;35;1mUser Columns (8.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering sessions/new
+Rendered shared/_footer (0.6ms)
+Completed in 20ms (View: 3, DB: 9) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-08 12:20:44) [GET]
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering sessions/new
+Rendered shared/_footer (0.6ms)
+Completed in 15ms (View: 6, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-08 12:21:27) [GET]
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering sessions/new
+Rendered shared/_footer (0.6ms)
+Completed in 62ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-08 12:21:40) [GET]
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering sessions/new
+Rendered shared/_footer (0.6ms)
+Completed in 13ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-08 12:21:40) [GET]
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering sessions/new
+Rendered shared/_footer (0.7ms)
+Completed in 13ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-08 12:21:43) [GET]
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering sessions/new
+Rendered shared/_footer (0.6ms)
+Completed in 30ms (View: 3, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-08 12:21:56) [GET]
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering sessions/new
+Rendered shared/_footer (0.6ms)
+Completed in 13ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-08 12:22:26) [GET]
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering sessions/new
+Rendered shared/_footer (0.6ms)
+Completed in 16ms (View: 7, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-08 12:23:05) [GET]
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering sessions/new
+Rendered shared/_footer (0.6ms)
+Completed in 12ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-08 12:23:18) [GET]
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering sessions/new
+Rendered shared/_footer (0.6ms)
+Completed in 13ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-08 12:26:33) [GET]
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering sessions/new
+Rendered shared/_footer (0.6ms)
+Completed in 13ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-08 12:28:58) [GET]
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering sessions/new
+Rendered shared/_footer (0.7ms)
+Completed in 18ms (View: 9, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-06-08 12:29:41) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering users/edit
+Rendered shared/_footer (0.7ms)
+Completed in 12ms (View: 2, DB: 1) | 200 OK [http://localhost/users/1/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-08 12:30:08) [GET]
+  [4;35;1mUser Columns (5.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering sessions/new
+Rendered shared/_footer (0.6ms)
+Completed in 17ms (View: 3, DB: 5) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-06-08 12:30:32) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+Rendering users/edit
+Rendered shared/_footer (0.7ms)
+Completed in 11ms (View: 2, DB: 1) | 200 OK [http://localhost/users/2/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-08 12:32:47) [GET]
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering users/new
+Rendered shared/_footer (0.6ms)
+Completed in 18ms (View: 8, DB: 1) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-08 12:33:08) [GET]
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering users/new
+Rendered shared/_footer (0.6ms)
+Completed in 15ms (View: 5, DB: 1) | 200 OK [http://localhost/users/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-08 12:33:17) [GET]
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering users/new
+Rendered shared/_footer (0.6ms)
+Completed in 15ms (View: 6, DB: 1) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-08 12:33:53) [GET]
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering users/new
+Rendered shared/_footer (0.7ms)
+Completed in 16ms (View: 5, DB: 1) | 200 OK [http://localhost/users/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-08 12:33:54) [GET]
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering users/new
+Rendered shared/_footer (0.6ms)
+Completed in 14ms (View: 5, DB: 1) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-08 12:33:54) [GET]
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering users/new
+Rendered shared/_footer (0.6ms)
+Completed in 14ms (View: 5, DB: 1) | 200 OK [http://localhost/users/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-08 12:33:55) [GET]
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering users/new
+Rendered shared/_footer (0.7ms)
+Completed in 73ms (View: 5, DB: 1) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-08 12:34:49) [GET]
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering users/new
+Rendered shared/_footer (0.6ms)
+Completed in 15ms (View: 5, DB: 1) | 200 OK [http://localhost/users/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-08 12:34:50) [GET]
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering users/new
+Rendered shared/_footer (0.6ms)
+Completed in 16ms (View: 7, DB: 1) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-08 12:34:50) [GET]
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering users/new
+Rendered shared/_footer (0.6ms)
+Completed in 15ms (View: 5, DB: 1) | 200 OK [http://localhost/users/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-08 12:34:51) [GET]
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering users/new
+Rendered shared/_footer (0.6ms)
+Completed in 14ms (View: 5, DB: 1) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-08 12:34:51) [GET]
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering users/new
+Rendered shared/_footer (0.6ms)
+Completed in 14ms (View: 5, DB: 1) | 200 OK [http://localhost/users/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-08 12:34:51) [GET]
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering users/new
+Rendered shared/_footer (0.7ms)
+Completed in 87ms (View: 16, DB: 1) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-08 12:34:51) [GET]
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering users/new
+Rendered shared/_footer (0.7ms)
+Completed in 15ms (View: 5, DB: 1) | 200 OK [http://localhost/users/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-08 12:34:51) [GET]
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering users/new
+Rendered shared/_footer (0.6ms)
+Completed in 15ms (View: 5, DB: 1) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-08 12:34:51) [GET]
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering users/new
+Rendered shared/_footer (0.6ms)
+Completed in 14ms (View: 5, DB: 1) | 200 OK [http://localhost/users/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-08 12:35:05) [GET]
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering users/new
+Rendered shared/_footer (0.6ms)
+Completed in 15ms (View: 6, DB: 1) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2009-06-08 12:35:19) [GET]
+
+SyntaxError (/home/michael/miklme/app/controllers/users_controller.rb:3: syntax error, unexpected '\n', expecting tASSOC):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (84.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-08 12:35:37) [GET]
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering users/new
+Rendered shared/_footer (0.6ms)
+Completed in 15ms (View: 6, DB: 1) | 200 OK [http://localhost/users/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-06-08 12:35:39) [POST]
+  Parameters: {"commit"=>"注册（需邮件确认)", "user"=>{"password"=>"dasdas", "email"=>"xxmikl.mexx@"}}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` = 'xxmikl.mexx@') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'xxmikl.mexx@') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/sessions
+Rendering /users/new
+Rendered shared/_footer (0.7ms)
+Completed in 25ms (View: 4, DB: 2) | 200 OK [http://localhost/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-06-08 12:35:41) [POST]
+  Parameters: {"commit"=>"注册（需邮件确认)", "user"=>{"password"=>"dasdas", "email"=>"xxmikl.mexx@"}}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'xxmikl.mexx@') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Exists (0.1ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'xxmikl.mexx@') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/sessions
+Rendering /users/new
+Rendered shared/_footer (0.6ms)
+Completed in 25ms (View: 4, DB: 1) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-06-08 12:39:51) [POST]
+  Parameters: {"commit"=>"注册（需邮件确认)", "user"=>{"password"=>"dasdas", "email"=>"xxmikl.mexx@"}}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` = 'xxmikl.mexx@') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'xxmikl.mexx@') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/sessions
+Rendering /users/new
+Rendered shared/_footer (0.6ms)
+Completed in 22ms (View: 4, DB: 1) | 200 OK [http://localhost/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-08 12:39:53) [GET]
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering sessions/new
+Rendered shared/_footer (0.6ms)
+Completed in 17ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-08 12:39:56) [GET]
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering users/new
+Rendered shared/_footer (0.6ms)
+Completed in 17ms (View: 7, DB: 1) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-06-08 12:46:27) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+Rendering users/edit
+ERROR: compiling _run_erb_app47views47users47edit46erb RAISED compile error
+/home/michael/miklme/app/views/users/edit.erb:47: syntax error, unexpected kENSURE, expecting kEND
+/home/michael/miklme/app/views/users/edit.erb:49: syntax error, unexpected $end, expecting kEND
+Function body:           def _run_erb_app47views47users47edit46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @page_title='1'; @output_buffer.concat "\n\n<body>\n  <div id=\"header\">\n    <div id=\"logo\"> <div id=\"login\"></div>\n    "
+
+
+
+
+; @output_buffer.concat((link_to '1',new_session_path).to_s); @output_buffer.concat " </div>\n    "
+; if logged_in? 
+@output_buffer.concat "      "; @output_buffer.concat(( link_to '登出', logout_path ).to_s); @output_buffer.concat "\n    "
+; end; @output_buffer.concat "\n    <!--\n   <div id=\"menu\">\n      <ul>\n        <li><a href=\"#\">home</a></li>\n        <li><a href=\"#\">about us</a></li>\n        <li><a href=\"#\">services</a></li>\n        <li><a href=\"#\">pricing</a></li>\n        <li><a href=\"#\">contacts</a></li>\n      </ul>\n    </div>\n    -->\n  </div>\n  <!--end header -->\n  <!-- main -->\n  <div id=\"main\">\n    <div id=\"content\">\n      "
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+; if flash[:notice]; @output_buffer.concat "\n        <p>"
+; @output_buffer.concat((flash[:notice]).to_s); @output_buffer.concat "</p>\n      "
+; end; @output_buffer.concat "\n      "
+; if flash[:error]; @output_buffer.concat "\n        <p>"
+; @output_buffer.concat((flash[:error]).to_s); @output_buffer.concat "</p>\n      "
+; end; @output_buffer.concat "\n      <div id=\"text\">\n        <h2>\350\257\267\345\205\210\345\234\250\350\277\231\351\207\214\345\256\214\345\226\204\344\270\200\344\270\213\344\277\241\346\201\257\357\274\214\345\275\223\347\204\266\357\274\214\344\275\240\344\271\237\345\217\257\344\273\245\351\200\211\346\213\251\344\273\245\345\220\216\345\241\253\345\206\231\357\274\214\344\270\200\345\210\207\351\232\217\344\275\240\343\200\202</h2>\n        "
+
+
+;  form_for @user do |f|; @output_buffer.concat "\n          "
+; @output_buffer.concat(( f.label :nick_name,'名号').to_s); @output_buffer.concat "\n          "
+; @output_buffer.concat(( f.text_field :nick_name ).to_s); @output_buffer.concat "\n\n      </div>\n    </div>\n    <!-- footer -->\n    "
+
+
+
+
+; @output_buffer.concat((render :partial=>'shared/footer').to_s); @output_buffer.concat "\n    <!-- end footer -->\n  </div>\n  <!-- end main -->\n\n</body>"
+
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/michael/miklme/app/views/users/edit.erb:49:in `compile!'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:937:in `render_without_benchmark'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1317:in `default_render'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1323:in `perform_action_without_filters'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/home/michael/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/home/michael/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/home/michael/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/home/michael/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/home/michael/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/home/michael/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/home/michael/.gem/ruby/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+/home/michael/.gem/ruby/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/webrick.rb:46:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/webrick.rb:13:in `run'
+/home/michael/.gem/ruby/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/home/michael/miklme/app/views/users/edit.erb:47: syntax error, unexpected kENSURE, expecting kEND
+/home/michael/miklme/app/views/users/edit.erb:49: syntax error, unexpected $end, expecting kEND) on line #47 of app/views/users/edit.erb:
+44:   <!-- end main -->
+45: 
+46: </body>
+
+    app/views/users/edit.erb:49:in `compile!'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (37.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-06-08 12:47:13) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+Rendering users/edit
+ERROR: compiling _run_erb_app47views47users47edit46erb RAISED compile error
+/home/michael/miklme/app/views/users/edit.erb:47: syntax error, unexpected kENSURE, expecting kEND
+/home/michael/miklme/app/views/users/edit.erb:49: syntax error, unexpected $end, expecting kEND
+Function body:           def _run_erb_app47views47users47edit46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @page_title='1'; @output_buffer.concat "\n\n<body>\n  <div id=\"header\">\n    <div id=\"logo\"> <div id=\"login\"></div>\n    "
+
+
+
+
+; @output_buffer.concat((link_to '1',new_session_path).to_s); @output_buffer.concat " </div>\n    "
+; if logged_in? 
+@output_buffer.concat "      "; @output_buffer.concat(( link_to '登出', logout_path ).to_s); @output_buffer.concat "\n    "
+; end; @output_buffer.concat "\n    <!--\n   <div id=\"menu\">\n      <ul>\n        <li><a href=\"#\">home</a></li>\n        <li><a href=\"#\">about us</a></li>\n        <li><a href=\"#\">services</a></li>\n        <li><a href=\"#\">pricing</a></li>\n        <li><a href=\"#\">contacts</a></li>\n      </ul>\n    </div>\n    -->\n  </div>\n  <!--end header -->\n  <!-- main -->\n  <div id=\"main\">\n    <div id=\"content\">\n      "
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+; if flash[:notice]; @output_buffer.concat "\n        <p>"
+; @output_buffer.concat((flash[:notice]).to_s); @output_buffer.concat "</p>\n      "
+; end; @output_buffer.concat "\n      "
+; if flash[:error]; @output_buffer.concat "\n        <p>"
+; @output_buffer.concat((flash[:error]).to_s); @output_buffer.concat "</p>\n      "
+; end; @output_buffer.concat "\n      <div id=\"text\">\n        <h2>\350\257\267\345\205\210\345\234\250\350\277\231\351\207\214\345\256\214\345\226\204\344\270\200\344\270\213\344\277\241\346\201\257\357\274\214\345\275\223\347\204\266\357\274\214\344\275\240\344\271\237\345\217\257\344\273\245\351\200\211\346\213\251\344\273\245\345\220\216\345\241\253\345\206\231\357\274\214\344\270\200\345\210\207\351\232\217\344\275\240\343\200\202</h2>\n        "
+
+
+;  form_for @user do |f|; @output_buffer.concat "\n          "
+; @output_buffer.concat(( f.label :nick_name,'名号').to_s); @output_buffer.concat "\n          "
+; @output_buffer.concat(( f.text_field :nick_name ).to_s); @output_buffer.concat "\n\n      </div>\n    </div>\n    <!-- footer -->\n    "
+
+
+
+
+; @output_buffer.concat((render :partial=>'shared/footer').to_s); @output_buffer.concat "\n    <!-- end footer -->\n  </div>\n  <!-- end main -->\n\n</body>"
+
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/michael/miklme/app/views/users/edit.erb:49:in `compile!'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:937:in `render_without_benchmark'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1317:in `default_render'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1323:in `perform_action_without_filters'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/home/michael/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/home/michael/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/home/michael/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/home/michael/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/home/michael/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/home/michael/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/home/michael/.gem/ruby/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+/home/michael/.gem/ruby/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/webrick.rb:46:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/webrick.rb:13:in `run'
+/home/michael/.gem/ruby/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/home/michael/miklme/app/views/users/edit.erb:47: syntax error, unexpected kENSURE, expecting kEND
+/home/michael/miklme/app/views/users/edit.erb:49: syntax error, unexpected $end, expecting kEND) on line #47 of app/views/users/edit.erb:
+44:   <!-- end main -->
+45: 
+46: </body>
+
+    app/views/users/edit.erb:49:in `compile!'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (40.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-06-08 12:47:41) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+Rendering users/edit
+ERROR: compiling _run_erb_app47views47users47edit46erb RAISED compile error
+/home/michael/miklme/app/views/users/edit.erb:47: syntax error, unexpected kENSURE, expecting kEND
+/home/michael/miklme/app/views/users/edit.erb:49: syntax error, unexpected $end, expecting kEND
+Function body:           def _run_erb_app47views47users47edit46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @page_title='1'; @output_buffer.concat "\n\n<body>\n  <div id=\"header\">\n    <div id=\"logo\"> <div id=\"login\"></div>\n    "
+
+
+
+
+; @output_buffer.concat((link_to '1',new_session_path).to_s); @output_buffer.concat " </div>\n    "
+; if logged_in? 
+@output_buffer.concat "      "; @output_buffer.concat(( link_to '登出', logout_path ).to_s); @output_buffer.concat "\n    "
+; end; @output_buffer.concat "\n    <!--\n   <div id=\"menu\">\n      <ul>\n        <li><a href=\"#\">home</a></li>\n        <li><a href=\"#\">about us</a></li>\n        <li><a href=\"#\">services</a></li>\n        <li><a href=\"#\">pricing</a></li>\n        <li><a href=\"#\">contacts</a></li>\n      </ul>\n    </div>\n    -->\n  </div>\n  <!--end header -->\n  <!-- main -->\n  <div id=\"main\">\n    <div id=\"content\">\n      "
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+; if flash[:notice]; @output_buffer.concat "\n        <p>"
+; @output_buffer.concat((flash[:notice]).to_s); @output_buffer.concat "</p>\n      "
+; end; @output_buffer.concat "\n      "
+; if flash[:error]; @output_buffer.concat "\n        <p>"
+; @output_buffer.concat((flash[:error]).to_s); @output_buffer.concat "</p>\n      "
+; end; @output_buffer.concat "\n      <div id=\"text\">\n        <h2>\350\257\267\345\205\210\345\234\250\350\277\231\351\207\214\345\256\214\345\226\204\344\270\200\344\270\213\344\277\241\346\201\257\357\274\214\345\275\223\347\204\266\357\274\214\344\275\240\344\271\237\345\217\257\344\273\245\351\200\211\346\213\251\344\273\245\345\220\216\345\241\253\345\206\231\357\274\214\344\270\200\345\210\207\351\232\217\344\275\240\343\200\202</h2>\n        "
+
+
+;  form_for @user do |f|; @output_buffer.concat "\n          "
+; @output_buffer.concat(( f.label :nick_name,'名号').to_s); @output_buffer.concat "\n          "
+; @output_buffer.concat(( f.text_field :nick_name ).to_s); @output_buffer.concat "\n\n      </div>\n    </div>\n    <!-- footer -->\n    "
+
+
+
+
+; @output_buffer.concat((render :partial=>'shared/footer').to_s); @output_buffer.concat "\n    <!-- end footer -->\n  </div>\n  <!-- end main -->\n\n</body>"
+
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/michael/miklme/app/views/users/edit.erb:49:in `compile!'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:937:in `render_without_benchmark'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1317:in `default_render'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1323:in `perform_action_without_filters'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/home/michael/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/home/michael/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/home/michael/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/home/michael/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/home/michael/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/home/michael/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/home/michael/.gem/ruby/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+/home/michael/.gem/ruby/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/webrick.rb:46:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/webrick.rb:13:in `run'
+/home/michael/.gem/ruby/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/home/michael/miklme/app/views/users/edit.erb:47: syntax error, unexpected kENSURE, expecting kEND
+/home/michael/miklme/app/views/users/edit.erb:49: syntax error, unexpected $end, expecting kEND) on line #47 of app/views/users/edit.erb:
+44:   <!-- end main -->
+45: 
+46: </body>
+
+    app/views/users/edit.erb:49:in `compile!'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (37.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-08 12:47:43) [GET]
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering sessions/new
+Rendered shared/_footer (0.6ms)
+Completed in 13ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-06-08 12:47:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering users/edit
+ERROR: compiling _run_erb_app47views47users47edit46erb RAISED compile error
+/home/michael/miklme/app/views/users/edit.erb:47: syntax error, unexpected kENSURE, expecting kEND
+/home/michael/miklme/app/views/users/edit.erb:49: syntax error, unexpected $end, expecting kEND
+Function body:           def _run_erb_app47views47users47edit46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @page_title='1'; @output_buffer.concat "\n\n<body>\n  <div id=\"header\">\n    <div id=\"logo\"> <div id=\"login\"></div>\n    "
+
+
+
+
+; @output_buffer.concat((link_to '1',new_session_path).to_s); @output_buffer.concat " </div>\n    "
+; if logged_in? 
+@output_buffer.concat "      "; @output_buffer.concat(( link_to '登出', logout_path ).to_s); @output_buffer.concat "\n    "
+; end; @output_buffer.concat "\n    <!--\n   <div id=\"menu\">\n      <ul>\n        <li><a href=\"#\">home</a></li>\n        <li><a href=\"#\">about us</a></li>\n        <li><a href=\"#\">services</a></li>\n        <li><a href=\"#\">pricing</a></li>\n        <li><a href=\"#\">contacts</a></li>\n      </ul>\n    </div>\n    -->\n  </div>\n  <!--end header -->\n  <!-- main -->\n  <div id=\"main\">\n    <div id=\"content\">\n      "
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+; if flash[:notice]; @output_buffer.concat "\n        <p>"
+; @output_buffer.concat((flash[:notice]).to_s); @output_buffer.concat "</p>\n      "
+; end; @output_buffer.concat "\n      "
+; if flash[:error]; @output_buffer.concat "\n        <p>"
+; @output_buffer.concat((flash[:error]).to_s); @output_buffer.concat "</p>\n      "
+; end; @output_buffer.concat "\n      <div id=\"text\">\n        <h2>\350\257\267\345\205\210\345\234\250\350\277\231\351\207\214\345\256\214\345\226\204\344\270\200\344\270\213\344\277\241\346\201\257\357\274\214\345\275\223\347\204\266\357\274\214\344\275\240\344\271\237\345\217\257\344\273\245\351\200\211\346\213\251\344\273\245\345\220\216\345\241\253\345\206\231\357\274\214\344\270\200\345\210\207\351\232\217\344\275\240\343\200\202</h2>\n        "
+
+
+;  form_for @user do |f|; @output_buffer.concat "\n          "
+; @output_buffer.concat(( f.label :nick_name,'名号').to_s); @output_buffer.concat "\n          "
+; @output_buffer.concat(( f.text_field :nick_name ).to_s); @output_buffer.concat "\n\n      </div>\n    </div>\n    <!-- footer -->\n    "
+
+
+
+
+; @output_buffer.concat((render :partial=>'shared/footer').to_s); @output_buffer.concat "\n    <!-- end footer -->\n  </div>\n  <!-- end main -->\n\n</body>"
+
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/michael/miklme/app/views/users/edit.erb:49:in `compile!'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:937:in `render_without_benchmark'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1317:in `default_render'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1323:in `perform_action_without_filters'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/home/michael/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/home/michael/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/home/michael/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/home/michael/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/home/michael/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/home/michael/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/home/michael/.gem/ruby/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+/home/michael/.gem/ruby/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/webrick.rb:46:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/webrick.rb:13:in `run'
+/home/michael/.gem/ruby/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/home/michael/miklme/app/views/users/edit.erb:47: syntax error, unexpected kENSURE, expecting kEND
+/home/michael/miklme/app/views/users/edit.erb:49: syntax error, unexpected $end, expecting kEND) on line #47 of app/views/users/edit.erb:
+44:   <!-- end main -->
+45: 
+46: </body>
+
+    app/views/users/edit.erb:49:in `compile!'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (48.5ms)
+Rendered rescues/_request_and_response (2.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-06-08 12:48:40) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+Rendering users/edit
+ERROR: compiling _run_erb_app47views47users47edit46erb RAISED compile error
+/home/michael/miklme/app/views/users/edit.erb:47: syntax error, unexpected kENSURE, expecting kEND
+/home/michael/miklme/app/views/users/edit.erb:49: syntax error, unexpected $end, expecting kEND
+Function body:           def _run_erb_app47views47users47edit46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @page_title='1'; @output_buffer.concat "\n\n<body>\n  <div id=\"header\">\n    <div id=\"logo\"> <div id=\"login\"></div>\n    "
+
+
+
+
+; @output_buffer.concat((link_to '1',new_session_path).to_s); @output_buffer.concat " </div>\n    "
+; if logged_in? 
+@output_buffer.concat "      "; @output_buffer.concat(( link_to '登出', logout_path ).to_s); @output_buffer.concat "\n    "
+; end; @output_buffer.concat "\n    <!--\n   <div id=\"menu\">\n      <ul>\n        <li><a href=\"#\">home</a></li>\n        <li><a href=\"#\">about us</a></li>\n        <li><a href=\"#\">services</a></li>\n        <li><a href=\"#\">pricing</a></li>\n        <li><a href=\"#\">contacts</a></li>\n      </ul>\n    </div>\n    -->\n  </div>\n  <!--end header -->\n  <!-- main -->\n  <div id=\"main\">\n    <div id=\"content\">\n      "
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+; if flash[:notice]; @output_buffer.concat "\n        <p>"
+; @output_buffer.concat((flash[:notice]).to_s); @output_buffer.concat "</p>\n      "
+; end; @output_buffer.concat "\n      "
+; if flash[:error]; @output_buffer.concat "\n        <p>"
+; @output_buffer.concat((flash[:error]).to_s); @output_buffer.concat "</p>\n      "
+; end; @output_buffer.concat "\n      <div id=\"text\">\n        <h2>\350\257\267\345\205\210\345\234\250\350\277\231\351\207\214\345\256\214\345\226\204\344\270\200\344\270\213\344\277\241\346\201\257\357\274\214\345\275\223\347\204\266\357\274\214\344\275\240\344\271\237\345\217\257\344\273\245\351\200\211\346\213\251\344\273\245\345\220\216\345\241\253\345\206\231\357\274\214\344\270\200\345\210\207\351\232\217\344\275\240\343\200\202</h2>\n        "
+
+
+;  form_for @user do |f|; @output_buffer.concat "\n          "
+; @output_buffer.concat(( f.label :nick_name,'名号').to_s); @output_buffer.concat "\n          "
+; @output_buffer.concat(( f.text_field :nick_name ).to_s); @output_buffer.concat "\n\n      </div>\n    </div>\n    <!-- footer -->\n    "
+
+
+
+
+; @output_buffer.concat((render :partial=>'shared/footer').to_s); @output_buffer.concat "\n    <!-- end footer -->\n  </div>\n  <!-- end main -->\n\n</body>"
+
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/michael/miklme/app/views/users/edit.erb:49:in `compile!'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:937:in `render_without_benchmark'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1317:in `default_render'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1323:in `perform_action_without_filters'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/home/michael/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/home/michael/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/home/michael/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/home/michael/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/home/michael/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/home/michael/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/home/michael/.gem/ruby/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+/home/michael/.gem/ruby/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/webrick.rb:46:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/webrick.rb:13:in `run'
+/home/michael/.gem/ruby/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/home/michael/miklme/app/views/users/edit.erb:47: syntax error, unexpected kENSURE, expecting kEND
+/home/michael/miklme/app/views/users/edit.erb:49: syntax error, unexpected $end, expecting kEND) on line #47 of app/views/users/edit.erb:
+44:   <!-- end main -->
+45: 
+46: </body>
+
+    app/views/users/edit.erb:49:in `compile!'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (38.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-08 12:49:00) [GET]
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering sessions/new
+Rendered shared/_footer (0.7ms)
+Completed in 80ms (View: 3, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-08 12:49:02) [GET]
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering users/new
+Rendered shared/_footer (0.6ms)
+Completed in 17ms (View: 6, DB: 1) | 200 OK [http://localhost/users/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-08 12:49:38) [GET]
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering users/new
+Rendered shared/_footer (0.6ms)
+Completed in 15ms (View: 6, DB: 1) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-06-08 12:49:49) [POST]
+  Parameters: {"commit"=>"注册（需邮件确认)", "user"=>{"password"=>"dasdas", "email"=>"xxmikl.mexx@"}}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'xxmikl.mexx@') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Exists (0.1ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'xxmikl.mexx@') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/sessions
+Rendering /users/new
+Rendered shared/_footer (0.6ms)
+Completed in 25ms (View: 3, DB: 1) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-06-08 12:50:25) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+Rendering users/edit
+Rendered shared/_footer (0.6ms)
+Completed in 18ms (View: 8, DB: 1) | 200 OK [http://localhost/users/2/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-06-08 12:50:54) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+Rendering users/edit
+Rendered shared/_footer (0.7ms)
+Completed in 18ms (View: 8, DB: 1) | 200 OK [http://localhost/users/2/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-06-08 12:52:15) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+Rendering users/edit
+Rendered shared/_footer (0.7ms)
+Completed in 19ms (View: 9, DB: 1) | 200 OK [http://localhost/users/2/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-06-08 12:54:50) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+Rendering users/edit
+Rendered shared/_footer (0.6ms)
+Completed in 19ms (View: 9, DB: 1) | 200 OK [http://localhost/users/2/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-06-08 12:56:40) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+Rendering users/edit
+Rendered shared/_footer (0.7ms)
+Completed in 20ms (View: 9, DB: 1) | 200 OK [http://localhost/users/2/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20090523150301)
+Migrating to CreatePortraits (20090606045951)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW FIELDS FROM `portraits`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mdescribe `portraits`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `portraits`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-08 13:36:21) [GET]
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering sessions/new
+Rendered shared/_footer (0.6ms)
+Completed in 14ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-08 13:36:26) [GET]
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering sessions/new
+Rendered shared/_footer (0.6ms)
+Completed in 13ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-08 13:42:09) [GET]
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering sessions/new
+Rendered shared/_footer (2.1ms)
+Completed in 32ms (View: 19, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-08 13:42:11) [GET]
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering sessions/new
+Rendered shared/_footer (0.6ms)
+Completed in 14ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-08 13:42:12) [GET]
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering sessions/new
+Rendered shared/_footer (0.6ms)
+Completed in 12ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-08 13:42:12) [GET]
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering sessions/new
+Rendered shared/_footer (0.6ms)
+Completed in 12ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-08 13:42:13) [GET]
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering sessions/new
+Rendered shared/_footer (0.6ms)
+Completed in 13ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-08 13:48:58) [GET]
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering sessions/new
+Rendered shared/_footer (1.5ms)
+Completed in 58ms (View: 45, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-08 13:49:00) [GET]
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering users/new
+Rendered shared/_footer (0.8ms)
+Completed in 23ms (View: 14, DB: 1) | 200 OK [http://localhost/users/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-06-08 13:49:07) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+Rendering users/edit
+
+ActionView::TemplateError (wrong number of arguments (1 for 2)) on line #42 of app/views/users/edit.erb:
+39:           <%= f.text_field :name %><br />
+40:           请填写真实姓名，仅好友可见，并且通过真实姓名，别人会更容易的找到你。<br />
+41:           <%= f.label :province, '常居地' %>
+42:           <%= f.select :province %>
+43: 
+44:         <% end %>
+45:       </div>
+
+    app/views/users/edit.erb:42:in `select'
+    app/views/users/edit.erb:42
+    app/views/users/edit.erb:34
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (92.1ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-08 16:25:11) [GET]
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering users/new
+Rendered shared/_footer (0.6ms)
+Completed in 15ms (View: 6, DB: 1) | 200 OK [http://localhost/users/new]

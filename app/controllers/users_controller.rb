@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   skip_before_filter :login_required
-  layout 'sessions'
+  layout 'sessions',:only =>:new
   
   def new
     @user=User.new

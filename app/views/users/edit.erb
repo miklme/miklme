@@ -3,7 +3,7 @@
 <body>
   <div id="header">
     <div id="logo"> <div id="login"></div>
-    <%=link_to '欢迎进入Michael',new_session_path%> </div>
+    <%=link_to '1',new_session_path%> </div>
     <%if logged_in? -%>
       <%= link_to '登出', logout_path %>
     <%end%>
@@ -30,14 +30,18 @@
         <p><%=flash[:error]%></p>
       <%end%>
       <div id="text">
-        <p>Michael是一个全新的搜索引擎，透过Michael，
-          我们可以作以下搜索如：<strong>学生会 装B,王小波 黄金时代，
-            我出门拿伞吗，科学松鼠会，
-            听歌 心情:烦躁</strong>，等。</p>
-        <p>我们深晓Michael的架构及理念，并不断对<strong>他</strong>完善，
-          以期促成一场革命，这一点，请你慢慢感知。</p>
-        <p>我们一直在说<strong>他</strong>，当然了，你我都知道，Michael是一个伟大的生命体。</p>
+        <h3>请先在这里完善一下信息，当然，你也可以选择以后填写，一切随你。</h3>
+        <% form_for @user do |f|%>
+          <%= f.label :nick_name,'名'%>
+          <%= f.text_field :nick_name %><br />
+          任何人都能看到<br />
+          <%= f. label :name,'真实姓名'%>
+          <%= f.text_field :name %><br />
+          请填写真实姓名，仅好友可见，并且通过真实姓名，别人会更容易的找到你。<br />
+          <%= f.label :province, '常居地' %>
+          <%= f.select :province %>
 
+        <% end %>
       </div>
     </div>
     <!-- footer -->
