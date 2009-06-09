@@ -41118,3 +41118,24 @@ Processing PortraitsController#new (for 127.0.0.1 at 2009-06-09 19:01:21) [GET]
 Rendering template within layouts/portraits
 Rendering portraits/new
 Completed in 22ms (View: 3, DB: 2) | 200 OK [http://localhost/users/1/portrait/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-09 20:03:34) [GET]
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering sessions/new
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered shared/_footer (1.7ms)
+Completed in 77ms (View: 37, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-09 20:03:45) [GET]
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering users/new
+Rendered shared/_footer (0.8ms)
+Completed in 24ms (View: 14, DB: 1) | 200 OK [http://localhost/users/new]
