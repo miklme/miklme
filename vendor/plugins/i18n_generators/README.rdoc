@@ -9,7 +9,7 @@ This gem plugin generates a set of locale files for Rails 2.2 i18n feature.
 
 This gem/plugin provides following four script/generate commands.
 
-=== 1. Generate I18n Scaffold
+=== 1. Generate I18n Scaffol
 
 % ./script/generate i18n_scaffold ja (de-AT, pt-BR, etc.)
 
