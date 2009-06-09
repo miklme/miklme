@@ -1,40 +1,42 @@
 class PortraitsController < ApplicationController
   caches_page :show
+  before_filter :load_user
+
   def show
-    @portrait = current_user.portrait.find(params[:id])
+    @portrait = @user.portrait
     respond_to do |format|
       format.jpg   # show.jpg.flexi (http://mysite.com/photos/123.jpg)
       format.html # show.html.erb
-      format.xml  { render :xml => @photo }
+      format.xml  { render :xml => @portrait }
     end
 
   end
 
   def new
-    @portrait = current_user.portrait.new
+    @portrait=@user.build_portrait
   end
 
   # GET /portraits/1/edit
   def edit
-    @portrait = current_user.portrait.find(params[:id])
+    @portrait = @user.portrait
   end
 
   # POST /portraits
   # POST /portraits.xml
   def create
-    @portrait = current_user.portrait.new(params[:portrait])
+    @portrait =  @user.build_portrait(params[:portrait])
     if @portrait.save
-      redirect_to :action => "new"
+      redirect_to user_portrait_path(@user)
     else
-      flash[:notice] = '恩...仍然有点小问题，请按照要求重新上传。'
-      render :action => 'new'
+      flash[:notice] = '上传的文件有点问题，请按照要求重新上传。'
+      redirect_to new_user_portrait_path(@user)
     end
   end
 
   # PUT /portraits/1
   # PUT /portraits/1.xml
   def update
-    @portrait = current_user.find(params[:id])
+    @portrait = @user.portrait
 
     respond_to do |format|
       if @portrait.update_attributes(params[:portrait])
@@ -42,7 +44,7 @@ class PortraitsController < ApplicationController
         format.html { redirect_to(@portrait) }
         format.xml  { head :ok }
       else
-        format.html { render :action => "edit" }
+        format.html { render edit_user_portrait_path(@user) }
         format.xml  { render :xml => @portrait.errors, :status => :unprocessable_entity }
       end
     end
@@ -52,7 +54,7 @@ class PortraitsController < ApplicationController
   # DELETE /portraits/1
   # DELETE /portraits/1.xml
   def destroy
-    @portrait = current_user.portrait.find(params[:id])
+    @portrait = @user.portrait.find(params[:id])
     @portrait.destroy
     expire_portrait(@portrait)
   end
@@ -62,4 +64,7 @@ class PortraitsController < ApplicationController
     expire_page user_portrait_path(photo, :format => :jpg)
   end
 
+  def  load_user
+    @user=User.find(session[:user_id])
+  end
 end

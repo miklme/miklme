@@ -28,14 +28,13 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(session[:user_id])
-    respond_to do |format|
-      if @user.update_attributes(params[:user])
-        format.html { redirect_to(@user) }
-      else
-        format.html { render :action => "edit" }
-      end
+    if @user.update_attributes(params[:user])
+      redirect_to(new_user_portrait_path(@user))
+    else
+      render :action => "edit" 
     end
   end
+
 
   def activate
     session[:user_id]=nil
@@ -54,7 +53,7 @@ class UsersController < ApplicationController
     end
   end
 
-   def show
+  def show
     @user =User.find(session[:user_id])
   end
 end

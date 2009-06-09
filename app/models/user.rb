@@ -9,16 +9,15 @@ class User < ActiveRecord::Base
   has_many :important_days
   accepts_nested_attributes_for :portrait, :allow_destroy => true
   accepts_nested_attributes_for :important_days,:allow_destroy => true
-  
-  validates_format_of :name,:with => Authentication.name_regex,:message => Authentication.bad_name_message, :allow_nil => true
-  validates_length_of :name,:maximum => 5
-  validates_presence_of :email
-  validates_length_of :email,:within => 6..100 #r@a.wk
-  validates_uniqueness_of :email
-  validates_format_of :email,:with => Authentication.email_regex,:message => Authentication.bad_email_message
 
-  validates_presence_of :nick_name,:on => :update
-  validates_length_of :nick_name,:maximum=>10,:on => :update
+  validates_format_of :name,:with => /\A[^[:cntrl:]\\<>\/&]*\z/,:message =>"请避免使用太过诡异的字符，如 %@#<等。"
+  validates_format_of :email,:with => Authentication.email_regex,:message => Authentication.bad_email_message
+  validates_length_of :email,:within => 6..100 #r@a.wk
+  validates_length_of :nick_name,:name,:maximum=>10,:on => :update
+  validates_uniqueness_of :email
+  validates_presence_of :email
+  validates_presence_of :nick_name,:name,:on => :update
+ 
   # how to do attr_accessible from here?
   # prevents a user from submitting a crafted form that bypasses activation
   # anything else you want your user to change should be added here.

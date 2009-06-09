@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(:version => 20090608144113) do
 
   create_table "portraits", :force => true do |t|
     t.integer  "user_id"
+    t.string   "image_file"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
