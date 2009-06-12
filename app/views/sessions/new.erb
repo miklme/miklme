@@ -1,0 +1,66 @@
+<%@page_title='( Mikl.me )'%>
+
+<body>
+  <div id="header">
+    <div id="logo"> <div id="login">
+        <% form_tag session_path do -%>
+          <p id="login_email"><%= label_tag 'email','登录邮箱名'%><br />
+          <%= text_field_tag 'email',params[:email] %></p>
+          <p id="login_password"><%= label_tag 'password','密码'%><br/>
+          <%= password_field_tag 'password',params[:password]%></p>
+          <div><p> <%= check_box_tag 'remember_me', '1', @remember_me %>
+              <%= label_tag 'remember_me', '在这台电脑上记住我' %>
+            </p>
+            <p><%= submit_tag '登录',:id=>:login_button %></p></div>
+        <% end -%>
+
+      </div>
+    <%=link_to '欢迎进入Michael',new_session_path%> </div>
+
+    <!--
+   <div id="menu">
+      <ul>
+        <li><a href="#">home</a></li>
+        <li><a href="#">about us</a></li>
+        <li><a href="#">services</a></li>
+        <li><a href="#">pricing</a></li>
+        <li><a href="#">contacts</a></li>
+      </ul>
+    </div>
+    -->
+  </div>
+  <!--end header -->
+  <!-- main -->
+  <div id="main">
+    <div id="content">
+      <%if logged_in? -%>
+        <%= link_to '登出', logout_path %>
+      <%end%>
+      <%if flash[:notice]%>
+        <p id="registered_notice"><%=flash[:notice]%></p>
+      <%end%>
+      <%if flash[:error]%>
+        <p id="registered_notice"><%=flash[:error]%></p>
+      <%end%>
+      <div id="text">
+        <h1>基于<strong>价值</strong>的搜索引擎<br />来自另一端的引擎</h1>
+        <p>Michael是一个全新的搜索引擎，透过Michael，
+          我们可以作以下搜索如：<strong>学生会 装B,王小波 黄金时代，
+            我出门拿伞吗，科学松鼠会，
+            听歌 心情:烦躁</strong>，等。</p>
+        <p>我们深晓Michael的架构及理念，并不断对<strong>他</strong>完善，
+          以期促成一场革命，这一点，请你慢慢感知。</p>
+        <p>我们一直在说<strong>他</strong>，当然了，你我都知道，Michael是一个伟大的生命体。</p>
+
+      </div>
+      <div id="register">
+        <%= link_to '注册新用户' ,new_user_path%>
+      </div>
+    </div>
+    <!-- footer -->
+    <%=render :partial=>'shared/footer'%>
+    <!-- end footer -->
+  </div>
+  <!-- end main -->
+
+</body>

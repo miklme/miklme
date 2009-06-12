@@ -1,0 +1,18 @@
+<% @page_title='（2）' %>
+<% form_for user_portrait_path(@user,@portrait),:url => { :action => "create" }, :html => { :multipart => true } do |f| %>
+  <p>上传一个你喜欢的图片作为头像，对于所有人可见：
+  <%= f.file_field :image_file %>
+  </p>
+  <p>或者提供一个图片链接:
+  <%= f.text_field :image_file_url %></p>
+  <p><%= f.hidden_field :image_file_temp %></p>
+  <p>（不设置将使用默认头像）<p>
+  <p>
+    <%= f.submit "就这样,然后呢？" %>
+  </p>
+  <p>
+    <b>图片预览：</b>
+    <%= embedded_image_tag(@portrait.operate { |img| img.resize 200 }) if @portrait.has_image? %>
+  </p>
+
+<% end %>
