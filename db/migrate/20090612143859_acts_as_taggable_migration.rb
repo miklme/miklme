@@ -1,18 +1,18 @@
 class ActsAsTaggableMigration < ActiveRecord::Migration
   def self.up
     create_table :tags do |t|
-      t.string :name
+      t.column :name, :string
     end
     
     create_table :taggings do |t|
-      t.integer :tag_id
-      t.integer :taggable_id
+      t.column :tag_id, :integer
+      t.column :taggable_id, :integer
       
       # You should make sure that the column created is
       # long enough to store the required class names.
-      t.string :taggable_type
+      t.column :taggable_type, :string
       
-      t.datetime :created_at
+      t.column :created_at, :datetime
     end
     
     add_index :taggings, :tag_id
