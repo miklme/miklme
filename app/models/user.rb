@@ -28,20 +28,18 @@ class User < ActiveRecord::Base
   accepts_nested_attributes_for :important_days,:allow_destroy => true
 
   validates_format_of :name,:with => /\A[^[:cntrl:]\\<>\/&]*\z/,:message =>"请避免使用太过诡异的字符，如 %@#<等。"
-  validates_format_of :email,:with => Authentication.email_regex,:message => Authentication.bad_email_message
+  validates_format_of :email,
+    :with =>/\A#{'[\w\.%\+\-]+'}@#{'(?:[A-Z0-9\-]+\.)+'}#{'(?:[A-Z]{2}|com|org|net|edu|gov|mil|biz|info|mobi|name|aero|jobs|museum)'}\z/i,
+    :message => "在Michael看来并不合理"
   validates_length_of :email,:within => 6..100 #r@a.wk
   validates_length_of :nick_name,:name,:maximum=>10,:on => :update
   validates_uniqueness_of :email
   validates_presence_of :email
   validates_presence_of :nick_name,:name,:on => :update
-  validates_length_of       :password, :within => 6..40, :if => :password_required?
-  validates_presence_of     :password,                   :if => :password_required?
 
   # how to do attr_accessible from here?
   # prevents a user from submitting a crafted form that bypasses activation
   # anything else you want your user to change should be added here.
-  attr_accessor :password
- 
   before_save :encrypt_password
   before_create :make_activation_code
   # Activates the user in the database.
