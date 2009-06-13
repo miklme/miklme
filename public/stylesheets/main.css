@@ -1,33 +1,21 @@
 root { 
     display: block;
 }
-body { margin:114px 0 0 0; line-height:16px; font-family: 微软雅黑,新宋体,华文宋体,sans-serif; background: url(../images/body_top_bckg.jpg) no-repeat center top #171c20; color:#bed7e6; font-size:11px;}
+body { margin:114px 0 0 0; line-height:16px; font-family: 微软雅黑,新宋体,华文宋体,sans-serif; background: url(../images/body_top_bckg.jpg) no-repeat center top #171c20; color:#bed7e6; font-size:11px;
+    text-align: center;
+}
 a { color:#018BC1;}
 a:hover { text-decoration:none;
     color: #fefefe;
 }
-#header {}
 #login {
-    display: inline;
-    position: absolute;
-
-    top: 140px;
-}
-#login_email {
-    position: relative;
-    top: 54px;
-    right: 90px;
-
-}
-#login_password {
-    position: relative;
-    left: 95px;
-    top: 4px;
+    margin-left: auto;
+    margin-right: auto;
 }
 #login_button {width: 120px}
 input#email{
 }
-#logo { padding:30px 0 120px 0;color:#fff; text-align:center;}
+#logo { padding:30px 0 120px 0;color:#fff;}
 #logo a{ color:#fff; text-decoration:none; font-weight:bold; font-size:24px;  }
 #menu {color:#fff; text-align:center; margin-bottom:62px;}
 #menu ul {text-align:center;list-style:none; padding:0;}
