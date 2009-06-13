@@ -2,32 +2,31 @@
 
 <body>
   <div id="header">
-    <div id="logo"> <div id="login">
-        <p> <% form_tag session_path do -%>
-            <%= label_tag 'email','登录邮箱名'%>
-            <%= text_field_tag 'email',params[:email] %>
-            <%= label_tag 'password','密码'%>
-            <%= password_field_tag 'password',params[:password]%></p>
-          <p> <%= check_box_tag 'remember_me', '1', @remember_me %>
-            <%= label_tag 'remember_me', '在这台电脑上记住我' %>
-          </p>
-          <p><%= submit_tag '欢迎进入Michael' %></p>
-        <% end -%>
-      </div>
+    <div id="logo"></div><div id="login">
+      <p> <% form_tag session_path do -%>
+          <%= label_tag 'email','登录邮箱名'%>
+          <%= text_field_tag 'email',params[:email] %>
+          <%= label_tag 'password','密码'%>
+          <%= password_field_tag 'password',params[:password]%></p>
+        <p> <%= check_box_tag 'remember_me', '1', @remember_me %>
+          <%= label_tag 'remember_me', '在这台电脑上记住我' %>
+        </p>
+        <p><%= submit_tag '  进入Michael  ' %></p>
+      <% end -%>
     </div>
-
-    <!--
-   <div id="menu">
-      <ul>
-        <li><a href="#">home</a></li>
-        <li><a href="#">about us</a></li>
-        <li><a href="#">services</a></li>
-        <li><a href="#">pricing</a></li>
-        <li><a href="#">contacts</a></li>
-      </ul>
-    </div>
-    -->
   </div>
+
+  <!--
+ <div id="menu">
+    <ul>
+      <li><a href="#">home</a></li>
+      <li><a href="#">about us</a></li>
+      <li><a href="#">services</a></li>
+      <li><a href="#">pricing</a></li>
+      <li><a href="#">contacts</a></li>
+    </ul>
+  </div>
+  -->
   <!--end header -->
   <!-- main -->
   <div id="main">
@@ -42,7 +41,8 @@
         <p id="registered_notice"><%=flash[:error]%></p>
       <%end%>
       <div id="text">
-        <h1>基于<strong>价值</strong>的搜索引擎<br />来自另一端的引擎</h1>
+        <h1>欢迎进入<strong>Michael</strong></h1>
+        <h2>基于价值的搜索引擎，来自另一端的引擎</h2>
         <p>Michael是一个全新的搜索引擎，透过Michael，
           我们可以作以下搜索如：<strong>学生会 装B,王小波 黄金时代，
             我出门拿伞吗，科学松鼠会，
@@ -53,7 +53,7 @@
 
       </div>
       <div id="register">
-        <%= link_to '注册新用户' ,new_user_path%>
+        <%= link_to '>注册新用户<' ,new_user_path%>
       </div>
     </div>
     <!-- footer -->

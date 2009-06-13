@@ -1,39 +1,42 @@
 root { 
     display: block;
 }
-body { margin:114px 0 0 0; line-height:16px; font-family: 微软雅黑,新宋体,华文宋体,sans-serif; background: url(../images/body_top_bckg.jpg) no-repeat center top #171c20; color:#bed7e6; font-size:11px;
-    text-align: center;
+body { line-height:16px; font-family: 微软雅黑,新宋体,华文宋体,sans-serif; background: url(../images/body_top_bckg.jpg) no-repeat center top #171c20; color:#bed7e6; font-size:11px;
+       text-align: center
 }
 a { color:#018BC1;}
 a:hover { text-decoration:none;
-    color: #fefefe;
+          color: #fefefe;
 }
 #login {
-    margin-left: auto;
-    margin-right: auto;
+    position: relative;
+    top: 120px;
 }
 #login_button {width: 120px}
-input#email{
+#logo {color:#fff;position:absolute;}
+#header h1{
+    position: relative;
+    top: 120px;
+    background:none
 }
-#logo { padding:30px 0 120px 0;color:#fff;}
-#logo a{ color:#fff; text-decoration:none; font-weight:bold; font-size:24px;  }
 #menu {color:#fff; text-align:center; margin-bottom:62px;}
 #menu ul {text-align:center;list-style:none; padding:0;}
 #menu ul li {display:inline}
 #menu ul a { font-weight:bold; font-size:14px; text-decoration:none; color:#fff; background-color:#445d6c; padding:0 10px 2px 10px;}
 #menu ul a:hover { background-color:#f26513;
-    margin-bottom: 15px;
+                   margin-bottom: 15px;
 }
 #main {background: url(../images/body_all_bckg.jpg) repeat-y top center;
-    position: relative;
-    bottom: -75px;
+
+       position: relative;
+       top: 250px;
 }
 #content {width:780px; margin:0 auto;}
 #text { width:520px;
-    text-align: center;
-    font-size: 14px;
-    line-height: 20px;
-    margin: auto
+        text-align: center;
+        font-size: 14px;
+        line-height: 20px;
+        margin: auto
 }
 
 #text p { margin:7px 0 7px 0;}
@@ -42,10 +45,10 @@ input#email{
     line-height: 30px;
 }
 #sidebar {float:left; width:227px; background-color:#0b0e10; 
-    text-align: center;
-    margin-left: 100px;
-    margin-bottom: 0px;
-    margin-right: 0px;
+          text-align: center;
+          margin-left: 100px;
+          margin-bottom: 0px;
+          margin-right: 0px;
 }
 #sidebar_top { width:227px; height:40px; background:url(../images/sidebar_top.jpg) no-repeat;}
 #sidebar_text { padding: 0 30px;}
@@ -62,20 +65,20 @@ h1 {text-transform:uppercase; font-size:24px; color:#fff; background:url(../imag
 
 #footer {background:url(../images/footer_bckg.jpg) no-repeat top center; height:102px; clear:both; width:780px; margin:0 auto; }
 #top_footer { padding:60px 0 0 30px; color:#fff; font-size:12px;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+              margin-top: auto;
+              margin-bottom: auto;
+              margin-left: auto;
+              margin-right: auto;
+              text-align: center;
 }
 #top_footer a { color:#BED7E6;
-    text-decoration: none
+                text-decoration: none
 }
 #top_footer a:hover { text-decoration:none;
-    color: #fefefe;
+                      color: #fefefe;
 }
 #bottom_footer {text-align: right; color:#fff;  font-size:12px;
-    padding-top: 10px;
+                padding-top: 10px;
 }
 #bottom_footer a { color:#fff;}
 #bottom_footer a:hover { text-decoration:none;}
@@ -91,20 +94,18 @@ h1 {text-transform:uppercase; font-size:24px; color:#fff; background:url(../imag
     top: 10px;
 }
 input{ display:inline;
-    border-top-width: 1px;
-    border-bottom-width: 1px;
-    border-left-width: 1px;
-    border-right-width: 1px;
+       border-top-width: 1px;
+       border-bottom-width: 1px;
+       border-left-width: 1px;
+       border-right-width: 1px;
 }
 input:hover,input:focus {    background-color: #fefefe;
 }
 #register {
-    text-align: right;
     font-size: 14px;
-    margin-right: 100px;
+    margin: 64px;
 }
 #registered_notice {
-
     color: #fefefe;
     border-top-style: solid;
     border-bottom-style: solid;
@@ -120,10 +121,7 @@ input:hover,input:focus {    background-color: #fefefe;
 }
 .fieldWithErrors {
 }
-
 #errorExplanation {
-     color: #f6a1a1;
+    color: #f6a1a1;
 }
-
-
 #user_password,#user_password_confirmation {width:100px}
