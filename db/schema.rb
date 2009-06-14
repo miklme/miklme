@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090611094020) do
+ActiveRecord::Schema.define(:version => 20090614120808) do
 
   create_table "friendships", :force => true do |t|
     t.integer  "user_id",                                                       :null => false
@@ -29,9 +29,44 @@ ActiveRecord::Schema.define(:version => 20090611094020) do
     t.datetime "updated_at"
   end
 
+  create_table "markings", :force => true do |t|
+    t.text     "content"
+    t.string   "title"
+    t.integer  "resource_id"
+    t.integer  "user_id"
+    t.integer  "rating"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "portraits", :force => true do |t|
     t.integer  "user_id"
     t.string   "image_file"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "resources", :force => true do |t|
+    t.string   "link_url"
+    t.text     "content"
+    t.string   "title"
+    t.boolean  "shoulu"
+    t.integer  "user_id"
+    t.integer  "value"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "taggings", :force => true do |t|
+    t.integer  "resource_id"
+    t.integer  "tag_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tags", :force => true do |t|
+    t.string   "name",        :limit => 14
+    t.integer  "resource_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -44,8 +79,8 @@ ActiveRecord::Schema.define(:version => 20090611094020) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "name",                      :limit => 20,  :default => ""
-    t.string   "email",                     :limit => 100,                 :null => false
+    t.string   "name",                      :limit => 20,                                 :default => ""
+    t.string   "email",                     :limit => 100,                                                :null => false
     t.string   "crypted_password",          :limit => 40
     t.string   "salt",                      :limit => 40
     t.string   "remember_token",            :limit => 40
@@ -56,7 +91,8 @@ ActiveRecord::Schema.define(:version => 20090611094020) do
     t.string   "state"
     t.string   "city"
     t.integer  "follower_id"
-    t.integer  "value",                                    :default => 0
+    t.integer  "value",                     :limit => 10,  :precision => 10, :scale => 0, :default => 0
+    t.integer  "money",                     :limit => 10,  :precision => 10, :scale => 0, :default => 10
     t.datetime "created_at"
     t.datetime "updated_at"
   end

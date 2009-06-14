@@ -4,7 +4,7 @@ class CreateResources < ActiveRecord::Migration
       t.string :link_url
       t.text :content
       t.string :title
-      t.boolean :shoulu
+      t.boolean :shoulu,:default => true
       t.integer :user_id
       t.integer :value
       

@@ -48481,3 +48481,644 @@ Rendering template within layouts/sessions
 Rendering sessions/new
 Rendered shared/_footer (0.6ms)
 Completed in 21ms (View: 3, DB: 1) | 200 OK [http://localhost/session/new]
+  [4;36;1mSQL (19.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mResource Columns (24.5ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mResource Load (41.0ms)[0m   [0mSELECT DISTINCT resources.* FROM `resources` INNER JOIN taggings resources_taggings ON resources_taggings.taggable_id = resources.id AND resources_taggings.taggable_type = 'Resource' INNER JOIN tags resources_tags ON resources_tags.id = resources_taggings.tag_id WHERE ((resources_tags.name LIKE 'p')) [0m
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Exists (17.1ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`email` IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (7.5ms)[0m   [0mROLLBACK[0m
+  [4;36;1mResource Load (0.2ms)[0m   [0;1mSELECT * FROM `resources` [0m
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT DISTINCT resources.* FROM `resources` INNER JOIN taggings resources_taggings ON resources_taggings.taggable_id = resources.id AND resources_taggings.taggable_type = 'Resource' INNER JOIN tags resources_tags ON resources_tags.id = resources_taggings.tag_id WHERE ((resources_tags.name LIKE 'p')) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-14 17:11:21) [GET]
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering sessions/new
+Rendered shared/_footer (1.5ms)
+Completed in 145ms (View: 118, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-14 17:11:38) [GET]
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering users/new
+Rendered shared/_footer (8.0ms)
+Completed in 76ms (View: 62, DB: 1) | 200 OK [http://localhost/users/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-14 17:14:00) [GET]
+  [4;36;1mUser Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering users/new
+Rendered shared/_footer (0.7ms)
+Completed in 21ms (View: 7, DB: 1) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-06-14 17:14:32) [POST]
+  Parameters: {"commit"=>"  进入Michael  ", "password"=>"", "email"=>""}
+Failed login for '' from 127.0.0.1 at Sun Jun 14 09:14:32 UTC 2009
+Rendering template within layouts/sessions
+Rendering sessions/new
+Rendered shared/_footer (1.0ms)
+Completed in 15ms (View: 3, DB: 0) | 200 OK [http://localhost/session]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mResource Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mResource Create (46.4ms)[0m   [0;1mINSERT INTO `resources` (`created_at`, `title`, `updated_at`, `user_id`, `value`, `content`, `shoulu`, `link_url`) VALUES('2009-06-14 09:35:52', NULL, '2009-06-14 09:35:52', NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mSQL (48.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mTag Load (0.0ms)[0m   [0;1mMysql::Error: Unknown column 'tags.resource_id' in 'where clause': SELECT * FROM `tags` WHERE (`tags`.resource_id = 3) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (146.9ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (235.5ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20090523150301)
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (109.1ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(20) DEFAULT '', `email` varchar(100) NOT NULL, `crypted_password` varchar(40), `salt` varchar(40), `remember_token` varchar(40), `remember_token_expires_at` datetime, `activation_code` varchar(40), `activated_at` datetime, `nick_name` varchar(20), `state` varchar(255), `city` varchar(255), `follower_id` int(11), `value` decimal DEFAULT 0, `money` decimal DEFAULT 10, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (290.8ms)[0m   [0mCREATE INDEX `index_users_on_email` ON `users` (`email`)[0m
+  [4;36;1mSQL (44.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090523150301')[0m
+Migrating to CreatePortraits (20090606045951)
+  [4;35;1mSQL (98.5ms)[0m   [0mCREATE TABLE `portraits` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `image_file` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (46.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090606045951')[0m
+Migrating to CreateImportantDays (20090608144113)
+  [4;35;1mSQL (187.0ms)[0m   [0mCREATE TABLE `important_days` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `day` date, `description` text, `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (121.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090608144113')[0m
+Migrating to CreateFriendships (20090610091245)
+  [4;35;1mSQL (242.4ms)[0m   [0mCREATE TABLE `friendships` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11) NOT NULL, `friend_id` int(11) NOT NULL, `friendship_value` decimal, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (261.2ms)[0m   [0;1mCREATE INDEX `index_friendships_on_user_id_and_friend_id` ON `friendships` (`user_id`, `friend_id`)[0m
+  [4;35;1mSQL (42.5ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090610091245')[0m
+Migrating to CreateTruePortraits (20090611094020)
+  [4;36;1mSQL (98.5ms)[0m   [0;1mCREATE TABLE `true_portraits` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `image_file` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (44.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090611094020')[0m
+Migrating to CreateResources (20090611163158)
+  [4;36;1mSQL (87.1ms)[0m   [0;1mCREATE TABLE `resources` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `link_url` varchar(255), `content` text, `title` varchar(255), `shoulu` tinyint(1), `user_id` int(11), `value` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (44.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090611163158')[0m
+Migrating to CreateMarkings (20090612035415)
+  [4;36;1mSQL (109.5ms)[0m   [0;1mCREATE TABLE `markings` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `content` text, `title` varchar(255), `resource_id` int(11), `user_id` int(11), `rating` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (47.5ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090612035415')[0m
+Migrating to CreateTags (20090614092532)
+  [4;36;1mSQL (95.0ms)[0m   [0;1mCREATE TABLE `tags` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(14), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (44.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090614092532')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `friendships`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `friendships`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `friendships`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `important_days`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `important_days`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `important_days`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `markings`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `markings`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `markings`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `portraits`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `portraits`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `portraits`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `resources`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `resources`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `tags`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mdescribe `tags`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `tags`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW FIELDS FROM `true_portraits`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `true_portraits`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `true_portraits`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mResource Create (0.2ms)[0m   [0;1mINSERT INTO `resources` (`created_at`, `title`, `updated_at`, `user_id`, `value`, `content`, `shoulu`, `link_url`) VALUES('2009-06-14 09:37:02', NULL, '2009-06-14 09:37:02', NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mSQL (95.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mTagging Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'miklme_development.taggings' doesn't exist: SHOW FIELDS FROM `taggings`[0m
+  [4;35;1mTagging Columns (0.0ms)[0m   [0mMysql::Error: Table 'miklme_development.taggings' doesn't exist: SHOW FIELDS FROM `taggings`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (110.2ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (242.3ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20090523150301)
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (103.0ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(20) DEFAULT '', `email` varchar(100) NOT NULL, `crypted_password` varchar(40), `salt` varchar(40), `remember_token` varchar(40), `remember_token_expires_at` datetime, `activation_code` varchar(40), `activated_at` datetime, `nick_name` varchar(20), `state` varchar(255), `city` varchar(255), `follower_id` int(11), `value` decimal DEFAULT 0, `money` decimal DEFAULT 10, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (290.9ms)[0m   [0mCREATE INDEX `index_users_on_email` ON `users` (`email`)[0m
+  [4;36;1mSQL (44.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090523150301')[0m
+Migrating to CreatePortraits (20090606045951)
+  [4;35;1mSQL (87.3ms)[0m   [0mCREATE TABLE `portraits` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `image_file` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (44.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090606045951')[0m
+Migrating to CreateImportantDays (20090608144113)
+  [4;35;1mSQL (98.3ms)[0m   [0mCREATE TABLE `important_days` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `day` date, `description` text, `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (55.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090608144113')[0m
+Migrating to CreateFriendships (20090610091245)
+  [4;35;1mSQL (98.3ms)[0m   [0mCREATE TABLE `friendships` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11) NOT NULL, `friend_id` int(11) NOT NULL, `friendship_value` decimal, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (257.3ms)[0m   [0;1mCREATE INDEX `index_friendships_on_user_id_and_friend_id` ON `friendships` (`user_id`, `friend_id`)[0m
+  [4;35;1mSQL (44.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090610091245')[0m
+Migrating to CreateTruePortraits (20090611094020)
+  [4;36;1mSQL (89.4ms)[0m   [0;1mCREATE TABLE `true_portraits` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `image_file` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (44.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090611094020')[0m
+Migrating to CreateResources (20090611163158)
+  [4;36;1mSQL (109.2ms)[0m   [0;1mCREATE TABLE `resources` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `link_url` varchar(255), `content` text, `title` varchar(255), `shoulu` tinyint(1), `user_id` int(11), `value` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (44.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090611163158')[0m
+Migrating to CreateMarkings (20090612035415)
+  [4;36;1mSQL (87.1ms)[0m   [0;1mCREATE TABLE `markings` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `content` text, `title` varchar(255), `resource_id` int(11), `user_id` int(11), `rating` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (44.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090612035415')[0m
+Migrating to CreateTags (20090614092532)
+  [4;36;1mSQL (109.6ms)[0m   [0;1mCREATE TABLE `tags` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(14), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (44.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090614092532')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `friendships`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `friendships`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `friendships`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `important_days`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `important_days`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `important_days`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `markings`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `markings`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `markings`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `portraits`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `portraits`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `portraits`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `resources`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `resources`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `tags`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `tags`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `tags`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW FIELDS FROM `true_portraits`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `true_portraits`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `true_portraits`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mResource Create (0.3ms)[0m   [0mINSERT INTO `resources` (`created_at`, `title`, `updated_at`, `user_id`, `value`, `content`, `shoulu`, `link_url`) VALUES('2009-06-14 09:38:57', NULL, '2009-06-14 09:38:57', NULL, NULL, NULL, NULL, NULL)[0m
+  [4;36;1mSQL (93.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mTagging Columns (0.0ms)[0m   [0mMysql::Error: Table 'miklme_development.taggings' doesn't exist: SHOW FIELDS FROM `taggings`[0m
+  [4;36;1mTagging Load (0.0ms)[0m   [0;1mMysql::Error: Table 'miklme_development.taggings' doesn't exist: SELECT * FROM `taggings` WHERE (`taggings`.taggable_id = 1 AND `taggings`.taggable_type = 'Resource') [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (118.8ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (246.3ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20090523150301)
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (98.5ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(20) DEFAULT '', `email` varchar(100) NOT NULL, `crypted_password` varchar(40), `salt` varchar(40), `remember_token` varchar(40), `remember_token_expires_at` datetime, `activation_code` varchar(40), `activated_at` datetime, `nick_name` varchar(20), `state` varchar(255), `city` varchar(255), `follower_id` int(11), `value` decimal DEFAULT 0, `money` decimal DEFAULT 10, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (235.1ms)[0m   [0mCREATE INDEX `index_users_on_email` ON `users` (`email`)[0m
+  [4;36;1mSQL (44.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090523150301')[0m
+Migrating to CreatePortraits (20090606045951)
+  [4;35;1mSQL (217.7ms)[0m   [0mCREATE TABLE `portraits` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `image_file` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (50.8ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090606045951')[0m
+Migrating to CreateImportantDays (20090608144113)
+  [4;35;1mSQL (105.8ms)[0m   [0mCREATE TABLE `important_days` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `day` date, `description` text, `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (44.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090608144113')[0m
+Migrating to CreateFriendships (20090610091245)
+  [4;35;1mSQL (99.8ms)[0m   [0mCREATE TABLE `friendships` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11) NOT NULL, `friend_id` int(11) NOT NULL, `friendship_value` decimal, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (535.9ms)[0m   [0;1mCREATE INDEX `index_friendships_on_user_id_and_friend_id` ON `friendships` (`user_id`, `friend_id`)[0m
+  [4;35;1mSQL (200.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090610091245')[0m
+Migrating to CreateTruePortraits (20090611094020)
+  [4;36;1mSQL (164.8ms)[0m   [0;1mCREATE TABLE `true_portraits` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `image_file` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (44.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090611094020')[0m
+Migrating to CreateResources (20090611163158)
+  [4;36;1mSQL (98.1ms)[0m   [0;1mCREATE TABLE `resources` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `link_url` varchar(255), `content` text, `title` varchar(255), `shoulu` tinyint(1), `user_id` int(11), `value` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (44.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090611163158')[0m
+Migrating to CreateMarkings (20090612035415)
+  [4;36;1mSQL (87.2ms)[0m   [0;1mCREATE TABLE `markings` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `content` text, `title` varchar(255), `resource_id` int(11), `user_id` int(11), `rating` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (44.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090612035415')[0m
+Migrating to CreateTags (20090614092532)
+  [4;36;1mSQL (109.6ms)[0m   [0;1mCREATE TABLE `tags` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(14), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (44.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090614092532')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `friendships`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `friendships`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `friendships`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `important_days`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `important_days`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `important_days`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `markings`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `markings`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `markings`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `portraits`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `portraits`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `portraits`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `resources`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `resources`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `tags`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `tags`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `tags`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW FIELDS FROM `true_portraits`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `true_portraits`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `true_portraits`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mTagging Columns (0.0ms)[0m   [0mMysql::Error: Table 'miklme_development.taggings' doesn't exist: SHOW FIELDS FROM `taggings`[0m
+  [4;36;1mTagging Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'miklme_development.taggings' doesn't exist: SHOW FIELDS FROM `taggings`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mResource Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mResource Create (0.3ms)[0m   [0;1mINSERT INTO `resources` (`created_at`, `title`, `updated_at`, `user_id`, `value`, `content`, `shoulu`, `link_url`) VALUES('2009-06-14 09:43:16', NULL, '2009-06-14 09:43:16', NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mSQL (50.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mTag Load (0.0ms)[0m   [0;1mMysql::Error: Unknown column 'tags.resource_id' in 'where clause': SELECT * FROM `tags` WHERE (`tags`.resource_id = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (113.3ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (235.3ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20090523150301)
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (98.5ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(20) DEFAULT '', `email` varchar(100) NOT NULL, `crypted_password` varchar(40), `salt` varchar(40), `remember_token` varchar(40), `remember_token_expires_at` datetime, `activation_code` varchar(40), `activated_at` datetime, `nick_name` varchar(20), `state` varchar(255), `city` varchar(255), `follower_id` int(11), `value` decimal DEFAULT 0, `money` decimal DEFAULT 10, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (235.2ms)[0m   [0mCREATE INDEX `index_users_on_email` ON `users` (`email`)[0m
+  [4;36;1mSQL (44.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090523150301')[0m
+Migrating to CreatePortraits (20090606045951)
+  [4;35;1mSQL (120.7ms)[0m   [0mCREATE TABLE `portraits` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `image_file` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (55.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090606045951')[0m
+Migrating to CreateImportantDays (20090608144113)
+  [4;35;1mSQL (98.4ms)[0m   [0mCREATE TABLE `important_days` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `day` date, `description` text, `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (55.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090608144113')[0m
+Migrating to CreateFriendships (20090610091245)
+  [4;35;1mSQL (98.5ms)[0m   [0mCREATE TABLE `friendships` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11) NOT NULL, `friend_id` int(11) NOT NULL, `friendship_value` decimal, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (237.1ms)[0m   [0;1mCREATE INDEX `index_friendships_on_user_id_and_friend_id` ON `friendships` (`user_id`, `friend_id`)[0m
+  [4;35;1mSQL (44.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090610091245')[0m
+Migrating to CreateTruePortraits (20090611094020)
+  [4;36;1mSQL (98.6ms)[0m   [0;1mCREATE TABLE `true_portraits` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `image_file` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (45.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090611094020')[0m
+Migrating to CreateResources (20090611163158)
+  [4;36;1mSQL (86.0ms)[0m   [0;1mCREATE TABLE `resources` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `link_url` varchar(255), `content` text, `title` varchar(255), `shoulu` tinyint(1), `user_id` int(11), `value` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (45.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090611163158')[0m
+Migrating to CreateMarkings (20090612035415)
+  [4;36;1mSQL (108.7ms)[0m   [0;1mCREATE TABLE `markings` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `content` text, `title` varchar(255), `resource_id` int(11), `user_id` int(11), `rating` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (44.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090612035415')[0m
+Migrating to CreateTags (20090614092532)
+  [4;36;1mSQL (98.4ms)[0m   [0;1mCREATE TABLE `tags` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(14), `resource_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (49.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090614092532')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `friendships`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `friendships`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `friendships`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `important_days`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `important_days`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `important_days`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `markings`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `markings`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `markings`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `portraits`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `portraits`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `portraits`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `resources`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `resources`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `tags`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `tags`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `tags`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `true_portraits`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `true_portraits`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `true_portraits`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mResource Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mResource Create (0.2ms)[0m   [0;1mINSERT INTO `resources` (`created_at`, `title`, `updated_at`, `user_id`, `value`, `content`, `shoulu`, `link_url`) VALUES('2009-06-14 09:44:26', NULL, '2009-06-14 09:44:26', NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mSQL (66.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT * FROM `tags` WHERE (`tags`.resource_id = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mResource Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mResource Create (0.2ms)[0m   [0;1mINSERT INTO `resources` (`created_at`, `title`, `updated_at`, `user_id`, `value`, `content`, `shoulu`, `link_url`) VALUES('2009-06-14 11:44:15', NULL, '2009-06-14 11:44:15', NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mSQL (61.1ms)[0m   [0mCOMMIT[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mTag Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `tags`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mTag Create (0.2ms)[0m   [0;1mINSERT INTO `tags` (`name`, `created_at`, `resource_id`, `updated_at`) VALUES(NULL, '2009-06-14 11:46:06', NULL, '2009-06-14 11:46:06')[0m
+  [4;35;1mSQL (111.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTag Update (75.9ms)[0m   [0mUPDATE `tags` SET `updated_at` = '2009-06-14 11:46:19', `resource_id` = 2 WHERE `id` = 1[0m
+  [4;36;1mSQL (58.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT * FROM `tags` WHERE (`tags`.resource_id = 2) LIMIT 3[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTag Create (0.2ms)[0m   [0mINSERT INTO `tags` (`name`, `created_at`, `resource_id`, `updated_at`) VALUES(NULL, '2009-06-14 11:46:23', NULL, '2009-06-14 11:46:23')[0m
+  [4;36;1mSQL (61.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTag Update (0.2ms)[0m   [0;1mUPDATE `tags` SET `updated_at` = '2009-06-14 11:46:46', `resource_id` = 2 WHERE `id` = 2[0m
+  [4;35;1mSQL (70.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `tags` WHERE (`tags`.resource_id = 2) [0m
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`email` IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mResource Load (0.5ms)[0m   [0mSELECT `resources`.* FROM `resources` INNER JOIN `markings` ON `resources`.id = `markings`.resource_id WHERE ((`markings`.user_id = NULL)) [0m
+  [4;36;1mResource Load (0.3ms)[0m   [0;1mSELECT `resources`.* FROM `resources` INNER JOIN `markings` ON `resources`.id = `markings`.resource_id WHERE ((`resources`.`id` = 1) AND ((`markings`.user_id = NULL))) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mResource Create (0.2ms)[0m   [0mINSERT INTO `resources` (`created_at`, `title`, `updated_at`, `user_id`, `value`, `content`, `shoulu`, `link_url`) VALUES('2009-06-14 11:55:32', NULL, '2009-06-14 11:55:32', NULL, NULL, NULL, NULL, NULL)[0m
+  [4;36;1mSQL (144.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mResource Create (0.2ms)[0m   [0;1mINSERT INTO `resources` (`created_at`, `title`, `updated_at`, `user_id`, `value`, `content`, `shoulu`, `link_url`) VALUES('2009-06-14 11:55:43', NULL, '2009-06-14 11:55:43', NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mSQL (54.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTag Create (1.7ms)[0m   [0mINSERT INTO `tags` (`name`, `created_at`, `resource_id`, `updated_at`) VALUES('aaa', '2009-06-14 11:57:56', NULL, '2009-06-14 11:57:56')[0m
+  [4;36;1mSQL (55.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mTag Create (0.2ms)[0m   [0;1mINSERT INTO `tags` (`name`, `created_at`, `resource_id`, `updated_at`) VALUES('b', '2009-06-14 11:58:09', NULL, '2009-06-14 11:58:09')[0m
+  [4;35;1mSQL (76.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTag Update (0.2ms)[0m   [0mUPDATE `tags` SET `updated_at` = '2009-06-14 11:58:20', `resource_id` = 3 WHERE `id` = 3[0m
+  [4;36;1mSQL (51.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT * FROM `tags` WHERE (`tags`.resource_id = 3) LIMIT 3[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTag Update (0.2ms)[0m   [0mUPDATE `tags` SET `updated_at` = '2009-06-14 11:58:31', `resource_id` = 4 WHERE `id` = 3[0m
+  [4;36;1mSQL (58.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT * FROM `tags` WHERE (`tags`.resource_id = 4) LIMIT 3[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20090523150301)
+Migrating to CreatePortraits (20090606045951)
+Migrating to CreateImportantDays (20090608144113)
+Migrating to CreateFriendships (20090610091245)
+Migrating to CreateTruePortraits (20090611094020)
+Migrating to CreateResources (20090611163158)
+Migrating to CreateMarkings (20090612035415)
+Migrating to CreateTags (20090614092532)
+Migrating to CreateTaggings (20090614120808)
+  [4;36;1mSQL (117.8ms)[0m   [0;1mCREATE TABLE `taggings` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (46.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090614120808')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW FIELDS FROM `friendships`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `friendships`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `friendships`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `important_days`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `important_days`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `important_days`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `markings`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `markings`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `markings`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `portraits`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `portraits`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `portraits`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `resources`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `resources`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `taggings`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `taggings`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `taggings`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW FIELDS FROM `tags`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `tags`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `tags`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `true_portraits`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `true_portraits`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `true_portraits`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mResource Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mResource Create (0.2ms)[0m   [0;1mINSERT INTO `resources` (`created_at`, `title`, `updated_at`, `user_id`, `value`, `content`, `shoulu`, `link_url`) VALUES('2009-06-14 12:11:23', NULL, '2009-06-14 12:11:23', NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mSQL (97.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mResource Create (0.2ms)[0m   [0mINSERT INTO `resources` (`created_at`, `title`, `updated_at`, `user_id`, `value`, `content`, `shoulu`, `link_url`) VALUES('2009-06-14 12:11:27', NULL, '2009-06-14 12:11:27', NULL, NULL, NULL, NULL, NULL)[0m
+  [4;36;1mSQL (47.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mTag Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `tags`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTag Create (0.2ms)[0m   [0mINSERT INTO `tags` (`name`, `created_at`, `resource_id`, `updated_at`) VALUES('aa', '2009-06-14 12:11:54', NULL, '2009-06-14 12:11:54')[0m
+  [4;36;1mSQL (69.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTag Create (0.2ms)[0m   [0;1mINSERT INTO `tags` (`name`, `created_at`, `resource_id`, `updated_at`) VALUES('bb', '2009-06-14 12:12:07', NULL, '2009-06-14 12:12:07')[0m
+  [4;35;1mSQL (64.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (95.8ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (258.7ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20090523150301)
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (84.0ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(20) DEFAULT '', `email` varchar(100) NOT NULL, `crypted_password` varchar(40), `salt` varchar(40), `remember_token` varchar(40), `remember_token_expires_at` datetime, `activation_code` varchar(40), `activated_at` datetime, `nick_name` varchar(20), `state` varchar(255), `city` varchar(255), `follower_id` int(11), `value` decimal DEFAULT 0, `money` decimal DEFAULT 10, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (268.5ms)[0m   [0mCREATE INDEX `index_users_on_email` ON `users` (`email`)[0m
+  [4;36;1mSQL (44.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090523150301')[0m
+Migrating to CreatePortraits (20090606045951)
+  [4;35;1mSQL (109.5ms)[0m   [0mCREATE TABLE `portraits` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `image_file` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (133.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090606045951')[0m
+Migrating to CreateImportantDays (20090608144113)
+  [4;35;1mSQL (109.6ms)[0m   [0mCREATE TABLE `important_days` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `day` date, `description` text, `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (66.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090608144113')[0m
+Migrating to CreateFriendships (20090610091245)
+  [4;35;1mSQL (109.4ms)[0m   [0mCREATE TABLE `friendships` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11) NOT NULL, `friend_id` int(11) NOT NULL, `friendship_value` decimal, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (246.3ms)[0m   [0;1mCREATE INDEX `index_friendships_on_user_id_and_friend_id` ON `friendships` (`user_id`, `friend_id`)[0m
+  [4;35;1mSQL (44.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090610091245')[0m
+Migrating to CreateTruePortraits (20090611094020)
+  [4;36;1mSQL (98.5ms)[0m   [0;1mCREATE TABLE `true_portraits` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `image_file` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (44.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090611094020')[0m
+Migrating to CreateResources (20090611163158)
+  [4;36;1mSQL (98.3ms)[0m   [0;1mCREATE TABLE `resources` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `link_url` varchar(255), `content` text, `title` varchar(255), `shoulu` tinyint(1), `user_id` int(11), `value` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (44.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090611163158')[0m
+Migrating to CreateMarkings (20090612035415)
+  [4;36;1mSQL (88.8ms)[0m   [0;1mCREATE TABLE `markings` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `content` text, `title` varchar(255), `resource_id` int(11), `user_id` int(11), `rating` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (44.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090612035415')[0m
+Migrating to CreateTags (20090614092532)
+  [4;36;1mSQL (98.6ms)[0m   [0;1mCREATE TABLE `tags` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(14), `resource_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (44.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090614092532')[0m
+Migrating to CreateTaggings (20090614120808)
+  [4;36;1mSQL (87.3ms)[0m   [0;1mCREATE TABLE `taggings` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `resource_id` int(11), `tag_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (55.5ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090614120808')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `friendships`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `friendships`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `friendships`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `important_days`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `important_days`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `important_days`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `markings`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `markings`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `markings`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `portraits`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `portraits`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `portraits`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `resources`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `resources`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `taggings`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `taggings`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `taggings`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW FIELDS FROM `tags`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mdescribe `tags`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `tags`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW FIELDS FROM `true_portraits`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mdescribe `true_portraits`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `true_portraits`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mResource Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mResource Create (0.2ms)[0m   [0;1mINSERT INTO `resources` (`created_at`, `title`, `updated_at`, `user_id`, `value`, `content`, `shoulu`, `link_url`) VALUES('2009-06-14 12:14:41', NULL, '2009-06-14 12:14:41', NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mSQL (47.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mResource Create (0.2ms)[0m   [0mINSERT INTO `resources` (`created_at`, `title`, `updated_at`, `user_id`, `value`, `content`, `shoulu`, `link_url`) VALUES('2009-06-14 12:14:51', NULL, '2009-06-14 12:14:51', NULL, NULL, NULL, NULL, NULL)[0m
+  [4;36;1mSQL (55.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mTag Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `tags`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTag Create (0.3ms)[0m   [0mINSERT INTO `tags` (`name`, `created_at`, `resource_id`, `updated_at`) VALUES('aa', '2009-06-14 12:14:56', NULL, '2009-06-14 12:14:56')[0m
+  [4;36;1mSQL (50.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTag Create (0.2ms)[0m   [0;1mINSERT INTO `tags` (`name`, `created_at`, `resource_id`, `updated_at`) VALUES('bb', '2009-06-14 12:15:02', NULL, '2009-06-14 12:15:02')[0m
+  [4;35;1mSQL (54.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTag Create (0.3ms)[0m   [0mINSERT INTO `tags` (`name`, `created_at`, `resource_id`, `updated_at`) VALUES('bb', '2009-06-14 12:15:11', NULL, '2009-06-14 12:15:11')[0m
+  [4;36;1mSQL (58.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTag Create (0.3ms)[0m   [0;1mINSERT INTO `tags` (`name`, `created_at`, `resource_id`, `updated_at`) VALUES('cc', '2009-06-14 12:15:18', NULL, '2009-06-14 12:15:18')[0m
+  [4;35;1mSQL (62.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mTagging Load (0.2ms)[0m   [0;1mSELECT * FROM `taggings` WHERE (`taggings`.resource_id = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mResource Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mResource Create (0.7ms)[0m   [0mINSERT INTO `resources` (`created_at`, `title`, `updated_at`, `user_id`, `value`, `content`, `shoulu`, `link_url`) VALUES('2009-06-14 12:19:34', NULL, '2009-06-14 12:19:34', NULL, NULL, NULL, NULL, NULL)[0m
+  [4;36;1mSQL (65.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mResource Create (0.2ms)[0m   [0;1mINSERT INTO `resources` (`created_at`, `title`, `updated_at`, `user_id`, `value`, `content`, `shoulu`, `link_url`) VALUES('2009-06-14 12:19:44', NULL, '2009-06-14 12:19:44', NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mSQL (55.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mTag Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `tags`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTag Create (0.1ms)[0m   [0;1mINSERT INTO `tags` (`name`, `created_at`, `resource_id`, `updated_at`) VALUES('aa', '2009-06-14 12:19:49', NULL, '2009-06-14 12:19:49')[0m
+  [4;35;1mSQL (117.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTag Create (0.2ms)[0m   [0mINSERT INTO `tags` (`name`, `created_at`, `resource_id`, `updated_at`) VALUES('cc', '2009-06-14 12:20:07', NULL, '2009-06-14 12:20:07')[0m
+  [4;36;1mSQL (54.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTag Create (0.1ms)[0m   [0;1mINSERT INTO `tags` (`name`, `created_at`, `resource_id`, `updated_at`) VALUES('bb', '2009-06-14 12:20:16', NULL, '2009-06-14 12:20:16')[0m
+  [4;35;1mSQL (68.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mResource Create (0.2ms)[0m   [0mINSERT INTO `resources` (`created_at`, `title`, `updated_at`, `user_id`, `value`, `content`, `shoulu`, `link_url`) VALUES('2009-06-14 12:20:42', NULL, '2009-06-14 12:20:42', NULL, NULL, NULL, NULL, NULL)[0m
+  [4;36;1mSQL (104.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTag Create (0.4ms)[0m   [0mINSERT INTO `tags` (`name`, `created_at`, `resource_id`, `updated_at`) VALUES(NULL, '2009-06-14 12:21:14', NULL, '2009-06-14 12:21:14')[0m
+  [4;36;1mSQL (100.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mResource Create (0.2ms)[0m   [0;1mINSERT INTO `resources` (`created_at`, `title`, `updated_at`, `user_id`, `value`, `content`, `shoulu`, `link_url`) VALUES('2009-06-14 12:21:39', NULL, '2009-06-14 12:21:39', NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mSQL (98.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mResource Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mResource Create (0.2ms)[0m   [0;1mINSERT INTO `resources` (`created_at`, `title`, `updated_at`, `user_id`, `value`, `content`, `shoulu`, `link_url`) VALUES('2009-06-14 12:23:25', NULL, '2009-06-14 12:23:25', NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mSQL (42.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mResource Create (0.5ms)[0m   [0;1mINSERT INTO `resources` (`created_at`, `title`, `updated_at`, `user_id`, `value`, `content`, `shoulu`, `link_url`) VALUES('2009-06-14 12:28:28', NULL, '2009-06-14 12:28:28', NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mSQL (99.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mResource Delete all (21.5ms)[0m   [0;1mDELETE FROM `resources` WHERE (`id` IN ('--- \n- :name\n- r\n')) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mResource Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mResource Create (0.2ms)[0m   [0;1mINSERT INTO `resources` (`created_at`, `title`, `updated_at`, `user_id`, `value`, `content`, `shoulu`, `link_url`) VALUES('2009-06-14 12:33:48', NULL, '2009-06-14 12:33:48', NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mSQL (45.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`email` IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`email` IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mResource Create (0.2ms)[0m   [0;1mINSERT INTO `resources` (`created_at`, `title`, `updated_at`, `user_id`, `value`, `content`, `shoulu`, `link_url`) VALUES('2009-06-14 12:52:18', NULL, '2009-06-14 12:52:18', NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mSQL (96.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mResource Create (0.2ms)[0m   [0mINSERT INTO `resources` (`created_at`, `title`, `updated_at`, `user_id`, `value`, `content`, `shoulu`, `link_url`) VALUES('2009-06-14 12:52:23', NULL, '2009-06-14 12:52:23', NULL, NULL, NULL, NULL, NULL)[0m
+  [4;36;1mSQL (123.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mTag Load (0.3ms)[0m   [0mSELECT DISTINCT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.id = `taggings`.tag_id WHERE ((`taggings`.resource_id = 11)) LIMIT 3[0m
+  [4;36;1mTag Load (0.3ms)[0m   [0;1mSELECT DISTINCT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.id = `taggings`.tag_id WHERE ((`taggings`.resource_id = 10)) LIMIT 3[0m
+  [4;35;1mTag Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `tags`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTag Create (0.2ms)[0m   [0mINSERT INTO `tags` (`name`, `created_at`, `resource_id`, `updated_at`) VALUES('aa', '2009-06-14 12:52:51', NULL, '2009-06-14 12:52:51')[0m
+  [4;36;1mSQL (143.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTag Create (0.2ms)[0m   [0;1mINSERT INTO `tags` (`name`, `created_at`, `resource_id`, `updated_at`) VALUES('bb', '2009-06-14 12:53:03', NULL, '2009-06-14 12:53:03')[0m
+  [4;35;1mSQL (66.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTagging Columns (3.7ms)[0m   [0mSHOW FIELDS FROM `taggings`[0m
+  [4;36;1mTagging Create (0.4ms)[0m   [0;1mINSERT INTO `taggings` (`created_at`, `tag_id`, `resource_id`, `updated_at`) VALUES('2009-06-14 12:53:13', 9, 10, '2009-06-14 12:53:13')[0m
+  [4;35;1mSQL (100.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTagging Create (0.2ms)[0m   [0mINSERT INTO `taggings` (`created_at`, `tag_id`, `resource_id`, `updated_at`) VALUES('2009-06-14 12:53:23', 9, 11, '2009-06-14 12:53:23')[0m
+  [4;36;1mSQL (60.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTagging Create (0.2ms)[0m   [0;1mINSERT INTO `taggings` (`created_at`, `tag_id`, `resource_id`, `updated_at`) VALUES('2009-06-14 12:53:33', 10, 10, '2009-06-14 12:53:33')[0m
+  [4;35;1mSQL (60.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mResource Load (0.3ms)[0m   [0mSELECT * FROM `resources` [0m
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` [0m
+  [4;35;1mResource Load (12.3ms)[0m   [0mSELECT DISTINCT `resources`.* FROM `resources` INNER JOIN `taggings` ON `resources`.id = `taggings`.resource_id WHERE ((`taggings`.tag_id = 9)) [0m
+  [4;36;1mResource Load (0.6ms)[0m   [0;1mSELECT DISTINCT `resources`.* FROM `resources` INNER JOIN `taggings` ON `resources`.id = `taggings`.resource_id WHERE ((`taggings`.tag_id = 10)) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m

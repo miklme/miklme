@@ -1,7 +1,6 @@
 class PortraitsController < ApplicationController
   caches_page :show
   before_filter :load_user
-
   def show
     @portrait = @user.portrait
     respond_to do |format|
