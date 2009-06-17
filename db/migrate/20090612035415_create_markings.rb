@@ -1,7 +1,7 @@
 class CreateMarkings < ActiveRecord::Migration
   def self.up
     create_table :markings do |t|
-      t.text :content
+      t.text :comment
       t.string :title
       t.integer :resource_id
       t.integer :user_id

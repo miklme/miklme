@@ -7,6 +7,8 @@ class CreateResources < ActiveRecord::Migration
       t.boolean :shoulu,:default => true
       t.integer :user_id
       t.integer :value
+      t.string :keywords,:limit => 23
+      t.string :addition,:limit => 14
       
       t.timestamps
     end

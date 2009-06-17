@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090614120808) do
+ActiveRecord::Schema.define(:version => 20090612035415) do
 
   create_table "friendships", :force => true do |t|
     t.integer  "user_id",                                                       :null => false
@@ -30,11 +30,11 @@ ActiveRecord::Schema.define(:version => 20090614120808) do
   end
 
   create_table "markings", :force => true do |t|
-    t.text     "content"
+    t.text     "comment"
     t.string   "title"
     t.integer  "resource_id"
     t.integer  "user_id"
-    t.integer  "rating"
+    t.integer  "rating",      :default => 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -50,23 +50,11 @@ ActiveRecord::Schema.define(:version => 20090614120808) do
     t.string   "link_url"
     t.text     "content"
     t.string   "title"
-    t.boolean  "shoulu"
+    t.boolean  "shoulu",                   :default => true
     t.integer  "user_id"
     t.integer  "value"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "taggings", :force => true do |t|
-    t.integer  "resource_id"
-    t.integer  "tag_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "tags", :force => true do |t|
-    t.string   "name",        :limit => 14
-    t.integer  "resource_id"
+    t.string   "keywords",   :limit => 23
+    t.string   "addition",   :limit => 14
     t.datetime "created_at"
     t.datetime "updated_at"
   end
