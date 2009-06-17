@@ -6,7 +6,8 @@ class StartController < ApplicationController
   def search
     @resources=Resource.find_by_keywords(params[:keywords])
     render :update do |page|
-      page.redirect_to resources_path(@resources)
+      page.redirect_to resources_path
     end
   end
+
 end

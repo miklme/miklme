@@ -3,14 +3,14 @@
 </div>
 <div id="content">
   <h2><label for="resource_keywords">Starts from here...</label>
-  <%= text_field 'resource','keywords' %></h2>
+    <%= text_field 'resource','keywords' %><span id="notification">.</span></h2>
   <div class="auto_complete" id="resource_keywords_auto_complete"></div>
   <%= auto_complete_field :resource_keywords,
     :url  => {:action => 'auto_complete_for_resource_keywords'},
     :frequency  => 0.1,
     :min_chars => 1,
     :after_update_element =>
-    "function(element,value){" + remote_function(:url => { :action=> :search }) + "}"
+    "function(element,value){" + remote_function(:url => { :action=> :search },:with=>"'keywords='+element.value") + "}"
 %>
 
   <h3>Doesn't know how to start?click here...</h3>

@@ -1,7 +1,7 @@
 <h1>Listing resources</h1>
 
 <table>
-<% @resources.each do |resource| %>
+<% for resource in @resources do %>
   <tr>
     <td><%= link_to 'Show', resource %></td>
     <td><%= link_to 'Edit', edit_resource_path(resource) %></td>
