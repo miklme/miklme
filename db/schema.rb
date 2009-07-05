@@ -12,9 +12,9 @@
 ActiveRecord::Schema.define(:version => 20090612035415) do
 
   create_table "friendships", :force => true do |t|
-    t.integer  "user_id",                                                       :null => false
-    t.integer  "friend_id",                                                     :null => false
-    t.integer  "friendship_value", :limit => 10, :precision => 10, :scale => 0
+    t.integer  "user_id",                                                                      :null => false
+    t.integer  "friend_id",                                                                    :null => false
+    t.integer  "friendship_value", :limit => 10, :precision => 10, :scale => 0, :default => 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -49,7 +49,6 @@ ActiveRecord::Schema.define(:version => 20090612035415) do
   create_table "resources", :force => true do |t|
     t.string   "link_url"
     t.text     "content"
-    t.string   "title"
     t.boolean  "shoulu",                   :default => true
     t.integer  "user_id"
     t.integer  "value"
@@ -68,7 +67,7 @@ ActiveRecord::Schema.define(:version => 20090612035415) do
 
   create_table "users", :force => true do |t|
     t.string   "name",                      :limit => 20,                                 :default => ""
-    t.string   "email",                     :limit => 100,                                                :null => false
+    t.string   "email",                     :limit => 100,                                                 :null => false
     t.string   "crypted_password",          :limit => 40
     t.string   "salt",                      :limit => 40
     t.string   "remember_token",            :limit => 40
@@ -79,8 +78,9 @@ ActiveRecord::Schema.define(:version => 20090612035415) do
     t.string   "state"
     t.string   "city"
     t.integer  "follower_id"
-    t.integer  "value",                     :limit => 10,  :precision => 10, :scale => 0, :default => 0
+    t.decimal  "value",                                    :precision => 8,  :scale => 1, :default => 0.0
     t.integer  "money",                     :limit => 10,  :precision => 10, :scale => 0, :default => 10
+    t.integer  "terms"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -13,9 +13,9 @@ class CreateUsers < ActiveRecord::Migration
       t.string :state
       t.string :city
       t.integer :follower_id
-      t.decimal  :value,:default=>0
-      t.decimal :money,:default => 10
-      
+      t.decimal  :value,:default=>0,:precision => 8,:scale => 1
+      t.decimal :money,:default => 10,:presicision => 8,:scale => 2
+      t.integer :terms
       t.timestamps
 
     end

@@ -1,11 +1,15 @@
-<h1>New resource</h1>
-
-<% form_for(@resource) do |f| %>
-  <%= f.error_messages %>
-
+<h1>新建资源</h1>
+<% form_for([@user,@resource]) do |f| %>
+  <p> <%= f.error_messages %></p>
+  <%= f.label :content,'你要发表的内容(如果分享链接，这里可以截取一小段原文)' %>
+  <%= f.text_area :content%></p>
+  <p><%= f.label :link_url,'资源链接' %>
+    <%= f.text_field :link_url %></p>
+  <p><%= f.label :keywords,'关键字' %>
+    <%= f.text_field :keywords %><span>很重要，这将是所有检索的依据。获得进一步的使用技巧，请查看这里</span></p>
+  <p><%= f.label :addition,'对于关键字的补充' %>
+  <%= f.text_field :addition %><span>将作为标题而显示，想些什么就写些什么。</span></p>
   <p>
-    <%= f.submit 'Create' %>
+    <%= f.submit '就这样' %>
   </p>
 <% end %>
-
-<%= link_to 'Back', resources_path %>

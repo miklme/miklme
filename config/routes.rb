@@ -1,11 +1,17 @@
-ActionController::Routing::Routes.draw do |map|  map.resources :markings
-  map.resources :resources
-  map.resources :true_portraits
-  map.resources :users,:has_one=>[:portrait,:true_portrait],:has_many => :friends
+ActionController::Routing::Routes.draw do |map|
+  map.resources :users do |user|
+    user.resource :portrait
+    user.resource :true_portrait
+    user.resources  :friends
+    user.resources :resources,:has_many => :markings
+  end
+  map.resources :resources do |resource|
+    resource.resources :markings
+  end
   map.resource :session
-
   map.logout '/logout', :controller => 'sessions', :action => 'destroy'
   map.register '/register', :controller => 'users', :action => 'create'
+  map.search '/search/:keywords',:controller => 'resources',:action => 'search'
   map.activate '/activate/:activation_code', :controller => 'users', :action => 'activate'
   map.login'login',:controller => 'sessions',:action => 'new'
   map.root :controller=>'sessions',:action=>'new'

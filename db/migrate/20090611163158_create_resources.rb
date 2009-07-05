@@ -3,7 +3,6 @@ class CreateResources < ActiveRecord::Migration
     create_table :resources do |t|
       t.string :link_url
       t.text :content
-      t.string :title
       t.boolean :shoulu,:default => true
       t.integer :user_id
       t.integer :value

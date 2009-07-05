@@ -1,6 +1,7 @@
 # This controller handles the login/logout function of the site.  
 class SessionsController < ApplicationController
   skip_before_filter :login_required
+  before_filter :redirect_to_search
 
   def new
     @user=User.new
@@ -17,7 +18,7 @@ class SessionsController < ApplicationController
       self.current_user = user
       new_cookie_flag = (params[:remember_me] == "1")
       new_cookie_flag
-      redirect_back_or_default('/')
+      redirect_to :controller =>:start,:action => :michael
       flash[:notice] = "成功登入，即刻将体验Michael带给你的...无限"
     else
       note_failed_signin
@@ -38,5 +39,11 @@ class SessionsController < ApplicationController
   def note_failed_signin
     flash[:error] = "恩...出了点小问题，检查一下是否邮箱名和密码有错误."
     logger.warn "Failed login for '#{params[:email]}' from #{request.remote_ip} at #{Time.now.utc}"
+  end
+
+  def redirect_to_search
+    if logged_in?
+      redirect_to :controller => :start,:action => :michael
+    end
   end
 end

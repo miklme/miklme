@@ -3,11 +3,10 @@ class StartController < ApplicationController
   def michael
 
   end
+ 
   def search
-    @resources=Resource.find_by_keywords(params[:keywords])
     render :update do |page|
-      page.redirect_to resources_path
+      page.redirect_to "/search/#{params[:keywords]}"
     end
   end
-
 end

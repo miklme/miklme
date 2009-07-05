@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  skip_before_filter :login_required,:only=>[:new,:create,:activate]
+  skip_before_filter :login_required,:except=>[:edit,:update,:show]
   layout 'sessions',:only =>:new
   
   def new
@@ -41,7 +41,6 @@ class UsersController < ApplicationController
     user = User.find_by_activation_code(params[:activation_code]) unless params[:activation_code].blank?
     if (!params[:activation_code].blank?) and user and !user.active?
       user.activate!
-      session[:user_id]=@user.id
       flash[:notice] = "激活成功，即刻将体验Michael带给您的...无限。"
       redirect_to edit_user_path(user)
     elsif params[:activation_code].blank?

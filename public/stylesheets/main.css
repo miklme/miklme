@@ -31,7 +31,8 @@ a:hover { text-decoration:none;
        position: relative;
        top: 250px;
 }
-#content {width:780px; margin:0 auto;}
+#content {width:780px; margin:0 auto;
+}
 #text { width:520px;
         text-align: center;
         font-size: 14px;
@@ -45,10 +46,7 @@ a:hover { text-decoration:none;
     line-height: 30px;
 }
 #sidebar {float:left; width:227px; background-color:#0b0e10; 
-          text-align: center;
-          margin-left: 100px;
-          margin-bottom: 0px;
-          margin-right: 0px;
+          text-align: center
 }
 #sidebar_top { width:227px; height:40px; background:url(../images/sidebar_top.jpg) no-repeat;}
 #sidebar_text { padding: 0 30px;}
@@ -103,7 +101,9 @@ input:hover,input:focus {    background-color: #fefefe;
 }
 #register {
     font-size: 14px;
-    margin: 64px;
+    margin-right:120px;
+    margin-top:80px;
+    margin-left:120px
 }
 #registered_notice {
     color: #fefefe;
@@ -126,25 +126,28 @@ input:hover,input:focus {    background-color: #fefefe;
 }
 #user_password,#user_password_confirmation {width:100px}
 div.auto_complete {
-  width: 350px;
-  background: #fff ;
+    width: 350px;
+    background: #fff ;
 }
 div.auto_complete ul {
-  border:1px solid #888 ;
-  margin:0;
-  padding:0;
-  width:100%;
-  list-style-type:none;
+    border:1px solid #888 ;
+    margin:0;
+    padding:0;
+    width:100%;
+    list-style-type:none;
 }
 div.auto_complete ul li {
-  margin:0;
-  padding:3px;
+    margin:0;
+    padding:3px;
 }
 div.auto_complete ul li.selected {
-  background-color: #ffb ;
+    background-color: #ffb ;
 }
 div.auto_complete ul strong.highlight {
-  color: #800 ;
-  margin:0;
-  padding:0;
+    color: #800 ;
+    margin:0;
+    padding:0;
+}
+#content a{
+    font-size:14px;
 }

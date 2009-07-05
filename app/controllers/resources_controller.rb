@@ -1,20 +1,14 @@
 class ResourcesController < ApplicationController
-  # GET /resources
-  # GET /resources.xml
-  def index
-    @resources = Resource.all
-
+  def search
+    @resources = Resource.scoped_by_keywords(params[:keywords])
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @resources }
     end
   end
-
-  # GET /resources/1
-  # GET /resources/1.xml
+  
   def show
     @resource = Resource.find(params[:id])
-
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @resource }
@@ -25,7 +19,6 @@ class ResourcesController < ApplicationController
   # GET /resources/new.xml
   def new
     @resource = Resource.new
-
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @resource }
@@ -78,8 +71,10 @@ class ResourcesController < ApplicationController
     @resource.destroy
 
     respond_to do |format|
-      format.html { redirect_to(resources_url) }
+      format.html { redirect_to(user_resources_url) }
       format.xml  { head :ok }
     end
   end
+
+  
 end

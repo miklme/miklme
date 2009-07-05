@@ -31,13 +31,11 @@ class User < ActiveRecord::Base
   validates_format_of :email,
     :with =>/\A#{'[\w\.%\+\-]+'}@#{'(?:[A-Z0-9\-]+\.)+'}#{'(?:[A-Z]{2}|com|org|net|edu|gov|mil|biz|info|mobi|name|aero|jobs|museum)'}\z/i,
     :message => "在Michael看来并不合理"
-  validates_length_of :email,:within => 6..100 #r@a.wk
   validates_length_of :nick_name,:name,:maximum=>10,:on => :update
   validates_uniqueness_of :email
-  validates_presence_of :email
-  validates_presence_of :nick_name,:name,:on => :update
-
-  # how to do attr_accessible from here?
+  validates_presence_of :nick_name,:on => :update
+  validates_acceptance_of :terms,:message => '请同意我们的服务条款以继续',:on => :create,:accept => 1
+    # how to do attr_accessible from here?
   # prevents a user from submitting a crafted form that bypasses activation
   # anything else you want your user to change should be added here.
   before_save :encrypt_password
