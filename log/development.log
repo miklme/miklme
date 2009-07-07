@@ -9023,3 +9023,12 @@ Rendering template within layouts/sessions
 Rendering sessions/new
 Rendered shared/_footer (0.7ms)
 Completed in 18ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StartController#auto_complete_for_resource_keywords (for 127.0.0.1 at 2009-07-07 18:41:20) [GET]
+  Parameters: {"resource"=>{"keywords"=>""}}
+  [4;35;1mResource Load (0.3ms)[0m   [0mSELECT * FROM `resources` WHERE (LOWER(keywords) LIKE '%%') ORDER BY keywords ASC LIMIT 10[0m
+  [4;36;1mResource Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Completed in 13ms (View: 2, DB: 1) | 200 OK [http://localhost/start/auto_complete_for_resource_keywords?resource%5Bkeywords%5D=]
