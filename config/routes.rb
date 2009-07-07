@@ -11,7 +11,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resource :session
   map.logout '/logout', :controller => 'sessions', :action => 'destroy'
   map.register '/register', :controller => 'users', :action => 'create'
-  map.search '/search/:keywords',:controller => 'resources',:action => 'search'
+  map.search '/search/:keywords',:controller => 'resources'
   map.activate '/activate/:activation_code', :controller => 'users', :action => 'activate'
   map.login'login',:controller => 'sessions',:action => 'new'
   map.root :controller=>'sessions',:action=>'new'

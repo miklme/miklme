@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(:version => 20090612035415) do
   end
 
   create_table "resources", :force => true do |t|
+    t.string   "type"
     t.string   "link_url"
     t.text     "content"
     t.boolean  "shoulu",                   :default => true

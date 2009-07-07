@@ -5,8 +5,11 @@ class User < ActiveRecord::Base
   include Authentication::ByPassword
   include Authentication::ByCookieToken
   
+  default_scope :order => 'value DESC'
+  named_scope :value,:order => 'value DESC'
+  
   has_many :markings
-  has_many :resources,:through => :markings
+  has_many :resources
   has_many :friendships
   has_many :friends,
     :through => :friendships,
@@ -19,7 +22,7 @@ class User < ActiveRecord::Base
     :foreign_key => 'follower_id'
   has_one :portrait
   has_one :true_portrait
-  belongs_to :followers,
+  belongs_to :follower,
     :class_name => 'User',
     :foreign_key => 'follower_id'
 

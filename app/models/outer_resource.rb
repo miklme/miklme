@@ -1,0 +1,2 @@
+class OuterResource < Resource
+end
