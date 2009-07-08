@@ -3,12 +3,13 @@ class Resource < ActiveRecord::Base
   has_many :markers,:through => :markings,:source => :user
   belongs_to :author,:class_name => 'User',:foreign_key => :user_id
   validates_presence_of :link_url,:message => '链接不能为空',:if => :validates_outer_resource
+
   named_scope :search_result,lambda { |keywords|
     { :conditions => ['keywords = ?', keywords],:order => 'created_at DESC' }
   }
 
-
   before_save :adjust_link_url
+  
   private
   def adjust_link_url
     if not self.link_url=~/http:/

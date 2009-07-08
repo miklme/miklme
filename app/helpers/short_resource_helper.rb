@@ -1,0 +1,2 @@
+module ShortResourceHelper
+end
