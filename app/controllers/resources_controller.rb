@@ -1,4 +1,5 @@
 class ResourcesController < ApplicationController
+  before_filter :load_user
   def index
   end
   
@@ -71,5 +72,8 @@ class ResourcesController < ApplicationController
     end
   end
 
-  
+  private
+  def load_user
+    @user=User.find(params[:user_id])
+  end
 end

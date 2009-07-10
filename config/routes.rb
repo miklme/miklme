@@ -4,12 +4,10 @@ ActionController::Routing::Routes.draw do |map|
     user.resource :true_portrait
     user.resources  :friends
     user.resources :resources,:has_many => :markings
-    user.resources :short_resources
   end
   map.resource :session
 
-  map.user '/users/:username',:controller => 'users',:action => 'show'
-  map.search '/search/:keywords',:controller => 'user_short_resources',:action => 'index'
+  map.search '/search/:keywords',:controller => 'start',:action => 'index'
   map.activate '/activate/:activation_code', :controller => 'users', :action => 'activate'
   map.root :controller=>'sessions',:action=>'new'
 

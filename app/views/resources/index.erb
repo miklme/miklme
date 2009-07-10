@@ -2,9 +2,6 @@
 
 <div>
   <ol>
-    <% for user in @users do %>
-       <%= render :partial => user_short_resource_path(user),:collection => @users %>
-        <% end %>
     <% for resource in @resources do %>
         <li>
           <h3>

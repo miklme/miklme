@@ -54,6 +54,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user =User.find_by_username(params[:username])
+    @user =User.find(params[:id])
+    redirect_to user_resources_path(@user)
   end
 end

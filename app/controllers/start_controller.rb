@@ -9,4 +9,11 @@ class StartController < ApplicationController
       page.redirect_to "/search/#{params[:keywords]}"
     end
   end
+
+  def index
+    @resources = Resource.search_result(params[:keywords]).find(:all,:group => 'user_id')
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @resources }
+    end  end
 end
