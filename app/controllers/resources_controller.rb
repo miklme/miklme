@@ -1,6 +1,7 @@
 class ResourcesController < ApplicationController
   before_filter :load_user
   def index
+    @resources=@user.resources
   end
   
   def show

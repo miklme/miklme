@@ -1,3 +1,14 @@
-
-<%= link_to 'Edit', edit_user_resource_path(resource) %> |
-<%= link_to 'Back', user_path(@user) %>
+<li>
+  <h3>
+    <% if  resource.link_url?  %>
+      <%= link_to resource.addition || resource.keywords, resource.link_url,:popup => true%>
+  <%# else %>
+  <%#=  link_to resource.addition || resource.keywords,user_resource_path(resource.author) %>
+    <% end %>
+  </h3>
+  <div><%= auto_link(highlight(truncate(resource.content,:length => 140),resource.keywords)) %>
+  </div>
+</li>
+<div>
+  <%= link_to 'Edit', edit_user_resource_path([@user,resource]) %> |
+</div>
