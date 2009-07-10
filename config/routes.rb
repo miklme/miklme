@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :roles
+
   map.resources :users do |user|
     user.resource :portrait
     user.resource :true_portrait
@@ -6,15 +8,11 @@ ActionController::Routing::Routes.draw do |map|
     user.resources :resources,:has_many => :markings
     user.resources :short_resources
   end
-  map.resources :resources do |resource|
-    resource.resources :markings
-  end
   map.resource :session
-  map.logout '/logout', :controller => 'sessions', :action => 'destroy'
-  map.register '/register', :controller => 'users', :action => 'create'
-  map.search '/search/:keywords',:controller => 'short_resources'
+
+  map.user '/users/:username',:controller => 'users',:action => 'show'
+  map.search '/search/:keywords',:controller => 'user_short_resources',:action => 'index'
   map.activate '/activate/:activation_code', :controller => 'users', :action => 'activate'
-  map.login'login',:controller => 'sessions',:action => 'new'
   map.root :controller=>'sessions',:action=>'new'
 
   # Sample resource route with options:

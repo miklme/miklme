@@ -16,6 +16,7 @@ class CreateUsers < ActiveRecord::Migration
       t.decimal  :value,:default=>0,:precision => 8,:scale => 1
       t.decimal :money,:default => 10,:presicision => 8,:scale => 2
       t.integer :terms
+      t.string :username,:limit => 40,:uniq => true
       t.timestamps
 
     end

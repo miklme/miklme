@@ -1,0 +1,13 @@
+<div id="header">
+  <h1>Michael</h1>
+</div>
+<div id="content">
+  <h2><label for="resource_keywords">Starts from here...</label>
+    <%= text_field_with_auto_complete :resource, :keywords, {:onfocus => "resource_keywords_auto_completer.activate()"}, {:method => :get, :frequency => 0,:after_update_element =>
+        "function(element,value){" + remote_function(:url => {:action => :search},:with=>"'keywords='+element.value") + "}"} %>
+  </h2>
+  <span id="notification"></span>
+  <h3>Doesn't know how to start?click here...</h3>
+</div>
+
+<%= render 'shared/footer' %>

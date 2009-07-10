@@ -7,7 +7,8 @@ class User < ActiveRecord::Base
   
   default_scope :order => 'value DESC'
   named_scope :value,:order => 'value DESC'
-  
+
+  has_and_belongs_to_many :roles
   has_many :markings
   has_many :resources
   has_many :friendships

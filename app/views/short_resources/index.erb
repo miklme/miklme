@@ -1,54 +1,11 @@
-<h1>Michael提供以下结果</h1>
-
-<div>
-  <ol>
-    <% for user in @users do %>
-       <%= render :partial => user_short_resource_path(user),:collection => @users %>
-        <% end %>
-    <% for resource in @resources do %>
-        <li>
-          <h3>
-            <% if  resource.link_url?  %>
-              <%= link_to resource.addition || resource.keywords, resource.link_url,:popup => true%>
-      <%# else %>
-      <%#=  link_to resource.addition || resource.keywords,user_resource_path(resource.author) %>
-            <% end %>
-          </h3>
-          <div><%= auto_link(highlight(truncate(resource.content,:length => 140),resource.keywords)) %>
-          </div>
-        </li>
-      <% end %>
-    </ol>
+<li>
+  <h3>
+    <% if  resource.link_url?  %>
+      <%= link_to resource.addition || resource.keywords, resource.link_url,:popup => true%>
+  <%# else %>
+  <%#=  link_to resource.addition || resource.keywords,user_resource_path(resource.author) %>
+    <% end %>
+  </h3>
+  <div><%= auto_link(highlight(truncate(resource.content,:length => 140),resource.keywords)) %>
   </div>
-
-  <span>Michael推荐的相关结果:</span>
-  <div class="e">
-    <table class="ts med">
-      <tbody>
-        <tr>
-          <td>
-          </td>
-          <td>
-          </td>
-          <td>
-          </td>
-          <td>
-          </td>
-          <td>
-          </td>
-        </tr>
-        <tr>
-          <td>
-          </td>
-          <td>
-          </td>
-          <td>
-          </td>
-          <td>
-          </td>
-          <td>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+</li>

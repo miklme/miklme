@@ -1,4 +1,4 @@
-class CreateResources < ActiveRecord::Migration
+class CreateOuterLinks < ActiveRecord::Migration
   def self.up
     create_table :resources do |t|
       #common attributes
@@ -10,7 +10,6 @@ class CreateResources < ActiveRecord::Migration
       t.string :keywords,:limit => 23
       t.string :addition,:limit => 14
       t.integer :order
-
       #attributes for outer resources
       t.string :link_url
 

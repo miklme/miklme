@@ -5,7 +5,7 @@
     <div id="logo"> <div id="login"></div>
     <%=link_to '1',new_session_path%> </div>
     <%if logged_in? -%>
-      <%= link_to '登出', logout_path %>
+      <%= link_to '登出', session_path,:method => :delete %>
     <%end%>
     <!--
    <div id="menu">

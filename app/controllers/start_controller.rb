@@ -1,5 +1,5 @@
 class StartController < ApplicationController
-  auto_complete_for :resource,:keywords
+  auto_complete_for :resource,:keywords,:limit => 50
   def michael
 
   end
