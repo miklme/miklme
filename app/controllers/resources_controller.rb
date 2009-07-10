@@ -24,18 +24,18 @@ class ResourcesController < ApplicationController
 
   # GET /resources/1/edit
   def edit
-    @resource = Resource.find(params[:id])
+    @resource = @user.resources.find(params[:id])
   end
 
   # POST /resources
   # POST /resources.xml
   def create
-    @resource = Resource.new(params[:resource])
+    @resource = @user.resources.build(params[:resource])
 
     respond_to do |format|
       if @resource.save
         flash[:notice] = 'Resource was successfully created.'
-        format.html { redirect_to(@resource) }
+        format.html { redirect_to user_resources_path(@user) }
         format.xml  { render :xml => @resource, :status => :created, :location => @resource }
       else
         format.html { render :action => "new" }

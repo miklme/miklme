@@ -26,11 +26,12 @@
         <p><%=flash[:error]%></p>
       <%end%>
       <div id="text">
-        <div>
-          <ul>
-            <%= render @resources %>
-          </ul>
-        </div>
+        <ul>
+          <%= render @resources %>
+        </ul>
+        <span>
+          <%= link_to 'New Resource',new_user_resource_path(@user) %>
+        </span>
       </div>
     </div>
     <!-- footer -->
