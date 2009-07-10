@@ -1,6 +1,4 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :roles
-
   map.resources :users do |user|
     user.resource :portrait
     user.resource :true_portrait
