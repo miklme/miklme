@@ -9,7 +9,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090612035415) do
+ActiveRecord::Schema.define(:version => 20090712100836) do
+
+  create_table "comments", :force => true do |t|
+    t.text     "content"
+    t.string   "title"
+    t.integer  "resource_id"
+    t.integer  "user_id"
+    t.integer  "rating",      :default => 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "friendships", :force => true do |t|
     t.integer  "user_id",                                                                      :null => false
@@ -48,13 +58,13 @@ ActiveRecord::Schema.define(:version => 20090612035415) do
 
   create_table "resources", :force => true do |t|
     t.string   "type"
-    t.string   "link_url"
-    t.text     "content"
-    t.boolean  "shoulu",                   :default => true
+    t.boolean  "shoulu",                    :default => true
     t.integer  "user_id"
-    t.integer  "value"
-    t.string   "keywords",   :limit => 23
-    t.string   "addition",   :limit => 14
+    t.string   "keywords",    :limit => 23
+    t.string   "title",       :limit => 14
+    t.integer  "order"
+    t.string   "link_url"
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -76,12 +86,11 @@ ActiveRecord::Schema.define(:version => 20090612035415) do
     t.string   "activation_code",           :limit => 40
     t.datetime "activated_at"
     t.string   "nick_name",                 :limit => 20
-    t.string   "state"
-    t.string   "city"
     t.integer  "follower_id"
     t.decimal  "value",                                    :precision => 8,  :scale => 1, :default => 0.0
     t.integer  "money",                     :limit => 10,  :precision => 10, :scale => 0, :default => 10
     t.integer  "terms"
+    t.string   "username",                  :limit => 40
     t.datetime "created_at"
     t.datetime "updated_at"
   end

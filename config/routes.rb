@@ -3,7 +3,7 @@ ActionController::Routing::Routes.draw do |map|
     user.resource :portrait
     user.resource :true_portrait
     user.resources  :friends
-    user.resources :resources,:has_many => :markings
+    user.resources :resources,:has_many => :comments
   end
   map.resource :session
 

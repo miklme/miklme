@@ -31,7 +31,7 @@ class TruePortraitsController < ApplicationController
       redirect_to user_true_portrait_path(@user)
     else
       flash[:notice] = '上传的文件有点问题，请按照要求重新上传。'
-      redirect_to new_user_true_portrait_path(@user)
+      redirect_to user_path(@user)
     end
   end
 

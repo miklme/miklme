@@ -1,6 +1,5 @@
 class Resource < ActiveRecord::Base
-  has_many :markings
-  has_many :markers,:through => :markings,:source => :user
+  has_many :comments
   belongs_to :author,:class_name => 'User',:foreign_key => :user_id
   validates_presence_of :link_url,:message => '链接不能为空',:if => :validates_outer_resource
 

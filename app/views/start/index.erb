@@ -13,6 +13,14 @@
           </h3>
           <div><%= auto_link(highlight(truncate(resource.description,:length => 140),resource.keywords)) %>
           </div>
+          <span>作者:
+            <%= resource.author.id %>
+            价值点数：<%= resource.author.value %>
+          </span>
+          <div id="comments">
+            <%= render resource.comments %>
+            <span><%= link_to "发表评论...", new_user_resource_comment_path(resource.author,resource) %></span>
+          </div>
         </li>
       <% end %>
     </ol>

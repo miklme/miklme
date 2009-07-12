@@ -15,13 +15,12 @@ class ResourcesController < ApplicationController
   # GET /resources/new
   # GET /resources/new.xml
   def new
-    @resource = Resource.new
+    @resource = @user.resources.build
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @resource }
     end
   end
-
   # GET /resources/1/edit
   def edit
     @resource = @user.resources.find(params[:id])
@@ -47,12 +46,12 @@ class ResourcesController < ApplicationController
   # PUT /resources/1
   # PUT /resources/1.xml
   def update
-    @resource = Resource.find(params[:id])
+    @resource = @user.resources.find(params[:id])
 
     respond_to do |format|
       if @resource.update_attributes(params[:resource])
         flash[:notice] = 'Resource was successfully updated.'
-        format.html { redirect_to(@resource) }
+        format.html { redirect_to user_resources_path(@user) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

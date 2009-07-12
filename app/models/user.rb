@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   default_scope :order => 'value DESC'
   named_scope :value,:order => 'value DESC'
 
-  has_many :markings
+  has_many :comments
   has_many :resources
   has_many :friendships
   has_many :friends,
@@ -38,7 +38,7 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :email
   validates_presence_of :nick_name,:on => :update
   validates_acceptance_of :terms,:message => '请同意我们的服务条款以继续',:on => :create,:accept => 1
-    # how to do attr_accessible from here?
+  # how to do attr_accessible from here?
   # prevents a user from submitting a crafted form that bypasses activation
   # anything else you want your user to change should be added here.
   before_save :encrypt_password

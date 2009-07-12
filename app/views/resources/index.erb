@@ -1,18 +1,14 @@
 <body>
   <div id="header">
     <div id="logo">
-      <%= link_to '登出', session_path,:method => :delete %>
-      <!--
-     <div id="menu">
-        <ul>
-          <li><a href="#">home</a></li>
-          <li><a href="#">about us</a></li>
-          <li><a href="#">services</a></li>
-          <li><a href="#">pricing</a></li>
-          <li><a href="#">contacts</a></li>
-        </ul>
-      </div>
-      -->
+      <h1><%= link_to "Michael",:controller => :start,:action => :michael %></h1>
+    </div>
+    <div id="menu">
+      <ul>
+        <li>
+          <%= link_to '登出', session_path,:method => :delete %>
+        </li>
+      </ul>
     </div>
   </div>
   <!--end header -->
@@ -25,21 +21,18 @@
       <%if flash[:error]%>
         <p><%=flash[:error]%></p>
       <%end%>
-      <div id="text">
         <ul>
           <%= render @resources %>
         </ul>
         <span>
-          <%= link_to 'New Resource',new_user_resource_path(@user) %>
+          <%= link_to "分享新链接",new_user_resource_path(@user) %>
         </span>
-      </div>
     </div>
-    <!-- footer -->
-    <%=render :partial=>'shared/footer'%>
-    <!-- end footer -->
   </div>
   <!-- end main -->
-
+  <!-- footer -->
+  <%=render :partial=>'shared/footer'%>
+  <!-- end footer -->
 </body>
 
 
