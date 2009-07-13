@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090712100836) do
+ActiveRecord::Schema.define(:version => 20090713122317) do
 
   create_table "comments", :force => true do |t|
     t.text     "content"
@@ -34,6 +34,13 @@ ActiveRecord::Schema.define(:version => 20090712100836) do
   create_table "important_days", :force => true do |t|
     t.date     "day"
     t.text     "description"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "keywords", :force => true do |t|
+    t.string   "name"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -65,6 +72,13 @@ ActiveRecord::Schema.define(:version => 20090712100836) do
     t.integer  "order"
     t.string   "link_url"
     t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "searched_keywords", :force => true do |t|
+    t.string   "name"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

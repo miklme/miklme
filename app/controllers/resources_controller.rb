@@ -30,10 +30,10 @@ class ResourcesController < ApplicationController
   # POST /resources.xml
   def create
     @resource = @user.resources.build(params[:resource])
-
     respond_to do |format|
       if @resource.save
-        @user.keywords<<params[:resource][:keywords]
+        keyword=Keyword.create(:name => params[:resource][:keywords])
+        @user.keywords<<keyword
         @user.save
         flash[:notice] = 'Resource was successfully created.'
         format.html { redirect_to user_resources_path(@user) }

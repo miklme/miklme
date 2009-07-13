@@ -2415,3 +2415,526 @@ NoMethodError (undefined method `by_user_value' for #<Class:0xb6cfb3fc>):
 Rendered rescues/_trace (80.2ms)
 Rendered rescues/_request_and_response (0.3ms)
 Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StartController#index (for 127.0.0.1 at 2009-07-13 20:25:21) [GET]
+  Parameters: {"keywords"=>"Michael Jackson"}
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+
+NoMethodError (undefined method `by_user_value' for #<Class:0xb6c0b398>):
+  app/controllers/start_controller.rb:14:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (88.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (7.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-07-13 20:27:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+Redirected to http://localhost:3000/users/1/resources
+Completed in 16ms (DB: 8) | 302 Found [http://localhost/users/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-13 20:27:24) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+Rendering template within layouts/resources
+Rendering resources/index
+  [4;35;1mResource Load (0.3ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) [0m
+  [4;36;1mResource Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Rendered resources/_resource (1.3ms)
+Rendered resources/_resource (0.4ms)
+Rendered resources/_resource (0.4ms)
+Rendered resources/_resource (0.4ms)
+Rendered resources/_resource (0.4ms)
+Rendered shared/_footer (0.9ms)
+Completed in 42ms (View: 21, DB: 2) | 200 OK [http://localhost/users/1/resources]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#new (for 127.0.0.1 at 2009-07-13 20:27:26) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mResource Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/resources
+Rendering resources/new
+Completed in 26ms (View: 6, DB: 2) | 200 OK [http://localhost/users/1/resources/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#create (for 127.0.0.1 at 2009-07-13 20:27:37) [POST]
+  Parameters: {"commit"=>"Update", "resource"=>{"title"=>"aa", "description"=>"aa", "keywords"=>"aa", "link_url"=>"aa"}, "user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mResource Create (0.3ms)[0m   [0;1mINSERT INTO `resources` (`created_at`, `title`, `updated_at`, `order`, `type`, `user_id`, `shoulu`, `description`, `keywords`, `link_url`) VALUES('2009-07-13 12:27:37', 'aa', '2009-07-13 12:27:37', NULL, NULL, 1, 1, 'aa', 'aa', 'http://aa')[0m
+  [4;35;1mSQL (62.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+
+ActiveRecord::AssociationTypeMismatch (Keyword(#-612937108) expected, got String(#-605025788)):
+  app/controllers/resources_controller.rb:36:in `create'
+  app/controllers/resources_controller.rb:34:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (40.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20090523150301)
+Migrating to CreatePortraits (20090606045951)
+Migrating to CreateImportantDays (20090608144113)
+Migrating to CreateFriendships (20090610091245)
+Migrating to CreateTruePortraits (20090611094020)
+Migrating to CreateResources (20090611163158)
+Migrating to CreateComments (20090712100836)
+Migrating to CreateKeywords (20090713121600)
+  [4;36;1mSQL (101.7ms)[0m   [0;1mCREATE TABLE `keywords` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (55.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090713121600')[0m
+Migrating to CreateSearchedKeywords (20090713122317)
+  [4;36;1mSQL (100.2ms)[0m   [0;1mCREATE TABLE `searched_keywords` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (44.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090713122317')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `comments`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `comments`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `friendships`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `friendships`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `friendships`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `important_days`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `important_days`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `important_days`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `keywords`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `keywords`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `keywords`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `markings`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `markings`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `markings`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `portraits`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `portraits`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `portraits`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `resources`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `resources`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `searched_keywords`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `searched_keywords`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `searched_keywords`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW FIELDS FROM `true_portraits`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `true_portraits`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `true_portraits`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#create (for 127.0.0.1 at 2009-07-13 20:27:56) [POST]
+  Parameters: {"commit"=>"Update", "resource"=>{"title"=>"aa", "description"=>"aa", "keywords"=>"aa", "link_url"=>"aa"}, "user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mResource Create (0.2ms)[0m   [0;1mINSERT INTO `resources` (`created_at`, `title`, `updated_at`, `order`, `type`, `user_id`, `shoulu`, `description`, `keywords`, `link_url`) VALUES('2009-07-13 12:27:56', 'aa', '2009-07-13 12:27:56', NULL, NULL, 1, 1, 'aa', 'aa', 'http://aa')[0m
+  [4;35;1mSQL (230.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+
+ActiveRecord::AssociationTypeMismatch (Keyword(#-614052268) expected, got String(#-605025788)):
+  app/controllers/resources_controller.rb:36:in `create'
+  app/controllers/resources_controller.rb:34:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (99.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#new (for 127.0.0.1 at 2009-07-13 20:30:54) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mResource Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/resources
+Rendering resources/new
+Completed in 26ms (View: 3, DB: 2) | 200 OK [http://localhost/users/1/resources/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#create (for 127.0.0.1 at 2009-07-13 20:30:55) [POST]
+  Parameters: {"commit"=>"Update", "resource"=>{"title"=>"aa", "description"=>"aa", "keywords"=>"aa", "link_url"=>"aa"}, "user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mResource Create (0.2ms)[0m   [0mINSERT INTO `resources` (`created_at`, `title`, `updated_at`, `order`, `type`, `user_id`, `shoulu`, `description`, `keywords`, `link_url`) VALUES('2009-07-13 12:30:55', 'aa', '2009-07-13 12:30:55', NULL, NULL, 1, 1, 'aa', 'aa', 'http://aa')[0m
+  [4;36;1mSQL (59.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mKeyword Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `keywords`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mKeyword Create (0.1ms)[0m   [0mINSERT INTO `keywords` (`name`, `created_at`, `updated_at`, `user_id`) VALUES('aa', '2009-07-13 12:30:55', '2009-07-13 12:30:55', NULL)[0m
+  [4;36;1mSQL (49.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mKeyword Update (0.3ms)[0m   [0;1mUPDATE `keywords` SET `updated_at` = '2009-07-13 12:30:55', `user_id` = 1 WHERE `id` = 1[0m
+  [4;35;1mSQL (53.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'michael@mikl.me' AND `users`.id <> 1) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/users/1/resources
+Completed in 202ms (DB: 167) | 302 Found [http://localhost/users/1/resources]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-13 20:30:55) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+Rendering template within layouts/resources
+Rendering resources/index
+  [4;35;1mResource Load (0.3ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) [0m
+  [4;36;1mResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Rendered resources/_resource (0.7ms)
+Rendered resources/_resource (0.5ms)
+Rendered resources/_resource (0.4ms)
+Rendered resources/_resource (0.4ms)
+Rendered resources/_resource (0.4ms)
+Rendered resources/_resource (0.4ms)
+Rendered resources/_resource (0.4ms)
+Rendered resources/_resource (0.4ms)
+Rendered shared/_footer (0.7ms)
+Completed in 85ms (View: 12, DB: 2) | 200 OK [http://localhost/users/1/resources]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#new (for 127.0.0.1 at 2009-07-13 20:30:59) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/resources
+Rendering resources/new
+Completed in 26ms (View: 3, DB: 2) | 200 OK [http://localhost/users/1/resources/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#create (for 127.0.0.1 at 2009-07-13 20:31:03) [POST]
+  Parameters: {"commit"=>"Update", "resource"=>{"title"=>"", "description"=>"aa", "keywords"=>"aaaa", "link_url"=>"aa"}, "user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mResource Create (0.2ms)[0m   [0;1mINSERT INTO `resources` (`created_at`, `title`, `updated_at`, `order`, `type`, `user_id`, `shoulu`, `description`, `keywords`, `link_url`) VALUES('2009-07-13 12:31:03', '', '2009-07-13 12:31:03', NULL, NULL, 1, 1, 'aa', 'aaaa', 'http://aa')[0m
+  [4;35;1mSQL (53.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mKeyword Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `keywords`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mKeyword Create (0.1ms)[0m   [0;1mINSERT INTO `keywords` (`name`, `created_at`, `updated_at`, `user_id`) VALUES('aaaa', '2009-07-13 12:31:03', '2009-07-13 12:31:03', NULL)[0m
+  [4;35;1mSQL (49.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mKeyword Update (0.2ms)[0m   [0mUPDATE `keywords` SET `updated_at` = '2009-07-13 12:31:03', `user_id` = 1 WHERE `id` = 2[0m
+  [4;36;1mSQL (42.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Exists (0.1ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'michael@mikl.me' AND `users`.id <> 1) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/users/1/resources
+Completed in 188ms (DB: 149) | 302 Found [http://localhost/users/1/resources]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-13 20:31:03) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (6.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+Rendering template within layouts/resources
+Rendering resources/index
+  [4;36;1mResource Load (0.3ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) [0m
+  [4;35;1mResource Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Rendered resources/_resource (0.6ms)
+Rendered resources/_resource (0.4ms)
+Rendered resources/_resource (0.4ms)
+Rendered resources/_resource (0.4ms)
+Rendered resources/_resource (0.4ms)
+Rendered resources/_resource (0.4ms)
+Rendered resources/_resource (0.4ms)
+Rendered resources/_resource (0.4ms)
+Rendered resources/_resource (0.4ms)
+Rendered shared/_footer (0.6ms)
+Completed in 37ms (View: 11, DB: 8) | 200 OK [http://localhost/users/1/resources]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-13 20:32:50) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+Rendering template within layouts/resources
+Rendering resources/index
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) [0m
+  [4;35;1mResource Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Rendered resources/_resource (1.6ms)
+Rendered resources/_resource (0.6ms)
+Rendered resources/_resource (0.6ms)
+Rendered resources/_resource (0.7ms)
+Rendered resources/_resource (0.7ms)
+Rendered resources/_resource (0.6ms)
+Rendered resources/_resource (0.6ms)
+Rendered resources/_resource (0.6ms)
+Rendered resources/_resource (0.6ms)
+Rendered shared/_footer (0.6ms)
+Completed in 89ms (View: 17, DB: 2) | 200 OK [http://localhost/users/1/resources]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#destroy (for 127.0.0.1 at 2009-07-13 20:32:52) [DELETE]
+  Parameters: {"id"=>"13", "user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mResource Load (0.2ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.`id` = 13) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mResource Destroy (0.2ms)[0m   [0mDELETE FROM `resources` WHERE `id` = 13[0m
+  [4;36;1mSQL (65.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/users/1/resources
+Completed in 86ms (DB: 67) | 302 Found [http://localhost/users/1/resources/13]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-13 20:32:52) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+Rendering template within layouts/resources
+Rendering resources/index
+  [4;35;1mResource Load (0.3ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) [0m
+  [4;36;1mResource Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Rendered resources/_resource (0.8ms)
+Rendered resources/_resource (0.7ms)
+Rendered resources/_resource (0.6ms)
+Rendered resources/_resource (0.6ms)
+Rendered resources/_resource (0.6ms)
+Rendered resources/_resource (0.6ms)
+Rendered resources/_resource (0.6ms)
+Rendered resources/_resource (0.6ms)
+Rendered shared/_footer (0.6ms)
+Completed in 33ms (View: 12, DB: 2) | 200 OK [http://localhost/users/1/resources]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#destroy (for 127.0.0.1 at 2009-07-13 20:32:57) [DELETE]
+  Parameters: {"id"=>"15", "user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mResource Load (0.2ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.`id` = 15) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mResource Destroy (0.1ms)[0m   [0;1mDELETE FROM `resources` WHERE `id` = 15[0m
+  [4;35;1mSQL (59.6ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/users/1/resources
+Completed in 130ms (DB: 62) | 302 Found [http://localhost/users/1/resources/15]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-13 20:32:57) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+Rendering template within layouts/resources
+Rendering resources/index
+  [4;36;1mResource Load (0.3ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) [0m
+  [4;35;1mResource Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Rendered resources/_resource (0.8ms)
+Rendered resources/_resource (0.7ms)
+Rendered resources/_resource (0.6ms)
+Rendered resources/_resource (0.6ms)
+Rendered resources/_resource (0.6ms)
+Rendered resources/_resource (0.6ms)
+Rendered resources/_resource (0.6ms)
+Rendered shared/_footer (0.6ms)
+Completed in 31ms (View: 11, DB: 2) | 200 OK [http://localhost/users/1/resources]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#destroy (for 127.0.0.1 at 2009-07-13 20:32:58) [DELETE]
+  Parameters: {"id"=>"14", "user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mResource Load (0.2ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.`id` = 14) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mResource Destroy (0.1ms)[0m   [0mDELETE FROM `resources` WHERE `id` = 14[0m
+  [4;36;1mSQL (48.2ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/users/1/resources
+Completed in 69ms (DB: 50) | 302 Found [http://localhost/users/1/resources/14]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-13 20:32:59) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+Rendering template within layouts/resources
+Rendering resources/index
+  [4;35;1mResource Load (0.3ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) [0m
+  [4;36;1mResource Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Rendered resources/_resource (0.8ms)
+Rendered resources/_resource (0.6ms)
+Rendered resources/_resource (0.6ms)
+Rendered resources/_resource (1.6ms)
+Rendered resources/_resource (0.6ms)
+Rendered resources/_resource (0.6ms)
+Rendered shared/_footer (0.6ms)
+Completed in 29ms (View: 11, DB: 2) | 200 OK [http://localhost/users/1/resources]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#destroy (for 127.0.0.1 at 2009-07-13 20:33:00) [DELETE]
+  Parameters: {"id"=>"12", "user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mResource Load (0.2ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.`id` = 12) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mResource Destroy (0.1ms)[0m   [0;1mDELETE FROM `resources` WHERE `id` = 12[0m
+  [4;35;1mSQL (40.3ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/users/1/resources
+Completed in 113ms (DB: 42) | 302 Found [http://localhost/users/1/resources/12]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-13 20:33:00) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+Rendering template within layouts/resources
+Rendering resources/index
+  [4;36;1mResource Load (0.3ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) [0m
+  [4;35;1mResource Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Rendered resources/_resource (0.8ms)
+Rendered resources/_resource (0.6ms)
+Rendered resources/_resource (0.6ms)
+Rendered resources/_resource (0.6ms)
+Rendered resources/_resource (0.6ms)
+Rendered shared/_footer (1.0ms)
+Completed in 36ms (View: 16, DB: 2) | 200 OK [http://localhost/users/1/resources]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StartController#michael (for 127.0.0.1 at 2009-07-13 20:33:57) [GET]
+Rendering template within layouts/start
+Rendering start/michael
+Rendered shared/_footer (0.8ms)
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/start/michael]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StartController#auto_complete_for_resource_keywords (for 127.0.0.1 at 2009-07-13 20:33:58) [GET]
+  Parameters: {"resource"=>{"keywords"=>""}}
+  [4;36;1mResource Load (0.4ms)[0m   [0;1mSELECT * FROM `resources` WHERE (LOWER(keywords) LIKE '%%') ORDER BY keywords ASC LIMIT 50[0m
+  [4;35;1mResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/start/auto_complete_for_resource_keywords?resource%5Bkeywords%5D=]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StartController#auto_complete_for_resource_keywords (for 127.0.0.1 at 2009-07-13 20:33:59) [GET]
+  Parameters: {"resource"=>{"keywords"=>"Michael Jackson"}}
+  [4;36;1mResource Load (8.7ms)[0m   [0;1mSELECT * FROM `resources` WHERE (LOWER(keywords) LIKE '%michael jackson%') ORDER BY keywords ASC LIMIT 50[0m
+  [4;35;1mResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Completed in 19ms (View: 2, DB: 10) | 200 OK [http://localhost/start/auto_complete_for_resource_keywords?resource%5Bkeywords%5D=Michael%20Jackson]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StartController#search (for 127.0.0.1 at 2009-07-13 20:33:59) [POST]
+  Parameters: {"keywords"=>"Michael Jackson"}
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/start/search]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StartController#index (for 127.0.0.1 at 2009-07-13 20:33:59) [GET]
+  Parameters: {"keywords"=>"Michael Jackson"}
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mResource Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+
+NoMethodError (undefined method `by_user_value' for #<Class:0xb6c21350>):
+  app/controllers/start_controller.rb:14:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (35.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)

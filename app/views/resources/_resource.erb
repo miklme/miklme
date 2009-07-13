@@ -10,5 +10,8 @@
   </div>
 </li>
 <span>
-  <%= link_to 'Edit', edit_user_resource_path(@user,resource) %>
+  <%= link_to '编辑', edit_user_resource_path(@user,resource) %>
+</span>
+<span>
+  <%= link_to '删除',user_resource_path(@user,resource),:method => :delete %>
 </span>
