@@ -3755,3 +3755,615 @@ Rendered resources/_resource (0.6ms)
   [4;35;1mSearchedKeyword Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `searched_keywords`[0m
 Rendered shared/_footer (0.7ms)
 Completed in 34ms (View: 15, DB: 2) | 200 OK [http://localhost/users/1/resources]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-13 21:10:00) [GET]
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+Redirected to http://localhost:3000/start/michael
+Filter chain halted as [:redirect_to_search] rendered_or_redirected.
+Completed in 14ms (DB: 1) | 302 Found [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StartController#michael (for 127.0.0.1 at 2009-07-13 21:10:01) [GET]
+Rendering template within layouts/start
+Rendering start/michael
+Rendered shared/_footer (0.6ms)
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://localhost/start/michael]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StartController#michael (for 127.0.0.1 at 2009-07-13 21:10:24) [GET]
+Rendering template within layouts/start
+Rendering start/michael
+Rendered shared/_footer (0.6ms)
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://localhost/start/michael]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-13 21:10:28) [GET]
+  [4;36;1mUser Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+Redirected to http://localhost:3000/start/michael
+Filter chain halted as [:redirect_to_search] rendered_or_redirected.
+Completed in 77ms (DB: 1) | 302 Found [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StartController#michael (for 127.0.0.1 at 2009-07-13 21:10:28) [GET]
+Rendering template within layouts/start
+Rendering start/michael
+Rendered shared/_footer (0.6ms)
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://localhost/start/michael]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StartController#auto_complete_for_resource_keywords (for 127.0.0.1 at 2009-07-13 21:11:22) [GET]
+  Parameters: {"resource"=>{"keywords"=>""}}
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (LOWER(keywords) LIKE '%%') ORDER BY keywords ASC LIMIT 50[0m
+  [4;35;1mResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/start/auto_complete_for_resource_keywords?resource%5Bkeywords%5D=]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StartController#auto_complete_for_resource_keywords (for 127.0.0.1 at 2009-07-13 21:11:22) [GET]
+  Parameters: {"resource"=>{"keywords"=>"Michael Jackson"}}
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (LOWER(keywords) LIKE '%michael jackson%') ORDER BY keywords ASC LIMIT 50[0m
+  [4;35;1mResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Completed in 11ms (View: 2, DB: 1) | 200 OK [http://localhost/start/auto_complete_for_resource_keywords?resource%5Bkeywords%5D=Michael%20Jackson]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StartController#search (for 127.0.0.1 at 2009-07-13 21:11:22) [POST]
+  Parameters: {"keywords"=>"Michael Jackson"}
+  [4;36;1mSearchedKeyword Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `searched_keywords`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSearchedKeyword Create (0.2ms)[0m   [0;1mINSERT INTO `searched_keywords` (`name`, `created_at`, `updated_at`, `user_id`) VALUES('Michael Jackson', '2009-07-13 13:11:22', '2009-07-13 13:11:22', NULL)[0m
+  [4;35;1mSQL (63.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSearchedKeyword Update (0.2ms)[0m   [0mUPDATE `searched_keywords` SET `updated_at` = '2009-07-13 13:11:23', `user_id` = 1 WHERE `id` = 3[0m
+  [4;36;1mSQL (41.8ms)[0m   [0;1mCOMMIT[0m
+Completed in 140ms (View: 1, DB: 107) | 200 OK [http://localhost/start/search]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StartController#index (for 127.0.0.1 at 2009-07-13 21:11:23) [GET]
+  Parameters: {"keywords"=>"Michael Jackson"}
+Rendering template within layouts/start
+Rendering start/index
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM `resources` WHERE (keywords = 'Michael Jackson') ORDER BY created_at DESC[0m
+  [4;36;1mResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 11) [0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 5) [0m
+Completed in 37ms (View: 29, DB: 2) | 200 OK [http://localhost/search/Michael%20Jackson]
+  [4;36;1mSQL (5.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StartController#auto_complete_for_resource_keywords (for 127.0.0.1 at 2009-07-13 21:11:59) [GET]
+  Parameters: {"resource"=>{"keywords"=>""}}
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (LOWER(keywords) LIKE '%%') ORDER BY keywords ASC LIMIT 50[0m
+  [4;35;1mResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Completed in 10ms (View: 2, DB: 6) | 200 OK [http://localhost/start/auto_complete_for_resource_keywords?resource%5Bkeywords%5D=]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StartController#auto_complete_for_resource_keywords (for 127.0.0.1 at 2009-07-13 21:12:00) [GET]
+  Parameters: {"resource"=>{"keywords"=>"Michael Jackson"}}
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (LOWER(keywords) LIKE '%michael jackson%') ORDER BY keywords ASC LIMIT 50[0m
+  [4;35;1mResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Completed in 11ms (View: 3, DB: 1) | 200 OK [http://localhost/start/auto_complete_for_resource_keywords?resource%5Bkeywords%5D=Michael%20Jackson]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StartController#search (for 127.0.0.1 at 2009-07-13 21:12:00) [POST]
+  Parameters: {"keywords"=>"Michael Jackson"}
+  [4;36;1mSearchedKeyword Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `searched_keywords`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSearchedKeyword Create (0.2ms)[0m   [0;1mINSERT INTO `searched_keywords` (`name`, `created_at`, `updated_at`, `user_id`) VALUES('Michael Jackson', '2009-07-13 13:12:00', '2009-07-13 13:12:00', NULL)[0m
+  [4;35;1mSQL (65.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSearchedKeyword Update (0.2ms)[0m   [0mUPDATE `searched_keywords` SET `updated_at` = '2009-07-13 13:12:00', `user_id` = 1 WHERE `id` = 4[0m
+  [4;36;1mSQL (52.3ms)[0m   [0;1mCOMMIT[0m
+Completed in 144ms (View: 1, DB: 120) | 200 OK [http://localhost/start/search]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StartController#index (for 127.0.0.1 at 2009-07-13 21:12:00) [GET]
+  Parameters: {"keywords"=>"Michael Jackson"}
+Rendering template within layouts/start
+Rendering start/index
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM `resources` WHERE (keywords = 'Michael Jackson') ORDER BY created_at DESC[0m
+  [4;36;1mResource Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 11) [0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 5) [0m
+Completed in 33ms (View: 25, DB: 2) | 200 OK [http://localhost/search/Michael%20Jackson]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StartController#michael (for 127.0.0.1 at 2009-07-13 21:13:00) [GET]
+Rendering template within layouts/start
+Rendering start/michael
+Rendered shared/_footer (0.6ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/start/michael]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StartController#michael (for 127.0.0.1 at 2009-07-13 21:13:01) [GET]
+Rendering template within layouts/start
+Rendering start/michael
+Rendered shared/_footer (0.7ms)
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://localhost/start/michael]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StartController#auto_complete_for_resource_keywords (for 127.0.0.1 at 2009-07-13 21:13:01) [GET]
+  Parameters: {"resource"=>{"keywords"=>""}}
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (LOWER(keywords) LIKE '%%') ORDER BY keywords ASC LIMIT 50[0m
+  [4;35;1mResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/start/auto_complete_for_resource_keywords?resource%5Bkeywords%5D=]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StartController#michael (for 127.0.0.1 at 2009-07-13 21:13:18) [GET]
+Rendering template within layouts/start
+Rendering start/michael
+Rendered shared/_footer (0.6ms)
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://localhost/start/michael]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StartController#auto_complete_for_resource_keywords (for 127.0.0.1 at 2009-07-13 21:13:19) [GET]
+  Parameters: {"resource"=>{"keywords"=>""}}
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (LOWER(keywords) LIKE '%%') ORDER BY keywords ASC LIMIT 50[0m
+  [4;35;1mResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/start/auto_complete_for_resource_keywords?resource%5Bkeywords%5D=]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StartController#auto_complete_for_resource_keywords (for 127.0.0.1 at 2009-07-13 21:13:21) [GET]
+  Parameters: {"resource"=>{"keywords"=>""}}
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (LOWER(keywords) LIKE '%%') ORDER BY keywords ASC LIMIT 50[0m
+  [4;35;1mResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/start/auto_complete_for_resource_keywords?resource%5Bkeywords%5D=]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StartController#auto_complete_for_resource_keywords (for 127.0.0.1 at 2009-07-13 21:13:23) [GET]
+  Parameters: {"resource"=>{"keywords"=>""}}
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (LOWER(keywords) LIKE '%%') ORDER BY keywords ASC LIMIT 50[0m
+  [4;35;1mResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/start/auto_complete_for_resource_keywords?resource%5Bkeywords%5D=]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StartController#auto_complete_for_resource_keywords (for 127.0.0.1 at 2009-07-13 21:13:25) [GET]
+  Parameters: {"resource"=>{"keywords"=>""}}
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (LOWER(keywords) LIKE '%%') ORDER BY keywords ASC LIMIT 50[0m
+  [4;35;1mResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/start/auto_complete_for_resource_keywords?resource%5Bkeywords%5D=]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StartController#michael (for 127.0.0.1 at 2009-07-13 21:13:44) [GET]
+Rendering template within layouts/start
+Rendering start/michael
+Rendered shared/_footer (0.6ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/start/michael]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StartController#auto_complete_for_resource_keywords (for 127.0.0.1 at 2009-07-13 21:13:45) [GET]
+  Parameters: {"resource"=>{"keywords"=>""}}
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (LOWER(keywords) LIKE '%%') ORDER BY keywords ASC LIMIT 50[0m
+  [4;35;1mResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/start/auto_complete_for_resource_keywords?resource%5Bkeywords%5D=]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StartController#auto_complete_for_resource_keywords (for 127.0.0.1 at 2009-07-13 21:13:46) [GET]
+  Parameters: {"resource"=>{"keywords"=>""}}
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (LOWER(keywords) LIKE '%%') ORDER BY keywords ASC LIMIT 50[0m
+  [4;35;1mResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/start/auto_complete_for_resource_keywords?resource%5Bkeywords%5D=]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StartController#auto_complete_for_resource_keywords (for 127.0.0.1 at 2009-07-13 21:13:48) [GET]
+  Parameters: {"resource"=>{"keywords"=>""}}
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (LOWER(keywords) LIKE '%%') ORDER BY keywords ASC LIMIT 50[0m
+  [4;35;1mResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/start/auto_complete_for_resource_keywords?resource%5Bkeywords%5D=]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StartController#michael (for 127.0.0.1 at 2009-07-13 21:13:57) [GET]
+Rendering template within layouts/start
+Rendering start/michael
+Rendered shared/_footer (0.7ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/start/michael]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StartController#auto_complete_for_resource_keywords (for 127.0.0.1 at 2009-07-13 21:13:58) [GET]
+  Parameters: {"resource"=>{"keywords"=>""}}
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (LOWER(keywords) LIKE '%%') ORDER BY keywords ASC LIMIT 50[0m
+  [4;35;1mResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/start/auto_complete_for_resource_keywords?resource%5Bkeywords%5D=]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StartController#michael (for 127.0.0.1 at 2009-07-13 21:14:21) [GET]
+Rendering template within layouts/start
+Rendering start/michael
+Rendered shared/_footer (0.6ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/start/michael]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StartController#auto_complete_for_resource_keywords (for 127.0.0.1 at 2009-07-13 21:14:22) [GET]
+  Parameters: {"resource"=>{"keywords"=>""}}
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (LOWER(keywords) LIKE '%%') ORDER BY keywords ASC LIMIT 50[0m
+  [4;35;1mResource Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/start/auto_complete_for_resource_keywords?resource%5Bkeywords%5D=]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StartController#michael (for 127.0.0.1 at 2009-07-13 21:16:32) [GET]
+Rendering template within layouts/start
+Rendering start/michael
+Rendered shared/_footer (0.7ms)
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/start/michael]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StartController#michael (for 127.0.0.1 at 2009-07-13 21:16:35) [GET]
+Rendering template within layouts/start
+Rendering start/michael
+Rendered shared/_footer (0.6ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/start/michael]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StartController#michael (for 127.0.0.1 at 2009-07-13 21:16:46) [GET]
+Rendering template within layouts/start
+Rendering start/michael
+
+ActionView::TemplateError (user_url failed to generate from {:controller=>"users", :action=>"show", :id=>nil}, expected: {:controller=>"users", :action=>"show"}, diff: {:id=>nil}) on line #3 of app/views/shared/_logo.erb:
+1: <div id="logo">
+2:   <h1><%= link_to "Michael",:controller => :start,:action => :michael %></h1>
+3:   <h1><%= link_to ".Me",user_path(@user) %></h1>
+4: </div>
+
+    (eval):16:in `user_path'
+    app/views/shared/_logo.erb:3
+    app/views/start/michael.erb:1
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (54.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StartController#michael (for 127.0.0.1 at 2009-07-13 21:17:35) [GET]
+Rendering template within layouts/start
+Rendering start/michael
+
+ActionView::TemplateError (user_url failed to generate from {:controller=>"users", :action=>"show", :id=>nil}, expected: {:controller=>"users", :action=>"show"}, diff: {:id=>nil}) on line #3 of app/views/shared/_logo.erb:
+1: <div id="logo">
+2:   <h1><%= link_to "Michael",:controller => :start,:action => :michael %></h1>
+3:   <h1><%= link_to ".Me",user_path(logo) %></h1>
+4: </div>
+
+    (eval):16:in `user_path'
+    app/views/shared/_logo.erb:3
+    app/views/start/michael.erb:1
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (113.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StartController#michael (for 127.0.0.1 at 2009-07-13 21:18:13) [GET]
+Rendering template within layouts/start
+Rendering start/michael
+
+ActionView::TemplateError (user_url failed to generate from {:controller=>"users", :action=>"show", :id=>nil}, expected: {:controller=>"users", :action=>"show"}, diff: {:id=>nil}) on line #3 of app/views/shared/_logo.erb:
+1: <div id="logo">
+2:   <h1><%= link_to "Michael",:controller => :start,:action => :michael %></h1>
+3:   <h1><%= link_to ".Me",user_path(logo) %></h1>
+4: </div>
+
+    (eval):16:in `user_path'
+    app/views/shared/_logo.erb:3
+    app/views/start/michael.erb:1
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (58.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StartController#michael (for 127.0.0.1 at 2009-07-13 21:18:30) [GET]
+Rendering template within layouts/start
+Rendering start/michael
+
+ActionView::TemplateError (user_url failed to generate from {:controller=>"users", :action=>"show", :id=>nil}, expected: {:controller=>"users", :action=>"show"}, diff: {:id=>nil}) on line #3 of app/views/shared/_logo.erb:
+1: <div id="logo">
+2:   <h1><%= link_to "Michael",:controller => :start,:action => :michael %></h1>
+3:   <h1><%= link_to ".Me",user_path(logo) %></h1>
+4: </div>
+
+    (eval):16:in `user_path'
+    app/views/shared/_logo.erb:3
+    app/views/start/michael.erb:1
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (56.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StartController#michael (for 127.0.0.1 at 2009-07-13 21:18:59) [GET]
+Rendering template within layouts/start
+Rendering start/michael
+
+ActionView::TemplateError (undefined local variable or method `user' for #<ActionView::Base:0xb6d07bd4>) on line #3 of app/views/shared/_logo.erb:
+1: <div id="logo">
+2:   <h1><%= link_to "Michael",:controller => :start,:action => :michael %></h1>
+3:   <h1><%= link_to ".Me",user_path(user) %></h1>
+4: </div>
+
+    app/views/shared/_logo.erb:3
+    app/views/start/michael.erb:1
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (114.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StartController#michael (for 127.0.0.1 at 2009-07-13 21:19:07) [GET]
+Rendering template within layouts/start
+Rendering start/michael
+
+ActionView::TemplateError (user_url failed to generate from {:controller=>"users", :action=>"show", :id=>nil}, expected: {:controller=>"users", :action=>"show"}, diff: {:id=>nil}) on line #3 of app/views/shared/_logo.erb:
+1: <div id="logo">
+2:   <h1><%= link_to "Michael",:controller => :start,:action => :michael %></h1>
+3:   <h1><%= link_to ".Me",user_path(logo) %></h1>
+4: </div>
+
+    (eval):16:in `user_path'
+    app/views/shared/_logo.erb:3
+    app/views/start/michael.erb:1
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (54.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StartController#michael (for 127.0.0.1 at 2009-07-13 21:19:08) [GET]
+Rendering template within layouts/start
+Rendering start/michael
+
+ActionView::TemplateError (user_url failed to generate from {:controller=>"users", :action=>"show", :id=>nil}, expected: {:controller=>"users", :action=>"show"}, diff: {:id=>nil}) on line #3 of app/views/shared/_logo.erb:
+1: <div id="logo">
+2:   <h1><%= link_to "Michael",:controller => :start,:action => :michael %></h1>
+3:   <h1><%= link_to ".Me",user_path(logo) %></h1>
+4: </div>
+
+    (eval):16:in `user_path'
+    app/views/shared/_logo.erb:3
+    app/views/start/michael.erb:1
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (118.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StartController#michael (for 127.0.0.1 at 2009-07-13 21:22:27) [GET]
+Rendering template within layouts/start
+Rendering start/michael
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+Rendered shared/_logo (0.5ms)
+Rendered shared/_footer (0.6ms)
+Completed in 22ms (View: 19, DB: 1) | 200 OK [http://localhost/start/michael]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StartController#auto_complete_for_resource_keywords (for 127.0.0.1 at 2009-07-13 21:22:59) [GET]
+  Parameters: {"resource"=>{"keywords"=>""}}
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (LOWER(keywords) LIKE '%%') ORDER BY keywords ASC LIMIT 50[0m
+  [4;35;1mResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Completed in 8ms (View: 2, DB: 1) | 200 OK [http://localhost/start/auto_complete_for_resource_keywords?resource%5Bkeywords%5D=]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StartController#auto_complete_for_resource_keywords (for 127.0.0.1 at 2009-07-13 21:23:01) [GET]
+  Parameters: {"resource"=>{"keywords"=>"Michael Jackson"}}
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (LOWER(keywords) LIKE '%michael jackson%') ORDER BY keywords ASC LIMIT 50[0m
+  [4;35;1mResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/start/auto_complete_for_resource_keywords?resource%5Bkeywords%5D=Michael%20Jackson]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StartController#search (for 127.0.0.1 at 2009-07-13 21:23:01) [POST]
+  Parameters: {"keywords"=>"Michael Jackson"}
+  [4;36;1mSearchedKeyword Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `searched_keywords`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSearchedKeyword Create (0.2ms)[0m   [0;1mINSERT INTO `searched_keywords` (`name`, `created_at`, `updated_at`, `user_id`) VALUES('Michael Jackson', '2009-07-13 13:23:01', '2009-07-13 13:23:01', NULL)[0m
+  [4;35;1mSQL (75.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSearchedKeyword Update (0.2ms)[0m   [0mUPDATE `searched_keywords` SET `updated_at` = '2009-07-13 13:23:01', `user_id` = 1 WHERE `id` = 5[0m
+  [4;36;1mSQL (51.3ms)[0m   [0;1mCOMMIT[0m
+Completed in 154ms (View: 1, DB: 129) | 200 OK [http://localhost/start/search]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StartController#index (for 127.0.0.1 at 2009-07-13 21:23:01) [GET]
+  Parameters: {"keywords"=>"Michael Jackson"}
+Rendering template within layouts/start
+Rendering start/index
+
+ActionView::TemplateError (user_url failed to generate from {:controller=>"users", :action=>"show", :id=>nil}, expected: {:controller=>"users", :action=>"show"}, diff: {:id=>nil}) on line #3 of app/views/shared/_logo.erb:
+1: <div id="logo">
+2:   <h1><%= link_to "Michael",:controller => :start,:action => :michael %></h1>
+3:   <h1><%= link_to ".Me",user_path(logo) %></h1>
+4: </div>
+
+    (eval):16:in `user_path'
+    app/views/shared/_logo.erb:3
+    app/views/start/index.erb:1
+    app/controllers/start_controller.rb:17:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (57.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)

@@ -1,9 +1,6 @@
 <body>
   <div id="header">
-    <div id="logo">
-      <h1><%= link_to "Michael",:controller => :start,:action => :michael %></h1>
-      <h1><%= link_to ".Me",user_path(@user) %></h1>
-    </div>
+    <%= render 'shared/logo' %>
     <div id="menu">
       <ul>
         <li>
