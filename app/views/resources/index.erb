@@ -2,6 +2,7 @@
   <div id="header">
     <div id="logo">
       <h1><%= link_to "Michael",:controller => :start,:action => :michael %></h1>
+      <h1><%= link_to ".Me",user_path(@user) %></h1>
     </div>
     <div id="menu">
       <ul>
@@ -14,19 +15,51 @@
   <!--end header -->
   <!-- main -->
   <div id="main">
+    <div id="sidebar_left">
+      <div id="my_friends">
+        <h3>
+          真实朋友：
+        </h3>
+      </div>
+      <div>
+        <h3>
+          朋友动态：
+        </h3>
+      </div>
+    </div>
+
     <div id="content">
+      <h2>我所拥有：</h2>
       <%if flash[:notice]%>
         <p><%=flash[:notice]%></p>
       <%end%>
       <%if flash[:error]%>
         <p><%=flash[:error]%></p>
       <%end%>
-        <ul>
-          <%= render @resources %>
-        </ul>
-        <span>
-          <%= link_to "分享新链接",new_user_resource_path(@user) %>
-        </span>
+      <ul>
+        <%= render @resources %>
+      </ul>
+      <span>
+        <%= link_to "分享新链接",new_user_resource_path(@user) %>
+      </span>
+    </div>
+
+    <div id="sidebar_right">
+      <div id="searched_keywords">
+        <h3>
+          我所感兴趣的关键字：
+        </h3>
+        <p>
+          <%for keyword in @user.searched_keywords %>
+            <span><%= keyword.name %></span>
+          <% end %>
+        </p>
+      </div>
+      <div id="keywords">
+        <h3>
+          我拥有的关键字列表：
+        </h3>
+      </div>
     </div>
   </div>
   <!-- end main -->
