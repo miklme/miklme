@@ -1,0 +1,13 @@
+<p>
+  <b>Name:</b>
+  <%=h @searched_keyword.name %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%=h @searched_keyword.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_searched_keyword_path(@searched_keyword) %> |
+<%= link_to 'Back', searched_keywords_path %>

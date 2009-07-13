@@ -8,6 +8,8 @@ class User < ActiveRecord::Base
   default_scope :order => 'value DESC'
   named_scope :value,:order => 'value DESC'
 
+  has_many :keywords
+  has_many :searched_keywords
   has_many :comments
   has_many :resources
   has_many :friendships

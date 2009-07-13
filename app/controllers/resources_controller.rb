@@ -33,6 +33,8 @@ class ResourcesController < ApplicationController
 
     respond_to do |format|
       if @resource.save
+        @user.keywords<<params[:resource][:keywords]
+        @user.save
         flash[:notice] = 'Resource was successfully created.'
         format.html { redirect_to user_resources_path(@user) }
         format.xml  { render :xml => @resource, :status => :created, :location => @resource }

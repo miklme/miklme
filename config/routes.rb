@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :searched_keywords
+
+  map.resources :keywords
+
   map.resources :users do |user|
     user.resource :portrait
     user.resource :true_portrait
