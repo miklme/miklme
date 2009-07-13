@@ -18,7 +18,7 @@ class SessionsController < ApplicationController
       self.current_user = user
       new_cookie_flag = (params[:remember_me] == "1")
       new_cookie_flag
-      redirect_to :controller =>:start,:action => :michael
+      redirect_to new_user_searched_keyword_path(current_user)
       flash[:notice] = "成功登入，即刻将体验Michael带给你的...无限"
     else
       note_failed_signin
@@ -43,7 +43,7 @@ class SessionsController < ApplicationController
 
   def redirect_to_search
     if logged_in?
-      redirect_to :controller => :start,:action => :michael
+      redirect_to new_user_searched_keyword_path(current_user)
     end
   end
 end

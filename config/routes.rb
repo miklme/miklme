@@ -9,7 +9,7 @@ ActionController::Routing::Routes.draw do |map|
   end
   map.resource :session
 
-  map.search '/search/:keywords',:controller => 'start',:action => 'index'
+  map.search '/search/:keywords',:controller => 'searched_keywords',:action => 'index'
   map.activate '/activate/:activation_code', :controller => 'users', :action => 'activate'
   map.root :controller=>'sessions',:action=>'new'
 
