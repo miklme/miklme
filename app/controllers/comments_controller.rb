@@ -46,7 +46,8 @@ class CommentsController < ApplicationController
 
     respond_to do |format|
       if @comment.save
-        u=User.find(params[:user_id]).value = @user.value+params[:comment][:value].to_i
+        u=User.find(params[:user_id])
+        u.value =u.value+params[:comment][:value].to_i
         u.save
         flash[:notice] = 'Comment was successfully created.'
         format.html { redirect_to :back }

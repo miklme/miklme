@@ -11,7 +11,7 @@ class StartController < ApplicationController
   end
 
   def index
-    @resources = Resource.search_result(params[:keywords]).find(:all,:group => 'user_id')
+    @resources = Resource.by_user_value.search_result(params[:keywords])
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @resources }
