@@ -15,24 +15,24 @@
     <div id="sidebar_left">
       <div id="my_friends">
         <h3>
-          真实朋友：
+          我得到的信息来自于这些人：
         </h3>
       </div>
       <div>
         <h3>
-          朋友动态：
+          这些人从我这里得到信息：
         </h3>
       </div>
     </div>
 
     <div id="content">
-      <h2>我所拥有：</h2>
       <%if flash[:notice]%>
         <p><%=flash[:notice]%></p>
       <%end%>
       <%if flash[:error]%>
         <p><%=flash[:error]%></p>
       <%end%>
+      <h2>我所拥有：</h2>
       <ul>
         <%= render @resources %>
       </ul>
@@ -44,7 +44,7 @@
     <div id="sidebar_right">
       <div id="searched_keywords">
         <h3>
-          我所感兴趣的关键字：
+          我感兴趣的关键字：
         </h3>
         <p>
           <%for keyword in @user.searched_keywords %>
@@ -54,8 +54,15 @@
       </div>
       <div id="keywords">
         <h3>
-          我所掌握的关键字：
+          我拥有的关键字：
         </h3>
+        <p>
+          <% for keyword in @user.keywords  %>
+            <span>
+              <%= keyword.name %>
+            </span>
+          <% end %>
+        </p>
       </div>
     </div>
   </div>

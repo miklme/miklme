@@ -9,14 +9,9 @@ class User < ActiveRecord::Base
   named_scope :value,:order => 'value DESC'
 
   has_many :keywords
-  has_many :searched_keywords
+  has_many :searched_keywords,:uniq => true
   has_many :comments
   has_many :resources
-  has_many :friendships
-  has_many :friends,
-    :through => :friendships,
-    :source => :user,
-    :class_name => 'User'
   has_many :important_days
   has_many :followings,
     :class_name => "User",

@@ -6,6 +6,7 @@ class Resource < ActiveRecord::Base
   named_scope :search_result,lambda { |keywords|
     { :conditions => ['keywords = ?', keywords],:order => 'created_at DESC' }
   }
+  named_scope :by_author_value, :include => :author,:order => 'users.value DESC'
   before_save :adjust_link_url
   
   private

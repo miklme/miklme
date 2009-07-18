@@ -13,10 +13,7 @@ class SearchedKeywordsController < ApplicationController
   end
 
   def index
-    resources=Resource.scoped_by_keywords(params[:keywords])
-    @users = resources.map do |r|
-      r.author
-    end
+    @resources=Resource.scoped_by_keywords(params[:keywords]).by_author_value
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @resources }

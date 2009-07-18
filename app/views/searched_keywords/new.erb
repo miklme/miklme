@@ -2,7 +2,10 @@
 <div id="main">
     <%= text_field_with_auto_complete :resource, :keywords, {:onfocus => "resource_keywords_auto_completer.activate()"}, {:method => :get, :frequency => 0,:after_update_element =>
         "function(element,value){" + remote_function(:url => {:action => :create},:with=>"'keywords='+element.value") + "}"} %>
-  <p>Doesn't know how to start?click here...</p>
 </div>
-
+<div>
+  <span>
+    你不能这样弄。
+  </span>
+</div>
 <%= render 'shared/footer' %>
