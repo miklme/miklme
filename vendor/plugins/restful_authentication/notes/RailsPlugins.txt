@@ -1,4 +1,4 @@
-h1. Rails Authentication, Authorization and Access Control plugins
+h1. Rails Authentication, ownerization and Access Control plugins
 
 h2. Authentication plugins
 
@@ -6,13 +6,13 @@ h2. Authentication plugins
 * http://github.com/mrflip/restful-authentication/tree/master -- my fork of restful_authentication with more modularity, more specs and a few security tweaks
 * http://github.com/josh/open_id_authentication/tree/master -- OpenID authentication
 
-h2. Authorization plugins
+h2. ownerization plugins
 
 From
 * http://agilewebdevelopment.com/plugins/tag/security
-* http://www.vaporbase.com/postings/Authorization_in_Rails
+* http://www.vaporbase.com/postings/ownerization_in_Rails
 
-* http://github.com/jbarket/restful-authorization/tree/master
+* http://github.com/jbarket/restful-ownerization/tree/master
 
 * http://agilewebdevelopment.com/plugins/rolerequirement
   http://code.google.com/p/rolerequirement/
@@ -32,8 +32,8 @@ From
         <%= link_to "Admin & Moderator only link", :action =>'foo' %>
       <% end %>
 
-* Authorization Recipe (from Rails Recipes #32)
-  http://www.vaporbase.com/postings/Authorization_in_Rails
+* ownerization Recipe (from Rails Recipes #32)
+  http://www.vaporbase.com/postings/ownerization_in_Rails
   http://opensvn.csie.org/mabs29/plugins/simple_access_control
 
 * Active ACL
@@ -49,9 +49,9 @@ From
   http://base-auth.googlecode.com/svn/trunk/
   40 votes
 
-* http://agilewebdevelopment.com/plugins/authorization
-  http://www.writertopia.com/developers/authorization
-  http://github.com/DocSavage/rails-authorization-plugin/tree/master
+* http://agilewebdevelopment.com/plugins/ownerization
+  http://www.writertopia.com/developers/ownerization
+  http://github.com/DocSavage/rails-ownerization-plugin/tree/master
   Opaque policy descriptions
   19 votes
 

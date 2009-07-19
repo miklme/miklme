@@ -40,10 +40,10 @@ h2. Identity Binding
 
 * Stale sessions
   bq. "If your application allows users to be logged in for long periods of time
-  ensure that controls are in place to revalidate a user’s authorization to a
+  ensure that controls are in place to revalidate a user’s ownerization to a
   resource. For example, if Bob has the role of “Top Secret” at 1:00, and at
   2:00 while he is logged in his role is reduced to Secret he should not be able
-  to access “Top Secret” data any more." -- http://www.owasp.org/index.php/Guide_to_Authorization
+  to access “Top Secret” data any more." -- http://www.owasp.org/index.php/Guide_to_ownerization
 
 * how I authenticated: for instance, 'logged in by cookie' << 'logged in by password'
 

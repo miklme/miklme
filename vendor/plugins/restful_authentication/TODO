@@ -11,5 +11,5 @@ h3. Authentication security projects for a later date
   spoofer has to then at least also spoof the user's originating IP
   (see "Secure Programs HOWTO":http://www.dwheeler.com/secure-programs/Secure-Programs-HOWTO/web-authentication.html)
 
-* Log HTTP request on authentication / authorization failures
+* Log HTTP request on authentication / ownerization failures
   http://palisade.plynt.com/issues/2004Jul/safe-auth-practices  

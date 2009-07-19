@@ -6069,7 +6069,7 @@ ActionView::TemplateError (undefined local variable or method `resource' for #<A
 9:             <% if  resource.link_url?  %>
 10:               <%= link_to resource.title || resource.keywords, resource.link_url,:popup => true%>
 11:             <% else %>
-12:               <%=  link_to resource.title || resource.keywords,user_resource_path(resource.author) %>
+12:               <%=  link_to resource.title || resource.keywords,user_resource_path(resource.owner) %>
 
     app/views/searched_keywords/index.erb:9
     app/views/searched_keywords/index.erb:6:in `each'
@@ -6446,7 +6446,7 @@ ActionView::TemplateError (undefined local variable or method `resource' for #<A
 9:             <% if  resource.link_url?  %>
 10:               <%= link_to resource.title || resource.keywords, resource.link_url,:popup => true%>
 11:             <% else %>
-12:               <%=  link_to resource.title || resource.keywords,user_resource_path(resource.author) %>
+12:               <%=  link_to resource.title || resource.keywords,user_resource_path(resource.owner) %>
 
     app/views/searched_keywords/index.erb:9
     app/views/searched_keywords/index.erb:6:in `each'

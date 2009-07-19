@@ -25,7 +25,7 @@ h2. Terms
 
   bq. "My name is Werner Brandis. My voice is my password. Verify me." -- Sneakers
 
-* Authorization: Given a request (Actions+Resource+Environment), decide if it's safe.
+* ownerization: Given a request (Actions+Resource+Environment), decide if it's safe.
 
   bq. "Of every tree of the garden thou mayest freely eat: But of the tree of
   the knowledge of good and evil, thou shalt not eat of it: for in the day that
@@ -76,7 +76,7 @@ h2. Concept
   company.  (Security papers call this "Subject" but that's awful).
 * It's easy to confuse 'person' and 'identity', so easy I probably have below.
 
-Why do you need to authenticate?  For authorization. So traditionally, we think
+Why do you need to authenticate?  For ownerization. So traditionally, we think
 
   person <- (ath'n token) <- identity <- (policy) <- actions
 
@@ -130,7 +130,7 @@ reputation:
   
     past actions -> reputation ->person
 
-So give up authorization in favor of auditing and recoverability, and authorize
+So give up ownerization in favor of auditing and recoverability, and ownerize
 based on reputation -- on the past behavior and vouchsafes offered by the
 identity,
   
@@ -155,9 +155,9 @@ So we need to
 
 Instead of
 
-  authorization -> user -> token -> identity
+  ownerization -> user -> token -> identity
   
 we assign roles based on
 
-  authorization <- trust <- reputation <- identity <- token <- person
+  ownerization <- trust <- reputation <- identity <- token <- person
 

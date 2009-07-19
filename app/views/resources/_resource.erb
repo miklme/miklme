@@ -3,7 +3,7 @@
     <% if  resource.link_url?  %>
       <%= link_to resource.title || resource.keywords, resource.link_url,:popup => true%>
   <%# else %>
-  <%#=  link_to resource.title || resource.keywords,user_resource_path(resource.author) %>
+  <%#=  link_to resource.title || resource.keywords,user_resource_path(resource.owner) %>
     <% end %>
   </h3>
   <div><%= auto_link(highlight(truncate(resource.description,:length => 140),resource.keywords)) %>
