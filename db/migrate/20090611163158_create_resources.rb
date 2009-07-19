@@ -1,4 +1,4 @@
-class CreateOuterLinks < ActiveRecord::Migration
+class CreateResources < ActiveRecord::Migration
   def self.up
     create_table :resources do |t|
       #common attributes

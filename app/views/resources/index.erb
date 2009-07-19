@@ -3,9 +3,24 @@
     <%= render 'shared/logo',:object => current_user %>
     <div id="menu">
       <ul>
+        <div>
+          <li>
+            <%= link_to ".Me",user_path(current_user) %>
+          </li>
+          <li><%= link_to "世界在说什么" %>
+          </li>
+          <li>
+            <%= link_to "关系网络" %>
+          </li>
+        </div>
+        <div>
+        <li>
+          <%= link_to '注册新用户',new_user_path %>
+        </li>
         <li>
           <%= link_to '登出', session_path,:method => :delete %>
         </li>
+        </div>
       </ul>
     </div>
   </div>
@@ -32,7 +47,7 @@
       <%if flash[:error]%>
         <p><%=flash[:error]%></p>
       <%end%>
-      <h2>我所拥有：</h2>
+      <h2>你拥有的全部：<em><%= link_to "我的全部就是这些东西？" %></em></h2>
       <ul>
         <%= render @resources %>
       </ul>
@@ -44,7 +59,7 @@
     <div id="sidebar_right">
       <div id="searched_keywords">
         <h3>
-          我感兴趣的关键字：
+          你感兴趣的关键字：
         </h3>
         <p>
           <%for keyword in @user.searched_keywords %>
@@ -54,7 +69,7 @@
       </div>
       <div id="keywords">
         <h3>
-          我拥有的关键字：
+          你拥有的关键字：
         </h3>
         <p>
           <% for keyword in @user.keywords  %>

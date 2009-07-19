@@ -21,16 +21,6 @@ ActiveRecord::Schema.define(:version => 20090713122317) do
     t.datetime "updated_at"
   end
 
-  create_table "friendships", :force => true do |t|
-    t.integer  "user_id",                                                                      :null => false
-    t.integer  "friend_id",                                                                    :null => false
-    t.integer  "friendship_value", :limit => 10, :precision => 10, :scale => 0, :default => 0
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "friendships", ["user_id", "friend_id"], :name => "index_friendships_on_user_id_and_friend_id"
-
   create_table "important_days", :force => true do |t|
     t.date     "day"
     t.text     "description"
@@ -42,16 +32,6 @@ ActiveRecord::Schema.define(:version => 20090713122317) do
   create_table "keywords", :force => true do |t|
     t.string   "name"
     t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "markings", :force => true do |t|
-    t.text     "comment"
-    t.string   "title"
-    t.integer  "resource_id"
-    t.integer  "user_id"
-    t.integer  "rating",      :default => 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -100,6 +80,8 @@ ActiveRecord::Schema.define(:version => 20090713122317) do
     t.string   "activation_code",           :limit => 40
     t.datetime "activated_at"
     t.string   "nick_name",                 :limit => 20
+    t.string   "state"
+    t.string   "city"
     t.integer  "follower_id"
     t.decimal  "value",                                    :precision => 8,  :scale => 1, :default => 0.0
     t.integer  "money",                     :limit => 10,  :precision => 10, :scale => 0, :default => 10

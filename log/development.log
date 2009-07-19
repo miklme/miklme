@@ -9824,3 +9824,74 @@ Rendered resources/_resource (0.6ms)
   [4;36;1mKeyword Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `keywords`[0m
 Rendered shared/_footer (0.7ms)
 Completed in 45ms (View: 23, DB: 4) | 200 OK [http://localhost/users/1/resources]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSearchedKeywords (20090713122317)
+  [4;36;1mSQL (70.1ms)[0m   [0;1mDROP TABLE `searched_keywords`[0m
+  [4;35;1mSQL (44.5ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20090713122317'[0m
+Migrating to CreateKeywords (20090713121600)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mMysql::Error: Unknown table 'keywords': DROP TABLE `keywords`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (111.5ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (224.3ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20090523150301)
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (132.0ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(20) DEFAULT '', `email` varchar(100) NOT NULL, `crypted_password` varchar(40), `salt` varchar(40), `remember_token` varchar(40), `remember_token_expires_at` datetime, `activation_code` varchar(40), `activated_at` datetime, `nick_name` varchar(20), `state` varchar(255), `city` varchar(255), `follower_id` int(11), `value` decimal(8,1) DEFAULT 0, `money` decimal DEFAULT 10, `terms` int(11), `username` varchar(40), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (303.8ms)[0m   [0mCREATE INDEX `index_users_on_email` ON `users` (`email`)[0m
+  [4;36;1mSQL (44.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090523150301')[0m
+Migrating to CreatePortraits (20090606045951)
+  [4;35;1mSQL (98.3ms)[0m   [0mCREATE TABLE `portraits` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `image_file` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (45.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090606045951')[0m
+Migrating to CreateImportantDays (20090608144113)
+  [4;35;1mSQL (97.4ms)[0m   [0mCREATE TABLE `important_days` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `day` date, `description` text, `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (48.7ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090608144113')[0m
+Migrating to CreateTruePortraits (20090611094020)
+  [4;35;1mSQL (105.3ms)[0m   [0mCREATE TABLE `true_portraits` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `image_file` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (44.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090611094020')[0m
+Migrating to CreateResources (20090611163158)
+  [4;35;1mSQL (98.0ms)[0m   [0mCREATE TABLE `resources` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `type` varchar(255), `shoulu` tinyint(1) DEFAULT 1, `user_id` int(11), `keywords` varchar(23), `title` varchar(14), `order` int(11), `link_url` varchar(255), `description` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (44.8ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090611163158')[0m
+Migrating to CreateComments (20090712100836)
+  [4;35;1mSQL (108.8ms)[0m   [0mCREATE TABLE `comments` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `content` text, `title` varchar(255), `resource_id` int(11), `user_id` int(11), `rating` int(11) DEFAULT 0, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (44.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090712100836')[0m
+Migrating to CreateKeywords (20090713121600)
+  [4;35;1mSQL (87.1ms)[0m   [0mCREATE TABLE `keywords` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (44.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090713121600')[0m
+Migrating to CreateSearchedKeywords (20090713122317)
+  [4;35;1mSQL (98.5ms)[0m   [0mCREATE TABLE `searched_keywords` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (44.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090713122317')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `comments`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `comments`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `important_days`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `important_days`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `important_days`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `keywords`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `keywords`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `keywords`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `portraits`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `portraits`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `portraits`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `resources`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `resources`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW FIELDS FROM `searched_keywords`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `searched_keywords`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `searched_keywords`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `true_portraits`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `true_portraits`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `true_portraits`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `users`[0m
