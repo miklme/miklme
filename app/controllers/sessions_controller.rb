@@ -1,9 +1,11 @@
 # This controller handles the login/logout function of the site.  
 class SessionsController < ApplicationController
   skip_before_filter :login_required
-  before_filter :redirect_to_search
 
   def new
+     if logged_in?
+      redirect_to new_user_searched_keyword_path(current_user)
+    end
     @user=User.new
   end
 
@@ -41,9 +43,4 @@ class SessionsController < ApplicationController
     logger.warn "Failed login for '#{params[:email]}' from #{request.remote_ip} at #{Time.now.utc}"
   end
 
-  def redirect_to_search
-    if logged_in?
-      redirect_to new_user_searched_keyword_path(current_user)
-    end
-  end
 end
