@@ -8,7 +8,8 @@ class User < ActiveRecord::Base
   default_scope :order => 'value DESC'
   named_scope :value,:order => 'value DESC'
 
-  has_many :keywords
+  has_many :kaos
+  has_many :keywords,:through => :kaos
   has_many :searched_keywords,:uniq => true
   has_many :comments
   has_many :resources

@@ -1,3 +1,4 @@
 class Keyword < ActiveRecord::Base
-  has_many :owners,:class_name => "User",:foreign_key => "user_id"
+  has_many :kaos
+  has_many :owners,:source => :user,:through => :kaos
 end
