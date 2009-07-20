@@ -19,9 +19,9 @@ class User < ActiveRecord::Base
     :foreign_key => 'follower_id'
   has_one :portrait
   has_one :true_portrait
-  belongs_to :follower,
+  has_many :followers,
     :class_name => 'User',
-    :foreign_key => 'follower_id'
+    :foreign_key => 'following_id'
 
   accepts_nested_attributes_for :true_portrait, :allow_destroy => true
   accepts_nested_attributes_for :portrait, :allow_destroy => true

@@ -10,9 +10,8 @@ class CreateUsers < ActiveRecord::Migration
       t.string :activation_code, :limit => 40
       t.datetime :activated_at
       t.string :nick_name,:limit=>20
-      t.string :state
-      t.string :city
       t.integer :follower_id
+      t.integer :following_id
       t.decimal  :value,:default=>0,:precision => 8,:scale => 1
       t.decimal :money,:default => 10,:presicision => 8,:scale => 2
       t.integer :terms

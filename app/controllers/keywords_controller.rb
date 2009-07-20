@@ -1,8 +1,9 @@
 class KeywordsController < ApplicationController
+  before_filter :load_user
   # GET /keywords
   # GET /keywords.xml
   def index
-    @keywords = Keyword.all
+    @keywords = @user.keywords
 
     respond_to do |format|
       format.html # index.html.erb
@@ -81,5 +82,10 @@ class KeywordsController < ApplicationController
       format.html { redirect_to(keywords_url) }
       format.xml  { head :ok }
     end
+  end
+
+  private
+  def load_user
+    @user=User.find(params[:user_id])
   end
 end
