@@ -6,17 +6,17 @@
       <p>
         <% for keyword in @user.keywords  %>
           <span>
-            <%= keyword.name %>
+            <%= link_to keyword.name,"/search/#{keyword.name}" %>
           </span>
         <% end %>
       </p>
       <h2>
-        我可以任意编辑其页面的关键字：
+        我可以编辑其页面的关键字：
       </h2>
       <p>
-        <% for keyword in @user.keywords  %>
+        <% for keyword in @my_keywords  %>
           <span>
-            <%= keyword.name %>
+            <%= link_to keyword.name,"/search/#{keyword.name}" %>
           </span>
         <% end %>
       </p>

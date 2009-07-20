@@ -6,7 +6,7 @@ class KeywordsController < ApplicationController
     @keywords = @user.keywords
     @my_keywords=@keywords.map do |k|
       if k.top_owner.id==current_user.id
-        k.name
+        k
       else
         nil
       end
