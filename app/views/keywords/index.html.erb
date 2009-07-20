@@ -2,7 +2,7 @@
   <%= render :partial => "shared/header",:object => @user %>
   <div id="main">
     <div id="content">
-      <h2>我目前拥有的所有关键字：</h2>
+      <h2>别人可以通过以下关键字找到我：</h2>
       <p>
         <% for keyword in @user.keywords  %>
           <span>
@@ -20,6 +20,16 @@
           </span>
         <% end %>
       </p>
+      <div id="searched_keywords">
+        <h2>
+          我最近的搜索：
+        </h2>
+        <p>
+          <%for keyword in @user.searched_keywords %>
+            <span><%= keyword.name %></span>
+          <% end %>
+        </p>
+      </div>
     </div>
   </div>
 

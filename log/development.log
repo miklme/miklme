@@ -15651,3 +15651,2498 @@ Rendered resources/_resource (0.9ms)
   [4;35;1mSearchedKeyword Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `searched_keywords`[0m
 Rendered shared/_footer (0.7ms)
 Completed in 83ms (View: 13, DB: 3) | 200 OK [http://localhost/users/1/resources]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-20 17:45:42) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+Rendering template within layouts/resources
+Rendering resources/index
+Rendered shared/_header (1.0ms)
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) [0m
+  [4;36;1mResource Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Rendered resources/_resource (0.8ms)
+  [4;35;1mSearchedKeyword Load (0.1ms)[0m   [0mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.user_id = 1) [0m
+  [4;36;1mSearchedKeyword Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `searched_keywords`[0m
+Rendered shared/_footer (0.7ms)
+Completed in 33ms (View: 12, DB: 2) | 200 OK [http://localhost/users/1/resources]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-20 17:45:42) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+Rendering template within layouts/resources
+Rendering resources/index
+Rendered shared/_header (1.1ms)
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) [0m
+  [4;35;1mResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Rendered resources/_resource (0.8ms)
+  [4;36;1mSearchedKeyword Load (0.1ms)[0m   [0;1mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.user_id = 1) [0m
+  [4;35;1mSearchedKeyword Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `searched_keywords`[0m
+Rendered shared/_footer (0.7ms)
+Completed in 32ms (View: 12, DB: 2) | 200 OK [http://localhost/users/1/resources]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-07-20 17:45:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+Redirected to http://localhost:3000/users/1/resources
+Completed in 15ms (DB: 1) | 302 Found [http://localhost/users/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-20 17:45:43) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+Rendering template within layouts/resources
+Rendering resources/index
+Rendered shared/_header (1.1ms)
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) [0m
+  [4;35;1mResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Rendered resources/_resource (0.9ms)
+  [4;36;1mSearchedKeyword Load (0.1ms)[0m   [0;1mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.user_id = 1) [0m
+  [4;35;1mSearchedKeyword Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `searched_keywords`[0m
+Rendered shared/_footer (0.7ms)
+Completed in 88ms (View: 13, DB: 3) | 200 OK [http://localhost/users/1/resources]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-20 17:48:30) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+Rendering template within layouts/resources
+Rendering resources/index
+Rendered shared/_header (1.2ms)
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) [0m
+  [4;36;1mResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Rendered resources/_resource (0.8ms)
+Rendered shared/_footer (0.6ms)
+Completed in 30ms (View: 11, DB: 2) | 200 OK [http://localhost/users/1/resources]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 127.0.0.1 at 2009-07-20 17:48:33) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mKeyword Load (0.1ms)[0m   [0;1mSELECT `keywords`.* FROM `keywords` INNER JOIN `kaos` ON `keywords`.id = `kaos`.keyword_id WHERE ((`kaos`.user_id = 1)) [0m
+  [4;35;1mKeyword Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `keywords`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT `users`.* FROM `users` INNER JOIN `kaos` ON `users`.id = `kaos`.user_id WHERE ((`kaos`.keyword_id = 1)) ORDER BY value DESC[0m
+Rendering template within layouts/keywords
+Rendering keywords/index
+Rendered shared/_header (1.1ms)
+  [4;35;1mSearchedKeyword Load (0.1ms)[0m   [0mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.user_id = 1) [0m
+  [4;36;1mSearchedKeyword Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `searched_keywords`[0m
+Completed in 37ms (View: 10, DB: 3) | 200 OK [http://localhost/users/1/keywords]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-20 17:48:33) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 127.0.0.1 at 2009-07-20 17:48:41) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mKeyword Load (0.1ms)[0m   [0;1mSELECT `keywords`.* FROM `keywords` INNER JOIN `kaos` ON `keywords`.id = `kaos`.keyword_id WHERE ((`kaos`.user_id = 1)) [0m
+  [4;35;1mKeyword Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `keywords`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT `users`.* FROM `users` INNER JOIN `kaos` ON `users`.id = `kaos`.user_id WHERE ((`kaos`.keyword_id = 1)) ORDER BY value DESC[0m
+Rendering template within layouts/keywords
+Rendering keywords/index
+Rendered shared/_header (1.1ms)
+  [4;35;1mSearchedKeyword Load (0.1ms)[0m   [0mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.user_id = 1) [0m
+  [4;36;1mSearchedKeyword Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `searched_keywords`[0m
+Completed in 36ms (View: 7, DB: 2) | 200 OK [http://localhost/users/1/keywords]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-20 17:48:41) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 127.0.0.1 at 2009-07-20 17:48:41) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mKeyword Load (0.1ms)[0m   [0;1mSELECT `keywords`.* FROM `keywords` INNER JOIN `kaos` ON `keywords`.id = `kaos`.keyword_id WHERE ((`kaos`.user_id = 1)) [0m
+  [4;35;1mKeyword Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `keywords`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT `users`.* FROM `users` INNER JOIN `kaos` ON `users`.id = `kaos`.user_id WHERE ((`kaos`.keyword_id = 1)) ORDER BY value DESC[0m
+Rendering template within layouts/keywords
+Rendering keywords/index
+Rendered shared/_header (1.0ms)
+  [4;35;1mSearchedKeyword Load (0.1ms)[0m   [0mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.user_id = 1) [0m
+  [4;36;1mSearchedKeyword Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `searched_keywords`[0m
+Completed in 32ms (View: 7, DB: 2) | 200 OK [http://localhost/users/1/keywords]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-20 17:48:41) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 127.0.0.1 at 2009-07-20 17:48:42) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mKeyword Load (0.1ms)[0m   [0;1mSELECT `keywords`.* FROM `keywords` INNER JOIN `kaos` ON `keywords`.id = `kaos`.keyword_id WHERE ((`kaos`.user_id = 1)) [0m
+  [4;35;1mKeyword Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `keywords`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT `users`.* FROM `users` INNER JOIN `kaos` ON `users`.id = `kaos`.user_id WHERE ((`kaos`.keyword_id = 1)) ORDER BY value DESC[0m
+Rendering template within layouts/keywords
+Rendering keywords/index
+Rendered shared/_header (1.1ms)
+  [4;35;1mSearchedKeyword Load (0.1ms)[0m   [0mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.user_id = 1) [0m
+  [4;36;1mSearchedKeyword Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `searched_keywords`[0m
+Completed in 87ms (View: 8, DB: 3) | 200 OK [http://localhost/users/1/keywords]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-20 17:48:42) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-07-20 17:48:42) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+Redirected to http://localhost:3000/users/1/resources
+Completed in 15ms (DB: 1) | 302 Found [http://localhost/users/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-20 17:48:42) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+Rendering template within layouts/resources
+Rendering resources/index
+Rendered shared/_header (1.0ms)
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) [0m
+  [4;36;1mResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Rendered resources/_resource (0.8ms)
+Rendered shared/_footer (0.6ms)
+Completed in 26ms (View: 7, DB: 2) | 200 OK [http://localhost/users/1/resources]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-20 17:48:48) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+Rendering template within layouts/resources
+Rendering resources/index
+Rendered shared/_header (1.0ms)
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) [0m
+  [4;35;1mResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Rendered resources/_resource (0.9ms)
+Rendered shared/_footer (0.6ms)
+Completed in 26ms (View: 7, DB: 2) | 200 OK [http://localhost/users/1/resources]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 127.0.0.1 at 2009-07-20 17:48:58) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mKeyword Load (0.1ms)[0m   [0mSELECT `keywords`.* FROM `keywords` INNER JOIN `kaos` ON `keywords`.id = `kaos`.keyword_id WHERE ((`kaos`.user_id = 1)) [0m
+  [4;36;1mKeyword Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `keywords`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT `users`.* FROM `users` INNER JOIN `kaos` ON `users`.id = `kaos`.user_id WHERE ((`kaos`.keyword_id = 1)) ORDER BY value DESC[0m
+Rendering template within layouts/keywords
+Rendering keywords/index
+Rendered shared/_header (1.1ms)
+  [4;36;1mSearchedKeyword Load (0.1ms)[0m   [0;1mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.user_id = 1) [0m
+  [4;35;1mSearchedKeyword Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `searched_keywords`[0m
+Completed in 36ms (View: 7, DB: 2) | 200 OK [http://localhost/users/1/keywords]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-20 17:48:58) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 127.0.0.1 at 2009-07-20 17:49:05) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mKeyword Load (0.1ms)[0m   [0mSELECT `keywords`.* FROM `keywords` INNER JOIN `kaos` ON `keywords`.id = `kaos`.keyword_id WHERE ((`kaos`.user_id = 1)) [0m
+  [4;36;1mKeyword Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `keywords`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT `users`.* FROM `users` INNER JOIN `kaos` ON `users`.id = `kaos`.user_id WHERE ((`kaos`.keyword_id = 1)) ORDER BY value DESC[0m
+Rendering template within layouts/keywords
+Rendering keywords/index
+Rendered shared/_header (1.0ms)
+  [4;36;1mSearchedKeyword Load (0.1ms)[0m   [0;1mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.user_id = 1) [0m
+  [4;35;1mSearchedKeyword Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `searched_keywords`[0m
+Completed in 33ms (View: 7, DB: 2) | 200 OK [http://localhost/users/1/keywords]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-20 17:49:05) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 127.0.0.1 at 2009-07-20 17:49:06) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mKeyword Load (0.1ms)[0m   [0mSELECT `keywords`.* FROM `keywords` INNER JOIN `kaos` ON `keywords`.id = `kaos`.keyword_id WHERE ((`kaos`.user_id = 1)) [0m
+  [4;36;1mKeyword Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `keywords`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT `users`.* FROM `users` INNER JOIN `kaos` ON `users`.id = `kaos`.user_id WHERE ((`kaos`.keyword_id = 1)) ORDER BY value DESC[0m
+Rendering template within layouts/keywords
+Rendering keywords/index
+Rendered shared/_header (1.1ms)
+  [4;36;1mSearchedKeyword Load (0.1ms)[0m   [0;1mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.user_id = 1) [0m
+  [4;35;1mSearchedKeyword Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `searched_keywords`[0m
+Completed in 85ms (View: 7, DB: 2) | 200 OK [http://localhost/users/1/keywords]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-20 17:49:06) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 127.0.0.1 at 2009-07-20 17:49:07) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mKeyword Load (0.1ms)[0m   [0mSELECT `keywords`.* FROM `keywords` INNER JOIN `kaos` ON `keywords`.id = `kaos`.keyword_id WHERE ((`kaos`.user_id = 1)) [0m
+  [4;36;1mKeyword Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `keywords`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT `users`.* FROM `users` INNER JOIN `kaos` ON `users`.id = `kaos`.user_id WHERE ((`kaos`.keyword_id = 1)) ORDER BY value DESC[0m
+Rendering template within layouts/keywords
+Rendering keywords/index
+Rendered shared/_header (1.0ms)
+  [4;36;1mSearchedKeyword Load (0.1ms)[0m   [0;1mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.user_id = 1) [0m
+  [4;35;1mSearchedKeyword Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `searched_keywords`[0m
+Completed in 33ms (View: 7, DB: 2) | 200 OK [http://localhost/users/1/keywords]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-20 17:49:07) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 127.0.0.1 at 2009-07-20 17:49:08) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mKeyword Load (0.1ms)[0m   [0mSELECT `keywords`.* FROM `keywords` INNER JOIN `kaos` ON `keywords`.id = `kaos`.keyword_id WHERE ((`kaos`.user_id = 1)) [0m
+  [4;36;1mKeyword Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `keywords`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT `users`.* FROM `users` INNER JOIN `kaos` ON `users`.id = `kaos`.user_id WHERE ((`kaos`.keyword_id = 1)) ORDER BY value DESC[0m
+Rendering template within layouts/keywords
+Rendering keywords/index
+Rendered shared/_header (1.0ms)
+  [4;36;1mSearchedKeyword Load (0.1ms)[0m   [0;1mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.user_id = 1) [0m
+  [4;35;1mSearchedKeyword Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `searched_keywords`[0m
+Completed in 33ms (View: 7, DB: 2) | 200 OK [http://localhost/users/1/keywords]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-20 17:49:08) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 127.0.0.1 at 2009-07-20 17:49:08) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mKeyword Load (0.1ms)[0m   [0mSELECT `keywords`.* FROM `keywords` INNER JOIN `kaos` ON `keywords`.id = `kaos`.keyword_id WHERE ((`kaos`.user_id = 1)) [0m
+  [4;36;1mKeyword Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `keywords`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT `users`.* FROM `users` INNER JOIN `kaos` ON `users`.id = `kaos`.user_id WHERE ((`kaos`.keyword_id = 1)) ORDER BY value DESC[0m
+Rendering template within layouts/keywords
+Rendering keywords/index
+Rendered shared/_header (1.0ms)
+  [4;36;1mSearchedKeyword Load (0.1ms)[0m   [0;1mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.user_id = 1) [0m
+  [4;35;1mSearchedKeyword Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `searched_keywords`[0m
+Completed in 35ms (View: 7, DB: 2) | 200 OK [http://localhost/users/1/keywords]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-20 17:49:08) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 127.0.0.1 at 2009-07-20 17:49:09) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mKeyword Load (0.1ms)[0m   [0mSELECT `keywords`.* FROM `keywords` INNER JOIN `kaos` ON `keywords`.id = `kaos`.keyword_id WHERE ((`kaos`.user_id = 1)) [0m
+  [4;36;1mKeyword Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `keywords`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT `users`.* FROM `users` INNER JOIN `kaos` ON `users`.id = `kaos`.user_id WHERE ((`kaos`.keyword_id = 1)) ORDER BY value DESC[0m
+Rendering template within layouts/keywords
+Rendering keywords/index
+Rendered shared/_header (1.0ms)
+  [4;36;1mSearchedKeyword Load (0.1ms)[0m   [0;1mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.user_id = 1) [0m
+  [4;35;1mSearchedKeyword Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `searched_keywords`[0m
+Completed in 32ms (View: 7, DB: 2) | 200 OK [http://localhost/users/1/keywords]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-20 17:49:09) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 127.0.0.1 at 2009-07-20 17:49:09) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mKeyword Load (0.1ms)[0m   [0mSELECT `keywords`.* FROM `keywords` INNER JOIN `kaos` ON `keywords`.id = `kaos`.keyword_id WHERE ((`kaos`.user_id = 1)) [0m
+  [4;36;1mKeyword Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `keywords`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT `users`.* FROM `users` INNER JOIN `kaos` ON `users`.id = `kaos`.user_id WHERE ((`kaos`.keyword_id = 1)) ORDER BY value DESC[0m
+Rendering template within layouts/keywords
+Rendering keywords/index
+Rendered shared/_header (1.0ms)
+  [4;36;1mSearchedKeyword Load (0.1ms)[0m   [0;1mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.user_id = 1) [0m
+  [4;35;1mSearchedKeyword Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `searched_keywords`[0m
+Completed in 89ms (View: 8, DB: 2) | 200 OK [http://localhost/users/1/keywords]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-20 17:49:09) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 127.0.0.1 at 2009-07-20 17:49:10) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mKeyword Load (0.1ms)[0m   [0mSELECT `keywords`.* FROM `keywords` INNER JOIN `kaos` ON `keywords`.id = `kaos`.keyword_id WHERE ((`kaos`.user_id = 1)) [0m
+  [4;36;1mKeyword Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `keywords`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT `users`.* FROM `users` INNER JOIN `kaos` ON `users`.id = `kaos`.user_id WHERE ((`kaos`.keyword_id = 1)) ORDER BY value DESC[0m
+Rendering template within layouts/keywords
+Rendering keywords/index
+Rendered shared/_header (1.0ms)
+  [4;36;1mSearchedKeyword Load (0.1ms)[0m   [0;1mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.user_id = 1) [0m
+  [4;35;1mSearchedKeyword Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `searched_keywords`[0m
+Completed in 33ms (View: 7, DB: 2) | 200 OK [http://localhost/users/1/keywords]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-20 17:49:10) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 127.0.0.1 at 2009-07-20 17:49:10) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mKeyword Load (0.1ms)[0m   [0mSELECT `keywords`.* FROM `keywords` INNER JOIN `kaos` ON `keywords`.id = `kaos`.keyword_id WHERE ((`kaos`.user_id = 1)) [0m
+  [4;36;1mKeyword Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `keywords`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT `users`.* FROM `users` INNER JOIN `kaos` ON `users`.id = `kaos`.user_id WHERE ((`kaos`.keyword_id = 1)) ORDER BY value DESC[0m
+Rendering template within layouts/keywords
+Rendering keywords/index
+Rendered shared/_header (11.6ms)
+  [4;36;1mSearchedKeyword Load (0.2ms)[0m   [0;1mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.user_id = 1) [0m
+  [4;35;1mSearchedKeyword Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `searched_keywords`[0m
+Completed in 87ms (View: 61, DB: 3) | 200 OK [http://localhost/users/1/keywords]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-20 17:49:10) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 127.0.0.1 at 2009-07-20 17:49:10) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mKeyword Load (0.1ms)[0m   [0mSELECT `keywords`.* FROM `keywords` INNER JOIN `kaos` ON `keywords`.id = `kaos`.keyword_id WHERE ((`kaos`.user_id = 1)) [0m
+  [4;36;1mKeyword Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `keywords`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT `users`.* FROM `users` INNER JOIN `kaos` ON `users`.id = `kaos`.user_id WHERE ((`kaos`.keyword_id = 1)) ORDER BY value DESC[0m
+Rendering template within layouts/keywords
+Rendering keywords/index
+Rendered shared/_header (1.0ms)
+  [4;36;1mSearchedKeyword Load (0.1ms)[0m   [0;1mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.user_id = 1) [0m
+  [4;35;1mSearchedKeyword Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `searched_keywords`[0m
+Completed in 35ms (View: 7, DB: 3) | 200 OK [http://localhost/users/1/keywords]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-20 17:49:10) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 127.0.0.1 at 2009-07-20 17:49:10) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mKeyword Load (0.1ms)[0m   [0mSELECT `keywords`.* FROM `keywords` INNER JOIN `kaos` ON `keywords`.id = `kaos`.keyword_id WHERE ((`kaos`.user_id = 1)) [0m
+  [4;36;1mKeyword Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `keywords`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT `users`.* FROM `users` INNER JOIN `kaos` ON `users`.id = `kaos`.user_id WHERE ((`kaos`.keyword_id = 1)) ORDER BY value DESC[0m
+Rendering template within layouts/keywords
+Rendering keywords/index
+Rendered shared/_header (1.0ms)
+  [4;36;1mSearchedKeyword Load (0.1ms)[0m   [0;1mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.user_id = 1) [0m
+  [4;35;1mSearchedKeyword Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `searched_keywords`[0m
+Completed in 33ms (View: 7, DB: 2) | 200 OK [http://localhost/users/1/keywords]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-20 17:49:11) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 127.0.0.1 at 2009-07-20 17:49:11) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mKeyword Load (0.1ms)[0m   [0mSELECT `keywords`.* FROM `keywords` INNER JOIN `kaos` ON `keywords`.id = `kaos`.keyword_id WHERE ((`kaos`.user_id = 1)) [0m
+  [4;36;1mKeyword Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `keywords`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT `users`.* FROM `users` INNER JOIN `kaos` ON `users`.id = `kaos`.user_id WHERE ((`kaos`.keyword_id = 1)) ORDER BY value DESC[0m
+Rendering template within layouts/keywords
+Rendering keywords/index
+Rendered shared/_header (1.1ms)
+  [4;36;1mSearchedKeyword Load (0.1ms)[0m   [0;1mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.user_id = 1) [0m
+  [4;35;1mSearchedKeyword Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `searched_keywords`[0m
+Completed in 37ms (View: 8, DB: 3) | 200 OK [http://localhost/users/1/keywords]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-20 17:49:11) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-07-20 17:49:12) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+Redirected to http://localhost:3000/users/1/resources
+Completed in 15ms (DB: 1) | 302 Found [http://localhost/users/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-20 17:49:12) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+Rendering template within layouts/resources
+Rendering resources/index
+Rendered shared/_header (1.0ms)
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) [0m
+  [4;35;1mResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Rendered resources/_resource (0.8ms)
+Rendered shared/_footer (0.6ms)
+Completed in 27ms (View: 7, DB: 2) | 200 OK [http://localhost/users/1/resources]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-20 17:49:20) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+Rendering template within layouts/resources
+Rendering resources/index
+Rendered shared/_header (1.1ms)
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) [0m
+  [4;36;1mResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Rendered resources/_resource (0.9ms)
+Rendered shared/_footer (0.7ms)
+Completed in 80ms (View: 8, DB: 2) | 200 OK [http://localhost/users/1/resources]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 127.0.0.1 at 2009-07-20 17:49:22) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mKeyword Load (0.1ms)[0m   [0;1mSELECT `keywords`.* FROM `keywords` INNER JOIN `kaos` ON `keywords`.id = `kaos`.keyword_id WHERE ((`kaos`.user_id = 1)) [0m
+  [4;35;1mKeyword Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `keywords`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT `users`.* FROM `users` INNER JOIN `kaos` ON `users`.id = `kaos`.user_id WHERE ((`kaos`.keyword_id = 1)) ORDER BY value DESC[0m
+Rendering template within layouts/keywords
+Rendering keywords/index
+Rendered shared/_header (1.0ms)
+  [4;35;1mSearchedKeyword Load (0.1ms)[0m   [0mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.user_id = 1) [0m
+  [4;36;1mSearchedKeyword Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `searched_keywords`[0m
+Completed in 34ms (View: 7, DB: 2) | 200 OK [http://localhost/users/1/keywords]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-20 17:49:22) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 127.0.0.1 at 2009-07-20 17:49:23) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mKeyword Load (0.1ms)[0m   [0;1mSELECT `keywords`.* FROM `keywords` INNER JOIN `kaos` ON `keywords`.id = `kaos`.keyword_id WHERE ((`kaos`.user_id = 1)) [0m
+  [4;35;1mKeyword Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `keywords`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT `users`.* FROM `users` INNER JOIN `kaos` ON `users`.id = `kaos`.user_id WHERE ((`kaos`.keyword_id = 1)) ORDER BY value DESC[0m
+Rendering template within layouts/keywords
+Rendering keywords/index
+Rendered shared/_header (1.0ms)
+  [4;35;1mSearchedKeyword Load (0.1ms)[0m   [0mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.user_id = 1) [0m
+  [4;36;1mSearchedKeyword Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `searched_keywords`[0m
+Completed in 32ms (View: 7, DB: 2) | 200 OK [http://localhost/users/1/keywords]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-20 17:49:23) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 127.0.0.1 at 2009-07-20 17:49:24) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mKeyword Load (0.1ms)[0m   [0;1mSELECT `keywords`.* FROM `keywords` INNER JOIN `kaos` ON `keywords`.id = `kaos`.keyword_id WHERE ((`kaos`.user_id = 1)) [0m
+  [4;35;1mKeyword Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `keywords`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT `users`.* FROM `users` INNER JOIN `kaos` ON `users`.id = `kaos`.user_id WHERE ((`kaos`.keyword_id = 1)) ORDER BY value DESC[0m
+Rendering template within layouts/keywords
+Rendering keywords/index
+Rendered shared/_header (1.1ms)
+  [4;35;1mSearchedKeyword Load (0.1ms)[0m   [0mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.user_id = 1) [0m
+  [4;36;1mSearchedKeyword Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `searched_keywords`[0m
+Completed in 90ms (View: 8, DB: 2) | 200 OK [http://localhost/users/1/keywords]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-20 17:49:24) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 127.0.0.1 at 2009-07-20 17:49:24) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mKeyword Load (0.1ms)[0m   [0;1mSELECT `keywords`.* FROM `keywords` INNER JOIN `kaos` ON `keywords`.id = `kaos`.keyword_id WHERE ((`kaos`.user_id = 1)) [0m
+  [4;35;1mKeyword Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `keywords`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT `users`.* FROM `users` INNER JOIN `kaos` ON `users`.id = `kaos`.user_id WHERE ((`kaos`.keyword_id = 1)) ORDER BY value DESC[0m
+Rendering template within layouts/keywords
+Rendering keywords/index
+Rendered shared/_header (1.1ms)
+  [4;35;1mSearchedKeyword Load (0.1ms)[0m   [0mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.user_id = 1) [0m
+  [4;36;1mSearchedKeyword Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `searched_keywords`[0m
+Completed in 33ms (View: 7, DB: 2) | 200 OK [http://localhost/users/1/keywords]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-20 17:49:24) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 127.0.0.1 at 2009-07-20 17:49:25) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mKeyword Load (0.1ms)[0m   [0;1mSELECT `keywords`.* FROM `keywords` INNER JOIN `kaos` ON `keywords`.id = `kaos`.keyword_id WHERE ((`kaos`.user_id = 1)) [0m
+  [4;35;1mKeyword Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `keywords`[0m
+  [4;36;1mUser Load (10.7ms)[0m   [0;1mSELECT `users`.* FROM `users` INNER JOIN `kaos` ON `users`.id = `kaos`.user_id WHERE ((`kaos`.keyword_id = 1)) ORDER BY value DESC[0m
+Rendering template within layouts/keywords
+Rendering keywords/index
+Rendered shared/_header (1.1ms)
+  [4;35;1mSearchedKeyword Load (0.1ms)[0m   [0mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.user_id = 1) [0m
+  [4;36;1mSearchedKeyword Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `searched_keywords`[0m
+Completed in 85ms (View: 8, DB: 13) | 200 OK [http://localhost/users/1/keywords]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-20 17:49:25) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 127.0.0.1 at 2009-07-20 17:49:26) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mKeyword Load (0.1ms)[0m   [0;1mSELECT `keywords`.* FROM `keywords` INNER JOIN `kaos` ON `keywords`.id = `kaos`.keyword_id WHERE ((`kaos`.user_id = 1)) [0m
+  [4;35;1mKeyword Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `keywords`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT `users`.* FROM `users` INNER JOIN `kaos` ON `users`.id = `kaos`.user_id WHERE ((`kaos`.keyword_id = 1)) ORDER BY value DESC[0m
+Rendering template within layouts/keywords
+Rendering keywords/index
+Rendered shared/_header (1.1ms)
+  [4;35;1mSearchedKeyword Load (0.1ms)[0m   [0mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.user_id = 1) [0m
+  [4;36;1mSearchedKeyword Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `searched_keywords`[0m
+Completed in 34ms (View: 7, DB: 2) | 200 OK [http://localhost/users/1/keywords]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-20 17:49:26) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 127.0.0.1 at 2009-07-20 17:49:26) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mKeyword Load (0.1ms)[0m   [0;1mSELECT `keywords`.* FROM `keywords` INNER JOIN `kaos` ON `keywords`.id = `kaos`.keyword_id WHERE ((`kaos`.user_id = 1)) [0m
+  [4;35;1mKeyword Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `keywords`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT `users`.* FROM `users` INNER JOIN `kaos` ON `users`.id = `kaos`.user_id WHERE ((`kaos`.keyword_id = 1)) ORDER BY value DESC[0m
+Rendering template within layouts/keywords
+Rendering keywords/index
+Rendered shared/_header (1.0ms)
+  [4;35;1mSearchedKeyword Load (0.1ms)[0m   [0mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.user_id = 1) [0m
+  [4;36;1mSearchedKeyword Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `searched_keywords`[0m
+Completed in 33ms (View: 7, DB: 2) | 200 OK [http://localhost/users/1/keywords]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-20 17:49:26) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 127.0.0.1 at 2009-07-20 17:49:26) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mKeyword Load (0.1ms)[0m   [0;1mSELECT `keywords`.* FROM `keywords` INNER JOIN `kaos` ON `keywords`.id = `kaos`.keyword_id WHERE ((`kaos`.user_id = 1)) [0m
+  [4;35;1mKeyword Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `keywords`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT `users`.* FROM `users` INNER JOIN `kaos` ON `users`.id = `kaos`.user_id WHERE ((`kaos`.keyword_id = 1)) ORDER BY value DESC[0m
+Rendering template within layouts/keywords
+Rendering keywords/index
+Rendered shared/_header (1.1ms)
+  [4;35;1mSearchedKeyword Load (0.1ms)[0m   [0mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.user_id = 1) [0m
+  [4;36;1mSearchedKeyword Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `searched_keywords`[0m
+Completed in 37ms (View: 8, DB: 2) | 200 OK [http://localhost/users/1/keywords]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-20 17:49:26) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 127.0.0.1 at 2009-07-20 17:49:27) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mKeyword Load (0.1ms)[0m   [0;1mSELECT `keywords`.* FROM `keywords` INNER JOIN `kaos` ON `keywords`.id = `kaos`.keyword_id WHERE ((`kaos`.user_id = 1)) [0m
+  [4;35;1mKeyword Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `keywords`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT `users`.* FROM `users` INNER JOIN `kaos` ON `users`.id = `kaos`.user_id WHERE ((`kaos`.keyword_id = 1)) ORDER BY value DESC[0m
+Rendering template within layouts/keywords
+Rendering keywords/index
+Rendered shared/_header (1.0ms)
+  [4;35;1mSearchedKeyword Load (0.1ms)[0m   [0mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.user_id = 1) [0m
+  [4;36;1mSearchedKeyword Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `searched_keywords`[0m
+Completed in 33ms (View: 7, DB: 2) | 200 OK [http://localhost/users/1/keywords]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-20 17:49:27) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 127.0.0.1 at 2009-07-20 17:49:28) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mKeyword Load (0.1ms)[0m   [0;1mSELECT `keywords`.* FROM `keywords` INNER JOIN `kaos` ON `keywords`.id = `kaos`.keyword_id WHERE ((`kaos`.user_id = 1)) [0m
+  [4;35;1mKeyword Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `keywords`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT `users`.* FROM `users` INNER JOIN `kaos` ON `users`.id = `kaos`.user_id WHERE ((`kaos`.keyword_id = 1)) ORDER BY value DESC[0m
+Rendering template within layouts/keywords
+Rendering keywords/index
+Rendered shared/_header (1.1ms)
+  [4;35;1mSearchedKeyword Load (0.1ms)[0m   [0mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.user_id = 1) [0m
+  [4;36;1mSearchedKeyword Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `searched_keywords`[0m
+Completed in 85ms (View: 8, DB: 2) | 200 OK [http://localhost/users/1/keywords]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-20 17:49:28) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-07-20 17:49:30) [GET]
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering users/new
+Rendered shared/_footer (0.6ms)
+Completed in 20ms (View: 6, DB: 1) | 200 OK [http://localhost/users/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-07-20 17:49:32) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+Redirected to http://localhost:3000/users/1/resources
+Completed in 15ms (DB: 1) | 302 Found [http://localhost/users/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-20 17:49:32) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+Rendering template within layouts/resources
+Rendering resources/index
+Rendered shared/_header (1.0ms)
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) [0m
+  [4;35;1mResource Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Rendered resources/_resource (0.8ms)
+Rendered shared/_footer (0.6ms)
+Completed in 28ms (View: 7, DB: 2) | 200 OK [http://localhost/users/1/resources]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-20 17:49:32) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+Rendering template within layouts/resources
+Rendering resources/index
+Rendered shared/_header (1.1ms)
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) [0m
+  [4;36;1mResource Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Rendered resources/_resource (0.9ms)
+Rendered shared/_footer (0.7ms)
+Completed in 80ms (View: 8, DB: 2) | 200 OK [http://localhost/users/1/resources]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-20 17:49:34) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+Rendering template within layouts/resources
+Rendering resources/index
+Rendered shared/_header (1.0ms)
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) [0m
+  [4;35;1mResource Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Rendered resources/_resource (0.8ms)
+Rendered shared/_footer (0.6ms)
+Completed in 28ms (View: 8, DB: 2) | 200 OK [http://localhost/users/1/resources]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 127.0.0.1 at 2009-07-20 17:49:38) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mKeyword Load (0.1ms)[0m   [0mSELECT `keywords`.* FROM `keywords` INNER JOIN `kaos` ON `keywords`.id = `kaos`.keyword_id WHERE ((`kaos`.user_id = 1)) [0m
+  [4;36;1mKeyword Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `keywords`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT `users`.* FROM `users` INNER JOIN `kaos` ON `users`.id = `kaos`.user_id WHERE ((`kaos`.keyword_id = 1)) ORDER BY value DESC[0m
+Rendering template within layouts/keywords
+Rendering keywords/index
+Rendered shared/_header (1.0ms)
+  [4;36;1mSearchedKeyword Load (0.1ms)[0m   [0;1mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.user_id = 1) [0m
+  [4;35;1mSearchedKeyword Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `searched_keywords`[0m
+Completed in 34ms (View: 7, DB: 2) | 200 OK [http://localhost/users/1/keywords]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-20 17:49:38) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 127.0.0.1 at 2009-07-20 17:49:39) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mKeyword Load (0.1ms)[0m   [0mSELECT `keywords`.* FROM `keywords` INNER JOIN `kaos` ON `keywords`.id = `kaos`.keyword_id WHERE ((`kaos`.user_id = 1)) [0m
+  [4;36;1mKeyword Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `keywords`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT `users`.* FROM `users` INNER JOIN `kaos` ON `users`.id = `kaos`.user_id WHERE ((`kaos`.keyword_id = 1)) ORDER BY value DESC[0m
+Rendering template within layouts/keywords
+Rendering keywords/index
+Rendered shared/_header (1.1ms)
+  [4;36;1mSearchedKeyword Load (0.1ms)[0m   [0;1mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.user_id = 1) [0m
+  [4;35;1mSearchedKeyword Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `searched_keywords`[0m
+Completed in 89ms (View: 8, DB: 2) | 200 OK [http://localhost/users/1/keywords]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-20 17:49:39) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 127.0.0.1 at 2009-07-20 17:49:40) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mKeyword Load (0.1ms)[0m   [0mSELECT `keywords`.* FROM `keywords` INNER JOIN `kaos` ON `keywords`.id = `kaos`.keyword_id WHERE ((`kaos`.user_id = 1)) [0m
+  [4;36;1mKeyword Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `keywords`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT `users`.* FROM `users` INNER JOIN `kaos` ON `users`.id = `kaos`.user_id WHERE ((`kaos`.keyword_id = 1)) ORDER BY value DESC[0m
+Rendering template within layouts/keywords
+Rendering keywords/index
+Rendered shared/_header (1.1ms)
+  [4;36;1mSearchedKeyword Load (0.1ms)[0m   [0;1mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.user_id = 1) [0m
+  [4;35;1mSearchedKeyword Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `searched_keywords`[0m
+Completed in 35ms (View: 8, DB: 3) | 200 OK [http://localhost/users/1/keywords]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-20 17:49:41) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-07-20 17:49:41) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+Redirected to http://localhost:3000/users/1/resources
+Completed in 15ms (DB: 1) | 302 Found [http://localhost/users/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-20 17:49:41) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+Rendering template within layouts/resources
+Rendering resources/index
+Rendered shared/_header (1.1ms)
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) [0m
+  [4;35;1mResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Rendered resources/_resource (0.9ms)
+Rendered shared/_footer (0.6ms)
+Completed in 83ms (View: 64, DB: 2) | 200 OK [http://localhost/users/1/resources]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-20 17:49:49) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+Rendering template within layouts/resources
+Rendering resources/index
+Rendered shared/_header (1.1ms)
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) [0m
+  [4;36;1mResource Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Rendered resources/_resource (0.8ms)
+Rendered shared/_footer (0.6ms)
+Completed in 29ms (View: 8, DB: 2) | 200 OK [http://localhost/users/1/resources]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 127.0.0.1 at 2009-07-20 17:49:51) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mKeyword Load (0.1ms)[0m   [0;1mSELECT `keywords`.* FROM `keywords` INNER JOIN `kaos` ON `keywords`.id = `kaos`.keyword_id WHERE ((`kaos`.user_id = 1)) [0m
+  [4;35;1mKeyword Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `keywords`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT `users`.* FROM `users` INNER JOIN `kaos` ON `users`.id = `kaos`.user_id WHERE ((`kaos`.keyword_id = 1)) ORDER BY value DESC[0m
+Rendering template within layouts/keywords
+Rendering keywords/index
+Rendered shared/_header (1.0ms)
+  [4;35;1mSearchedKeyword Load (0.1ms)[0m   [0mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.user_id = 1) [0m
+  [4;36;1mSearchedKeyword Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `searched_keywords`[0m
+Completed in 33ms (View: 7, DB: 2) | 200 OK [http://localhost/users/1/keywords]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-20 17:49:51) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 127.0.0.1 at 2009-07-20 17:54:07) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mKeyword Load (0.1ms)[0m   [0;1mSELECT `keywords`.* FROM `keywords` INNER JOIN `kaos` ON `keywords`.id = `kaos`.keyword_id WHERE ((`kaos`.user_id = 1)) [0m
+  [4;35;1mKeyword Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `keywords`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT `users`.* FROM `users` INNER JOIN `kaos` ON `users`.id = `kaos`.user_id WHERE ((`kaos`.keyword_id = 1)) ORDER BY value DESC[0m
+Rendering template within layouts/keywords
+Rendering keywords/index
+Rendered shared/_header (1.0ms)
+  [4;35;1mSearchedKeyword Load (0.1ms)[0m   [0mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.user_id = 1) [0m
+  [4;36;1mSearchedKeyword Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `searched_keywords`[0m
+Completed in 83ms (View: 57, DB: 2) | 200 OK [http://localhost/users/1/keywords]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-20 17:54:07) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateKaos (20090720085625)
+  [4;36;1mSQL (43.7ms)[0m   [0;1mDROP TABLE `kaos`[0m
+  [4;35;1mSQL (44.7ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20090720085625'[0m
+Migrating to CreateSearchedKeywords (20090713122317)
+  [4;36;1mSQL (42.6ms)[0m   [0;1mDROP TABLE `searched_keywords`[0m
+  [4;35;1mSQL (45.4ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20090713122317'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `comments`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `comments`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `important_days`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `important_days`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `important_days`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW FIELDS FROM `keywords`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mdescribe `keywords`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `keywords`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `portraits`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `portraits`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `portraits`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `resources`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `resources`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `true_portraits`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `true_portraits`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `true_portraits`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20090523150301)
+Migrating to CreatePortraits (20090606045951)
+Migrating to CreateImportantDays (20090608144113)
+Migrating to CreateTruePortraits (20090611094020)
+Migrating to CreateResources (20090611163158)
+Migrating to CreateComments (20090712100836)
+Migrating to CreateKeywords (20090713121600)
+Migrating to CreateSearchedKeywords (20090713122317)
+  [4;36;1mSQL (106.5ms)[0m   [0;1mCREATE TABLE `searched_keywords` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `searched_times` int(11) DEFAULT 1, `name` varchar(255), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (44.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090713122317')[0m
+Migrating to CreateKaos (20090720085625)
+  [4;36;1mSQL (87.2ms)[0m   [0;1mCREATE TABLE `kaos` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `keyword_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (44.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090720085625')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `comments`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `comments`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `important_days`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `important_days`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `important_days`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `kaos`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `kaos`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `kaos`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `keywords`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `keywords`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `keywords`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW FIELDS FROM `portraits`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `portraits`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `portraits`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `resources`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `resources`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `searched_keywords`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `searched_keywords`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `searched_keywords`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `true_portraits`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `true_portraits`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `true_portraits`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 127.0.0.1 at 2009-07-20 17:54:24) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mKeyword Load (0.3ms)[0m   [0;1mSELECT `keywords`.* FROM `keywords` INNER JOIN `kaos` ON `keywords`.id = `kaos`.keyword_id WHERE ((`kaos`.user_id = 1)) [0m
+Rendering template within layouts/keywords
+Rendering keywords/index
+Rendered shared/_header (1.0ms)
+  [4;35;1mSearchedKeyword Load (0.2ms)[0m   [0mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.user_id = 1) [0m
+Completed in 30ms (View: 6, DB: 2) | 200 OK [http://localhost/users/1/keywords]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-20 17:54:24) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-20 17:54:28) [GET]
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+Redirected to http://localhost:3000/users/1/searched_keywords/new
+Completed in 15ms (DB: 1) | 302 Found [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#new (for 127.0.0.1 at 2009-07-20 17:54:28) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+Rendering template within layouts/searched_keywords
+Rendering searched_keywords/new
+Rendered shared/_footer (0.7ms)
+Completed in 18ms (View: 3, DB: 1) | 200 OK [http://localhost/users/1/searched_keywords/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#auto_complete_for_resource_keywords (for 127.0.0.1 at 2009-07-20 17:54:29) [GET]
+  Parameters: {"resource"=>{"keywords"=>""}}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (LOWER(keywords) LIKE '%%') ORDER BY keywords ASC LIMIT 50[0m
+  [4;35;1mResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Completed in 76ms (View: 2, DB: 2) | 200 OK [http://localhost/searched_keywords/auto_complete_for_resource_keywords?resource%5Bkeywords%5D=]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#auto_complete_for_resource_keywords (for 127.0.0.1 at 2009-07-20 17:54:30) [GET]
+  Parameters: {"resource"=>{"keywords"=>"aa"}}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (LOWER(keywords) LIKE '%aa%') ORDER BY keywords ASC LIMIT 50[0m
+  [4;35;1mResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Completed in 26ms (View: 2, DB: 2) | 200 OK [http://localhost/searched_keywords/auto_complete_for_resource_keywords?resource%5Bkeywords%5D=aa]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#create (for 127.0.0.1 at 2009-07-20 17:54:30) [POST]
+  Parameters: {"user_id"=>"1", "keywords"=>"aa"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mSearchedKeyword Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `searched_keywords`[0m
+  [4;35;1mSearchedKeyword Load (0.2ms)[0m   [0mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.`name` = 'aa') AND (`searched_keywords`.user_id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSearchedKeyword Create (0.1ms)[0m   [0mINSERT INTO `searched_keywords` (`name`, `created_at`, `updated_at`, `searched_times`, `user_id`) VALUES('aa', '2009-07-20 09:54:30', '2009-07-20 09:54:30', 1, NULL)[0m
+  [4;36;1mSQL (66.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSearchedKeyword Update (0.2ms)[0m   [0;1mUPDATE `searched_keywords` SET `updated_at` = '2009-07-20 09:54:30', `user_id` = 1 WHERE `id` = 1[0m
+  [4;35;1mSQL (42.7ms)[0m   [0mCOMMIT[0m
+Completed in 134ms (View: 1, DB: 112) | 200 OK [http://localhost/users/1/searched_keywords]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#index (for 127.0.0.1 at 2009-07-20 17:54:30) [GET]
+  Parameters: {"keywords"=>"aa"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/searched_keywords
+Rendering searched_keywords/index
+  [4;35;1mResource Load Including Associations (0.1ms)[0m   [0mSELECT `resources`.`id` AS t0_r0, `resources`.`type` AS t0_r1, `resources`.`shoulu` AS t0_r2, `resources`.`user_id` AS t0_r3, `resources`.`keywords` AS t0_r4, `resources`.`title` AS t0_r5, `resources`.`order` AS t0_r6, `resources`.`link_url` AS t0_r7, `resources`.`description` AS t0_r8, `resources`.`created_at` AS t0_r9, `resources`.`updated_at` AS t0_r10, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`email` AS t1_r2, `users`.`crypted_password` AS t1_r3, `users`.`salt` AS t1_r4, `users`.`remember_token` AS t1_r5, `users`.`remember_token_expires_at` AS t1_r6, `users`.`activation_code` AS t1_r7, `users`.`activated_at` AS t1_r8, `users`.`nick_name` AS t1_r9, `users`.`follower_id` AS t1_r10, `users`.`following_id` AS t1_r11, `users`.`value` AS t1_r12, `users`.`money` AS t1_r13, `users`.`terms` AS t1_r14, `users`.`username` AS t1_r15, `users`.`created_at` AS t1_r16, `users`.`updated_at` AS t1_r17 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`keywords` = 'aa') ORDER BY users.value DESC[0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 1) [0m
+Completed in 31ms (View: 11, DB: 2) | 200 OK [http://localhost/search/aa]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#new (for 127.0.0.1 at 2009-07-20 17:54:35) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+Rendering template within layouts/searched_keywords
+Rendering searched_keywords/new
+Rendered shared/_footer (0.7ms)
+Completed in 73ms (View: 3, DB: 1) | 200 OK [http://localhost/users/1/searched_keywords/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#auto_complete_for_resource_keywords (for 127.0.0.1 at 2009-07-20 17:54:35) [GET]
+  Parameters: {"resource"=>{"keywords"=>""}}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM `resources` WHERE (LOWER(keywords) LIKE '%%') ORDER BY keywords ASC LIMIT 50[0m
+  [4;36;1mResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Completed in 22ms (View: 2, DB: 2) | 200 OK [http://localhost/searched_keywords/auto_complete_for_resource_keywords?resource%5Bkeywords%5D=]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#auto_complete_for_resource_keywords (for 127.0.0.1 at 2009-07-20 17:54:36) [GET]
+  Parameters: {"resource"=>{"keywords"=>"aa"}}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mResource Load (0.2ms)[0m   [0mSELECT * FROM `resources` WHERE (LOWER(keywords) LIKE '%aa%') ORDER BY keywords ASC LIMIT 50[0m
+  [4;36;1mResource Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Completed in 26ms (View: 3, DB: 2) | 200 OK [http://localhost/searched_keywords/auto_complete_for_resource_keywords?resource%5Bkeywords%5D=aa]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#create (for 127.0.0.1 at 2009-07-20 17:54:36) [POST]
+  Parameters: {"user_id"=>"1", "keywords"=>"aa"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mSearchedKeyword Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `searched_keywords`[0m
+  [4;36;1mSearchedKeyword Load (0.2ms)[0m   [0;1mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.`name` = 'aa') AND (`searched_keywords`.user_id = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.`name` = 'aa') AND (`searched_keywords`.user_id = 1) LIMIT 1[0m
+Completed in 21ms (View: 1, DB: 2) | 200 OK [http://localhost/users/1/searched_keywords]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#index (for 127.0.0.1 at 2009-07-20 17:54:36) [GET]
+  Parameters: {"keywords"=>"aa"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mResource Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/searched_keywords
+Rendering searched_keywords/index
+  [4;35;1mResource Load Including Associations (0.1ms)[0m   [0mSELECT `resources`.`id` AS t0_r0, `resources`.`type` AS t0_r1, `resources`.`shoulu` AS t0_r2, `resources`.`user_id` AS t0_r3, `resources`.`keywords` AS t0_r4, `resources`.`title` AS t0_r5, `resources`.`order` AS t0_r6, `resources`.`link_url` AS t0_r7, `resources`.`description` AS t0_r8, `resources`.`created_at` AS t0_r9, `resources`.`updated_at` AS t0_r10, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`email` AS t1_r2, `users`.`crypted_password` AS t1_r3, `users`.`salt` AS t1_r4, `users`.`remember_token` AS t1_r5, `users`.`remember_token_expires_at` AS t1_r6, `users`.`activation_code` AS t1_r7, `users`.`activated_at` AS t1_r8, `users`.`nick_name` AS t1_r9, `users`.`follower_id` AS t1_r10, `users`.`following_id` AS t1_r11, `users`.`value` AS t1_r12, `users`.`money` AS t1_r13, `users`.`terms` AS t1_r14, `users`.`username` AS t1_r15, `users`.`created_at` AS t1_r16, `users`.`updated_at` AS t1_r17 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`keywords` = 'aa') ORDER BY users.value DESC[0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 1) [0m
+Completed in 87ms (View: 13, DB: 2) | 200 OK [http://localhost/search/aa]
+  [4;35;1mSQL (0.6ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-07-20 17:54:52) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+Redirected to http://localhost:3000/users/1/resources
+Completed in 16ms (DB: 2) | 302 Found [http://localhost/users/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-20 17:54:52) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+Rendering template within layouts/resources
+Rendering resources/index
+Rendered shared/_header (1.1ms)
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) [0m
+  [4;36;1mResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Rendered resources/_resource (0.8ms)
+Rendered shared/_footer (0.6ms)
+Completed in 27ms (View: 8, DB: 2) | 200 OK [http://localhost/users/1/resources]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 127.0.0.1 at 2009-07-20 17:54:54) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mKeyword Load (0.1ms)[0m   [0;1mSELECT `keywords`.* FROM `keywords` INNER JOIN `kaos` ON `keywords`.id = `kaos`.keyword_id WHERE ((`kaos`.user_id = 1)) [0m
+Rendering template within layouts/keywords
+Rendering keywords/index
+Rendered shared/_header (1.0ms)
+  [4;35;1mSearchedKeyword Load (0.2ms)[0m   [0mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.user_id = 1) [0m
+  [4;36;1mSearchedKeyword Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `searched_keywords`[0m
+Completed in 30ms (View: 7, DB: 2) | 200 OK [http://localhost/users/1/keywords]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-20 17:54:54) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 127.0.0.1 at 2009-07-20 17:57:03) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mKeyword Load (0.1ms)[0m   [0;1mSELECT `keywords`.* FROM `keywords` INNER JOIN `kaos` ON `keywords`.id = `kaos`.keyword_id WHERE ((`kaos`.user_id = 1)) [0m
+Rendering template within layouts/keywords
+Rendering keywords/index
+Rendered shared/_header (1.0ms)
+  [4;35;1mSearchedKeyword Load (0.1ms)[0m   [0mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.user_id = 1) [0m
+  [4;36;1mSearchedKeyword Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `searched_keywords`[0m
+Completed in 33ms (View: 7, DB: 2) | 200 OK [http://localhost/users/1/keywords]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-20 17:57:03) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-20 17:57:06) [GET]
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+Redirected to http://localhost:3000/users/1/searched_keywords/new
+Completed in 19ms (DB: 1) | 302 Found [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#new (for 127.0.0.1 at 2009-07-20 17:57:06) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+Rendering template within layouts/searched_keywords
+Rendering searched_keywords/new
+Rendered shared/_footer (0.8ms)
+Completed in 18ms (View: 4, DB: 1) | 200 OK [http://localhost/users/1/searched_keywords/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#auto_complete_for_resource_keywords (for 127.0.0.1 at 2009-07-20 17:57:07) [GET]
+  Parameters: {"resource"=>{"keywords"=>""}}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM `resources` WHERE (LOWER(keywords) LIKE '%%') ORDER BY keywords ASC LIMIT 50[0m
+  [4;36;1mResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Completed in 73ms (View: 2, DB: 2) | 200 OK [http://localhost/searched_keywords/auto_complete_for_resource_keywords?resource%5Bkeywords%5D=]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#auto_complete_for_resource_keywords (for 127.0.0.1 at 2009-07-20 17:57:08) [GET]
+  Parameters: {"resource"=>{"keywords"=>"aa"}}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM `resources` WHERE (LOWER(keywords) LIKE '%aa%') ORDER BY keywords ASC LIMIT 50[0m
+  [4;36;1mResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Completed in 27ms (View: 2, DB: 2) | 200 OK [http://localhost/searched_keywords/auto_complete_for_resource_keywords?resource%5Bkeywords%5D=aa]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#create (for 127.0.0.1 at 2009-07-20 17:57:08) [POST]
+  Parameters: {"user_id"=>"1", "keywords"=>"aa"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mSearchedKeyword Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `searched_keywords`[0m
+  [4;36;1mSearchedKeyword Load (0.1ms)[0m   [0;1mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.`name` = 'aa') AND (`searched_keywords`.user_id = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.`name` = 'aa') AND (`searched_keywords`.user_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.`name` = 'aa') AND (`searched_keywords`.user_id = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Completed in 24ms (View: 1, DB: 2) | 200 OK [http://localhost/users/1/searched_keywords]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#index (for 127.0.0.1 at 2009-07-20 17:57:08) [GET]
+  Parameters: {"keywords"=>"aa"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/searched_keywords
+Rendering searched_keywords/index
+  [4;36;1mResource Load Including Associations (0.1ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`type` AS t0_r1, `resources`.`shoulu` AS t0_r2, `resources`.`user_id` AS t0_r3, `resources`.`keywords` AS t0_r4, `resources`.`title` AS t0_r5, `resources`.`order` AS t0_r6, `resources`.`link_url` AS t0_r7, `resources`.`description` AS t0_r8, `resources`.`created_at` AS t0_r9, `resources`.`updated_at` AS t0_r10, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`email` AS t1_r2, `users`.`crypted_password` AS t1_r3, `users`.`salt` AS t1_r4, `users`.`remember_token` AS t1_r5, `users`.`remember_token_expires_at` AS t1_r6, `users`.`activation_code` AS t1_r7, `users`.`activated_at` AS t1_r8, `users`.`nick_name` AS t1_r9, `users`.`follower_id` AS t1_r10, `users`.`following_id` AS t1_r11, `users`.`value` AS t1_r12, `users`.`money` AS t1_r13, `users`.`terms` AS t1_r14, `users`.`username` AS t1_r15, `users`.`created_at` AS t1_r16, `users`.`updated_at` AS t1_r17 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`keywords` = 'aa') ORDER BY users.value DESC[0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 1) [0m
+Completed in 32ms (View: 12, DB: 2) | 200 OK [http://localhost/search/aa]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-07-20 17:57:11) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+Redirected to http://localhost:3000/users/1/resources
+Completed in 15ms (DB: 1) | 302 Found [http://localhost/users/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-20 17:57:11) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+Rendering template within layouts/resources
+Rendering resources/index
+Rendered shared/_header (1.0ms)
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) [0m
+  [4;35;1mResource Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Rendered resources/_resource (1.0ms)
+Rendered shared/_footer (0.6ms)
+Completed in 29ms (View: 8, DB: 2) | 200 OK [http://localhost/users/1/resources]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 127.0.0.1 at 2009-07-20 17:57:13) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mKeyword Load (0.1ms)[0m   [0mSELECT `keywords`.* FROM `keywords` INNER JOIN `kaos` ON `keywords`.id = `kaos`.keyword_id WHERE ((`kaos`.user_id = 1)) [0m
+Rendering template within layouts/keywords
+Rendering keywords/index
+Rendered shared/_header (1.1ms)
+  [4;36;1mSearchedKeyword Load (0.1ms)[0m   [0;1mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.user_id = 1) [0m
+  [4;35;1mSearchedKeyword Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `searched_keywords`[0m
+Completed in 31ms (View: 7, DB: 2) | 200 OK [http://localhost/users/1/keywords]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-20 17:57:13) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 127.0.0.1 at 2009-07-20 17:58:22) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mKeyword Load (0.1ms)[0m   [0mSELECT `keywords`.* FROM `keywords` INNER JOIN `kaos` ON `keywords`.id = `kaos`.keyword_id WHERE ((`kaos`.user_id = 1)) [0m
+Rendering template within layouts/keywords
+Rendering keywords/index
+Rendered shared/_header (1.0ms)
+  [4;36;1mSearchedKeyword Load (0.1ms)[0m   [0;1mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.user_id = 1) [0m
+  [4;35;1mSearchedKeyword Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `searched_keywords`[0m
+Completed in 30ms (View: 7, DB: 2) | 200 OK [http://localhost/users/1/keywords]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-20 17:58:22) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#new (for 127.0.0.1 at 2009-07-20 17:58:25) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+Rendering template within layouts/searched_keywords
+Rendering searched_keywords/new
+Rendered shared/_footer (0.7ms)
+Completed in 19ms (View: 3, DB: 1) | 200 OK [http://localhost/users/1/searched_keywords/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#auto_complete_for_resource_keywords (for 127.0.0.1 at 2009-07-20 17:58:25) [GET]
+  Parameters: {"resource"=>{"keywords"=>""}}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (LOWER(keywords) LIKE '%%') ORDER BY keywords ASC LIMIT 50[0m
+  [4;35;1mResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Completed in 21ms (View: 2, DB: 2) | 200 OK [http://localhost/searched_keywords/auto_complete_for_resource_keywords?resource%5Bkeywords%5D=]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#auto_complete_for_resource_keywords (for 127.0.0.1 at 2009-07-20 17:58:26) [GET]
+  Parameters: {"resource"=>{"keywords"=>"aa"}}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (LOWER(keywords) LIKE '%aa%') ORDER BY keywords ASC LIMIT 50[0m
+  [4;35;1mResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Completed in 29ms (View: 3, DB: 2) | 200 OK [http://localhost/searched_keywords/auto_complete_for_resource_keywords?resource%5Bkeywords%5D=aa]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#create (for 127.0.0.1 at 2009-07-20 17:58:26) [POST]
+  Parameters: {"user_id"=>"1", "keywords"=>"aa"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mSearchedKeyword Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `searched_keywords`[0m
+  [4;35;1mSearchedKeyword Load (0.1ms)[0m   [0mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.`name` = 'aa') AND (`searched_keywords`.user_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.`name` = 'aa') AND (`searched_keywords`.user_id = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSearchedKeyword Update (0.2ms)[0m   [0;1mUPDATE `searched_keywords` SET `updated_at` = '2009-07-20 09:58:26', `searched_times` = 2 WHERE `id` = 1[0m
+  [4;35;1mSQL (64.8ms)[0m   [0mCOMMIT[0m
+Completed in 139ms (View: 1, DB: 67) | 200 OK [http://localhost/users/1/searched_keywords]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#index (for 127.0.0.1 at 2009-07-20 17:58:26) [GET]
+  Parameters: {"keywords"=>"aa"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/searched_keywords
+Rendering searched_keywords/index
+  [4;35;1mResource Load Including Associations (0.1ms)[0m   [0mSELECT `resources`.`id` AS t0_r0, `resources`.`type` AS t0_r1, `resources`.`shoulu` AS t0_r2, `resources`.`user_id` AS t0_r3, `resources`.`keywords` AS t0_r4, `resources`.`title` AS t0_r5, `resources`.`order` AS t0_r6, `resources`.`link_url` AS t0_r7, `resources`.`description` AS t0_r8, `resources`.`created_at` AS t0_r9, `resources`.`updated_at` AS t0_r10, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`email` AS t1_r2, `users`.`crypted_password` AS t1_r3, `users`.`salt` AS t1_r4, `users`.`remember_token` AS t1_r5, `users`.`remember_token_expires_at` AS t1_r6, `users`.`activation_code` AS t1_r7, `users`.`activated_at` AS t1_r8, `users`.`nick_name` AS t1_r9, `users`.`follower_id` AS t1_r10, `users`.`following_id` AS t1_r11, `users`.`value` AS t1_r12, `users`.`money` AS t1_r13, `users`.`terms` AS t1_r14, `users`.`username` AS t1_r15, `users`.`created_at` AS t1_r16, `users`.`updated_at` AS t1_r17 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`keywords` = 'aa') ORDER BY users.value DESC[0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 1) [0m
+Completed in 33ms (View: 12, DB: 2) | 200 OK [http://localhost/search/aa]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#index (for 127.0.0.1 at 2009-07-20 17:58:26) [GET]
+  Parameters: {"keywords"=>"aa"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/searched_keywords
+Rendering searched_keywords/index
+  [4;36;1mResource Load Including Associations (0.1ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`type` AS t0_r1, `resources`.`shoulu` AS t0_r2, `resources`.`user_id` AS t0_r3, `resources`.`keywords` AS t0_r4, `resources`.`title` AS t0_r5, `resources`.`order` AS t0_r6, `resources`.`link_url` AS t0_r7, `resources`.`description` AS t0_r8, `resources`.`created_at` AS t0_r9, `resources`.`updated_at` AS t0_r10, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`email` AS t1_r2, `users`.`crypted_password` AS t1_r3, `users`.`salt` AS t1_r4, `users`.`remember_token` AS t1_r5, `users`.`remember_token_expires_at` AS t1_r6, `users`.`activation_code` AS t1_r7, `users`.`activated_at` AS t1_r8, `users`.`nick_name` AS t1_r9, `users`.`follower_id` AS t1_r10, `users`.`following_id` AS t1_r11, `users`.`value` AS t1_r12, `users`.`money` AS t1_r13, `users`.`terms` AS t1_r14, `users`.`username` AS t1_r15, `users`.`created_at` AS t1_r16, `users`.`updated_at` AS t1_r17 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`keywords` = 'aa') ORDER BY users.value DESC[0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 1) [0m
+Completed in 32ms (View: 12, DB: 2) | 200 OK [http://localhost/search/aa]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#new (for 127.0.0.1 at 2009-07-20 17:58:28) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+Rendering template within layouts/searched_keywords
+Rendering searched_keywords/new
+Rendered shared/_footer (49.1ms)
+Completed in 66ms (View: 52, DB: 1) | 200 OK [http://localhost/users/1/searched_keywords/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#auto_complete_for_resource_keywords (for 127.0.0.1 at 2009-07-20 17:58:28) [GET]
+  Parameters: {"resource"=>{"keywords"=>""}}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (LOWER(keywords) LIKE '%%') ORDER BY keywords ASC LIMIT 50[0m
+  [4;35;1mResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Completed in 24ms (View: 2, DB: 2) | 200 OK [http://localhost/searched_keywords/auto_complete_for_resource_keywords?resource%5Bkeywords%5D=]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#auto_complete_for_resource_keywords (for 127.0.0.1 at 2009-07-20 17:58:28) [GET]
+  Parameters: {"resource"=>{"keywords"=>"aa"}}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (LOWER(keywords) LIKE '%aa%') ORDER BY keywords ASC LIMIT 50[0m
+  [4;35;1mResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Completed in 28ms (View: 3, DB: 2) | 200 OK [http://localhost/searched_keywords/auto_complete_for_resource_keywords?resource%5Bkeywords%5D=aa]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#create (for 127.0.0.1 at 2009-07-20 17:58:29) [POST]
+  Parameters: {"user_id"=>"1", "keywords"=>"aa"}
+  [4;36;1mUser Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mSearchedKeyword Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `searched_keywords`[0m
+  [4;35;1mSearchedKeyword Load (0.2ms)[0m   [0mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.`name` = 'aa') AND (`searched_keywords`.user_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.`name` = 'aa') AND (`searched_keywords`.user_id = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSearchedKeyword Update (0.2ms)[0m   [0;1mUPDATE `searched_keywords` SET `updated_at` = '2009-07-20 09:58:29', `searched_times` = 3 WHERE `id` = 1[0m
+  [4;35;1mSQL (85.3ms)[0m   [0mCOMMIT[0m
+Completed in 117ms (View: 1, DB: 89) | 200 OK [http://localhost/users/1/searched_keywords]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#index (for 127.0.0.1 at 2009-07-20 17:58:29) [GET]
+  Parameters: {"keywords"=>"aa"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/searched_keywords
+Rendering searched_keywords/index
+  [4;35;1mResource Load Including Associations (0.1ms)[0m   [0mSELECT `resources`.`id` AS t0_r0, `resources`.`type` AS t0_r1, `resources`.`shoulu` AS t0_r2, `resources`.`user_id` AS t0_r3, `resources`.`keywords` AS t0_r4, `resources`.`title` AS t0_r5, `resources`.`order` AS t0_r6, `resources`.`link_url` AS t0_r7, `resources`.`description` AS t0_r8, `resources`.`created_at` AS t0_r9, `resources`.`updated_at` AS t0_r10, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`email` AS t1_r2, `users`.`crypted_password` AS t1_r3, `users`.`salt` AS t1_r4, `users`.`remember_token` AS t1_r5, `users`.`remember_token_expires_at` AS t1_r6, `users`.`activation_code` AS t1_r7, `users`.`activated_at` AS t1_r8, `users`.`nick_name` AS t1_r9, `users`.`follower_id` AS t1_r10, `users`.`following_id` AS t1_r11, `users`.`value` AS t1_r12, `users`.`money` AS t1_r13, `users`.`terms` AS t1_r14, `users`.`username` AS t1_r15, `users`.`created_at` AS t1_r16, `users`.`updated_at` AS t1_r17 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`keywords` = 'aa') ORDER BY users.value DESC[0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 1) [0m
+Completed in 86ms (View: 13, DB: 2) | 200 OK [http://localhost/search/aa]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-07-20 17:58:31) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+Redirected to http://localhost:3000/users/1/resources
+Completed in 16ms (DB: 1) | 302 Found [http://localhost/users/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-20 17:58:31) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+Rendering template within layouts/resources
+Rendering resources/index
+Rendered shared/_header (1.0ms)
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) [0m
+  [4;36;1mResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Rendered resources/_resource (0.8ms)
+Rendered shared/_footer (0.6ms)
+Completed in 33ms (View: 14, DB: 2) | 200 OK [http://localhost/users/1/resources]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 127.0.0.1 at 2009-07-20 17:58:32) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mKeyword Load (0.1ms)[0m   [0;1mSELECT `keywords`.* FROM `keywords` INNER JOIN `kaos` ON `keywords`.id = `kaos`.keyword_id WHERE ((`kaos`.user_id = 1)) [0m
+Rendering template within layouts/keywords
+Rendering keywords/index
+Rendered shared/_header (1.0ms)
+  [4;35;1mSearchedKeyword Load (0.2ms)[0m   [0mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.user_id = 1) [0m
+  [4;36;1mSearchedKeyword Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `searched_keywords`[0m
+Completed in 30ms (View: 7, DB: 2) | 200 OK [http://localhost/users/1/keywords]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-20 17:58:32) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 127.0.0.1 at 2009-07-20 17:58:51) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mKeyword Load (0.1ms)[0m   [0;1mSELECT `keywords`.* FROM `keywords` INNER JOIN `kaos` ON `keywords`.id = `kaos`.keyword_id WHERE ((`kaos`.user_id = 1)) [0m
+Rendering template within layouts/keywords
+Rendering keywords/index
+Rendered shared/_header (1.0ms)
+  [4;35;1mSearchedKeyword Load (0.1ms)[0m   [0mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.user_id = 1) [0m
+  [4;36;1mSearchedKeyword Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `searched_keywords`[0m
+Completed in 34ms (View: 7, DB: 2) | 200 OK [http://localhost/users/1/keywords]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-20 17:58:51) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 127.0.0.1 at 2009-07-20 17:59:55) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mKeyword Load (0.1ms)[0m   [0;1mSELECT `keywords`.* FROM `keywords` INNER JOIN `kaos` ON `keywords`.id = `kaos`.keyword_id WHERE ((`kaos`.user_id = 1)) [0m
+Rendering template within layouts/keywords
+Rendering keywords/index
+Rendered shared/_header (1.1ms)
+  [4;35;1mSearchedKeyword Load (0.1ms)[0m   [0mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.user_id = 1) [0m
+  [4;36;1mSearchedKeyword Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `searched_keywords`[0m
+Completed in 33ms (View: 10, DB: 2) | 200 OK [http://localhost/users/1/keywords]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-20 17:59:55) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 127.0.0.1 at 2009-07-20 18:00:17) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mKeyword Load (0.1ms)[0m   [0;1mSELECT `keywords`.* FROM `keywords` INNER JOIN `kaos` ON `keywords`.id = `kaos`.keyword_id WHERE ((`kaos`.user_id = 1)) [0m
+Rendering template within layouts/keywords
+Rendering keywords/index
+Rendered shared/_header (1.1ms)
+  [4;35;1mSearchedKeyword Load (0.1ms)[0m   [0mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.user_id = 1) [0m
+  [4;36;1mSearchedKeyword Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `searched_keywords`[0m
+Completed in 82ms (View: 8, DB: 2) | 200 OK [http://localhost/users/1/keywords]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-20 18:00:17) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 127.0.0.1 at 2009-07-20 18:00:18) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mKeyword Load (0.1ms)[0m   [0;1mSELECT `keywords`.* FROM `keywords` INNER JOIN `kaos` ON `keywords`.id = `kaos`.keyword_id WHERE ((`kaos`.user_id = 1)) [0m
+Rendering template within layouts/keywords
+Rendering keywords/index
+Rendered shared/_header (1.0ms)
+  [4;35;1mSearchedKeyword Load (0.1ms)[0m   [0mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.user_id = 1) [0m
+  [4;36;1mSearchedKeyword Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `searched_keywords`[0m
+Completed in 31ms (View: 7, DB: 2) | 200 OK [http://localhost/users/1/keywords]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-20 18:00:18) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 127.0.0.1 at 2009-07-20 18:00:19) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mKeyword Load (0.1ms)[0m   [0;1mSELECT `keywords`.* FROM `keywords` INNER JOIN `kaos` ON `keywords`.id = `kaos`.keyword_id WHERE ((`kaos`.user_id = 1)) [0m
+Rendering template within layouts/keywords
+Rendering keywords/index
+Rendered shared/_header (1.0ms)
+  [4;35;1mSearchedKeyword Load (0.1ms)[0m   [0mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.user_id = 1) [0m
+  [4;36;1mSearchedKeyword Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `searched_keywords`[0m
+Completed in 30ms (View: 7, DB: 2) | 200 OK [http://localhost/users/1/keywords]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-20 18:00:19) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 127.0.0.1 at 2009-07-20 18:00:20) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mKeyword Load (0.1ms)[0m   [0;1mSELECT `keywords`.* FROM `keywords` INNER JOIN `kaos` ON `keywords`.id = `kaos`.keyword_id WHERE ((`kaos`.user_id = 1)) [0m
+Rendering template within layouts/keywords
+Rendering keywords/index
+Rendered shared/_header (1.0ms)
+  [4;35;1mSearchedKeyword Load (0.1ms)[0m   [0mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.user_id = 1) [0m
+  [4;36;1mSearchedKeyword Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `searched_keywords`[0m
+Completed in 33ms (View: 7, DB: 2) | 200 OK [http://localhost/users/1/keywords]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-20 18:00:20) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-07-20 18:00:21) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+Redirected to http://localhost:3000/users/1/resources
+Completed in 15ms (DB: 1) | 302 Found [http://localhost/users/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-20 18:00:21) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+Rendering template within layouts/resources
+Rendering resources/index
+Rendered shared/_header (1.0ms)
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) [0m
+  [4;36;1mResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Rendered resources/_resource (0.9ms)
+Rendered shared/_footer (0.6ms)
+Completed in 26ms (View: 8, DB: 2) | 200 OK [http://localhost/users/1/resources]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#new (for 127.0.0.1 at 2009-07-20 18:00:22) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+Rendering template within layouts/searched_keywords
+Rendering searched_keywords/new
+Rendered shared/_footer (0.7ms)
+Completed in 70ms (View: 3, DB: 1) | 200 OK [http://localhost/users/1/searched_keywords/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-07-20 18:00:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+Redirected to http://localhost:3000/users/1/resources
+Completed in 16ms (DB: 1) | 302 Found [http://localhost/users/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-20 18:00:23) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+Rendering template within layouts/resources
+Rendering resources/index
+Rendered shared/_header (1.0ms)
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) [0m
+  [4;36;1mResource Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Rendered resources/_resource (0.8ms)
+Rendered shared/_footer (0.6ms)
+Completed in 26ms (View: 7, DB: 2) | 200 OK [http://localhost/users/1/resources]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-20 18:00:27) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+Rendering template within layouts/resources
+Rendering resources/index
+Rendered shared/_header (1.1ms)
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) [0m
+  [4;35;1mResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Rendered resources/_resource (0.8ms)
+Rendered shared/_footer (0.6ms)
+Completed in 26ms (View: 7, DB: 2) | 200 OK [http://localhost/users/1/resources]
