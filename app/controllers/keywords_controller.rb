@@ -4,7 +4,13 @@ class KeywordsController < ApplicationController
   # GET /keywords.xml
   def index
     @keywords = @user.keywords
-    @controlled_keywords
+    @my_keywords=@keywords.map do |k|
+      if k.top_owner.id==current_user.id
+        k.name
+      else
+        nil
+      end
+    end
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @keywords }
