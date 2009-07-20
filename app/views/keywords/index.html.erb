@@ -1,5 +1,25 @@
-<h1>Listing keywords</h1>
+<body>
+  <%= render :partial => "shared/header",:object => @user %>
+  <div id="main">
+    <div id="content">
+      <h2>我目前拥有的所有关键字：</h2>
+      <p>
+        <% for keyword in @user.keywords  %>
+          <span>
+            <%= keyword.name %>
+          </span>
+        <% end %>
+      </p>
+      <h2>
+        我可以任意编辑其页面的关键字：
+      </h2>
+      <p>
+        
+      </p>
+    </div>
+  </div>
 
+</body>
 
 
 

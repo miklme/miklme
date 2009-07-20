@@ -6,21 +6,21 @@
   <div id="menu">
     <ul>
       <li>
-        <%= link_to ".Me",user_path(@user) %>
+        <%= link_to ".Me",user_path(header) %>
       </li>
-      <% if current_user.id=@user.id %>
+      <% if current_user.id=header.id %>
         <li><%= link_to "好友动态" %>
         </li>
         <li>
           <%= link_to "关系网络" %>
         </li>
-        <li><%= link_to "我的关键字",user_keywords_path(@user) %>
+        <li><%= link_to "我的关键字",user_keywords_path(header) %>
         </li>
       <% else %>
         <li>
-          <%= link_to "#{@user.nick_name}的关系网络" %>
+          <%= link_to "#{header.nick_name}的关系网络" %>
         </li>
-        <li><%= link_to "#{@user.nick_name}的关键字",user_keywords_path(@user) %>
+        <li><%= link_to "#{header.nick_name}的关键字",user_keywords_path(header) %>
         </li>
       <% end %>
 

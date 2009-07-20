@@ -1,39 +1,5 @@
 <body>
-  <div id="header">
-    <%= render 'shared/logo',:object => current_user %>
-    <div id="menu">
-      <ul>
-        <li>
-          <%= link_to ".Me",user_path(@user) %>
-        </li>
-        <% if current_user.id=@user.id %>
-          <li><%= link_to "好友动态" %>
-          </li>
-          <li>
-            <%= link_to "关系网络" %>
-          </li>
-          <li><%= link_to "我的关键字",user_keywords_path(@user) %>
-          </li>
-        <% else %>
-          <li>
-            <%= link_to "#{@user.nick_name}的关系网络" %>
-          </li>
-          <li><%= link_to "#{@user.nick_name}的关键字",user_keywords_path(@user) %>
-          </li>
-        <% end %>
-
-        <li>
-          <%= link_to "设置" %>
-        </li>
-        <li>
-          <%= link_to '注册新用户',new_user_path %>
-        </li>
-        <li>
-          <%= link_to '登出', session_path,:method => :delete %>
-        </li>
-      </ul>
-    </div>
-  </div>
+  <%= render :partial => "shared/header",:object => @user %>
   <!--end header -->
   <!-- main -->
   <div id="main">
@@ -74,18 +40,6 @@
         <p>
           <%for keyword in @user.searched_keywords %>
             <span><%= keyword.name %></span>
-          <% end %>
-        </p>
-      </div>
-      <div id="keywords">
-        <h3>
-          你拥有的关键字：
-        </h3>
-        <p>
-          <% for keyword in @user.keywords  %>
-            <span>
-              <%= keyword.name %>
-            </span>
           <% end %>
         </p>
       </div>

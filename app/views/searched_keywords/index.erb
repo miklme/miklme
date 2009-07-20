@@ -1,4 +1,7 @@
-<%= render 'shared/logo',:object  => current_user %>
+  <div id="logo">
+    <h1><%= link_to "Michael",new_user_searched_keyword_path(current_user) %></h1>
+    <h1><%= link_to ".Me",user_path(current_user) %></h1>
+  </div>
 <h1>Michael提供以下结果</h1>
 
 <div>
