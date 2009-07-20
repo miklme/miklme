@@ -4,7 +4,7 @@ class KeywordsController < ApplicationController
   # GET /keywords.xml
   def index
     @keywords = @user.keywords
-
+    @controlled_keywords
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @keywords }

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090713122317) do
+ActiveRecord::Schema.define(:version => 20090720085625) do
 
   create_table "comments", :force => true do |t|
     t.text     "content"
@@ -29,9 +29,15 @@ ActiveRecord::Schema.define(:version => 20090713122317) do
     t.datetime "updated_at"
   end
 
+  create_table "kaos", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "keyword_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "keywords", :force => true do |t|
     t.string   "name"
-    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -80,9 +86,8 @@ ActiveRecord::Schema.define(:version => 20090713122317) do
     t.string   "activation_code",           :limit => 40
     t.datetime "activated_at"
     t.string   "nick_name",                 :limit => 20
-    t.string   "state"
-    t.string   "city"
     t.integer  "follower_id"
+    t.integer  "following_id"
     t.decimal  "value",                                    :precision => 8,  :scale => 1, :default => 0.0
     t.integer  "money",                     :limit => 10,  :precision => 10, :scale => 0, :default => 10
     t.integer  "terms"

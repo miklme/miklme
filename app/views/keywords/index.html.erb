@@ -14,7 +14,11 @@
         我可以任意编辑其页面的关键字：
       </h2>
       <p>
-        
+        <% for keyword in @user.keywords  %>
+          <span>
+            <%= keyword.name %>
+          </span>
+        <% end %>
       </p>
     </div>
   </div>
