@@ -1,0 +1,9 @@
+<p>可以为该链接自定义一个标题：</p>
+<%  form_remote_tag(:url => {:action => :check_url}) do %>
+  <p><%= text_field 'resource','title'%></p>
+  <p>
+    以及一个关键字:(<strong>很重要，这将是所有检索的依据。获得进一步的使用技巧，请查看这里</strong>)
+  </p>
+   <p><%= text_field_with_auto_complete :resource, :keywords%></p>
+  <p><%= submit_tag "下一步" %></p>
+<% end %>

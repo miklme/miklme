@@ -1,5 +1,6 @@
 class ResourcesController < ApplicationController
   before_filter :load_user,:except => [:check_url]
+  auto_complete_for :resource,:keywords
   def index
     @resources=@user.resources
   end
@@ -73,17 +74,20 @@ class ResourcesController < ApplicationController
       format.xml  { head :ok }
     end
   end
-
  
-  private
   def check_url
-    if params[:resource][:link_url]=="aaa"
+    if Resource.find_by_link_url(params[:resource][:link_url])
       render :update do |page|
-        page.hide "new_resource"
+        page.replace_html 'new_resource',:partial => "enter_keywords"
+      end
+    else
+      render :update do |page|
+        page.replace_html 'new_resource',:partial => "enter_keywords_and_title"
       end
     end
   end
 
+  private
   def load_user
     @user=User.find(params[:user_id])
   end
