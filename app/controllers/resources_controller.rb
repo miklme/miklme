@@ -74,8 +74,17 @@ class ResourcesController < ApplicationController
     end
   end
 
+
   private
+  def link_url
+    if params[:resource][:link_url]=="aaa"
+      render :update do |page|
+        page.hide "new_resource"
+      end
+    end
+  end
   def load_user
     @user=User.find(params[:user_id])
   end
+
 end

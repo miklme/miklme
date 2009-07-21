@@ -1,13 +1,33 @@
-<h1>新的分享：</h1>
-<%form_for([@user,@resource]) do |f|%>
+<h2>在这里你可以分享任何生命中出现的事物，这些事物将被纳入引擎。</h2>
+<p>
+  分享的事物无非以下几种形式，这些东西毫无新意：</p>
+<ul>
+  <li>
+    上网闲逛时来自于其它网站的链接；
+  </li>
+  <li>
+    篇幅较长的自以为具有价值的论文（不少于500字）
+  </li>
+  <li>
+    意识流，头脑中不时冒出来的诡异想法。（不多于139字,而不是140字）
+  </li>
+</ul>
+<p>
+  <strong>重要的是，如今这些俗气的东西可以被别人搜索了，并且搜索结果由你掌控。何不一试？</strong>
+</p>
+<h2>请以分享第一个链接开始：</h2>
+<%remote_form_for :url => {:action => :link_url} do |f|%>
   <p> <%= f.error_messages %></p>
   <p><%= f.label :link_url,"链接地址:" %>
   <%= f.text_field :link_url%></p>
+ 
+  <!--
   <p><%= f.label :keywords,'关键字' %>
-    <%= f.text_field :keywords %><span>很重要，这将是所有检索的依据。获得进一步的使用技巧，请查看这里</span></p>
+  <%= f.text_field :keywords %><span>很重要，这将是所有检索的依据。获得进一步的使用技巧，请查看这里</span></p>
   <p><%= f.label :title,'链接标题' %>
-    <%= f.text_field :title %><span>若不填写，则关键字为标题。（插入一个图片）</span></p>
+  <%= f.text_field :title %><span>若不填写，则关键字为标题。（插入一个图片）</span></p>
   <p>
-    <%= f.submit 'Update' %>
+  <%= f.submit 'Update' %>
   </p>
+  -->
 <% end %>
