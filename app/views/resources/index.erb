@@ -23,15 +23,14 @@
       <%if flash[:error]%>
         <p><%=flash[:error]%></p>
       <%end%>
+      <h2>
+        <%= link_to "新的分享",new_user_resource_path(@user) %>
+      </h2>
       <h2>你拥有的全部：<em><%= link_to "我的全部就是这些东西？" %></em></h2>
       <ul>
         <%= render @resources %>
       </ul>
-      <span>
-        <%= link_to "分享新链接",new_user_resource_path(@user) %>
-      </span>
     </div>
-
   </div>
   <!-- end main -->
   <!-- footer -->

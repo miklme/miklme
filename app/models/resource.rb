@@ -12,7 +12,7 @@ class Resource < ActiveRecord::Base
   
   private
   def adjust_link_url
-    if not self.link_url=~/http:/
+    if  !self.link_url=~/http:/ or !self.link_url=~/https:/ or  !self.link_url=~/ftp:/ or  !self.link_url=~/sftp:/
       self.link_url = ("http://"+self.link_url).to_s
     end
   end

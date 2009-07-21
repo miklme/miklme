@@ -44,21 +44,18 @@
               <%=  link_to resource.title || resource.keywords,user_resource_path(resource.owner),:popup => true %>
             <% end %>
           </h3>
+          <em>提供者:
+            <%= resource.owner.id %>
+            价值点数：<%= resource.owner.value %>
+          </em>
           <div>
             <% for comment in resource.comments.good_comments do%>
                 <%= auto_link(highlight(truncate(comment.content,:length => 140),resource.keywords)) %>
               <% end %>
             </div>
-            <span>作者:
-              <%= resource.owner.id %>
-              价值点数：<%= resource.owner.value %>
-            </span>
-            <div id="comments">
-              <%= render resource.comments %>
-              <span><%= link_to "发表评论...", new_user_resource_comment_path(resource.owner,resource) %></span>
-            </div>
-          </li
-        <% end %>
+            <span><%= link_to "发表评论...", new_user_resource_comment_path(resource.owner,resource) %></span>
+          <% end %>
+        </li>
       </ol>
     </div>
 
