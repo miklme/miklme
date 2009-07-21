@@ -12,6 +12,7 @@ class User < ActiveRecord::Base
   has_many :keywords,:through => :kaos
   has_many :searched_keywords,:uniq => true
   has_many :comments
+  has_many :commented_resources,:through => :comments,:source => :resource
   has_many :resources
   has_many :important_days
   has_many :followings,
