@@ -3501,3 +3501,15 @@ Processing ResourcesController#check_url (for 127.0.0.1 at 2009-07-21 17:12:24) 
   [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.`link_url` = '') LIMIT 1[0m
 Rendered resources/_enter_keywords_and_title (2.0ms)
 Completed in 26ms (View: 6, DB: 2) | 200 OK [http://localhost/resources/check_url]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#new (for 127.0.0.1 at 2009-07-21 17:14:12) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+Rendering template within layouts/searched_keywords
+Rendering searched_keywords/new
+Rendered shared/_footer (0.6ms)
+Completed in 18ms (View: 3, DB: 1) | 200 OK [http://localhost/users/1/searched_keywords/new]
