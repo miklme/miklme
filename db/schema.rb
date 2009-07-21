@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090720085625) do
+ActiveRecord::Schema.define(:version => 20090721023534) do
 
   create_table "comments", :force => true do |t|
     t.text     "content"
@@ -62,11 +62,17 @@ ActiveRecord::Schema.define(:version => 20090720085625) do
     t.datetime "updated_at"
   end
 
+  create_table "searched_keyword_relationships", :force => true do |t|
+    t.integer  "searched_keyword_id",         :null => false
+    t.integer  "related_searched_keyword_id", :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "searched_keywords", :force => true do |t|
-    t.integer  "searched_times",              :default => 1
+    t.integer  "searched_times", :default => 1
     t.string   "name"
     t.integer  "user_id"
-    t.integer  "related_searched_keyword_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
