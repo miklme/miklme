@@ -63,9 +63,10 @@ ActiveRecord::Schema.define(:version => 20090720085625) do
   end
 
   create_table "searched_keywords", :force => true do |t|
-    t.integer  "searched_times", :default => 1
+    t.integer  "searched_times",              :default => 1
     t.string   "name"
     t.integer  "user_id"
+    t.integer  "related_searched_keyword_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

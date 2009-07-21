@@ -2,6 +2,35 @@
   <h1><%= link_to "Michael",new_user_searched_keyword_path(current_user) %></h1>
   <h1><%= link_to ".Me",user_path(current_user) %></h1>
 </div>
+<span>相关结果:</span>
+<div>
+  <table>
+    <tbody>
+      <tr>
+        <% if not @related_searched_keywords.blank? %>
+          <% for related_searched_keyword in @related_searched_keywords %>
+            <td>
+              <%= related_searched_keyword.name %>
+            </td>
+          <% end %>
+        <% end %>
+      </tr>
+      <tr>
+        <td>
+        </td>
+        <td>
+        </td>
+        <td>
+        </td>
+        <td>
+        </td>
+        <td>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 <h1>Michael提供以下结果</h1>
 
 <div>
@@ -33,34 +62,3 @@
       </ol>
     </div>
 
-    <span>Michael推荐的相关结果:</span>
-    <div class="e">
-      <table class="ts med">
-        <tbody>
-          <tr>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-          </tr>
-          <tr>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
