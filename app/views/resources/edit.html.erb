@@ -2,8 +2,6 @@
 
 <%form_for([@user,@resource]) do |f|%>
   <p> <%= f.error_messages %></p>
-  <p> <%= f.label :description,'对于链接的描述。该描述会显示在这里：（插入一个图片）' %>
-  <%= f.text_area :description,:cols => 40,:rows => 4%></p>
   <p><%= f.label :keywords,'关键字' %>
     <%= f.text_field :keywords %><span>很重要，这将是所有检索的依据。获得进一步的使用技巧，请查看这里</span></p>
   <p><%= f.label :title,'链接标题' %>

@@ -10,9 +10,7 @@ class CreateResources < ActiveRecord::Migration
       t.integer :order
       #attributes for outer resources
       t.string :link_url
-      t.text :description
 
-      #attributes for inner resources
 
       t.timestamps
     end

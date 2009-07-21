@@ -1,7 +1,7 @@
-  <div id="logo">
-    <h1><%= link_to "Michael",new_user_searched_keyword_path(current_user) %></h1>
-    <h1><%= link_to ".Me",user_path(current_user) %></h1>
-  </div>
+<div id="logo">
+  <h1><%= link_to "Michael",new_user_searched_keyword_path(current_user) %></h1>
+  <h1><%= link_to ".Me",user_path(current_user) %></h1>
+</div>
 <h1>Michael提供以下结果</h1>
 
 <div>
@@ -12,52 +12,55 @@
             <% if  resource.link_url?  %>
               <%= link_to resource.title || resource.keywords, resource.link_url,:popup => true%>
             <% else %>
-              <%=  link_to resource.title || resource.keywords,user_resource_path(resource.owner) %>
+              <%=  link_to resource.title || resource.keywords,user_resource_path(resource.owner),:popup => true %>
             <% end %>
           </h3>
-          <div><%= auto_link(highlight(truncate(resource.description,:length => 140),resource.keywords)) %>
-          </div>
-          <span>作者:
-            <%= resource.owner.id %>
-            价值点数：<%= resource.owner.value %>
-          </span>
-          <div id="comments">
-            <%= render resource.comments %>
-            <span><%= link_to "发表评论...", new_user_resource_comment_path(resource.owner,resource) %></span>
-          </div>
-        </li
-      <% end %>
-    </ol>
-  </div>
+          <div>
+            <% for comment in resource.comments.good_comments do%>
+                <%= auto_link(highlight(truncate(comment.content,:length => 140),resource.keywords)) %>
+              <% end %>
+            </div>
+            <span>作者:
+              <%= resource.owner.id %>
+              价值点数：<%= resource.owner.value %>
+            </span>
+            <div id="comments">
+              <%= render resource.comments %>
+              <span><%= link_to "发表评论...", new_user_resource_comment_path(resource.owner,resource) %></span>
+            </div>
+          </li
+        <% end %>
+      </ol>
+    </div>
 
-  <span>Michael推荐的相关结果:</span>
-  <div class="e">
-    <table class="ts med">
-      <tbody>
-        <tr>
-          <td>
-          </td>
-          <td>
-          </td>
-          <td>
-          </td>
-          <td>
-          </td>
-          <td>
-          </td>
-        </tr>
-        <tr>
-          <td>
-          </td>
-          <td>
-          </td>
-          <td>
-          </td>
-          <td>
-          </td>
-          <td>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+    <span>Michael推荐的相关结果:</span>
+    <div class="e">
+      <table class="ts med">
+        <tbody>
+          <tr>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+          </tr>
+          <tr>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
