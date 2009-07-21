@@ -32,30 +32,9 @@
 </div>
 
 <h1>Michael提供以下结果</h1>
-
 <div>
   <ol>
-    <% for resource in @resources do %>
-        <li>
-          <h3>
-            <% if  resource.link_url?  %>
-              <%= link_to resource.title || resource.keywords, resource.link_url,:popup => true%>
-            <% else %>
-              <%=  link_to resource.title || resource.keywords,user_resource_path(resource.owner),:popup => true %>
-            <% end %>
-          </h3>
-          <em>提供者:
-            <%= resource.owner.id %>
-            价值点数：<%= resource.owner.value %>
-          </em>
-          <div>
-            <% for comment in resource.comments.good_comments do%>
-                <%= auto_link(highlight(truncate(comment.content,:length => 140),resource.keywords)) %>
-              <% end %>
-            </div>
-            <span><%= link_to "发表评论...", new_user_resource_comment_path(resource.owner,resource) %></span>
-          <% end %>
-        </li>
-      </ol>
-    </div>
+    <%= render @resources  %>
+  </ol>
+</div>
 

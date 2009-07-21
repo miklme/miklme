@@ -17,7 +17,6 @@ class SearchedKeywordsController < ApplicationController
       s.save
     end
   end
-
   def index
     @resources=Resource.scoped_by_keywords(params[:keywords]).by_owner_value
     @related_keywords=SearchedKeyword.find_by_name(params[:keywords]).related_searched_keywords
