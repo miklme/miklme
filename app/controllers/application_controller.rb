@@ -12,4 +12,13 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def check_type(content)
+    if content=~/xxxxxxxx/ #url validation
+      "url_resource"
+    elsif !content=~/xxxxxxxx/ and content.count<=139
+      "twitter_resource"
+    elsif  !content=~/xxxxxxxx/ and content.count>=140
+      "blog_resource"
+    end
+  end
 end
