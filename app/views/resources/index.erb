@@ -1,31 +1,49 @@
-  <div id="main">
-    <div id="sidebar_left">
-      <div id="my_friends">
-        <h3>
-          我得到的信息来自于这些人：
-        </h3>
-      </div>
-      <div>
-        <h3>
-          这些人从我这里得到信息：
-        </h3>
-      </div>
+<div id="main">
+  <div id="sidebar_left">
+    <div id="my_friends">
+      <h3>
+        我得到的信息来自于这些人：
+      </h3>
     </div>
-
-    <div id="content">
-      <%if flash[:notice]%>
-        <p><%=flash[:notice]%></p>
-      <%end%>
-      <%if flash[:error]%>
-        <p><%=flash[:error]%></p>
-      <%end%>
-      <h2>
-        <%= link_to "新建引擎结果",new_user_resource_path(@user) %>
-      </h2>
-      <h2>你拥有的全部：<em><%= link_to "我的全部就是这些东西？" %></em></h2>
-      <ul>
-        <%= render @resources %>
-      </ul>
+    <div>
+      <h3>
+        这些人从我这里得到信息：
+      </h3>
     </div>
   </div>
+
+  <div id="content">
+    <%if flash[:notice]%>
+      <p><%=flash[:notice]%></p>
+    <%end%>
+    <%if flash[:error]%>
+      <p><%=flash[:error]%></p>
+    <%end%>
+    <div id="new_resource">
+      <h2>在这里你可以分享如下事物，这些事物将被纳入叫做Michael的引擎：</h2>
+      <ul>
+        <li>
+          <strong>单纯</strong>的链接（上网无聊时）
+        </li>
+        <li>
+          <strong>不包含链接</strong>的任何想说的话。（不多于139字，不上网无聊时）
+        </li>
+        <li>
+          <strong>自以为具有价值</strong>的文章。不要担心输入框太小。（不无聊时）
+        </li>
+      </ul>
+      <p>
+        <strong>如今你的一切都将被检索，重要的是，搜索结果由你掌控。为何不立即尝试？</strong>
+      </p>
+      <% form_remote_tag(:url => {:action => :check_content}) do %>
+        <%= text_field "resource","type" %>
+        <%= submit_tag "下一步" %>
+      <% end %>
+    </div>
+    <h2>你拥有的全部：<em><%= link_to "我的全部就是这些东西？" %></em></h2>
+    <ul>
+      <%= render @resources %>
+    </ul>
+  </div>
+</div>
 

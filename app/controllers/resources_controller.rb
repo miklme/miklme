@@ -75,15 +75,16 @@ class ResourcesController < ApplicationController
     end
   end
  
-  def check_url
-    if Resource.find_by_link_url(params[:resource][:link_url])
+  def check_content
+    if Resource.find_by_link_url(params[:resource][:type])
       render :update do |page|
         page.replace_html 'new_resource',:partial => "enter_keywords"
       end
-    else
+    elsif Resource.find_by_link_url(params[:resource][:type]).blank?
       render :update do |page|
         page.replace_html 'new_resource',:partial => "enter_keywords_and_title"
       end
+    elsif f
     end
   end
 

@@ -8,6 +8,9 @@ class Resource < ActiveRecord::Base
     { :conditions => ['keywords = ?', keywords],:order => 'created_at DESC' }
   }
   named_scope :by_owner_value, :include => :owner,:order => 'users.value DESC'
+  named_scope :link_url_resource,:conditions => 'link_url is NOT NULL'
+  named_scope :twitter_resource,:conditions => "content.count<=140"
+  named_scope :blog_resource,:conditions => "content.count>=140"
   before_save :adjust_link_url
   
   private
