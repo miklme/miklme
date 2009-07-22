@@ -1,5 +1,5 @@
 class ResourcesController < ApplicationController
-  before_filter :load_user,:except => [:check_url]
+  before_filter :load_user,:only => [:create,:destroy,:edit,:index,:show,:update]
   auto_complete_for :resource,:keywords
   def index
     @resources=@user.resources
@@ -13,15 +13,6 @@ class ResourcesController < ApplicationController
     end
   end
 
-  # GET /resources/new
-  # GET /resources/new.xml
-  def new
-    @resource = @user.resources.build
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @resource }
-    end
-  end
   # GET /resources/1/edit
   def edit
     @resource = @user.resources.find(params[:id])
@@ -76,18 +67,33 @@ class ResourcesController < ApplicationController
   end
  
   def check_content
-    if Resource.find_by_link_url(params[:resource][:type])
+    @resource = current_user.resources.build
+    check_result=check_resource_type(params[:resource][:step_one])
+    if check_result=="link_url_resource" and Resource.find_by_link_url(params[:resource][:step_one]).blank?
+      @resource.link_url=params[:resource][:step_one]
+      session[:link_url]=params[:resource][:step_one]
+      @resource.save
       render :update do |page|
-        page.replace_html 'new_resource',:partial => "enter_keywords"
+        page.replace_html 'new_resource',:partial => "unknown_link_url"
       end
-    elsif Resource.find_by_link_url(params[:resource][:type]).blank?
+    elsif check_result=="link_url_resource" and Resource.find_by_link_url(params[:resource][:step_one])
+      @resource= Resource.find_by_link_url(params[:resource][:step_one])
       render :update do |page|
-        page.replace_html 'new_resource',:partial => "enter_keywords_and_title"
+        page.replace_html 'new_resource',:partial => "known_link_url"
       end
-    elsif f
+    elsif check_result=="twiiter_resource"
+      render :update do |page|
+      end
     end
   end
 
+  def save_title_and_keywords
+    @resource=Resource.find_by_link_url(session[:link_url])
+    @resource.update_attributes(params[:resource])
+    @resource.save
+    redirect_to user_path(current_user)
+    flash[:notice]="资源已成功创时建并被纳入引擎。"
+  end
   private
   def load_user
     @user=User.find(params[:user_id])

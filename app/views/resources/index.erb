@@ -20,7 +20,7 @@
       <p><%=flash[:error]%></p>
     <%end%>
     <div id="new_resource">
-      <h2>在这里你可以分享如下事物，这些事物将被纳入叫做Michael的引擎：</h2>
+      <h2>在这里你可以分享如下事物，这些事物将被纳入叫做Michael的引擎：()</h2>
       <ul>
         <li>
           <strong>单纯</strong>的链接（上网无聊时）
@@ -33,10 +33,11 @@
         </li>
       </ul>
       <p>
-        <strong>如今你的一切都将被检索，重要的是，搜索结果由你掌控。为何不立即尝试？</strong>
+        <strong>这些形式平平无奇......可是,一切这些都将被检索，重要的是，搜索结果由你掌控。为何不立即尝试？</strong>
       </p>
+      <p>可以以一个链接开始：</p>
       <% form_remote_tag(:url => {:action => :check_content}) do %>
-        <%= text_field "resource","type" %>
+        <%= text_field "resource","step_one" %>
         <%= submit_tag "下一步" %>
       <% end %>
     </div>

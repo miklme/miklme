@@ -1,8 +1,0 @@
-<p></p>
- <%  form_remote_tag(:url => {:action => :check_url}) do %>
-    <p><%= text_field 'resource','link_url'%></p>
-    <p><%= submit_tag "下一步" %></p>
-  <% end %>
-
-<p><%= f.label :keywords,'关键字' %>
-<%= f.text_field :keywords %><span>很重要，这将是所有检索的依据。获得进一步的使用技巧，请查看这里</span></p>
