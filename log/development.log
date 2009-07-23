@@ -1,247 +1,183 @@
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-23 12:05:21) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) ORDER BY created_at DESC[0m
+Rendering template within layouts/resources
+Rendering resources/index
+  [4;35;1mResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 8) AND (`comments`.resource_id = 8) ORDER BY created_at DESC LIMIT 3[0m
+Rendered resources/_resource (12.4ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 6) AND (`comments`.resource_id = 6) ORDER BY created_at DESC LIMIT 3[0m
+Rendered resources/_resource (2.2ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 1) AND (`comments`.resource_id = 1) ORDER BY created_at DESC LIMIT 3[0m
+Rendered resources/_resource (2.1ms)
+Rendered shared/_header (1.0ms)
+Rendered shared/_footer (0.6ms)
+Completed in 95ms (View: 21, DB: 3) | 200 OK [http://localhost/users/1/resources]
   [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
-  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
-Processing UsersController#show (for 127.0.0.1 at 2009-07-22 15:15:04) [GET]
-  Parameters: {"id"=>"1"}
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-23 12:05:21) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) ORDER BY created_at DESC[0m
+Rendering template within layouts/resources
+Rendering resources/index
+  [4;36;1mResource Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 8) AND (`comments`.resource_id = 8) ORDER BY created_at DESC LIMIT 3[0m
+Rendered resources/_resource (10.7ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 6) AND (`comments`.resource_id = 6) ORDER BY created_at DESC LIMIT 3[0m
+Rendered resources/_resource (2.1ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 1) AND (`comments`.resource_id = 1) ORDER BY created_at DESC LIMIT 3[0m
+Rendered resources/_resource (2.2ms)
+Rendered shared/_header (1.0ms)
+Rendered shared/_footer (0.7ms)
+Completed in 40ms (View: 19, DB: 2) | 200 OK [http://localhost/users/1/resources]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#check_content (for 127.0.0.1 at 2009-07-23 12:05:24) [POST]
+  Parameters: {"commit"=>"下一步", "resource"=>{"step_one"=>"aae"}}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+
+ActionView::MissingTemplate (Missing template resources/check_content.erb in view path app/views):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-23 12:05:42) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) ORDER BY created_at DESC[0m
+Rendering template within layouts/resources
+Rendering resources/index
+  [4;36;1mResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 8) AND (`comments`.resource_id = 8) ORDER BY created_at DESC LIMIT 3[0m
+Rendered resources/_resource (11.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 6) AND (`comments`.resource_id = 6) ORDER BY created_at DESC LIMIT 3[0m
+Rendered resources/_resource (1.9ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 1) AND (`comments`.resource_id = 1) ORDER BY created_at DESC LIMIT 3[0m
+Rendered resources/_resource (1.8ms)
+Rendered shared/_header (0.9ms)
+Rendered shared/_footer (0.6ms)
+Completed in 40ms (View: 19, DB: 2) | 200 OK [http://localhost/users/1/resources]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-23 12:05:42) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) ORDER BY created_at DESC[0m
+Rendering template within layouts/resources
+Rendering resources/index
+  [4;35;1mResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 8) AND (`comments`.resource_id = 8) ORDER BY created_at DESC LIMIT 3[0m
+Rendered resources/_resource (10.9ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 6) AND (`comments`.resource_id = 6) ORDER BY created_at DESC LIMIT 3[0m
+Rendered resources/_resource (50.8ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 1) AND (`comments`.resource_id = 1) ORDER BY created_at DESC LIMIT 3[0m
+Rendered resources/_resource (2.3ms)
+Rendered shared/_header (1.0ms)
+Rendered shared/_footer (0.6ms)
+Completed in 91ms (View: 68, DB: 2) | 200 OK [http://localhost/users/1/resources]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-23 12:05:42) [GET]
+  Parameters: {"user_id"=>"1"}
   [4;36;1mUser Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
   [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
   [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-Redirected to http://localhost:3001/users/1/resources
-Completed in 16ms (DB: 1) | 302 Found [http://localhost/users/1]
-  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
-  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
-
-
-Processing ResourcesController#index (for 127.0.0.1 at 2009-07-22 15:15:04) [GET]
-  Parameters: {"user_id"=>"1"}
-  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
-  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
-  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) ORDER BY created_at DESC[0m
 Rendering template within layouts/resources
 Rendering resources/index
-  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) [0m
-  [4;35;1mResource Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 1) AND (`comments`.resource_id = 1) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (61.2ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 2) AND (`comments`.resource_id = 2) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (2.1ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 3) AND (`comments`.resource_id = 3) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (2.1ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 4) AND (`comments`.resource_id = 4) ORDER BY created_at DESC LIMIT 3[0m
+  [4;36;1mResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 8) AND (`comments`.resource_id = 8) ORDER BY created_at DESC LIMIT 3[0m
+Rendered resources/_resource (11.1ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 6) AND (`comments`.resource_id = 6) ORDER BY created_at DESC LIMIT 3[0m
+Rendered resources/_resource (2.2ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 1) AND (`comments`.resource_id = 1) ORDER BY created_at DESC LIMIT 3[0m
 Rendered resources/_resource (2.0ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 5) AND (`comments`.resource_id = 5) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.8ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 6) AND (`comments`.resource_id = 6) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.9ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 7) AND (`comments`.resource_id = 7) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.8ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 8) AND (`comments`.resource_id = 8) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.7ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 9) AND (`comments`.resource_id = 9) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.7ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 10) AND (`comments`.resource_id = 10) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.8ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 11) AND (`comments`.resource_id = 11) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.8ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 12) AND (`comments`.resource_id = 12) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.7ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 13) AND (`comments`.resource_id = 13) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.6ms)
-Rendered shared/_header (1.0ms)
+Rendered shared/_header (0.9ms)
 Rendered shared/_footer (0.6ms)
-Completed in 113ms (View: 92, DB: 3) | 200 OK [http://localhost/users/1/resources]
-  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
-  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
-
-
-Processing ResourcesController#check_content (for 127.0.0.1 at 2009-07-22 15:15:07) [POST]
-  Parameters: {"commit"=>"下一步", "resource"=>{"step_one"=>"aex"}}
-  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
-  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
-  [4;36;1mResource Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
-  [4;35;1mResource Load (0.2ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.`link_url` = 'aex') LIMIT 1[0m
-  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
-  [4;35;1mResource Create (0.1ms)[0m   [0mINSERT INTO `resources` (`created_at`, `title`, `updated_at`, `user_id`, `content`, `shoulu`, `keywords`, `link_url`) VALUES('2009-07-22 07:15:07', NULL, '2009-07-22 07:15:07', 1, NULL, 1, NULL, 'aex')[0m
-  [4;36;1mSQL (55.7ms)[0m   [0;1mCOMMIT[0m
-Rendered resources/_unknown_link_url (1.9ms)
-Completed in 86ms (View: 6, DB: 58) | 200 OK [http://localhost/resources/check_content]
+Completed in 43ms (View: 20, DB: 2) | 200 OK [http://localhost/users/1/resources]
   [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
-  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
 
 
-Processing ResourcesController#auto_complete_for_resource_keywords (for 127.0.0.1 at 2009-07-22 15:15:11) [POST]
-  Parameters: {"resource"=>{"keywords"=>"fe"}}
+Processing ResourcesController#check_content (for 127.0.0.1 at 2009-07-23 12:05:46) [POST]
+  Parameters: {"commit"=>"下一步", "resource"=>{"step_one"=>"aaeee"}}
   [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
   [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
-  [4;35;1mResource Load (0.3ms)[0m   [0mSELECT * FROM `resources` WHERE (LOWER(keywords) LIKE '%fe%') ORDER BY keywords ASC LIMIT 10[0m
-Completed in 20ms (View: 1, DB: 1) | 200 OK [http://localhost/resources/auto_complete_for_resource_keywords]
+  [4;35;1mResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+
+ActionView::MissingTemplate (Missing template resources/check_content.erb in view path app/views):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
   [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
-  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
-Processing ResourcesController#auto_complete_for_resource_keywords (for 127.0.0.1 at 2009-07-22 15:15:12) [POST]
-  Parameters: {"resource"=>{"keywords"=>"feefefef"}}
+Processing ResourcesController#check_content (for 127.0.0.1 at 2009-07-23 12:06:17) [POST]
+  Parameters: {"commit"=>"下一步", "resource"=>{"step_one"=>"aaeee"}}
   [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
   [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
-  [4;36;1mResource Load (0.3ms)[0m   [0;1mSELECT * FROM `resources` WHERE (LOWER(keywords) LIKE '%feefefef%') ORDER BY keywords ASC LIMIT 10[0m
-Completed in 74ms (View: 1, DB: 1) | 200 OK [http://localhost/resources/auto_complete_for_resource_keywords]
-  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
-  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
-
-
-Processing ResourcesController#auto_complete_for_resource_keywords (for 127.0.0.1 at 2009-07-22 15:15:14) [POST]
-  Parameters: {"resource"=>{"keywords"=>"feefefef"}}
-  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
-  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
-  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM `resources` WHERE (LOWER(keywords) LIKE '%feefefef%') ORDER BY keywords ASC LIMIT 10[0m
-Completed in 21ms (View: 1, DB: 1) | 200 OK [http://localhost/resources/auto_complete_for_resource_keywords]
-  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
-  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
-
-
-Processing ResourcesController#auto_complete_for_resource_keywords (for 127.0.0.1 at 2009-07-22 15:15:55) [POST]
-  Parameters: {"resource"=>{"keywords"=>"a"}}
-  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
-  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
-  [4;36;1mResource Load (0.3ms)[0m   [0;1mSELECT * FROM `resources` WHERE (LOWER(keywords) LIKE '%a%') ORDER BY keywords ASC LIMIT 10[0m
-  [4;35;1mResource Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
-Completed in 21ms (View: 2, DB: 2) | 200 OK [http://localhost/resources/auto_complete_for_resource_keywords]
-  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
-  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
-
-
-Processing ResourcesController#auto_complete_for_resource_keywords (for 127.0.0.1 at 2009-07-22 15:15:58) [POST]
-  Parameters: {"resource"=>{"keywords"=>"liu"}}
-  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
-  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
-  [4;36;1mResource Load (0.3ms)[0m   [0;1mSELECT * FROM `resources` WHERE (LOWER(keywords) LIKE '%liu%') ORDER BY keywords ASC LIMIT 10[0m
-  [4;35;1mResource Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
-Completed in 21ms (View: 2, DB: 2) | 200 OK [http://localhost/resources/auto_complete_for_resource_keywords]
-  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
-  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
-
-
-Processing ResourcesController#auto_complete_for_resource_keywords (for 127.0.0.1 at 2009-07-22 15:15:59) [POST]
-  Parameters: {"resource"=>{"keywords"=>"liuzi"}}
-  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
-  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
-  [4;36;1mResource Load (0.3ms)[0m   [0;1mSELECT * FROM `resources` WHERE (LOWER(keywords) LIKE '%liuzi%') ORDER BY keywords ASC LIMIT 10[0m
-  [4;35;1mResource Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
-Completed in 71ms (View: 2, DB: 2) | 200 OK [http://localhost/resources/auto_complete_for_resource_keywords]
-  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
-  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
-
-
-Processing ResourcesController#auto_complete_for_resource_keywords (for 127.0.0.1 at 2009-07-22 15:16:02) [POST]
-  Parameters: {"resource"=>{"keywords"=>"li"}}
-  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
-  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
-  [4;36;1mResource Load (0.3ms)[0m   [0;1mSELECT * FROM `resources` WHERE (LOWER(keywords) LIKE '%li%') ORDER BY keywords ASC LIMIT 10[0m
-  [4;35;1mResource Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
-Completed in 23ms (View: 2, DB: 2) | 200 OK [http://localhost/resources/auto_complete_for_resource_keywords]
-  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
-  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
-
-
-Processing ResourcesController#auto_complete_for_resource_keywords (for 127.0.0.1 at 2009-07-22 15:16:03) [POST]
-  Parameters: {"resource"=>{"keywords"=>"liu"}}
-  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
-  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
-  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (LOWER(keywords) LIKE '%liu%') ORDER BY keywords ASC LIMIT 10[0m
-  [4;35;1mResource Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
-Completed in 21ms (View: 2, DB: 2) | 200 OK [http://localhost/resources/auto_complete_for_resource_keywords]
-  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
-  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
-
-
-Processing UsersController#show (for 127.0.0.1 at 2009-07-22 15:16:25) [GET]
-  Parameters: {"id"=>"1"}
-  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
-  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
-  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-Redirected to http://localhost:3001/users/1/resources
-Completed in 16ms (DB: 1) | 302 Found [http://localhost/users/1]
-  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
-  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
-
-
-Processing ResourcesController#index (for 127.0.0.1 at 2009-07-22 15:16:25) [GET]
-  Parameters: {"user_id"=>"1"}
-  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
-  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
-  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-Rendering template within layouts/resources
-Rendering resources/index
-  [4;36;1mResource Load (0.3ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) [0m
-  [4;35;1mResource Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 1) AND (`comments`.resource_id = 1) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (62.4ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 2) AND (`comments`.resource_id = 2) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.9ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 3) AND (`comments`.resource_id = 3) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (2.0ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 4) AND (`comments`.resource_id = 4) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.9ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 5) AND (`comments`.resource_id = 5) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.8ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 6) AND (`comments`.resource_id = 6) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.9ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 7) AND (`comments`.resource_id = 7) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.8ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 8) AND (`comments`.resource_id = 8) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.7ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 9) AND (`comments`.resource_id = 9) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.8ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 10) AND (`comments`.resource_id = 10) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.9ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 11) AND (`comments`.resource_id = 11) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.7ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 12) AND (`comments`.resource_id = 12) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.6ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 13) AND (`comments`.resource_id = 13) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.6ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 14) AND (`comments`.resource_id = 14) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (2.0ms)
-Rendered shared/_header (1.0ms)
-Rendered shared/_footer (0.6ms)
-Completed in 116ms (View: 94, DB: 3) | 200 OK [http://localhost/users/1/resources]
-  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
-  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
-
-
-Processing ResourcesController#check_content (for 127.0.0.1 at 2009-07-22 15:16:27) [POST]
-  Parameters: {"commit"=>"下一步", "resource"=>{"step_one"=>""}}
-  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
-  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
-  [4;36;1mResource Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
 
 ActionView::MissingTemplate (Missing template resources/check_content.erb in view path app/views):
   /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
@@ -257,530 +193,73 @@ ActionView::MissingTemplate (Missing template resources/check_content.erb in vie
 
 Rendering rescues/layout (internal_server_error)
   [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
-  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
 
 
-Processing ResourcesController#check_content (for 127.0.0.1 at 2009-07-22 15:16:30) [POST]
-  Parameters: {"commit"=>"下一步", "resource"=>{"step_one"=>"sdf"}}
-  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
-  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
-  [4;35;1mResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
-  [4;36;1mResource Load (0.2ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.`link_url` = 'sdf') LIMIT 1[0m
-  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
-  [4;36;1mResource Create (0.2ms)[0m   [0;1mINSERT INTO `resources` (`created_at`, `title`, `updated_at`, `user_id`, `content`, `shoulu`, `keywords`, `link_url`) VALUES('2009-07-22 07:16:30', NULL, '2009-07-22 07:16:30', 1, NULL, 1, NULL, 'sdf')[0m
-  [4;35;1mSQL (55.0ms)[0m   [0mCOMMIT[0m
-Rendered resources/_unknown_link_url (1.2ms)
-Completed in 83ms (View: 3, DB: 57) | 200 OK [http://localhost/resources/check_content]
-  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
-  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
-
-
-Processing SearchedKeywordsController#new (for 127.0.0.1 at 2009-07-22 15:16:53) [GET]
-  Parameters: {"user_id"=>"1"}
-  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
-  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
-Rendering template within layouts/searched_keywords
-Rendering searched_keywords/new
-Rendered shared/_footer (0.7ms)
-Completed in 76ms (View: 4, DB: 1) | 200 OK [http://localhost/users/1/searched_keywords/new]
-  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
-  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
-
-
-Processing SearchedKeywordsController#auto_complete_for_resource_keywords (for 127.0.0.1 at 2009-07-22 15:16:54) [GET]
-  Parameters: {"resource"=>{"keywords"=>""}}
-  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
-  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
-  [4;36;1mResource Load (0.3ms)[0m   [0;1mSELECT * FROM `resources` WHERE (LOWER(keywords) LIKE '%%') ORDER BY keywords ASC LIMIT 50[0m
-  [4;35;1mResource Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
-Completed in 22ms (View: 2, DB: 2) | 200 OK [http://localhost/searched_keywords/auto_complete_for_resource_keywords?resource%5Bkeywords%5D=]
-  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
-  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
-
-
-Processing UsersController#show (for 127.0.0.1 at 2009-07-22 15:16:54) [GET]
-  Parameters: {"id"=>"1"}
-  [4;36;1mUser Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
-  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
-  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-Redirected to http://localhost:3001/users/1/resources
-Completed in 15ms (DB: 1) | 302 Found [http://localhost/users/1]
-  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
-  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
-
-
-Processing ResourcesController#index (for 127.0.0.1 at 2009-07-22 15:16:54) [GET]
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-23 12:06:18) [GET]
   Parameters: {"user_id"=>"1"}
   [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
   [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
   [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) ORDER BY created_at DESC[0m
 Rendering template within layouts/resources
 Rendering resources/index
-  [4;36;1mResource Load (0.3ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) [0m
   [4;35;1mResource Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 1) AND (`comments`.resource_id = 1) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (7.7ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 2) AND (`comments`.resource_id = 2) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (51.5ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 3) AND (`comments`.resource_id = 3) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.9ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 4) AND (`comments`.resource_id = 4) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (2.2ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 5) AND (`comments`.resource_id = 5) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (2.1ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 6) AND (`comments`.resource_id = 6) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.9ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 7) AND (`comments`.resource_id = 7) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.8ms)
   [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
   [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 8) AND (`comments`.resource_id = 8) ORDER BY created_at DESC LIMIT 3[0m
+Rendered resources/_resource (10.6ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 6) AND (`comments`.resource_id = 6) ORDER BY created_at DESC LIMIT 3[0m
 Rendered resources/_resource (1.9ms)
   [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 9) AND (`comments`.resource_id = 9) ORDER BY created_at DESC LIMIT 3[0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 1) AND (`comments`.resource_id = 1) ORDER BY created_at DESC LIMIT 3[0m
 Rendered resources/_resource (1.8ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 10) AND (`comments`.resource_id = 10) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.7ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 11) AND (`comments`.resource_id = 11) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.7ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 12) AND (`comments`.resource_id = 12) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.8ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 13) AND (`comments`.resource_id = 13) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.7ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 14) AND (`comments`.resource_id = 14) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.7ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 15) AND (`comments`.resource_id = 15) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.8ms)
-Rendered shared/_header (1.1ms)
-Rendered shared/_footer (0.7ms)
-Completed in 114ms (View: 92, DB: 3) | 200 OK [http://localhost/users/1/resources]
+Rendered shared/_header (0.9ms)
+Rendered shared/_footer (0.6ms)
+Completed in 39ms (View: 18, DB: 2) | 200 OK [http://localhost/users/1/resources]
   [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
   [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
-Processing ResourcesController#check_content (for 127.0.0.1 at 2009-07-22 15:16:58) [POST]
-  Parameters: {"commit"=>"下一步", "resource"=>{"step_one"=>"aaae"}}
-  [4;36;1mUser Columns (2.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
-  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
-  [4;36;1mResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
-  [4;35;1mResource Load (0.2ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.`link_url` = 'aaae') LIMIT 1[0m
-  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
-  [4;35;1mResource Create (0.1ms)[0m   [0mINSERT INTO `resources` (`created_at`, `title`, `updated_at`, `user_id`, `content`, `shoulu`, `keywords`, `link_url`) VALUES('2009-07-22 07:16:58', NULL, '2009-07-22 07:16:58', 1, NULL, 1, NULL, 'aaae')[0m
-  [4;36;1mSQL (50.5ms)[0m   [0;1mCOMMIT[0m
-Rendered resources/_unknown_link_url (2.0ms)
-Completed in 85ms (View: 7, DB: 55) | 200 OK [http://localhost/resources/check_content]
-  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
-  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
-
-
-Processing ResourcesController#index (for 127.0.0.1 at 2009-07-22 15:17:03) [GET]
-  Parameters: {"user_id"=>"1"}
-  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
-  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
-  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-Rendering template within layouts/resources
-Rendering resources/index
-  [4;36;1mResource Load (0.3ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) [0m
-  [4;35;1mResource Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 1) AND (`comments`.resource_id = 1) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (8.6ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 2) AND (`comments`.resource_id = 2) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.8ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 3) AND (`comments`.resource_id = 3) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.7ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 4) AND (`comments`.resource_id = 4) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.8ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 5) AND (`comments`.resource_id = 5) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.7ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 6) AND (`comments`.resource_id = 6) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.7ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 7) AND (`comments`.resource_id = 7) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.6ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (14.4ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 8) AND (`comments`.resource_id = 8) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (62.6ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 9) AND (`comments`.resource_id = 9) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (2.5ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 10) AND (`comments`.resource_id = 10) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (2.1ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 11) AND (`comments`.resource_id = 11) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (2.2ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 12) AND (`comments`.resource_id = 12) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (2.1ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 13) AND (`comments`.resource_id = 13) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (2.1ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 14) AND (`comments`.resource_id = 14) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (2.4ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 15) AND (`comments`.resource_id = 15) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.9ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 16) AND (`comments`.resource_id = 16) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.9ms)
-Rendered shared/_header (1.1ms)
-Rendered shared/_footer (0.7ms)
-Completed in 130ms (View: 93, DB: 18) | 200 OK [http://localhost/users/1/resources]
-  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
-  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
-
-
-Processing ResourcesController#index (for 127.0.0.1 at 2009-07-22 15:17:53) [GET]
-  Parameters: {"user_id"=>"1"}
-  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
-  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
-  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-Rendering template within layouts/resources
-Rendering resources/index
-  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) [0m
-  [4;36;1mResource Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 1) AND (`comments`.resource_id = 1) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (8.0ms)
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 2) AND (`comments`.resource_id = 2) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.6ms)
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 3) AND (`comments`.resource_id = 3) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.5ms)
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 4) AND (`comments`.resource_id = 4) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.6ms)
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 5) AND (`comments`.resource_id = 5) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.5ms)
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 6) AND (`comments`.resource_id = 6) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.6ms)
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 7) AND (`comments`.resource_id = 7) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.5ms)
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 8) AND (`comments`.resource_id = 8) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.5ms)
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 9) AND (`comments`.resource_id = 9) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.5ms)
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 10) AND (`comments`.resource_id = 10) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.6ms)
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 11) AND (`comments`.resource_id = 11) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.7ms)
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 12) AND (`comments`.resource_id = 12) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.7ms)
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 13) AND (`comments`.resource_id = 13) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.8ms)
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 14) AND (`comments`.resource_id = 14) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.6ms)
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 15) AND (`comments`.resource_id = 15) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.5ms)
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 16) AND (`comments`.resource_id = 16) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.5ms)
-Rendered shared/_header (1.0ms)
-Rendered shared/_footer (0.6ms)
-Completed in 63ms (View: 40, DB: 3) | 200 OK [http://localhost/users/1/resources]
-  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
-  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
-
-
-Processing ResourcesController#check_content (for 127.0.0.1 at 2009-07-22 15:17:57) [POST]
-  Parameters: {"commit"=>"下一步", "resource"=>{"step_one"=>"aaae"}}
-  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
-  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
-  [4;35;1mResource Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
-  [4;36;1mResource Load (0.2ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.`link_url` = 'aaae') LIMIT 1[0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.`link_url` = 'aaae') LIMIT 1[0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.`link_url` = 'aaae') LIMIT 1[0m
-Rendered resources/_known_link_url (1.0ms)
-Completed in 28ms (View: 3, DB: 2) | 200 OK [http://localhost/resources/check_content]
-  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
-  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
-
-
-Processing ResourcesController#index (for 127.0.0.1 at 2009-07-22 15:19:25) [GET]
-  Parameters: {"user_id"=>"1"}
-  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
-  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
-  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-Rendering template within layouts/resources
-Rendering resources/index
-  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) [0m
-  [4;35;1mResource Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 1) AND (`comments`.resource_id = 1) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (8.0ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 2) AND (`comments`.resource_id = 2) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.6ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 3) AND (`comments`.resource_id = 3) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.6ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 4) AND (`comments`.resource_id = 4) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.5ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 5) AND (`comments`.resource_id = 5) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.6ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 6) AND (`comments`.resource_id = 6) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.6ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 7) AND (`comments`.resource_id = 7) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.6ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 8) AND (`comments`.resource_id = 8) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.5ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 9) AND (`comments`.resource_id = 9) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.5ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 10) AND (`comments`.resource_id = 10) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.5ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 11) AND (`comments`.resource_id = 11) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.5ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 12) AND (`comments`.resource_id = 12) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.6ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 13) AND (`comments`.resource_id = 13) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.5ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 14) AND (`comments`.resource_id = 14) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.5ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 15) AND (`comments`.resource_id = 15) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.5ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 16) AND (`comments`.resource_id = 16) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.5ms)
-Rendered shared/_header (1.0ms)
-Rendered shared/_footer (0.6ms)
-Completed in 62ms (View: 40, DB: 3) | 200 OK [http://localhost/users/1/resources]
-  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
-  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
-
-
-Processing ResourcesController#check_content (for 127.0.0.1 at 2009-07-22 15:24:12) [POST]
-  Parameters: {"commit"=>"下一步", "resource"=>{"step_one"=>"aaae"}}
+Processing ResourcesController#check_content (for 127.0.0.1 at 2009-07-23 12:06:19) [POST]
+  Parameters: {"commit"=>"下一步", "resource"=>{"step_one"=>"aaeee"}}
   [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
-  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (2.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
   [4;36;1mResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
-  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.`link_url` = 'aaae') LIMIT 1[0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.`link_url` = 'aaae') LIMIT 1[0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.`link_url` = 'aaae') LIMIT 1[0m
-Rendered resources/_known_link_url (1.0ms)
-Completed in 29ms (View: 3, DB: 2) | 200 OK [http://localhost/resources/check_content]
-  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
-  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
+ActionView::MissingTemplate (Missing template resources/check_content.erb in view path app/views):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
 
-Processing UsersController#show (for 127.0.0.1 at 2009-07-22 15:24:16) [GET]
-  Parameters: {"id"=>"1"}
-  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
-  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
-  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-Redirected to http://localhost:3001/users/1/resources
-Completed in 16ms (DB: 1) | 302 Found [http://localhost/users/1]
+Rendering rescues/layout (internal_server_error)
   [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
   [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
 
 
-Processing ResourcesController#index (for 127.0.0.1 at 2009-07-22 15:24:16) [GET]
-  Parameters: {"user_id"=>"1"}
-  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
-  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
-  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-Rendering template within layouts/resources
-Rendering resources/index
-  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) [0m
-  [4;35;1mResource Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 1) AND (`comments`.resource_id = 1) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (8.1ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 2) AND (`comments`.resource_id = 2) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.6ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 3) AND (`comments`.resource_id = 3) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.5ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 4) AND (`comments`.resource_id = 4) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.6ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 5) AND (`comments`.resource_id = 5) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.6ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 6) AND (`comments`.resource_id = 6) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.5ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 7) AND (`comments`.resource_id = 7) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.5ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 8) AND (`comments`.resource_id = 8) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.5ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 9) AND (`comments`.resource_id = 9) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.6ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 10) AND (`comments`.resource_id = 10) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.5ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 11) AND (`comments`.resource_id = 11) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.5ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 12) AND (`comments`.resource_id = 12) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.5ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 13) AND (`comments`.resource_id = 13) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.5ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 14) AND (`comments`.resource_id = 14) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.6ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 15) AND (`comments`.resource_id = 15) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.5ms)
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 16) AND (`comments`.resource_id = 16) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (13.4ms)
-Rendered shared/_header (1.0ms)
-Rendered shared/_footer (0.6ms)
-Completed in 116ms (View: 95, DB: 3) | 200 OK [http://localhost/users/1/resources]
-  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
-  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
-
-
-Processing ResourcesController#check_content (for 127.0.0.1 at 2009-07-22 15:24:22) [POST]
-  Parameters: {"commit"=>"下一步", "resource"=>{"step_one"=>"阿色系se"}}
-  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
-  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
-  [4;36;1mResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
-  [4;35;1mResource Load (0.2ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.`link_url` = '阿色系se') LIMIT 1[0m
-  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
-  [4;35;1mResource Create (0.2ms)[0m   [0mINSERT INTO `resources` (`created_at`, `title`, `updated_at`, `user_id`, `content`, `shoulu`, `keywords`, `link_url`) VALUES('2009-07-22 07:24:22', NULL, '2009-07-22 07:24:22', 1, NULL, 1, NULL, '阿色系se')[0m
-  [4;36;1mSQL (60.4ms)[0m   [0;1mCOMMIT[0m
-Rendered resources/_unknown_link_url (2.4ms)
-Completed in 94ms (View: 6, DB: 63) | 200 OK [http://localhost/resources/check_content]
-  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
-  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
-
-
-Processing UsersController#show (for 127.0.0.1 at 2009-07-22 15:24:27) [GET]
-  Parameters: {"id"=>"1"}
-  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
-  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
-  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-Redirected to http://localhost:3001/users/1/resources
-Completed in 16ms (DB: 1) | 302 Found [http://localhost/users/1]
-  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
-  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
-
-
-Processing ResourcesController#index (for 127.0.0.1 at 2009-07-22 15:24:27) [GET]
-  Parameters: {"user_id"=>"1"}
-  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
-  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
-  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-Rendering template within layouts/resources
-Rendering resources/index
-  [4;35;1mResource Load (0.3ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) [0m
-  [4;36;1mResource Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 1) AND (`comments`.resource_id = 1) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (7.6ms)
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 2) AND (`comments`.resource_id = 2) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.5ms)
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 3) AND (`comments`.resource_id = 3) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.5ms)
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 4) AND (`comments`.resource_id = 4) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.5ms)
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 5) AND (`comments`.resource_id = 5) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.5ms)
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 6) AND (`comments`.resource_id = 6) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.5ms)
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 7) AND (`comments`.resource_id = 7) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.5ms)
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 8) AND (`comments`.resource_id = 8) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.5ms)
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 9) AND (`comments`.resource_id = 9) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (54.4ms)
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 10) AND (`comments`.resource_id = 10) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.9ms)
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 11) AND (`comments`.resource_id = 11) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.8ms)
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 12) AND (`comments`.resource_id = 12) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.9ms)
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 13) AND (`comments`.resource_id = 13) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.8ms)
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 14) AND (`comments`.resource_id = 14) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.8ms)
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 15) AND (`comments`.resource_id = 15) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.7ms)
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 16) AND (`comments`.resource_id = 16) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (1.7ms)
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
-  [4;36;1mComment Load (0.3ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 17) AND (`comments`.resource_id = 17) ORDER BY created_at DESC LIMIT 3[0m
-Rendered resources/_resource (2.0ms)
-Rendered shared/_header (1.1ms)
-Rendered shared/_footer (0.6ms)
-Completed in 117ms (View: 96, DB: 3) | 200 OK [http://localhost/users/1/resources]
-  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
-  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
-
-
-Processing ResourcesController#check_content (for 127.0.0.1 at 2009-07-22 15:24:37) [POST]
-  Parameters: {"commit"=>"下一步", "resource"=>{"step_one"=>"sce.aas"}}
+Processing ResourcesController#check_content (for 127.0.0.1 at 2009-07-23 12:06:19) [POST]
+  Parameters: {"commit"=>"下一步", "resource"=>{"step_one"=>"aaeee"}}
   [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
   [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
   [4;35;1mResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
-  [4;36;1mResource Load (0.2ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.`link_url` = 'sce.aas') LIMIT 1[0m
-  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
-  [4;36;1mResource Create (0.1ms)[0m   [0;1mINSERT INTO `resources` (`created_at`, `title`, `updated_at`, `user_id`, `content`, `shoulu`, `keywords`, `link_url`) VALUES('2009-07-22 07:24:37', NULL, '2009-07-22 07:24:37', 1, NULL, 1, NULL, 'sce.aas')[0m
-  [4;35;1mSQL (94.3ms)[0m   [0mCOMMIT[0m
-Rendered resources/_unknown_link_url (1.6ms)
-Completed in 123ms (View: 4, DB: 96) | 200 OK [http://localhost/resources/check_content]
+
+ActionView::MissingTemplate (Missing template resources/check_content.erb in view path app/views):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)

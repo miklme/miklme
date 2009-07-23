@@ -2,7 +2,7 @@ class ResourcesController < ApplicationController
   before_filter :load_user,:only => [:create,:destroy,:edit,:index,:show,:update]
   auto_complete_for :resource,:keywords
   def index
-    @resources=@user.resources
+    @resources=@user.resources.find(:all,:order => "created_at DESC")
   end
   
   def show
@@ -27,7 +27,6 @@ class ResourcesController < ApplicationController
         keyword=Keyword.create(:name => params[:resource][:keywords])
         @user.keywords<<keyword
         @user.save
-        flash[:notice] = 'Resource was successfully created.'
         format.html { redirect_to user_resources_path(@user) }
         format.xml  { render :xml => @resource, :status => :created, :location => @resource }
       else
@@ -66,33 +65,15 @@ class ResourcesController < ApplicationController
     end
   end
  
-  def check_content
-    @resource = current_user.resources.build
-    check_result=check_resource_type(params[:resource][:step_one])
-    if check_result=="link_url_resource" and Resource.find_by_link_url(params[:resource][:step_one]).blank?
-      @resource.link_url=params[:resource][:step_one]
-      session[:link_url]=params[:resource][:step_one]
-      @resource.save
-      render :update do |page|
-        page.replace_html 'new_resource',:partial => "unknown_link_url"
-      end
-    elsif check_result=="link_url_resource" and Resource.find_by_link_url(params[:resource][:step_one])
-      @resource= Resource.find_by_link_url(params[:resource][:step_one])
-      render :update do |page|
-        page.replace_html 'new_resource',:partial => "known_link_url"
-      end
-    elsif check_result=="twiiter_resource"
-      render :update do |page|
-      end
-    end
-  end
+  
 
-  def save_title_and_keywords
-    @resource=Resource.find_by_link_url(session[:link_url])
-    @resource.update_attributes(params[:resource])
+  def save_resource
+    @resource=current_user.resources.build
+    @resource.update_attributes(:title=>params[:resource][:title], :keywords=>params[:resource][:keywords],:link_url => session[:link_url])
     @resource.save
-    redirect_to user_path(current_user)
-    flash[:notice]="资源已成功创时建并被纳入引擎。"
+    render :update do |page|
+      page.redirect_to user_path(current_user)
+    end
   end
   private
   def load_user

@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(:version => 20090721023534) do
   end
 
   create_table "resources", :force => true do |t|
+    t.string   "type"
     t.boolean  "shoulu",                   :default => true
     t.integer  "user_id"
     t.string   "keywords",   :limit => 23

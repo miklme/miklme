@@ -20,28 +20,28 @@
       <p><%=flash[:error]%></p>
     <%end%>
     <div id="new_resource">
-      <h2>在这里你可以分享如下事物，这些事物将被纳入叫做Michael的引擎：()</h2>
+      <h2>这里你可以分享如下事物，这些事物将被纳入Michael引擎：</h2>
       <ul>
         <li>
-          <strong>单纯</strong>的链接（上网无聊时）
+          链接URL。注意加入http://字样（上网无趣之时）
         </li>
         <li>
-          <strong>不包含链接</strong>的任何想说的话。（不多于139字，不上网无聊时）
+          呓语，少于139字。<strong>不包含链接</strong>。（不上网无趣之时）
         </li>
         <li>
-          <strong>自以为具有价值</strong>的文章。不要担心输入框太小。（不无聊时）
+          长篇。不要担心输入框太小。（有趣时）
         </li>
       </ul>
       <p>
-        <strong>这些形式平平无奇......可是,一切这些都将被检索，重要的是，搜索结果由你掌控。为何不立即尝试？</strong>
+        <strong>形式平平无奇......重要的是,这些一切将被检索，搜索结果由你控制。何不立即尝试？</strong>
       </p>
-      <p>可以以一个链接开始：</p>
+      <p>由此开始：</p>
       <% form_remote_tag(:url => {:action => :check_content}) do %>
         <%= text_field "resource","step_one" %>
         <%= submit_tag "下一步" %>
       <% end %>
     </div>
-    <h2>你拥有的全部：<em><%= link_to "我的全部就是这些东西？" %></em></h2>
+    <h2>你的全部：<em><%= link_to "我的全部就是这些东西？" %></em></h2>
     <ul>
       <%= render @resources %>
     </ul>

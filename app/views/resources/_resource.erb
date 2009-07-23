@@ -6,10 +6,13 @@
       <%=  link_to resource.title || resource.keywords,user_resource_path(resource.owner),:popup => true %>
     <% end %>
   </h3>
-  <em>提供者:
+  <em>来自：
     <%= resource.owner.id %>
     价值点数：<%= resource.owner.value %>
   </em>
+  <span><%= link_to "delete",user_resource_path(resource.owner,resource),:method => :delete %></span>
+  <span></span>
+  <span></span>
   <div>
     <% for comment in resource.comments.good_comments do%>
         <%= auto_link(highlight(truncate(comment.content,:length => 140),resource.keywords)) %>

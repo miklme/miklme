@@ -1,10 +1,10 @@
 <p>你分享了一个链接。</p>
-<%  form_remote_tag :url => {:action => :save_title_and_keywords} do%>
-  <p><%= label :resource,:title,"可以为该链接自定义一个标题：" %></p>
+<%  form_remote_tag :url => {:action => :save_resource} do%>
+  <p><%= label :resource,:title,"关于该链接的简短描述：" %></p>
   <p><%= text_field :resource,:title%></p>
-  <p><%= label :resource,:title,"以及一个关键字:" %>  </p>
+  <p><%= label :resource,:keywords,"你认为在搜索框中输入什么会搜索到这条链接？:" %>  </p>
   <p><%= text_field_with_auto_complete :resource,:keywords%></p>
-  <strong>很重要，这将是所有检索的依据。获得进一步的使用技巧，请查看这里</strong>
+  <em>很重要，这将是所有检索的依据。获得进一步的使用技巧，请查看这里</em>
   <p><span><%= submit_tag "完成" %></span>
     <span><%= link_to "返回",user_path(current_user) %></span>
   </p>
