@@ -13,11 +13,11 @@ class ApplicationController < ActionController::Base
   end
 
   def check_resource_type(content)
-    if content=~%r{[a-zA-z]+://[^\s]*}
+    if content =~ %r{[a-zA-z]+://[^\s]*}
       "link_url_resource"
-    elsif content=~%r{[a-zA-z]+://[^\s]*}.blank? and content.length<=139
+    elsif content !~%r{[a-zA-z]+://[^\s]*} and content.length<=139
       "twitter_resource"
-    elsif  !content=~%r{[a-zA-z]+://[^\s]*} and content.length>=140
+    elsif  content !~%r{[a-zA-z]+://[^\s]*} and content.length>=140
       "blog_resource"
     end
   end
