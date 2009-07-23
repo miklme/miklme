@@ -26,17 +26,20 @@ class ApplicationController < ActionController::Base
     @resource = current_user.resources.build
     check_result=check_resource_type(params[:resource][:step_one])
     if check_result=="link_url_resource"
-      @known_resources= Resource.scoped_by_link_url(params[:resource][:step_one],:limit => 5)
+      @known_resource= Resource.scoped_by_link_url(params[:resource][:step_one]).by_owner_value.first
       @resource.link_url=params[:resource][:step_one]
       @resource.resource_type="link_url_resource"
-      session[:link_url]=params[:resource][:step_one]
+      flash[:link_url]=params[:resource][:step_one]
       render :update do |page|
-        page.replace_html 'new_resource',:partial => "link_url"
+        page.replace_html 'new_resource',:partial => "link_url_resource"
       end
     elsif check_result=="twitter_resource"
       @resource.resource_type="twitter_resource"
+      @resource.keywords=params[:resource][:step_one]
+      @resource.save!
       render :update do |page|
-        page.redirect_to new_session_path
+        page.replace_html "new_resource",:partial => "twitter_resource"
+        page.insert_html :top,"r",:partial => "resource",:object => @resource
       end
     elsif check_result=="blog_resource"
       render :update do |page|

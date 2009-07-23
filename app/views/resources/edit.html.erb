@@ -1,4 +1,4 @@
-<h1>Editing resource</h1>
+<h2>修改</h2>
 
 <%form_for([@user,@resource]) do |f|%>
   <p> <%= f.error_messages %></p>
@@ -7,9 +7,9 @@
   <p><%= f.label :title,'链接标题' %>
     <%= f.text_field :title %><span>若不填写，则关键字为标题。（插入一个图片）</span></p>
   <p>
-    <%= f.submit 'Update' %>
+    <%= f.submit '就这样' %>
   </p>
 
 <% end %>
 
-<%= link_to 'Back', user_resources_path(@user) %>
+<%= link_to '取消', user_resources_path(current_user) %>

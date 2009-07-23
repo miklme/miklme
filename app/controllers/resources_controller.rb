@@ -43,7 +43,7 @@ class ResourcesController < ApplicationController
 
     respond_to do |format|
       if @resource.update_attributes(params[:resource])
-        flash[:notice] = 'Resource was successfully updated.'
+        flash[:notice] = '修改完成'
         format.html { redirect_to user_resources_path(@user) }
         format.xml  { head :ok }
       else
@@ -65,12 +65,18 @@ class ResourcesController < ApplicationController
     end
   end
  
-  def save_resource
+  def save_link_url_resource
     @resource=current_user.resources.build
-    @resource.update_attributes(:title=>params[:resource][:title], :keywords=>params[:resource][:keywords],:link_url => session[:link_url])
-    @resource.save
-    render :update do |page|
-      page.redirect_to user_path(current_user)
+    if !params[:resource][:title].blank? and !params[:resource][:keywords].blank? and !flash[:link_url].blank?
+      @resource.update_attributes(:title=>params[:resource][:title], :keywords=>params[:resource][:keywords],:link_url => flash[:link_url])
+      @resource.save
+      render :update do |page|
+        page.redirect_to user_path(current_user)
+      end
+    else
+      render :update do |page|
+        page.insert_html :top, "new_resource", "<p>请填写完全</p>"
+      end
     end
   end
   private
