@@ -1,9 +1,11 @@
 <li>
   <h3>
-    <% if  resource.link_url?  %>
-      <%= link_to resource.title || resource.keywords, resource.link_url,:popup => true%>
-    <% else %>
-      <%=  link_to resource.title || resource.keywords,user_resource_path(resource.owner),:popup => true %>
+    <% if  resource.resource_type=="link_url_resource"  %>
+      <%= link_to resource.title,resource.link_url,:popup => true%>
+    <% elsif resource.resource_type=="twitter_resource" %>
+      <%=  link_to resource.keywords,user_resource_path(resource.owner),:popup => true %>
+      <% elsif resource.resource_type=="blog_resource" %>
+        <%= link_to resource.title,user_resource_path(resource.owner) %>
     <% end %>
   </h3>
   <em>来自：

@@ -2,13 +2,13 @@ class CreateResources < ActiveRecord::Migration
   def self.up
     create_table :resources do |t|
       #common attributes
-      t.string :type
+      t.string :resource_type
       t.boolean :shoulu,:default => true
       t.integer :user_id
-      t.string :keywords,:limit => 23
+      t.string :keywords,:limit => 139,:null => false
       t.string :title,:limit => 14
       t.text :content
-      #attributes for outer resources
+      #attributes for link_url resources
       t.string :link_url
 
 

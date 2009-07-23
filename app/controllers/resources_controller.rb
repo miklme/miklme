@@ -65,8 +65,6 @@ class ResourcesController < ApplicationController
     end
   end
  
-  
-
   def save_resource
     @resource=current_user.resources.build
     @resource.update_attributes(:title=>params[:resource][:title], :keywords=>params[:resource][:keywords],:link_url => session[:link_url])

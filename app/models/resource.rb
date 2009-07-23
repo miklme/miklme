@@ -8,6 +8,10 @@ class Resource < ActiveRecord::Base
   }
   named_scope :by_owner_value, :include => :owner,:order => 'users.value DESC'
 
+  validates_presence_of :keywords,:title,:if => Proc.new { |resource|
+    resource.resource_type="link_url_resource"
+  }
+  
   private
   def adjust_link_url
     if  !self.link_url=~/http:/ and !self.link_url=~/https:/ and  !self.link_url=~/ftp:/ and  !self.link_url=~/sftp:/

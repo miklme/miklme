@@ -25,18 +25,16 @@ class ApplicationController < ActionController::Base
   def check_content
     @resource = current_user.resources.build
     check_result=check_resource_type(params[:resource][:step_one])
-    if check_result=="link_url_resource" and Resource.find_by_link_url(params[:resource][:step_one]).blank?
+    if check_result=="link_url_resource"
+      @known_resources= Resource.scoped_by_link_url(params[:resource][:step_one],:limit => 5)
       @resource.link_url=params[:resource][:step_one]
+      @resource.resource_type="link_url_resource"
       session[:link_url]=params[:resource][:step_one]
       render :update do |page|
-        page.replace_html 'new_resource',:partial => "unknown_link_url"
-      end
-    elsif check_result=="link_url_resource" and Resource.find_by_link_url(params[:resource][:step_one])
-      @known_resource= Resource.find_by_link_url(params[:resource][:step_one])
-      render :update do |page|
-        page.replace_html 'new_resource',:partial => "known_link_url"
+        page.replace_html 'new_resource',:partial => "link_url"
       end
     elsif check_result=="twitter_resource"
+      @resource.resource_type="twitter_resource"
       render :update do |page|
         page.redirect_to new_session_path
       end

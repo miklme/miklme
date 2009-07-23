@@ -1,8 +1,0 @@
-<p>这个链接已经收录在了引擎当中，关键字为
-  <%=link_to @known_resource.keywords,"/search/#{@resource.keywords}",:popup => true %>。若对此不满，可进入该关键字页面对这个页面的所有者作出评价。</p>
-<%  form_remote_tag(:url => {:action => :check_url}) do %>
-  <p><%= label_tag 'link_url', "在这里可以发表你对链接内容想说的东西，请随意。"   %></p>
-  <p><%= text_field 'resource','link_url'%></p>
-  <p><%= submit_tag "下一步" %></p>
-<% end %>
-
