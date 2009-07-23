@@ -6,6 +6,9 @@ ActionController::Routing::Routes.draw do |map|
     user.resources :resources,:has_many => :comments
     user.resources :searched_keywords
     user.resources :keywords
+    user.resources :link_url_resources
+    user.resources :blog_resources
+    user.resources :twitter_resources
   end
   map.resource :session
 

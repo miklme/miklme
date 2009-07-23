@@ -1,5 +1,5 @@
 <p>你分享了一个链接。</p>
-<%  form_remote_tag :url => {:action => :save_link_url_resource} do%>
+<%  form_remote_tag :url => {:controller => :link_url_resources,:action => :create} do%>
   <p><%= label :resource,:title,"关于该链接的一句话描述，请随意(*)：" %></p>
   <p><%= text_field :resource,:title%></p>
   <p>你认为输入什么关键字会搜索到这条链接？请尽量使用提示框中的关键字或建议关键字（如果存在的话），以便更多人能够看到你的分享。</p>
