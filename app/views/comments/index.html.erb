@@ -1,24 +1,19 @@
-<h1>Listing comments</h1>
-
 <table>
-  <tr>
-    <th>Title</th>
-    <th>Content</th>
-    <th>Rating</th>
-  </tr>
-
-<% @comments.each do |comment| %>
-  <tr>
-    <td><%=h comment.title %></td>
-    <td><%=h comment.content %></td>
-    <td><%=h comment.rating %></td>
-    <td><%= link_to 'Show', comment %></td>
-    <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
-    <td><%= link_to 'Destroy', comment, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
+  <% @comments.each do |comment| %>
+    <tr>
+      <td><%=h comment.content %></td>
+      <td><%= h comment.rating %></td>
+    </tr>
+  <% end %>
 </table>
 
-<br />
-
-<%= link_to 'New comment', new_comment_path %>
+<% form_for([@user,@resource,@comment]) do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :content %><br />
+    <%= f.text_area :content,:size => '30*20' %>
+  </p>
+  <p>
+    <%= f.submit '就这样' %>
+  </p>
+<% end %>

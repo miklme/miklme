@@ -5,11 +5,10 @@
   <head>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
     <title>Keywords: <%= controller.action_name %></title>
-    <%= stylesheet_link_tag 'scaffold' %>
+    <%= stylesheet_link_tag 'default' %>
   </head>
   <body>
     <%= render :partial => "shared/header",:object => @user %>
     <%= @content_for_layout %>
-    <%= render :partial => "shared/footer" %>
   </body>
 </html>

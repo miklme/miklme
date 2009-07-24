@@ -4,8 +4,8 @@
       <%= link_to resource.title,resource.link_url,:popup => true%>
     <% elsif resource.resource_type=="twitter_resource" %>
       <%=  link_to resource.keywords,user_resource_path(resource.owner,resource),:popup => true %>
-      <% elsif resource.resource_type=="blog_resource" %>
-        <%= link_to resource.title,user_resource_path(resource.owner,resource) %>
+    <% elsif resource.resource_type=="blog_resource" %>
+      <%= link_to resource.title,user_resource_path(resource.owner,resource) %>
     <% end %>
   </h3>
   <em>来自：
@@ -13,9 +13,13 @@
     价值点数：<%= resource.owner.value %>
   </em>
   <div>
+    <%= button_to "此结果对我有用",:action => :add_user_value,:id => @resource %>
+    <%= button_to "此结果与关键字不符",:action => :minus_user_value,:id => @resource %>
+  </div>
+  <div>
     <% for comment in resource.comments.good_comments do%>
         <%= auto_link(highlight(truncate(comment.content,:length => 140),resource.keywords)) %>
       <% end %>
     </div>
-    <span><%= link_to "发表评论...", new_user_resource_comment_path(resource.owner,resource) %></span>
+    <span><%= link_to "进入评论页面（#{resource.comments.count}条评论）", user_resource_comments_path(resource.owner,resource),:popup => true %></span>
   </li>

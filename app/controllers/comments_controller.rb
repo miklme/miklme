@@ -5,7 +5,7 @@ class CommentsController < ApplicationController
   # GET /comments.xml
   def index
     @comments = @resource.comments.all
-
+    @comment=@resource.comments.build
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @comments }
@@ -23,17 +23,6 @@ class CommentsController < ApplicationController
     end
   end
 
-  # GET /comments/new
-  # GET /comments/new.xml
-  def new
-    @comment = Comment.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @comment }
-    end
-  end
-
   # GET /comments/1/edit
   def edit
     @comment = Comment.find(params[:id])
@@ -42,14 +31,13 @@ class CommentsController < ApplicationController
   # POST /comments
   # POST /comments.xml
   def create
-    @comment = Comment.new(params[:comment])
+    @comment = @resource.comments.build(params[:comment])
 
     respond_to do |format|
       if @comment.save
         u=User.find(params[:user_id])
         u.value =u.value+params[:comment][:value].to_i
         u.save
-        flash[:notice] = 'Comment was successfully created.'
         format.html { redirect_to :back }
         format.xml  { render :xml => @comment, :status => :created, :location => @comment }
       else
@@ -88,7 +76,7 @@ class CommentsController < ApplicationController
       format.xml  { head :ok }
     end
   end
-
+  
   private
 
   def load_user_and_resource

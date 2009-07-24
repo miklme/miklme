@@ -2,7 +2,7 @@
   <h1><%= link_to "Michael",new_user_searched_keyword_path(current_user) %></h1>
   <h1><%= link_to ".Me",user_path(current_user) %></h1>
 </div>
-<span>相关结果:</span>
+<h3>相关结果:</h3>
 <div>
   <table>
     <tbody>
@@ -31,7 +31,7 @@
   </table>
 </div>
 
-<h1>Michael提供以下结果</h1>
+<h2>Michael提供以下结果</h2>
 <div>
   <ol>
     <%= render @resources  %>

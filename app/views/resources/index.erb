@@ -1,50 +1,49 @@
 <div id="main">
-  <div id="sidebar_left">
-    <div id="my_friends">
-      <h3>
-        我得到的信息来自于这些人：
-      </h3>
-    </div>
-    <div>
-      <h3>
-        这些人从我这里得到信息：
-      </h3>
-    </div>
-  </div>
-
   <div id="content">
-    <%if flash[:notice]%>
-      <p><%=flash[:notice]%></p>
-    <%end%>
-    <%if flash[:error]%>
-      <p><%=flash[:error]%></p>
-    <%end%>
-    <div id="new_resource">
-      <h2>这里你可以分享如下事物，这些事物将被纳入Michael引擎：</h2>
-      <ul>
-        <li>
-          链接URL。<strong>注意加入http://字样</strong>（上网无趣之时）
-        </li>
-        <li>
-          呓语，少于139字。<strong>不包含链接</strong>。（不上网无趣之时）
-        </li>
-        <li>
-          长篇。<strong>暂时不要写题目</strong>.不要担心输入框太小。（有趣时）
-        </li>
-      </ul>
-      <p>
-        <strong>形式平平无奇......重要的是,这些一切将被检索，搜索结果由你控制。何不立即尝试？</strong>
-      </p>
-      <p>由此开始：</p>
-      <% form_remote_tag(:url => {:action => :check_content}) do %>
-        <%= text_field "resource","step_one" %>
-        <%= submit_tag "下一步" %>
-      <% end %>
+    <div id="sidebar">
+      <div id="sidebar_top"></div>
+      <div id="sidebar_text">
+        <%= link_to "看看#{@user.nick_name}上网看些什么" ,user_link_url_resources_path(@user)%>
+        <%= link_to "看看#{@user.nick_name}不上网时生活怎样过",user_twitter_resources_path(@user) %>
+        <%= link_to "看看#{@user.nick_name}的思想深度如何",user_blog_resources_path(@user) %>
+      </div>
+      <div id="sidebar_bottom"></div>
     </div>
-    <h2>你的全部：<em><%= link_to "我的全部就是这些东西？" %></em></h2>
-    <ul id="r">
-      <%= render @resources %>
-    </ul>
+    <div id="text">
+      <%if flash[:notice]%>
+        <p><%=flash[:notice]%></p>
+      <%end%>
+      <%if flash[:error]%>
+        <p><%=flash[:error]%></p>
+      <%end%>
+      <div id="new_resource">
+        <h2>这里你可以分享如下事物，这些事物将被纳入Michael引擎：</h2>
+        <ul>
+          <li>
+            链接URL。<strong>注意加入http://字样</strong>（上网无趣之时）
+          </li>
+          <li>
+            呓语，少于139字。<strong>不包含链接</strong>。（不上网无趣之时）
+          </li>
+          <li>
+            长篇。<strong>暂时不要写题目</strong>.不要担心输入框太小。（有趣时）
+          </li>
+        </ul>
+        <p>
+          <strong>形式平平无奇......重要的是,这些一切将被检索，搜索结果由你控制。何不立即尝试？</strong>
+        </p>
+        <p>由此开始：</p>
+        <% form_remote_tag(:url => {:action => :check_content}) do %>
+          <%= text_field "resource","step_one" %>
+          <%= submit_tag "下一步" %>
+        <% end %>
+      </div>
+      <h2>你的全部：<em><%= link_to "我的全部就是这些东西？" %></em></h2>
+      <ul id="r">
+        <%= render @resources %>
+      </ul>
+    </div>
   </div>
+  <%= render :partial => "shared/footer" %>
 </div>
 

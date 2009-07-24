@@ -1,5 +1,5 @@
-  <% if resource.owner.id=current_user.id %>
-  <span><%= link_to "删除",user_resource_path(current_user,resource),:method => :delete %></span>
-  <span><%= link_to "修改",edit_user_resource_path(current_user,resource)%></span>
+  <% if @resource.owner.id=current_user.id %>
+  <span><%= link_to "删除",user_resource_path(current_user,@resource),:method => :delete %></span>
+  <span><%= link_to "修改",edit_user_resource_path(current_user,@resource)%></span>
   <span></span>
   <% end %>

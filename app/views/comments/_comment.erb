@@ -1,18 +1,3 @@
-<p>
-  <b>Title:</b>
-  <%=h @comment.title %>
-</p>
-
-<p>
-  <b>Content:</b>
-  <%=h @comment.content %>
-</p>
-
-<p>
-  <b>Rating:</b>
-  <%=h @comment.rating %>
-</p>
-
-
-<%= link_to 'Edit', edit_comment_path(@comment) %> |
-<%= link_to 'Back', comments_path %>
+<tr>
+  <td><%=h comment.content %></td>
+</tr>
