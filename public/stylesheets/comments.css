@@ -6,7 +6,7 @@ a {
 	color: #36C;
 }
 a:hover {
-	color: #06F;
+	background-color: #F26513;
 }
 body {
 	background: #EEE url(../images/bg.gif);

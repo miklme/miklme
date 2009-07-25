@@ -34,7 +34,7 @@
         </p>
         <p>由此开始：</p>
         <% form_remote_tag(:url => {:action => :check_content}) do %>
-          <%= text_field "resource","step_one" %>
+          <%= text_area "resource","step_one",:size => '42*20' %>
           <%= submit_tag "下一步" %>
         <% end %>
       </div>
