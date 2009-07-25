@@ -85,16 +85,17 @@ class ResourcesController < ApplicationController
     if check_result=="link_url_resource"
       @known_resource= Resource.scoped_by_link_url(params[:resource][:step_one]).by_owner_value.first
       flash[:link_url]=params[:resource][:step_one]
-      render :update do |page|
-        page.replace_html 'new_resource',:partial => "link_url_resources/form"
-      end
+      redirect_to new_user_link_url_resource_path(current_user)
     elsif check_result=="twitter_resource"
       @resource.resource_type="twitter_resource"
       @resource.keywords=params[:resource][:step_one]
-      @resource.save!
-      render :update do |page|
-        page.replace_html "new_resource",:partial => "twitter_resources/succeed"
-        page.insert_html :top,"r",:partial => "resource",:object => @resource
+      if @resource.save!
+        flash[:notice]='<p>你说了一些不知道是什么东西的东西。不过你看，我们已经把它加上去了。</p>
+<p>你可以选择回到Michael页面，搜索一下你刚才的胡言乱语试试。</p>
+        <p>或者开始另一段胡言乱语.</p>'
+        redirect_to user_path(current_user)
+      else
+        redirect_to_user_path(current_user)
       end
     elsif check_result=="blog_resource"
       render :update do |page|
