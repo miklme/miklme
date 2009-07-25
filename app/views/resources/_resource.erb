@@ -1,10 +1,10 @@
 <li>
   <h3>
-    <% if  resource.resource_type=="link_url_resource"  %>
+    <% if  resource.type=="LinkUrlResource"  %>
       <%= link_to resource.title,resource.link_url,:popup => true%>
-    <% elsif resource.resource_type=="twitter_resource" %>
+    <% elsif resource.type=="TwitterResource" %>
       <%=  link_to resource.keywords,user_resource_path(resource.owner,resource),:popup => true %>
-    <% elsif resource.resource_type=="blog_resource" %>
+    <% elsif resource.type=="BlogResource" %>
       <%= link_to resource.title,user_resource_path(resource.owner,resource) %>
     <% end %>
   </h3>

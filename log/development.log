@@ -3645,3 +3645,1553 @@ The error occurred while evaluating nil.save!):
 Rendered rescues/_trace (36.1ms)
 Rendered rescues/_request_and_response (0.3ms)
 Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-25 18:03:11) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) ORDER BY created_at DESC[0m
+  [4;35;1mTwitterResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/resources
+Rendering resources/index
+Rendered twitter_resources/_form (1.2ms)
+Rendered shared/_footer (0.6ms)
+Rendered shared/_header (1.1ms)
+Completed in 42ms (View: 8, DB: 2) | 200 OK [http://localhost/users/1/resources]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TwitterResourcesController#create (for 127.0.0.1 at 2009-07-25 18:03:12) [POST]
+  Parameters: {"commit"=>"下一步", "twitter_resource"=>{"keywords"=>""}, "user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.save!):
+  app/controllers/twitter_resources_controller.rb:15:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (91.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TwitterResourcesController#create (for 127.0.0.1 at 2009-07-25 18:03:46) [POST]
+  Parameters: {"commit"=>"下一步", "twitter_resource"=>{"keywords"=>"阿斯顿发"}, "user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.save!):
+  app/controllers/twitter_resources_controller.rb:15:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (32.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TwitterResourcesController#create (for 127.0.0.1 at 2009-07-25 18:03:53) [POST]
+  Parameters: {"commit"=>"下一步", "twitter_resource"=>{"keywords"=>"http:"}, "user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.save!):
+  app/controllers/twitter_resources_controller.rb:15:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (90.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TwitterResourcesController#create (for 127.0.0.1 at 2009-07-25 18:04:00) [POST]
+  Parameters: {"commit"=>"下一步", "twitter_resource"=>{"keywords"=>"http://"}, "user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.save!):
+  app/controllers/twitter_resources_controller.rb:15:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (33.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-25 18:09:25) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) ORDER BY created_at DESC[0m
+  [4;36;1mTwitterResource Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/resources
+Rendering resources/index
+Rendered twitter_resources/_form (59.1ms)
+Rendered shared/_footer (0.7ms)
+Rendered shared/_header (1.1ms)
+Completed in 100ms (View: 66, DB: 2) | 200 OK [http://localhost/users/1/resources]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TwitterResourcesController#create (for 127.0.0.1 at 2009-07-25 18:09:26) [POST]
+  Parameters: {"commit"=>"下一步", "twitter_resource"=>{"keywords"=>"http://"}, "user_id"=>"1"}
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mTwitterResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+
+ActiveRecord::RecordInvalid (Validation failed: Keywords 请填写完全, Keywords 内容有点长了。你应该新建长篇内容。):
+  app/controllers/twitter_resources_controller.rb:17:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (38.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (unprocessable_entity)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TwitterResourcesController#create (for 127.0.0.1 at 2009-07-25 18:09:33) [POST]
+  Parameters: {"commit"=>"下一步", "twitter_resource"=>{"keywords"=>"httwwwp://"}, "user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mTwitterResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+
+ActiveRecord::RecordInvalid (Validation failed: Keywords 请填写完全, Keywords 内容有点长了。你应该新建长篇内容。):
+  app/controllers/twitter_resources_controller.rb:17:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (40.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (unprocessable_entity)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TwitterResourcesController#create (for 127.0.0.1 at 2009-07-25 18:09:43) [POST]
+  Parameters: {"commit"=>"下一步", "twitter_resource"=>{"keywords"=>"ww"}, "user_id"=>"1"}
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mTwitterResource Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+
+ActiveRecord::RecordInvalid (Validation failed: Keywords 请填写完全, Keywords 内容有点长了。你应该新建长篇内容。):
+  app/controllers/twitter_resources_controller.rb:17:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (36.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (unprocessable_entity)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#create (for 127.0.0.1 at 2009-07-25 18:10:41) [POST]
+  Parameters: {"commit"=>"下一步", "twitter_resource"=>{"keywords"=>"ww"}, "user_id"=>"1"}
+
+SyntaxError (/home/michael/miklme/app/controllers/twitter_resources_controller.rb:32: syntax error, unexpected $end, expecting kEND):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (32.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TwitterResourcesController#create (for 127.0.0.1 at 2009-07-25 18:10:54) [POST]
+  Parameters: {"commit"=>"下一步", "twitter_resource"=>{"keywords"=>"ww"}, "user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mTwitterResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+
+ActiveRecord::RecordInvalid (Validation failed: Keywords 请填写完全, Keywords 内容有点长了。你应该新建长篇内容。):
+  app/controllers/twitter_resources_controller.rb:17:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (38.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (unprocessable_entity)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TwitterResourcesController#create (for 127.0.0.1 at 2009-07-25 18:11:05) [POST]
+  Parameters: {"commit"=>"下一步", "twitter_resource"=>{"keywords"=>"wwsdf"}, "user_id"=>"1"}
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mTwitterResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+
+ActiveRecord::RecordInvalid (Validation failed: Keywords 请填写完全, Keywords 内容有点长了。你应该新建长篇内容。):
+  app/controllers/twitter_resources_controller.rb:17:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (38.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (unprocessable_entity)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TwitterResourcesController#create (for 127.0.0.1 at 2009-07-25 18:15:54) [POST]
+  Parameters: {"commit"=>"下一步", "twitter_resource"=>{"keywords"=>"wwsdf"}, "user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mTwitterResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+
+ActiveRecord::RecordInvalid (Validation failed: Keywords 请填写完全, Keywords 内容有点长了。你应该新建长篇内容。):
+  app/controllers/twitter_resources_controller.rb:17:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (96.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (unprocessable_entity)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-25 18:19:39) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) ORDER BY created_at DESC[0m
+  [4;35;1mTwitterResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/resources
+Rendering resources/index
+Rendered twitter_resources/_form (1.3ms)
+Rendered shared/_footer (0.6ms)
+Rendered shared/_header (1.1ms)
+Completed in 44ms (View: 8, DB: 2) | 200 OK [http://localhost/users/1/resources]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TwitterResourcesController#create (for 127.0.0.1 at 2009-07-25 18:19:40) [POST]
+  Parameters: {"commit"=>"下一步", "twitter_resource"=>{"keywords"=>"wwsdf"}, "user_id"=>"1"}
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mTwitterResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+
+ActiveRecord::RecordInvalid (Validation failed: Keywords 请填写完全, Keywords 内容有点长了。你应该新建长篇内容。):
+  app/controllers/twitter_resources_controller.rb:17:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (40.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (unprocessable_entity)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-25 18:20:52) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) ORDER BY created_at DESC[0m
+  [4;36;1mTwitterResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/resources
+Rendering resources/index
+Rendered twitter_resources/_form (1.2ms)
+Rendered shared/_footer (0.6ms)
+Rendered shared/_header (1.0ms)
+Completed in 41ms (View: 8, DB: 2) | 200 OK [http://localhost/users/1/resources]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TwitterResourcesController#create (for 127.0.0.1 at 2009-07-25 18:20:53) [POST]
+  Parameters: {"commit"=>"下一步", "twitter_resource"=>{"keywords"=>"wwsdf"}, "user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mTwitterResource Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+
+NoMethodError (undefined method `build' for #<Class:0xb71a4a84>):
+  app/controllers/twitter_resources_controller.rb:16:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (35.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-25 18:21:06) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) ORDER BY created_at DESC[0m
+  [4;36;1mTwitterResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/resources
+Rendering resources/index
+Rendered twitter_resources/_form (1.2ms)
+Rendered shared/_footer (0.6ms)
+Rendered shared/_header (1.0ms)
+Completed in 43ms (View: 8, DB: 2) | 200 OK [http://localhost/users/1/resources]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TwitterResourcesController#create (for 127.0.0.1 at 2009-07-25 18:21:07) [POST]
+  Parameters: {"commit"=>"下一步", "twitter_resource"=>{"keywords"=>"wwsdf"}, "user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mTwitterResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+
+ActiveRecord::RecordInvalid (Validation failed: Keywords 请填写完全, Keywords 内容有点长了。你应该新建长篇内容。):
+  app/controllers/twitter_resources_controller.rb:17:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (39.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (unprocessable_entity)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TwitterResourcesController#create (for 127.0.0.1 at 2009-07-25 18:22:21) [POST]
+  Parameters: {"commit"=>"下一步", "twitter_resource"=>{"keywords"=>"wwsdf"}, "user_id"=>"1"}
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mTwitterResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+
+ActiveRecord::RecordInvalid (Validation failed: Keywords 请填写完全, Keywords 内容有点长了。你应该新建长篇内容。):
+  app/controllers/twitter_resources_controller.rb:17:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (99.3ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (unprocessable_entity)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TwitterResourcesController#create (for 127.0.0.1 at 2009-07-25 18:22:22) [POST]
+  Parameters: {"commit"=>"下一步", "twitter_resource"=>{"keywords"=>"wwsdf"}, "user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mTwitterResource Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+
+ActiveRecord::RecordInvalid (Validation failed: Keywords 请填写完全, Keywords 内容有点长了。你应该新建长篇内容。):
+  app/controllers/twitter_resources_controller.rb:17:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (39.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (unprocessable_entity)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-25 18:23:36) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) ORDER BY created_at DESC[0m
+  [4;35;1mTwitterResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/resources
+Rendering resources/index
+Rendered twitter_resources/_form (1.4ms)
+Rendered shared/_footer (0.6ms)
+Rendered shared/_header (1.1ms)
+Completed in 102ms (View: 9, DB: 2) | 200 OK [http://localhost/users/1/resources]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TwitterResourcesController#create (for 127.0.0.1 at 2009-07-25 18:23:37) [POST]
+  Parameters: {"commit"=>"下一步", "twitter_resource"=>{"keywords"=>"wwsdf"}, "user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mTwitterResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+
+ActiveRecord::RecordInvalid (Validation failed: Keywords 请填写完全, Keywords 内容有点长了。你应该新建长篇内容。):
+  app/controllers/twitter_resources_controller.rb:17:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (38.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (unprocessable_entity)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TwitterResourcesController#create (for 127.0.0.1 at 2009-07-25 18:25:58) [POST]
+  Parameters: {"commit"=>"下一步", "twitter_resource"=>{"keywords"=>"wwsdf"}, "user_id"=>"1"}
+  [4;36;1mUser Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mTwitterResource Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTwitterResource Create (0.0ms)[0m   [0mMysql::Error: Column 'keywords' cannot be null: INSERT INTO `resources` (`created_at`, `title`, `updated_at`, `type`, `user_id`, `content`, `shoulu`, `keywords`, `link_url`) VALUES('2009-07-25 10:25:58', NULL, '2009-07-25 10:25:58', 'TwitterResource', 1, NULL, 1, NULL, NULL)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: Column 'keywords' cannot be null: INSERT INTO `resources` (`created_at`, `title`, `updated_at`, `type`, `user_id`, `content`, `shoulu`, `keywords`, `link_url`) VALUES('2009-07-25 10:25:58', NULL, '2009-07-25 10:25:58', 'TwitterResource', 1, NULL, 1, NULL, NULL)):
+  app/controllers/twitter_resources_controller.rb:17:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (50.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TwitterResourcesController#create (for 127.0.0.1 at 2009-07-25 18:26:06) [POST]
+  Parameters: {"commit"=>"下一步", "twitter_resource"=>{"keywords"=>"wwsdf"}, "user_id"=>"1"}
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mTwitterResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mTwitterResource Create (0.0ms)[0m   [0;1mMysql::Error: Column 'keywords' cannot be null: INSERT INTO `resources` (`created_at`, `title`, `updated_at`, `type`, `user_id`, `content`, `shoulu`, `keywords`, `link_url`) VALUES('2009-07-25 10:26:06', NULL, '2009-07-25 10:26:06', 'TwitterResource', 1, NULL, 1, NULL, NULL)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: Column 'keywords' cannot be null: INSERT INTO `resources` (`created_at`, `title`, `updated_at`, `type`, `user_id`, `content`, `shoulu`, `keywords`, `link_url`) VALUES('2009-07-25 10:26:06', NULL, '2009-07-25 10:26:06', 'TwitterResource', 1, NULL, 1, NULL, NULL)):
+  app/controllers/twitter_resources_controller.rb:17:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (114.5ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mTwitterResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTwitterResource Create (0.2ms)[0m   [0;1mINSERT INTO `resources` (`created_at`, `title`, `updated_at`, `type`, `user_id`, `content`, `shoulu`, `keywords`, `link_url`) VALUES('2009-07-25 10:31:02', NULL, '2009-07-25 10:31:02', 'TwitterResource', 1, NULL, 1, 'aa', NULL)[0m
+  [4;35;1mSQL (65.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TwitterResourcesController#create (for 127.0.0.1 at 2009-07-25 18:33:57) [POST]
+  Parameters: {"commit"=>"下一步", "twitter_resource"=>{"keywords"=>"wwsdf"}, "user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mTwitterResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTwitterResource Create (0.0ms)[0m   [0mMysql::Error: Column 'keywords' cannot be null: INSERT INTO `resources` (`created_at`, `title`, `updated_at`, `type`, `user_id`, `content`, `shoulu`, `keywords`, `link_url`) VALUES('2009-07-25 10:33:57', NULL, '2009-07-25 10:33:57', 'TwitterResource', 1, NULL, 1, NULL, NULL)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: Column 'keywords' cannot be null: INSERT INTO `resources` (`created_at`, `title`, `updated_at`, `type`, `user_id`, `content`, `shoulu`, `keywords`, `link_url`) VALUES('2009-07-25 10:33:57', NULL, '2009-07-25 10:33:57', 'TwitterResource', 1, NULL, 1, NULL, NULL)):
+  app/controllers/twitter_resources_controller.rb:17:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (46.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TwitterResourcesController#create (for 127.0.0.1 at 2009-07-25 18:34:03) [POST]
+  Parameters: {"commit"=>"下一步", "twitter_resource"=>{"keywords"=>"wwsdf,"}, "user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mTwitterResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mTwitterResource Create (0.0ms)[0m   [0;1mMysql::Error: Column 'keywords' cannot be null: INSERT INTO `resources` (`created_at`, `title`, `updated_at`, `type`, `user_id`, `content`, `shoulu`, `keywords`, `link_url`) VALUES('2009-07-25 10:34:03', NULL, '2009-07-25 10:34:03', 'TwitterResource', 1, NULL, 1, NULL, NULL)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: Column 'keywords' cannot be null: INSERT INTO `resources` (`created_at`, `title`, `updated_at`, `type`, `user_id`, `content`, `shoulu`, `keywords`, `link_url`) VALUES('2009-07-25 10:34:03', NULL, '2009-07-25 10:34:03', 'TwitterResource', 1, NULL, 1, NULL, NULL)):
+  app/controllers/twitter_resources_controller.rb:17:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (47.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-25 18:36:38) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mResource Load (0.3ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) ORDER BY created_at DESC[0m
+  [4;36;1mResource Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mTwitterResource Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/resources
+Rendering resources/index
+Rendered twitter_resources/_form (1.2ms)
+
+ActionView::TemplateError (Missing template twitter_resources/_twitter_resource.erb in view path app/views) on line #42 of app/views/resources/index.erb:
+39:       </div>
+40:       <h2>你的全部：<em><%= link_to "我的全部就是这些东西？" %></em></h2>
+41:       <ul id="r">
+42:         <%= render @resources %>
+43:       </ul>
+44:     </div>
+45:   </div>
+
+    app/views/resources/index.erb:42
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (106.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-25 18:36:56) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) ORDER BY created_at DESC[0m
+  [4;36;1mResource Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mTwitterResource Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/resources
+Rendering resources/index
+Rendered twitter_resources/_form (1.3ms)
+
+ActionView::TemplateError (Missing template twitter_resources/_twitter_resource.erb in view path app/views) on line #42 of app/views/resources/index.erb:
+39:       </div>
+40:       <h2>你的全部：<em><%= link_to "我的全部就是这些东西？" %></em></h2>
+41:       <ul id="r">
+42:         <%= render @resources %>
+43:       </ul>
+44:     </div>
+45:   </div>
+
+    app/views/resources/index.erb:42
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (44.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-25 18:36:56) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) ORDER BY created_at DESC[0m
+  [4;36;1mResource Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mTwitterResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/resources
+Rendering resources/index
+Rendered twitter_resources/_form (1.4ms)
+
+ActionView::TemplateError (Missing template twitter_resources/_twitter_resource.erb in view path app/views) on line #42 of app/views/resources/index.erb:
+39:       </div>
+40:       <h2>你的全部：<em><%= link_to "我的全部就是这些东西？" %></em></h2>
+41:       <ul id="r">
+42:         <%= render @resources %>
+43:       </ul>
+44:     </div>
+45:   </div>
+
+    app/views/resources/index.erb:42
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (45.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-25 18:36:56) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) ORDER BY created_at DESC[0m
+  [4;36;1mResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mTwitterResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/resources
+Rendering resources/index
+Rendered twitter_resources/_form (1.3ms)
+
+ActionView::TemplateError (Missing template twitter_resources/_twitter_resource.erb in view path app/views) on line #42 of app/views/resources/index.erb:
+39:       </div>
+40:       <h2>你的全部：<em><%= link_to "我的全部就是这些东西？" %></em></h2>
+41:       <ul id="r">
+42:         <%= render @resources %>
+43:       </ul>
+44:     </div>
+45:   </div>
+
+    app/views/resources/index.erb:42
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (47.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-25 18:36:57) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) ORDER BY created_at DESC[0m
+  [4;36;1mResource Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mTwitterResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/resources
+Rendering resources/index
+Rendered twitter_resources/_form (1.2ms)
+
+ActionView::TemplateError (Missing template twitter_resources/_twitter_resource.erb in view path app/views) on line #42 of app/views/resources/index.erb:
+39:       </div>
+40:       <h2>你的全部：<em><%= link_to "我的全部就是这些东西？" %></em></h2>
+41:       <ul id="r">
+42:         <%= render @resources %>
+43:       </ul>
+44:     </div>
+45:   </div>
+
+    app/views/resources/index.erb:42
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (109.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-25 18:37:05) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) ORDER BY created_at DESC[0m
+  [4;36;1mResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mTwitterResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/resources
+Rendering resources/index
+Rendered twitter_resources/_form (1.3ms)
+
+ActionView::TemplateError (Missing template twitter_resources/_twitter_resource.erb in view path app/views) on line #42 of app/views/resources/index.erb:
+39:       </div>
+40:       <h2>你的全部：<em><%= link_to "我的全部就是这些东西？" %></em></h2>
+41:       <ul id="r">
+42:         <%= render @resources %>
+43:       </ul>
+44:     </div>
+45:   </div>
+
+    app/views/resources/index.erb:42
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (109.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-25 18:37:25) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) ORDER BY created_at DESC[0m
+  [4;36;1mResource Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mTwitterResource Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/resources
+Rendering resources/index
+Rendered twitter_resources/_form (1.2ms)
+
+ActionView::TemplateError (Missing template twitter_resources/_twitter_resource.erb in view path app/views) on line #42 of app/views/resources/index.erb:
+39:       </div>
+40:       <h2>你的全部：<em><%= link_to "我的全部就是这些东西？" %></em></h2>
+41:       <ul id="r">
+42:         <%= render @resources %>
+43:       </ul>
+44:     </div>
+45:   </div>
+
+    app/views/resources/index.erb:42
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (44.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-25 18:37:25) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) ORDER BY created_at DESC[0m
+  [4;36;1mResource Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mTwitterResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/resources
+Rendering resources/index
+Rendered twitter_resources/_form (1.3ms)
+
+ActionView::TemplateError (Missing template twitter_resources/_twitter_resource.erb in view path app/views) on line #42 of app/views/resources/index.erb:
+39:       </div>
+40:       <h2>你的全部：<em><%= link_to "我的全部就是这些东西？" %></em></h2>
+41:       <ul id="r">
+42:         <%= render @resources %>
+43:       </ul>
+44:     </div>
+45:   </div>
+
+    app/views/resources/index.erb:42
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (45.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-25 18:37:25) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) ORDER BY created_at DESC[0m
+  [4;36;1mResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mTwitterResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/resources
+Rendering resources/index
+Rendered twitter_resources/_form (1.2ms)
+
+ActionView::TemplateError (Missing template twitter_resources/_twitter_resource.erb in view path app/views) on line #42 of app/views/resources/index.erb:
+39:       </div>
+40:       <h2>你的全部：<em><%= link_to "我的全部就是这些东西？" %></em></h2>
+41:       <ul id="r">
+42:         <%= render @resources %>
+43:       </ul>
+44:     </div>
+45:   </div>
+
+    app/views/resources/index.erb:42
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (48.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-25 18:38:26) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) ORDER BY created_at DESC[0m
+  [4;36;1mResource Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mTwitterResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/resources
+Rendering resources/index
+Rendered twitter_resources/_form (1.3ms)
+
+ActionView::TemplateError (Missing template twitter_resources/_twitter_resource.erb in view path app/views) on line #42 of app/views/resources/index.erb:
+39:       </div>
+40:       <h2>你的全部：<em><%= link_to "我的全部就是这些东西？" %></em></h2>
+41:       <ul id="r">
+42:         <%= render @resources %>
+43:       </ul>
+44:     </div>
+45:   </div>
+
+    app/views/resources/index.erb:42
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (134.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-25 18:38:26) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) ORDER BY created_at DESC[0m
+  [4;36;1mResource Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mTwitterResource Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/resources
+Rendering resources/index
+Rendered twitter_resources/_form (1.2ms)
+
+ActionView::TemplateError (Missing template twitter_resources/_twitter_resource.erb in view path app/views) on line #42 of app/views/resources/index.erb:
+39:       </div>
+40:       <h2>你的全部：<em><%= link_to "我的全部就是这些东西？" %></em></h2>
+41:       <ul id="r">
+42:         <%= render @resources %>
+43:       </ul>
+44:     </div>
+45:   </div>
+
+    app/views/resources/index.erb:42
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (44.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAddresses (20090725045750)
+  [4;36;1mSQL (57.1ms)[0m   [0;1mDROP TABLE `addresses`[0m
+  [4;35;1mSQL (44.9ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20090725045750'[0m
+Migrating to CreateSearchedKeywordRelationships (20090721023534)
+  [4;36;1mSQL (42.1ms)[0m   [0;1mDROP TABLE `searched_keyword_relationships`[0m
+  [4;35;1mSQL (44.5ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20090721023534'[0m
+Migrating to CreateKaos (20090720085625)
+  [4;36;1mSQL (42.7ms)[0m   [0;1mDROP TABLE `kaos`[0m
+  [4;35;1mSQL (44.6ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20090720085625'[0m
+Migrating to CreateSearchedKeywords (20090713122317)
+  [4;36;1mSQL (57.7ms)[0m   [0;1mDROP TABLE `searched_keywords`[0m
+  [4;35;1mSQL (51.6ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20090713122317'[0m
+Migrating to CreateKeywords (20090713121600)
+  [4;36;1mSQL (53.7ms)[0m   [0;1mDROP TABLE `keywords`[0m
+  [4;35;1mSQL (44.6ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20090713121600'[0m
+Migrating to CreateComments (20090712100836)
+  [4;36;1mSQL (53.8ms)[0m   [0;1mDROP TABLE `comments`[0m
+  [4;35;1mSQL (55.6ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20090712100836'[0m
+Migrating to CreateResources (20090611163158)
+  [4;36;1mSQL (53.7ms)[0m   [0;1mDROP TABLE `resources`[0m
+  [4;35;1mSQL (66.9ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20090611163158'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `important_days`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `important_days`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `important_days`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `portraits`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `portraits`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `portraits`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `true_portraits`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `true_portraits`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `true_portraits`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20090523150301)
+Migrating to CreatePortraits (20090606045951)
+Migrating to CreateTruePortraits (20090611094020)
+Migrating to CreateResources (20090611163158)
+  [4;36;1mSQL (118.0ms)[0m   [0;1mCREATE TABLE `resources` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `type` varchar(255), `shoulu` tinyint(1) DEFAULT 1, `user_id` int(11), `keywords` varchar(139) NOT NULL, `title` varchar(14), `content` text, `link_url` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (44.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090611163158')[0m
+Migrating to CreateComments (20090712100836)
+  [4;36;1mSQL (100.2ms)[0m   [0;1mCREATE TABLE `comments` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `content` text, `resource_id` int(11), `user_id` int(11), `rating` int(11) DEFAULT 0, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (44.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090712100836')[0m
+Migrating to CreateKeywords (20090713121600)
+  [4;36;1mSQL (97.9ms)[0m   [0;1mCREATE TABLE `keywords` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (44.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090713121600')[0m
+Migrating to CreateSearchedKeywords (20090713122317)
+  [4;36;1mSQL (109.5ms)[0m   [0;1mCREATE TABLE `searched_keywords` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `searched_times` int(11) DEFAULT 1, `name` varchar(255), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (44.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090713122317')[0m
+Migrating to CreateKaos (20090720085625)
+  [4;36;1mSQL (109.6ms)[0m   [0;1mCREATE TABLE `kaos` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `keyword_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (44.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090720085625')[0m
+Migrating to CreateSearchedKeywordRelationships (20090721023534)
+  [4;36;1mSQL (98.5ms)[0m   [0;1mCREATE TABLE `searched_keyword_relationships` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `searched_keyword_id` int(11) NOT NULL, `related_searched_keyword_id` int(11) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (44.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090721023534')[0m
+Migrating to CreateAddresses (20090725045750)
+  [4;36;1mSQL (109.6ms)[0m   [0;1mCREATE TABLE `addresses` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `province` varchar(255), `city` varchar(255), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (55.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090725045750')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `addresses`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `addresses`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `addresses`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `comments`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `comments`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW FIELDS FROM `important_days`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `important_days`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `important_days`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `kaos`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `kaos`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `kaos`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW FIELDS FROM `keywords`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `keywords`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `keywords`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `portraits`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `portraits`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `portraits`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `resources`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `resources`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `searched_keyword_relationships`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `searched_keyword_relationships`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `searched_keyword_relationships`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `searched_keywords`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `searched_keywords`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `searched_keywords`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `true_portraits`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `true_portraits`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `true_portraits`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-25 18:38:49) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mResource Load (0.3ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) ORDER BY created_at DESC[0m
+  [4;36;1mTwitterResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/resources
+Rendering resources/index
+Rendered twitter_resources/_form (1.3ms)
+Rendered shared/_footer (0.6ms)
+Rendered shared/_header (1.1ms)
+Completed in 45ms (View: 8, DB: 2) | 200 OK [http://localhost/users/1/resources]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TwitterResourcesController#create (for 127.0.0.1 at 2009-07-25 18:38:59) [POST]
+  Parameters: {"commit"=>"下一步", "twitter_resource"=>{"keywords"=>"wwsdf,"}, "user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mTwitterResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mTwitterResource Create (0.2ms)[0m   [0;1mINSERT INTO `resources` (`created_at`, `title`, `updated_at`, `type`, `user_id`, `content`, `shoulu`, `keywords`, `link_url`) VALUES('2009-07-25 10:38:59', NULL, '2009-07-25 10:38:59', 'TwitterResource', 1, NULL, 1, 'wwsdf,', NULL)[0m
+  [4;35;1mSQL (47.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/users/1
+Completed in 77ms (DB: 49) | 302 Found [http://localhost/users/1/twitter_resources]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-07-25 18:38:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+Redirected to http://localhost:3000/users/1/resources
+Completed in 17ms (DB: 1) | 302 Found [http://localhost/users/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-25 18:38:59) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mResource Load (0.3ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) ORDER BY created_at DESC[0m
+  [4;35;1mResource Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mTwitterResource Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/resources
+Rendering resources/index
+Rendered twitter_resources/_form (1.3ms)
+
+ActionView::TemplateError (Missing template twitter_resources/_twitter_resource.erb in view path app/views) on line #42 of app/views/resources/index.erb:
+39:       </div>
+40:       <h2>你的全部：<em><%= link_to "我的全部就是这些东西？" %></em></h2>
+41:       <ul id="r">
+42:         <%= render @resources %>
+43:       </ul>
+44:     </div>
+45:   </div>
+
+    app/views/resources/index.erb:42
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (46.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-25 18:41:01) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) ORDER BY created_at DESC[0m
+  [4;35;1mResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mTwitterResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/resources
+Rendering resources/index
+Rendered twitter_resources/_form (1.3ms)
+Rendered shared/_footer (0.6ms)
+Rendered shared/_header (1.0ms)
+Completed in 102ms (View: 12, DB: 3) | 200 OK [http://localhost/users/1/resources]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-25 18:41:11) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) ORDER BY created_at DESC[0m
+  [4;35;1mResource Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mTwitterResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/resources
+Rendering resources/index
+Rendered twitter_resources/_form (1.2ms)
+
+ActionView::TemplateError (Missing template twitter_resources/_twitter_resource.erb in view path app/views) on line #42 of app/views/resources/index.erb:
+39:       </div>
+40:       <h2>你的全部：<em><%= link_to "我的全部就是这些东西？" %></em></h2>
+41:       <ul id="r">
+42:         <%= render :partial => @resources %>
+43:       </ul>
+44:     </div>
+45:   </div>
+
+    app/views/resources/index.erb:42
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (103.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-25 18:41:38) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) ORDER BY created_at DESC[0m
+  [4;35;1mResource Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mTwitterResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/resources
+Rendering resources/index
+Rendered twitter_resources/_form (1.2ms)
+
+ActionView::TemplateError (undefined method `resource_type' for #<TwitterResource:0xb714c1a4>) on line #3 of app/views/resources/_resource.erb:
+1: <li>
+2:   <h3>
+3:     <% if  resource.resource_type=="link_url_resource"  %>
+4:       <%= link_to resource.title,resource.link_url,:popup => true%>
+5:     <% elsif resource.resource_type=="twitter_resource" %>
+6:       <%=  link_to resource.keywords,user_resource_path(resource.owner,resource),:popup => true %>
+
+    app/views/resources/_resource.erb:3
+    app/views/resources/index.erb:42
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (51.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-25 18:41:38) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) ORDER BY created_at DESC[0m
+  [4;35;1mResource Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mTwitterResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/resources
+Rendering resources/index
+Rendered twitter_resources/_form (1.4ms)
+
+ActionView::TemplateError (undefined method `resource_type' for #<TwitterResource:0xb7190c14>) on line #3 of app/views/resources/_resource.erb:
+1: <li>
+2:   <h3>
+3:     <% if  resource.resource_type=="link_url_resource"  %>
+4:       <%= link_to resource.title,resource.link_url,:popup => true%>
+5:     <% elsif resource.resource_type=="twitter_resource" %>
+6:       <%=  link_to resource.keywords,user_resource_path(resource.owner,resource),:popup => true %>
+
+    app/views/resources/_resource.erb:3
+    app/views/resources/index.erb:42
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (52.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-25 18:43:26) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) ORDER BY created_at DESC[0m
+  [4;35;1mResource Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mTwitterResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/resources
+Rendering resources/index
+Rendered twitter_resources/_form (1.3ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mComment Load (0.3ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 1) AND (`comments`.resource_id = 1) ORDER BY created_at DESC LIMIT 3[0m
+  [4;35;1mComment Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.resource_id = 1) [0m
+Rendered resources/_resource (10.3ms)
+Rendered shared/_footer (0.7ms)
+Rendered shared/_header (1.1ms)
+Completed in 114ms (View: 21, DB: 4) | 200 OK [http://localhost/users/1/resources]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TwitterResourcesController#create (for 127.0.0.1 at 2009-07-25 18:43:28) [POST]
+  Parameters: {"commit"=>"下一步", "twitter_resource"=>{"keywords"=>""}, "user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mTwitterResource Columns (48.3ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTwitterResource Create (0.2ms)[0m   [0;1mINSERT INTO `resources` (`created_at`, `title`, `updated_at`, `type`, `user_id`, `content`, `shoulu`, `keywords`, `link_url`) VALUES('2009-07-25 10:43:28', NULL, '2009-07-25 10:43:28', 'TwitterResource', 1, NULL, 1, '', NULL)[0m
+  [4;35;1mSQL (104.2ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/users/1
+Completed in 183ms (DB: 154) | 302 Found [http://localhost/users/1/twitter_resources]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-07-25 18:43:28) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+Redirected to http://localhost:3000/users/1/resources
+Completed in 17ms (DB: 1) | 302 Found [http://localhost/users/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-25 18:43:28) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mResource Load (0.3ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) ORDER BY created_at DESC[0m
+  [4;35;1mResource Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mTwitterResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/resources
+Rendering resources/index
+Rendered twitter_resources/_form (1.3ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mComment Load (0.3ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 2) AND (`comments`.resource_id = 2) ORDER BY created_at DESC LIMIT 3[0m
+  [4;35;1mComment Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.resource_id = 2) [0m
+Rendered resources/_resource (8.3ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 1) AND (`comments`.resource_id = 1) ORDER BY created_at DESC LIMIT 3[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.resource_id = 1) [0m
+Rendered resources/_resource (3.0ms)
+Rendered shared/_footer (0.6ms)
+Rendered shared/_header (1.1ms)
+Completed in 111ms (View: 19, DB: 4) | 200 OK [http://localhost/users/1/resources]
