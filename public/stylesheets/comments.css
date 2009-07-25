@@ -103,7 +103,7 @@ h1,h2,h3 {
 }
 
 /* main left */
-#sidenav h1,#sidenav ul {
+#sidenav h2,#sidenav ul {
 	padding-left: 12px;
 }
 #sidenav {
@@ -112,7 +112,7 @@ h1,h2,h3 {
 	float: left;
 	width: 200px;
 }
-#sidenav h1 {
+#sidenav h2 {
 	color: #666;
 	font-size: 1.2em;
 	height: 20px;

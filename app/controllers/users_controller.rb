@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
   skip_before_filter :login_required,:except=>[:edit,:update,:show]
   layout 'sessions',:only =>:new
-  
   def new
     @user=User.new
   end
@@ -23,7 +22,7 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user=User.find(params[:id])
+    @user=User.find(current_user)
   end
 
   def update

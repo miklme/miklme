@@ -23,16 +23,19 @@
         <li><%= link_to "#{header.nick_name}的关键字",user_keywords_path(header) %>
         </li>
       <% end %>
-
-      <li>
-        <%= link_to "设置" %>
-      </li>
-      <li>
-        <%= link_to '注册新用户',new_user_path %>
-      </li>
-      <li>
-        <%= link_to '登出', session_path,:method => :delete %>
-      </li>
     </ul>
+    <% if header.id=current_user.id %>
+      <ul>
+        <li>
+          <%= link_to "个人设置",edit_user_path(current_user) %>
+        </li>
+        <li>
+          <%= link_to '注册新用户',new_user_path %>
+        </li>
+        <li>
+          <%= link_to '登出', session_path,:method => :delete %>
+        </li>
+      </ul>
+    <% end %>
   </div>
 </div>
