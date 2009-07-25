@@ -21,5 +21,5 @@
         <%= auto_link(highlight(truncate(comment.content,:length => 140),resource.keywords)) %>
       <% end %>
     </div>
-    <span><%= link_to "进入评论页面（#{resource.comments.count}条评论）", user_resource_comments_path(resource.owner,resource),:popup => true %></span>
+    <span><%= link_to "看看别人对这个条目的反应（#{resource.comments.count}条评论）", user_resource_comments_path(resource.owner,resource),:popup => true %></span>
   </li>
