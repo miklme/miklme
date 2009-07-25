@@ -1,7 +1,7 @@
 class CreateUsers < ActiveRecord::Migration
   def self.up
     create_table "users", :force => true do |t|
-      t.string :name, :limit => 20, :default => '', :null => true
+      t.string :name, :limit => 20
       t.string :email, :limit => 100,:null => false,:uniq => true
       t.string :crypted_password, :limit => 40
       t.string :salt, :limit => 40
@@ -13,9 +13,9 @@ class CreateUsers < ActiveRecord::Migration
       t.integer :follower_id
       t.integer :following_id
       t.decimal  :value,:default=>0,:precision => 8,:scale => 1
-      t.decimal :money,:default => 10,:presicision => 8,:scale => 2
       t.integer :terms
-      t.string :username,:limit => 40,:uniq => true
+      t.date :birthday
+
       t.timestamps
 
     end

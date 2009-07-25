@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   skip_before_filter :login_required,:except=>[:edit,:update,:show]
-  layout 'sessions',:only =>:new
+  layout "sessions",:only => "new"
   def new
     @user=User.new
   end
@@ -23,6 +23,7 @@ class UsersController < ApplicationController
 
   def edit
     @user=User.find(current_user)
+    render :layout => "users"
   end
 
   def update
@@ -30,7 +31,7 @@ class UsersController < ApplicationController
     if @user.update_attributes(params[:user])
       redirect_to(user_path(@user))
     else
-      render :action => "edit" 
+      render :action => "edit",:layout => "users"
     end
   end
 

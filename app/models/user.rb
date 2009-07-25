@@ -19,6 +19,7 @@ class User < ActiveRecord::Base
     :class_name => "User",
     :order => "value DESC",
     :foreign_key => 'follower_id'
+  has_one :address
   has_one :portrait
   has_one :true_portrait
   has_many :followers,
@@ -35,7 +36,7 @@ class User < ActiveRecord::Base
     :message => "在Michael看来并不合理"
   validates_length_of :nick_name,:name,:maximum=>10,:on => :update
   validates_uniqueness_of :email
-  validates_presence_of :nick_name,:on => :update
+  validates_presence_of :nick_name,:name,:on => :update
   validates_acceptance_of :terms,:message => '请同意我们的服务条款以继续',:on => :create,:accept => 1
   # how to do attr_accessible from here?
   # prevents a user from submitting a crafted form that bypasses activation

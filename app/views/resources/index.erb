@@ -3,9 +3,9 @@
     <div id="sidebar">
       <div id="sidebar_top"></div>
       <div id="sidebar_text">
-        <%= link_to "看看#{@user.nick_name}上网看些什么" ,user_link_url_resources_path(@user)%>
-        <%= link_to "看看#{@user.nick_name}不上网时生活怎样过",user_twitter_resources_path(@user) %>
-        <%= link_to "看看#{@user.nick_name}的思想深度如何",user_blog_resources_path(@user) %>
+        <h2><%= link_to "看看#{@user.nick_name}上网看些什么" ,user_link_url_resources_path(@user)%></h2>
+        <h2><%= link_to "看看#{@user.nick_name}不上网时生活怎样过",user_twitter_resources_path(@user) %></h2>
+        <h2><%= link_to "看看#{@user.nick_name}的思想深度如何",user_blog_resources_path(@user) %></h2>
       </div>
       <div id="sidebar_bottom"></div>
     </div>
