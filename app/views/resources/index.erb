@@ -30,10 +30,7 @@
           <li>
             呓语，少于139字。<strong>不包含链接</strong>（无趣不上网之时）
             <p>直接写在这里：</p>
-            <% form_for(@twitter_resource) :action => :check_content,:id => @resource do %>
-              <%= text_area "resource","step_one",:size => '42*20' %>
-              <%= submit_tag "下一步" %>
-            <% end %>
+            <%= render :partial => "twitter_resources/form",:locals => { :user => @user,:twitter_resource => @twitter_resource }  %>
           </li>
         </ul>
         <p>

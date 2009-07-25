@@ -1,4 +1,4 @@
-body { margin:114px 0 0 0; line-height:20px; font-family:微软雅黑,新宋体,华文宋体,sans-serif; background: url(../images/body_top_bckg.jpg) no-repeat center top #171c20; color:#bed7e6; font-size:13px;}
+body { margin:114px 0 0 0; line-height:16px; font-family:微软雅黑,新宋体,华文宋体,sans-serif; background: url(../images/body_top_bckg.jpg) no-repeat center top #171c20; color:#bed7e6; font-size:14px;}
 a { color:#fefefe;text-decoration:none;}
 a:hover {
     background-color: #F26513;
@@ -13,7 +13,7 @@ a:hover {
 #menu ul a:hover { background-color:#f26513;}
 #main {background: url(../images/body_all_bckg.jpg) repeat-y top center;}
 #content {width:780px; margin:0 auto;}
-#text { width:520px;}
+#text { width:520px;line-height:22px }
 #text p { margin:7px 0 7px 0;}
 #sidebar {float:right; width:227px; background-color:#0b0e10; margin:10px 10px 0 0; }
 #sidebar_top { width:227px; height:40px; background:url(../images/sidebar_top.jpg) no-repeat;}

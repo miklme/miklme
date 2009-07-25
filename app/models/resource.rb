@@ -3,7 +3,6 @@ class Resource < ActiveRecord::Base
   has_many :commenters,:through => :comments,:source => :user
   belongs_to :owner,:class_name => 'User',:foreign_key => :user_id
 
-  validates_presence_of :keywords,:message => "请填写完全"
   named_scope :search_result,lambda { |keywords|
     { :conditions => ['keywords = ?', keywords],:order => 'created_at DESC' }
   }

@@ -1,0 +1,5 @@
+<% form_for([user,twitter_resource])  do |f|%>
+  <%= f.error_messages %>
+  <%= f.text_area :keywords,:size => '42*20' %>
+  <%=f.submit "下一步" %>
+<% end %>

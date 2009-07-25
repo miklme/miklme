@@ -6,8 +6,8 @@ class ResourcesController < ApplicationController
     @link_url_resources=@user.link_url_resources
     @twitter_resources=@user.twitter_resources
     @blog_resources=@user.blog_resources
+    @twitter_resource=@user.twitter_resources.build
   end
-  
   def show
     @resource = Resource.find(params[:id])
     respond_to do |format|
@@ -68,41 +68,6 @@ class ResourcesController < ApplicationController
     end
   end
 
-
-  def check_resource_type(content)
-    if content =~ %r{[a-zA-z]+://[^\s]*}
-      "link_url_resource"
-    elsif content !~%r{[a-zA-z]+://[^\s]*} and content.length<=139
-      "twitter_resource"
-    elsif  content !~%r{[a-zA-z]+://[^\s]*} and content.length>=140
-      "blog_resource"
-    end
-  end
-
-  def check_content
-    @resource = current_user.resources.build
-    check_result=check_resource_type(params[:resource][:step_one])
-    if check_result=="link_url_resource"
-      @known_resource= Resource.scoped_by_link_url(params[:resource][:step_one]).by_owner_value.first
-      flash[:link_url]=params[:resource][:step_one]
-      redirect_to new_user_link_url_resource_path(current_user)
-    elsif check_result=="twitter_resource"
-      @resource.resource_type="twitter_resource"
-      @resource.keywords=params[:resource][:step_one]
-      if @resource.save!
-        flash[:notice]='<p>你说了一些不知道是什么东西的东西。不过你看，我们已经把它加上去了。</p>
-<p>你可以选择回到Michael页面，搜索一下你刚才的胡言乱语试试。</p>
-        <p>或者开始另一段胡言乱语.</p>'
-        redirect_to user_path(current_user)
-      else
-        redirect_to_user_path(current_user)
-      end
-    elsif check_result=="blog_resource"
-      render :update do |page|
-      end
-    end
-  end
-  
   private
   def load_user
     @user=User.find(params[:user_id])
