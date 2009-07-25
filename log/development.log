@@ -115,3 +115,286 @@ ActiveRecord::RecordInvalid (Validation failed: Keywords 请填写完全):
 Rendered rescues/_trace (100.7ms)
 Rendered rescues/_request_and_response (1.3ms)
 Rendering rescues/layout (unprocessable_entity)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAddresses (20090725045750)
+  [4;36;1mSQL (39.8ms)[0m   [0;1mDROP TABLE `addresses`[0m
+  [4;35;1mSQL (44.6ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20090725045750'[0m
+Migrating to CreateSearchedKeywordRelationships (20090721023534)
+  [4;36;1mSQL (43.0ms)[0m   [0;1mDROP TABLE `searched_keyword_relationships`[0m
+  [4;35;1mSQL (44.2ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20090721023534'[0m
+Migrating to CreateKaos (20090720085625)
+  [4;36;1mSQL (42.0ms)[0m   [0;1mDROP TABLE `kaos`[0m
+  [4;35;1mSQL (44.6ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20090720085625'[0m
+Migrating to CreateSearchedKeywords (20090713122317)
+  [4;36;1mSQL (53.3ms)[0m   [0;1mDROP TABLE `searched_keywords`[0m
+  [4;35;1mSQL (44.7ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20090713122317'[0m
+Migrating to CreateKeywords (20090713121600)
+  [4;36;1mSQL (53.5ms)[0m   [0;1mDROP TABLE `keywords`[0m
+  [4;35;1mSQL (46.8ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20090713121600'[0m
+Migrating to CreateComments (20090712100836)
+  [4;36;1mSQL (51.7ms)[0m   [0;1mDROP TABLE `comments`[0m
+  [4;35;1mSQL (57.5ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20090712100836'[0m
+Migrating to CreateResources (20090611163158)
+  [4;36;1mSQL (42.6ms)[0m   [0;1mDROP TABLE `resources`[0m
+  [4;35;1mSQL (44.5ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20090611163158'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `important_days`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `important_days`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `important_days`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `portraits`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `portraits`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `portraits`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW FIELDS FROM `true_portraits`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `true_portraits`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `true_portraits`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20090523150301)
+Migrating to CreatePortraits (20090606045951)
+Migrating to CreateTruePortraits (20090611094020)
+Migrating to CreateResources (20090611163158)
+  [4;36;1mSQL (146.7ms)[0m   [0;1mCREATE TABLE `resources` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `type` varchar(255), `shoulu` tinyint(1) DEFAULT 1, `user_id` int(11), `keywords` varchar(139) NOT NULL, `title` varchar(14), `content` text, `link_url` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (44.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090611163158')[0m
+Migrating to CreateComments (20090712100836)
+  [4;36;1mSQL (98.2ms)[0m   [0;1mCREATE TABLE `comments` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `content` text, `resource_id` int(11), `user_id` int(11), `rating` int(11) DEFAULT 0, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (44.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090712100836')[0m
+Migrating to CreateKeywords (20090713121600)
+  [4;36;1mSQL (98.5ms)[0m   [0;1mCREATE TABLE `keywords` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (44.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090713121600')[0m
+Migrating to CreateSearchedKeywords (20090713122317)
+  [4;36;1mSQL (98.3ms)[0m   [0;1mCREATE TABLE `searched_keywords` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `searched_times` int(11) DEFAULT 1, `name` varchar(255), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (44.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090713122317')[0m
+Migrating to CreateKaos (20090720085625)
+  [4;36;1mSQL (98.4ms)[0m   [0;1mCREATE TABLE `kaos` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `keyword_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (44.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090720085625')[0m
+Migrating to CreateSearchedKeywordRelationships (20090721023534)
+  [4;36;1mSQL (87.3ms)[0m   [0;1mCREATE TABLE `searched_keyword_relationships` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `searched_keyword_id` int(11) NOT NULL, `related_searched_keyword_id` int(11) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (44.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090721023534')[0m
+Migrating to CreateAddresses (20090725045750)
+  [4;36;1mSQL (87.0ms)[0m   [0;1mCREATE TABLE `addresses` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `province` varchar(255), `city` varchar(255), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (55.6ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090725045750')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `addresses`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `addresses`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `addresses`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `comments`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `comments`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `important_days`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `important_days`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `important_days`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `kaos`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `kaos`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `kaos`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW FIELDS FROM `keywords`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mdescribe `keywords`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `keywords`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `portraits`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `portraits`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `portraits`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `resources`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `resources`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `searched_keyword_relationships`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `searched_keyword_relationships`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `searched_keyword_relationships`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW FIELDS FROM `searched_keywords`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `searched_keywords`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `searched_keywords`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `true_portraits`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `true_portraits`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `true_portraits`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-25 17:16:06) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mResource Load (0.3ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) ORDER BY created_at DESC[0m
+Rendering template within layouts/resources
+Rendering resources/index
+ERROR: compiling _run_erb_app47views47resources47index46erb RAISED compile error
+/home/michael/miklme/app/views/resources/index.erb:33: syntax error, unexpected ':', expecting kEND
+... form_for(@twitter_resource) :action => :check_content,:id =...
+                              ^
+/home/michael/miklme/app/views/resources/index.erb:53: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _run_erb_app47views47resources47index46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<div id=\"main\">\n  <div id=\"content\">\n    <div id=\"sidebar\">\n      <div id=\"sidebar_top\"></div>\n      <div id=\"sidebar_text\">\n        <h2>"
+
+
+
+
+; @output_buffer.concat(( link_to "看看#{@user.nick_name}上网看些什么" ,user_link_url_resources_path(@user)).to_s); @output_buffer.concat "</h2>\n        <h2>"
+; @output_buffer.concat(( link_to "看看#{@user.nick_name}不上网时生活怎样过",user_twitter_resources_path(@user) ).to_s); @output_buffer.concat "</h2>\n        <h2>"
+; @output_buffer.concat(( link_to "看看#{@user.nick_name}的思想深度如何",user_blog_resources_path(@user) ).to_s); @output_buffer.concat "</h2>\n      </div>\n      <div id=\"sidebar_bottom\"></div>\n    </div>\n    <div id=\"text\">\n      "
+
+
+
+
+; if flash[:notice]; @output_buffer.concat "\n        <p>"
+; @output_buffer.concat((flash[:notice]).to_s); @output_buffer.concat "</p>\n      "
+; end; @output_buffer.concat "\n      "
+; if flash[:error]; @output_buffer.concat "\n        <p>"
+; @output_buffer.concat((flash[:error]).to_s); @output_buffer.concat "</p>\n      "
+; end; @output_buffer.concat "\n      <div id=\"new_resource\">\n        <h2>\350\277\231\351\207\214\344\275\240\345\217\257\344\273\245\345\210\206\344\272\253\345\246\202\344\270\213\344\272\213\347\211\251\357\274\214\350\277\231\344\272\233\344\272\213\347\211\251\345\260\206\350\242\253\347\272\263\345\205\245Michael\345\274\225\346\223\216\357\274\232</h2>\n        <ul>\n          <li>\n            \351\225\277\347\257\207\343\200\202\345\244\232\344\272\216139\345\255\227\357\274\210\346\234\211\350\266\243\346\227\266\357\274\211\n            "
+
+
+
+
+
+; @output_buffer.concat(( link_to "新建>>>",new_user_blog_resource_path(current_user),:popup => ['新的文章', 'height=500,width=400'] ).to_s); @output_buffer.concat "\n          </li>\n          <li>\n            \351\223\276\346\216\245URL\343\200\202<strong>\346\263\250\346\204\217\345\212\240\345\205\245http://\345\255\227\346\240\267</strong>\357\274\210\346\227\240\350\266\243\344\270\212\347\275\221\344\271\213\346\227\266\357\274\211\n            "
+
+
+
+; @output_buffer.concat(( link_to "新建>>>",new_user_link_url_resource_path(current_user),:popup => ['新的分享', 'height=500,width=400']).to_s); @output_buffer.concat "\n          </li>\n          <li>\n            \345\221\223\350\257\255\357\274\214\345\260\221\344\272\216139\345\255\227\343\200\202<strong>\344\270\215\345\214\205\345\220\253\351\223\276\346\216\245</strong>\357\274\210\346\227\240\350\266\243\344\270\215\344\270\212\347\275\221\344\271\213\346\227\266\357\274\211\n            <p>\347\233\264\346\216\245\345\206\231\345\234\250\350\277\231\351\207\214\357\274\232</p>\n            "
+
+
+
+
+;  form_for(@twitter_resource) :action => :check_content,:id => @resource do ; @output_buffer.concat "\n              "
+; @output_buffer.concat(( text_area "resource","step_one",:size => '42*20' ).to_s); @output_buffer.concat "\n              "
+; @output_buffer.concat(( submit_tag "下一步" ).to_s); @output_buffer.concat "\n            "
+;  end ; @output_buffer.concat "\n          </li>\n        </ul>\n        <p>\n          <strong>\345\275\242\345\274\217\345\271\263\345\271\263\346\227\240\345\245\207......\351\207\215\350\246\201\347\232\204\346\230\257,\350\277\231\344\272\233\344\270\200\345\210\207\345\260\206\350\242\253\346\243\200\347\264\242\357\274\214\346\220\234\347\264\242\347\273\223\346\236\234\347\224\261\344\275\240\346\216\247\345\210\266\343\200\202\344\275\225\344\270\215\347\253\213\345\215\263\345\260\235\350\257\225\357\274\237</strong>\n        </p>\n      </div>\n      <h2>\344\275\240\347\232\204\345\205\250\351\203\250\357\274\232<em>"
+
+
+
+
+
+
+; @output_buffer.concat(( link_to "我的全部就是这些东西？" ).to_s); @output_buffer.concat "</em></h2>\n      <ul id=\"r\">\n        "
+
+; @output_buffer.concat(( render @resources ).to_s); @output_buffer.concat "\n      </ul>\n    </div>\n  </div>\n  "
+
+
+
+; @output_buffer.concat(( render :partial => "shared/footer" ).to_s); @output_buffer.concat "\n</div>\n\n"
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/michael/miklme/app/views/resources/index.erb:53:in `compile!'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:343:in `_render_with_layout'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:257:in `render'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:937:in `render_without_benchmark'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1317:in `default_render'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1323:in `perform_action_without_filters'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/home/michael/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/home/michael/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/home/michael/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/home/michael/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/home/michael/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/home/michael/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/home/michael/.gem/ruby/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+/home/michael/.gem/ruby/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/webrick.rb:46:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/webrick.rb:13:in `run'
+/home/michael/.gem/ruby/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/home/michael/miklme/app/views/resources/index.erb:33: syntax error, unexpected ':', expecting kEND
+... form_for(@twitter_resource) :action => :check_content,:id =...
+                              ^
+/home/michael/miklme/app/views/resources/index.erb:53: syntax error, unexpected kENSURE, expecting $end) on line #33 of app/views/resources/index.erb:
+30:           <li>
+31:             呓语，少于139字。<strong>不包含链接</strong>（无趣不上网之时）
+32:             <p>直接写在这里：</p>
+33:             <% form_for(@twitter_resource) :action => :check_content,:id => @resource do %>
+34:               <%= text_area "resource","step_one",:size => '42*20' %>
+35:               <%= submit_tag "下一步" %>
+36:             <% end %>
+
+    app/views/resources/index.erb:53:in `compile!'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (39.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)

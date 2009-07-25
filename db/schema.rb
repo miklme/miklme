@@ -57,11 +57,11 @@ ActiveRecord::Schema.define(:version => 20090725045750) do
   end
 
   create_table "resources", :force => true do |t|
-    t.string   "resource_type"
-    t.boolean  "shoulu",                       :default => true
+    t.string   "type"
+    t.boolean  "shoulu",                    :default => true
     t.integer  "user_id"
-    t.string   "keywords",      :limit => 139,                   :null => false
-    t.string   "title",         :limit => 14
+    t.string   "keywords",   :limit => 139,                   :null => false
+    t.string   "title",      :limit => 14
     t.text     "content"
     t.string   "link_url"
     t.datetime "created_at"
@@ -108,6 +108,7 @@ ActiveRecord::Schema.define(:version => 20090725045750) do
     t.string   "username",                  :limit => 40
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.date     "birthday"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email"

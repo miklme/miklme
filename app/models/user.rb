@@ -19,6 +19,9 @@ class User < ActiveRecord::Base
     :class_name => "User",
     :order => "value DESC",
     :foreign_key => 'follower_id'
+  has_many :link_url_resources
+  has_many :blog_resources
+  has_many :twitter_resources
   has_one :address
   has_one :portrait
   has_one :true_portrait
