@@ -3,9 +3,9 @@
     <div id="sidebar">
       <div id="sidebar_top"></div>
       <div id="sidebar_text">
-        <h2><%= link_to "看看#{@user.nick_name}上网看些什么" ,user_link_url_resources_path(@user)%></h2>
-        <h2><%= link_to "看看#{@user.nick_name}不上网时生活怎样过",user_twitter_resources_path(@user) %></h2>
-        <h2><%= link_to "看看#{@user.nick_name}的思想深度如何",user_blog_resources_path(@user) %></h2>
+        <h2><%= link_to "#{@user.nick_name}上网看些什么" ,user_link_url_resources_path(@user)%></h2>
+        <h2><%= link_to "#{@user.nick_name}不上网时生活怎样过",user_twitter_resources_path(@user) %></h2>
+        <h2><%= link_to "#{@user.nick_name}的思想深度如何",user_blog_resources_path(@user) %></h2>
       </div>
       <div id="sidebar_bottom"></div>
     </div>
@@ -17,19 +17,18 @@
         <p><%=flash[:error]%></p>
       <%end%>
       <div id="new_resource">
-        <h2>这里你可以分享如下事物，这些事物将被纳入Michael引擎：</h2>
+        <h1>这里你可以分享如下事物，这些事物将被纳入Michael引擎：</h1>
         <ul>
           <li>
-            长篇。多于139字（有趣时）
+            长篇。多于139字（不无聊时）
             <%= link_to "新建>>>",new_user_blog_resource_path(current_user),:popup => ['新的文章', 'height=500,width=400'] %>
           </li>
           <li>
-            链接URL。<strong>注意加入http://字样</strong>（无趣上网之时）
+            链接URL。<strong>注意加入http://字样</strong>（上网无聊时）
             <%= link_to "新建>>>",new_user_link_url_resource_path(current_user),:popup => ['新的分享', 'height=500,width=400']%>
           </li>
           <li>
-            呓语，少于139字。<strong>不包含链接</strong>（无趣不上网之时）
-            <p>直接写在这里：</p>
+            呓语，少于139字。<strong>不包含链接,</strong>直接写在下面：（不上网无聊时）
             <%= render :partial => "twitter_resources/form",:locals => { :user => @user,:twitter_resource => @twitter_resource }  %>
           </li>
         </ul>
