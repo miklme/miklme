@@ -1,4 +1,5 @@
 class BlogResourcesController < ApplicationController
+  before_filter :find_user
   def new
   end
 
@@ -9,6 +10,11 @@ class BlogResourcesController < ApplicationController
   end
 
   def index
+    @blog_resources=@user.blog_resources
   end
 
+  private
+  def find_user
+    @user=User.find(params[:user_id])
+  end
 end

@@ -28,7 +28,7 @@
             <%= link_to "新建>>>",new_user_link_url_resource_path(current_user),:popup => ['新的分享', 'height=500,width=400']%>
           </li>
           <li>
-            呓语，少于139字。<strong>不包含链接,</strong>直接写在下面：（不上网无聊时）
+            呓语，少于139字。<strong>不含链接,</strong>直接写在下面：（不上网无聊时）
             <%= render :partial => "twitter_resources/form",:locals => { :user => @user,:twitter_resource => @twitter_resource }  %>
           </li>
         </ul>

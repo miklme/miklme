@@ -3,9 +3,6 @@ class ResourcesController < ApplicationController
   auto_complete_for :resource,:keywords
   def index
     @resources=@user.resources.find(:all,:order => "created_at DESC")
-    @link_url_resources=@user.link_url_resources
-    @twitter_resources=@user.twitter_resources
-    @blog_resources=@user.blog_resources
     @twitter_resource=@user.twitter_resources.build
   end
   def show

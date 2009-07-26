@@ -1,5 +1,5 @@
 class LinkUrlResourcesController < ApplicationController
-  layout "comments"
+  before_filter :find_user
   def new
   end
 
@@ -10,6 +10,7 @@ class LinkUrlResourcesController < ApplicationController
   end
 
   def index
+    @link_url_resources=@user.link_url_resources
   end
   
   def create
@@ -25,5 +26,9 @@ class LinkUrlResourcesController < ApplicationController
         page.insert_html :top, "new_resource", "<p>请填写完全</p>"
       end
     end
+  end
+  private
+  def find_user
+    @user=User.find(params[:user_id])
   end
 end

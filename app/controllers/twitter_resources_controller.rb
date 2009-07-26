@@ -10,11 +10,12 @@ class TwitterResourcesController < ApplicationController
   end
 
   def index
+    @twitter_resources=@user.twitter_resources
   end
 
   def create
     @twitter_resource=@user.twitter_resources.build(params[:twitter_resource])
-    if @twitter_resource.save and @twitter_resource.errors.blank?
+    if  @twitter_resource.save and @twitter_resource.errors.blank?
       flash[:notice]='<p>你说了一些不知道是什么东西的东西。不过你看，我们已经把它加上去了。</p>
 <p>你可以选择回到Michael页面，搜索一下你刚才的胡言乱语试试。</p>
         <p>或者开始另一段胡言乱语.</p>'
