@@ -1,4 +1,4 @@
-class KeywordsController < ApplicationController
+class ControlledKeywordsController < ApplicationController
   before_filter :load_user
   # GET /keywords
   # GET /keywords.xml

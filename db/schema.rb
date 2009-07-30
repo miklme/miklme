@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090725045750) do
+ActiveRecord::Schema.define(:version => 20090730023204) do
 
   create_table "addresses", :force => true do |t|
     t.string   "province"
@@ -28,23 +28,14 @@ ActiveRecord::Schema.define(:version => 20090725045750) do
     t.datetime "updated_at"
   end
 
-  create_table "important_days", :force => true do |t|
-    t.date     "day"
-    t.text     "description"
-    t.integer  "user_id"
+  create_table "controlled_keywords", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "kaos", :force => true do |t|
+  create_table "keywords_controllings", :force => true do |t|
     t.integer  "user_id"
-    t.integer  "keyword_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "keywords", :force => true do |t|
-    t.string   "name"
+    t.integer  "controlled_keyword_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -52,6 +43,12 @@ ActiveRecord::Schema.define(:version => 20090725045750) do
   create_table "portraits", :force => true do |t|
     t.integer  "user_id"
     t.string   "image_file"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "related_searched_keywords", :force => true do |t|
+    t.integer  "searched_keyword_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -91,26 +88,23 @@ ActiveRecord::Schema.define(:version => 20090725045750) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "name",                      :limit => 20,                                 :default => ""
-    t.string   "email",                     :limit => 100,                                                 :null => false
+    t.string   "name",                      :limit => 20
     t.string   "crypted_password",          :limit => 40
     t.string   "salt",                      :limit => 40
     t.string   "remember_token",            :limit => 40
     t.datetime "remember_token_expires_at"
-    t.string   "activation_code",           :limit => 40
-    t.datetime "activated_at"
     t.string   "nick_name",                 :limit => 20
     t.integer  "follower_id"
     t.integer  "following_id"
-    t.decimal  "value",                                    :precision => 8,  :scale => 1, :default => 0.0
-    t.integer  "money",                     :limit => 10,  :precision => 10, :scale => 0, :default => 10
+    t.decimal  "value",                                   :precision => 8, :scale => 1, :default => 0.0
     t.integer  "terms"
-    t.string   "username",                  :limit => 40
+    t.date     "birthday"
+    t.string   "username",                                                                               :null => false
+    t.integer  "failed_signin_times"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.date     "birthday"
   end
 
-  add_index "users", ["email"], :name => "index_users_on_email"
+  add_index "users", ["username"], :name => "index_users_on_username"
 
 end

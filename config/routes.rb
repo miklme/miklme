@@ -3,10 +3,10 @@ ActionController::Routing::Routes.draw do |map|
     user.resource :portrait
     user.resource :true_portrait
     user.resources  :friends
-    user.resources :resources,:has_many => :comments
+    user.resources :resources
     user.resources :searched_keywords
-    user.resources :keywords
-    user.resources :link_url_resources
+    user.resources :controlled_keywords
+    user.resources :link_url_resources,:has_many => :comments
     user.resources :blog_resources
     user.resources :twitter_resources
   end

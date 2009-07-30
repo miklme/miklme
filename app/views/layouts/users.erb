@@ -10,17 +10,19 @@
   <body>
     <% if logged_in? %>
       <%= render :partial => "shared/header",:object => @user %>
-    <% end %>
-    <div id="main">
-      <div id="content">
-        <% if flash[:notice] or flash[:error] %>
-          <div id="notice">
-            <%= flash[:error] or flash[:notice]%>
-          </div>
-        <% end %>
-        <%= @content_for_layout %>
+      <div id="main">
+        <div id="content">
+          <% if flash[:notice] or flash[:error] %>
+            <div id="notice">
+              <%= flash[:error] or flash[:notice]%>
+            </div>
+          <% end %>
+          <%= @content_for_layout %>
+        </div>
+        <%=render :partial=>'shared/footer'%>
       </div>
-      <%=render :partial=>'shared/footer'%>
-    </div>
+    <% else %>
+      <%= @content_for_layout %>
+    <% end %>
   </body>
 </html>
