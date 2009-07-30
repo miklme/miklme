@@ -6,7 +6,7 @@ class RelatedSearchedKeywordsController < ApplicationController
   end
 
   def new
-    @related_keyword=@keyword.related_searched_keywords.build
+    @related_searched_keyword=@keyword.related_searched_keywords.build
   end
 
   def edit
@@ -16,8 +16,8 @@ class RelatedSearchedKeywordsController < ApplicationController
   end
 
   def create
-    @related_keyword=@keyword.related_searched_keywords.build(params[:related_keyword])
-    if @related_keyword.save
+    @related_searched_keyword=@keyword.related_searched_keywords.build(params[:related_searched_keyword])
+    if @related_searched_keyword.save
       flash[:notice]="修改成功"
       redirect_to keyword_related_searched_keywords_path(@keyword)
     else

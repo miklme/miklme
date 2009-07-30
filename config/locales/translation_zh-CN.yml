@@ -1,18 +1,14 @@
 zh-CN: 
   activerecord: 
     models: 
-      keyword: ""
       user: "用户"  #g
 
     attributes: 
-      keyword:
-        name: ""
-        
       resource:
         description: 链接描述
         link_url: 地址
         title: 标题
-        keywords:
+        keywords: 关键字
 
       user:
         username: "用户名"

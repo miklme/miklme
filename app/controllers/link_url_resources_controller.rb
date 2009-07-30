@@ -1,6 +1,8 @@
 class LinkUrlResourcesController < ApplicationController
   before_filter :find_user
+  auto_complete_for :resource,:keywords
   def new
+    @link_url_resource=@user.link_url_resources.build
   end
 
   def show
@@ -14,17 +16,11 @@ class LinkUrlResourcesController < ApplicationController
   end
   
   def create
-    @link_url_resource=current_user.resources.build
-    if !params[:resource][:title].blank? and !params[:resource][:keywords].blank? and !flash[:link_url].blank?
-      @link_url_resource.update_attributes(:type => "link_url_resource",:title=>params[:title], :keywords=>params[:keywords],:link_url => flash[:link_url])
-      @link_url_resource.save
-      render :update do |page|
-        page.redirect_to user_path(current_user)
-      end
+    @link_url_resource=current_user.link_url_resources.build(params[:link_url_resource])
+    if @link_url_resource.save
+      redirect_to user_path(current_user)
     else
-      render :update do |page|
-        page.insert_html :top, "new_resource", "<p>请填写完全</p>"
-      end
+      render :action => :new
     end
   end
   private

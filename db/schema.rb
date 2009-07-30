@@ -54,13 +54,16 @@ ActiveRecord::Schema.define(:version => 20090730023204) do
   end
 
   create_table "resources", :force => true do |t|
+    t.string   "keywords",    :limit => 139,                    :null => false
     t.string   "type"
-    t.boolean  "shoulu",                    :default => true
+    t.boolean  "shoulu",                     :default => true
     t.integer  "user_id"
-    t.string   "keywords",   :limit => 139,                   :null => false
-    t.string   "title",      :limit => 14
     t.text     "content"
+    t.string   "title"
+    t.string   "form"
     t.string   "link_url"
+    t.string   "description"
+    t.boolean  "authority",                  :default => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

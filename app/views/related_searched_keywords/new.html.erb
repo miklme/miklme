@@ -1,6 +1,6 @@
 <h1>新的相关关键字</h1>
 <p>
-  <% form_for([@keyword,@related_keyword]) do |f|%>
+  <% form_for([@keyword,@related_searched_keyword]) do |f|%>
     <%= f.text_field_with_auto_complete :name %>
     <%= f.submit "完成" %>
   <% end %>

@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   default_scope :order => 'value DESC'
   named_scope :value,:order => 'value DESC'
 
-  has_many :controlled_keywords
+  has_many :keywords_controllings
   has_many :searched_keywords
   has_many :comments
   has_many :commented_resources,:through => :comments,:source => :resource
@@ -36,9 +36,9 @@ class User < ActiveRecord::Base
   validates_format_of :username,:with => %r{^[a-zA-Z][a-zA-Z0-9_]{4,15}$},:message =>"请避免使用太过诡异的字符及汉字"
   validates_length_of :nick_name,:maximum=>10,:on => :update
   validates_length_of :username,:within => 5..20,:message => "请保持在5到20个字节内"
-  validates_length_of :name,:maximum => 4,:on => :update,:message => "请填写真实姓名"
+  validates_length_of :name,:within =>1..  4,:on => :update,:message => "真实姓名会使朋友更快找到你，Michael会保护你的隐私，不要担心"
   validates_presence_of :nick_name,:name,:on => :update
-  validates_acceptance_of :terms,:message => '请同意服务条款以继续',:on => :create,:accept => 1
+  validates_acceptance_of :terms,:message => '请同意服务条款以继续...',:on => :create,:accept => 1
   # how to do attr_accessible from here?
   # prevents a user from submitting a crafted form that bypasses activation
   # anything else you want your user to change should be added here.
@@ -50,5 +50,10 @@ class User < ActiveRecord::Base
     u && u.authenticated?(password) ? u : nil
   end
 
-
+  def owned_keywords
+    resources=self.resources
+    resources.map do |r|
+      r.keywords
+    end
+  end
 end

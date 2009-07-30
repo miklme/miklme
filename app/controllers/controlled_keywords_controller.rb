@@ -3,9 +3,11 @@ class ControlledKeywordsController < ApplicationController
   # GET /keywords
   # GET /keywords.xml
   def index
-    @keywords = @user.keywords
-    @my_keywords=@keywords.map do |k|
-      if k.top_owner.id==current_user.id
+    @keywords = @user.owned_keywords
+    @controlled_keywords=@keywords.map do |k|
+      rs=Resource.scoped_by_keywords(k)
+      top_owner=rs.by_owner_value.first
+      if top_owner.id==current_user.id
         k
       else
         nil

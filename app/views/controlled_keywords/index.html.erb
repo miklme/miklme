@@ -3,9 +3,9 @@
     <div id="content">
       <h2>别人可以通过以下关键字找到我：</h2>
       <p>
-        <% for keyword in @user.keywords  %>
+        <% for keyword in @user.owned_keywords  %>
           <span>
-            <%= link_to keyword.name,"/search/#{keyword.name}" %>
+            <%= link_to keyword,"/search/#{keyword}" %>
           </span>
         <% end %>
       </p>
@@ -13,9 +13,9 @@
         我掌控的关键字：
       </h2>
       <p>
-        <% for keyword in @my_keywords  %>
+        <% for keyword in @controlled_keywords  %>
           <span>
-            <%= link_to keyword.name,"/search/#{keyword.name}" %>
+            <%= link_to "#{keyword}","/search/#{keyword}" %>
           </span>
         <% end %>
       </p>

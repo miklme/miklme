@@ -1,10 +1,11 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :users do |user|
+    user.resources :controlled_keywords
     user.resource :portrait
     user.resource :true_portrait
     user.resources  :friends
-    user.resources :resources
-    user.resources :searched_keywords
+    user.resources :resources,:has_many => :comments
+    user.resources :searched_keywords,:has_many => :related_searched_keywords
     user.resources :controlled_keywords
     user.resources :link_url_resources,:has_many => :comments
     user.resources :blog_resources
