@@ -1,4 +1,5 @@
 class SearchedKeyword < ActiveRecord::Base
-  belongs_to :searcher,:class_name => "User",:foreign_key => 'user_id'
+  has_and_belongs_to_many :users
   has_many :related_keywords,:limit => 10
+  validates_uniqueness_of :name
 end

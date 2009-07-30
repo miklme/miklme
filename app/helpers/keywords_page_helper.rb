@@ -1,0 +1,2 @@
+module KeywordsPageHelper
+end

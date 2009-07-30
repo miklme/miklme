@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090729021859) do
+ActiveRecord::Schema.define(:version => 20090730075331) do
 
   create_table "addresses", :force => true do |t|
     t.string   "province"
@@ -60,9 +60,13 @@ ActiveRecord::Schema.define(:version => 20090729021859) do
   create_table "searched_keywords", :force => true do |t|
     t.integer  "searched_times", :default => 1
     t.string   "name"
-    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "searched_keywords_users", :force => true do |t|
+    t.integer "user_id"
+    t.integer "searched_keyword_id"
   end
 
   create_table "true_portraits", :force => true do |t|

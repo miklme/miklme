@@ -1,30 +1,28 @@
 class RelatedKeywordsController < ApplicationController
-  before_filter :find_user_and_searched_keyword
-  auto_complete_for :keyword,:name
+  before_filter :find_keyword_page
+  auto_complete_for :resource,:keywords
   def index
-    @related_keywords=@keyword.related_keywords
+    @related_keywords=@keyword_page.related_keywords
   end
 
   def new
-    @related_keyword=@keyword.related_keywords.build
+    @related_keyword=@keyword_page.related_keywords.build
   end
 
   def edit
   end
 
-  def show
-  end
-
   def create
-    @related_keyword=@keyword.related_keywords.build(params[:related_keyword])
+    @related_keyword=@keyword_page.related_keywords.build(params[:related_keyword])
     if @related_keyword.save
       flash[:notice]="修改成功"
-      redirect_to keyword_related_keywords_path(@keyword)
+      redirect_to keyword_related_keywords_path(@keyword_page)
     else
       render :action => :new
     end
   end
-  def find_user_and_searched_keyword
-    user_searched_keyword
+  def find_keyword_page
+    @user=User.find(current_user)
+    @searched_keyword=@keyword_page=SearchedKeyword.find(params[:searched_keyword_id])
   end
 end
