@@ -1,0 +1,28 @@
+<h1><%= link_to link_url_resource.description,link_url_resource.link_url,:popup => true%></h1>
+<% if not link_url_resource.owner == current_user %>
+  <em>来自：
+    <%= link_url_resource.owner.id %>
+    价值点数：<%= link_url_resource.owner.value %>
+  </em>
+  <div>
+    <ul>
+      <li>
+        <%=button_to "此结果对我有用",add_value_user_link_url_resource_path(link_url_resource.owner,link_url_resource) %>
+        <span id="marked" style="display:none">该链接分享者提高了3点价值点。</span>
+      </li>
+      <li>
+        <%= button_to "此结果与关键字不符",minus_value_user_link_url_resource_path(link_url_resource.owner,link_url_resource) %>
+      </li>
+    </ul>
+  </div>
+<% else %>
+<em><strong>我的条目</strong>
+    价值点数：<%= link_url_resource.owner.value %>
+  </em>
+<% end %>
+<div>
+  <% for comment in link_url_resource.comments.good_comments do%>
+      <%= auto_link(highlight(truncate(comment.content,:length => 140),link_url_resource.keywords)) %>
+    <% end %>
+  </div>
+  <div><%= link_to "看看别人对这个条目的反应（#{link_url_resource.comments.count}条评论）", user_resource_comments_path(link_url_resource.owner,link_url_resource),:popup => true %></div>

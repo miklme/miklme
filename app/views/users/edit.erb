@@ -1,31 +1,18 @@
-<div id="main">
-  <div id="content">
-    <%if flash[:notice]%>
-      <p><%=flash[:notice]%></p>
-    <%end%>
-    <%if flash[:error]%>
-      <p><%=flash[:error]%></p>
-    <%end%>
-    <div id="text">
-      <h1>我的个人信息：</h1>
-      <% form_for @user do |f|%>
-        <%= f.error_messages %>
-        <table cellpadding="10" cellspacing="10" rules="rows">
-          <tr><td><%= f.label :nick_name,'名号*'%></td><td><%= f.text_field :nick_name %></td><td>任何人都能看到，请随意填写。</td></tr>
-          <tr><td><%= f. label :name,'真实姓名'%></td><td><%= f.text_field :name %></td><td>真实姓名不会以<strong>任何形式</strong>泄露，仅好友可见。通过真实姓名，朋友才会找到你。<strong>不可更改。</strong></td></tr>
-          <tr><td><%= f.label :birthday,'生日（不是必须）' %></td><td><%= f.date_select :birthday,:start_year => 1970,:end_year => Time.now.year-8%></td><td>如果告诉Michael你的年龄，或许有一天，你会获得传说一般的搜索体验。</td></tr>
-          <tr><td></td><td></td><td></td></tr>
-        </table>
-        <p>
-          <strong>此外，你将拥有这样一个个人地址：mikl.me/真实姓名。</strong>
-          （当你和别人的姓名重复时，会员用户理应得到该地址）</p>
-        <%= f.submit '就这样'%>
-      <% end %>
-    </div>
-  </div>
-  <!-- footer -->
-  <%=render :partial=>'shared/footer'%>
-  <!-- end footer -->
+<div id="text">
+  <h1>我的个人信息：</h1>
+  <% form_for @user do |f|%>
+    <%= f.error_messages %>
+    <table cellpadding="10" cellspacing="10" rules="rows">
+      <tr><td><%= f.label :nick_name,'名号*'%></td><td><%= f.text_field :nick_name,:size => 21 %></td><td>任何人都能看到，请随意填写。</td></tr>
+      <tr><td><%= f. label :name,'真实姓名*'%></td><td><%= f.text_field :name,:size => 21 %></td><td>真实姓名不会以<strong>任何形式</strong>泄露，仅好友可见。通过真实姓名，朋友才会找到你。<strong>不可更改。</strong></td></tr>
+      <tr><td><%= f.label :birthday,'生日*' %></td><td><%= f.date_select :birthday,:start_year => 1970,:end_year => Time.now.year-8%></td><td>如果告诉Michael你的年龄，或许有一天，你会获得传说一般的搜索体验。</td></tr>
+      <tr><td></td><td></td><td></td></tr>
+    </table>
+    <p>
+      <strong>此外，你将拥有这样一个个人地址：mikl.me/真实姓名。</strong>
+      （当你和别人的姓名重复时，会员用户理应得到该地址）</p>
+    <%= f.submit '就这样'%>
+  <% end %>
 </div>
 
-</body>
+

@@ -9,6 +9,41 @@
     <%= javascript_include_tag :defaults,:cache => true %>
   </head>
   <body>
-    <%= @content_for_layout %>
+    <div id="container">
+      <div id="main">
+        <div id="header">
+          <div id="title">
+            <h1>Transparentia</h1>
+          </div>
+        </div>
+        <div id="content">
+          <div id="item">
+            <h1>Porttitor posuere</h1>
+            <div id="descr">Jun 13, 2006 by Vulputate</div>
+            <p>In hac habitasse platea dictumst. Duis porttitor. Sed vulputate elementum nisl. Vivamus et mi at arcu mattis iaculis. Nullam posuere tristique tortor. In bibendum. Aenean ornare, <a href="index.html">nunc eget pretium</a> porttitor, sem est pretium leo, non euismod nulla dui non diam. Pellentesque dictum faucibus leo. Vestibulum ac ante. Sed in est.</p>
+            <cite>Sed sodales nisl sit amet augue. Donec ultrices, augue ullamcorper posuere laoreet, turpis massa tristique justo, sed egestas metus magna sed purus.</cite>
+            <p>Fusce porta pede nec eros. Maecenas ipsum sem, interdum non, aliquam vitae, interdum nec, metus. Maecenas ornare lobortis risus. Etiam placerat varius mauris. Maecenas viverra. Sed feugiat. Donec mattis <a href="index.html">quam aliquam</a> risus. Nulla non felis sollicitudin urna blandit egestas. Integer et libero varius pede tristique ultricies. Cras nisl. Proin quis massa semper felis euismod ultricies.
+            </p>
+          </div>
+        </div>
+
+        <div id="sidenav">
+          <h1>Something</h1>
+          <ul>
+            <li><a href="index.html">sociis natoque</a></li>
+            <li><a href="index.html">convallis</a></li>
+          </ul>
+          <form action="index.html">
+            <div>
+              <input type="text" name="search" id="styled" /> <input type="submit" value="" id="button" />
+            </div>
+          </form>
+        </div>
+
+        <div id="clearer"><span></span></div>
+
+      </div>
+    </div>
+    <%= render "shared/footer" %>
   </body>
 </html>

@@ -1,42 +1,31 @@
 <%@page_title='（开始） '%>
-
 <body>
   <div id="header">
-    <div id="logo"> </div>
-    <h1>开始</h1>
+    <div id="logo"><%= link_to "Michael",new_session_path %></div>
+    <div id="menu"></div>
   </div>
   <!--end header -->
   <!-- main -->
   <div id="main">
     <div id="content">
-      <%if flash[:notice]%>
-        <p id="registered_notice"><%=flash[:notice]%></p>
-      <%end%>
-      <%if flash[:error]%>
-        <p id="registered_notice"><%=flash[:error]%></p>
-      <%end%>
-      <div id="register">
-        <div id="sidebar">
-          <div id="sidebar_top"></div>
-          <div id="sidebar_text">
-            <h2>仍有所困惑或怀疑？</h2>
-            <p>想要进一步了解Michael及Mikl.me，呵，请猛击<strong>>>>这里<<<</strong>。</p>
-          </div>
-          <div id="sidebar_bottom"></div>
+      <div id="sidebar">
+        <div id="sidebar_top"></div>
+        <div id="sidebar_text">
+          <h2>仍有所困惑或怀疑？</h2>
+          <p>想要进一步了解Michael及Mikl.me，呵，请猛击<strong>>>>这里<<<</strong>。</p>
         </div>
-        <h2>从这里开始..</h2>
+        <div id="sidebar_bottom"></div>
+      </div>
+      <div id="text">
+        <h1>由此开始：</h1>
         <% @user.password = nil %>
-
         <% form_for @user do |f| -%>
-          <p><%=f.error_messages %>
-          <p><%= f.label :email,'请输入你的Email，用于登入Mikl.me' %><br/>
-          <%= f.text_field :email %></p>
-          <p><%= f.label :password,'进入Michael的密码,至少6位' %><br/>
-          <%= f.password_field :password %></p>
-          <p><%= f.check_box :terms%>
-          <%= f.label :terms,'我同意Mikl.me的《使用协议》' %></p>
-          <p><%=f.submit '注册（需邮件确认)' %>
-          </p>
+          <%=f.error_messages %>
+          <table cellpadding="10" cellspacing="10" rules="rows">
+            <tr><td><%= f.label :username,'登录帐号，请使用英文、数字及下划线' %></td><td>        <%= f.text_field :username,:size => 23 %></td></tr>
+            <tr><td><%= f.label :password,'密码，至少6位' %></td><td>  <%= f.password_field :password,:size => 23 %></td></tr>
+            <tr><td><%= f.check_box :terms%> <%= f.label :terms,'我同意Mikl.me的《使用协议》' %></td><td><%=f.submit '注册' %></td></tr>
+          </table>
         <% end -%>
       </div>
     </div>

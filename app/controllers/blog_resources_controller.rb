@@ -7,6 +7,7 @@ class BlogResourcesController < ApplicationController
   end
 
   def edit
+    
   end
 
   def index

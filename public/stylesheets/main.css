@@ -119,11 +119,7 @@ input:hover,input:focus {    background-color: #fefefe;
     text-align: center;
     padding: 14px
 }
-.fieldWithErrors {
-}
-#errorExplanation {
-    color: #f6a1a1;
-}
+
 #user_password,#user_password_confirmation {width:100px}
 div.auto_complete {
     width: 350px;

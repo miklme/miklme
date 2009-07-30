@@ -8,9 +8,7 @@
     <%= stylesheet_link_tag 'default' %>
   </head>
   <body>
-    <% if logged_in? %>
-      <%= render :partial => "shared/header",:object => @user %>
-    <% end %>
+    <%= render :partial => "shared/header",:object => @user %>
     <div id="main">
       <div id="content">
         <% if flash[:notice] or flash[:error] %>
@@ -18,9 +16,18 @@
             <%= flash[:error] or flash[:notice]%>
           </div>
         <% end %>
+        <div id="sidebar">
+          <div id="sidebar_top"></div>
+          <div id="sidebar_text">
+            <h2><%= link_to_unless_current "#{@user.nick_name}的原创" ,user_link_url_resources_path(@user)%></h2>
+            <h2><%= link_to_unless_current "#{@user.nick_name}的转载",user_twitter_resources_path(@user) %></h2>
+            <h2><%= link_to_unless_current "#{@user.nick_name}平时的生活是怎样的",user_blog_resources_path(@user) %></h2>
+          </div>
+          <div id="sidebar_bottom"></div>
+        </div>
         <%= @content_for_layout %>
       </div>
-      <%=render :partial=>'shared/footer'%>
+      <%= render :partial => "shared/footer" %>
     </div>
   </body>
 </html>

@@ -1,5 +1,12 @@
 <% form_for([user,twitter_resource])  do |f|%>
   <%= f.error_messages %>
-  <%= f.text_area :keywords,:size => '42*20' %>
-  <%=f.submit "下一步" %>
+    <% if !user.link_url_resources.blank?  %>
+      <%= f.text_area :keywords,:size => '42*20' %>
+    <% else %>
+      <p id="notice">在呓语之前，请先分享一个链接。</p>
+      <%= f.text_area :keywords,:size => "42*20",:disabled => true %>
+  <% end %>
+  <% if !user.link_url_resources.blank? %>
+    <%=f.submit "完成" %>
+  <% end %>
 <% end %>

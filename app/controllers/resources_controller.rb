@@ -2,6 +2,11 @@ class ResourcesController < ApplicationController
   before_filter :load_user,:only => [:create,:destroy,:edit,:index,:show,:update]
   auto_complete_for :resource,:keywords
   def index
+    if @user.link_url_resources.blank?
+      @variable_title="革命"
+    else
+      @variable_title="Web3.0..."
+    end
     @resources=@user.resources.find(:all,:order => "created_at DESC")
     @twitter_resource=@user.twitter_resources.build
   end
@@ -24,9 +29,6 @@ class ResourcesController < ApplicationController
     @resource = @user.resources.build(params[:resource])
     respond_to do |format|
       if @resource.save
-        keyword=Keyword.create(:name => params[:resource][:keywords])
-        @user.keywords<<keyword
-        @user.save
         format.html { redirect_to user_resources_path(@user) }
         format.xml  { render :xml => @resource, :status => :created, :location => @resource }
       else

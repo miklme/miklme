@@ -107,7 +107,7 @@
         header:
           one: ""
           other: ""
-        body: "出现了点小问题："
+        body: ""
       messages:
         inclusion: "不包含于列表中"
         exclusion: "是保留关键字"

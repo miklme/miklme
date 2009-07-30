@@ -1,9 +1,9 @@
 # This controller handles the login/logout function of the site.  
 class SessionsController < ApplicationController
-  skip_before_filter :login_required
+  skip_before_filter :login_required,:check_profile_status
 
   def new
-     if logged_in?
+    if logged_in?
       redirect_to new_user_searched_keyword_path(current_user)
     end
     @user=User.new
@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
 
   def create
     session[:user_id]=nil
-    user = User.authenticate(params[:email], params[:password])
+    user = User.authenticate(params[:username], params[:password])
     if user
       # Protects against session fixation attacks, causes request forgery
       # protection if user resubmits an earlier form using back
@@ -24,7 +24,7 @@ class SessionsController < ApplicationController
       flash[:notice] = "成功登入，即刻将体验Michael带给你的...无限"
     else
       note_failed_signin
-      @email       = params[:email]
+      @name       = params[:name]
       @remember_me = params[:remember_me]
       render :action => 'new'
     end
@@ -39,8 +39,8 @@ class SessionsController < ApplicationController
   protected
   # Track failed login attempts
   def note_failed_signin
-    flash[:error] = "恩...出了点小问题，检查一下是否邮箱名和密码有错误."
-    logger.warn "Failed login for '#{params[:email]}' from #{request.remote_ip} at #{Time.now.utc}"
+    flash[:error] = "出了点小问题，请重新输入密码"
+    logger.warn "Failed login for '#{params[:username]}' from #{request.remote_ip} at #{Time.now.utc}"
   end
 
 end

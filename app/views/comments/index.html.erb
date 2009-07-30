@@ -2,7 +2,7 @@
   <div id="main">
     <div id="header">
       <div id="title"><h1>
-          <%= @resource.title or @resource.keywords %>
+          <%= @resource.description or @resource.keywords %>
         </h1></div>
       <div id="menu">
         <%= link_to ".Me",user_path(@user) %>

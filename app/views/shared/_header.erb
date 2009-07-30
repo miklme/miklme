@@ -6,30 +6,27 @@
   <div id="menu">
     <ul>
       <li>
-        <%= link_to ".Me",user_path(header) %>
+        <%= link_to_unless_current ".Me",user_resources_path(header) %>
       </li>
       <% if current_user.id=header.id %>
-        <li><%= link_to "Michael猜你" %>
+        <li><%= link_to_unless_current "Michael猜你" %>
         </li>
         <li>
-          <%= link_to "关系网络" %>
+          <%= link_to_unless_current "关系网络" %>
         </li>
-        <li><%= link_to "我的关键字",user_keywords_path(header) %>
+        <li><%= link_to_unless_current"我的关键字",user_keywords_path(header) %>
         </li>
       <% else %>
         <li>
-          <%= link_to "#{header.nick_name}的关系网络" %>
+          <%= link_to_unless_current "#{header.nick_name}的关系网络" %>
         </li>
-        <li><%= link_to "#{header.nick_name}的关键字",user_keywords_path(header) %>
+        <li><%= link_to_unless_current "#{header.nick_name}的关键字",user_keywords_path(header) %>
         </li>
       <% end %>
 
       <% if header.id=current_user.id %>
         <li>
-          <%= link_to "个人设置",edit_user_path(current_user) %>
-        </li>
-        <li>
-          <%= link_to '注册新用户',new_user_path %>
+          <%= link_to_unless_current "个人设置",edit_user_path(current_user) %>
         </li>
         <li>
           <%= link_to '登出', session_path,:method => :delete %>

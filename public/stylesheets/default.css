@@ -42,3 +42,9 @@ h1 {margin:30px 0 0 0; padding:5px 0 7px 45px; text-transform:uppercase; font-si
 }
 #bottom_footer a { color:#fff;}
 #bottom_footer a:hover { text-decoration:none;}
+.fieldWithErrors {
+}
+#errorExplanation {
+    color: #f6a1a1;
+}
+#notice{color: #FFFFFF;}

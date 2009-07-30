@@ -5,6 +5,4 @@ class SearchedKeyword < ActiveRecord::Base
     :through => :searched_keyword_relationships,
     :source => :searched_keyword,
     :class_name => "SearchedKeyword"
-
-
 end

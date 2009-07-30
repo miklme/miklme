@@ -4,8 +4,8 @@
   <div id="header">
     <div id="logo"></div><div id="login">
       <p> <% form_tag session_path do -%>
-          <%= label_tag 'email','登录邮箱名'%>
-          <%= text_field_tag 'email',params[:email] %>
+          <%= label_tag 'username','用户名'%>
+          <%= text_field_tag 'username',params[:username] %>
           <%= label_tag 'password','密码'%>
           <%= password_field_tag 'password',params[:password]%></p>
         <p> <%= check_box_tag 'remember_me', '1', @remember_me %>
@@ -29,14 +29,13 @@
       <div id="text">
         <h1>欢迎进入<strong>Michael</strong></h1>
         <h2>基于价值的搜索引擎，来自另一端的引擎</h2>
-        <p>Michael是一个全新的搜索引擎，透过Michael，
-          我们可以作以下搜索如：<strong>学生会 装B,王小波 黄金时代，
-            我出门拿伞吗，科学松鼠会，
-            听歌 心情:烦躁</strong>，等。</p>
+        <p>Michael是一个全新的搜索引擎。通过这样一个引擎，我们
+          可以汇聚自己在互联网上的一切行为——<strong>写博客，上传相片、视频，
+            发表评论，</strong>甚至是<strong>浏览网页，</strong>等。</p>
+        <p>最重要的是，他更是一个个人意见传播平台——你可以控制搜索者的搜索行为，使自己犹如在现实中一般，成为另一个世界话语权的拥有者，意见领袖。</p>
         <p>我们深晓Michael的架构及理念，并不断对<strong>他</strong>完善，
-          以期促成一场革命，这一点，请你慢慢感知。</p>
-        <p>我们一直在说<strong>他</strong>，当然了，你我都知道，Michael是一个伟大的生命体。</p>
-
+          以期促成一场革命。</p>
+        <p>无限精彩，尽请体验 </p>
       </div>
       <div>
         <%= link_to '>注册新用户<' ,new_user_path%>

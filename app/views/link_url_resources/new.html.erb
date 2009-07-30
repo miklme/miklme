@@ -1,18 +1,13 @@
 <div id="new_resource">
-  <p>你分享了一个链接。</p>
-  <%  form_remote_tag do%>
-    <p><%=text_field_tag :link_url,flash[:link_url] %></p>
-    <p><%= label_tag :title,"关于该链接的描述描述，请随意(*)：" %></p>
-    <p><%= text_field_tag :title%></p>
-    <p>你认为输入什么关键字会搜索到这条链接？请尽量使用提示框中的关键字或建议关键字（如果存在的话），以便更多人能够看到你的分享。</p>
-    <p>关键字应简短，客观。(*)</p>
-    <% if not @known_resource.blank? %>
-      <p>使用建议关键字可以使更多人看到该链接,建议关键字：
-        <strong> <%= @known_resource.keywords  %></strong>
-      <% end %>
-    <p><%= text_field_with_auto_complete :resource,:keywords%></p>
-    <p><span><%= submit_tag "完成" %></span>
-      <span><%= link_to "返回",user_path(current_user) %></span>
+  <% form_for [@user,@link_url_resource] do |f|%>
+    <%= f.error_messages %>
+    <table>
+      <tr><td><%= f.label :link_url,"链接地址*" %></td><td><%= f.text_field :link_url %></td></tr>
+      <tr><td><%= f.label :description,"写一句简单的描述，请随意*：" %></td><td><%= f.text_field :description%></td></tr>
+      <tr><td><%= f.label :form,"请指定目标链接所包含主体内容的类型*：" %></td><td><%= f.select :form,%w{ 文字、文档 视频 图片  音频  }%></td></tr>
+      <tr><td><%= f.check_box :authority,{},true,false %><%= f.label :authority,"该内容是我的原创作品。" %></td>
+    </table>
+    <p><%= f.submit "下一步" %>
     </p>
   <% end %>
 </div>
