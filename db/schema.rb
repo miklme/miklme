@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090730023204) do
+ActiveRecord::Schema.define(:version => 20090729021859) do
 
   create_table "addresses", :force => true do |t|
     t.string   "province"
@@ -28,18 +28,6 @@ ActiveRecord::Schema.define(:version => 20090730023204) do
     t.datetime "updated_at"
   end
 
-  create_table "controlled_keywords", :force => true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "keywords_controllings", :force => true do |t|
-    t.integer  "user_id"
-    t.integer  "controlled_keyword_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "portraits", :force => true do |t|
     t.integer  "user_id"
     t.string   "image_file"
@@ -47,7 +35,8 @@ ActiveRecord::Schema.define(:version => 20090730023204) do
     t.datetime "updated_at"
   end
 
-  create_table "related_searched_keywords", :force => true do |t|
+  create_table "related_keywords", :force => true do |t|
+    t.string   "name"
     t.integer  "searched_keyword_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -64,13 +53,6 @@ ActiveRecord::Schema.define(:version => 20090730023204) do
     t.string   "link_url"
     t.string   "description"
     t.boolean  "authority",                  :default => false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "searched_keyword_relationships", :force => true do |t|
-    t.integer  "searched_keyword_id",         :null => false
-    t.integer  "related_searched_keyword_id", :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,2 +1,2 @@
-module RelatedSearchedKeywordsHelper
+module RelatedKeywordsHelper
 end

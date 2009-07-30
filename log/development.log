@@ -182,7 +182,7 @@ Migrating to CreateKaos (20090720085625)
   [4;36;1mSQL (98.4ms)[0m   [0;1mCREATE TABLE `kaos` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `keyword_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
   [4;35;1mSQL (44.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090720085625')[0m
 Migrating to CreateSearchedKeywordRelationships (20090721023534)
-  [4;36;1mSQL (87.3ms)[0m   [0;1mCREATE TABLE `searched_keyword_relationships` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `searched_keyword_id` int(11) NOT NULL, `related_searched_keyword_id` int(11) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (87.3ms)[0m   [0;1mCREATE TABLE `searched_keyword_relationships` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `searched_keyword_id` int(11) NOT NULL, `related_keyword_id` int(11) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
   [4;35;1mSQL (44.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090721023534')[0m
 Migrating to CreateAddresses (20090725045750)
   [4;36;1mSQL (87.0ms)[0m   [0;1mCREATE TABLE `addresses` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `province` varchar(255), `city` varchar(255), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
@@ -4857,7 +4857,7 @@ Migrating to CreateKaos (20090720085625)
   [4;36;1mSQL (109.6ms)[0m   [0;1mCREATE TABLE `kaos` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `keyword_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
   [4;35;1mSQL (44.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090720085625')[0m
 Migrating to CreateSearchedKeywordRelationships (20090721023534)
-  [4;36;1mSQL (98.5ms)[0m   [0;1mCREATE TABLE `searched_keyword_relationships` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `searched_keyword_id` int(11) NOT NULL, `related_searched_keyword_id` int(11) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (98.5ms)[0m   [0;1mCREATE TABLE `searched_keyword_relationships` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `searched_keyword_id` int(11) NOT NULL, `related_keyword_id` int(11) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
   [4;35;1mSQL (44.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090721023534')[0m
 Migrating to CreateAddresses (20090725045750)
   [4;36;1mSQL (109.6ms)[0m   [0;1mCREATE TABLE `addresses` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `province` varchar(255), `city` varchar(255), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
@@ -15012,7 +15012,7 @@ Migrating to CreateSearchedKeywords (20090713122317)
   [4;35;1mSQL (98.3ms)[0m   [0mCREATE TABLE `searched_keywords` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `searched_times` int(11) DEFAULT 1, `name` varchar(255), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
   [4;36;1mSQL (44.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090713122317')[0m
 Migrating to CreateSearchedKeywordRelationships (20090721023534)
-  [4;35;1mSQL (97.9ms)[0m   [0mCREATE TABLE `searched_keyword_relationships` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `searched_keyword_id` int(11) NOT NULL, `related_searched_keyword_id` int(11) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (97.9ms)[0m   [0mCREATE TABLE `searched_keyword_relationships` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `searched_keyword_id` int(11) NOT NULL, `related_keyword_id` int(11) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
   [4;36;1mSQL (46.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090721023534')[0m
 Migrating to CreateAddresses (20090725045750)
   [4;35;1mSQL (107.5ms)[0m   [0mCREATE TABLE `addresses` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `province` varchar(255), `city` varchar(255), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
@@ -15020,8 +15020,8 @@ Migrating to CreateAddresses (20090725045750)
 Migrating to CreateKeywordsControllings (20090726115200)
   [4;35;1mSQL (98.1ms)[0m   [0mCREATE TABLE `keywords_controllings` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `controlled_keyword_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
   [4;36;1mSQL (44.7ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090726115200')[0m
-Migrating to CreateRelatedSearchedKeywords (20090729021859)
-  [4;35;1mSQL (118.7ms)[0m   [0mCREATE TABLE `related_searched_keywords` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `searched_keyword_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+Migrating to CreateRelatedKeywords (20090729021859)
+  [4;35;1mSQL (118.7ms)[0m   [0mCREATE TABLE `related_keywords` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `searched_keyword_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
   [4;36;1mSQL (55.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090729021859')[0m
 Migrating to CreateControlledKeywords (20090730023204)
   [4;35;1mSQL (152.0ms)[0m   [0mCREATE TABLE `controlled_keywords` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
@@ -15044,9 +15044,9 @@ Migrating to CreateControlledKeywords (20090730023204)
   [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `portraits`[0m
   [4;35;1mSQL (0.4ms)[0m   [0mdescribe `portraits`[0m
   [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `portraits`[0m
-  [4;35;1mSQL (0.4ms)[0m   [0mSHOW FIELDS FROM `related_searched_keywords`[0m
-  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `related_searched_keywords`[0m
-  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `related_searched_keywords`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW FIELDS FROM `related_keywords`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `related_keywords`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `related_keywords`[0m
   [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
   [4;35;1mSQL (0.5ms)[0m   [0mdescribe `resources`[0m
   [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `resources`[0m
@@ -17697,8 +17697,8 @@ Rendering rescues/layout (internal_server_error)
 Migrating to CreateControlledKeywords (20090730023204)
   [4;36;1mSQL (68.4ms)[0m   [0;1mDROP TABLE `controlled_keywords`[0m
   [4;35;1mSQL (44.6ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20090730023204'[0m
-Migrating to CreateRelatedSearchedKeywords (20090729021859)
-  [4;36;1mSQL (42.4ms)[0m   [0;1mDROP TABLE `related_searched_keywords`[0m
+Migrating to CreateRelatedKeywords (20090729021859)
+  [4;36;1mSQL (42.4ms)[0m   [0;1mDROP TABLE `related_keywords`[0m
   [4;35;1mSQL (44.7ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20090729021859'[0m
 Migrating to CreateKeywordsControllings (20090726115200)
   [4;36;1mSQL (53.8ms)[0m   [0;1mDROP TABLE `keywords_controllings`[0m
@@ -17751,7 +17751,7 @@ Migrating to CreateSearchedKeywords (20090713122317)
   [4;36;1mSQL (120.6ms)[0m   [0;1mCREATE TABLE `searched_keywords` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `searched_times` int(11) DEFAULT 1, `name` varchar(255), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
   [4;35;1mSQL (57.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090713122317')[0m
 Migrating to CreateSearchedKeywordRelationships (20090721023534)
-  [4;36;1mSQL (87.3ms)[0m   [0;1mCREATE TABLE `searched_keyword_relationships` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `searched_keyword_id` int(11) NOT NULL, `related_searched_keyword_id` int(11) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (87.3ms)[0m   [0;1mCREATE TABLE `searched_keyword_relationships` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `searched_keyword_id` int(11) NOT NULL, `related_keyword_id` int(11) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
   [4;35;1mSQL (44.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090721023534')[0m
 Migrating to CreateAddresses (20090725045750)
   [4;36;1mSQL (98.5ms)[0m   [0;1mCREATE TABLE `addresses` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `province` varchar(255), `city` varchar(255), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
@@ -17759,8 +17759,8 @@ Migrating to CreateAddresses (20090725045750)
 Migrating to CreateKeywordsControllings (20090726115200)
   [4;36;1mSQL (98.6ms)[0m   [0;1mCREATE TABLE `keywords_controllings` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `controlled_keyword_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
   [4;35;1mSQL (44.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090726115200')[0m
-Migrating to CreateRelatedSearchedKeywords (20090729021859)
-  [4;36;1mSQL (87.4ms)[0m   [0;1mCREATE TABLE `related_searched_keywords` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `searched_keyword_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+Migrating to CreateRelatedKeywords (20090729021859)
+  [4;36;1mSQL (87.4ms)[0m   [0;1mCREATE TABLE `related_keywords` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `searched_keyword_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
   [4;35;1mSQL (44.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090729021859')[0m
 Migrating to CreateControlledKeywords (20090730023204)
   [4;36;1mSQL (109.7ms)[0m   [0;1mCREATE TABLE `controlled_keywords` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
@@ -17783,9 +17783,9 @@ Migrating to CreateControlledKeywords (20090730023204)
   [4;35;1mSQL (0.4ms)[0m   [0mSHOW FIELDS FROM `portraits`[0m
   [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `portraits`[0m
   [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `portraits`[0m
-  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `related_searched_keywords`[0m
-  [4;35;1mSQL (0.3ms)[0m   [0mdescribe `related_searched_keywords`[0m
-  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `related_searched_keywords`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `related_keywords`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mdescribe `related_keywords`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `related_keywords`[0m
   [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
   [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `resources`[0m
   [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `resources`[0m
@@ -19208,7 +19208,7 @@ Migrating to CreateSearchedKeywords (20090713122317)
   [4;35;1mSQL (109.5ms)[0m   [0mCREATE TABLE `searched_keywords` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `searched_times` int(11) DEFAULT 1, `name` varchar(255), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
   [4;36;1mSQL (44.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090713122317')[0m
 Migrating to CreateSearchedKeywordRelationships (20090721023534)
-  [4;35;1mSQL (98.4ms)[0m   [0mCREATE TABLE `searched_keyword_relationships` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `searched_keyword_id` int(11) NOT NULL, `related_searched_keyword_id` int(11) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (98.4ms)[0m   [0mCREATE TABLE `searched_keyword_relationships` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `searched_keyword_id` int(11) NOT NULL, `related_keyword_id` int(11) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
   [4;36;1mSQL (44.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090721023534')[0m
 Migrating to CreateAddresses (20090725045750)
   [4;35;1mSQL (89.3ms)[0m   [0mCREATE TABLE `addresses` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `province` varchar(255), `city` varchar(255), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
@@ -19216,8 +19216,8 @@ Migrating to CreateAddresses (20090725045750)
 Migrating to CreateKeywordsControllings (20090726115200)
   [4;35;1mSQL (98.5ms)[0m   [0mCREATE TABLE `keywords_controllings` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `controlled_keyword_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
   [4;36;1mSQL (55.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090726115200')[0m
-Migrating to CreateRelatedSearchedKeywords (20090729021859)
-  [4;35;1mSQL (98.5ms)[0m   [0mCREATE TABLE `related_searched_keywords` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `searched_keyword_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+Migrating to CreateRelatedKeywords (20090729021859)
+  [4;35;1mSQL (98.5ms)[0m   [0mCREATE TABLE `related_keywords` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `searched_keyword_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
   [4;36;1mSQL (55.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090729021859')[0m
 Migrating to CreateControlledKeywords (20090730023204)
   [4;35;1mSQL (109.7ms)[0m   [0mCREATE TABLE `controlled_keywords` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
@@ -19240,9 +19240,9 @@ Migrating to CreateControlledKeywords (20090730023204)
   [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `portraits`[0m
   [4;35;1mSQL (0.3ms)[0m   [0mdescribe `portraits`[0m
   [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `portraits`[0m
-  [4;35;1mSQL (0.4ms)[0m   [0mSHOW FIELDS FROM `related_searched_keywords`[0m
-  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `related_searched_keywords`[0m
-  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `related_searched_keywords`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW FIELDS FROM `related_keywords`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `related_keywords`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `related_keywords`[0m
   [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
   [4;35;1mSQL (0.6ms)[0m   [0mdescribe `resources`[0m
   [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `resources`[0m
@@ -19988,11 +19988,11 @@ Rendering searched_keywords/index
   [4;36;1mResource Load Including Associations (0.8ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keywords` AS t0_r1, `resources`.`type` AS t0_r2, `resources`.`shoulu` AS t0_r3, `resources`.`user_id` AS t0_r4, `resources`.`content` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`created_at` AS t0_r11, `resources`.`updated_at` AS t0_r12, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`follower_id` AS t1_r7, `users`.`following_id` AS t1_r8, `users`.`value` AS t1_r9, `users`.`terms` AS t1_r10, `users`.`birthday` AS t1_r11, `users`.`username` AS t1_r12, `users`.`failed_signin_times` AS t1_r13, `users`.`created_at` AS t1_r14, `users`.`updated_at` AS t1_r15 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`keywords` = 'aaa') ORDER BY users.value DESC[0m
   [4;35;1mLinkUrlResource Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
 
-ActionView::TemplateError (undefined method `keyword_related_searched_keywords_path' for #<ActionView::Base:0xb6fa2024>) on line #19 of app/views/searched_keywords/index.erb:
+ActionView::TemplateError (undefined method `keyword_related_keywords_path' for #<ActionView::Base:0xb6fa2024>) on line #19 of app/views/searched_keywords/index.erb:
 16:         <% end %>
 17:       </tr>
 18:     </tbody>
-19:     <%=link_to "修改相关关键字",keyword_related_searched_keywords_path(@keyword),:popup => ['修改相关关键字', 'height=300,width=600'] %>
+19:     <%=link_to "修改相关关键字",keyword_related_keywords_path(@keyword),:popup => ['修改相关关键字', 'height=300,width=600'] %>
 20:   </table>
 21: </div>
 22: 
@@ -20030,11 +20030,11 @@ Rendering searched_keywords/index
   [4;36;1mResource Load Including Associations (0.1ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keywords` AS t0_r1, `resources`.`type` AS t0_r2, `resources`.`shoulu` AS t0_r3, `resources`.`user_id` AS t0_r4, `resources`.`content` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`created_at` AS t0_r11, `resources`.`updated_at` AS t0_r12, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`follower_id` AS t1_r7, `users`.`following_id` AS t1_r8, `users`.`value` AS t1_r9, `users`.`terms` AS t1_r10, `users`.`birthday` AS t1_r11, `users`.`username` AS t1_r12, `users`.`failed_signin_times` AS t1_r13, `users`.`created_at` AS t1_r14, `users`.`updated_at` AS t1_r15 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`keywords` = 'aaa') ORDER BY users.value DESC[0m
   [4;35;1mLinkUrlResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
 
-ActionView::TemplateError (undefined method `searched_keyword_related_searched_keywords_path' for #<ActionView::Base:0xb6fe34c0>) on line #19 of app/views/searched_keywords/index.erb:
+ActionView::TemplateError (undefined method `searched_keyword_related_keywords_path' for #<ActionView::Base:0xb6fe34c0>) on line #19 of app/views/searched_keywords/index.erb:
 16:         <% end %>
 17:       </tr>
 18:     </tbody>
-19:     <%=link_to "修改相关关键字",searched_keyword_related_searched_keywords_path(@keyword),:popup => ['修改相关关键字', 'height=300,width=600'] %>
+19:     <%=link_to "修改相关关键字",searched_keyword_related_keywords_path(@keyword),:popup => ['修改相关关键字', 'height=300,width=600'] %>
 20:   </table>
 21: </div>
 22: 
@@ -20072,11 +20072,11 @@ Rendering searched_keywords/index
   [4;36;1mResource Load Including Associations (0.1ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keywords` AS t0_r1, `resources`.`type` AS t0_r2, `resources`.`shoulu` AS t0_r3, `resources`.`user_id` AS t0_r4, `resources`.`content` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`created_at` AS t0_r11, `resources`.`updated_at` AS t0_r12, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`follower_id` AS t1_r7, `users`.`following_id` AS t1_r8, `users`.`value` AS t1_r9, `users`.`terms` AS t1_r10, `users`.`birthday` AS t1_r11, `users`.`username` AS t1_r12, `users`.`failed_signin_times` AS t1_r13, `users`.`created_at` AS t1_r14, `users`.`updated_at` AS t1_r15 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`keywords` = 'aaa') ORDER BY users.value DESC[0m
   [4;35;1mLinkUrlResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
 
-ActionView::TemplateError (undefined method `searched_keyword_related_searched_keywords_path' for #<ActionView::Base:0xb6ffb4f8>) on line #19 of app/views/searched_keywords/index.erb:
+ActionView::TemplateError (undefined method `searched_keyword_related_keywords_path' for #<ActionView::Base:0xb6ffb4f8>) on line #19 of app/views/searched_keywords/index.erb:
 16:         <% end %>
 17:       </tr>
 18:     </tbody>
-19:     <%=link_to "修改相关关键字",searched_keyword_related_searched_keywords_path(@keyword),:popup => ['修改相关关键字', 'height=300,width=600'] %>
+19:     <%=link_to "修改相关关键字",searched_keyword_related_keywords_path(@keyword),:popup => ['修改相关关键字', 'height=300,width=600'] %>
 20:   </table>
 21: </div>
 22: 
@@ -20114,11 +20114,11 @@ Rendering searched_keywords/index
   [4;36;1mResource Load Including Associations (0.1ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keywords` AS t0_r1, `resources`.`type` AS t0_r2, `resources`.`shoulu` AS t0_r3, `resources`.`user_id` AS t0_r4, `resources`.`content` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`created_at` AS t0_r11, `resources`.`updated_at` AS t0_r12, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`follower_id` AS t1_r7, `users`.`following_id` AS t1_r8, `users`.`value` AS t1_r9, `users`.`terms` AS t1_r10, `users`.`birthday` AS t1_r11, `users`.`username` AS t1_r12, `users`.`failed_signin_times` AS t1_r13, `users`.`created_at` AS t1_r14, `users`.`updated_at` AS t1_r15 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`keywords` = 'aaa') ORDER BY users.value DESC[0m
   [4;35;1mLinkUrlResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
 
-ActionView::TemplateError (undefined method `searched_keyword_related_searched_keywords_path' for #<ActionView::Base:0xb710469c>) on line #19 of app/views/searched_keywords/index.erb:
+ActionView::TemplateError (undefined method `searched_keyword_related_keywords_path' for #<ActionView::Base:0xb710469c>) on line #19 of app/views/searched_keywords/index.erb:
 16:         <% end %>
 17:       </tr>
 18:     </tbody>
-19:     <%=link_to "修改相关关键字",searched_keyword_related_searched_keywords_path(@keyword),:popup => ['修改相关关键字', 'height=300,width=600'] %>
+19:     <%=link_to "修改相关关键字",searched_keyword_related_keywords_path(@keyword),:popup => ['修改相关关键字', 'height=300,width=600'] %>
 20:   </table>
 21: </div>
 22: 
@@ -21191,3 +21191,1777 @@ Rendering controlled_keywords/index
 Rendered shared/_footer (0.7ms)
 Rendered shared/_header (1.1ms)
 Completed in 55ms (View: 13, DB: 6) | 200 OK [http://localhost/users/1/controlled_keywords]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (111.2ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (235.5ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20090523150301)
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (97.3ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(20), `crypted_password` varchar(40), `salt` varchar(40), `remember_token` varchar(40), `remember_token_expires_at` datetime, `nick_name` varchar(20), `follower_id` int(11), `following_id` int(11), `value` decimal(8,1) DEFAULT 0, `terms` int(11), `birthday` date, `username` varchar(255) NOT NULL, `failed_signin_times` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (246.3ms)[0m   [0mCREATE INDEX `index_users_on_username` ON `users` (`username`)[0m
+  [4;36;1mSQL (44.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090523150301')[0m
+Migrating to CreatePortraits (20090606045951)
+  [4;35;1mSQL (100.2ms)[0m   [0mCREATE TABLE `portraits` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `image_file` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (44.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090606045951')[0m
+Migrating to CreateTruePortraits (20090611094020)
+  [4;35;1mSQL (98.5ms)[0m   [0mCREATE TABLE `true_portraits` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `image_file` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (44.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090611094020')[0m
+Migrating to CreateResources (20090611163158)
+  [4;35;1mSQL (109.1ms)[0m   [0mCREATE TABLE `resources` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `keywords` varchar(139) NOT NULL, `type` varchar(255), `shoulu` tinyint(1) DEFAULT 1, `user_id` int(11), `content` text, `title` varchar(255), `form` varchar(255), `link_url` varchar(255), `description` varchar(255), `authority` tinyint(1) DEFAULT 0, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (45.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090611163158')[0m
+Migrating to CreateComments (20090712100836)
+  [4;35;1mSQL (97.5ms)[0m   [0mCREATE TABLE `comments` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `content` text, `resource_id` int(11), `user_id` int(11), `rating` int(11) DEFAULT 0, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (44.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090712100836')[0m
+Migrating to CreateSearchedKeywords (20090713122317)
+  [4;35;1mSQL (87.3ms)[0m   [0mCREATE TABLE `searched_keywords` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `searched_times` int(11) DEFAULT 1, `name` varchar(255), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (44.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090713122317')[0m
+Migrating to CreateSearchedKeywordRelationships (20090721023534)
+  [4;35;1mSQL (120.8ms)[0m   [0mCREATE TABLE `searched_keyword_relationships` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `searched_keyword_id` int(11) NOT NULL, `related_keyword_id` int(11) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (55.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090721023534')[0m
+Migrating to CreateAddresses (20090725045750)
+  [4;35;1mSQL (109.4ms)[0m   [0mCREATE TABLE `addresses` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `province` varchar(255), `city` varchar(255), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (44.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090725045750')[0m
+Migrating to CreateRelatedKeywords (20090729021859)
+  [4;35;1mSQL (87.5ms)[0m   [0mCREATE TABLE `related_keywords` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `searched_keyword_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (44.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090729021859')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `addresses`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `addresses`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `addresses`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `comments`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `comments`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `portraits`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `portraits`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `portraits`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW FIELDS FROM `related_keywords`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `related_keywords`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `related_keywords`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `resources`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `resources`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW FIELDS FROM `searched_keyword_relationships`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `searched_keyword_relationships`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `searched_keyword_relationships`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `searched_keywords`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `searched_keywords`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `searched_keywords`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW FIELDS FROM `true_portraits`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `true_portraits`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `true_portraits`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ControlledKeywordsController#index (for 127.0.0.1 at 2009-07-30 15:14:29) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 15ms (DB: 1) | 302 Found [http://localhost/users/1/controlled_keywords]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-30 15:14:29) [GET]
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering sessions/new
+Rendered shared/_footer (1.1ms)
+Completed in 23ms (View: 3, DB: 2) | 200 OK [http://localhost/session/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ControlledKeywordsController#index (for 127.0.0.1 at 2009-07-30 15:14:30) [GET]
+  Parameters: {"user_id"=>"1"}
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/users/1/controlled_keywords]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-30 15:14:30) [GET]
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering sessions/new
+Rendered shared/_footer (0.6ms)
+Completed in 18ms (View: 2, DB: 1) | 200 OK [http://localhost/session/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-07-30 15:14:33) [GET]
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/users
+Rendering users/new
+Rendered shared/_footer (1.1ms)
+Completed in 24ms (View: 7, DB: 1) | 200 OK [http://localhost/users/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-07-30 15:14:39) [POST]
+  Parameters: {"commit"=>"注册", "user"=>{"username"=>"Michael", "terms"=>"1", "password"=>"123456"}}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`username` = BINARY 'Michael') LIMIT 1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`name`, `salt`, `created_at`, `crypted_password`, `remember_token_expires_at`, `failed_signin_times`, `updated_at`, `follower_id`, `username`, `value`, `remember_token`, `nick_name`, `birthday`, `following_id`, `terms`) VALUES(NULL, 'd9432a62eab3dce6a41ca5e99e75813f5dcdab3e', '2009-07-30 07:14:39', '4067a69b6c8175ad18d29c4e8832d6d03d9b0b5b', NULL, NULL, '2009-07-30 07:14:39', NULL, 'Michael', 0.0, NULL, NULL, NULL, NULL, 1)[0m
+  [4;36;1mSQL (60.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+Redirected to http://localhost:3000/users/1/edit
+Completed in 87ms (DB: 63) | 302 Found [http://localhost/users]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-07-30 15:14:39) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+Rendering template within layouts/users
+Rendering users/edit
+Rendered shared/_header (1.6ms)
+Rendered shared/_footer (0.6ms)
+Completed in 35ms (View: 14, DB: 1) | 200 OK [http://localhost/users/1/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#update (for 127.0.0.1 at 2009-07-30 15:14:45) [PUT]
+  Parameters: {"commit"=>"就这样", "id"=>"1", "user"=>{"name"=>"MM", "birthday(1i)"=>"1970", "birthday(2i)"=>"7", "birthday(3i)"=>"30", "nick_name"=>"MM"}}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`username` = BINARY 'Michael' AND `users`.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-07-30 07:14:45', `name` = 'MM', `nick_name` = 'MM', `birthday` = '1970-07-30' WHERE `id` = 1[0m
+  [4;35;1mSQL (61.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/users/1
+Completed in 85ms (DB: 63) | 302 Found [http://localhost/users/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-07-30 15:14:45) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+Redirected to http://localhost:3000/users/1/resources
+Completed in 21ms (DB: 1) | 302 Found [http://localhost/users/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-30 15:14:45) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mLinkUrlResource Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mLinkUrlResource Load (0.2ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+  [4;36;1mResource Load (0.2ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) ORDER BY created_at DESC[0m
+  [4;35;1mTwitterResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/resources
+Rendering resources/index
+Rendered twitter_resources/_form (1.4ms)
+Rendered shared/_header (1.2ms)
+Rendered shared/_footer (0.6ms)
+Completed in 42ms (View: 6, DB: 3) | 200 OK [http://localhost/users/1/resources]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LinkUrlResourcesController#new (for 127.0.0.1 at 2009-07-30 15:14:49) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mLinkUrlResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/link_url_resources
+Rendering link_url_resources/new
+Completed in 37ms (View: 5, DB: 2) | 200 OK [http://localhost/users/1/link_url_resources/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LinkUrlResourcesController#create (for 127.0.0.1 at 2009-07-30 15:14:55) [POST]
+  Parameters: {"commit"=>"完成", "user_id"=>"1", "link_url_resource"=>{"form"=>"文字、文档", "authority"=>"false", "description"=>"asdf", "keywords"=>"", "link_url"=>"http://asdf"}}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mLinkUrlResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/link_url_resources
+Rendering link_url_resources/new
+Completed in 97ms (View: 5, DB: 2) | 200 OK [http://localhost/users/1/link_url_resources]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LinkUrlResourcesController#auto_complete_for_link_url_resource_keywords (for 127.0.0.1 at 2009-07-30 15:14:58) [POST]
+  Parameters: {"link_url_resource"=>{"keywords"=>"asdf"}}
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/link_url_resources_controller.rb:28:in `find_user'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (36.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LinkUrlResourcesController#create (for 127.0.0.1 at 2009-07-30 15:14:58) [POST]
+  Parameters: {"commit"=>"完成", "user_id"=>"1", "link_url_resource"=>{"form"=>"文字、文档", "authority"=>"false", "description"=>"asdf", "keywords"=>"asdf", "link_url"=>"http://asdf"}}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mLinkUrlResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mLinkUrlResource Create (0.2ms)[0m   [0mINSERT INTO `resources` (`created_at`, `title`, `updated_at`, `type`, `user_id`, `form`, `content`, `authority`, `shoulu`, `description`, `keywords`, `link_url`) VALUES('2009-07-30 07:14:58', NULL, '2009-07-30 07:14:58', 'LinkUrlResource', 1, '文字、文档', NULL, 0, 1, 'asdf', 'asdf', 'http://asdf')[0m
+  [4;36;1mSQL (52.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/users/1
+Completed in 143ms (DB: 55) | 302 Found [http://localhost/users/1/link_url_resources]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-07-30 15:14:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+Redirected to http://localhost:3000/users/1/resources
+Completed in 19ms (DB: 1) | 302 Found [http://localhost/users/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-30 15:14:58) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mLinkUrlResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mLinkUrlResource Load (0.2ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+  [4;35;1mResource Load (0.2ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) ORDER BY created_at DESC[0m
+  [4;36;1mResource Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mTwitterResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/resources
+Rendering resources/index
+Rendered twitter_resources/_form (1.3ms)
+Rendered shared/_header (1.1ms)
+Rendered shared/_footer (0.6ms)
+Completed in 42ms (View: 5, DB: 3) | 200 OK [http://localhost/users/1/resources]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#new (for 127.0.0.1 at 2009-07-30 15:15:04) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+Rendering template within layouts/searched_keywords
+Rendering searched_keywords/new
+Rendered shared/_footer (0.6ms)
+Completed in 22ms (View: 3, DB: 1) | 200 OK [http://localhost/users/1/searched_keywords/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#auto_complete_for_resource_keywords (for 127.0.0.1 at 2009-07-30 15:15:05) [GET]
+  Parameters: {"resource"=>{"keywords"=>""}}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mResource Load (0.3ms)[0m   [0;1mSELECT * FROM `resources` WHERE (LOWER(`resources`.keywords) LIKE '%%') ORDER BY `resources`.keywords ASC LIMIT 50[0m
+  [4;35;1mResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mLinkUrlResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Completed in 89ms (View: 7, DB: 3) | 200 OK [http://localhost/searched_keywords/auto_complete_for_resource_keywords?resource%5Bkeywords%5D=]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#auto_complete_for_resource_keywords (for 127.0.0.1 at 2009-07-30 15:15:06) [GET]
+  Parameters: {"resource"=>{"keywords"=>"asdf"}}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mResource Load (0.3ms)[0m   [0mSELECT * FROM `resources` WHERE (LOWER(`resources`.keywords) LIKE '%asdf%') ORDER BY `resources`.keywords ASC LIMIT 50[0m
+  [4;36;1mResource Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mLinkUrlResource Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Completed in 32ms (View: 6, DB: 3) | 200 OK [http://localhost/searched_keywords/auto_complete_for_resource_keywords?resource%5Bkeywords%5D=asdf]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#create (for 127.0.0.1 at 2009-07-30 15:15:06) [POST]
+  Parameters: {"user_id"=>"1", "keywords"=>"asdf"}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mSearchedKeyword Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `searched_keywords`[0m
+  [4;35;1mSearchedKeyword Load (0.2ms)[0m   [0mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.`name` = 'asdf') AND (`searched_keywords`.user_id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSearchedKeyword Create (0.1ms)[0m   [0mINSERT INTO `searched_keywords` (`name`, `created_at`, `updated_at`, `searched_times`, `user_id`) VALUES('asdf', '2009-07-30 07:15:06', '2009-07-30 07:15:06', 1, NULL)[0m
+  [4;36;1mSQL (55.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSearchedKeyword Update (0.2ms)[0m   [0;1mUPDATE `searched_keywords` SET `updated_at` = '2009-07-30 07:15:06', `user_id` = 1 WHERE `id` = 1[0m
+  [4;35;1mSQL (42.4ms)[0m   [0mCOMMIT[0m
+Completed in 134ms (View: 1, DB: 100) | 200 OK [http://localhost/users/1/searched_keywords]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#index (for 127.0.0.1 at 2009-07-30 15:15:06) [GET]
+  Parameters: {"keywords"=>"asdf"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mResource Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mSearchedKeyword Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `searched_keywords`[0m
+  [4;36;1mSearchedKeyword Load (0.2ms)[0m   [0;1mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.`name` = 'asdf') LIMIT 1[0m
+Rendering template within layouts/searched_keywords
+Rendering searched_keywords/index
+  [4;35;1mSearchedKeyword Load (0.3ms)[0m   [0mSELECT `searched_keywords`.* FROM `searched_keywords` INNER JOIN `searched_keyword_relationships` ON `searched_keywords`.id = `searched_keyword_relationships`.searched_keyword_id WHERE ((`searched_keyword_relationships`.searched_keyword_id = 1)) LIMIT 10[0m
+  [4;36;1mResource Load Including Associations (0.7ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keywords` AS t0_r1, `resources`.`type` AS t0_r2, `resources`.`shoulu` AS t0_r3, `resources`.`user_id` AS t0_r4, `resources`.`content` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`created_at` AS t0_r11, `resources`.`updated_at` AS t0_r12, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`follower_id` AS t1_r7, `users`.`following_id` AS t1_r8, `users`.`value` AS t1_r9, `users`.`terms` AS t1_r10, `users`.`birthday` AS t1_r11, `users`.`username` AS t1_r12, `users`.`failed_signin_times` AS t1_r13, `users`.`created_at` AS t1_r14, `users`.`updated_at` AS t1_r15 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`keywords` = 'asdf') ORDER BY users.value DESC[0m
+  [4;35;1mLinkUrlResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mComment Load (0.3ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 1) AND (`comments`.resource_id = 1) ORDER BY created_at DESC LIMIT 3[0m
+  [4;35;1mComment Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.resource_id = 1) [0m
+Rendered link_url_resources/_link_url_resource (9.0ms)
+Completed in 111ms (View: 18, DB: 5) | 200 OK [http://localhost/search/asdf]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#new (for 127.0.0.1 at 2009-07-30 15:15:15) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+Rendering template within layouts/searched_keywords
+Rendering searched_keywords/new
+Rendered shared/_footer (0.6ms)
+Completed in 23ms (View: 3, DB: 1) | 200 OK [http://localhost/users/1/searched_keywords/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-07-30 15:15:16) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+Redirected to http://localhost:3000/users/1/resources
+Completed in 17ms (DB: 1) | 302 Found [http://localhost/users/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-30 15:15:16) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mLinkUrlResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mLinkUrlResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) ORDER BY created_at DESC[0m
+  [4;36;1mResource Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mTwitterResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/resources
+Rendering resources/index
+Rendered twitter_resources/_form (1.4ms)
+Rendered shared/_header (1.1ms)
+Rendered shared/_footer (0.6ms)
+Completed in 95ms (View: 5, DB: 3) | 200 OK [http://localhost/users/1/resources]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ControlledKeywordsController#index (for 127.0.0.1 at 2009-07-30 15:15:18) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mResource Load (0.3ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) [0m
+  [4;36;1mResource Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mLinkUrlResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mResource Load Including Associations (0.7ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keywords` AS t0_r1, `resources`.`type` AS t0_r2, `resources`.`shoulu` AS t0_r3, `resources`.`user_id` AS t0_r4, `resources`.`content` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`created_at` AS t0_r11, `resources`.`updated_at` AS t0_r12, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`follower_id` AS t1_r7, `users`.`following_id` AS t1_r8, `users`.`value` AS t1_r9, `users`.`terms` AS t1_r10, `users`.`birthday` AS t1_r11, `users`.`username` AS t1_r12, `users`.`failed_signin_times` AS t1_r13, `users`.`created_at` AS t1_r14, `users`.`updated_at` AS t1_r15 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`keywords` = 'asdf') ORDER BY users.value DESC LIMIT 1[0m
+Rendering template within layouts/controlled_keywords
+Rendering controlled_keywords/index
+  [4;35;1mSearchedKeyword Load (0.2ms)[0m   [0mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.user_id = 1) [0m
+  [4;36;1mSearchedKeyword Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `searched_keywords`[0m
+Rendered shared/_footer (0.7ms)
+Rendered shared/_header (1.0ms)
+Completed in 48ms (View: 10, DB: 4) | 200 OK [http://localhost/users/1/controlled_keywords]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ControlledKeywordsController#index (for 127.0.0.1 at 2009-07-30 15:23:54) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) [0m
+  [4;35;1mResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mLinkUrlResource Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mResource Load Including Associations (0.1ms)[0m   [0mSELECT `resources`.`id` AS t0_r0, `resources`.`keywords` AS t0_r1, `resources`.`type` AS t0_r2, `resources`.`shoulu` AS t0_r3, `resources`.`user_id` AS t0_r4, `resources`.`content` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`created_at` AS t0_r11, `resources`.`updated_at` AS t0_r12, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`follower_id` AS t1_r7, `users`.`following_id` AS t1_r8, `users`.`value` AS t1_r9, `users`.`terms` AS t1_r10, `users`.`birthday` AS t1_r11, `users`.`username` AS t1_r12, `users`.`failed_signin_times` AS t1_r13, `users`.`created_at` AS t1_r14, `users`.`updated_at` AS t1_r15 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`keywords` = 'asdf') ORDER BY users.value DESC LIMIT 1[0m
+Rendering template within layouts/controlled_keywords
+Rendering controlled_keywords/index
+  [4;36;1mSearchedKeyword Load (0.1ms)[0m   [0;1mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.user_id = 1) [0m
+  [4;35;1mSearchedKeyword Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `searched_keywords`[0m
+Rendered shared/_footer (0.7ms)
+Rendered shared/_header (1.0ms)
+Completed in 47ms (View: 9, DB: 3) | 200 OK [http://localhost/users/1/controlled_keywords]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-30 15:23:54) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mLinkUrlResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mLinkUrlResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) ORDER BY created_at DESC[0m
+  [4;36;1mResource Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mTwitterResource Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/resources
+Rendering resources/index
+Rendered twitter_resources/_form (1.3ms)
+Rendered shared/_header (1.1ms)
+Rendered shared/_footer (0.6ms)
+Completed in 44ms (View: 5, DB: 3) | 200 OK [http://localhost/users/1/resources]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#new (for 127.0.0.1 at 2009-07-30 15:23:55) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+Rendering template within layouts/searched_keywords
+Rendering searched_keywords/new
+Rendered shared/_footer (0.6ms)
+Completed in 22ms (View: 3, DB: 1) | 200 OK [http://localhost/users/1/searched_keywords/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-07-30 15:23:57) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+Redirected to http://localhost:3000/users/1/resources
+Completed in 18ms (DB: 1) | 302 Found [http://localhost/users/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-30 15:23:57) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mLinkUrlResource Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mLinkUrlResource Load (0.1ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) ORDER BY created_at DESC[0m
+  [4;35;1mResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mTwitterResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/resources
+Rendering resources/index
+Rendered twitter_resources/_form (1.3ms)
+Rendered shared/_header (1.1ms)
+Rendered shared/_footer (0.6ms)
+Completed in 45ms (View: 5, DB: 3) | 200 OK [http://localhost/users/1/resources]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ControlledKeywordsController#index (for 127.0.0.1 at 2009-07-30 15:23:58) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) [0m
+  [4;35;1mResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mLinkUrlResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mResource Load Including Associations (0.1ms)[0m   [0mSELECT `resources`.`id` AS t0_r0, `resources`.`keywords` AS t0_r1, `resources`.`type` AS t0_r2, `resources`.`shoulu` AS t0_r3, `resources`.`user_id` AS t0_r4, `resources`.`content` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`created_at` AS t0_r11, `resources`.`updated_at` AS t0_r12, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`follower_id` AS t1_r7, `users`.`following_id` AS t1_r8, `users`.`value` AS t1_r9, `users`.`terms` AS t1_r10, `users`.`birthday` AS t1_r11, `users`.`username` AS t1_r12, `users`.`failed_signin_times` AS t1_r13, `users`.`created_at` AS t1_r14, `users`.`updated_at` AS t1_r15 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`keywords` = 'asdf') ORDER BY users.value DESC LIMIT 1[0m
+Rendering template within layouts/controlled_keywords
+Rendering controlled_keywords/index
+  [4;36;1mSearchedKeyword Load (0.1ms)[0m   [0;1mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.user_id = 1) [0m
+  [4;35;1mSearchedKeyword Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `searched_keywords`[0m
+Rendered shared/_footer (0.7ms)
+Rendered shared/_header (1.0ms)
+Completed in 48ms (View: 13, DB: 3) | 200 OK [http://localhost/users/1/controlled_keywords]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-30 15:24:02) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mLinkUrlResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mLinkUrlResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) ORDER BY created_at DESC[0m
+  [4;36;1mResource Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mTwitterResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/resources
+Rendering resources/index
+Rendered twitter_resources/_form (1.5ms)
+Rendered shared/_header (1.2ms)
+Rendered shared/_footer (0.6ms)
+Completed in 95ms (View: 6, DB: 3) | 200 OK [http://localhost/users/1/resources]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#new (for 127.0.0.1 at 2009-07-30 15:24:12) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+Rendering template within layouts/searched_keywords
+Rendering searched_keywords/new
+Rendered shared/_footer (0.6ms)
+Completed in 24ms (View: 3, DB: 1) | 200 OK [http://localhost/users/1/searched_keywords/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#auto_complete_for_resource_keywords (for 127.0.0.1 at 2009-07-30 15:24:13) [GET]
+  Parameters: {"resource"=>{"keywords"=>""}}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (LOWER(`resources`.keywords) LIKE '%%') ORDER BY `resources`.keywords ASC LIMIT 50[0m
+  [4;35;1mResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mLinkUrlResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Completed in 32ms (View: 6, DB: 3) | 200 OK [http://localhost/searched_keywords/auto_complete_for_resource_keywords?resource%5Bkeywords%5D=]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#auto_complete_for_resource_keywords (for 127.0.0.1 at 2009-07-30 15:24:13) [GET]
+  Parameters: {"resource"=>{"keywords"=>"asdf"}}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM `resources` WHERE (LOWER(`resources`.keywords) LIKE '%asdf%') ORDER BY `resources`.keywords ASC LIMIT 50[0m
+  [4;36;1mResource Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mLinkUrlResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Completed in 36ms (View: 10, DB: 3) | 200 OK [http://localhost/searched_keywords/auto_complete_for_resource_keywords?resource%5Bkeywords%5D=asdf]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#create (for 127.0.0.1 at 2009-07-30 15:24:13) [POST]
+  Parameters: {"user_id"=>"1", "keywords"=>"asdf"}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mSearchedKeyword Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `searched_keywords`[0m
+  [4;35;1mSearchedKeyword Load (0.2ms)[0m   [0mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.`name` = 'asdf') AND (`searched_keywords`.user_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.`name` = 'asdf') AND (`searched_keywords`.user_id = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSearchedKeyword Update (0.2ms)[0m   [0;1mUPDATE `searched_keywords` SET `updated_at` = '2009-07-30 07:24:13', `searched_times` = 2 WHERE `id` = 1[0m
+  [4;35;1mSQL (51.2ms)[0m   [0mCOMMIT[0m
+Completed in 83ms (View: 1, DB: 53) | 200 OK [http://localhost/users/1/searched_keywords]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#index (for 127.0.0.1 at 2009-07-30 15:24:13) [GET]
+  Parameters: {"keywords"=>"asdf"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mResource Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mSearchedKeyword Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `searched_keywords`[0m
+  [4;36;1mSearchedKeyword Load (0.2ms)[0m   [0;1mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.`name` = 'asdf') LIMIT 1[0m
+Rendering template within layouts/searched_keywords
+Rendering searched_keywords/index
+  [4;35;1mRelatedKeyword Load (0.2ms)[0m   [0mSELECT * FROM `related_keywords` WHERE (`related_keywords`.searched_keyword_id = 1) LIMIT 10[0m
+  [4;36;1mResource Load Including Associations (0.1ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keywords` AS t0_r1, `resources`.`type` AS t0_r2, `resources`.`shoulu` AS t0_r3, `resources`.`user_id` AS t0_r4, `resources`.`content` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`created_at` AS t0_r11, `resources`.`updated_at` AS t0_r12, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`follower_id` AS t1_r7, `users`.`following_id` AS t1_r8, `users`.`value` AS t1_r9, `users`.`terms` AS t1_r10, `users`.`birthday` AS t1_r11, `users`.`username` AS t1_r12, `users`.`failed_signin_times` AS t1_r13, `users`.`created_at` AS t1_r14, `users`.`updated_at` AS t1_r15 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`keywords` = 'asdf') ORDER BY users.value DESC[0m
+  [4;35;1mLinkUrlResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 1) AND (`comments`.resource_id = 1) ORDER BY created_at DESC LIMIT 3[0m
+  [4;35;1mComment Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.resource_id = 1) [0m
+Rendered link_url_resources/_link_url_resource (8.2ms)
+Completed in 52ms (View: 16, DB: 4) | 200 OK [http://localhost/search/asdf]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-30 15:24:15) [GET]
+
+ActionController::RoutingError (No route matches "/users//searched_keywords//related_keywords" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#index (for 127.0.0.1 at 2009-07-30 15:25:57) [GET]
+  Parameters: {"keywords"=>"asdf"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mSearchedKeyword Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `searched_keywords`[0m
+  [4;35;1mSearchedKeyword Load (0.1ms)[0m   [0mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.`name` = 'asdf') LIMIT 1[0m
+Rendering template within layouts/searched_keywords
+Rendering searched_keywords/index
+  [4;36;1mRelatedKeyword Load (0.1ms)[0m   [0;1mSELECT * FROM `related_keywords` WHERE (`related_keywords`.searched_keyword_id = 1) LIMIT 10[0m
+  [4;35;1mResource Load Including Associations (0.1ms)[0m   [0mSELECT `resources`.`id` AS t0_r0, `resources`.`keywords` AS t0_r1, `resources`.`type` AS t0_r2, `resources`.`shoulu` AS t0_r3, `resources`.`user_id` AS t0_r4, `resources`.`content` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`created_at` AS t0_r11, `resources`.`updated_at` AS t0_r12, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`follower_id` AS t1_r7, `users`.`following_id` AS t1_r8, `users`.`value` AS t1_r9, `users`.`terms` AS t1_r10, `users`.`birthday` AS t1_r11, `users`.`username` AS t1_r12, `users`.`failed_signin_times` AS t1_r13, `users`.`created_at` AS t1_r14, `users`.`updated_at` AS t1_r15 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`keywords` = 'asdf') ORDER BY users.value DESC[0m
+  [4;36;1mLinkUrlResource Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 1) AND (`comments`.resource_id = 1) ORDER BY created_at DESC LIMIT 3[0m
+  [4;36;1mComment Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.resource_id = 1) [0m
+Rendered link_url_resources/_link_url_resource (9.0ms)
+Completed in 136ms (View: 18, DB: 4) | 200 OK [http://localhost/search/asdf]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-30 15:25:58) [GET]
+
+ActionController::RoutingError (No route matches "/users//searched_keywords//related_keywords" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#index (for 127.0.0.1 at 2009-07-30 15:27:14) [GET]
+  Parameters: {"keywords"=>"asdf"}
+  [4;36;1mUser Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mSearchedKeyword Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `searched_keywords`[0m
+  [4;36;1mSearchedKeyword Load (0.0ms)[0m   [0;1mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.`name` = 'asdf') LIMIT 1[0m
+Rendering template within layouts/searched_keywords
+Rendering searched_keywords/index
+  [4;35;1mRelatedKeyword Load (0.1ms)[0m   [0mSELECT * FROM `related_keywords` WHERE (`related_keywords`.searched_keyword_id = 1) LIMIT 10[0m
+  [4;36;1mResource Load Including Associations (0.1ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keywords` AS t0_r1, `resources`.`type` AS t0_r2, `resources`.`shoulu` AS t0_r3, `resources`.`user_id` AS t0_r4, `resources`.`content` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`created_at` AS t0_r11, `resources`.`updated_at` AS t0_r12, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`follower_id` AS t1_r7, `users`.`following_id` AS t1_r8, `users`.`value` AS t1_r9, `users`.`terms` AS t1_r10, `users`.`birthday` AS t1_r11, `users`.`username` AS t1_r12, `users`.`failed_signin_times` AS t1_r13, `users`.`created_at` AS t1_r14, `users`.`updated_at` AS t1_r15 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`keywords` = 'asdf') ORDER BY users.value DESC[0m
+  [4;35;1mLinkUrlResource Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 1) AND (`comments`.resource_id = 1) ORDER BY created_at DESC LIMIT 3[0m
+  [4;35;1mComment Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.resource_id = 1) [0m
+Rendered link_url_resources/_link_url_resource (8.0ms)
+Completed in 52ms (View: 16, DB: 4) | 200 OK [http://localhost/search/asdf]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-30 15:27:15) [GET]
+
+ActionController::RoutingError (No route matches "/users//searched_keywords//related_keywords" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#index (for 127.0.0.1 at 2009-07-30 15:28:37) [GET]
+  Parameters: {"keywords"=>"asdf"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mSearchedKeyword Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `searched_keywords`[0m
+  [4;35;1mSearchedKeyword Load (0.1ms)[0m   [0mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.`name` = 'asdf') LIMIT 1[0m
+Rendering template within layouts/searched_keywords
+Rendering searched_keywords/index
+  [4;36;1mRelatedKeyword Load (0.1ms)[0m   [0;1mSELECT * FROM `related_keywords` WHERE (`related_keywords`.searched_keyword_id = 1) LIMIT 10[0m
+  [4;35;1mResource Load Including Associations (0.1ms)[0m   [0mSELECT `resources`.`id` AS t0_r0, `resources`.`keywords` AS t0_r1, `resources`.`type` AS t0_r2, `resources`.`shoulu` AS t0_r3, `resources`.`user_id` AS t0_r4, `resources`.`content` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`created_at` AS t0_r11, `resources`.`updated_at` AS t0_r12, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`follower_id` AS t1_r7, `users`.`following_id` AS t1_r8, `users`.`value` AS t1_r9, `users`.`terms` AS t1_r10, `users`.`birthday` AS t1_r11, `users`.`username` AS t1_r12, `users`.`failed_signin_times` AS t1_r13, `users`.`created_at` AS t1_r14, `users`.`updated_at` AS t1_r15 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`keywords` = 'asdf') ORDER BY users.value DESC[0m
+  [4;36;1mLinkUrlResource Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 1) AND (`comments`.resource_id = 1) ORDER BY created_at DESC LIMIT 3[0m
+  [4;36;1mComment Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.resource_id = 1) [0m
+Rendered link_url_resources/_link_url_resource (8.6ms)
+Completed in 54ms (View: 17, DB: 5) | 200 OK [http://localhost/search/asdf]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#index (for 127.0.0.1 at 2009-07-30 15:28:38) [GET]
+  Parameters: {"keywords"=>"asdf"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mSearchedKeyword Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `searched_keywords`[0m
+  [4;36;1mSearchedKeyword Load (0.1ms)[0m   [0;1mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.`name` = 'asdf') LIMIT 1[0m
+Rendering template within layouts/searched_keywords
+Rendering searched_keywords/index
+  [4;35;1mRelatedKeyword Load (0.1ms)[0m   [0mSELECT * FROM `related_keywords` WHERE (`related_keywords`.searched_keyword_id = 1) LIMIT 10[0m
+  [4;36;1mResource Load Including Associations (0.1ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keywords` AS t0_r1, `resources`.`type` AS t0_r2, `resources`.`shoulu` AS t0_r3, `resources`.`user_id` AS t0_r4, `resources`.`content` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`created_at` AS t0_r11, `resources`.`updated_at` AS t0_r12, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`follower_id` AS t1_r7, `users`.`following_id` AS t1_r8, `users`.`value` AS t1_r9, `users`.`terms` AS t1_r10, `users`.`birthday` AS t1_r11, `users`.`username` AS t1_r12, `users`.`failed_signin_times` AS t1_r13, `users`.`created_at` AS t1_r14, `users`.`updated_at` AS t1_r15 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`keywords` = 'asdf') ORDER BY users.value DESC[0m
+  [4;35;1mLinkUrlResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 1) AND (`comments`.resource_id = 1) ORDER BY created_at DESC LIMIT 3[0m
+  [4;35;1mComment Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.resource_id = 1) [0m
+Rendered link_url_resources/_link_url_resource (9.0ms)
+Completed in 103ms (View: 18, DB: 4) | 200 OK [http://localhost/search/asdf]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-30 15:28:39) [GET]
+
+ActionController::RoutingError (No route matches "/users//searched_keywords//related_keywords" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#index (for 127.0.0.1 at 2009-07-30 15:31:00) [GET]
+  Parameters: {"keywords"=>"asdf"}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mSearchedKeyword Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `searched_keywords`[0m
+  [4;35;1mSearchedKeyword Load (0.0ms)[0m   [0mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.`name` = 'asdf') LIMIT 1[0m
+Rendering template within layouts/searched_keywords
+Rendering searched_keywords/index
+  [4;36;1mRelatedKeyword Load (0.0ms)[0m   [0;1mMysql::Error: Table 'miklme_development.related_keywords' doesn't exist: SELECT * FROM `related_keywords` WHERE (`related_keywords`.searched_keyword_id = 1) LIMIT 10[0m
+
+ActionView::TemplateError (Mysql::Error: Table 'miklme_development.related_keywords' doesn't exist: SELECT * FROM `related_keywords` WHERE (`related_keywords`.searched_keyword_id = 1)  LIMIT 10) on line #10 of app/views/searched_keywords/index.erb:
+7:   <table>
+8:     <tbody>
+9:       <tr>
+10:         <% if not @related_keywords.blank? %>
+11:           <% for related_keyword in @related_keywords %>
+12:             <td>
+13:               <%= related_keyword.name %>
+
+    app/views/searched_keywords/index.erb:10
+    app/controllers/searched_keywords_controller.rb:23:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (108.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#index (for 127.0.0.1 at 2009-07-30 15:31:00) [GET]
+  Parameters: {"keywords"=>"asdf"}
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mSearchedKeyword Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `searched_keywords`[0m
+  [4;35;1mSearchedKeyword Load (0.1ms)[0m   [0mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.`name` = 'asdf') LIMIT 1[0m
+Rendering template within layouts/searched_keywords
+Rendering searched_keywords/index
+  [4;36;1mRelatedKeyword Load (0.0ms)[0m   [0;1mMysql::Error: Table 'miklme_development.related_keywords' doesn't exist: SELECT * FROM `related_keywords` WHERE (`related_keywords`.searched_keyword_id = 1) LIMIT 10[0m
+
+ActionView::TemplateError (Mysql::Error: Table 'miklme_development.related_keywords' doesn't exist: SELECT * FROM `related_keywords` WHERE (`related_keywords`.searched_keyword_id = 1)  LIMIT 10) on line #10 of app/views/searched_keywords/index.erb:
+7:   <table>
+8:     <tbody>
+9:       <tr>
+10:         <% if not @related_keywords.blank? %>
+11:           <% for related_keyword in @related_keywords %>
+12:             <td>
+13:               <%= related_keyword.name %>
+
+    app/views/searched_keywords/index.erb:10
+    app/controllers/searched_keywords_controller.rb:23:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (117.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (117.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (235.4ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20090523150301)
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (97.4ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(20), `crypted_password` varchar(40), `salt` varchar(40), `remember_token` varchar(40), `remember_token_expires_at` datetime, `nick_name` varchar(20), `follower_id` int(11), `following_id` int(11), `value` decimal(8,1) DEFAULT 0, `terms` int(11), `birthday` date, `username` varchar(255) NOT NULL, `failed_signin_times` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (246.3ms)[0m   [0mCREATE INDEX `index_users_on_username` ON `users` (`username`)[0m
+  [4;36;1mSQL (55.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090523150301')[0m
+Migrating to CreatePortraits (20090606045951)
+  [4;35;1mSQL (109.6ms)[0m   [0mCREATE TABLE `portraits` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `image_file` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (44.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090606045951')[0m
+Migrating to CreateTruePortraits (20090611094020)
+  [4;35;1mSQL (233.7ms)[0m   [0mCREATE TABLE `true_portraits` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `image_file` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (99.7ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090611094020')[0m
+Migrating to CreateResources (20090611163158)
+  [4;35;1mSQL (197.8ms)[0m   [0mCREATE TABLE `resources` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `keywords` varchar(139) NOT NULL, `type` varchar(255), `shoulu` tinyint(1) DEFAULT 1, `user_id` int(11), `content` text, `title` varchar(255), `form` varchar(255), `link_url` varchar(255), `description` varchar(255), `authority` tinyint(1) DEFAULT 0, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (89.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090611163158')[0m
+Migrating to CreateComments (20090712100836)
+  [4;35;1mSQL (98.4ms)[0m   [0mCREATE TABLE `comments` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `content` text, `resource_id` int(11), `user_id` int(11), `rating` int(11) DEFAULT 0, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (44.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090712100836')[0m
+Migrating to CreateSearchedKeywords (20090713122317)
+  [4;35;1mSQL (86.8ms)[0m   [0mCREATE TABLE `searched_keywords` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `searched_times` int(11) DEFAULT 1, `name` varchar(255), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (44.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090713122317')[0m
+Migrating to CreateAddresses (20090725045750)
+  [4;35;1mSQL (98.6ms)[0m   [0mCREATE TABLE `addresses` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `province` varchar(255), `city` varchar(255), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (55.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090725045750')[0m
+Migrating to CreateRelatedKeywords (20090729021859)
+  [4;35;1mSQL (109.5ms)[0m   [0mCREATE TABLE `related_keywords` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `searched_keyword_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (55.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090729021859')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `addresses`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `addresses`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `addresses`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `comments`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `comments`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `portraits`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `portraits`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `portraits`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW FIELDS FROM `related_keywords`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `related_keywords`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `related_keywords`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `resources`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `resources`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `searched_keywords`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `searched_keywords`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `searched_keywords`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `true_portraits`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `true_portraits`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `true_portraits`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#new (for 127.0.0.1 at 2009-07-30 15:31:46) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 16ms (DB: 2) | 302 Found [http://localhost/users/1/searched_keywords/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-30 15:31:46) [GET]
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering sessions/new
+Rendered shared/_footer (1.1ms)
+Completed in 33ms (View: 3, DB: 1) | 200 OK [http://localhost/session/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-07-30 15:31:51) [GET]
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/users
+Rendering users/new
+Rendered shared/_footer (1.1ms)
+Completed in 22ms (View: 6, DB: 1) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-07-30 15:31:56) [POST]
+  Parameters: {"commit"=>"注册", "user"=>{"username"=>"Michael", "terms"=>"1", "password"=>"123456"}}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`username` = BINARY 'Michael') LIMIT 1[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `salt`, `created_at`, `crypted_password`, `remember_token_expires_at`, `failed_signin_times`, `updated_at`, `follower_id`, `username`, `value`, `remember_token`, `nick_name`, `birthday`, `following_id`, `terms`) VALUES(NULL, '70c3803359960b16fd609e9b4f2d9208f36dcd1e', '2009-07-30 07:31:56', 'd4a4a8ca85ae97b124a4d1be843fe59addfabe09', NULL, NULL, '2009-07-30 07:31:56', NULL, 'Michael', 0.0, NULL, NULL, NULL, NULL, 1)[0m
+  [4;35;1mSQL (64.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+Redirected to http://localhost:3000/users/1/edit
+Completed in 146ms (DB: 67) | 302 Found [http://localhost/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-07-30 15:31:56) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+Rendering template within layouts/users
+Rendering users/edit
+Rendered shared/_header (1.6ms)
+Rendered shared/_footer (0.6ms)
+Completed in 34ms (View: 12, DB: 1) | 200 OK [http://localhost/users/1/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#update (for 127.0.0.1 at 2009-07-30 15:31:59) [PUT]
+  Parameters: {"commit"=>"就这样", "id"=>"1", "user"=>{"name"=>"123", "birthday(1i)"=>"1970", "birthday(2i)"=>"7", "birthday(3i)"=>"30", "nick_name"=>"123"}}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Exists (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`username` = BINARY 'Michael' AND `users`.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-07-30 07:31:59', `name` = '123', `nick_name` = '123', `birthday` = '1970-07-30' WHERE `id` = 1[0m
+  [4;36;1mSQL (51.9ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/users/1
+Completed in 77ms (DB: 54) | 302 Found [http://localhost/users/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-07-30 15:32:00) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+Redirected to http://localhost:3000/users/1/resources
+Completed in 17ms (DB: 2) | 302 Found [http://localhost/users/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-30 15:32:00) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mLinkUrlResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mLinkUrlResource Load (0.2ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) ORDER BY created_at DESC[0m
+  [4;36;1mTwitterResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/resources
+Rendering resources/index
+Rendered twitter_resources/_form (1.3ms)
+Rendered shared/_header (1.6ms)
+Rendered shared/_footer (0.6ms)
+Completed in 99ms (View: 6, DB: 3) | 200 OK [http://localhost/users/1/resources]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LinkUrlResourcesController#new (for 127.0.0.1 at 2009-07-30 15:32:04) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mLinkUrlResource Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/link_url_resources
+Rendering link_url_resources/new
+Completed in 38ms (View: 5, DB: 2) | 200 OK [http://localhost/users/1/link_url_resources/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LinkUrlResourcesController#auto_complete_for_link_url_resource_keywords (for 127.0.0.1 at 2009-07-30 15:32:11) [POST]
+  Parameters: {"link_url_resource"=>{"keywords"=>"asdf"}}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/link_url_resources_controller.rb:28:in `find_user'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (89.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LinkUrlResourcesController#create (for 127.0.0.1 at 2009-07-30 15:32:11) [POST]
+  Parameters: {"commit"=>"完成", "user_id"=>"1", "link_url_resource"=>{"form"=>"文字、文档", "authority"=>"false", "description"=>"safd", "keywords"=>"asdf", "link_url"=>"http://asdf"}}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mLinkUrlResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mLinkUrlResource Create (0.2ms)[0m   [0;1mINSERT INTO `resources` (`created_at`, `title`, `updated_at`, `type`, `user_id`, `form`, `content`, `authority`, `shoulu`, `description`, `keywords`, `link_url`) VALUES('2009-07-30 07:32:11', NULL, '2009-07-30 07:32:11', 'LinkUrlResource', 1, '文字、文档', NULL, 0, 1, 'safd', 'asdf', 'http://asdf')[0m
+  [4;35;1mSQL (58.2ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/users/1
+Completed in 93ms (DB: 60) | 302 Found [http://localhost/users/1/link_url_resources]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-07-30 15:32:11) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+Redirected to http://localhost:3000/users/1/resources
+Completed in 17ms (DB: 1) | 302 Found [http://localhost/users/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-07-30 15:32:12) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mLinkUrlResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mLinkUrlResource Load (0.2ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+  [4;36;1mResource Load (0.2ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) ORDER BY created_at DESC[0m
+  [4;35;1mResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mTwitterResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/resources
+Rendering resources/index
+Rendered twitter_resources/_form (1.2ms)
+Rendered shared/_header (1.0ms)
+Rendered shared/_footer (0.6ms)
+Completed in 41ms (View: 5, DB: 4) | 200 OK [http://localhost/users/1/resources]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#new (for 127.0.0.1 at 2009-07-30 15:32:14) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+Rendering template within layouts/searched_keywords
+Rendering searched_keywords/new
+Rendered shared/_footer (1.0ms)
+Completed in 26ms (View: 5, DB: 1) | 200 OK [http://localhost/users/1/searched_keywords/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#new (for 127.0.0.1 at 2009-07-30 15:32:17) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+Rendering template within layouts/searched_keywords
+Rendering searched_keywords/new
+Rendered shared/_footer (0.7ms)
+Completed in 24ms (View: 3, DB: 1) | 200 OK [http://localhost/users/1/searched_keywords/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#auto_complete_for_resource_keywords (for 127.0.0.1 at 2009-07-30 15:32:19) [GET]
+  Parameters: {"resource"=>{"keywords"=>""}}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mResource Load (0.3ms)[0m   [0mSELECT * FROM `resources` WHERE (LOWER(`resources`.keywords) LIKE '%%') ORDER BY `resources`.keywords ASC LIMIT 50[0m
+  [4;36;1mResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mLinkUrlResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Completed in 31ms (View: 7, DB: 3) | 200 OK [http://localhost/searched_keywords/auto_complete_for_resource_keywords?resource%5Bkeywords%5D=]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#auto_complete_for_resource_keywords (for 127.0.0.1 at 2009-07-30 15:32:20) [GET]
+  Parameters: {"resource"=>{"keywords"=>"asdf"}}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mResource Load (0.3ms)[0m   [0;1mSELECT * FROM `resources` WHERE (LOWER(`resources`.keywords) LIKE '%asdf%') ORDER BY `resources`.keywords ASC LIMIT 50[0m
+  [4;35;1mResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mLinkUrlResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Completed in 87ms (View: 9, DB: 3) | 200 OK [http://localhost/searched_keywords/auto_complete_for_resource_keywords?resource%5Bkeywords%5D=asdf]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#create (for 127.0.0.1 at 2009-07-30 15:32:20) [POST]
+  Parameters: {"user_id"=>"1", "keywords"=>"asdf"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mSearchedKeyword Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `searched_keywords`[0m
+  [4;36;1mSearchedKeyword Load (0.2ms)[0m   [0;1mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.`name` = 'asdf') AND (`searched_keywords`.user_id = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSearchedKeyword Create (0.2ms)[0m   [0;1mINSERT INTO `searched_keywords` (`name`, `created_at`, `updated_at`, `searched_times`, `user_id`) VALUES('asdf', '2009-07-30 07:32:20', '2009-07-30 07:32:20', 1, NULL)[0m
+  [4;35;1mSQL (58.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSearchedKeyword Update (0.3ms)[0m   [0mUPDATE `searched_keywords` SET `updated_at` = '2009-07-30 07:32:20', `user_id` = 1 WHERE `id` = 1[0m
+  [4;36;1mSQL (53.2ms)[0m   [0;1mCOMMIT[0m
+Completed in 146ms (View: 1, DB: 114) | 200 OK [http://localhost/users/1/searched_keywords]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#index (for 127.0.0.1 at 2009-07-30 15:32:20) [GET]
+  Parameters: {"keywords"=>"asdf"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mSearchedKeyword Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `searched_keywords`[0m
+  [4;35;1mSearchedKeyword Load (0.2ms)[0m   [0mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.`name` = 'asdf') LIMIT 1[0m
+Rendering template within layouts/searched_keywords
+Rendering searched_keywords/index
+  [4;36;1mRelatedKeyword Load (0.2ms)[0m   [0;1mSELECT * FROM `related_keywords` WHERE (`related_keywords`.searched_keyword_id = 1) LIMIT 10[0m
+  [4;35;1mResource Load Including Associations (0.7ms)[0m   [0mSELECT `resources`.`id` AS t0_r0, `resources`.`keywords` AS t0_r1, `resources`.`type` AS t0_r2, `resources`.`shoulu` AS t0_r3, `resources`.`user_id` AS t0_r4, `resources`.`content` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`created_at` AS t0_r11, `resources`.`updated_at` AS t0_r12, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`follower_id` AS t1_r7, `users`.`following_id` AS t1_r8, `users`.`value` AS t1_r9, `users`.`terms` AS t1_r10, `users`.`birthday` AS t1_r11, `users`.`username` AS t1_r12, `users`.`failed_signin_times` AS t1_r13, `users`.`created_at` AS t1_r14, `users`.`updated_at` AS t1_r15 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`keywords` = 'asdf') ORDER BY users.value DESC[0m
+  [4;36;1mLinkUrlResource Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 1) AND (`comments`.resource_id = 1) ORDER BY created_at DESC LIMIT 3[0m
+  [4;36;1mComment Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.resource_id = 1) [0m
+Rendered link_url_resources/_link_url_resource (8.8ms)
+Completed in 53ms (View: 17, DB: 5) | 200 OK [http://localhost/search/asdf]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-30 15:32:22) [GET]
+
+ActionController::RoutingError (No route matches "/users//searched_keywords//related_keywords" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#index (for 127.0.0.1 at 2009-07-30 15:33:57) [GET]
+  Parameters: {"keywords"=>"asdf"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mResource Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mSearchedKeyword Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `searched_keywords`[0m
+  [4;36;1mSearchedKeyword Load (0.1ms)[0m   [0;1mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.`name` = 'asdf') LIMIT 1[0m
+Rendering template within layouts/searched_keywords
+Rendering searched_keywords/index
+  [4;35;1mRelatedKeyword Load (0.1ms)[0m   [0mSELECT * FROM `related_keywords` WHERE (`related_keywords`.searched_keyword_id = 1) LIMIT 10[0m
+  [4;36;1mResource Load Including Associations (0.1ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keywords` AS t0_r1, `resources`.`type` AS t0_r2, `resources`.`shoulu` AS t0_r3, `resources`.`user_id` AS t0_r4, `resources`.`content` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`created_at` AS t0_r11, `resources`.`updated_at` AS t0_r12, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`follower_id` AS t1_r7, `users`.`following_id` AS t1_r8, `users`.`value` AS t1_r9, `users`.`terms` AS t1_r10, `users`.`birthday` AS t1_r11, `users`.`username` AS t1_r12, `users`.`failed_signin_times` AS t1_r13, `users`.`created_at` AS t1_r14, `users`.`updated_at` AS t1_r15 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`keywords` = 'asdf') ORDER BY users.value DESC[0m
+  [4;35;1mLinkUrlResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+
+ActionView::TemplateError (undefined method `user_searched_keyword_related_keywords_path' for #<ActionView::Base:0xb6ddb8e4>) on line #19 of app/views/searched_keywords/index.erb:
+16:         <% end %>
+17:       </tr>
+18:     </tbody>
+19:     <%=link_to "修改相关关键字",user_searched_keyword_related_keywords_path(@user,@keyword),:popup => ['修改相关关键字', 'height=300,width=600'] %>
+20:   </table>
+21: </div>
+22: 
+
+    app/views/searched_keywords/index.erb:19
+    app/controllers/searched_keywords_controller.rb:23:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (45.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#index (for 127.0.0.1 at 2009-07-30 15:34:15) [GET]
+  Parameters: {"keywords"=>"asdf"}
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mSearchedKeyword Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `searched_keywords`[0m
+  [4;36;1mSearchedKeyword Load (0.0ms)[0m   [0;1mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.`name` = 'asdf') LIMIT 1[0m
+Rendering template within layouts/searched_keywords
+Rendering searched_keywords/index
+  [4;35;1mRelatedKeyword Load (0.1ms)[0m   [0mSELECT * FROM `related_keywords` WHERE (`related_keywords`.searched_keyword_id = 1) LIMIT 10[0m
+  [4;36;1mResource Load Including Associations (0.1ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keywords` AS t0_r1, `resources`.`type` AS t0_r2, `resources`.`shoulu` AS t0_r3, `resources`.`user_id` AS t0_r4, `resources`.`content` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`created_at` AS t0_r11, `resources`.`updated_at` AS t0_r12, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`follower_id` AS t1_r7, `users`.`following_id` AS t1_r8, `users`.`value` AS t1_r9, `users`.`terms` AS t1_r10, `users`.`birthday` AS t1_r11, `users`.`username` AS t1_r12, `users`.`failed_signin_times` AS t1_r13, `users`.`created_at` AS t1_r14, `users`.`updated_at` AS t1_r15 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`keywords` = 'asdf') ORDER BY users.value DESC[0m
+  [4;35;1mLinkUrlResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 1) AND (`comments`.resource_id = 1) ORDER BY created_at DESC LIMIT 3[0m
+  [4;35;1mComment Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.resource_id = 1) [0m
+Rendered link_url_resources/_link_url_resource (9.0ms)
+Completed in 113ms (View: 21, DB: 4) | 200 OK [http://localhost/search/asdf]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#index (for 127.0.0.1 at 2009-07-30 15:34:16) [GET]
+  Parameters: {"keywords"=>"asdf"}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mSearchedKeyword Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `searched_keywords`[0m
+  [4;35;1mSearchedKeyword Load (0.0ms)[0m   [0mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.`name` = 'asdf') LIMIT 1[0m
+Rendering template within layouts/searched_keywords
+Rendering searched_keywords/index
+  [4;36;1mRelatedKeyword Load (0.1ms)[0m   [0;1mSELECT * FROM `related_keywords` WHERE (`related_keywords`.searched_keyword_id = 1) LIMIT 10[0m
+  [4;35;1mResource Load Including Associations (0.1ms)[0m   [0mSELECT `resources`.`id` AS t0_r0, `resources`.`keywords` AS t0_r1, `resources`.`type` AS t0_r2, `resources`.`shoulu` AS t0_r3, `resources`.`user_id` AS t0_r4, `resources`.`content` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`created_at` AS t0_r11, `resources`.`updated_at` AS t0_r12, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`follower_id` AS t1_r7, `users`.`following_id` AS t1_r8, `users`.`value` AS t1_r9, `users`.`terms` AS t1_r10, `users`.`birthday` AS t1_r11, `users`.`username` AS t1_r12, `users`.`failed_signin_times` AS t1_r13, `users`.`created_at` AS t1_r14, `users`.`updated_at` AS t1_r15 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`keywords` = 'asdf') ORDER BY users.value DESC[0m
+  [4;36;1mLinkUrlResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 1) AND (`comments`.resource_id = 1) ORDER BY created_at DESC LIMIT 3[0m
+  [4;36;1mComment Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.resource_id = 1) [0m
+Rendered link_url_resources/_link_url_resource (8.1ms)
+Completed in 51ms (View: 16, DB: 4) | 200 OK [http://localhost/search/asdf]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-30 15:34:18) [GET]
+
+ActionController::RoutingError (No route matches "/searched_keywords//related_keywords" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#index (for 127.0.0.1 at 2009-07-30 15:36:34) [GET]
+  Parameters: {"keywords"=>"asdf"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mSearchedKeyword Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `searched_keywords`[0m
+  [4;36;1mSearchedKeyword Load (0.1ms)[0m   [0;1mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.`name` = 'asdf') LIMIT 1[0m
+Rendering template within layouts/searched_keywords
+Rendering searched_keywords/index
+  [4;35;1mRelatedKeyword Load (0.1ms)[0m   [0mSELECT * FROM `related_keywords` WHERE (`related_keywords`.searched_keyword_id = 1) LIMIT 10[0m
+  [4;36;1mResource Load Including Associations (0.1ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keywords` AS t0_r1, `resources`.`type` AS t0_r2, `resources`.`shoulu` AS t0_r3, `resources`.`user_id` AS t0_r4, `resources`.`content` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`created_at` AS t0_r11, `resources`.`updated_at` AS t0_r12, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`follower_id` AS t1_r7, `users`.`following_id` AS t1_r8, `users`.`value` AS t1_r9, `users`.`terms` AS t1_r10, `users`.`birthday` AS t1_r11, `users`.`username` AS t1_r12, `users`.`failed_signin_times` AS t1_r13, `users`.`created_at` AS t1_r14, `users`.`updated_at` AS t1_r15 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`keywords` = 'asdf') ORDER BY users.value DESC[0m
+  [4;35;1mLinkUrlResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 1) AND (`comments`.resource_id = 1) ORDER BY created_at DESC LIMIT 3[0m
+  [4;35;1mComment Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.resource_id = 1) [0m
+Rendered link_url_resources/_link_url_resource (8.2ms)
+Completed in 53ms (View: 17, DB: 4) | 200 OK [http://localhost/search/asdf]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#index (for 127.0.0.1 at 2009-07-30 15:38:17) [GET]
+  Parameters: {"keywords"=>"asdf"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mSearchedKeyword Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `searched_keywords`[0m
+  [4;35;1mSearchedKeyword Load (0.0ms)[0m   [0mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.`name` = 'asdf') LIMIT 1[0m
+Rendering template within layouts/searched_keywords
+Rendering searched_keywords/index
+  [4;36;1mRelatedKeyword Load (0.1ms)[0m   [0;1mSELECT * FROM `related_keywords` WHERE (`related_keywords`.searched_keyword_id = 1) LIMIT 10[0m
+  [4;35;1mResource Load Including Associations (0.1ms)[0m   [0mSELECT `resources`.`id` AS t0_r0, `resources`.`keywords` AS t0_r1, `resources`.`type` AS t0_r2, `resources`.`shoulu` AS t0_r3, `resources`.`user_id` AS t0_r4, `resources`.`content` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`created_at` AS t0_r11, `resources`.`updated_at` AS t0_r12, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`follower_id` AS t1_r7, `users`.`following_id` AS t1_r8, `users`.`value` AS t1_r9, `users`.`terms` AS t1_r10, `users`.`birthday` AS t1_r11, `users`.`username` AS t1_r12, `users`.`failed_signin_times` AS t1_r13, `users`.`created_at` AS t1_r14, `users`.`updated_at` AS t1_r15 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`keywords` = 'asdf') ORDER BY users.value DESC[0m
+  [4;36;1mLinkUrlResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+
+ActionView::TemplateError (undefined method `searched_keyword_related_keywords_path' for #<ActionView::Base:0xb6ed8d8c>) on line #19 of app/views/searched_keywords/index.erb:
+16:         <% end %>
+17:       </tr>
+18:     </tbody>
+19:     <%=link_to "修改相关关键字",searched_keyword_related_keywords_path(@keyword),:popup => ['修改相关关键字', 'height=300,width=600'] %>
+20:   </table>
+21: </div>
+22: 
+
+    app/views/searched_keywords/index.erb:19
+    app/controllers/searched_keywords_controller.rb:23:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (49.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#new (for 127.0.0.1 at 2009-07-30 15:38:22) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+Rendering template within layouts/searched_keywords
+Rendering searched_keywords/new
+Rendered shared/_footer (1.0ms)
+Completed in 23ms (View: 4, DB: 1) | 200 OK [http://localhost/users/1/searched_keywords/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#new (for 127.0.0.1 at 2009-07-30 15:38:22) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+Rendering template within layouts/searched_keywords
+Rendering searched_keywords/new
+Rendered shared/_footer (0.6ms)
+Completed in 82ms (View: 3, DB: 1) | 200 OK [http://localhost/users/1/searched_keywords/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#auto_complete_for_resource_keywords (for 127.0.0.1 at 2009-07-30 15:38:24) [GET]
+  Parameters: {"resource"=>{"keywords"=>""}}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM `resources` WHERE (LOWER(`resources`.keywords) LIKE '%%') ORDER BY `resources`.keywords ASC LIMIT 50[0m
+  [4;36;1mResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mLinkUrlResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Completed in 35ms (View: 6, DB: 3) | 200 OK [http://localhost/searched_keywords/auto_complete_for_resource_keywords?resource%5Bkeywords%5D=]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#auto_complete_for_resource_keywords (for 127.0.0.1 at 2009-07-30 15:38:25) [GET]
+  Parameters: {"resource"=>{"keywords"=>"asdf"}}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (LOWER(`resources`.keywords) LIKE '%asdf%') ORDER BY `resources`.keywords ASC LIMIT 50[0m
+  [4;35;1mResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mLinkUrlResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Completed in 34ms (View: 8, DB: 3) | 200 OK [http://localhost/searched_keywords/auto_complete_for_resource_keywords?resource%5Bkeywords%5D=asdf]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#create (for 127.0.0.1 at 2009-07-30 15:38:25) [POST]
+  Parameters: {"user_id"=>"1", "keywords"=>"asdf"}
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mSearchedKeyword Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `searched_keywords`[0m
+  [4;36;1mSearchedKeyword Load (0.3ms)[0m   [0;1mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.`name` = 'asdf') AND (`searched_keywords`.user_id = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.`name` = 'asdf') AND (`searched_keywords`.user_id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSearchedKeyword Update (0.2ms)[0m   [0mUPDATE `searched_keywords` SET `updated_at` = '2009-07-30 07:38:25', `searched_times` = 2 WHERE `id` = 1[0m
+  [4;36;1mSQL (56.6ms)[0m   [0;1mCOMMIT[0m
+Completed in 138ms (View: 1, DB: 59) | 200 OK [http://localhost/users/1/searched_keywords]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#index (for 127.0.0.1 at 2009-07-30 15:38:25) [GET]
+  Parameters: {"keywords"=>"asdf"}
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mSearchedKeyword Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `searched_keywords`[0m
+  [4;35;1mSearchedKeyword Load (0.2ms)[0m   [0mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.`name` = 'asdf') LIMIT 1[0m
+Rendering template within layouts/searched_keywords
+Rendering searched_keywords/index
+  [4;36;1mRelatedKeyword Load (0.1ms)[0m   [0;1mSELECT * FROM `related_keywords` WHERE (`related_keywords`.searched_keyword_id = 1) LIMIT 10[0m
+  [4;35;1mResource Load Including Associations (0.1ms)[0m   [0mSELECT `resources`.`id` AS t0_r0, `resources`.`keywords` AS t0_r1, `resources`.`type` AS t0_r2, `resources`.`shoulu` AS t0_r3, `resources`.`user_id` AS t0_r4, `resources`.`content` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`created_at` AS t0_r11, `resources`.`updated_at` AS t0_r12, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`follower_id` AS t1_r7, `users`.`following_id` AS t1_r8, `users`.`value` AS t1_r9, `users`.`terms` AS t1_r10, `users`.`birthday` AS t1_r11, `users`.`username` AS t1_r12, `users`.`failed_signin_times` AS t1_r13, `users`.`created_at` AS t1_r14, `users`.`updated_at` AS t1_r15 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`keywords` = 'asdf') ORDER BY users.value DESC[0m
+  [4;36;1mLinkUrlResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+
+ActionView::TemplateError (undefined method `searched_keyword_related_keywords_path' for #<ActionView::Base:0xb70a9df0>) on line #19 of app/views/searched_keywords/index.erb:
+16:         <% end %>
+17:       </tr>
+18:     </tbody>
+19:     <%=link_to "修改相关关键字",searched_keyword_related_keywords_path(@keyword),:popup => ['修改相关关键字', 'height=300,width=600'] %>
+20:   </table>
+21: </div>
+22: 
+
+    app/views/searched_keywords/index.erb:19
+    app/controllers/searched_keywords_controller.rb:23:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (44.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#index (for 127.0.0.1 at 2009-07-30 15:38:40) [GET]
+  Parameters: {"keywords"=>"asdf"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mSearchedKeyword Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `searched_keywords`[0m
+  [4;35;1mSearchedKeyword Load (0.1ms)[0m   [0mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.`name` = 'asdf') LIMIT 1[0m
+Rendering template within layouts/searched_keywords
+Rendering searched_keywords/index
+  [4;36;1mRelatedKeyword Load (0.1ms)[0m   [0;1mSELECT * FROM `related_keywords` WHERE (`related_keywords`.searched_keyword_id = 1) LIMIT 10[0m
+  [4;35;1mResource Load Including Associations (0.1ms)[0m   [0mSELECT `resources`.`id` AS t0_r0, `resources`.`keywords` AS t0_r1, `resources`.`type` AS t0_r2, `resources`.`shoulu` AS t0_r3, `resources`.`user_id` AS t0_r4, `resources`.`content` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`created_at` AS t0_r11, `resources`.`updated_at` AS t0_r12, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`follower_id` AS t1_r7, `users`.`following_id` AS t1_r8, `users`.`value` AS t1_r9, `users`.`terms` AS t1_r10, `users`.`birthday` AS t1_r11, `users`.`username` AS t1_r12, `users`.`failed_signin_times` AS t1_r13, `users`.`created_at` AS t1_r14, `users`.`updated_at` AS t1_r15 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`keywords` = 'asdf') ORDER BY users.value DESC[0m
+  [4;36;1mLinkUrlResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 1) AND (`comments`.resource_id = 1) ORDER BY created_at DESC LIMIT 3[0m
+  [4;36;1mComment Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.resource_id = 1) [0m
+Rendered link_url_resources/_link_url_resource (8.5ms)
+Completed in 60ms (View: 20, DB: 4) | 200 OK [http://localhost/search/asdf]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-30 15:38:42) [GET]
+
+ActionController::RoutingError (No route matches "/users//searched_keywords//related_keywords" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#index (for 127.0.0.1 at 2009-07-30 15:40:59) [GET]
+  Parameters: {"keywords"=>"asdf"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mResource Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mSearchedKeyword Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `searched_keywords`[0m
+  [4;36;1mSearchedKeyword Load (0.1ms)[0m   [0;1mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.`name` = 'asdf') LIMIT 1[0m
+Rendering template within layouts/searched_keywords
+Rendering searched_keywords/index
+  [4;35;1mRelatedKeyword Load (0.1ms)[0m   [0mSELECT * FROM `related_keywords` WHERE (`related_keywords`.searched_keyword_id = 1) LIMIT 10[0m
+  [4;36;1mResource Load Including Associations (0.1ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keywords` AS t0_r1, `resources`.`type` AS t0_r2, `resources`.`shoulu` AS t0_r3, `resources`.`user_id` AS t0_r4, `resources`.`content` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`created_at` AS t0_r11, `resources`.`updated_at` AS t0_r12, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`follower_id` AS t1_r7, `users`.`following_id` AS t1_r8, `users`.`value` AS t1_r9, `users`.`terms` AS t1_r10, `users`.`birthday` AS t1_r11, `users`.`username` AS t1_r12, `users`.`failed_signin_times` AS t1_r13, `users`.`created_at` AS t1_r14, `users`.`updated_at` AS t1_r15 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`keywords` = 'asdf') ORDER BY users.value DESC[0m
+  [4;35;1mLinkUrlResource Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 1) AND (`comments`.resource_id = 1) ORDER BY created_at DESC LIMIT 3[0m
+  [4;35;1mComment Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.resource_id = 1) [0m
+Rendered link_url_resources/_link_url_resource (9.3ms)
+Completed in 101ms (View: 67, DB: 4) | 200 OK [http://localhost/search/asdf]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#index (for 127.0.0.1 at 2009-07-30 15:40:59) [GET]
+  Parameters: {"keywords"=>"asdf"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mSearchedKeyword Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `searched_keywords`[0m
+  [4;35;1mSearchedKeyword Load (0.1ms)[0m   [0mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.`name` = 'asdf') LIMIT 1[0m
+Rendering template within layouts/searched_keywords
+Rendering searched_keywords/index
+  [4;36;1mRelatedKeyword Load (0.1ms)[0m   [0;1mSELECT * FROM `related_keywords` WHERE (`related_keywords`.searched_keyword_id = 1) LIMIT 10[0m
+  [4;35;1mResource Load Including Associations (0.1ms)[0m   [0mSELECT `resources`.`id` AS t0_r0, `resources`.`keywords` AS t0_r1, `resources`.`type` AS t0_r2, `resources`.`shoulu` AS t0_r3, `resources`.`user_id` AS t0_r4, `resources`.`content` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`created_at` AS t0_r11, `resources`.`updated_at` AS t0_r12, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`follower_id` AS t1_r7, `users`.`following_id` AS t1_r8, `users`.`value` AS t1_r9, `users`.`terms` AS t1_r10, `users`.`birthday` AS t1_r11, `users`.`username` AS t1_r12, `users`.`failed_signin_times` AS t1_r13, `users`.`created_at` AS t1_r14, `users`.`updated_at` AS t1_r15 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`keywords` = 'asdf') ORDER BY users.value DESC[0m
+  [4;36;1mLinkUrlResource Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 1) AND (`comments`.resource_id = 1) ORDER BY created_at DESC LIMIT 3[0m
+  [4;36;1mComment Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.resource_id = 1) [0m
+Rendered link_url_resources/_link_url_resource (8.3ms)
+Completed in 52ms (View: 16, DB: 4) | 200 OK [http://localhost/search/asdf]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#index (for 127.0.0.1 at 2009-07-30 15:40:59) [GET]
+  Parameters: {"keywords"=>"asdf"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mSearchedKeyword Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `searched_keywords`[0m
+  [4;36;1mSearchedKeyword Load (0.0ms)[0m   [0;1mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.`name` = 'asdf') LIMIT 1[0m
+Rendering template within layouts/searched_keywords
+Rendering searched_keywords/index
+  [4;35;1mRelatedKeyword Load (0.1ms)[0m   [0mSELECT * FROM `related_keywords` WHERE (`related_keywords`.searched_keyword_id = 1) LIMIT 10[0m
+  [4;36;1mResource Load Including Associations (0.1ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keywords` AS t0_r1, `resources`.`type` AS t0_r2, `resources`.`shoulu` AS t0_r3, `resources`.`user_id` AS t0_r4, `resources`.`content` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`created_at` AS t0_r11, `resources`.`updated_at` AS t0_r12, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`follower_id` AS t1_r7, `users`.`following_id` AS t1_r8, `users`.`value` AS t1_r9, `users`.`terms` AS t1_r10, `users`.`birthday` AS t1_r11, `users`.`username` AS t1_r12, `users`.`failed_signin_times` AS t1_r13, `users`.`created_at` AS t1_r14, `users`.`updated_at` AS t1_r15 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`keywords` = 'asdf') ORDER BY users.value DESC[0m
+  [4;35;1mLinkUrlResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.resource_id = 1) AND (`comments`.resource_id = 1) ORDER BY created_at DESC LIMIT 3[0m
+  [4;35;1mComment Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.resource_id = 1) [0m
+Rendered link_url_resources/_link_url_resource (8.5ms)
+Completed in 111ms (View: 17, DB: 4) | 200 OK [http://localhost/search/asdf]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#index (for 127.0.0.1 at 2009-07-30 15:42:43) [GET]
+  Parameters: {"keywords"=>"asdf"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mSearchedKeyword Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `searched_keywords`[0m
+  [4;35;1mSearchedKeyword Load (0.0ms)[0m   [0mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.`name` = 'asdf') LIMIT 1[0m
+Rendering template within layouts/searched_keywords
+Rendering searched_keywords/index
+  [4;36;1mRelatedKeyword Load (0.1ms)[0m   [0;1mSELECT * FROM `related_keywords` WHERE (`related_keywords`.searched_keyword_id = 1) LIMIT 10[0m
+  [4;35;1mResource Load Including Associations (0.1ms)[0m   [0mSELECT `resources`.`id` AS t0_r0, `resources`.`keywords` AS t0_r1, `resources`.`type` AS t0_r2, `resources`.`shoulu` AS t0_r3, `resources`.`user_id` AS t0_r4, `resources`.`content` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`created_at` AS t0_r11, `resources`.`updated_at` AS t0_r12, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`follower_id` AS t1_r7, `users`.`following_id` AS t1_r8, `users`.`value` AS t1_r9, `users`.`terms` AS t1_r10, `users`.`birthday` AS t1_r11, `users`.`username` AS t1_r12, `users`.`failed_signin_times` AS t1_r13, `users`.`created_at` AS t1_r14, `users`.`updated_at` AS t1_r15 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`keywords` = 'asdf') ORDER BY users.value DESC[0m
+  [4;36;1mLinkUrlResource Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.resource_id = 1) AND (`comments`.resource_id = 1) ORDER BY created_at DESC LIMIT 3[0m
+  [4;36;1mComment Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.resource_id = 1) [0m
+Rendered link_url_resources/_link_url_resource (8.5ms)
+Completed in 54ms (View: 20, DB: 4) | 200 OK [http://localhost/search/asdf]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RelatedKeywordsController#index (for 127.0.0.1 at 2009-07-30 15:42:48) [GET]
+  Parameters: {"popup"=>["修改相关关键字", "height=300,width=600"]}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+
+NameError (undefined local variable or method `user_searched_keyword' for #<RelatedKeywordsController:0xb70e9db0>):
+  app/controllers/related_keywords_controller.rb:28:in `find_user_and_searched_keyword'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (35.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RelatedKeywordsController#index (for 127.0.0.1 at 2009-07-30 15:43:43) [GET]
+  Parameters: {"popup"=>["修改相关关键字", "height=300,width=600"]}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+
+NameError (undefined local variable or method `user_searched_keyword' for #<RelatedKeywordsController:0xb6ea2264>):
+  app/controllers/related_keywords_controller.rb:28:in `find_user_and_searched_keyword'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (91.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RelatedKeywordsController#index (for 127.0.0.1 at 2009-07-30 15:43:43) [GET]
+  Parameters: {"popup"=>["修改相关关键字", "height=300,width=600"]}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+
+NameError (undefined local variable or method `user_searched_keyword' for #<RelatedKeywordsController:0xb707e95c>):
+  app/controllers/related_keywords_controller.rb:28:in `find_user_and_searched_keyword'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (35.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RelatedKeywordsController#index (for 127.0.0.1 at 2009-07-30 15:43:44) [GET]
+  Parameters: {"popup"=>["修改相关关键字", "height=300,width=600"]}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+
+NameError (undefined local variable or method `user_searched_keyword' for #<RelatedKeywordsController:0xb6e5944c>):
+  app/controllers/related_keywords_controller.rb:28:in `find_user_and_searched_keyword'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (95.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RelatedKeywordsController#index (for 127.0.0.1 at 2009-07-30 15:43:44) [GET]
+  Parameters: {"popup"=>["修改相关关键字", "height=300,width=600"]}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+
+NameError (undefined local variable or method `user_searched_keyword' for #<RelatedKeywordsController:0xb7075e38>):
+  app/controllers/related_keywords_controller.rb:28:in `find_user_and_searched_keyword'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (36.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#index (for 127.0.0.1 at 2009-07-30 15:43:46) [GET]
+  Parameters: {"keywords"=>"asdf"}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mResource Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mSearchedKeyword Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `searched_keywords`[0m
+  [4;36;1mSearchedKeyword Load (0.1ms)[0m   [0;1mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.`name` = 'asdf') LIMIT 1[0m
+Rendering template within layouts/searched_keywords
+Rendering searched_keywords/index
+  [4;35;1mRelatedKeyword Load (0.1ms)[0m   [0mSELECT * FROM `related_keywords` WHERE (`related_keywords`.searched_keyword_id = 1) LIMIT 10[0m
+
+ActionView::TemplateError (user_searched_keyword_related_keywords_url failed to generate from {:controller=>"related_keywords", :action=>"index"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["users", :user_id, "searched_keywords", :searched_keyword_id, "related_keywords"] - are they all satisfied?) on line #19 of app/views/searched_keywords/index.erb:
+16:         <% end %>
+17:       </tr>
+18:     </tbody>
+19:     <%=link_to "修改相关关键字",user_searched_keyword_related_keywords_url,:popup => ['修改相关关键字', 'height=300,width=600'] %>
+20:   </table>
+21: </div>
+22: 
+
+    (eval):20:in `user_searched_keyword_related_keywords_url'
+    app/views/searched_keywords/index.erb:19
+    app/controllers/searched_keywords_controller.rb:23:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (53.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)

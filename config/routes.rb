@@ -5,14 +5,14 @@ ActionController::Routing::Routes.draw do |map|
     user.resource :true_portrait
     user.resources  :friends
     user.resources :resources,:has_many => :comments
-    user.resources :searched_keywords,:has_many => :related_searched_keywords
+    user.resources :searched_keywords
     user.resources :controlled_keywords
     user.resources :link_url_resources,:has_many => :comments
     user.resources :blog_resources
     user.resources :twitter_resources
   end
   map.resource :session
-
+  map.resources :searched_keywords,:has_many => :related_keywords
   map.search '/search/:keywords',:controller => 'searched_keywords',:action => 'index'
   map.activate '/activate/:activation_code', :controller => 'users', :action => 'activate'
   map.root :controller=>'sessions',:action=>'new'

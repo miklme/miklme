@@ -7,16 +7,16 @@
   <table>
     <tbody>
       <tr>
-        <% if not @related_searched_keywords.blank? %>
-          <% for related_searched_keyword in @related_searched_keywords %>
+        <% if not @related_keywords.blank? %>
+          <% for related_keyword in @related_keywords %>
             <td>
-              <%= related_searched_keyword.name %>
+              <%= related_keyword.name %>
             </td>
           <% end %>
         <% end %>
       </tr>
     </tbody>
-    <%=link_to "修改相关关键字",user_searched_keyword_related_searched_keywords_path(@user,@keyword),:popup => ['修改相关关键字', 'height=300,width=600'] %>
+    <%=link_to "修改相关关键字",user_searched_keyword_related_keywords_url(current_user,),:popup => ['修改相关关键字', 'height=300,width=600'] %>
   </table>
 </div>
 

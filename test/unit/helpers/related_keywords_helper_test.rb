@@ -1,4 +1,4 @@
 require 'test_helper'
 
-class RelatedSearchedKeywordsHelperTest < ActionView::TestCase
+class RelatedKeywordsHelperTest < ActionView::TestCase
 end

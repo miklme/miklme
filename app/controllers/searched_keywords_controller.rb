@@ -18,8 +18,9 @@ class SearchedKeywordsController < ApplicationController
     end
   end
   def index
+    @searched_keyword=Searched_keyword.find_by_name()
     @resources=Resource.scoped_by_keywords(params[:keywords]).by_owner_value
-    @related_searched_keywords=SearchedKeyword.find_by_name(params[:keywords]).related_searched_keywords
+    @related_keywords=SearchedKeyword.find_by_name(params[:keywords]).related_keywords
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @resources }
