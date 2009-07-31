@@ -1,8 +1,8 @@
 <h1>新的相关关键字</h1>
 <p>
-  <% form_for([@searched_keyword,@keyword_page,@related_keyword]) do |f|%>
+  <% form_for([@keyword_page,@related_keyword]) do |f|%>
     <%= f.text_field_with_auto_complete :name %>
     <%= f.submit "完成" %>
   <% end %>
 </p>
-<%= link_to "取消",searched_keyword_keyword_page_related_keywords_path(@keyword) %>
+<%= link_to "取消",keyword_page_related_keywords_path(@keyword_page) %>

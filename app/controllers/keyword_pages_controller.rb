@@ -1,9 +1,7 @@
 class KeywordPagesController < ApplicationController
-  before_filter :load_user_and_searched_keyword
-  # GET /keyword_pages/1
-  # GET /keyword_pages/1.xml
+  before_filter :load_user
   def show
-    @keyword_page=KeywordPage.new
+    @keyword_page=KeywordPage.find(params[:id])
     @resources=Resource.scoped_by_keywords(params[:keywords]).by_owner_value
     @related_keywords=@keyword_page.related_keywords
     respond_to do |format|
@@ -25,6 +23,7 @@ class KeywordPagesController < ApplicationController
 
   # GET /keyword_pages/1/edit
   def edit
+    @keyword_page=KeywordPage.find(params[:id])
     redirect_to keyword_page_related_keywords_path(@keyword_page)
   end
 
@@ -74,8 +73,7 @@ class KeywordPagesController < ApplicationController
     end
   end
   private
-  def load_user_and_searched_keyword
+  def load_user
     @user=current_user
-    @searched_keyword=SearchedKeyword.find_by_name(params[:keywords])
   end
 end

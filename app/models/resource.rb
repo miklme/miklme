@@ -1,4 +1,5 @@
 class Resource < ActiveRecord::Base
+  has_one :keyword_page
   has_many :comments
   has_many :commenters,:through => :comments,:source => :user
   belongs_to :owner,:class_name => 'User',:foreign_key => :user_id

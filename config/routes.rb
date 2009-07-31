@@ -17,7 +17,6 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :keyword_pages do |keyword_page|
     keyword_page.resources :related_keywords
   end
-  map.search '/search/:keywords',:controller => 'keyword_pages',:action => 'show'
   map.activate '/activate/:activation_code', :controller => 'users', :action => 'activate'
   map.root :controller=>'sessions',:action=>'new'
 

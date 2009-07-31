@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090730075331) do
+ActiveRecord::Schema.define(:version => 20090730121815) do
 
   create_table "addresses", :force => true do |t|
     t.string   "province"
@@ -28,6 +28,13 @@ ActiveRecord::Schema.define(:version => 20090730075331) do
     t.datetime "updated_at"
   end
 
+  create_table "keyword_pages", :force => true do |t|
+    t.string   "keyword"
+    t.integer  "resource_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "portraits", :force => true do |t|
     t.integer  "user_id"
     t.string   "image_file"
@@ -37,7 +44,7 @@ ActiveRecord::Schema.define(:version => 20090730075331) do
 
   create_table "related_keywords", :force => true do |t|
     t.string   "name"
-    t.integer  "searched_keyword_id"
+    t.integer  "keyword_page_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

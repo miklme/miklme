@@ -5,8 +5,9 @@ class SearchedKeywordsController < ApplicationController
   end
 
   def create
+    keyword_page=KeywordPage.find_by_keyword(params[:keywords])
     render :update do |page|
-      page.redirect_to "/search/#{params[:keywords]}"
+      page.redirect_to "/keyword_pages/#{keyword_page.id}"
     end
     if current_user.searched_keywords.find_by_name(params[:keywords]).blank?
       s=SearchedKeyword.create(:name => params[:keywords])
