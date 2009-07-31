@@ -5,7 +5,7 @@ class KeywordPagesController < ApplicationController
     @resources=Resource.scoped_by_keywords(@keyword_page.keyword).by_owner_value
     @related_keywords=@keyword_page.related_keywords
     respond_to do |format|
-      format.html # index.html.erb
+      format.html
       format.xml  { render :xml => @resources }
     end
   end
@@ -27,23 +27,6 @@ class KeywordPagesController < ApplicationController
     redirect_to keyword_page_related_keywords_path(@keyword_page)
   end
 
-  # POST /keyword_pages
-  # POST /keyword_pages.xml
-  def create
-    @keyword_page = KeywordPage.new(params[:keyword_page])
-
-    respond_to do |format|
-      if @keyword_page.save
-        flash[:notice] = 'KeywordPage was successfully created.'
-        format.html { redirect_to(@keyword_page) }
-        format.xml  { render :xml => @keyword_page, :status => :created, :location => @keyword_page }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @keyword_page.errors, :status => :unprocessable_entity }
-      end
-    end
-  end
-
   # PUT /keyword_pages/1
   # PUT /keyword_pages/1.xml
   def update
@@ -63,15 +46,7 @@ class KeywordPagesController < ApplicationController
 
   # DELETE /keyword_pages/1
   # DELETE /keyword_pages/1.xml
-  def destroy
-    @keyword_page = KeywordPage.find(params[:id])
-    @keyword_page.destroy
-
-    respond_to do |format|
-      format.html { redirect_to(keyword_pages_url) }
-      format.xml  { head :ok }
-    end
-  end
+  
   private
   def load_user
     @user=current_user

@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :follows
+
   map.resources :keyword_pages
 
   map.resources :users do |user|
@@ -6,8 +8,9 @@ ActionController::Routing::Routes.draw do |map|
     user.resource :portrait
     user.resources :searched_keywords
     user.resource :true_portrait
-    user.resources :friends
-    user.resources :resources,:has_many => :comments
+    user.resources :followings
+    user.resources :followers
+    user.resources :resources
     user.resources :controlled_keywords
     user.resources :link_url_resources,:has_many => :comments
     user.resources :blog_resources

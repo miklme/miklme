@@ -1,5 +1,6 @@
 class ControlledKeywordsController < ApplicationController
   before_filter :load_user
+  layout "resources"
   # GET /keywords
   # GET /keywords.xml
   def index
