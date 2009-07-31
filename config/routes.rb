@@ -11,6 +11,7 @@ ActionController::Routing::Routes.draw do |map|
     user.resources :link_url_resources,:has_many => :comments
     user.resources :blog_resources
     user.resources :twitter_resources
+    user.resources :news
   end
   map.resource :session
   map.resources :keyword_pages do |keyword_page|

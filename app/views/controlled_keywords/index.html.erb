@@ -4,7 +4,7 @@
       <p>
         <% for keyword in @user.owned_keywords  %>
           <span>
-            <%= link_to keyword,"/search/#{keyword}" %>
+            <%= link_to keyword,"/keyword_pages/#{KeywordPage.find_by_keyword(keyword).id}",:popup => true %>
           </span>
         <% end %>
       </p>

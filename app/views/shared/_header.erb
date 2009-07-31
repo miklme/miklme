@@ -12,17 +12,13 @@
         <li><%= link_to_unless_current "Michael猜你" %>
         </li>
         <li>
-          <% if current_user.followings.blank? %>
-            <%= link_to_unless_current "关系网络",new_user_follow_path(current_user) %>
-          <% else %>
-            <%= link_to_unless_current "关系网络",user_follows_path(current_user) %>
-          <% end %>
+            <%= link_to_unless_current "关系网络",user_news_index_path(current_user) %>
         </li>
         <li><%= link_to_unless_current"我的关键字",user_controlled_keywords_path(header) %>
         </li>
       <% else %>
         <li>
-          <%= link_to_unless_current "#{header.nick_name}的关系网络" %>
+          <%= link_to_unless_current "关系网络",user_news_index_path(current_user) %>
         </li>
         <li><%= link_to_unless_current "#{header.nick_name}的关键字",user_keywords_path(header) %>
         </li>

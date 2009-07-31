@@ -1,8 +1,7 @@
 class BeFollowsController < ApplicationController
-  # GET /be_follows
-  # GET /be_follows.xml
+before_filter :load_user  # GET /be_follows.xml
   def index
-    @be_follows = BeFollow.all
+    @be_follows = @user.be_follows.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -81,5 +80,9 @@ class BeFollowsController < ApplicationController
       format.html { redirect_to(be_follows_url) }
       format.xml  { head :ok }
     end
+  end
+  private
+  def load_user
+    @user=current_user
   end
 end

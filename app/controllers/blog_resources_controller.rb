@@ -1,6 +1,7 @@
 class BlogResourcesController < ApplicationController
   before_filter :find_user
   def new
+    
   end
 
   def show
