@@ -1,0 +1,12 @@
+<h1>Editing be_follow</h1>
+
+<% form_for(@be_follow) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @be_follow %> |
+<%= link_to 'Back', be_follows_path %>

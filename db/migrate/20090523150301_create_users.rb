@@ -7,14 +7,12 @@ class CreateUsers < ActiveRecord::Migration
       t.string :remember_token, :limit => 40
       t.datetime :remember_token_expires_at
       t.string :nick_name,:limit=>20
-      t.integer :follower_id
-      t.integer :following_id
       t.decimal  :value,:default=>0,:precision => 8,:scale => 1
       t.integer :terms
       t.date :birthday
       t.string :username,:null => false
-      t.integer :failed_signin_times
-
+      t.integer :mobile_phone
+      t.string :email
       t.timestamps
 
     end

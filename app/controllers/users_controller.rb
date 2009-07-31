@@ -37,4 +37,13 @@ class UsersController < ApplicationController
     redirect_to user_resources_path(@user)
   end
 
+  def search
+    @user=current_user
+    if params[:user][:name] and params[:user][:id].blank?
+      @users=User.scoped_by_name(params[:user][:name])
+    elsif params[:user][:id] and params[:user][:name].blank?
+      @users=User.scoped_by_id(params[:user][:id])
+    end
+    render :layout => "follows"
+  end
 end

@@ -1,24 +1,9 @@
 <div id="container">
   <div id="main">
-    <div id="header">
-      <div id="title"><h1>
-          <%= @resource.description or @resource.keywords %>
-        </h1></div>
-      <div id="menu">
-        <%= link_to ".Me",user_path(@user) %>
-        <% if current_user.id=@user.id %>
-          <%= link_to "Michael猜你" %>
-          <%= link_to "关系网络" %>
-          <%= link_to "我的关键字",user_keywords_path(@user) %>
-        <% else %>
-          <%= link_to "#{@user.nick_name}的关系网络" %>
-          <%= link_to "#{@user.nick_name}的关键字",user_keywords_path(@user) %>
-        <% end %>
-        <%= link_to "设置" %>
-        <%= link_to '注册新用户',new_user_path %>
-        <%= link_to '登出', session_path,:method => :delete %>
-      </div>
-    </div>
+    <div id="title"><h1>
+        <%= @resource.description or @resource.keywords %>
+      </h1></div>
+    <%= render "shared/header",:object => @user %>
     <div id="sidenav">
       <h2>评论排序方式</h2>
       <ul>

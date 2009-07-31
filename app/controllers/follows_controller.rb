@@ -1,8 +1,9 @@
 class FollowsController < ApplicationController
+  before_filter :load_user
   # GET /follows
   # GET /follows.xml
   def index
-    @follows = Follows.all
+    @follows = @user.follows
 
     respond_to do |format|
       format.html # index.html.erb
@@ -24,7 +25,7 @@ class FollowsController < ApplicationController
   # GET /follows/new
   # GET /follows/new.xml
   def new
-    @follows = Follows.new
+    @follow = @user.follows.build
 
     respond_to do |format|
       format.html # new.html.erb
@@ -81,5 +82,10 @@ class FollowsController < ApplicationController
       format.html { redirect_to(follows_url) }
       format.xml  { head :ok }
     end
+  end
+
+  private
+  def load_user
+    @user=current_user
   end
 end

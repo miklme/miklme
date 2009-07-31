@@ -1,6 +1,8 @@
 <div id="logo">
-  <h1><%= link_to "Michael",new_user_searched_keyword_path(current_user) %></h1>
-  <h1><%= link_to ".Me",user_path(current_user) %></h1>
+  <% if logged_in? %>
+    <h1><%= link_to "Michael",new_user_searched_keyword_path(current_user) %></h1>
+    <h1><%= link_to ".Me",user_path(current_user) %></h1>
+  <% end %>
 </div>
 <h3>相关结果:</h3>
 <div>

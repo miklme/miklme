@@ -46,7 +46,6 @@ class KeywordPagesController < ApplicationController
 
   # DELETE /keyword_pages/1
   # DELETE /keyword_pages/1.xml
-  
   private
   def load_user
     @user=current_user

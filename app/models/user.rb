@@ -13,10 +13,16 @@ class User < ActiveRecord::Base
   has_many :commented_resources,:through => :comments,:source => :resource
   has_many :resources
   has_many :important_days
+  has_many :be_follows
+  has_many :followers,
+    :through => :be_follows,
+    :source => :user,
+    :order => "value DESC"
+  has_many :follows
   has_many :followings,
-    :class_name => "User",
+    :through => :follows,
     :order => "value DESC",
-    :foreign_key => 'follower_id'
+    :source => :user
   has_many :link_url_resources
   has_many :blog_resources
   has_many :twitter_resources

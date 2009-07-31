@@ -12,7 +12,11 @@
         <li><%= link_to_unless_current "Michael猜你" %>
         </li>
         <li>
-          <%= link_to_unless_current "关系网络" %>
+          <% if current_user.followings.blank? %>
+            <%= link_to_unless_current "关系网络",new_user_follow_path(current_user) %>
+          <% else %>
+            <%= link_to_unless_current "关系网络",user_follows_path(current_user) %>
+          <% end %>
         </li>
         <li><%= link_to_unless_current"我的关键字",user_controlled_keywords_path(header) %>
         </li>

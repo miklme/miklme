@@ -8,7 +8,9 @@
     <%= javascript_include_tag :defaults,:cache => true  %>
   </head>
   <body>
+    <% if logged_in? %>
     <%= render :partial => "shared/header",:object => @user %>
+    <% end %>
     <%= @content_for_layout %>
   </body>
 </html>
