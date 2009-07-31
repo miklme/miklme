@@ -2,7 +2,7 @@ class KeywordPagesController < ApplicationController
   before_filter :load_user
   def show
     @keyword_page=KeywordPage.find(params[:id])
-    @resources=Resource.scoped_by_keywords(params[:keywords]).by_owner_value
+    @resources=Resource.scoped_by_keywords(@keyword_page.keyword).by_owner_value
     @related_keywords=@keyword_page.related_keywords
     respond_to do |format|
       format.html # index.html.erb

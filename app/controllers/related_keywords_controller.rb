@@ -10,11 +10,11 @@ class RelatedKeywordsController < ApplicationController
   end
 
   def create
-    @related_keyword=@keyword_page.related_keywords.build(params[:related_keyword])
+    @related_keyword=@keyword_page.related_keywords.build(:name => params[:resource][:keywords])
     if @related_keyword.save
       flash[:notice]="修改成功"
       k=KeywordPage.find_by_keyword(@related_keyword.name)
-      k.related_keywords.create(:name => @related_keyword.name)
+      k.related_keywords.create(:name => @keyword_page.keyword,:auto => true)
       redirect_to keyword_page_related_keywords_path(@keyword_page)
     else
       render :action => :new
@@ -23,7 +23,11 @@ class RelatedKeywordsController < ApplicationController
 
   def destroy
     related_keyword=@keyword_page.related_keywords.find(params[:id])
-    related_keyword.destroy
+    if !related_keyword.auto?
+      related_keyword.destroy
+    else
+      flash[:notice]="这个条目是别人编辑相关关键字时选择你的关键词才造成的，不能删除"
+    end
     redirect_to keyword_page_related_keywords_path(@keyword_page)
   end
   private

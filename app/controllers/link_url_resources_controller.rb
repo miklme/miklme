@@ -24,6 +24,32 @@ class LinkUrlResourcesController < ApplicationController
       render :action => :new
     end
   end
+
+  def authority
+    @authority_link_url_resources=@user.link_url_resources.scoped_by_authority(true)
+  end
+
+  def add_value
+    o=Resource.find(params[:id]).owner
+    if not current_user==o
+      if Resource.find(params[:id]).authority?
+        o.value=o.value+3
+      elsif !Resource.find(params[:id]).authority?
+        o.value=o.value+1
+      end
+      o.save
+      redirect_to :back
+    end
+  end
+
+  def minus_value
+    o=Resource.find(params[:id]).owner
+    if not current_user==o
+      o.value=o.value-1
+      o.save
+      redirect_to :back
+    end
+  end
   private
   def find_user
     @user=User.find(params[:user_id])

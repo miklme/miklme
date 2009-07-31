@@ -30,7 +30,6 @@ ActiveRecord::Schema.define(:version => 20090730121815) do
 
   create_table "keyword_pages", :force => true do |t|
     t.string   "keyword"
-    t.integer  "resource_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -45,21 +44,23 @@ ActiveRecord::Schema.define(:version => 20090730121815) do
   create_table "related_keywords", :force => true do |t|
     t.string   "name"
     t.integer  "keyword_page_id"
+    t.boolean  "auto",            :default => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "resources", :force => true do |t|
-    t.string   "keywords",    :limit => 139,                    :null => false
+    t.integer  "keyword_page_id"
+    t.string   "keywords",        :limit => 139,                    :null => false
     t.string   "type"
-    t.boolean  "shoulu",                     :default => true
+    t.boolean  "shoulu",                         :default => true
     t.integer  "user_id"
     t.text     "content"
     t.string   "title"
     t.string   "form"
     t.string   "link_url"
     t.string   "description"
-    t.boolean  "authority",                  :default => false
+    t.boolean  "authority",                      :default => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -70,11 +71,6 @@ ActiveRecord::Schema.define(:version => 20090730121815) do
     t.string   "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "searched_keywords_users", :force => true do |t|
-    t.integer "user_id"
-    t.integer "searched_keyword_id"
   end
 
   create_table "true_portraits", :force => true do |t|
