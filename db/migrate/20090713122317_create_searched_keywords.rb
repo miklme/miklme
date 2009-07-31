@@ -3,6 +3,7 @@ class CreateSearchedKeywords < ActiveRecord::Migration
     create_table :searched_keywords do |t|
       t.integer :searched_times,:default => 1
       t.string :name
+      t.string :user_id
       t.timestamps
     end
   end

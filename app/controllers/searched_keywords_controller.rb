@@ -10,8 +10,7 @@ class SearchedKeywordsController < ApplicationController
       page.redirect_to "/keyword_pages/#{keyword_page.id}"
     end
     if current_user.searched_keywords.find_by_name(params[:keywords]).blank?
-      s=SearchedKeyword.create(:name => params[:keywords])
-      current_user.searched_keywords<<s
+      s=current_user.searched_keywords.create(:name => params[:keywords])
     else
       s=current_user.searched_keywords.find_by_name(params[:keywords])
       s.searched_times=s.searched_times+1

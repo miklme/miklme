@@ -1,6 +1,6 @@
 class RelatedKeywordsController < ApplicationController
-  before_filter :find_keyword_page
   auto_complete_for :resource,:keywords
+  before_filter :find_keyword_page,:only => [:new,:create,:destroy,:index]
   def index
     @related_keywords=@keyword_page.related_keywords
   end
@@ -13,6 +13,8 @@ class RelatedKeywordsController < ApplicationController
     @related_keyword=@keyword_page.related_keywords.build(params[:related_keyword])
     if @related_keyword.save
       flash[:notice]="修改成功"
+      k=KeywordPage.find_by_keyword(@related_keyword.name)
+      k.related_keywords.create(:name => @related_keyword.name)
       redirect_to keyword_page_related_keywords_path(@keyword_page)
     else
       render :action => :new

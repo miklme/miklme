@@ -25,4 +25,4 @@
       <%= auto_link(highlight(truncate(comment.content,:length => 140),link_url_resource.keywords)) %>
     <% end %>
   </div>
-  <div><%= link_to "看看别人对这个条目的反应（#{link_url_resource.comments.count}条评论）", user_link_url_resource_comments_path(link_url_resource.owner,link_url_resource),:popup => true %></div>
+  <div><%= link_to "看看别人对这个条目的反应（#{link_url_resource.comments.size}条评论）", user_link_url_resource_comments_path(link_url_resource.owner,link_url_resource),:popup => true %></div>
