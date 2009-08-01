@@ -85,6 +85,10 @@ class FollowsController < ApplicationController
     end
   end
 
+  def search_user
+
+  end
+
   private
   def load_user
     @user=current_user
