@@ -36,14 +36,13 @@ class UsersController < ApplicationController
     @user =User.find(params[:id])
     redirect_to user_resources_path(@user)
   end
-
   def search
     @user=current_user
     if params[:user][:name] and params[:user][:id].blank?
-      @users=User.scoped_by_name(params[:user][:name])
+      @users=User.all.find(params[:user]).by_value
     elsif params[:user][:id] and params[:user][:name].blank?
-      @users=User.scoped_by_id(params[:user][:id])
+      @users=User.scoped_by_id(params[:user][:id]).first
     end
-    render :layout => "follows"
+    render :layout => "news"
   end
 end

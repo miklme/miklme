@@ -10,6 +10,8 @@ zh-CN:
         title: 标题
         keywords: 关键字
 
+      related_keyword:
+        name: "相关关键字"
       user:
         username: "用户名"
         name: "姓名"  #g

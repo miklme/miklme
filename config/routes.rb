@@ -8,10 +8,14 @@ ActionController::Routing::Routes.draw do |map|
     user.resources :follows
     user.resources :resources
     user.resources :controlled_keywords
-    user.resources :link_url_resources,:has_many => :comments
     user.resources :blog_resources
     user.resources :twitter_resources
     user.resources :news
+    user.resources :keywords
+    user.resources :link_url_resources,
+      :member => {:add_value =>:post,:minus_value => :post },
+      :has_many => :comments,
+      :collection => {:authority => :get,:not_authority => :get}
   end
   map.resource :session
   map.resources :keyword_pages do |keyword_page|

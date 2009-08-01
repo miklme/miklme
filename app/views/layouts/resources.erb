@@ -19,9 +19,9 @@
         <div id="sidebar">
           <div id="sidebar_top"></div>
           <div id="sidebar_text">
-            <h2><%= link_to_unless_current "#{@user.nick_name}的原创" ,user_link_url_resources_path(@user)%></h2>
-            <h2><%= link_to_unless_current "#{@user.nick_name}的转载",user_twitter_resources_path(@user) %></h2>
-            <h2><%= link_to_unless_current "#{@user.nick_name}的生活",user_blog_resources_path(@user) %></h2>
+            <h2><%= link_to_unless_current "#{@user.nick_name}的原创" ,authority_user_link_url_resources_path(@user)%></h2>
+            <h2><%= link_to_unless_current "#{@user.nick_name}的转载",not_authority_user_link_url_resources_path(@user) %></h2>
+            <h2><%= link_to_unless_current "#{@user.nick_name}的生活",user_twitter_resources_path(@user) %></h2>
           </div>
           <div id="sidebar_bottom"></div>
         </div>

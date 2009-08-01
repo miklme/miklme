@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   include Authentication::ByCookieToken
   
   default_scope :order => 'value DESC'
-  named_scope :value,:order => 'value DESC'
+  named_scope :by_value,:order => 'value DESC'
 
   has_many :searched_keywords
   has_many :comments
@@ -17,11 +17,13 @@ class User < ActiveRecord::Base
   has_many :followers,
     :through => :be_follows,
     :source => :user,
+    :uniq => true,
     :order => "value DESC"
   has_many :follows
   has_many :followings,
     :through => :follows,
     :order => "value DESC",
+    :uniq => true,
     :source => :user
   has_many :link_url_resources
   has_many :blog_resources
@@ -29,9 +31,6 @@ class User < ActiveRecord::Base
   has_one :address
   has_one :portrait
   has_one :true_portrait
-  has_many :followers,
-    :class_name => 'User',
-    :foreign_key => 'following_id'
 
   accepts_nested_attributes_for :true_portrait, :allow_destroy => true
   accepts_nested_attributes_for :portrait, :allow_destroy => true

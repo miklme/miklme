@@ -1,9 +1,8 @@
 <h1><%= link_to link_url_resource.description,link_url_resource.link_url,:popup => true%></h1>
 <% if not link_url_resource.owner == current_user %>
-  <em>来自：
-    <%= link_url_resource.owner.id %>
-    价值点数：<%= link_url_resource.owner.value %>
-  </em>
+<div>
+  <%= render "shared/user_profile",:object => link_url_resource.owner %>
+</div>
   <div>
     <ul>
       <li>

@@ -19,8 +19,27 @@
         <div id="sidebar">
           <div id="sidebar_top"></div>
           <div id="sidebar_text">
-            <h2><%= link_to_unless_current "#{@user.nick_name}关注的人" ,user_follows_path(@user)%></h2>
-            <h2><%= link_to_unless_current "关注#{@user.nick_name}的人",user_be_follows_path(@user) %></h2>
+            <h2><%= link_to_unless_current "#{@user.nick_name}掌控的关键字： " %></h2>
+            <p>
+              <% for keyword in @controlled_keywords  %>
+                <span>
+                  <%= link_to keyword,"/keyword_pages/#{KeywordPage.find_by_keyword(keyword).id}",:popup => true %>
+                </span>
+              <% end %>
+            </p>
+            <h2><%="#{@user.nick_name}朋友圈中谈论最多的关键字："%></h2>
+            <p>
+              <% for keyword in @user.owned_keywords  %>
+                <span>
+                  <%= link_to keyword,"/keyword_pages/#{KeywordPage.find_by_keyword(keyword).id}",:popup => true %>
+                </span>
+              <% end %>
+            </p>
+            <h2>
+              <%= "#{@user.nick_name}关注的关键字：" %>
+            </h2>
+            <p>
+            </p>
           </div>
           <div id="sidebar_bottom"></div>
         </div>

@@ -6,7 +6,7 @@
       <tr><td><%= f.label :description,"写一句简单的描述，请随意*：" %></td><td><%= f.text_field :description%></td></tr>
       <tr><td><%= f.label :form,"请指定目标链接所包含主体内容的类型*：" %></td><td><%= f.select :form,%w{ 文字、文档 视频 图片  音频  }%></td></tr>
       <tr><td><%= f.check_box :authority,{},true,false %><%= f.label :authority,"该内容是我的原创作品。" %></td>
-      <tr><td><%= f.label :keywords,"关键字" %></td><td><%= text_field_with_auto_complete :resource,:keywords %></td></tr>
+      <tr><td><%= f.label :keywords,"关键字" %></td><td><%= text_field_with_auto_complete :link_url_resource,:keywords %></td></tr>
     </table>
     <p><%= f.submit "完成" %></p>
   <% end %>

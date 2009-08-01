@@ -1,5 +1,6 @@
 class BeFollowsController < ApplicationController
 before_filter :load_user  # GET /be_follows.xml
+layout "news"
   def index
     @be_follows = @user.be_follows.all
 

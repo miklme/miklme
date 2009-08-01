@@ -1,6 +1,7 @@
 class LinkUrlResourcesController < ApplicationController
-  before_filter :find_user,:only => [:add_value,:authority,:create,:edit,:index,:minus_value,:show,:new]
+  before_filter :find_user,:only => [:add_value,:authority,:not_authority,:create,:edit,:index,:minus_value,:show,:new]
   auto_complete_for :resource,:keywords
+  layout "resources",:except => :new
   def new
     @link_url_resource=@user.link_url_resources.build
   end
@@ -27,6 +28,10 @@ class LinkUrlResourcesController < ApplicationController
 
   def authority
     @authority_link_url_resources=@user.link_url_resources.scoped_by_authority(true)
+  end
+
+  def not_authority
+    @not_authority_link_url_resources=@user.link_url_resources.scoped_by_authority(false)
   end
 
   def add_value

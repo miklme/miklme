@@ -1,28 +1,3 @@
-  <div id="main">
-    <div id="content">
-      <h2>别人可以通过以下关键字找到我：</h2>
-      <p>
-        <% for keyword in @user.owned_keywords  %>
-          <span>
-            <%= link_to keyword,"/keyword_pages/#{KeywordPage.find_by_keyword(keyword).id}",:popup => true %>
-          </span>
-        <% end %>
-      </p>
-      <h2>
-        我掌控的关键字：
-      </h2>
-      <p>
-        <% for keyword in @controlled_keywords  %>
-          <span>
-            <%= link_to "#{keyword}","/search/#{keyword}" %>
-          </span>
-        <% end %>
-      </p>
+    <div id="text">
+    
     </div>
-    <%= render "shared/footer" %>
-  </div>
-
-
-
-
-

@@ -3,6 +3,7 @@ class CreateBeFollows < ActiveRecord::Migration
     create_table :be_follows do |t|
       t.integer :user_id
       t.integer :follower_id
+      t.boolean :provide_name
       t.timestamps
     end
   end

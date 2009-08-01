@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(:version => 20090731054632) do
   create_table "be_follows", :force => true do |t|
     t.integer  "user_id"
     t.integer  "follower_id"
+    t.boolean  "provide_name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -38,6 +39,7 @@ ActiveRecord::Schema.define(:version => 20090731054632) do
   create_table "follows", :force => true do |t|
     t.integer  "user_id"
     t.integer  "following_id"
+    t.boolean  "provide_name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -105,7 +107,8 @@ ActiveRecord::Schema.define(:version => 20090731054632) do
     t.integer  "terms"
     t.date     "birthday"
     t.string   "username",                                                                               :null => false
-    t.integer  "failed_signin_times"
+    t.integer  "mobile_phone"
+    t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

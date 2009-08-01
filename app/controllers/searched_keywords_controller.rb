@@ -17,8 +17,4 @@ class SearchedKeywordsController < ApplicationController
       s.save
     end
   end
-  
-  def index
-   
-  end
 end

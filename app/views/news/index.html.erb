@@ -1,4 +1,4 @@
-<h1>我朋友圈中的热门话题</h1>
+<h1>朋友的动向：</h1>
 <p><% for hot_resource in @hot_resources %>
     <%= hot_resource.owner.nick_name %>分享了
     <% if !hot_resource.authority? %>

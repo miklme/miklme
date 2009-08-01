@@ -21,6 +21,7 @@
           <div id="sidebar_text">
             <h2><%= link_to_unless_current "#{@user.nick_name}关注的人" ,user_follows_path(@user)%></h2>
             <h2><%= link_to_unless_current "关注#{@user.nick_name}的人",user_be_follows_path(@user) %></h2>
+            <h2><%= link_to_unless_current "精确添加要关注的人>>>", new_user_follow_path(@user) %></h2>
           </div>
           <div id="sidebar_bottom"></div>
         </div>
