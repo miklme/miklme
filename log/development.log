@@ -49948,3 +49948,2651 @@ ActionView::TemplateError (undefined method `nick_name' for #<Class:0xb7093780>)
 Rendered rescues/_trace (123.0ms)
 Rendered rescues/_request_and_response (0.3ms)
 Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:21:30) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"id"=>"1"}}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` ORDER BY value DESC[0m
+
+NoMethodError (undefined method `by_value' for #<Enumerable::Enumerator:0xb7092f38>):
+  app/controllers/users_controller.rb:41:in `search'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (33.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FollowsController#new (for 127.0.0.1 at 2009-08-01 17:21:50) [GET]
+  Parameters: {"user_id"=>"2"}
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mFollow Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `follows`[0m
+Rendering template within layouts/news
+Rendering follows/new
+Rendered shared/_header (1.0ms)
+Rendered shared/_footer (0.6ms)
+Completed in 36ms (View: 4, DB: 2) | 200 OK [http://localhost/users/2/follows/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:21:51) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"id"=>"1"}}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` ORDER BY value DESC[0m
+
+NoMethodError (undefined method `by_value' for #<Array:0xb71bcddc>):
+  app/controllers/users_controller.rb:41:in `search'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (34.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:21:53) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` ORDER BY value DESC[0m
+
+NoMethodError (undefined method `by_value' for #<Array:0xb6f82c74>):
+  app/controllers/users_controller.rb:41:in `search'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (92.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FollowsController#new (for 127.0.0.1 at 2009-08-01 17:22:18) [GET]
+  Parameters: {"user_id"=>"2"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mFollow Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `follows`[0m
+Rendering template within layouts/news
+Rendering follows/new
+Rendered shared/_header (1.0ms)
+Rendered shared/_footer (0.6ms)
+Completed in 32ms (View: 5, DB: 2) | 200 OK [http://localhost/users/2/follows/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:22:18) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"id"=>"1"}}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+
+ArgumentError (Unknown key(s): id):
+  (__DELEGATION__):2:in `__send__'
+  (__DELEGATION__):2:in `with_scope'
+  (__DELEGATION__):2:in `__send__'
+  (__DELEGATION__):2:in `with_scope'
+  app/controllers/users_controller.rb:41:in `search'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (38.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:22:24) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+
+ArgumentError (Unknown key(s): name):
+  (__DELEGATION__):2:in `__send__'
+  (__DELEGATION__):2:in `with_scope'
+  (__DELEGATION__):2:in `__send__'
+  (__DELEGATION__):2:in `with_scope'
+  app/controllers/users_controller.rb:41:in `search'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (40.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FollowsController#new (for 127.0.0.1 at 2009-08-01 17:23:38) [GET]
+  Parameters: {"user_id"=>"2"}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mFollow Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `follows`[0m
+Rendering template within layouts/news
+Rendering follows/new
+Rendered shared/_header (1.0ms)
+Rendered shared/_footer (0.6ms)
+Completed in 29ms (View: 4, DB: 2) | 200 OK [http://localhost/users/2/follows/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:23:39) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+
+ArgumentError (Unknown key(s): name):
+  (__DELEGATION__):2:in `__send__'
+  (__DELEGATION__):2:in `with_scope'
+  (__DELEGATION__):2:in `__send__'
+  (__DELEGATION__):2:in `with_scope'
+  app/controllers/users_controller.rb:41:in `search'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (41.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:23:48) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"id"=>"1"}}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+
+ArgumentError (Unknown key(s): id):
+  (__DELEGATION__):2:in `__send__'
+  (__DELEGATION__):2:in `with_scope'
+  (__DELEGATION__):2:in `__send__'
+  (__DELEGATION__):2:in `with_scope'
+  app/controllers/users_controller.rb:41:in `search'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (38.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FollowsController#new (for 127.0.0.1 at 2009-08-01 17:27:52) [GET]
+  Parameters: {"user_id"=>"2"}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mFollow Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `follows`[0m
+Rendering template within layouts/news
+Rendering follows/new
+Rendered shared/_header (1.1ms)
+Rendered shared/_footer (0.6ms)
+Completed in 33ms (View: 5, DB: 2) | 200 OK [http://localhost/users/2/follows/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:27:53) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"id"=>"1"}}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+
+ArgumentError (Unknown key(s): id):
+  (__DELEGATION__):2:in `__send__'
+  (__DELEGATION__):2:in `with_scope'
+  (__DELEGATION__):2:in `__send__'
+  (__DELEGATION__):2:in `with_scope'
+  app/controllers/users_controller.rb:41:in `search'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (39.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:27:58) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"id"=>"1"}}
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+
+ArgumentError (Unknown key(s): id):
+  (__DELEGATION__):2:in `__send__'
+  (__DELEGATION__):2:in `with_scope'
+  (__DELEGATION__):2:in `__send__'
+  (__DELEGATION__):2:in `with_scope'
+  app/controllers/users_controller.rb:41:in `search'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (42.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:29:25) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` IS NULL) ORDER BY value DESC[0m
+
+NoMethodError (undefined method `render' for []:Array):
+  app/controllers/users_controller.rb:41:in `search'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (34.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:29:43) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` IS NULL) ORDER BY value DESC[0m
+Rendering template within layouts/news
+Rendering users/search
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.nick_name) on line #12 of app/views/shared/_user_profile.erb:
+9:     <span><%= "价值点数：#{user_profile.value}" %></span>
+10:   <% end %>
+11: <% elsif !current_user.followers.include?(user_profile) %>
+12:   <span class="nick_name"><%= link_to "#{user_profile.nick_name}" ,user_path(user_profile)%></span>
+13:   <span><%= "价值点数：#{user_profile.value}" %></span>
+14: <% end %>
+
+    app/views/shared/_user_profile.erb:12
+    app/views/users/search.erb:1
+    app/controllers/users_controller.rb:42:in `search'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (53.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:29:45) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` IS NULL) ORDER BY value DESC[0m
+Rendering template within layouts/news
+Rendering users/search
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.nick_name) on line #12 of app/views/shared/_user_profile.erb:
+9:     <span><%= "价值点数：#{user_profile.value}" %></span>
+10:   <% end %>
+11: <% elsif !current_user.followers.include?(user_profile) %>
+12:   <span class="nick_name"><%= link_to "#{user_profile.nick_name}" ,user_path(user_profile)%></span>
+13:   <span><%= "价值点数：#{user_profile.value}" %></span>
+14: <% end %>
+
+    app/views/shared/_user_profile.erb:12
+    app/views/users/search.erb:1
+    app/controllers/users_controller.rb:42:in `search'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (57.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:29:45) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` IS NULL) ORDER BY value DESC[0m
+Rendering template within layouts/news
+Rendering users/search
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.nick_name) on line #12 of app/views/shared/_user_profile.erb:
+9:     <span><%= "价值点数：#{user_profile.value}" %></span>
+10:   <% end %>
+11: <% elsif !current_user.followers.include?(user_profile) %>
+12:   <span class="nick_name"><%= link_to "#{user_profile.nick_name}" ,user_path(user_profile)%></span>
+13:   <span><%= "价值点数：#{user_profile.value}" %></span>
+14: <% end %>
+
+    app/views/shared/_user_profile.erb:12
+    app/views/users/search.erb:1
+    app/controllers/users_controller.rb:42:in `search'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (125.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:29:46) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` IS NULL) ORDER BY value DESC[0m
+Rendering template within layouts/news
+Rendering users/search
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.nick_name) on line #12 of app/views/shared/_user_profile.erb:
+9:     <span><%= "价值点数：#{user_profile.value}" %></span>
+10:   <% end %>
+11: <% elsif !current_user.followers.include?(user_profile) %>
+12:   <span class="nick_name"><%= link_to "#{user_profile.nick_name}" ,user_path(user_profile)%></span>
+13:   <span><%= "价值点数：#{user_profile.value}" %></span>
+14: <% end %>
+
+    app/views/shared/_user_profile.erb:12
+    app/views/users/search.erb:1
+    app/controllers/users_controller.rb:42:in `search'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (90.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:29:46) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` IS NULL) ORDER BY value DESC[0m
+Rendering template within layouts/news
+Rendering users/search
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.nick_name) on line #12 of app/views/shared/_user_profile.erb:
+9:     <span><%= "价值点数：#{user_profile.value}" %></span>
+10:   <% end %>
+11: <% elsif !current_user.followers.include?(user_profile) %>
+12:   <span class="nick_name"><%= link_to "#{user_profile.nick_name}" ,user_path(user_profile)%></span>
+13:   <span><%= "价值点数：#{user_profile.value}" %></span>
+14: <% end %>
+
+    app/views/shared/_user_profile.erb:12
+    app/views/users/search.erb:1
+    app/controllers/users_controller.rb:42:in `search'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (64.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:29:47) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` IS NULL) ORDER BY value DESC[0m
+Rendering template within layouts/news
+Rendering users/search
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.nick_name) on line #12 of app/views/shared/_user_profile.erb:
+9:     <span><%= "价值点数：#{user_profile.value}" %></span>
+10:   <% end %>
+11: <% elsif !current_user.followers.include?(user_profile) %>
+12:   <span class="nick_name"><%= link_to "#{user_profile.nick_name}" ,user_path(user_profile)%></span>
+13:   <span><%= "价值点数：#{user_profile.value}" %></span>
+14: <% end %>
+
+    app/views/shared/_user_profile.erb:12
+    app/views/users/search.erb:1
+    app/controllers/users_controller.rb:42:in `search'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (123.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:29:47) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` IS NULL) ORDER BY value DESC[0m
+Rendering template within layouts/news
+Rendering users/search
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.nick_name) on line #12 of app/views/shared/_user_profile.erb:
+9:     <span><%= "价值点数：#{user_profile.value}" %></span>
+10:   <% end %>
+11: <% elsif !current_user.followers.include?(user_profile) %>
+12:   <span class="nick_name"><%= link_to "#{user_profile.nick_name}" ,user_path(user_profile)%></span>
+13:   <span><%= "价值点数：#{user_profile.value}" %></span>
+14: <% end %>
+
+    app/views/shared/_user_profile.erb:12
+    app/views/users/search.erb:1
+    app/controllers/users_controller.rb:42:in `search'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (117.9ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:29:48) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` IS NULL) ORDER BY value DESC[0m
+Rendering template within layouts/news
+Rendering users/search
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.nick_name) on line #12 of app/views/shared/_user_profile.erb:
+9:     <span><%= "价值点数：#{user_profile.value}" %></span>
+10:   <% end %>
+11: <% elsif !current_user.followers.include?(user_profile) %>
+12:   <span class="nick_name"><%= link_to "#{user_profile.nick_name}" ,user_path(user_profile)%></span>
+13:   <span><%= "价值点数：#{user_profile.value}" %></span>
+14: <% end %>
+
+    app/views/shared/_user_profile.erb:12
+    app/views/users/search.erb:1
+    app/controllers/users_controller.rb:42:in `search'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (52.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:29:49) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;36;1mUser Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` IS NULL) ORDER BY value DESC[0m
+Rendering template within layouts/news
+Rendering users/search
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.nick_name) on line #12 of app/views/shared/_user_profile.erb:
+9:     <span><%= "价值点数：#{user_profile.value}" %></span>
+10:   <% end %>
+11: <% elsif !current_user.followers.include?(user_profile) %>
+12:   <span class="nick_name"><%= link_to "#{user_profile.nick_name}" ,user_path(user_profile)%></span>
+13:   <span><%= "价值点数：#{user_profile.value}" %></span>
+14: <% end %>
+
+    app/views/shared/_user_profile.erb:12
+    app/views/users/search.erb:1
+    app/controllers/users_controller.rb:42:in `search'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (58.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:29:49) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` IS NULL) ORDER BY value DESC[0m
+Rendering template within layouts/news
+Rendering users/search
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.nick_name) on line #12 of app/views/shared/_user_profile.erb:
+9:     <span><%= "价值点数：#{user_profile.value}" %></span>
+10:   <% end %>
+11: <% elsif !current_user.followers.include?(user_profile) %>
+12:   <span class="nick_name"><%= link_to "#{user_profile.nick_name}" ,user_path(user_profile)%></span>
+13:   <span><%= "价值点数：#{user_profile.value}" %></span>
+14: <% end %>
+
+    app/views/shared/_user_profile.erb:12
+    app/views/users/search.erb:1
+    app/controllers/users_controller.rb:42:in `search'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (134.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:29:50) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` IS NULL) ORDER BY value DESC[0m
+Rendering template within layouts/news
+Rendering users/search
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.nick_name) on line #12 of app/views/shared/_user_profile.erb:
+9:     <span><%= "价值点数：#{user_profile.value}" %></span>
+10:   <% end %>
+11: <% elsif !current_user.followers.include?(user_profile) %>
+12:   <span class="nick_name"><%= link_to "#{user_profile.nick_name}" ,user_path(user_profile)%></span>
+13:   <span><%= "价值点数：#{user_profile.value}" %></span>
+14: <% end %>
+
+    app/views/shared/_user_profile.erb:12
+    app/views/users/search.erb:1
+    app/controllers/users_controller.rb:42:in `search'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (51.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:29:50) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` IS NULL) ORDER BY value DESC[0m
+Rendering template within layouts/news
+Rendering users/search
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.nick_name) on line #12 of app/views/shared/_user_profile.erb:
+9:     <span><%= "价值点数：#{user_profile.value}" %></span>
+10:   <% end %>
+11: <% elsif !current_user.followers.include?(user_profile) %>
+12:   <span class="nick_name"><%= link_to "#{user_profile.nick_name}" ,user_path(user_profile)%></span>
+13:   <span><%= "价值点数：#{user_profile.value}" %></span>
+14: <% end %>
+
+    app/views/shared/_user_profile.erb:12
+    app/views/users/search.erb:1
+    app/controllers/users_controller.rb:42:in `search'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (54.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:29:51) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` IS NULL) ORDER BY value DESC[0m
+Rendering template within layouts/news
+Rendering users/search
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.nick_name) on line #12 of app/views/shared/_user_profile.erb:
+9:     <span><%= "价值点数：#{user_profile.value}" %></span>
+10:   <% end %>
+11: <% elsif !current_user.followers.include?(user_profile) %>
+12:   <span class="nick_name"><%= link_to "#{user_profile.nick_name}" ,user_path(user_profile)%></span>
+13:   <span><%= "价值点数：#{user_profile.value}" %></span>
+14: <% end %>
+
+    app/views/shared/_user_profile.erb:12
+    app/views/users/search.erb:1
+    app/controllers/users_controller.rb:42:in `search'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (55.4ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:30:04) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` IS NULL) ORDER BY value DESC[0m
+Rendering template within layouts/news
+Rendering users/search
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.nick_name) on line #12 of app/views/shared/_user_profile.erb:
+9:     <span><%= "价值点数：#{user_profile.value}" %></span>
+10:   <% end %>
+11: <% elsif !current_user.followers.include?(user_profile) %>
+12:   <span class="nick_name"><%= link_to "#{user_profile.nick_name}" ,user_path(user_profile)%></span>
+13:   <span><%= "价值点数：#{user_profile.value}" %></span>
+14: <% end %>
+
+    app/views/shared/_user_profile.erb:12
+    app/views/users/search.erb:1
+    app/controllers/users_controller.rb:42:in `search'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (119.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:30:05) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` IS NULL) ORDER BY value DESC[0m
+Rendering template within layouts/news
+Rendering users/search
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.nick_name) on line #12 of app/views/shared/_user_profile.erb:
+9:     <span><%= "价值点数：#{user_profile.value}" %></span>
+10:   <% end %>
+11: <% elsif !current_user.followers.include?(user_profile) %>
+12:   <span class="nick_name"><%= link_to "#{user_profile.nick_name}" ,user_path(user_profile)%></span>
+13:   <span><%= "价值点数：#{user_profile.value}" %></span>
+14: <% end %>
+
+    app/views/shared/_user_profile.erb:12
+    app/views/users/search.erb:1
+    app/controllers/users_controller.rb:42:in `search'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (52.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:30:05) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` IS NULL) ORDER BY value DESC[0m
+Rendering template within layouts/news
+Rendering users/search
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.nick_name) on line #12 of app/views/shared/_user_profile.erb:
+9:     <span><%= "价值点数：#{user_profile.value}" %></span>
+10:   <% end %>
+11: <% elsif !current_user.followers.include?(user_profile) %>
+12:   <span class="nick_name"><%= link_to "#{user_profile.nick_name}" ,user_path(user_profile)%></span>
+13:   <span><%= "价值点数：#{user_profile.value}" %></span>
+14: <% end %>
+
+    app/views/shared/_user_profile.erb:12
+    app/views/users/search.erb:1
+    app/controllers/users_controller.rb:42:in `search'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (55.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:30:05) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` IS NULL) ORDER BY value DESC[0m
+Rendering template within layouts/news
+Rendering users/search
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.nick_name) on line #12 of app/views/shared/_user_profile.erb:
+9:     <span><%= "价值点数：#{user_profile.value}" %></span>
+10:   <% end %>
+11: <% elsif !current_user.followers.include?(user_profile) %>
+12:   <span class="nick_name"><%= link_to "#{user_profile.nick_name}" ,user_path(user_profile)%></span>
+13:   <span><%= "价值点数：#{user_profile.value}" %></span>
+14: <% end %>
+
+    app/views/shared/_user_profile.erb:12
+    app/views/users/search.erb:1
+    app/controllers/users_controller.rb:42:in `search'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (129.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:30:31) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` IS NULL) ORDER BY value DESC[0m
+Rendering template within layouts/news
+Rendering users/search
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.nick_name) on line #12 of app/views/shared/_user_profile.erb:
+9:     <span><%= "价值点数：#{user_profile.value}" %></span>
+10:   <% end %>
+11: <% elsif !current_user.followers.include?(user_profile) %>
+12:   <span class="nick_name"><%= link_to "#{user_profile.nick_name}" ,user_path(user_profile)%></span>
+13:   <span><%= "价值点数：#{user_profile.value}" %></span>
+14: <% end %>
+
+    app/views/shared/_user_profile.erb:12
+    app/views/users/search.erb:1
+    app/controllers/users_controller.rb:42:in `search'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (119.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:30:32) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` IS NULL) ORDER BY value DESC[0m
+Rendering template within layouts/news
+Rendering users/search
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.nick_name) on line #12 of app/views/shared/_user_profile.erb:
+9:     <span><%= "价值点数：#{user_profile.value}" %></span>
+10:   <% end %>
+11: <% elsif !current_user.followers.include?(user_profile) %>
+12:   <span class="nick_name"><%= link_to "#{user_profile.nick_name}" ,user_path(user_profile)%></span>
+13:   <span><%= "价值点数：#{user_profile.value}" %></span>
+14: <% end %>
+
+    app/views/shared/_user_profile.erb:12
+    app/views/users/search.erb:1
+    app/controllers/users_controller.rb:42:in `search'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (53.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:30:32) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` IS NULL) ORDER BY value DESC[0m
+Rendering template within layouts/news
+Rendering users/search
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.nick_name) on line #12 of app/views/shared/_user_profile.erb:
+9:     <span><%= "价值点数：#{user_profile.value}" %></span>
+10:   <% end %>
+11: <% elsif !current_user.followers.include?(user_profile) %>
+12:   <span class="nick_name"><%= link_to "#{user_profile.nick_name}" ,user_path(user_profile)%></span>
+13:   <span><%= "价值点数：#{user_profile.value}" %></span>
+14: <% end %>
+
+    app/views/shared/_user_profile.erb:12
+    app/views/users/search.erb:1
+    app/controllers/users_controller.rb:42:in `search'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (58.4ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:30:32) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` IS NULL) ORDER BY value DESC[0m
+Rendering template within layouts/news
+Rendering users/search
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.nick_name) on line #12 of app/views/shared/_user_profile.erb:
+9:     <span><%= "价值点数：#{user_profile.value}" %></span>
+10:   <% end %>
+11: <% elsif !current_user.followers.include?(user_profile) %>
+12:   <span class="nick_name"><%= link_to "#{user_profile.nick_name}" ,user_path(user_profile)%></span>
+13:   <span><%= "价值点数：#{user_profile.value}" %></span>
+14: <% end %>
+
+    app/views/shared/_user_profile.erb:12
+    app/views/users/search.erb:1
+    app/controllers/users_controller.rb:42:in `search'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (128.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:30:33) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` IS NULL) ORDER BY value DESC[0m
+Rendering template within layouts/news
+Rendering users/search
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.nick_name) on line #12 of app/views/shared/_user_profile.erb:
+9:     <span><%= "价值点数：#{user_profile.value}" %></span>
+10:   <% end %>
+11: <% elsif !current_user.followers.include?(user_profile) %>
+12:   <span class="nick_name"><%= link_to "#{user_profile.nick_name}" ,user_path(user_profile)%></span>
+13:   <span><%= "价值点数：#{user_profile.value}" %></span>
+14: <% end %>
+
+    app/views/shared/_user_profile.erb:12
+    app/views/users/search.erb:1
+    app/controllers/users_controller.rb:42:in `search'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (56.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:30:34) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` IS NULL) ORDER BY value DESC[0m
+Rendering template within layouts/news
+Rendering users/search
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.nick_name) on line #12 of app/views/shared/_user_profile.erb:
+9:     <span><%= "价值点数：#{user_profile.value}" %></span>
+10:   <% end %>
+11: <% elsif !current_user.followers.include?(user_profile) %>
+12:   <span class="nick_name"><%= link_to "#{user_profile.nick_name}" ,user_path(user_profile)%></span>
+13:   <span><%= "价值点数：#{user_profile.value}" %></span>
+14: <% end %>
+
+    app/views/shared/_user_profile.erb:12
+    app/views/users/search.erb:1
+    app/controllers/users_controller.rb:42:in `search'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (53.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:30:56) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` IS NULL) ORDER BY value DESC[0m
+Rendering template within layouts/news
+Rendering users/search
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.nick_name) on line #12 of app/views/shared/_user_profile.erb:
+9:     <span><%= "价值点数：#{user_profile.value}" %></span>
+10:   <% end %>
+11: <% elsif !current_user.followers.include?(user_profile) %>
+12:   <span class="nick_name"><%= link_to "#{user_profile.nick_name}" ,user_path(user_profile)%></span>
+13:   <span><%= "价值点数：#{user_profile.value}" %></span>
+14: <% end %>
+
+    app/views/shared/_user_profile.erb:12
+    app/views/users/search.erb:1
+    app/controllers/users_controller.rb:42:in `search'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (63.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:30:57) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` IS NULL) ORDER BY value DESC[0m
+Rendering template within layouts/news
+Rendering users/search
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.nick_name) on line #12 of app/views/shared/_user_profile.erb:
+9:     <span><%= "价值点数：#{user_profile.value}" %></span>
+10:   <% end %>
+11: <% elsif !current_user.followers.include?(user_profile) %>
+12:   <span class="nick_name"><%= link_to "#{user_profile.nick_name}" ,user_path(user_profile)%></span>
+13:   <span><%= "价值点数：#{user_profile.value}" %></span>
+14: <% end %>
+
+    app/views/shared/_user_profile.erb:12
+    app/views/users/search.erb:1
+    app/controllers/users_controller.rb:42:in `search'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (126.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:31:09) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` IS NULL) ORDER BY value DESC[0m
+Rendering template within layouts/news
+Rendering users/search
+
+ActionView::TemplateError (undefined method `nick_name' for []:Array) on line #12 of app/views/shared/_user_profile.erb:
+9:     <span><%= "价值点数：#{user_profile.value}" %></span>
+10:   <% end %>
+11: <% elsif !current_user.followers.include?(user_profile) %>
+12:   <span class="nick_name"><%= link_to "#{user_profile.nick_name}" ,user_path(user_profile)%></span>
+13:   <span><%= "价值点数：#{user_profile.value}" %></span>
+14: <% end %>
+
+    app/views/shared/_user_profile.erb:12
+    app/views/users/search.erb:1
+    app/controllers/users_controller.rb:42:in `search'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (50.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:31:11) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` IS NULL) ORDER BY value DESC[0m
+Rendering template within layouts/news
+Rendering users/search
+
+ActionView::TemplateError (undefined method `nick_name' for []:Array) on line #12 of app/views/shared/_user_profile.erb:
+9:     <span><%= "价值点数：#{user_profile.value}" %></span>
+10:   <% end %>
+11: <% elsif !current_user.followers.include?(user_profile) %>
+12:   <span class="nick_name"><%= link_to "#{user_profile.nick_name}" ,user_path(user_profile)%></span>
+13:   <span><%= "价值点数：#{user_profile.value}" %></span>
+14: <% end %>
+
+    app/views/shared/_user_profile.erb:12
+    app/views/users/search.erb:1
+    app/controllers/users_controller.rb:42:in `search'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (53.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:31:11) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` IS NULL) ORDER BY value DESC[0m
+Rendering template within layouts/news
+Rendering users/search
+
+ActionView::TemplateError (undefined method `nick_name' for []:Array) on line #12 of app/views/shared/_user_profile.erb:
+9:     <span><%= "价值点数：#{user_profile.value}" %></span>
+10:   <% end %>
+11: <% elsif !current_user.followers.include?(user_profile) %>
+12:   <span class="nick_name"><%= link_to "#{user_profile.nick_name}" ,user_path(user_profile)%></span>
+13:   <span><%= "价值点数：#{user_profile.value}" %></span>
+14: <% end %>
+
+    app/views/shared/_user_profile.erb:12
+    app/views/users/search.erb:1
+    app/controllers/users_controller.rb:42:in `search'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (58.9ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:31:13) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` IS NULL) ORDER BY value DESC[0m
+Rendering template within layouts/news
+Rendering users/search
+
+ActionView::TemplateError (undefined method `nick_name' for []:Array) on line #12 of app/views/shared/_user_profile.erb:
+9:     <span><%= "价值点数：#{user_profile.value}" %></span>
+10:   <% end %>
+11: <% elsif !current_user.followers.include?(user_profile) %>
+12:   <span class="nick_name"><%= link_to "#{user_profile.nick_name}" ,user_path(user_profile)%></span>
+13:   <span><%= "价值点数：#{user_profile.value}" %></span>
+14: <% end %>
+
+    app/views/shared/_user_profile.erb:12
+    app/views/users/search.erb:1
+    app/controllers/users_controller.rb:42:in `search'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (120.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:31:13) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` IS NULL) ORDER BY value DESC[0m
+Rendering template within layouts/news
+Rendering users/search
+
+ActionView::TemplateError (undefined method `nick_name' for []:Array) on line #12 of app/views/shared/_user_profile.erb:
+9:     <span><%= "价值点数：#{user_profile.value}" %></span>
+10:   <% end %>
+11: <% elsif !current_user.followers.include?(user_profile) %>
+12:   <span class="nick_name"><%= link_to "#{user_profile.nick_name}" ,user_path(user_profile)%></span>
+13:   <span><%= "价值点数：#{user_profile.value}" %></span>
+14: <% end %>
+
+    app/views/shared/_user_profile.erb:12
+    app/views/users/search.erb:1
+    app/controllers/users_controller.rb:42:in `search'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (60.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:31:14) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` IS NULL) ORDER BY value DESC[0m
+Rendering template within layouts/news
+Rendering users/search
+
+ActionView::TemplateError (undefined method `nick_name' for []:Array) on line #12 of app/views/shared/_user_profile.erb:
+9:     <span><%= "价值点数：#{user_profile.value}" %></span>
+10:   <% end %>
+11: <% elsif !current_user.followers.include?(user_profile) %>
+12:   <span class="nick_name"><%= link_to "#{user_profile.nick_name}" ,user_path(user_profile)%></span>
+13:   <span><%= "价值点数：#{user_profile.value}" %></span>
+14: <% end %>
+
+    app/views/shared/_user_profile.erb:12
+    app/views/users/search.erb:1
+    app/controllers/users_controller.rb:42:in `search'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (53.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:31:15) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` IS NULL) ORDER BY value DESC[0m
+Rendering template within layouts/news
+Rendering users/search
+
+ActionView::TemplateError (undefined method `nick_name' for []:Array) on line #12 of app/views/shared/_user_profile.erb:
+9:     <span><%= "价值点数：#{user_profile.value}" %></span>
+10:   <% end %>
+11: <% elsif !current_user.followers.include?(user_profile) %>
+12:   <span class="nick_name"><%= link_to "#{user_profile.nick_name}" ,user_path(user_profile)%></span>
+13:   <span><%= "价值点数：#{user_profile.value}" %></span>
+14: <% end %>
+
+    app/views/shared/_user_profile.erb:12
+    app/views/users/search.erb:1
+    app/controllers/users_controller.rb:42:in `search'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (119.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:31:15) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` IS NULL) ORDER BY value DESC[0m
+Rendering template within layouts/news
+Rendering users/search
+
+ActionView::TemplateError (undefined method `nick_name' for []:Array) on line #12 of app/views/shared/_user_profile.erb:
+9:     <span><%= "价值点数：#{user_profile.value}" %></span>
+10:   <% end %>
+11: <% elsif !current_user.followers.include?(user_profile) %>
+12:   <span class="nick_name"><%= link_to "#{user_profile.nick_name}" ,user_path(user_profile)%></span>
+13:   <span><%= "价值点数：#{user_profile.value}" %></span>
+14: <% end %>
+
+    app/views/shared/_user_profile.erb:12
+    app/views/users/search.erb:1
+    app/controllers/users_controller.rb:42:in `search'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (130.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:31:16) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` IS NULL) ORDER BY value DESC[0m
+Rendering template within layouts/news
+Rendering users/search
+
+ActionView::TemplateError (undefined method `nick_name' for []:Array) on line #12 of app/views/shared/_user_profile.erb:
+9:     <span><%= "价值点数：#{user_profile.value}" %></span>
+10:   <% end %>
+11: <% elsif !current_user.followers.include?(user_profile) %>
+12:   <span class="nick_name"><%= link_to "#{user_profile.nick_name}" ,user_path(user_profile)%></span>
+13:   <span><%= "价值点数：#{user_profile.value}" %></span>
+14: <% end %>
+
+    app/views/shared/_user_profile.erb:12
+    app/views/users/search.erb:1
+    app/controllers/users_controller.rb:42:in `search'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (59.0ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:31:16) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;36;1mUser Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` IS NULL) ORDER BY value DESC[0m
+Rendering template within layouts/news
+Rendering users/search
+
+ActionView::TemplateError (undefined method `nick_name' for []:Array) on line #12 of app/views/shared/_user_profile.erb:
+9:     <span><%= "价值点数：#{user_profile.value}" %></span>
+10:   <% end %>
+11: <% elsif !current_user.followers.include?(user_profile) %>
+12:   <span class="nick_name"><%= link_to "#{user_profile.nick_name}" ,user_path(user_profile)%></span>
+13:   <span><%= "价值点数：#{user_profile.value}" %></span>
+14: <% end %>
+
+    app/views/shared/_user_profile.erb:12
+    app/views/users/search.erb:1
+    app/controllers/users_controller.rb:42:in `search'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (55.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:31:16) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` IS NULL) ORDER BY value DESC[0m
+Rendering template within layouts/news
+Rendering users/search
+
+ActionView::TemplateError (undefined method `nick_name' for []:Array) on line #12 of app/views/shared/_user_profile.erb:
+9:     <span><%= "价值点数：#{user_profile.value}" %></span>
+10:   <% end %>
+11: <% elsif !current_user.followers.include?(user_profile) %>
+12:   <span class="nick_name"><%= link_to "#{user_profile.nick_name}" ,user_path(user_profile)%></span>
+13:   <span><%= "价值点数：#{user_profile.value}" %></span>
+14: <% end %>
+
+    app/views/shared/_user_profile.erb:12
+    app/views/users/search.erb:1
+    app/controllers/users_controller.rb:42:in `search'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (124.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:31:17) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` IS NULL) ORDER BY value DESC[0m
+Rendering template within layouts/news
+Rendering users/search
+
+ActionView::TemplateError (undefined method `nick_name' for []:Array) on line #12 of app/views/shared/_user_profile.erb:
+9:     <span><%= "价值点数：#{user_profile.value}" %></span>
+10:   <% end %>
+11: <% elsif !current_user.followers.include?(user_profile) %>
+12:   <span class="nick_name"><%= link_to "#{user_profile.nick_name}" ,user_path(user_profile)%></span>
+13:   <span><%= "价值点数：#{user_profile.value}" %></span>
+14: <% end %>
+
+    app/views/shared/_user_profile.erb:12
+    app/views/users/search.erb:1
+    app/controllers/users_controller.rb:42:in `search'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (49.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:31:17) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` IS NULL) ORDER BY value DESC[0m
+Rendering template within layouts/news
+Rendering users/search
+
+ActionView::TemplateError (undefined method `nick_name' for []:Array) on line #12 of app/views/shared/_user_profile.erb:
+9:     <span><%= "价值点数：#{user_profile.value}" %></span>
+10:   <% end %>
+11: <% elsif !current_user.followers.include?(user_profile) %>
+12:   <span class="nick_name"><%= link_to "#{user_profile.nick_name}" ,user_path(user_profile)%></span>
+13:   <span><%= "价值点数：#{user_profile.value}" %></span>
+14: <% end %>
+
+    app/views/shared/_user_profile.erb:12
+    app/views/users/search.erb:1
+    app/controllers/users_controller.rb:42:in `search'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (53.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:31:18) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` IS NULL) ORDER BY value DESC[0m
+Rendering template within layouts/news
+Rendering users/search
+
+ActionView::TemplateError (undefined method `nick_name' for []:Array) on line #12 of app/views/shared/_user_profile.erb:
+9:     <span><%= "价值点数：#{user_profile.value}" %></span>
+10:   <% end %>
+11: <% elsif !current_user.followers.include?(user_profile) %>
+12:   <span class="nick_name"><%= link_to "#{user_profile.nick_name}" ,user_path(user_profile)%></span>
+13:   <span><%= "价值点数：#{user_profile.value}" %></span>
+14: <% end %>
+
+    app/views/shared/_user_profile.erb:12
+    app/views/users/search.erb:1
+    app/controllers/users_controller.rb:42:in `search'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (54.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:31:18) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` IS NULL) ORDER BY value DESC[0m
+Rendering template within layouts/news
+Rendering users/search
+
+ActionView::TemplateError (undefined method `nick_name' for []:Array) on line #12 of app/views/shared/_user_profile.erb:
+9:     <span><%= "价值点数：#{user_profile.value}" %></span>
+10:   <% end %>
+11: <% elsif !current_user.followers.include?(user_profile) %>
+12:   <span class="nick_name"><%= link_to "#{user_profile.nick_name}" ,user_path(user_profile)%></span>
+13:   <span><%= "价值点数：#{user_profile.value}" %></span>
+14: <% end %>
+
+    app/views/shared/_user_profile.erb:12
+    app/views/users/search.erb:1
+    app/controllers/users_controller.rb:42:in `search'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (123.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:31:19) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;36;1mUser Columns (4.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` IS NULL) ORDER BY value DESC[0m
+Rendering template within layouts/news
+Rendering users/search
+
+ActionView::TemplateError (undefined method `nick_name' for []:Array) on line #12 of app/views/shared/_user_profile.erb:
+9:     <span><%= "价值点数：#{user_profile.value}" %></span>
+10:   <% end %>
+11: <% elsif !current_user.followers.include?(user_profile) %>
+12:   <span class="nick_name"><%= link_to "#{user_profile.nick_name}" ,user_path(user_profile)%></span>
+13:   <span><%= "价值点数：#{user_profile.value}" %></span>
+14: <% end %>
+
+    app/views/shared/_user_profile.erb:12
+    app/views/users/search.erb:1
+    app/controllers/users_controller.rb:42:in `search'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (51.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:31:20) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` IS NULL) ORDER BY value DESC[0m
+Rendering template within layouts/news
+Rendering users/search
+
+ActionView::TemplateError (undefined method `nick_name' for []:Array) on line #12 of app/views/shared/_user_profile.erb:
+9:     <span><%= "价值点数：#{user_profile.value}" %></span>
+10:   <% end %>
+11: <% elsif !current_user.followers.include?(user_profile) %>
+12:   <span class="nick_name"><%= link_to "#{user_profile.nick_name}" ,user_path(user_profile)%></span>
+13:   <span><%= "价值点数：#{user_profile.value}" %></span>
+14: <% end %>
+
+    app/views/shared/_user_profile.erb:12
+    app/views/users/search.erb:1
+    app/controllers/users_controller.rb:42:in `search'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (53.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:31:21) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` IS NULL) ORDER BY value DESC[0m
+Rendering template within layouts/news
+Rendering users/search
+
+ActionView::TemplateError (undefined method `nick_name' for []:Array) on line #12 of app/views/shared/_user_profile.erb:
+9:     <span><%= "价值点数：#{user_profile.value}" %></span>
+10:   <% end %>
+11: <% elsif !current_user.followers.include?(user_profile) %>
+12:   <span class="nick_name"><%= link_to "#{user_profile.nick_name}" ,user_path(user_profile)%></span>
+13:   <span><%= "价值点数：#{user_profile.value}" %></span>
+14: <% end %>
+
+    app/views/shared/_user_profile.erb:12
+    app/views/users/search.erb:1
+    app/controllers/users_controller.rb:42:in `search'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (119.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:33:05) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` IS NULL) ORDER BY value DESC[0m
+Rendering template within layouts/news
+Rendering users/search
+Rendered shared/_header (1.0ms)
+Rendered shared/_footer (0.6ms)
+Completed in 27ms (View: 8, DB: 1) | 200 OK [http://localhost/users/search]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FollowsController#new (for 127.0.0.1 at 2009-08-01 17:34:04) [GET]
+  Parameters: {"user_id"=>"2"}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mFollow Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `follows`[0m
+Rendering template within layouts/news
+Rendering follows/new
+
+ActionView::TemplateError (wrong number of arguments (1 for 2)) on line #7 of app/views/follows/new.html.erb:
+4:   </h1>
+5:   按真实姓名查找：
+6:   <% form_tag :controller => :users,:action => :search do%>
+7:     <%= text_field :name %>
+8:     <%=submit_tag "查找"%>
+9:   <%end  %>
+10:   按用户ID查找：
+
+    app/views/follows/new.html.erb:7:in `text_field'
+    app/views/follows/new.html.erb:7
+    app/views/follows/new.html.erb:6
+    app/controllers/follows_controller.rb:31:in `new'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (53.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FollowsController#new (for 127.0.0.1 at 2009-08-01 17:35:01) [GET]
+  Parameters: {"user_id"=>"2"}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mFollow Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `follows`[0m
+Rendering template within layouts/news
+Rendering follows/new
+Rendered shared/_header (1.0ms)
+Rendered shared/_footer (0.6ms)
+Completed in 32ms (View: 7, DB: 2) | 200 OK [http://localhost/users/2/follows/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:35:03) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"id"=>"2"}}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` ORDER BY value DESC[0m
+Rendering template within layouts/news
+Rendering users/search
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT `users`.id FROM `users` INNER JOIN `be_follows` ON `users`.id = `be_follows`.user_id WHERE (`users`.`id` = 1) AND ((`be_follows`.user_id = 2)) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT `users`.id FROM `users` INNER JOIN `be_follows` ON `users`.id = `be_follows`.user_id WHERE (`users`.`id` = 1) AND ((`be_follows`.user_id = 2)) ORDER BY value DESC LIMIT 1[0m
+Rendered shared/_user_profile (9.6ms)
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT `users`.id FROM `users` INNER JOIN `be_follows` ON `users`.id = `be_follows`.user_id WHERE (`users`.`id` = 2) AND ((`be_follows`.user_id = 2)) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT `users`.id FROM `users` INNER JOIN `be_follows` ON `users`.id = `be_follows`.user_id WHERE (`users`.`id` = 2) AND ((`be_follows`.user_id = 2)) ORDER BY value DESC LIMIT 1[0m
+Rendered shared/_user_profile (1.6ms)
+
+ActionView::TemplateError (undefined method `call' for {"id"=>"2"}:HashWithIndifferentAccess) on line #1 of app/views/users/search.erb:
+1:     <%= render :partial => "shared/user_profile",:collection => @results %>
+
+    app/views/users/search.erb:1
+    app/controllers/users_controller.rb:42:in `search'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (47.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:35:25) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` ORDER BY value DESC[0m
+Rendering template within layouts/news
+Rendering users/search
+  [4;36;1mUser Exists (0.1ms)[0m   [0;1mSELECT `users`.id FROM `users` INNER JOIN `be_follows` ON `users`.id = `be_follows`.user_id WHERE (`users`.`id` = 1) AND ((`be_follows`.user_id = 2)) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT `users`.id FROM `users` INNER JOIN `be_follows` ON `users`.id = `be_follows`.user_id WHERE (`users`.`id` = 1) AND ((`be_follows`.user_id = 2)) ORDER BY value DESC LIMIT 1[0m
+Rendered shared/_user_profile (7.8ms)
+  [4;36;1mUser Exists (0.0ms)[0m   [0;1mSELECT `users`.id FROM `users` INNER JOIN `be_follows` ON `users`.id = `be_follows`.user_id WHERE (`users`.`id` = 2) AND ((`be_follows`.user_id = 2)) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT `users`.id FROM `users` INNER JOIN `be_follows` ON `users`.id = `be_follows`.user_id WHERE (`users`.`id` = 2) AND ((`be_follows`.user_id = 2)) ORDER BY value DESC LIMIT 1[0m
+Rendered shared/_user_profile (1.5ms)
+
+ActionView::TemplateError (undefined method `call' for {"name"=>"liuz"}:HashWithIndifferentAccess) on line #1 of app/views/users/search.erb:
+1:     <%= render :partial => "shared/user_profile",:collection => @results %>
+
+    app/views/users/search.erb:1
+    app/controllers/users_controller.rb:42:in `search'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (113.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:36:18) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+Rendering template within layouts/news
+Rendering users/search
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'liuz') ORDER BY value DESC[0m
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT `users`.id FROM `users` INNER JOIN `be_follows` ON `users`.id = `be_follows`.user_id WHERE (`users`.`id` = 2) AND ((`be_follows`.user_id = 2)) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT `users`.id FROM `users` INNER JOIN `be_follows` ON `users`.id = `be_follows`.user_id WHERE (`users`.`id` = 2) AND ((`be_follows`.user_id = 2)) ORDER BY value DESC LIMIT 1[0m
+Rendered shared/_user_profile (7.8ms)
+Rendered shared/_header (1.0ms)
+Rendered shared/_footer (0.5ms)
+Completed in 31ms (View: 12, DB: 1) | 200 OK [http://localhost/users/search]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FollowsController#new (for 127.0.0.1 at 2009-08-01 17:36:22) [GET]
+  Parameters: {"user_id"=>"2"}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mFollow Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `follows`[0m
+Rendering template within layouts/news
+Rendering follows/new
+Rendered shared/_header (58.0ms)
+Rendered shared/_footer (0.7ms)
+Completed in 87ms (View: 62, DB: 2) | 200 OK [http://localhost/users/2/follows/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:36:24) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"id"=>"2"}}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') ORDER BY value DESC LIMIT 1[0m
+Rendering template within layouts/news
+Rendering users/search
+
+ActionView::TemplateError (undefined method `map' for #<User:0xb72023f0>) on line #1 of app/views/users/search.erb:
+1:     <%= render :partial => "shared/user_profile",:collection => @results %>
+
+    app/views/users/search.erb:1
+    app/controllers/users_controller.rb:46:in `search'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (45.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:36:33) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+Rendering template within layouts/news
+Rendering users/search
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'liuz') ORDER BY value DESC[0m
+  [4;36;1mUser Exists (0.1ms)[0m   [0;1mSELECT `users`.id FROM `users` INNER JOIN `be_follows` ON `users`.id = `be_follows`.user_id WHERE (`users`.`id` = 2) AND ((`be_follows`.user_id = 2)) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT `users`.id FROM `users` INNER JOIN `be_follows` ON `users`.id = `be_follows`.user_id WHERE (`users`.`id` = 2) AND ((`be_follows`.user_id = 2)) ORDER BY value DESC LIMIT 1[0m
+Rendered shared/_user_profile (7.6ms)
+Rendered shared/_header (1.0ms)
+Rendered shared/_footer (0.6ms)
+Completed in 29ms (View: 12, DB: 1) | 200 OK [http://localhost/users/search]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:36:39) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"id"=>"1"}}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') ORDER BY value DESC LIMIT 1[0m
+Rendering template within layouts/news
+Rendering users/search
+
+ActionView::TemplateError (undefined method `map' for #<User:0xb723a87c>) on line #1 of app/views/users/search.erb:
+1:     <%= render :partial => "shared/user_profile",:collection => @results %>
+
+    app/views/users/search.erb:1
+    app/controllers/users_controller.rb:46:in `search'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (46.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:37:45) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"id"=>"1"}}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') ORDER BY value DESC LIMIT 1[0m
+Rendering template within layouts/news
+Rendering users/search
+ERROR: compiling _run_erb_app47views47users47search46erb RAISED compile error
+/home/michael/miklme/app/views/users/search.erb:6: syntax error, unexpected kENSURE, expecting kEND
+/home/michael/miklme/app/views/users/search.erb:8: syntax error, unexpected $end, expecting kEND
+Function body:           def _run_erb_app47views47users47search46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ;  if @result.blank? ; @output_buffer.concat "\n"
+; @output_buffer.concat(( render :partial => "shared/user_profile",:collection => @results ).to_s); @output_buffer.concat "\n"
+;  elsif @results.blank? ; @output_buffer.concat "\n"
+; @output_buffer.concat(( render :partial => "shared/user_profile",:object => @result).to_s); @output_buffer.concat "\n"
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/michael/miklme/app/views/users/search.erb:8:in `compile!'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:343:in `_render_with_layout'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:257:in `render'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:978:in `render_without_benchmark'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/home/michael/miklme/app/controllers/users_controller.rb:46:in `search'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `send'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `perform_action_without_filters'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/home/michael/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/home/michael/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/home/michael/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/home/michael/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/home/michael/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/home/michael/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/home/michael/.gem/ruby/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+/home/michael/.gem/ruby/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/webrick.rb:46:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/home/michael/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/webrick.rb:13:in `run'
+/home/michael/.gem/ruby/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/home/michael/miklme/app/views/users/search.erb:6: syntax error, unexpected kENSURE, expecting kEND
+/home/michael/miklme/app/views/users/search.erb:8: syntax error, unexpected $end, expecting kEND) on line #6 of app/views/users/search.erb:
+3: <% elsif @results.blank? %>
+4: <%= render :partial => "shared/user_profile",:object => @result%>
+
+    app/views/users/search.erb:8:in `compile!'
+    app/controllers/users_controller.rb:46:in `search'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (108.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:37:55) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"id"=>"1"}}
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') ORDER BY value DESC LIMIT 1[0m
+Rendering template within layouts/news
+Rendering users/search
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT `users`.id FROM `users` INNER JOIN `be_follows` ON `users`.id = `be_follows`.user_id WHERE (`users`.`id` = 1) AND ((`be_follows`.user_id = 2)) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT `users`.id FROM `users` INNER JOIN `be_follows` ON `users`.id = `be_follows`.user_id WHERE (`users`.`id` = 1) AND ((`be_follows`.user_id = 2)) ORDER BY value DESC LIMIT 1[0m
+Rendered shared/_user_profile (5.3ms)
+Rendered shared/_header (1.0ms)
+Rendered shared/_footer (0.6ms)
+Completed in 35ms (View: 15, DB: 2) | 200 OK [http://localhost/users/search]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FollowsController#new (for 127.0.0.1 at 2009-08-01 17:38:22) [GET]
+  Parameters: {"user_id"=>"2"}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mFollow Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `follows`[0m
+Rendering template within layouts/news
+Rendering follows/new
+Rendered shared/_header (1.0ms)
+Rendered shared/_footer (0.6ms)
+Completed in 29ms (View: 4, DB: 2) | 200 OK [http://localhost/users/2/follows/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:38:29) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"id"=>"3"}}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '3') ORDER BY value DESC LIMIT 1[0m
+Rendering template within layouts/news
+Rendering users/search
+Rendered shared/_header (1.2ms)
+Rendered shared/_footer (0.6ms)
+Completed in 84ms (View: 6, DB: 1) | 200 OK [http://localhost/users/search]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:38:39) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+Rendering template within layouts/news
+Rendering users/search
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'liuz') ORDER BY value DESC[0m
+  [4;36;1mUser Exists (0.1ms)[0m   [0;1mSELECT `users`.id FROM `users` INNER JOIN `be_follows` ON `users`.id = `be_follows`.user_id WHERE (`users`.`id` = 2) AND ((`be_follows`.user_id = 2)) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT `users`.id FROM `users` INNER JOIN `be_follows` ON `users`.id = `be_follows`.user_id WHERE (`users`.`id` = 2) AND ((`be_follows`.user_id = 2)) ORDER BY value DESC LIMIT 1[0m
+Rendered shared/_user_profile (8.8ms)
+Rendered shared/_header (1.0ms)
+Rendered shared/_footer (0.6ms)
+Completed in 32ms (View: 13, DB: 1) | 200 OK [http://localhost/users/search]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:38:44) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liu"}}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+Rendering template within layouts/news
+Rendering users/search
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'liu') ORDER BY value DESC[0m
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT `users`.id FROM `users` INNER JOIN `be_follows` ON `users`.id = `be_follows`.user_id WHERE (`users`.`id` = 1) AND ((`be_follows`.user_id = 2)) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT `users`.id FROM `users` INNER JOIN `be_follows` ON `users`.id = `be_follows`.user_id WHERE (`users`.`id` = 1) AND ((`be_follows`.user_id = 2)) ORDER BY value DESC LIMIT 1[0m
+Rendered shared/_user_profile (7.8ms)
+Rendered shared/_header (1.0ms)
+Rendered shared/_footer (0.6ms)
+Completed in 30ms (View: 12, DB: 1) | 200 OK [http://localhost/users/search]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:38:48) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"li"}}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+Rendering template within layouts/news
+Rendering users/search
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'li') ORDER BY value DESC[0m
+Rendered shared/_header (1.1ms)
+Rendered shared/_footer (0.6ms)
+Completed in 82ms (View: 63, DB: 1) | 200 OK [http://localhost/users/search]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:38:53) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"id"=>"4"}}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '4') ORDER BY value DESC LIMIT 1[0m
+Rendering template within layouts/news
+Rendering users/search
+Rendered shared/_header (1.1ms)
+Rendered shared/_footer (0.6ms)
+Completed in 26ms (View: 6, DB: 1) | 200 OK [http://localhost/users/search]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:38:58) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liu"}}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+Rendering template within layouts/news
+Rendering users/search
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'liu') ORDER BY value DESC[0m
+  [4;36;1mUser Exists (0.1ms)[0m   [0;1mSELECT `users`.id FROM `users` INNER JOIN `be_follows` ON `users`.id = `be_follows`.user_id WHERE (`users`.`id` = 1) AND ((`be_follows`.user_id = 2)) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT `users`.id FROM `users` INNER JOIN `be_follows` ON `users`.id = `be_follows`.user_id WHERE (`users`.`id` = 1) AND ((`be_follows`.user_id = 2)) ORDER BY value DESC LIMIT 1[0m
+Rendered shared/_user_profile (7.9ms)
+Rendered shared/_header (1.0ms)
+Rendered shared/_footer (0.6ms)
+Completed in 30ms (View: 12, DB: 1) | 200 OK [http://localhost/users/search]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:41:45) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liu"}}
+  [4;36;1mUser Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+Rendering template within layouts/news
+Rendering users/search
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'liu') ORDER BY value DESC[0m
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT `users`.id FROM `users` INNER JOIN `be_follows` ON `users`.id = `be_follows`.user_id WHERE (`users`.`id` = 1) AND ((`be_follows`.user_id = 2)) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT `users`.id FROM `users` INNER JOIN `be_follows` ON `users`.id = `be_follows`.user_id WHERE (`users`.`id` = 1) AND ((`be_follows`.user_id = 2)) ORDER BY value DESC LIMIT 1[0m
+Rendered shared/_user_profile (8.9ms)
+Rendered shared/_header (1.0ms)
+Rendered shared/_footer (0.5ms)
+Completed in 34ms (View: 16, DB: 1) | 200 OK [http://localhost/users/search]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FollowsController#new (for 127.0.0.1 at 2009-08-01 17:41:47) [GET]
+  Parameters: {"user_id"=>"2"}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mFollow Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `follows`[0m
+Rendering template within layouts/news
+Rendering follows/new
+Rendered shared/_header (1.0ms)
+Rendered shared/_footer (0.6ms)
+Completed in 33ms (View: 4, DB: 2) | 200 OK [http://localhost/users/2/follows/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:41:59) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+Rendering template within layouts/news
+Rendering users/search
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'liuz') ORDER BY value DESC[0m
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT `users`.id FROM `users` INNER JOIN `be_follows` ON `users`.id = `be_follows`.user_id WHERE (`users`.`id` = 2) AND ((`be_follows`.user_id = 2)) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT `users`.id FROM `users` INNER JOIN `be_follows` ON `users`.id = `be_follows`.user_id WHERE (`users`.`id` = 2) AND ((`be_follows`.user_id = 2)) ORDER BY value DESC LIMIT 1[0m
+Rendered shared/_user_profile (7.6ms)
+Rendered shared/_header (1.0ms)
+Rendered shared/_footer (0.6ms)
+Completed in 30ms (View: 12, DB: 1) | 200 OK [http://localhost/users/search]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NewsController#index (for 127.0.0.1 at 2009-08-01 17:43:02) [GET]
+  Parameters: {"user_id"=>"2"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT DISTINCT `users`.* FROM `users` INNER JOIN `follows` ON `users`.id = `follows`.user_id WHERE ((`follows`.user_id = 2)) ORDER BY value DESC[0m
+Rendering template within layouts/news
+Rendering news/index
+Rendered shared/_header (1.0ms)
+Rendered shared/_footer (0.6ms)
+Completed in 27ms (View: 3, DB: 1) | 200 OK [http://localhost/users/2/news]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FollowsController#new (for 127.0.0.1 at 2009-08-01 17:43:05) [GET]
+  Parameters: {"user_id"=>"2"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mFollow Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `follows`[0m
+Rendering template within layouts/news
+Rendering follows/new
+Rendered shared/_header (1.0ms)
+Rendered shared/_footer (0.6ms)
+Completed in 87ms (View: 4, DB: 2) | 200 OK [http://localhost/users/2/follows/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:43:20) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"id"=>"2"}}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') ORDER BY value DESC LIMIT 1[0m
+Rendering template within layouts/news
+Rendering users/search
+  [4;36;1mUser Exists (0.1ms)[0m   [0;1mSELECT `users`.id FROM `users` INNER JOIN `be_follows` ON `users`.id = `be_follows`.user_id WHERE (`users`.`id` = 2) AND ((`be_follows`.user_id = 2)) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT `users`.id FROM `users` INNER JOIN `be_follows` ON `users`.id = `be_follows`.user_id WHERE (`users`.`id` = 2) AND ((`be_follows`.user_id = 2)) ORDER BY value DESC LIMIT 1[0m
+Rendered shared/_user_profile (6.4ms)
+Rendered shared/_header (1.0ms)
+Rendered shared/_footer (0.6ms)
+Completed in 32ms (View: 12, DB: 1) | 200 OK [http://localhost/users/search]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FollowsController#new (for 127.0.0.1 at 2009-08-01 17:44:25) [GET]
+  Parameters: {"user_id"=>"2"}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mFollow Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `follows`[0m
+Rendering template within layouts/news
+Rendering follows/new
+Rendered shared/_header (1.0ms)
+Rendered shared/_footer (0.6ms)
+Completed in 30ms (View: 4, DB: 2) | 200 OK [http://localhost/users/2/follows/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:44:33) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+Rendering template within layouts/news
+Rendering users/search
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'liuz') ORDER BY value DESC[0m
+  [4;36;1mUser Exists (0.1ms)[0m   [0;1mSELECT `users`.id FROM `users` INNER JOIN `be_follows` ON `users`.id = `be_follows`.user_id WHERE (`users`.`id` = 2) AND ((`be_follows`.user_id = 2)) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT `users`.id FROM `users` INNER JOIN `be_follows` ON `users`.id = `be_follows`.user_id WHERE (`users`.`id` = 2) AND ((`be_follows`.user_id = 2)) ORDER BY value DESC LIMIT 1[0m
+Rendered shared/_user_profile (64.2ms)
+Rendered shared/_header (1.0ms)
+Rendered shared/_footer (0.6ms)
+Completed in 87ms (View: 69, DB: 1) | 200 OK [http://localhost/users/search]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FollowsController#new (for 127.0.0.1 at 2009-08-01 17:45:17) [GET]
+  Parameters: {"user_id"=>"2"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mFollow Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `follows`[0m
+Rendering template within layouts/news
+Rendering follows/new
+Rendered shared/_header (1.0ms)
+Rendered shared/_footer (0.6ms)
+Completed in 32ms (View: 4, DB: 2) | 200 OK [http://localhost/users/2/follows/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:45:24) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+Rendering template within layouts/news
+Rendering users/search
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'liuz') ORDER BY value DESC[0m
+  [4;36;1mUser Exists (0.1ms)[0m   [0;1mSELECT `users`.id FROM `users` INNER JOIN `be_follows` ON `users`.id = `be_follows`.user_id WHERE (`users`.`id` = 2) AND ((`be_follows`.user_id = 2)) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT `users`.id FROM `users` INNER JOIN `be_follows` ON `users`.id = `be_follows`.user_id WHERE (`users`.`id` = 2) AND ((`be_follows`.user_id = 2)) ORDER BY value DESC LIMIT 1[0m
+Rendered shared/_user_profile (7.9ms)
+Rendered shared/_header (1.0ms)
+Rendered shared/_footer (0.6ms)
+Completed in 30ms (View: 12, DB: 1) | 200 OK [http://localhost/users/search]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FollowsController#new (for 127.0.0.1 at 2009-08-01 17:45:26) [GET]
+  Parameters: {"user_id"=>"2"}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mFollow Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `follows`[0m
+Rendering template within layouts/news
+Rendering follows/new
+Rendered shared/_header (1.0ms)
+Rendered shared/_footer (0.6ms)
+Completed in 29ms (View: 4, DB: 2) | 200 OK [http://localhost/users/2/follows/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:46:24) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+Rendering template within layouts/news
+Rendering users/search
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'liuz') ORDER BY value DESC[0m
+  [4;36;1mUser Exists (0.1ms)[0m   [0;1mSELECT `users`.id FROM `users` INNER JOIN `be_follows` ON `users`.id = `be_follows`.user_id WHERE (`users`.`id` = 2) AND ((`be_follows`.user_id = 2)) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT `users`.id FROM `users` INNER JOIN `be_follows` ON `users`.id = `be_follows`.user_id WHERE (`users`.`id` = 2) AND ((`be_follows`.user_id = 2)) ORDER BY value DESC LIMIT 1[0m
+Rendered shared/_user_profile (8.3ms)
+Rendered shared/_header (1.0ms)
+Rendered shared/_footer (0.6ms)
+Completed in 33ms (View: 13, DB: 1) | 200 OK [http://localhost/users/search]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#search (for 127.0.0.1 at 2009-08-01 17:46:36) [POST]
+  Parameters: {"commit"=>"查找", "user"=>{"name"=>"liuz"}}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+Rendering template within layouts/news
+Rendering users/search
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'liuz') ORDER BY value DESC[0m
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT `users`.id FROM `users` INNER JOIN `be_follows` ON `users`.id = `be_follows`.user_id WHERE (`users`.`id` = 2) AND ((`be_follows`.user_id = 2)) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT `users`.id FROM `users` INNER JOIN `be_follows` ON `users`.id = `be_follows`.user_id WHERE (`users`.`id` = 2) AND ((`be_follows`.user_id = 2)) ORDER BY value DESC LIMIT 1[0m
+Rendered shared/_user_profile (8.0ms)
+Rendered shared/_header (1.0ms)
+Rendered shared/_footer (0.6ms)
+Completed in 30ms (View: 12, DB: 1) | 200 OK [http://localhost/users/search]

@@ -1,0 +1,15 @@
+<% if current_user.followers.include?(user_profile_full)%>
+  <% if current_user.be_follows.find_by_follower_id(user_profile_full.id).provide_name? %>
+    <span><%= link_to user_profile_full.name,user_path(user_profile_full)%></span><span class="nick_name"><%= "（#{user_profile_full.nick_name}）" %></span>
+    <em>(我的真实朋友)</em>
+    <span><%= "价值点数：#{user_profile_full.value}" %></span>
+  <% elsif !current_user.be_follows.find_by_follower_id(user_profile_full.id).provide_name?  %>
+    <span class="nick_name"><%= link_to "#{user_profile_full.nick_name}",user_path(user_profile_full) %></span>
+    <em>(我关注的人)</em>
+    <span><%= "价值点数：#{user_profile_full.value}" %></span>
+  <% end %>
+<% elsif !current_user.followers.include?(user_profile_full) %>
+  <span class="nick_name"><%= link_to "#{user_profile_full.nick_name}" ,user_path(user_profile_full)%></span>
+  <span><%= "价值点数：#{user_profile_full.value}" %></span>
+  <span><%= link_to "关注该用户",new_user_follow_path(current_user) %></span>
+<% end %>

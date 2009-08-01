@@ -39,9 +39,9 @@ class UsersController < ApplicationController
   def search
     @user=current_user
     if params[:user][:name] and params[:user][:id].blank?
-      @users=User.all.find(params[:user]).by_value
+      @results=User.scoped_by_name(params[:user][:name]).by_value
     elsif params[:user][:id] and params[:user][:name].blank?
-      @users=User.scoped_by_id(params[:user][:id]).first
+      @result=User.find_by_id(params[:user][:id])
     end
     render :layout => "news"
   end
