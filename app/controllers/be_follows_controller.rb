@@ -1,6 +1,14 @@
 class BeFollowsController < ApplicationController
-before_filter :load_user  # GET /be_follows.xml
-layout "news"
+  before_filter :load_user  # GET /be_follows.xml
+  layout "news"
+
+  def new
+    @be_follow=@user.be_follows.build
+    respond_to do |format|
+      format.html # new.html.erb
+      format.xml  { render :xml => @follows }
+    end
+  end
   def index
     @be_follows = @user.be_follows.all
 
@@ -40,12 +48,15 @@ layout "news"
   # POST /be_follows
   # POST /be_follows.xml
   def create
-    @be_follow = BeFollow.new(params[:be_follow])
-
+    @be_follow = @user.be_follows.build(params[:be_follow])
+    @be_follow.user=current_user
+    @be_follow.follower=@user
+    current_user.followings<<@user
+    current_user.save
     respond_to do |format|
       if @be_follow.save
-        flash[:notice] = 'BeFollow was successfully created.'
-        format.html { redirect_to(@be_follow) }
+        flash[:notice] = '成功关注该用户，之后你会自动获得该用户的一些信息'
+        format.html { redirect_to :back }
         format.xml  { render :xml => @be_follow, :status => :created, :location => @be_follow }
       else
         format.html { render :action => "new" }
@@ -84,6 +95,6 @@ layout "news"
   end
   private
   def load_user
-    @user=current_user
+    @user=User.find(params[:user_id])
   end
 end

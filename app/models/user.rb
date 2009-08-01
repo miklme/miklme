@@ -19,12 +19,11 @@ class User < ActiveRecord::Base
     :source => :user,
     :uniq => true,
     :order => "value DESC"
-  has_many :follows
   has_many :followings,
-    :through => :follows,
+    :through => :be_follows,
     :order => "value DESC",
     :uniq => true,
-    :source => :user
+    :source => :follower
   has_many :link_url_resources
   has_many :blog_resources
   has_many :twitter_resources

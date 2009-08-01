@@ -4,7 +4,7 @@ class FollowsController < ApplicationController
   # GET /follows
   # GET /follows.xml
   def index
-    @follows = @user.follows
+    @followings = @user.followings
 
     respond_to do |format|
       format.html # index.html.erb
@@ -26,12 +26,7 @@ class FollowsController < ApplicationController
   # GET /follows/new
   # GET /follows/new.xml
   def new
-    @follow = @user.follows.build
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @follows }
-    end
+ 
   end
 
   # GET /follows/1/edit
@@ -42,11 +37,11 @@ class FollowsController < ApplicationController
   # POST /follows
   # POST /follows.xml
   def create
-    @follows = Follows.new(params[:follows])
-
+    @follow = current_user.follows.build(params[:follow])
     respond_to do |format|
-      if @follows.save
-        flash[:notice] = 'Follows was successfully created.'
+      @follow.following_id=@showing_user.id
+      if @follow.save
+    
         format.html { redirect_to(@follows) }
         format.xml  { render :xml => @follows, :status => :created, :location => @follows }
       else
