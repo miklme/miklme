@@ -4,80 +4,15 @@ class FollowsController < ApplicationController
   # GET /follows
   # GET /follows.xml
   def index
-    @followings = @user.followings
+    @real_friends = @user.real_friends
+    @interested_people=@user.interested_people
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @follows }
     end
   end
 
-  # GET /follows/1
-  # GET /follows/1.xml
-  def show
-    @follows = Follows.find(params[:id])
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @follows }
-    end
-  end
-
-  # GET /follows/new
-  # GET /follows/new.xml
-  def new
- 
-  end
-
-  # GET /follows/1/edit
-  def edit
-    @follows = Follows.find(params[:id])
-  end
-
-  # POST /follows
-  # POST /follows.xml
-  def create
-    @follow = current_user.follows.build(params[:follow])
-    respond_to do |format|
-      @follow.following_id=@showing_user.id
-      if @follow.save
-    
-        format.html { redirect_to(@follows) }
-        format.xml  { render :xml => @follows, :status => :created, :location => @follows }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @follows.errors, :status => :unprocessable_entity }
-      end
-    end
-  end
-
-  # PUT /follows/1
-  # PUT /follows/1.xml
-  def update
-    @follows = Follows.find(params[:id])
-
-    respond_to do |format|
-      if @follows.update_attributes(params[:follows])
-        flash[:notice] = 'Follows was successfully updated.'
-        format.html { redirect_to(@follows) }
-        format.xml  { head :ok }
-      else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @follows.errors, :status => :unprocessable_entity }
-      end
-    end
-  end
-
-  # DELETE /follows/1
-  # DELETE /follows/1.xml
-  def destroy
-    @follows = Follows.find(params[:id])
-    @follows.destroy
-
-    respond_to do |format|
-      format.html { redirect_to(follows_url) }
-      format.xml  { head :ok }
-    end
-  end
 
   def search_user
 

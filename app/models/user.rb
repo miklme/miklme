@@ -17,7 +17,6 @@ class User < ActiveRecord::Base
   has_many :followers,
     :through => :be_follows,
     :class_name => "User"
-
   has_many :link_url_resources
   has_many :blog_resources
   has_many :twitter_resources
@@ -58,6 +57,20 @@ class User < ActiveRecord::Base
     b=BeFollow.scoped_by_follower_id(self.id)
     b.map do |a|
       a.user
+    end
+  end
+
+  def real_friends
+    b=BeFollow.scoped_by_follower_id(self.id).scoped_by_provide_name(true)
+    b.map do |c|
+      c.user
+    end
+  end
+
+  def interested_people
+    b=BeFollow.scoped_by_follower_id(self.id).scoped_by_provide_name(false)
+    b.map do |c|
+      c.user
     end
   end
 

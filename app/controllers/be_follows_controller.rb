@@ -10,8 +10,8 @@ class BeFollowsController < ApplicationController
     end
   end
   def index
-    @followers = @user.followers
-
+    @be_follows=@user.be_follows
+    @followers=@user.followers
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @be_follows }
@@ -73,9 +73,8 @@ class BeFollowsController < ApplicationController
   def destroy
     @be_follow = BeFollow.find(params[:id])
     @be_follow.destroy
-
     respond_to do |format|
-      format.html { redirect_to(be_follows_url) }
+      format.html { redirect_to(user_follows_path(current_user)) }
       format.xml  { head :ok }
     end
   end

@@ -8,7 +8,7 @@
       <li>
         <%= link_to_unless_current ".Me",user_resources_path(header) %>
       </li>
-      <% if current_user.id=header.id %>
+      <% if current_user.id==header.id %>
         <li><%= link_to_unless_current "Michael猜你" %>
         </li>
         <li>
@@ -24,7 +24,7 @@
         </li>
       <% end %>
 
-      <% if header.id=current_user.id %>
+      <% if header.id==current_user.id %>
         <li>
           <%= link_to_unless_current "个人设置",edit_user_path(current_user) %>
         </li>
