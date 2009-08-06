@@ -5,7 +5,7 @@ ActionController::Routing::Routes.draw do |map|
     user.resources :searched_keywords
     user.resource :true_portrait
     user.resources :be_follows
-    user.resources :follows
+    user.resources :follows,:new => {:search_user => :get}
     user.resources :resources
     user.resources :controlled_keywords
     user.resources :blog_resources

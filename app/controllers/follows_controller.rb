@@ -5,7 +5,6 @@ class FollowsController < ApplicationController
   # GET /follows.xml
   def index
     @followings = @user.followings
-
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @follows }
@@ -86,6 +85,6 @@ class FollowsController < ApplicationController
 
   private
   def load_user
-    @user=current_user
+    @user=User.find(params[:user_id])
   end
 end

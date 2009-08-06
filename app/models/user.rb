@@ -14,17 +14,9 @@ class User < ActiveRecord::Base
   has_many :resources
   has_many :important_days
   has_many :be_follows
-  has_many :follows
   has_many :followers,
     :through => :be_follows,
-    :source => :user,
-    :uniq => true,
-    :order => "value DESC"
-  has_many :followings,
-    :through => :follows,
-    :order => "value DESC",
-    :uniq => true,
-    :source => :user
+    :class_name => "User"
 
   has_many :link_url_resources
   has_many :blog_resources
@@ -59,6 +51,29 @@ class User < ActiveRecord::Base
     resources=self.resources
     resources.map do |r|
       r.keywords
+    end
+  end
+
+  def followings
+    b=BeFollow.scoped_by_follower_id(self.id)
+    b.map do |a|
+      a.user
+    end
+  end
+
+  def regard_real_friend?(user)
+    if BeFollow.find_by_user_id_and_follower_id(user.id,self.id).present? and BeFollow.find_by_user_id_and_follower_id(user.id,self.id).provide_name?
+      true
+    else
+      false
+    end
+  end
+
+  def interested_in?(user)
+    if BeFollow.find_by_user_id_and_follower_id(user.id,self.id).present? and !BeFollow.find_by_user_id_and_follower_id(user.id,self.id).provide_name?
+      true
+    else
+      false
     end
   end
 end

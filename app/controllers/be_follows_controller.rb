@@ -3,8 +3,7 @@ class BeFollowsController < ApplicationController
   layout "news"
 
   def new
-    @be_follow=@user.be_follows.build
-    @follow=current_user.follows.build
+    @be_follow=BeFollow.new
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @follows }
@@ -37,15 +36,11 @@ class BeFollowsController < ApplicationController
   # POST /be_follows
   # POST /be_follows.xml
   def create
-    @be_follow = @user.be_follows.build(params[:be_follow])
+    @be_follow = BeFollow.new(params[:be_follow])
     @be_follow.user=@user
     @be_follow.follower=current_user
-    @follow=current_user.follows.build(params[:be_follow])
-    @follow.user=current_user
-    @follow.following=@user
     respond_to do |format|
       if @be_follow.save
-        @follow.save
         flash[:notice] = '成功关注该用户，之后你会自动获得该用户的一些信息'
         format.html { redirect_to :back }
         format.xml  { render :xml => @be_follow, :status => :created, :location => @be_follow }
