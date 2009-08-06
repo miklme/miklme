@@ -4,13 +4,14 @@ class BeFollowsController < ApplicationController
 
   def new
     @be_follow=@user.be_follows.build
+    @follow=current_user.follows.build
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @follows }
     end
   end
   def index
-    @be_follows = @user.be_follows.all
+    @followers = @user.followers
 
     respond_to do |format|
       format.html # index.html.erb
@@ -29,18 +30,6 @@ class BeFollowsController < ApplicationController
     end
   end
 
-  # GET /be_follows/new
-  # GET /be_follows/new.xml
-  def new
-    @be_follow = BeFollow.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @be_follow }
-    end
-  end
-
-  # GET /be_follows/1/edit
   def edit
     @be_follow = BeFollow.find(params[:id])
   end
@@ -51,8 +40,12 @@ class BeFollowsController < ApplicationController
     @be_follow = @user.be_follows.build(params[:be_follow])
     @be_follow.user=@user
     @be_follow.follower=current_user
+    @follow=current_user.follows.build(params[:be_follow])
+    @follow.user=current_user
+    @follow.following=@user
     respond_to do |format|
       if @be_follow.save
+        @follow.save
         flash[:notice] = '成功关注该用户，之后你会自动获得该用户的一些信息'
         format.html { redirect_to :back }
         format.xml  { render :xml => @be_follow, :status => :created, :location => @be_follow }
