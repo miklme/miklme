@@ -23,7 +23,9 @@ class User < ActiveRecord::Base
     :through => :be_follows,
     :order => "value DESC",
     :uniq => true,
-    :source => :follower
+    :source => :user,
+  :foreign_key => "user_id"
+
   has_many :link_url_resources
   has_many :blog_resources
   has_many :twitter_resources

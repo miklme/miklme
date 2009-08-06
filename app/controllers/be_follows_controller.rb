@@ -49,10 +49,8 @@ class BeFollowsController < ApplicationController
   # POST /be_follows.xml
   def create
     @be_follow = @user.be_follows.build(params[:be_follow])
-    @be_follow.user=current_user
-    @be_follow.follower=@user
-    current_user.followings<<@user
-    current_user.save
+    @be_follow.user=@user
+    @be_follow.follower=current_user
     respond_to do |format|
       if @be_follow.save
         flash[:notice] = '成功关注该用户，之后你会自动获得该用户的一些信息'
