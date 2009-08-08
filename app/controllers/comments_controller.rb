@@ -4,7 +4,7 @@ class CommentsController < ApplicationController
   # GET /comments
   # GET /comments.xml
   def index
-    @comments = @resource.comments.all
+    @comments = @resource.comments.by_owner_value
     @comment=@resource.comments.build
     respond_to do |format|
       format.html # index.html.erb
@@ -32,7 +32,7 @@ class CommentsController < ApplicationController
   # POST /comments.xml
   def create
     @comment = @resource.comments.build(params[:comment])
-
+    @comment.owner=current_user
     respond_to do |format|
       if @comment.save
         u=User.find(params[:user_id])
@@ -76,7 +76,7 @@ class CommentsController < ApplicationController
       format.xml  { head :ok }
     end
   end
-  
+
   private
 
   def load_user_and_resource

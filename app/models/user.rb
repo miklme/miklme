@@ -47,7 +47,7 @@ class User < ActiveRecord::Base
   end
 
   def owned_keywords
-    resources=self.resources
+    resources=self.link_url_resources
     resources.map do |r|
       r.keywords
     end

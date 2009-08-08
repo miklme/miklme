@@ -5,22 +5,25 @@
   </div>
   <div id="menu">
     <ul>
-      <li>
-        <%= link_to_unless_current ".Me",user_resources_path(header) %>
-      </li>
       <% if current_user.id==header.id %>
+        <li>
+          <%= link_to_unless_current ".Me",user_resources_path(header) %>
+        </li>
         <li><%= link_to_unless_current "Michael猜你" %>
         </li>
         <li>
-            <%= link_to_unless_current "关系网络",user_news_index_path(current_user) %>
+          <%= link_to_unless_current "关系网络",user_news_index_path(current_user) %>
         </li>
         <li><%= link_to_unless_current"我的关键字",user_controlled_keywords_path(header) %>
         </li>
       <% else %>
         <li>
-          <%= link_to_unless_current "关系网络",user_news_index_path(current_user) %>
+          <%= link_to_unless_current ".Me（#{header.nick_name}）",user_resources_path(header) %>
         </li>
-        <li><%= link_to_unless_current "#{header.nick_name}的关键字",user_keywords_path(header) %>
+        <li>
+          <%= link_to_unless_current "#{header.nick_name}的关系网络",user_news_index_path(header) %>
+        </li>
+        <li><%= link_to_unless_current "#{header.nick_name}的关键字",user_controlled_keywords_path(header) %>
         </li>
       <% end %>
 

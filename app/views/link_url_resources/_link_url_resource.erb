@@ -20,7 +20,7 @@
   </em>
 <% end %>
 <div>
-  <% for comment in link_url_resource.comments.good_comments do%>
+  <% for comment in link_url_resource.comments.best_comment do%>
       <%= auto_link(highlight(truncate(comment.content,:length => 140),link_url_resource.keywords)) %>
     <% end %>
   </div>
