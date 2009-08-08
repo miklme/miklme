@@ -4,15 +4,7 @@ class ControlledKeywordsController < ApplicationController
   # GET /keywords.xml
   def index
     @keywords = @user.owned_keywords
-    @controlled_keywords=@keywords.map do |k|
-      rs=Resource.scoped_by_keywords(k)
-      top_owner=rs.by_owner_value.first
-      if top_owner.id==current_user.id
-        k
-      else
-        nil
-      end
-    end
+    @controlled_keywords=@user.controlled_keywords
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @keywords }

@@ -1,19 +1,20 @@
 <h1>朋友的动向：</h1>
 <p>
   <% for hot_resource in @hot_resources %>
-    <%= hot_resource.owner.nick_name %>分享了
-    <% if !hot_resource.authority? %>
-      <%= "原创" %>
+    <%= link_to "#{hot_resource.owner.nick_name}",user_path(hot_resource.owner) -%>分享了
+    <% if hot_resource.authority? %>
+      <%= "原创" -%>
     <% end %>
-    <% if hot_resource.form="视频" %>
-      <%= "视频" %>
-    <% elsif hot_resource.form="音频" %>
-    <%= "音乐" %>
-    <% elsif hot_resource.form="图片" %>
-      <%= "图片" %>
-    <% elsif hot_resource.form="文字、文档" %>
-      <%= "文章" %>
+    <% if hot_resource.form=="视频" -%>
+      <%="视频" -%>
+    <% elsif hot_resource.form=="音频" -%>
+      <%= "音乐" %>
+    <% elsif hot_resource.form=="图片" %>
+      <%="图片" %>
+    <% elsif hot_resource.form=="文字、文档" %>
+      <%="文章" %>
     <% end %>
-    <%= hot_resource.description %>
+    <%= link_to "#{hot_resource.description}" %>
+    <cite></cite>
   <% end %>
 </p>

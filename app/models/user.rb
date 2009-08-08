@@ -89,4 +89,20 @@ class User < ActiveRecord::Base
       false
     end
   end
+
+  def controlled_keywords
+    keywords=self.owned_keywords
+    keywords.collect do |k|
+      rs=Resource.scoped_by_keywords(k)
+      owners=rs.map do |r|
+        r.owner
+      end
+      top_keywords_owner=owners.find(:order => "value DESC,username").first
+      if top_keywords_owner==self
+        k
+      else
+        nil
+      end
+    end
+  end
 end
