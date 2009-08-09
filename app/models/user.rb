@@ -48,7 +48,7 @@ class User < ActiveRecord::Base
 
   def owned_keywords
     resources=self.link_url_resources
-    resources.map do |r|
+    resources.collect do |r|
       r.keywords
     end
   end
@@ -92,16 +92,13 @@ class User < ActiveRecord::Base
 
   def controlled_keywords
     keywords=self.owned_keywords
-    keywords.collect do |k|
+    ks=keywords.map do |k|
       rs=Resource.scoped_by_keywords(k)
-      owners=rs.map do |r|
-        r.owner
-      end
-      top_keywords_owner=owners.find(:order => "value DESC,username").first
+      top_keywords_owner=rs.by_owner_value.first.owner
       if top_keywords_owner==self
         k
       else
-        nil
+        "nil"
       end
     end
   end

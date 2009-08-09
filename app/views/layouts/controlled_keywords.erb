@@ -35,16 +35,6 @@
                 </span>
               <% end %>
             </p>
-            <h2>
-              <%= "#{@user.nick_name}关注的关键字：" %>
-            </h2>
-            <p>
-              <% for keyword in @keywords  %>
-                <span>
-                  <%= link_to "#{keyword}","/keyword_pages/#{KeywordPage.find_by_keyword(keyword).id}",:popup => true %>
-                </span>
-              <% end %>
-            </p>
           </div>
           <div id="sidebar_bottom"></div>
         </div>

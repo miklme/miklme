@@ -1,16 +1,21 @@
 body { margin:114px 0 0 0; line-height:16px; font-family:微软雅黑,新宋体,华文宋体,sans-serif; background: url(../images/body_top_bckg.jpg) no-repeat center top #171c20; color:#bed7e6; font-size:14px;
 }
-a { color:#fefefe;text-decoration:none;
-    font-weight: bold;
+a { color:#018BC1;
 }
 strong {color :#fefefe;
-    font-weight: normal;
+        font-weight: normal;
 }
 a:hover {
-    background-color: #F26513;
+    text-decoration:none;
+    color:white
 }
+#sidebar a {color:white;
+            font-weight: bold;
+            text-decoration:none;
+}
+#sidebar a:hover{background-color:#F26513}
 #header {}
-#logo { padding:30px 0 120px 0;color:#fff; text-align:center;}
+#logo { margin:auto;padding:30px 0 120px 0;color:#fff; text-align:center;width:930px;}
 #logo a{ color:#fff; text-decoration:none; font-weight:bold; font-size:24px; text-transform:uppercase; }
 #menu {color:#fff; text-align:center; margin-bottom:62px;}
 #menu ul {text-align:center;list-style:none; padding:0;}
@@ -27,7 +32,7 @@ a:hover {
 #sidebar_text p { margin:5px 0 5px 0;}
 #sidebar_bottom { width:227px; height:57px; background:url(../images/sidebar_bottom.jpg) no-repeat;}
 #sidebar h2 { font-size:13px; text-transform:uppercase; color:#fff; margin:20px 0 0 0; padding:0; background:none;
-    font-weight: normal;
+              font-weight: normal;
 }
 h1 {margin:30px 0 0 0; padding:5px 0 7px 45px; text-transform:uppercase; font-size:24px; color:#fff; background:url(../images/h1_bckg.jpg) no-repeat;}
 

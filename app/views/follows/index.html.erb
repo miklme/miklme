@@ -5,7 +5,7 @@
   <span><%= link_to "删除这个好友",user_be_follow_path(r,r.be_follows.find_by_follower_id(@user.id)),:method => :delete,:confirm => "确定删除这个好友？" %></span>
 <% end %>
 
-<h1>我感兴趣的陌生用户：</h1>
+  <h1><%= "#{@user.nick_name}" %>感兴趣的陌生用户：</h1>
 <span><% for r in @interested_people %>
   <%= link_to "#{r.nick_name}",user_path(r) %></span>
   <span><%= "价值点数：#{r.value}" %></span>

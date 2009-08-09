@@ -4,6 +4,7 @@ class LinkUrlResourcesController < ApplicationController
   layout "resources",:except => :new
   def new
     @link_url_resource=@user.link_url_resources.build
+    render :layout => "comments"
   end
 
   def show

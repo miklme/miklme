@@ -1,19 +1,25 @@
-<div id="text">
-  <div id="new_resource">
-    <h1><%= @variable_title %></h1>
-    <h2>我们可以这样开始：</h2>
-    <ul>
-      <li>
-        分享一个链接，可以是自己的博客文章地址，相册，或视频，也可以是随便的什么。
-        <%= link_to "新建>>>",new_user_link_url_resource_path(current_user),:popup => ['新的分享', 'height=400,width=600']%>
-      </li>
-      <li>
-        呓语，少于139字。<strong>请不要包含链接,</strong>直接写在下面：
-        <%= render :partial => "twitter_resources/form",:locals => { :user => @user,:twitter_resource => @twitter_resource }  %>
-      </li>
-    </ul>
-    <p>
-      <strong>形式平平无奇。不过请先尝试。</strong>
-    </p>
+<% if current_user==@user %>
+  <div id="text">
+    <div id="new_resource">
+      <h1><%= @variable_title %></h1>
+      <h2>我们可以这样开始：</h2>
+      <ul>
+        <li>
+          分享一个链接，可以是自己的博客文章地址，相册，或视频，也可以是随便的什么。
+          <%= link_to "新建>>>",new_user_link_url_resource_path(current_user),:popup => ['新的分享', 'height=250,width=580']%>
+        </li>
+        <li>
+          呓语，少于139字。<strong>请不要包含链接,</strong>直接写在下面：
+          <%= render :partial => "twitter_resources/form",:locals => { :user => @user,:twitter_resource => @twitter_resource }  %>
+        </li>
+      </ul>
+      <p>
+        <strong>形式平平无奇。不过请先尝试。</strong>
+      </p>
+    </div>
   </div>
-</div>
+<% else %>
+  <div id="text">
+    <%= render @resources %>
+  </div>
+<% end %>

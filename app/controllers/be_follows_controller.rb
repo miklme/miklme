@@ -41,6 +41,8 @@ class BeFollowsController < ApplicationController
     @be_follow.follower=current_user
     respond_to do |format|
       if @be_follow.save
+        @user.value=+3
+        @user.save
         flash[:notice] = '成功关注该用户，之后你会自动获得该用户的一些信息'
         format.html { redirect_to :back }
         format.xml  { render :xml => @be_follow, :status => :created, :location => @be_follow }
@@ -73,6 +75,7 @@ class BeFollowsController < ApplicationController
   def destroy
     @be_follow = BeFollow.find(params[:id])
     @be_follow.destroy
+    @be_follow.user.value=-2
     respond_to do |format|
       format.html { redirect_to(user_follows_path(current_user)) }
       format.xml  { head :ok }

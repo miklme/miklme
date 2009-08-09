@@ -1,7 +1,7 @@
 <% if current_user==@user %>
   <% if @not_authority_link_url_resources.blank? %>
     <p>你暂时还没有分享任何链接。</p>
-    <p><%= link_to "分享新链接>>>",new_user_link_url_resource_path(current_user),:popup => ["分享新链接", 'height=300,width=600'] %></p>
+    <p><%= link_to "分享新链接>>>",new_user_link_url_resource_path(current_user),:popup => ["分享新链接", 'height=200,width=580'] %></p>
   <% else %>
     <ol>
       <%= render :partial => "link_url_resource",:collection => @not_authority_link_url_resources%>
