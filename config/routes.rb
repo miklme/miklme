@@ -9,7 +9,8 @@ ActionController::Routing::Routes.draw do |map|
     user.resources :resources
     user.resources :controlled_keywords
     user.resources :blog_resources
-    user.resources :twitter_resources
+    user.resources :twitter_resources,
+      :has_many => :replies
     user.resources :news
     user.resources :keywords
     user.resources :link_url_resources,

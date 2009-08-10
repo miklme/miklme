@@ -1,0 +1,8 @@
+<p><%= twitter_resource.keywords %></p>
+<p><%for reply in twitter_resource.replies %>
+    <%=h reply.content %>
+  <% end %></p>
+<p><% form_for([twitter_resource.owner,twitter_resource,@reply]) do |f| %></p>
+  <%= f.text_area :content %>
+  <%= f.submit %>
+<% end %>

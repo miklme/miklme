@@ -4,6 +4,8 @@ class KeywordPagesController < ApplicationController
     @keyword_page=KeywordPage.find(params[:id])
     @resources=Resource.scoped_by_keywords(@keyword_page.keyword).by_owner_value
     @related_keywords=@keyword_page.related_keywords
+    @twitter_resource=Resource.find_by_keywords(@keyword_page.keyword)
+    @reply=@twitter_resource.replies.build
     respond_to do |format|
       format.html
       format.xml  { render :xml => @resources }

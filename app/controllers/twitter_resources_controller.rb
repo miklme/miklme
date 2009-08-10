@@ -19,6 +19,7 @@ class TwitterResourcesController < ApplicationController
       flash[:notice]='<p>你说了一些不知道是什么东西的东西。你可以选择回到Michael页面，搜索一下你刚才的胡言乱语试试。</p>
 <p></p>
         <p>或者开始另一段胡言乱语.</p>'
+      @twitter_resource.create_keyword_page(:keyword => @twitter_resource.keywords)
       redirect_to user_path(current_user)
     else
       render "resources/index"

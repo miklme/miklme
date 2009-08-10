@@ -20,13 +20,11 @@ class User < ActiveRecord::Base
   has_many :link_url_resources
   has_many :blog_resources
   has_many :twitter_resources
-  has_one :address
   has_one :portrait
   has_one :true_portrait
 
   accepts_nested_attributes_for :true_portrait, :allow_destroy => true
   accepts_nested_attributes_for :portrait, :allow_destroy => true
-  accepts_nested_attributes_for :important_days,:allow_destroy => true
 
   validates_uniqueness_of :username,:case_sensitive => false
   validates_format_of :username,:with => %r{^[a-zA-Z][a-zA-Z0-9_]{4,15}$},:message =>"请避免使用太过诡异的字符及汉字"
@@ -101,5 +99,6 @@ class User < ActiveRecord::Base
         "nil"
       end
     end
+    ks-["nil"]
   end
 end

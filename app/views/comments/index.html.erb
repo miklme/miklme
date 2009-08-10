@@ -19,7 +19,7 @@
           <div>
           <h1><%= link_to comment.owner.nick_name,user_path(comment.owner) %></h1>
           <span>价值点数：<%= comment.owner.value %></span>
-          <div id="descr"><%=comment.created_at.to_s(:db)  %></div>
+          <div id="descr"><%=comment.created_at.advance(:hours => 8).to_s(:db)  %></div>
           </div>
           <p><%= h comment.content  %></p>
         </div>

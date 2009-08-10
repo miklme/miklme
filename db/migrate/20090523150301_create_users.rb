@@ -13,6 +13,8 @@ class CreateUsers < ActiveRecord::Migration
       t.string :username,:null => false
       t.integer :mobile_phone
       t.string :email
+      t.string :province
+      t.string :city
       t.timestamps
 
     end
