@@ -6,7 +6,7 @@
   <div><%= render :partial => "shared/user_profile",:object => reply.owner%>
   </div>
 <% end %>
-<p><% form_for([current_user,@reply]) do |f| %></p>
+<p><% form_for([@twitter_resource.owner,@twitter_resource,@reply]) do |f| %></p>
   <%= f.error_messages %>
   <%= f.text_area :content,:size => "42x3" %>
   <%= f.submit %>

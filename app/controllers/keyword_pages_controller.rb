@@ -6,7 +6,8 @@ class KeywordPagesController < ApplicationController
     @related_keywords=@keyword_page.related_keywords
     @twitter_resource=TwitterResource.find_by_keywords(@keyword_page.keyword)
     if @twitter_resource.present?
-      @reply=current_user.replies.build
+      @reply=@twitter_resource.replies.build
+      @reply.owner=current_user
     end
     respond_to do |format|
       format.html

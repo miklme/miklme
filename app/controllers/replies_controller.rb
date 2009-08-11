@@ -3,8 +3,8 @@ class RepliesController < ApplicationController
   # POST /replies
   # POST /replies.xml
   def create
-    @reply = current_user.replies.build(params[:reply])
-    @reply.resource=@twitter_resource
+    @reply = @twitter_resource.replies.build(params[:reply])
+    @reply.owner=current_user
     respond_to do |format|
       if @reply.save
         u=User.find(params[:user_id])
