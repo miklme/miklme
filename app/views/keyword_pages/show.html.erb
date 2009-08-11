@@ -1,7 +1,6 @@
 <div id="logo">
   <% if logged_in? %>
-    <h1><%= link_to "Michael",new_user_searched_keyword_path(current_user) %></h1>
-    <h1><%= link_to ".Me",user_path(current_user) %></h1>
+    <h1><%= link_to "Mikl",new_user_searched_keyword_path(current_user) %><%= link_to ".Me",user_path(current_user) %></h1>
   <% end %>
 </div>
 <h3>相关关键字:</h3>
@@ -22,7 +21,7 @@
   </table>
 </div>
 
-<h2>Michael提供以下结果</h2>
+<h2>解  释。</h2>
 <div>
   <%if @twitter_resource.present? %>
     <%= render @twitter_resource %>

@@ -69,6 +69,7 @@ ActiveRecord::Schema.define(:version => 20090810141711) do
   create_table "replies", :force => true do |t|
     t.text     "content"
     t.integer  "resource_id"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

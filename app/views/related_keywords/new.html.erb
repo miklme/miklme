@@ -1,9 +1,6 @@
 <h1>新的相关关键字</h1>
 <p>
-  <% form_for([@keyword_page,@related_keyword]) do |f|%>
-    <%= f.error_messages %>
-    <%= text_field_with_auto_complete :resource,:keywords %>
-    <%= f.submit "完成" %>
-  <% end %>
+    <%= text_field_with_auto_complete :resource,:keywords,{}, {:method => :get, :frequency => 0, :after_update_element =>
+      "function(element,value){" + remote_function(:url => {:action => :create},:with=>"'keywords='+element.value") + "}" } %>
 </p>
 <%= link_to "取消",keyword_page_related_keywords_path(@keyword_page) %>

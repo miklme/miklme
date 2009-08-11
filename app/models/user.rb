@@ -11,6 +11,8 @@ class User < ActiveRecord::Base
   has_many :searched_keywords
   has_many :comments
   has_many :commented_resources,:through => :comments,:source => :resource
+  has_many :replies
+  has_many :replied_resources,:through => :replies,:source => :resource
   has_many :resources
   has_many :important_days
   has_many :be_follows

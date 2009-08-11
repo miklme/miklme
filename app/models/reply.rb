@@ -1,3 +1,6 @@
 class Reply < ActiveRecord::Base
-  belongs_to :twitter_resource
+  belongs_to :owner,:class_name => "User",:foreign_key => :user_id
+  belongs_to :resource
+
+  validates_presence_of :content
 end

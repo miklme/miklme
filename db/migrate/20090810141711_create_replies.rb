@@ -3,7 +3,7 @@ class CreateReplies < ActiveRecord::Migration
     create_table :replies do |t|
       t.text :content
       t.integer :resource_id
-
+      t.integer :user_id
       t.timestamps
     end
   end
