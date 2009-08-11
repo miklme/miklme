@@ -24,7 +24,9 @@
 
 <h2>Michael提供以下结果</h2>
 <div>
+  <%if @twitter_resource.present? %>
     <%= render @twitter_resource %>
+    <% end %>
     <ol>
       <%= render  @link_url_resources  %>
     </ol>

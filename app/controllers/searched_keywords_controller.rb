@@ -4,10 +4,14 @@ class SearchedKeywordsController < ApplicationController
 
   end
 
-  def notice
-    render :update do |page|
-      page.hide "body"
-    end
+  def notification
+    #    re=Regexp.new("^#{params[:resource][:keywords]}","i")
+    #    @resources=Resource.all do |r|
+    #      r.keywords.to_s.match re
+    #    end
+#    render :update do |page|
+#      page.replace_html  "notification","当您幸运的发现关键字没有出现在列表中时，就意味着您可以任意编辑该关键字的内容，从而被别人看见。"
+#    end
   end
 
   def create
