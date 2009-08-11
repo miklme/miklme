@@ -1,6 +1,5 @@
 <div id="logo">
-  <h1><%= link_to "Michael",new_user_searched_keyword_path(current_user) %></h1>
-  <h1><%= link_to ".Me",user_path(current_user) %></h1>
+  <h1><%= link_to "Michael",new_user_searched_keyword_path(current_user) %><%= link_to ".Me",user_path(current_user) %></h1>
 </div>
 <div id="main">
   <div id="content">
@@ -14,8 +13,5 @@
   </div>
 </div>
 <div>
-  <span>
-    你不能这样弄。
-  </span>
+  © 2009 Mikl.me, all rights reserved
 </div>
-<%= render 'shared/footer' %>

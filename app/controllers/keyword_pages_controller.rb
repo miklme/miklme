@@ -2,10 +2,12 @@ class KeywordPagesController < ApplicationController
   before_filter :load_user
   def show
     @keyword_page=KeywordPage.find(params[:id])
-    @resources=Resource.scoped_by_keywords(@keyword_page.keyword).by_owner_value
+    @link_url_resources=LinkUrlResource.scoped_by_keywords(@keyword_page.keyword).by_owner_value
     @related_keywords=@keyword_page.related_keywords
-    @twitter_resource=Resource.find_by_keywords(@keyword_page.keyword)
+    @twitter_resource=TwitterResource.scoped_by_keywords(@keyword_page.keyword)
+    if @twitter_resource.present?
     @reply=@twitter_resource.replies.build
+    end
     respond_to do |format|
       format.html
       format.xml  { render :xml => @resources }
