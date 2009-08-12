@@ -1,0 +1,2 @@
+module RepliedCommentsHelper
+end

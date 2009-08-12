@@ -199,7 +199,9 @@ form {
 #footer .left, #footer .right {padding: 6px 12px;}
 #footer .right, #footer .right a {color: #AAA;}
 #footer .right a:hover {color: #666;}
-
+#replied_comments {
+    margin: 4em;
+}
 /* floats */
 #left {float: left;}
 #right {float: right;}

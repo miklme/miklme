@@ -5,7 +5,7 @@ class CreateComments < ActiveRecord::Migration
       t.integer :resource_id
       t.integer :user_id
       t.integer :rating,:default => 0
-      t.integer :comment_id
+      t.integer :parent_comment_id
 
       t.timestamps
     end

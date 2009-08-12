@@ -11,8 +11,6 @@ class TwitterResourcesController < ApplicationController
 
   def index
     @twitter_resources=@user.twitter_resources
-    @reply=@twitter_resource.replies.build
-    @reply.owner=current_user
   end
 
   def create

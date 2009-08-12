@@ -3,8 +3,9 @@ class CommentsController < ApplicationController
 
   # GET /comments
   # GET /comments.xml
+  
   def index
-    @comments = @resource.comments.by_owner_value
+    @comments = @resource.comments.parent_comments.by_owner_value
     @comment=@resource.comments.build
     respond_to do |format|
       format.html # index.html.erb
