@@ -1,3 +1,4 @@
+<li>
 <h3><%= twitter_resource.keywords %></h3>
 <div><%= render :partial => "shared/user_profile",:object => twitter_resource.owner %>
 </div>
@@ -6,8 +7,9 @@
   <div><%= render :partial => "shared/user_profile",:object => reply.owner%>
   </div>
 <% end %>
-<p><% form_for([@twitter_resource.owner,@twitter_resource,@reply]) do |f| %></p>
+<p><% form_for([twitter_resource.owner,twitter_resource,@reply]) do |f| %></p>
   <%= f.error_messages %>
   <%= f.text_area :content,:size => "42x3" %>
   <%= f.submit %>
 <% end %>
+</li>

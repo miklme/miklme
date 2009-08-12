@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(:version => 20090810141711) do
     t.integer  "resource_id"
     t.integer  "user_id"
     t.integer  "rating",      :default => 0
+    t.integer  "comment_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

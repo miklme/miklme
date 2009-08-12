@@ -1,7 +1,4 @@
 <ul>
-  <% for t in @twitter_resources %>
-    <li> <%= t.keywords %>
-    </li>
-  <% end %>
+  <%= render :partial => "twitter_resource",:collection => @twitter_resources %>
 </ul>
 <span class="right"><%= link_to "<<<返回",user_path(@user) %></span>

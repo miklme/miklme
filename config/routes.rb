@@ -9,14 +9,20 @@ ActionController::Routing::Routes.draw do |map|
     user.resources :resources
     user.resources :controlled_keywords
     user.resources :blog_resources
-    user.resources :twitter_resources,
-      :has_many => :replies
+    user.resources :twitter_resources do |twitter_resource|
+      twitter_resource.resources :replies do |reply|
+        reply.resources :replied_replies
+      end
+    end
     user.resources :news
     user.resources :keywords
     user.resources :link_url_resources,
       :member => {:add_value =>:post,:minus_value => :post },
-      :has_many => :comments,
-      :collection => {:authority => :get,:not_authority => :get}
+      :collection => {:authority => :get,:not_authority => :get} do |link_url_resource|
+      link_url_resource.resources :comments do |comment|
+        comment.resources :replied_comments
+      end
+    end
   end
   map.resource :session
   map.resources :keyword_pages do |keyword_page|
