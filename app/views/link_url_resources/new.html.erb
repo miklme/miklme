@@ -1,7 +1,8 @@
-<div id="new_resource">
+<div id="container">
+  <div id="main">
   <% form_for [@user,@link_url_resource] do |f|%>
     <%= f.error_messages %>
-    <table>
+    <table cellspacing="5">
       <tr><td><%= f.label :link_url,"链接地址*" %></td><td><%= f.text_field :link_url %></td></tr>
       <tr><td><%= f.label :description,"一句简单的描述，请随意*：" %></td><td><%= f.text_field :description%></td></tr>
       <tr><td><%= f.label :form,"请指定目标链接所包含主体内容的类型*：" %></td><td><%= f.select :form,%w{ 文字、文档 视频 图片  音频  }%></td></tr>
@@ -10,4 +11,5 @@
     </table>
     <p><%= f.submit "完成" %></p>
   <% end %>
+</div>
 </div>

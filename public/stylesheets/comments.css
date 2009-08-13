@@ -23,8 +23,6 @@ input {
     font: normal 1.1em "Lucida Sans Unicode",sans-serif;
 }
 p,cite,code,ul {
-    font-size: 1.2em;
-    padding-bottom: 1.2em;
 }
 h1 {
     font-size: 1.4em;
@@ -36,7 +34,6 @@ code {
     border-left: 6px solid #39F;
     color: #555;
     display: block;
-    font: normal 1.1em "Lucida Sans Unicode",serif;
     margin-bottom: 12px;
     padding: 8px 10px;
     white-space: pre;
@@ -45,7 +42,6 @@ cite {
     background: url(../images/quote.gif) no-repeat;
     color: #666;
     display: block;
-    font: normal 1.3em "Lucida Sans Unicode",serif;
     padding-left: 28px;
 }
 h1,h2,h3 {
@@ -66,6 +62,7 @@ h1,h2,h3 {
     width: 767px;
     border-bottom: 1px solid #DDD;
 }
+
 #header {
     background: url(../images/header.gif) repeat-x;
 }
@@ -73,9 +70,7 @@ h1,h2,h3 {
 /* title */
 #title h1 {
     color: #FFF;
-    font: normal 3em Verdana,sans-serif;
-    height: 150px;
-    line-height: 150px;
+    height: 30px;
     margin-bottom: 8px;
     text-align: center;
 }
@@ -104,6 +99,11 @@ h1,h2,h3 {
 #main {
     clear: both;
     padding: 8px 18px;
+}
+#main2 {
+    clear: both;
+    padding: 8px 18px;
+    text-align:center
 }
 
 /* main left */
@@ -150,14 +150,18 @@ h1,h2,h3 {
     float: left;
     width: 610px;
 }
+#content2{
+    margin:auto;
+    width:620px;
+}
 #content .item {
     padding: 6px 12px;
-    border: 1px solid #EEE;
+    border: 1px solid #d3d3d3;
     background: #FFF;
     margin-bottom: 8px;
 }
 #content .descr {
-    color: #333;
+    color: #6f6f6f;
     margin-bottom: 6px;
 }
 #content li {
@@ -194,13 +198,8 @@ form {
     color: #36C;
     text-decoration: none;
 }
-#footer a:hover {
-    color: #06F;
-    text-decoration: underline;
-}
+#footer a:hover{color:white}
 #footer .left, #footer .right {padding: 6px 12px;}
-#footer .right, #footer .right a {color: #AAA;}
-#footer .right a:hover {color: #666;}
 #replied_comments {
 }
 /* floats */

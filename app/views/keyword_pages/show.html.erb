@@ -1,33 +1,40 @@
-<div id="logo">
-  <% if logged_in? %>
-    <h1><%= link_to "Mikl",new_user_searched_keyword_path(current_user) %><%= link_to ".Me",user_path(current_user) %></h1>
-  <% end %>
-</div>
-<h3>相关关键字:</h3>
-<div>
-  <table>
-    <tbody>
-      <tr>
-        <% if not @related_keywords.blank? %>
-          <% for related_keyword in @related_keywords %>
-            <td>
-              <%= link_to related_keyword.name,"/keyword_pages/#{KeywordPage.find_by_keyword(related_keyword.name).id}",:popup => true %>
-            </td>
-          <% end %>
-        <% end %>
-      </tr>
-    </tbody>
-    <%=link_to "修改相关关键字",keyword_page_related_keywords_path(@keyword_page),:popup => ['修改相关关键字', 'height=300,width=600'] %>
-  </table>
-</div>
+<div id="container">
+  <div id="main2">
+    <div id="header">
+      <div id="title">
+        <h1><%= link_to "Mikl",new_user_searched_keyword_path(current_user) %><%= link_to ".Me",user_path(current_user) %></h1>
+      </div>
+    </div>
+    <div id="content2">
+      <h3>相关关键字:</h3>
+      <table>
+        <tbody>
+          <tr>
+            <% if not @related_keywords.blank? %>
+              <% for related_keyword in @related_keywords %>
+                <td>
+                  <%= link_to related_keyword.name,"/keyword_pages/#{KeywordPage.find_by_keyword(related_keyword.name).id}",:popup => true %>
+                </td>
+              <% end %>
+            <% end %>
+          </tr>
+        </tbody>
+        <%=link_to "修改相关关键字",keyword_page_related_keywords_path(@keyword_page),:popup => ['修改相关关键字', 'height=300,width=600'] %>
+      </table>
 
-<h2>解  释。</h2>
-<div>
-  <%if @twitter_resource.present? %>
-    <%= render @twitter_resource %>
-    <% end %>
-    <ol>
-      <%= render  @link_url_resources  %>
-    </ol>
+      <h3>解  释。</h3>
+      <%if @twitter_resource.present? %>
+        <%= render @twitter_resource %>
+      <% end %>
+      <ol>
+        <%= render  @link_url_resources  %>
+      </ol>
+    </div>
+    <div id="clearer"></div>
+
+  </div>
+</div>
+<div id="footer">
+  <%= render :partial => "shared/footer" %>
 </div>
 
