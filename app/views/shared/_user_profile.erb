@@ -1,14 +1,16 @@
-  <% if current_user.regard_real_friend?(user_profile)%>
-    <span><%= link_to user_profile.name,user_path(user_profile)%></span><span class="nick_name"><%= "（#{user_profile.nick_name}）" %></span>
-    <em>(我的真实朋友)</em>
-    <span><%= "价值点数：#{user_profile.value}" %></span>
-  <% elsif current_user.interested_in?(user_profile)  %>
-    <span class="nick_name"><%= link_to user_profile.nick_name,user_path(user_profile) %></span>
-    <em>（我已关注）</em>
-    <span><%= "价值点数：#{user_profile.value}" %></span>
-    <% elsif user_profile==current_user%>
-    <em>我自己</em>
-  <% else %>
+<% if current_user.regard_real_friend?(user_profile)%>
+  <span><%= link_to user_profile.name,user_path(user_profile)%></span><span class="nick_name"><%= "（#{user_profile.nick_name}）" %></span>
+  <em>(我的真实朋友)</em>
+  <span><%= "价值点数：#{user_profile.value}" %></span>
+<% elsif current_user.interested_in?(user_profile)  %>
+  <span class="nick_name"><%= link_to user_profile.nick_name,user_path(user_profile) %></span>
+  <em>（我已关注）</em>
+  <span><%= "价值点数：#{user_profile.value}" %></span>
+<% elsif user_profile==current_user%>
+  <span class="nick_name"><%= link_to user_profile.nick_name,user_path(user_profile) %></span>
+  <em>(我自己)</em>
+  <span><%= "价值点数：#{user_profile.value}" %></span>
+<% else %>
   <span class="nick_name"><%= link_to user_profile.nick_name ,user_path(user_profile)%></span>
   <span><%= "价值点数：#{user_profile.value}" %></span>
 <% end %>
