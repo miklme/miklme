@@ -4,6 +4,7 @@ class CreateReplies < ActiveRecord::Migration
       t.text :content
       t.integer :resource_id
       t.integer :user_id
+      
       t.timestamps
     end
   end

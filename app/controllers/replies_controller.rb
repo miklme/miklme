@@ -2,6 +2,10 @@ class RepliesController < ApplicationController
   before_filter :find_user_and_resource
   # POST /replies
   # POST /replies.xml
+  def new
+    @reply=@twitter_resource.replies.build
+  end
+
   def create
     @reply = @twitter_resource.replies.build(params[:reply])
     @reply.owner=current_user

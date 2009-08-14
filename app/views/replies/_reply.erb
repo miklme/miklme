@@ -1,0 +1,11 @@
+<table class="item">
+  <tr>
+    <td width="60px">
+      <%= render :partial => "shared/user_profile",:object => reply.owner %>
+    </td>
+    <td width="520px">
+      <div class="descr"><%=reply.created_at.advance(:hours => 8).to_s(:db)  %></div>
+      <p><%= reply.content %></p>
+    </td>
+  </tr>
+</table>

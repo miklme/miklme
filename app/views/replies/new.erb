@@ -1,0 +1,9 @@
+<% form_for([@twitter_resource.owner,@twitter_resource,@reply]) do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.text_area :content %>
+  </p>
+  <p>
+    <%= f.submit '就这样' %>
+  </p>
+<% end %>

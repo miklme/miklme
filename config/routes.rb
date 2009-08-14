@@ -10,9 +10,7 @@ ActionController::Routing::Routes.draw do |map|
     user.resources :controlled_keywords
     user.resources :blog_resources
     user.resources :twitter_resources do |twitter_resource|
-      twitter_resource.resources :replies do |reply|
-        reply.resources :replied_replies
-      end
+      twitter_resource.resources :replies
     end
     user.resources :news
     user.resources :keywords

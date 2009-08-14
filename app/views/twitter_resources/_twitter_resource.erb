@@ -5,13 +5,11 @@
     </td>
     <td width="520px">
       <p><%= h twitter_resource.keywords  %></p>
-      <div class="descr"><%=comment.created_at.advance(:hours => 8).to_s(:db)  %></div>
-      <span><%= link_to "回应该用户",new_user_twitter_resource_reply_replied_reply_path(@user,@resource,comment),:popup => ['你的回应...', 'height=300,width=600']  %></span>
-      <div id="replied_comments">
-        <% for replied_reply in twitter_resource.replied_replies %>
-          <%= render :partial  => "comment",:object => replied_reply %>
-        <% end %>
+      <div class="descr"><%=twitter_resource.created_at.advance(:hours => 8).to_s(:db)  %></div>
+      <div id="replies">
+        <%= render :partial  => "replies/reply",:collection => twitter_resource.replies %>
       </div>
     </td>
   </tr>
-  <table>
+</table>
+<%= link_to "回复",new_user_twitter_resource_reply_path(twitter_resource.owner,@twitter_resource) %>

@@ -5,10 +5,6 @@ class KeywordPagesController < ApplicationController
     @link_url_resources=LinkUrlResource.scoped_by_keywords(@keyword_page.keyword).by_owner_value
     @related_keywords=@keyword_page.related_keywords
     @twitter_resource=TwitterResource.find_by_keywords(@keyword_page.keyword)
-    if @twitter_resource.present?
-      @reply=@twitter_resource.replies.build
-      @reply.owner=current_user
-    end
     respond_to do |format|
       format.html
       format.xml  { render :xml => @resources }
