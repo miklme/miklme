@@ -9,7 +9,12 @@
     <%= javascript_include_tag :defaults,:cache => true  %>
   </head>
   <body>
-    <%= @content_for_layout %>
-    <%= render "shared/footer" %>
+    <div id="container">
+      <div id="main">
+        <%= @content_for_layout %>
+        <%= render "shared/footer" %>
+        <div id="clearer"><span></span></div>
+      </div>
+    </div>
   </body>
 </html>

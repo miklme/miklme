@@ -5,7 +5,7 @@ class ResourcesController < ApplicationController
     if @user.link_url_resources.blank?
       @variable_title="革命"
     else
-      @variable_title="Web3.0..."
+      @variable_title="由你控制的搜索引擎"
     end
     @resources=@user.resources.find(:all,:order => "created_at DESC")
     @twitter_resource=@user.twitter_resources.build

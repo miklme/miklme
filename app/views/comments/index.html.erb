@@ -1,44 +1,40 @@
-<div id="container">
-  <div id="main">
-    <div id="header">
-      <div id="title">
-        <h1>
-          <%= link_to "Mikl",new_user_searched_keyword_path(current_user) %>
-          “<%=h truncate(@resource.description || @resource.keywords,:length => 38) %>”
-          <%= link_to ".Me",user_path(current_user) %>
-        </h1></div>
-    </div>
-    <div id="sidenav">
-      <h2>评论排序方式</h2>
-      <ul>
-        <li><%= link_to "用户价值点数" %></li>
-        <li><%= link_to "时间" %></li>
-      </ul>
-    </div>
-    <div id="content">
-      <% for comment in @comments %>
-        <%= render :partial => "comment",:object => comment %>
-      <% end %>
-      <table class="item" cellspacing="5">
-        <tr>
-          <td width="60">
-            <%= render :partial => "shared/user_profile",:object => current_user %>
-          </td>
-          <td width="520">
-            <% form_for([@user,@resource,@comment]) do |f| %>
-              <%= f.error_messages %>
-              <p>
-                <%= f.text_area :content,:size => "48x4"%>
-              </p>
-              <p>
-                <%= f.submit '就这样' %>
-              </p>
-            <% end %>
-          </td>
-        </tr>
-      </table>
-    </div>
-    <div id="clearer"><span></span></div>
+<div id="header">
+  <div id="title">
+    <h1>
+      <%= link_to "Mikl",new_user_searched_keyword_path(current_user) %>
+      “<%=h truncate(@resource.description || @resource.keywords,:length => 38) %>”
+      <%= link_to ".Me",user_path(current_user) %>
+    </h1>
   </div>
+</div>
+<div id="sidenav">
+  <h2>评论排序方式</h2>
+  <ul>
+    <li><%= link_to "用户价值点数" %></li>
+    <li><%= link_to "时间" %></li>
+  </ul>
+</div>
+<div id="content">
+  <% for comment in @comments %>
+    <%= render :partial => "comment",:object => comment %>
+  <% end %>
+  <table class="item" cellspacing="5">
+    <tr>
+      <td width="60">
+        <%= render :partial => "shared/user_profile",:object => current_user %>
+      </td>
+      <td width="520">
+        <% form_for([@user,@resource,@comment]) do |f| %>
+          <%= f.error_messages %>
+          <p>
+            <%= f.text_area :content,:size => "48x4"%>
+          </p>
+          <p>
+            <%= f.submit '就这样' %>
+          </p>
+        <% end %>
+      </td>
+    </tr>
+  </table>
 </div>
 

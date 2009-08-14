@@ -8,8 +8,7 @@ a {
     color: #36C;
 }
 a:hover {
-    background-color: #F26513;
-    color:white
+    text-decoration: none;
 }
 body {
     background: #EEE url(../images/bg.gif);
@@ -43,6 +42,7 @@ cite {
     color: #666;
     display: block;
     padding-left: 28px;
+    font-style: normal;
 }
 h1,h2,h3 {
     color: #367EA6;
@@ -167,6 +167,9 @@ h1,h2,h3 {
     margin-left: 18px;
 }
 
+.highlight {
+    color:#CC0033
+}
 /* search form */
 form {
     padding: 0 0 6px 8px;
@@ -187,7 +190,6 @@ form {
     background: #FFF;
     border: 1px solid #EEE;
     color: #666;
-    font-size: 1.1em;
     margin: 0 auto;
     text-align: center;
     width: 720px;
@@ -196,7 +198,6 @@ form {
     color: #36C;
     text-decoration: none;
 }
-#footer a:hover{color:white}
 #footer .left, #footer .right {padding: 6px 12px;}
 #replied_comments {
 }
