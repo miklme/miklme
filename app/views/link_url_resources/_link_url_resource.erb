@@ -1,4 +1,4 @@
-<li class="item">
+<li>
   <table rules="rows">
     <tbody>
       <tr>
@@ -15,22 +15,26 @@
             </div>
             <div><%= link_to "#{link_url_resource.comments.size}条回应>>>", user_link_url_resource_comments_path(link_url_resource.owner,link_url_resource),:popup => true %></div>
           </td>
-          <td>
+          <td width="100">
             <% if not link_url_resource.owner == current_user %>
-              <ul>
-                <li>
-                  <%=button_to "此条目对我有用",add_value_user_link_url_resource_path(link_url_resource.owner,link_url_resource) %>
-                  <span id="marked" style="display:none">该链接分享者提高了3点价值点数。</span>
-                </li>
-                <li>
-                  <%= button_to "此条目与关键字不符",minus_value_user_link_url_resource_path(link_url_resource.owner,link_url_resource) %>
-                </li>
-              </ul>
+              <%=button_to "此条目对我有用",add_value_user_link_url_resource_path(link_url_resource.owner,link_url_resource) %>
+              <span id="marked" style="display:none">该链接分享者提高了3点价值点数。</span>
+              <%= button_to "此条目与关键字不符",minus_value_user_link_url_resource_path(link_url_resource.owner,link_url_resource) %>
             <% end %>
           </td>
-          <td width="130"><%= render "shared/user_profile",:object => link_url_resource.owner %>
+          <td width="80"><%= render "shared/user_profile",:object => link_url_resource.owner %>
           </td>
         </tr>
       </tbody>
     </table>
   </li>
+  <table>
+    <ul>
+
+      <tr>
+      <li>
+      </li>
+      </tr>
+
+    </ul>
+  </table>

@@ -23,7 +23,7 @@ class LinkUrlResourcesController < ApplicationController
       @link_url_resource.create_keyword_page(:keyword => @link_url_resource.keywords)
       redirect_to user_path(current_user)
     else
-      render :action => :new
+      render :action => :new,:layout => "comments"
     end
   end
 

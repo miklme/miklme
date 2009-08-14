@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    vertical-align: top;
+    vertical-align: text-top;
 
 }
 a {
@@ -157,6 +157,7 @@ h1,h2,h3 {
     background: #FFF;
     margin-bottom: 8px;
 }
+
 #content .descr {
     color: #6f6f6f;
     margin-bottom: 6px;
