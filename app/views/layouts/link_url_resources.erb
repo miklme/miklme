@@ -4,10 +4,40 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-    <title>Resources: <%= controller.action_name %></title>
-        <%= javascript_include_tag :defaults,:cache => true   %>
+    <title>Comments: <%= controller.action_name %></title>
+    <%= stylesheet_link_tag "comments"  %>
+    <%= javascript_include_tag :defaults,:cache => true  %>
   </head>
   <body>
-    <%= yield %>
+    <div id="container">
+      <div id="main">
+        <div id="header">
+          <div id="title">
+            <h1><%= link_to "Mikl",new_user_searched_keyword_path(current_user) %><%=h truncate(@something,:length => 38) %><%= link_to ".Me",user_path(current_user) %></h1>
+          </div>
+        </div>
+        <div id="sidenav">
+          <h2>
+            筛选链接
+          </h2>
+          <ul>
+            <li>
+              <%= link_to_unless_current "全部", user_link_url_resources_path(@user)%>
+            </li>
+            <li>
+              <%= link_to_unless_current "#{@user.nick_name}的原创(#{@user.link_url_resources.scoped_by_authority(true).in_one_day.count}新)" ,authority_user_link_url_resources_path(@user)%>
+            </li>
+            <li>
+              <%= link_to_unless_current "#{@user.nick_name}的转载(#{@user.link_url_resources.scoped_by_authority(false).in_one_day.count}新)",not_authority_user_link_url_resources_path(@user) %>
+            </li>
+          </ul>
+        </div>
+        <div id="content">
+        <%= @content_for_layout %>
+        </div>
+        <div id="clearer"><span></span></div>
+      </div>
+    </div>
+    <%= render "shared/footer" %>
   </body>
 </html>

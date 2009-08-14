@@ -1,50 +1,53 @@
-<div id="container">
-  <div id="main">
-    <div id="header">
-      <div id="title">
-        <h1><%= link_to "Mikl",new_user_searched_keyword_path(current_user) %><%= link_to ".Me",user_path(current_user) %></h1>
-      </div>
-    </div>
-    <div id="content">
-      <% if current_user.controlled_keywords.include?(@keyword_page.keyword).present? %>
-      <div class="highlight">该关键字的第一个排位是你分享的资源，因此，你可以：</div>
-      <ul>
-        <li>
-        <em><%=link_to "修改相关关键字",keyword_page_related_keywords_path(@keyword_page),:popup => ['修改相关关键字', 'height=300,width=600'] %>
-      </em>
-        </li>
-        <li>
-      <em>在所有有关该关键字的讨论页面中用红字发表意见</em>
-        </li>
-        <li>
-          获得更多关注，提高价值点数，获得更靠前的排位。
-        </li>
-      </ul>
-      <% end %>
-      <h3>相关关键字:</h3>
-      <div class="item">
-        <% if not @related_keywords.blank? %>
-          <% for related_keyword in @related_keywords %>
-            <span>
-              <%= link_to related_keyword.name,"/keyword_pages/#{KeywordPage.find_by_keyword(related_keyword.name).id}",:popup => true %>
-            </span>
-          <% end %>
-        <% end %>
-      </div>
-
-      <%if @twitter_resource.present? %>
-        <p>以下为 <%= @twitter_resource.owner.nick_name %>的呓语。</p>
-        <%= render @twitter_resource %>
-      <% end %>
-      <ol>
-        <%= render  @link_url_resources  %>
-      </ol>
-    </div>
-    <div id="clearer"></div>
-
+<div id="header">
+  <div id="title">
+    <h1><%= link_to "Mikl",new_user_searched_keyword_path(current_user) %><%= @keyword_page.keyword %>的搜索结果<%= link_to ".Me",user_path(current_user) %></h1>
   </div>
 </div>
-<div id="footer">
-  <%= render :partial => "shared/footer" %>
+<div id="sidenav">
+  <h2>
+    选择
+  </h2>
+  <ul>
+    <li>
+      <%= link_to_unless_current "name"%>
+    </li>
+  </ul>
 </div>
+<div id="content">
+  <% if current_user.controlled_keywords.include?(@keyword_page.keyword).present? %>
+    <div class="highlight">该关键字的第一个排位是你分享的资源，因此，你可以：</div>
+    <ul>
+      <li>
+        <em><%=link_to "修改相关关键字",keyword_page_related_keywords_path(@keyword_page),:popup => ['修改相关关键字', 'height=300,width=600'] %>
+        </em>
+      </li>
+      <li>
+        <em>在所有有关该关键字的讨论页面中用红字发表意见</em>
+      </li>
+      <li>
+        获得更多关注，提高价值点数，获得更靠前的排位。
+      </li>
+    </ul>
+  <% end %>
+  <h3>相关关键字:</h3>
+  <div class="item">
+    <% if not @related_keywords.blank? %>
+      <% for related_keyword in @related_keywords %>
+        <span>
+          <%= link_to related_keyword.name,"/keyword_pages/#{KeywordPage.find_by_keyword(related_keyword.name).id}",:popup => true %>
+        </span>
+      <% end %>
+    <% end %>
+  </div>
+
+  <%if @twitter_resource.present? %>
+    <p>以下为 <%= @twitter_resource.owner.nick_name %>的呓语。</p>
+    <%= render @twitter_resource %>
+  <% end %>
+  <ol>
+    <%= render  @link_url_resources  %>
+  </ol>
+</div>
+
+
 

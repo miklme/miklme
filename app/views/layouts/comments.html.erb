@@ -11,6 +11,11 @@
   <body>
     <div id="container">
       <div id="main">
+        <div id="header">
+          <div id="title">
+            <h1><%= link_to "Mikl",new_user_searched_keyword_path(current_user) %><%=h truncate(@something,:length => 38) %><%= link_to ".Me",user_path(current_user) %></h1>
+          </div>
+        </div>
         <%= @content_for_layout %>
         <div id="clearer"><span></span></div>
       </div>

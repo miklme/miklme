@@ -19,9 +19,9 @@
         <div id="sidebar">
           <div id="sidebar_top"></div>
           <div id="sidebar_text">
-            <h2><%= link_to_unless_current "#{@user.nick_name}的原创(#{@user.link_url_resources.scoped_by_authority(true).in_one_day.count}新)" ,authority_user_link_url_resources_path(@user)%></h2>
+            <h2><%= link_to_unless_current "#{@user.nick_name}的原创(#{@user.link_url_resources.scoped_by_authority(true).in_one_day.count}新)" ,authority_user_link_url_resources_path(@userp%></h2>
             <h2><%= link_to_unless_current "#{@user.nick_name}的转载(#{@user.link_url_resources.scoped_by_authority(false).in_one_day.count}新)",not_authority_user_link_url_resources_path(@user) %></h2>
-            <h2><%= link_to_unless_current "#{@user.nick_name}的呓语(#{@user.twitter_resources.in_one_day.count}新)",user_twitter_resources_path(@user) %></h2>
+            <h2><%= link_to_unless_current "#{@user.nick_name}的生活(#{@user.twitter_resources.in_one_day.count}新)",user_twitter_resources_path(@user) %></h2>
           </div>
           <div id="sidebar_bottom"></div>
         </div>

@@ -1,5 +1,6 @@
 class TwitterResourcesController < ApplicationController
   before_filter :find_user
+  layout "comments"
   def new
   end
 

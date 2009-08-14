@@ -9,6 +9,15 @@
     <%= stylesheet_link_tag "comments"  %>
   </head>
   <body>
-    <%= @content_for_layout %>
+    <div id="container">
+      <div id="main">
+        <%= @content_for_layout %>
+        <div id="clearer"></div>
+      </div>
+    </div>
+    <div id="footer">
+      <%= render :partial => "shared/footer" %>
+    </div>
+
   </body>
 </html>
