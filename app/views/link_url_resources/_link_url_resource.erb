@@ -2,7 +2,7 @@
   <table rules="rows">
     <tbody>
       <tr>
-        <td>
+        <td width="520">
           <h3><%= link_to highlight(link_url_resource.description,link_url_resource.keywords),link_url_resource.link_url,:popup => true%></h3>
           <div>
             <% for comment in link_url_resource.comments.good_comments do%>
@@ -28,7 +28,7 @@
               </ul>
             <% end %>
           </td>
-          <td><%= render "shared/user_profile",:object => link_url_resource.owner %>
+          <td width="130"><%= render "shared/user_profile",:object => link_url_resource.owner %>
           </td>
         </tr>
       </tbody>
