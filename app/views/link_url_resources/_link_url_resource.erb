@@ -4,17 +4,16 @@
       <tr>
         <td width="500">
           <h3><%= link_to highlight(link_url_resource.description,link_url_resource.keywords),link_url_resource.link_url,:popup => true%></h3>
-          <div>
-            <% for comment in link_url_resource.comments.good_comments do%>
-                <p>
-                  <cite>
-                    <%= auto_link(highlight(truncate(comment.content,:length => 140),link_url_resource.keywords)) %>
-                  </cite>
-                </p>
-              <% end %>
-            </div>
-            <div><%= link_to "#{link_url_resource.comments.size}条回应>>>", user_link_url_resource_comments_path(link_url_resource.owner,link_url_resource),:popup => true %></div>
-          </td>
+          <% for comment in link_url_resource.comments.good_comments do%>
+              <p>
+                <%= auto_link(highlight(truncate(comment.content,:length => 140),link_url_resource.keywords)) %>
+              </p>
+            <% end %>
+            <ul class="sb_meta">
+              <li><cite><%= link_to "#{link_url_resource.comments.size}条回应>>>", user_link_url_resource_comments_path(link_url_resource.owner,link_url_resource),:popup => true %></cite></li>
+              <li><%= link_url_resource.link_url %></li>
+            </ul>
+            </td>
           <td width="100">
             <% if not link_url_resource.owner == current_user %>
               <%=button_to "此条目对我有用",add_value_user_link_url_resource_path(link_url_resource.owner,link_url_resource) %>

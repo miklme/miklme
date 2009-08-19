@@ -4,7 +4,7 @@ body {
 -moz-background-origin:padding;
 -x-system-font:none;
 background:#FFFFFF url(../images/j.png) repeat-x scroll 0 -83px;
-font-family:Arial,Helvetica,Sans-Serif;
+font-family:微软雅黑,新宋体,华文宋体,sans-serif;
 font-size:small;
 font-size-adjust:none;
 font-stretch:normal;
@@ -70,12 +70,14 @@ cite, .sb_cite {
 color:#568E1A;
 font-style:normal;
 word-wrap:break-word;
+text-decoration:underline
 }
+cite a:visited {color:#568E1A}
 .sb_count {
 color:#898994;
 font-size:93%;
 }
-.sb_meta, .sb_meta a, .sb_meta a:visited {
+.sb_meta{
 color:#A1A1A1;
 margin:0;
 }
@@ -658,34 +660,19 @@ color:#006DD4;
 font-size:13px;
 left:39px;
 }
-#sb_foot {
+#footer {
 border-top:1px solid #F1F1F1;
 clear:both;
-float:left;
 font-size:85%;
 width:100%;
-}
-#sb_foot, #sb_foot a {
 color:#898994;
+text-align:center
 }
-#sb_foot ul {
+#footer ul {
 display:block;
-float:right;
 list-style-type:none;
-margin:5px 10px;
+margin:auto;
 padding:0;
-}
-#sb_foot li {
-display:inline;
-}
-#sb_foot a, #sb_foot span {
-margin:0.4em;
-}
-#sb_foot a span {
-margin:0;
-}
-#sb_foot {
-font-size:small;
 }
 .sw_b input {
 border:0 none;
@@ -939,7 +926,7 @@ padding:0 2px 4px 10px;
 font-size:0.6em;
 padding:6px 2px;
 }
- 
+
 #content {
 margin:0 0 0 -15px;
 max-width:666px;
@@ -1011,10 +998,7 @@ clear:both;
 margin-left:2.34em;
 padding-top:0.3em;
 }
-.sb_meta a, .sb_meta a:visited, .sb_tsuf a, .sb_tsuf a:visited {
-color:#898994;
-text-decoration:underline;
-}
+
 .sb_dlsm a {
 color:#525051;
 }
