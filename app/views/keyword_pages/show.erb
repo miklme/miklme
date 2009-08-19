@@ -1,0 +1,28 @@
+<div style="background-image: url(../images/j2.jpg)" id="sw_im"><div class="sc_idk" id="sw_imL"><div id="sw_imL2"></div></div><div class="sw_mbrand sw_drk">必应</div><div class="sw_drk" id="sw_fbta">Beta</div></div><div id="sw_page"><div id="sw_width"><div id="sw_hdr"><form class="sw_box" id="sb_form"><a><span class="sw_logoT">Bing</span></a><div class="sw_bd"><div class="sw_b"><input class="sw_qbox" id="sb_form_q" name="q" title="请输入您的搜索条件" value="Michael" type="text"><input class="sw_qbtn" id="sb_form_go" name="go" tabindex="0" title="搜索" value="" type="submit"></div></div><input name="form" value="QBRE" type="hidden"><div class="sb_form_align"></div></form></div><div id="sw_content"><div><div id="sw_canvas"><div id="sw_aside"><div id="sw_nav"><ul><li class="sw_navA"><em class="sw_nav1">所有结果</em><span><span></span></span></li></ul></div><div id="sc_expPane"><div class="sw_menu" id="sw_rel">
+                <h2>相关搜索</h2>
+                <ul>
+                    <% if not @related_keywords.blank? %>
+                      <% for related_keyword in @related_keywords %>
+                        <li>
+                          <%= link_to related_keyword.name,"/keyword_pages/#{KeywordPage.find_by_keyword(related_keyword.name).id}",:popup => true %>
+                        </li>
+                      <% end %>
+                    <% end %>
+                </ul>
+              </div></div></div><div id="sw_main"><div id="content"><div id="results_area">
+                <div id="results_container">
+                  <div class="sb_ph"><h1>所有结果</h1><span class="sb_count" id="count">第 1-10 条结果，共 339,000,000 条</span>
+                    <span class="sc_bullet">·</span>
+                    <ul class="sc_hl1">
+                      <li><a>高级</a></li>
+                    </ul>
+                  </div>
+                  <div class="ansC"><div class="ans "><div class="ans2"><h2></div><a>提示：您是否想要在英汉字典中查询<strong>Michael</strong>的中文解释?</a></div></h2><div class="ans3"></div><!--a:NoCodeAnswer,DicEnToCN_OneLine--></div></div></div>
+              <div id="results">
+                <ul class="sb_results" id="wg0">
+                  <%if @twitter_resource.present? %>
+                    以下为 <%= @twitter_resource.owner.nick_name %>的呓语。
+                    <%= render @twitter_resource %>
+                  <% end %>
+                  <%= render  @link_url_resources  %>
+                  <li><div class="sb_tlst"><h3><a><strong>MICHAEL</strong> JACKSON -《迈克尔杰克逊MTV合集》(<strong>MICHAEL</strong> ...</a></h3></div><p>下面是用户共享的文件列表，安装电驴后，您可以点击这些文件名进行下载 [迈克尔杰克逊MTV合集].<strong>Michael</strong>_Jackson_-_[Bad][TVrip].mpg 详情 50.1MB [迈克尔杰克逊MTV合集].<strong>Michael</strong>_Jackson_-_[Beat_it][TVrip].mpg 详情 49.3MB [迈克尔杰克逊MTV合集 ...</p><ul class="sb_meta"><li><cite>www.verycd.com/topics/27717</cite></li><li>&nbsp;· <a>缓存页</a></li></ul></li></ul></div><div class="sb_pag"><h4>分页</h4><ul><li><a class="sb_pagS">1</a></li><li><%= link_to "下一页" %></li></ul></div></div></div><div id="sidebar"></div></div></div></div></div></div><div id="sb_foot"><ul id="sw_footL"><li><a>sdf</a> | </li><li><a></a> </li><li><%= link_to "a" %> | </li><li><a></a> | </li><li><a></a></li></ul></div></div></div>
