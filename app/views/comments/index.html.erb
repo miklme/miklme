@@ -1,12 +1,4 @@
 <%@something=@resource.description%>
-<div id="sidenav">
-  <h2>评论排序方式</h2>
-  <ul>
-    <li><%= link_to "用户价值点数" %></li>
-    <li><%= link_to "时间" %></li>
-  </ul>
-</div>
-<div id="content">
   <% for comment in @comments %>
     <%= render :partial => "comment",:object => comment %>
   <% end %>
@@ -28,5 +20,4 @@
       </td>
     </tr>
   </table>
-</div>
 

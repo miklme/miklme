@@ -1,74 +1,27 @@
-<div style="background-image: url(../images/j2.jpg); opacity: 1" id="sw_im"><div class="sc_idk" id="sw_imL"></div>
-  <div class="sw_mbrand sw_drk">Mikl</div>
-  <div class="sw_drk" id="sw_fbta">Beta</div>
-</div>
-<div id="sw_page">
-  <div id="sw_hdr">
-    <div class="sw_tb"></div>
-    <div class="sw_tbb"></div>
-    <div class="sw_box"><a class="sw_logo"></a>
-      <div class="sw_bd">
-        <div class="sw_b"> <%= text_field_with_auto_complete :resource, :keywords, {:onfocus => "resource_keywords_auto_completer.activate()"}, {:method => :get, :frequency => 0,:after_update_element =>
-              "function(element,value){" + remote_function(:url => {:controller => :searched_keywords,:action => :create},:with=>"'keywords='+element.value") + "}"} %>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div id="sw_content">
-    <style type="text/css">#sw_canvas{padding-left:195px}</style>
-    <style type="text/css">#results{max-width:590px}</style>
-    <div id="sw_canvas">
-
-      <div id="sw_aside">
-        <div id="sw_nav">
-          <ul>
-            <li>
-              <%= link_to "所有结果" %>
-            </li>
-            <li class="sw_navA"><em class="sw_nav1">所有结果</em></li>
-          </ul>
-        </div><div id="sc_expPane">
-          <div class="sw_menu" id="sw_rel">
-            <h2>相关搜索</h2>
-            <ul>
-              <% if not @related_keywords.blank? %>
-                <% for related_keyword in @related_keywords %>
-                  <li>
-                    <%= link_to highlight(related_keyword.name,@keyword_page.keyword),"/keyword_pages/#{KeywordPage.find_by_keyword(related_keyword.name).id}",:popup => true %>
-                  </li>
-                <% end %>
-              <% end %>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div id="content">
 <% if current_user.controlled_keywords.include?(@keyword_page.keyword).present? %>
-    <div><cite>恭喜！该关键字的第一个排位是你分享的资源</cite>，因此，你可以：</div>
-    <ul>
-      <li>
-        <em><%=link_to "修改相关关键字",keyword_page_related_keywords_path(@keyword_page),:popup => ['修改相关关键字', 'height=300,width=600'] %>
-        </em>
-      </li>
-      <li>
-        <em>在所有有关该关键字的讨论页面中用红字发表意见</em>
-      </li>
-      <li>
-        <em> 获得更多关注，提高价值点数，获得更靠前的排位。</em>
-      </li>
-    </ul>
-  <% end %>
-        <div class="sb_ph"><h1>所有结果</h1>
-          <span class="sb_count" id="count">共 394,000 条</span><span class="sc_bullet">·</span>高级</div>
-        <div id="results">
-          <ol class="sb_results" id="wg0">
-            <%if @twitter_resource.present? %>
-              以下为 <%= @twitter_resource.owner.nick_name %>的呓语。
-              <%= render @twitter_resource %>
-            <% end %>
-            <%= render  @link_url_resources  %>
-          </ol>
-        </div>
-        <div class="sb_pag"><ul><li><%= link_to "1" %></li><li><%= link_to "下一页" %></li></ul></div>
-      </div></div></div></div>
-<%= render :partial => "shared/footer" %>
+  <div><cite>恭喜！该关键字的第一个排位是你分享的资源</cite>，因此，你可以：</div>
+  <ul>
+    <li>
+      <em><%=link_to "修改相关关键字",keyword_page_related_keywords_path(@keyword_page),:popup => ['修改相关关键字', 'height=300,width=600'] %>
+      </em>
+    </li>
+    <li>
+      <em>在所有有关该关键字的讨论页面中用红字发表意见</em>
+    </li>
+    <li>
+      <em> 获得更多关注，提高价值点数，获得更靠前的排位。</em>
+    </li>
+  </ul>
+<% end %>
+<div class="sb_ph"><h1>所有结果</h1>
+  <span class="sb_count" id="count">共 394,000 条</span><span class="sc_bullet">·</span>高级</div>
+<div id="results">
+  <ol class="sb_results" id="wg0">
+    <%if @twitter_resource.present? %>
+      以下为 <%= @twitter_resource.owner.nick_name %>的呓语。
+      <%= render @twitter_resource %>
+    <% end %>
+    <%= render  @link_url_resources  %>
+  </ol>
+</div>
+<div class="sb_pag"><ul><li><%= link_to "1" %></li><li><%= link_to "下一页" %></li></ul></div>
