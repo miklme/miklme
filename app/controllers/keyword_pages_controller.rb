@@ -2,6 +2,7 @@ class KeywordPagesController < ApplicationController
   before_filter :load_user
   auto_complete_for :resource,:keywords
   def show
+        keyword_page2=KeywordPage.find_by_keyword(params[:keywords])
     @keyword_page=KeywordPage.find(params[:id])
     @link_url_resources=LinkUrlResource.scoped_by_keywords(@keyword_page.keyword).by_owner_value
     @related_keywords=@keyword_page.related_keywords

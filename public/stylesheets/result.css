@@ -147,7 +147,7 @@ div#sw_nav li a{
     color:#0033CC;
     font-style:normal;
     position:relative;
-    padding:4px 98px 4px 20px;
+    padding:4px 59px;
     background:#F3F3F3;
     font-weight:normal
 }
@@ -470,7 +470,7 @@ a.sb_pagP, a.sb_pagN {
     -moz-background-clip:border;
     -moz-background-inline-policy:continuous;
     -moz-background-origin:padding;
-    background:transparent url(/fd/s/a/j1.png) no-repeat scroll 0 -45px;
+    background:transparent url(../images/logo.png) no-repeat scroll 0 -45px;
     height:45px;
     margin:36px 0 0 20px;
     width:125px;
@@ -479,7 +479,7 @@ a.sb_pagP, a.sb_pagN {
     -moz-background-clip:border;
     -moz-background-inline-policy:continuous;
     -moz-background-origin:padding;
-    background:transparent url(/fd/s/a/j1.png) no-repeat scroll 0 0;
+    background:transparent url(../images/logo.png) no-repeat scroll 0 0;
     width:125px;
 }
 #sw_imL2, #sw_pLLogo2 {
