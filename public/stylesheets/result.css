@@ -70,8 +70,8 @@ cite, .sb_cite {
 color:#568E1A;
 font-style:normal;
 word-wrap:break-word;
-text-decoration:underline
 }
+cite a{text-decoration:underline}
 cite a:visited {color:#568E1A}
 .sb_count {
 color:#898994;

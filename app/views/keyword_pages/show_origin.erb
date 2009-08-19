@@ -14,21 +14,7 @@
   </ul>
 </div>
 <div id="content">
-  <% if current_user.controlled_keywords.include?(@keyword_page.keyword).present? %>
-    <div class="highlight">该关键字的第一个排位是你分享的资源，因此，你可以：</div>
-    <ul>
-      <li>
-        <em><%=link_to "修改相关关键字",keyword_page_related_keywords_path(@keyword_page),:popup => ['修改相关关键字', 'height=300,width=600'] %>
-        </em>
-      </li>
-      <li>
-        <em>在所有有关该关键字的讨论页面中用红字发表意见</em>
-      </li>
-      <li>
-        获得更多关注，提高价值点数，获得更靠前的排位。
-      </li>
-    </ul>
-  <% end %>
+  
   <h3>相关关键字:</h3>
   <div class="item">
     <% if not @related_keywords.blank? %>
