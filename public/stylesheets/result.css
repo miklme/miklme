@@ -1078,11 +1078,11 @@ position:absolute;
 #sb_form2 {
 margin-left:-10px;
 }
-.zh-CN strong {
+ strong {
 color:#CC0033;
 font-weight:normal;
 }
-.zh-CN cite strong {
+cite strong {
 color:#568E1A;
 font-weight:bold;
 }
