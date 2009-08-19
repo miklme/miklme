@@ -4,7 +4,7 @@ class Comment < ActiveRecord::Base
   has_many :replied_comments,:class_name => "Comment",:foreign_key => "parent_comment_id"
   belongs_to :parent_comment,:class_name => "Comment",:foreign_key => "parent_comment_id"
   named_scope :by_owner_value, :include => :owner,:order => 'users.value DESC'
-  named_scope :good_comments,:limit => 3,:include => :replied_comments,:order => 'replied_comments.count DESC'
+  named_scope :good_comments,:limit => 3, :include => :owner,:order => 'users.value DESC'
   named_scope :parent_comments,:conditions => "parent_comment_id is NULL"
   validates_presence_of :content
 end
