@@ -4,40 +4,62 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-    <title>Comments: <%= controller.action_name %></title>
-    <%= stylesheet_link_tag "comments"  %>
+    <title>Keywords: <%= controller.action_name %></title>
     <%= javascript_include_tag :defaults,:cache => true  %>
+    <%= stylesheet_link_tag "result"  %>
   </head>
   <body>
-    <div id="container">
-      <div id="main">
-        <div id="header">
-          <div id="title">
-            <h1><%= link_to "Mikl",new_user_searched_keyword_path(current_user) %><%=h truncate(@something,:length => 38) %><%= link_to ".Me",user_path(current_user) %></h1>
-          </div>
-        </div>
-        <div id="sidenav">
-          <h2>
-            筛选链接
-          </h2>
-          <ul>
-            <li>
-              <%= link_to_unless_current "全部", user_link_url_resources_path(@user)%>
-            </li>
-            <li>
-              <%= link_to_unless_current "#{@user.nick_name}的原创(#{@user.link_url_resources.scoped_by_authority(true).in_one_day.count}新)" ,authority_user_link_url_resources_path(@user)%>
-            </li>
-            <li>
-              <%= link_to_unless_current "#{@user.nick_name}的转载(#{@user.link_url_resources.scoped_by_authority(false).in_one_day.count}新)",not_authority_user_link_url_resources_path(@user) %>
-            </li>
-          </ul>
-        </div>
-        <div id="content">
-        <%= @content_for_layout %>
-        </div>
-        <div id="clearer"><span></span></div>
+    <div style="background-image: url(../images/j2.jpg); opacity: 1" id="sw_im"><div class="sc_idk" id="sw_imL"></div>
+      <div class="sw_mbrand sw_drk">Mikl<%= link_to ".Me",user_path(current_user) %></div>
+    </div>
+    <div id="sw_page">
+      <div id="sw_hdr">
+        <div class="sw_tb"></div>
+        <div class="sw_tbb"></div>
       </div>
     </div>
-    <%= render "shared/footer" %>
+    <div id="sw_content">
+      <div id="sw_canvas">
+        <div id="sw_aside">
+          <div id="sw_nav">
+            <h2>筛选链接</h2>
+            <ul>
+              <li >
+                <%= link_to_unless_current "全部", user_link_url_resources_path(@user)%>
+              </li>
+              <li>
+                <%= link_to_unless_current "原创内容(#{@user.link_url_resources.scoped_by_authority(true).in_one_day.count}新)" ,authority_user_link_url_resources_path(@user)%>
+              </li>
+              <li>
+                <%= link_to_unless_current "转载内容(#{@user.link_url_resources.scoped_by_authority(false).in_one_day.count}新)",not_authority_user_link_url_resources_path(@user) %>
+              </li>
+            </ul>
+          </div><div id="sc_expPane">
+            <div class="sw_menu" id="sw_rel">
+              <h2>相关搜索</h2>
+              <ul>
+                <% if not @related_keywords.blank? %>
+                  <% for related_keyword in @related_keywords %>
+                    <li>
+                      <%= link_to highlight(related_keyword.name,@keyword_page.keyword),"/keyword_pages/#{KeywordPage.find_by_keyword(related_keyword.name).id}",:popup => true %>
+                    </li>
+                  <% end %>
+                <% end %>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div id="content">
+          <div id="results">
+            <ul class="sb_results" id="wg0">
+              <%= @content_for_layout %>
+            </ul>
+          </div>
+        </div></div></div></div>
+    <%= render :partial => "shared/footer" %>
   </body>
 </html>
+
+
+
+

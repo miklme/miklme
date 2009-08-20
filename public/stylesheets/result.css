@@ -132,25 +132,27 @@ cite a:visited {color:#568E1A}
 }
 div#sw_nav ul, div#sw_nav li, #sw_nav a, #sw_nav em, #sw_nav span {
     width:170px;
+    margin:0px;
 }
-div#sw_nav li {
+div#sw_nav li{
     margin:0 0 1px;
     color:#FFFFFF;
     font-style:normal;
     font-weight:bold;
     position:relative;
-    background:#F9761D none repeat scroll 0 0;
+    background:#F9761D;
     text-align:center;
 }
 div#sw_nav li a{
-    margin:0 0 1px;
     color:#0033CC;
     font-style:normal;
-    position:relative;
-    padding:4px 59px;
     background:#F3F3F3;
-    font-weight:normal
+    font-weight:normal;
+    width:50px
 }
+#results{max-width:590px}
+#sw_canvas{padding-left:195px}
+
 #sw_nav a:hover {
     background-color:#E5E5E5;
 
@@ -163,8 +165,6 @@ div#sw_nav li a{
     vertical-align: text-top;
 
 }
-
-
 
 .sw_menu {
     -moz-background-clip:border;
