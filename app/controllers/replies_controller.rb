@@ -14,6 +14,11 @@ class RepliesController < ApplicationController
         u=User.find(params[:user_id])
         u.value=u.value+0.2
         u.save
+        n=@twitter_resource.owner.news.create
+        n.owner=@twitter_resource.owner
+        n.resource=@twitter_resource
+        n.news_type="twitter_resource_reply"
+        n.save
         format.html { redirect_to :back }
         format.xml  { render :xml => @reply, :status => :created, :location => @reply }
       else

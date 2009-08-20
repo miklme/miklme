@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   default_scope :order => 'value DESC'
   named_scope :by_value,:order => 'value DESC'
 
+  has_many :news
   has_many :searched_keywords
   has_many :comments
   has_many :commented_resources,:through => :comments,:source => :resource
@@ -90,6 +91,14 @@ class User < ActiveRecord::Base
     end
   end
 
+  def name_or_nick_name(user)
+    if user.regard_real_friend?(self)
+      self.name
+    else
+      self.nick_name
+    end
+  end
+  
   def controlled_keywords
     keywords=self.owned_keywords
     ks=keywords.map do |k|

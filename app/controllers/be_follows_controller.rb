@@ -43,6 +43,16 @@ class BeFollowsController < ApplicationController
       if @be_follow.save
         @user.value=+3
         @user.save
+        n=@user.news.create
+        n.owner=@user
+        if @be_follow.provide_name?
+          n.follower_name=current_user.name
+          n.news_type="friend_follow"
+        else
+          n.news_type="stranger_follow"
+          n.follower_name=current_user.nick_name
+        end
+        n.save
         flash[:notice] = '成功关注该用户，之后你会自动获得该用户的一些信息'
         format.html { redirect_to :back }
         format.xml  { render :xml => @be_follow, :status => :created, :location => @be_follow }

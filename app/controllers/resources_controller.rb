@@ -2,6 +2,7 @@ class ResourcesController < ApplicationController
   before_filter :load_user,:only => [:create,:destroy,:edit,:index,:show,:update]
   auto_complete_for :resource,:keywords
   def index
+    @news=current_user.news
     if @user.link_url_resources.blank?
       @variable_title="革命"
     else

@@ -25,7 +25,9 @@
           </div>
           <div id="sidebar_bottom"></div>
         </div>
-        <%= @content_for_layout %>
+        <div id="text">
+          <%= @content_for_layout %>
+        </div>
       </div>
       <%= render :partial => "shared/footer" %>
     </div>

@@ -4,7 +4,7 @@
   <strong><%= "价值点数：#{user_profile.value}" %></strong>
 <% elsif current_user.interested_in?(user_profile)  %>
   <span class="nick_name"><%= link_to user_profile.nick_name,user_path(user_profile) %></span>
-  <em>（我已关注）</em>
+  <em>（我关注的人）</em>
   <strong><%= "价值点数：#{user_profile.value}" %></strong>
 <% elsif user_profile==current_user%>
   <span class="nick_name"><%= link_to user_profile.nick_name,user_path(user_profile) %></span>

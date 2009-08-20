@@ -21,6 +21,11 @@ class TwitterResourcesController < ApplicationController
 <p></p>
         <p>或者开始另一段胡言乱语.</p>'
       @twitter_resource.create_keyword_page(:keyword => @twitter_resource.keywords)
+      n= current_user.news.create
+      n.owner=current_user
+      n.resource=@twitter_resource
+      n.news_type="twitter_resource"
+      n.save
       redirect_to user_path(current_user)
     else
       render "resources/index"

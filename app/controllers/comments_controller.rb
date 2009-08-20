@@ -39,8 +39,11 @@ class CommentsController < ApplicationController
         u=User.find(params[:user_id])
         u.value =u.value+params[:comment][:value].to_i
         u.save
-        format.html { redirect_to :back }
-        format.xml  { render :xml => @comment, :status => :created, :location => @comment }
+        n=@resource.owner.news.create
+        n.news_type="comment"
+        n.resource=@resource
+        n.save
+          redirect_to :back
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @comment.errors, :status => :unprocessable_entity }

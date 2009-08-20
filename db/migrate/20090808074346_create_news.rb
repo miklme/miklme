@@ -1,10 +1,11 @@
 class CreateNews < ActiveRecord::Migration
   def self.up
     create_table :news do |t|
-      t.integer :owner_id
-      t.integer :related_user_id
-      t.integer :related_resource_id
-      t.integer :related_comment_id
+      t.integer :user_id
+      t.integer :resource_id
+      t.integer :comment_id
+      t.string :news_type
+      t.string :follower_name
       t.timestamps
     end
   end

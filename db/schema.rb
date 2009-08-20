@@ -44,10 +44,11 @@ ActiveRecord::Schema.define(:version => 20090810141711) do
   end
 
   create_table "news", :force => true do |t|
-    t.integer  "owner_id"
-    t.integer  "related_user_id"
-    t.integer  "related_resource_id"
-    t.integer  "related_comment_id"
+    t.integer  "user_id"
+    t.integer  "resource_id"
+    t.integer  "comment_id"
+    t.string   "news_type"
+    t.string   "follower_name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -119,6 +120,8 @@ ActiveRecord::Schema.define(:version => 20090810141711) do
     t.string   "username",                                                                               :null => false
     t.integer  "mobile_phone"
     t.string   "email"
+    t.string   "province"
+    t.string   "city"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

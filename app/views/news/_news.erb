@@ -1,0 +1,32 @@
+<% if news.news_type="comment" %>
+  <%= news.owner.name_or_nick_name(current_user) %>的分享<%=news.resource.description %>（关键字为 <%= news.resource.keywords %>）被评论了 <%= news.resource.comments.count %>次，
+  <% if news.resource.comments.sum(&:rating)>=0 %>
+    价值点数+ <%= news.resource.comments.sum(&:rating) %>
+  <% else %>
+    价值点数减少了 <%= -news.resource.comments.sum(&:rating) %>(反响恶劣)
+  <% end %>
+<% elsif news.news_type="twitter_resource" %>
+  <%= news.owner.name_or_nick_name(current_user) %>说：
+  <cite><%= news.resource.content %></cite>
+<% elsif news.news_type="link_url_resource" %>
+  <%= link_to "#{news.owner.name_or_nick_name(current_user)}",user_path(news.resource.owner) -%>分享了
+  <% if news.authority? %>
+    <%= "原创" -%>
+  <% end %>
+  <% if news.resource.form=="视频" -%>
+    <%="视频" -%>
+  <% elsif news.resource.form=="音频" -%>
+    <%= "音乐" %>
+  <% elsif news.resource.form=="图片" %>
+    <%="图片" %>
+  <% elsif news.resource.form=="文字、文档" %>
+    <%="文章" %>
+  <% end %>
+  <%= link_to "#{news.resource.description}" %>
+<% elsif news.news_type="stranger_follow" %>
+  <%= news.owner.name_or_nick_name(current_user) %>被 <%= news.follower_name %>关注，价值点数+3。
+<% elsif news.news_type="friend_follow" %>
+  <%= news.owner.name_or_nick_name(current_user) %>被现实中的朋友 <%= news.follower_name %>找到并加为好友,，价值点数+3.
+  <% elsif news.news_type="twitter_resource_reply" %>
+    <%= news.owner.name_or_nick_name(current_user) %>的话 <%= news.resource.content %>被回复了 <%= news.resource.replies.count %>次,价值点数＋ <%= news.resource.replies.count*0.2 %>
+<%end  %>

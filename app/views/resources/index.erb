@@ -19,3 +19,7 @@
 <% else %>
   <%= render @resources %>
 <% end %>
+
+<% if @news.present? %>
+  <%= render @news %>
+  <% end %>
