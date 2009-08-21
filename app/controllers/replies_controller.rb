@@ -19,7 +19,7 @@ class RepliesController < ApplicationController
         n.resource=@twitter_resource
         n.news_type="twitter_resource_reply"
         n.save
-        format.html { redirect_to :back }
+        format.html { render :text => "回复成功，可以刷新页面试试。" }
         format.xml  { render :xml => @reply, :status => :created, :location => @reply }
       else
         format.html {  redirect_to :back }

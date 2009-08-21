@@ -5,6 +5,8 @@ class CommentsController < ApplicationController
   # GET /comments.xml
   
   def index
+    @keyword_page=KeywordPage.find_by_keyword(@resource.keywords)
+    @related_keywords=@keyword_page.related_keywords
     @comments = @resource.comments.parent_comments.by_owner_value
     @comment=@resource.comments.build
     respond_to do |format|
@@ -48,40 +50,40 @@ class CommentsController < ApplicationController
     end
   end
 
-# PUT /comments/1
-# PUT /comments/1.xml
-def update
-  @comment = Comment.find(params[:id])
+  # PUT /comments/1
+  # PUT /comments/1.xml
+  def update
+    @comment = Comment.find(params[:id])
 
-  respond_to do |format|
-    if @comment.update_attributes(params[:comment])
+    respond_to do |format|
+      if @comment.update_attributes(params[:comment])
 
-      flash[:notice] = 'Comment was successfully updated.'
-      format.html { redirect_to(@comment) }
-      format.xml  { head :ok }
-    else
-      format.html { render :action => "edit" }
-      format.xml  { render :xml => @comment.errors, :status => :unprocessable_entity }
+        flash[:notice] = 'Comment was successfully updated.'
+        format.html { redirect_to(@comment) }
+        format.xml  { head :ok }
+      else
+        format.html { render :action => "edit" }
+        format.xml  { render :xml => @comment.errors, :status => :unprocessable_entity }
+      end
     end
   end
-end
 
-# DELETE /comments/1
-# DELETE /comments/1.xml
-def destroy
-  @comment = Comment.find(params[:id])
-  @comment.destroy
+  # DELETE /comments/1
+  # DELETE /comments/1.xml
+  def destroy
+    @comment = Comment.find(params[:id])
+    @comment.destroy
 
-  respond_to do |format|
-    format.html { redirect_to(comments_url) }
-    format.xml  { head :ok }
+    respond_to do |format|
+      format.html { redirect_to(comments_url) }
+      format.xml  { head :ok }
+    end
   end
-end
 
-private
+  private
 
-def load_user_and_resource
-  @user=User.find(params[:user_id])
-  @resource=LinkUrlResource.find(params[:link_url_resource_id])
-end
+  def load_user_and_resource
+    @user=User.find(params[:user_id])
+    @resource=LinkUrlResource.find(params[:link_url_resource_id])
+  end
 end

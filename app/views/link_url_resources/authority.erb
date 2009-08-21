@@ -1,19 +1,4 @@
-<% if current_user==@user %>
-  <% if @authority_link_url_resources.blank? %>
-    <p>你暂时还没有分享任何原创内容。</p>
-    <p><%= link_to "分享新链接>>>",new_user_link_url_resource_path(current_user),:popup => ["分享新链接", 'height=300,width=600'] %></p>
-  <% else %>
-    <ol>
-      <%= render :partial => "link_url_resource",:collection => @authority_link_url_resources%>
-    </ol>
-  <% end %>
-<% else %>
-  <% if @authority_link_url_resources.blank? %>
-    <p><%= @user.nick_name %>暂时还没有分享任何原创内容。</p>
-  <% else %>
-    <ol>
-      <%= render :partial => "link_url_resources",:collection => @authority_link_url_resources%>
-    </ol>
-  <% end %>
-<% end %>
-<span class="right"><%= link_to "<<<返回",user_path(@user) %></span>
+
+<ol>
+  <%= render :partial => "link_url_resources",:collection => @authority_link_url_resources%>
+</ol>

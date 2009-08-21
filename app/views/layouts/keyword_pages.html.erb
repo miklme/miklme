@@ -25,7 +25,7 @@
         </div>
         <div class="sw_tbb"></div>
         <div class="sw_box">
-          <h2><%= link_to ".Me",user_path(current_user),:class => "sw_logo" %>
+          <h2><%= link_to "Mikl.Me",user_path(current_user),:class => "sw_logo"%>
           </h2>
           <div class="sw_bd">
             <%= text_field_with_auto_complete :resource, :keywords, {:onfocus => "resource_keywords_auto_completer.activate()"}, {:method => :get, :frequency => 0,:after_update_element =>
@@ -39,11 +39,12 @@
             <div id="sw_nav">
               <ul>
                 <li>
-                  <%= link_to "所有结果" %>
+                  <%= link_to "所有结果",keyword_page_path(@keyword_page) %>
                 </li>
-                <li><%= link_to "文字" %></li>
-                <li><%= link_to "视频" %></li>
-                <li><%= link_to "音乐" %></li>
+                <li><%= link_to_remote  "文字",:url => {:action => :show_text,:id => @keyword_page.id } %></li>
+                <li><%= link_to_remote "视频",:url => {:action => :show_film ,:id => @keyword_page.id }%></li>
+                <li><%= link_to_remote "音乐" ,:url =>{:action => :show_music,:id => @keyword_page.id }%></li>
+                <li><%= link_to_remote "图片" ,:url =>{:action => :show_picture,:id => @keyword_page.id }%></li>
               </ul>
             </div><div id="sc_expPane">
               <div class="sw_menu" id="sw_rel">

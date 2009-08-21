@@ -1,7 +1,7 @@
 <% form_for([@twitter_resource.owner,@twitter_resource,@reply]) do |f| %>
   <%= f.error_messages %>
   <p>
-    <%= f.text_area :content %>
+    <%= f.text_area :content,:size => "45x4" %>
   </p>
   <p>
     <%= f.submit '就这样' %>

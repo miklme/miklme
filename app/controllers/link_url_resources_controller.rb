@@ -3,13 +3,10 @@ class LinkUrlResourcesController < ApplicationController
   auto_complete_for :link_url_resource,:keywords
   def new
     @link_url_resource=@user.link_url_resources.build
-    render :layout => "comments"
-  end
-
-  def show
   end
 
   def edit
+    
   end
 
   def index

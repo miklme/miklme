@@ -46,6 +46,41 @@ class KeywordPagesController < ApplicationController
     end
   end
 
+  def show_film
+    @keyword_page=KeywordPage.find(params[:id])
+    @film_results=LinkUrlResource.scoped_by_keywords(@keyword_page.keyword).scoped_by_form("视频").by_owner_value
+    @related_keywords=@keyword_page.related_keywords
+      render :update do |page|
+      page.replace_html "content",:partial => "film_result"
+    end
+  end
+
+  def show_music
+    @keyword_page=KeywordPage.find(params[:id])
+    @music_results=LinkUrlResource.scoped_by_keywords(@keyword_page.keyword).scoped_by_form("音频").by_owner_value
+    @related_keywords=@keyword_page.related_keywords
+    render :update do |page|
+      page.replace_html "content",:partial => "music_result"
+    end
+  end
+
+  def show_picture
+    @keyword_page=KeywordPage.find(params[:id])
+    @picture_results=LinkUrlResource.scoped_by_keywords(@keyword_page.keyword).scoped_by_form("图片").by_owner_value
+    @related_keywords=@keyword_page.related_keywords
+    render :update do |page|
+      page.replace_html "content",:partial => "picture_result"
+    end
+  end
+  
+  def show_text
+    @keyword_page=KeywordPage.find(params[:id])
+    @text_results=LinkUrlResource.scoped_by_keywords(@keyword_page.keyword).scoped_by_form("文字、文档").by_owner_value
+    @related_keywords=@keyword_page.related_keywords
+    render :update  do |page|
+      page.replace_html "content",:partial => "text_result"
+    end
+  end
   # DELETE /keyword_pages/1
   # DELETE /keyword_pages/1.xml
   private

@@ -1,0 +1,10 @@
+<div class="sb_ph"><h1>文字性的结果</h1>
+  <span>共 <%= @text_results.count %> 条</span><span class="sc_bullet">·</span>
+  <%= link_to "新建一个搜索结果条目>>>",new_user_link_url_resource_path(current_user) %>
+</div>
+<div id="results">
+  <ol class="sb_results" id="wg0">
+    <%= render  :partial => "film_result",:collection => @text_results %>
+  </ol>
+</div>
+<div class="sb_pag"><ul><li><%= link_to "1" %></li><li><%= link_to "下一页" %></li></ul></div>

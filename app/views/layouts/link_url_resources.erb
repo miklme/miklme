@@ -9,12 +9,9 @@
     <%= stylesheet_link_tag "result"  %>
   </head>
   <body>
-    <div style="background-image: url(../images/j2.jpg); opacity: 1" id="sw_im"><div class="sc_idk" id="sw_imL"></div>
-      <div class="sw_mbrand sw_drk">Mikl<%= link_to ".Me",user_path(current_user) %></div>
-    </div>
     <div id="sw_page">
       <div id="sw_hdr">
-        <div class="sw_tb"></div>
+        <div class="sw_tb"><%= link_to "Mikl",new_user_searched_keyword_path(current_user) %><%= link_to ".Me",user_path(current_user) %></div>
         <div class="sw_tbb"></div>
       </div>
     </div>
@@ -22,7 +19,7 @@
       <div id="sw_canvas">
         <div id="sw_aside">
           <div id="sw_nav">
-            <h2>筛选链接</h2>
+            <h2>筛选条目</h2>
             <ul>
               <li >
                 <%= link_to_unless_current "全部", user_link_url_resources_path(@user)%>
@@ -34,25 +31,25 @@
                 <%= link_to_unless_current "转载内容(#{@user.link_url_resources.scoped_by_authority(false).in_one_day.count}新)",not_authority_user_link_url_resources_path(@user) %>
               </li>
             </ul>
-          </div><div id="sc_expPane">
-            <div class="sw_menu" id="sw_rel">
-              <h2>相关搜索</h2>
-              <ul>
-                <% if not @related_keywords.blank? %>
-                  <% for related_keyword in @related_keywords %>
-                    <li>
-                      <%= link_to highlight(related_keyword.name,@keyword_page.keyword),"/keyword_pages/#{KeywordPage.find_by_keyword(related_keyword.name).id}",:popup => true %>
-                    </li>
-                  <% end %>
-                <% end %>
-              </ul>
-            </div>
           </div>
         </div>
         <div id="content">
           <div id="results">
             <ul class="sb_results" id="wg0">
+              <% if current_user==@user %>
+                <% if @link_url_resources.blank? %>
+                  <p>你暂时还没有分享任何条目。</p>
+                  <p><%= link_to "新建搜索结果条目>>>",new_user_link_url_resource_path(current_user) %></p>
+                <% else %>
+                  <%= @content_for_layout%>
+                <% end %>
+              <% else %>
+                <% if @link_url_resources.blank? %>
+                  <p><%= @user.nick_name %>暂时还没有分享任何链接。</p>
+                <% else %>
               <%= @content_for_layout %>
+                <% end %>
+              <% end %>
             </ul>
           </div>
         </div></div></div></div>

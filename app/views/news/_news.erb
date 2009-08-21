@@ -37,11 +37,11 @@
   </p>
 <% elsif news.news_type=="stranger_follow" %>
   <p>
-    <%=link_to news.owner.name_or_nick_name(current_user),user_path(news.owner) %>被 <%=link_to news.follower.name_or_nick_name(current_user),user_path(news.follower) %>关注，价值点数+3。
+    <%=link_to news.owner.name_or_nick_name(current_user),user_path(news.owner) %>被 <%=link_to news.follower.name_or_nick_name(current_user),user_path(news.follower) %>关注，TA的价值点数+3。
   </p>
 <% elsif news.news_type=="friend_follow" %>
   <p>
-    <%=link_to news.owner.name_or_nick_name(current_user),user_path(news.owner) %>被 <%=link_to news.follower.name_or_nick_name(current_user),user_path(news.follower) %>加为朋友，价值点数+3.
+    <%=link_to news.owner.name_or_nick_name(current_user),user_path(news.owner) %>被 <%=link_to news.follower.name_or_nick_name(current_user),user_path(news.follower) %>加为朋友，TA的价值点数+3.
   </p>
 <% elsif news.news_type=="twitter_resource_reply" %>
   <p>
