@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(:version => 20090810141711) do
     t.integer  "resource_id"
     t.integer  "comment_id"
     t.string   "news_type"
-    t.string   "follower_name"
+    t.integer  "follower_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

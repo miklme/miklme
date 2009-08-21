@@ -5,7 +5,7 @@ class CreateNews < ActiveRecord::Migration
       t.integer :resource_id
       t.integer :comment_id
       t.string :news_type
-      t.string :follower_name
+      t.integer :follower_id
       t.timestamps
     end
   end
