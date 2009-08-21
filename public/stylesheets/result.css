@@ -130,32 +130,33 @@ cite a:visited {color:#568E1A}
     font-style:normal;
     word-wrap:break-word;
 }
-div#sw_nav ul, div#sw_nav li, #sw_nav a, #sw_nav em, #sw_nav span {
-    width:170px;
-    margin:0px;
+div#sw_nav ul, div#sw_nav li, #sw_nav a {
+display:block;
+margin:0;
+padding:0;
+width:170px;
 }
-div#sw_nav li{
-    margin:0 0 1px;
-    color:#FFFFFF;
-    font-style:normal;
-    font-weight:bold;
-    position:relative;
-    background:#F9761D;
-    text-align:center;
+div#sw_nav li {
+margin:0 0 1px;
+
 }
-div#sw_nav li a{
-    color:#0033CC;
-    font-style:normal;
-    background:#F3F3F3;
-    font-weight:normal;
-    width:50px
+#sw_nav li a {
+-moz-background-clip:border;
+-moz-background-inline-policy:continuous;
+-moz-background-origin:padding;
+background:#F3F3F3 none repeat scroll 0 0;
+color:#0033CC;
+padding:4px 20px;
+width:127px;
 }
+#sw_nav a:hover {
+background-color:#E5E5E5;
+}
+
 #results{max-width:590px}
 #sw_canvas{padding-left:195px}
 
-#sw_nav li a:hover {
-    background-color:#E5E5E5;
-}
+
 .item {
     padding: 6px 12px;
     border: 1px solid #d3d3d3;

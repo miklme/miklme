@@ -99,6 +99,7 @@ input{ display:inline;
        border-bottom-width: 1px;
        border-left-width: 1px;
        border-right-width: 1px;
+       height:25px
 }
 input:hover,input:focus {    background-color: #fefefe;
 }

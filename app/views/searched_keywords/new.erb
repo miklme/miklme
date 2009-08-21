@@ -2,9 +2,9 @@
   <div id="logo2">
         <h1><%= link_to "Mikl",new_user_searched_keyword_path(current_user) %><%= link_to ".Me",user_path(current_user) %></h1>
     <div>
-      <p>    <%= link_to "(为该关键字新增一个条目>>>)",new_user_link_url_resource_path(current_user),:popup => ['新条目', 'height=300,width=800'] %>
+      <p>    <%= link_to "(新增一个搜索结果>>>)",new_user_link_url_resource_path(current_user),:popup => ['新条目', 'height=300,width=800'] %>
       </p>
-      <%= text_field_with_auto_complete :resource, :keywords, {:size => 70,:onfocus => "resource_keywords_auto_completer.activate()"}, {:method => :get, :frequency => 0,:on_hide => remote_function(:url => {:action => :notification}), :after_update_element =>
+      <%= text_field_with_auto_complete :resource, :keywords, {:size => 65,:onfocus => "resource_keywords_auto_completer.activate()"}, {:method => :get, :frequency => 0,:on_hide => remote_function(:url => {:action => :notification}), :after_update_element =>
           "function(element,value){" + remote_function(:url => {:action => :create},:with=>"'keywords='+element.value") + "}"} %>
     </div>
   </div>
