@@ -54,6 +54,7 @@ class User < ActiveRecord::Base
     end
   end
 
+  #Below methods are the user self,he is active,not positive.ie.He treat others as friends/strangers.
   def followings
     b=BeFollow.scoped_by_follower_id(self.id)
     b.map do |a|
@@ -91,9 +92,11 @@ class User < ActiveRecord::Base
     end
   end
 
-  def name_or_nick_name(user)
-    if user.regard_real_friend?(self)
+  def name_or_nick_name(current_user)
+    if self.regard_real_friend?(current_user)
       self.name
+    elsif self==current_user
+      "我"
     else
       self.nick_name
     end
