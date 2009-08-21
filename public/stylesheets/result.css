@@ -153,9 +153,8 @@ div#sw_nav li a{
 #results{max-width:590px}
 #sw_canvas{padding-left:195px}
 
-#sw_nav a:hover {
+#sw_nav li a:hover {
     background-color:#E5E5E5;
-
 }
 .item {
     padding: 6px 12px;
@@ -601,6 +600,7 @@ div.sw_cbjv {
 #sw_hdr .sw_tb {
     font-size:small;
     line-height:normal;
+    padding-left:10px
 }
 .sb_form_align {
 }

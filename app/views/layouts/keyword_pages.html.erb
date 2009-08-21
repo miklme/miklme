@@ -9,19 +9,27 @@
     <%= stylesheet_link_tag "result"  %>
   </head>
   <body>
-    <div style="background-image: url(../images/j2.jpg); opacity: 1" id="sw_im"><div class="sc_idk" id="sw_imL"></div>
+    <div style="background-image: url(../images/j2.jpg); opacity: 1" id="sw_im">
     </div>
     <div id="sw_page">
       <div id="sw_hdr">
-        <div class="sw_tb"></div>
+        <div class="sw_tb">
+          <ul>
+            <li>
+              <%= link_to "返回Mikl，新的搜索",new_user_searched_keyword_path(current_user) %>
+            </li>
+            <li>
+              <%= link_to ".Me",user_path(current_user) %>
+            </li>
+          </ul>
+        </div>
         <div class="sw_tbb"></div>
         <div class="sw_box">
           <h2><%= link_to ".Me",user_path(current_user),:class => "sw_logo" %>
           </h2>
           <div class="sw_bd">
-            <div class="sw_b"> <%= text_field_with_auto_complete :resource, :keywords, {:onfocus => "resource_keywords_auto_completer.activate()"}, {:method => :get, :frequency => 0,:after_update_element =>
-                  "function(element,value){" + remote_function(:url => {:controller => :searched_keywords,:action => :create},:with=>"'keywords='+element.value") + "}"} %>
-            </div>
+            <%= text_field_with_auto_complete :resource, :keywords, {:onfocus => "resource_keywords_auto_completer.activate()"}, {:method => :get, :frequency => 0,:after_update_element =>
+                "function(element,value){" + remote_function(:url => {:controller => :searched_keywords,:action => :create},:with=>"'keywords='+element.value") + "}"} %>
           </div>
         </div>
       </div>
