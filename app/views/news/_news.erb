@@ -1,6 +1,6 @@
 <% if news.news_type=="comment" %>
 <p>
-  <%= news.owner.name_or_nick_name(current_user) %>的分享<%=news.resource.description %>（关键字为 <%= news.resource.keywords %>）被评论了 <%= news.resource.comments.count %>次，
+  <%= link_to news.owner.name_or_nick_name(current_user),user_path(news.owner) %>的分享<%=news.resource.description %>（关键字为 <%= news.resource.keywords %>）被评论了 <%= news.resource.comments.count %>次，
   <% a=news.resource.comments.map do |c| %>
     <% c.rating %>
   <% end %>
@@ -12,8 +12,8 @@
 </p>
 <% elsif news.news_type=="twitter_resource" %>
 <p>
-  <%= news.owner.name_or_nick_name(current_user) %>说：
-  <cite><%= news.resource.keywords %></cite>
+  <%=link_to news.owner.name_or_nick_name(current_user),user_path(news.owner) %>说：
+  <cite><%=link_to news.resource.keywords,user_twitter_resource_path(news.owner,news.resource) %></cite>
 </p>
 <% elsif news.news_type=="link_url_resource" %>
 <p>
@@ -30,18 +30,18 @@
   <% elsif news.resource.form=="文字、文档" %>
     <%="文章" %>
   <% end %>
-  <%= link_to "#{news.resource.description}" %>
+  <%= link_to "#{news.resource.description}",news.resource.link_url %>
 </p>
 <% elsif news.news_type=="stranger_follow" %>
 <p>
-  <%= news.owner.name_or_nick_name(current_user) %>被 <%= news.follower_name %>关注，价值点数+3。
+  <%=link_to news.owner.name_or_nick_name(current_user),user_path(news.owner) %>被 <%= news.follower_name %>关注，价值点数+3。
 </p>
 <% elsif news.news_type=="friend_follow" %>
 <p>
-  <%= news.owner.name_or_nick_name(current_user) %>被现实中的朋友 <%= news.follower_name %>找到并加为好友,，价值点数+3.
+  <%=link_to news.owner.name_or_nick_name(current_user),user_path(news.owner) %>被现实中的朋友 <%=link_to news.follower_name %>找到并加为好友,，价值点数+3.
 </p>
 <% elsif news.news_type=="twitter_resource_reply" %>
 <p>
-  <%= news.owner.name_or_nick_name(current_user) %>的话 <%= news.resource.content %>被回复了 <%= news.resource.replies.count %>次,价值点数＋ <%= news.resource.replies.count*0.2 %>
+  <%=link_to news.owner.name_or_nick_name(current_user),user_path(news.owner) %>的话 <%=link_to news.resource.content,user_twitter_resource_path(news.owner,news.resource) %>被回复了 <%= news.resource.replies.count %>次,价值点数＋ <%= news.resource.replies.count*0.2 %>
 </p>
 <%end  %>
