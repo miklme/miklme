@@ -45,6 +45,7 @@ doc\:plugins\:auto_complete=Generate documentation for the auto_complete plugin
 doc\:plugins\:fleximage_i18n=Generate documentation for the fleximage_i18n plugin
 doc\:plugins\:in_place_editing=Generate documentation for the in_place_editing plugin
 doc\:plugins\:restful_authentication=Generate documentation for the restful_authentication plugin
+doc\:plugins\:will_paginate=Generate documentation for the will_paginate plugin
 doc\:rails=Build the RDOC HTML Files
 doc\:reapp=Force a rebuild of the RDOC files
 doc\:rerails=Force a rebuild of the RDOC files
