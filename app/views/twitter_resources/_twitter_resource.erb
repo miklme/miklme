@@ -5,7 +5,7 @@
     </td>
     <td width="520px">
       <p><%= h twitter_resource.keywords  %></p>
-      <div class="descr"><%=twitter_resource.created_at.advance(:hours => 8).to_s(:db)  %></div>
+      <div class="sb_meta"><%=twitter_resource.created_at.advance(:hours => 8).to_s(:db)  %></div>
       <div id="replies">
         <%= render :partial  => "replies/reply",:collection => twitter_resource.replies %>
       </div>

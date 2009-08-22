@@ -33,6 +33,7 @@ a:hover { text-decoration:none;
 
        position: relative;
        top: 235px;
+       z-index: -1;
 }
 #content {width:780px; margin:0 auto;
 }
@@ -139,7 +140,8 @@ div.auto_complete ul {
 div.auto_complete ul li {
     margin:0;
     padding:3px;
-    color:black
+    color:black;
+    font-size:12px;
 }
 div.auto_complete ul li.selected {
     background-color: #ffb ;

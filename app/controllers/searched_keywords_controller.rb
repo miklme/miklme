@@ -1,5 +1,5 @@
 class SearchedKeywordsController < ApplicationController
-  auto_complete_for :resource,:keywords,:limit => 50
+  auto_complete_for :resource,:keywords,:limit => 20
   def new
 
   end

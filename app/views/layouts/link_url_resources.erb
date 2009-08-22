@@ -36,20 +36,8 @@
         <div id="content">
           <div id="results">
             <ul class="sb_results" id="wg0">
-              <% if current_user==@user %>
-                <% if @link_url_resources.blank? %>
-                  <p>你暂时还没有分享任何条目。</p>
-                  <p><%= link_to "新建搜索结果条目>>>",new_user_link_url_resource_path(current_user) %></p>
-                <% else %>
-                  <%= @content_for_layout%>
-                <% end %>
-              <% else %>
-                <% if @link_url_resources.blank? %>
-                  <p><%= @user.nick_name %>暂时还没有分享任何链接。</p>
-                <% else %>
-              <%= @content_for_layout %>
-                <% end %>
-              <% end %>
+                  <li><%= link_to "新建搜索结果条目>>>",new_user_link_url_resource_path(current_user) %></li>
+                <%= @content_for_layout%>
             </ul>
           </div>
         </div></div></div></div>

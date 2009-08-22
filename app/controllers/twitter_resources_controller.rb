@@ -27,7 +27,7 @@ class TwitterResourcesController < ApplicationController
       n.save
       redirect_to user_path(current_user)
     else
-      render "resources/index"
+      render "resources/index",:layout => "resources"
     end
   end
   private

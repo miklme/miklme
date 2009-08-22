@@ -5,7 +5,7 @@
     </td>
     <td width="520px">
       <p><%= h comment.content  %></p>
-      <div class="descr"><%=comment.created_at.advance(:hours => 8).to_s(:db)  %></div>
+      <div class="sb_meta"><%=comment.created_at.advance(:hours => 8).to_s(:db)  %></div>
       <span><%= link_to "回应该用户",new_user_link_url_resource_comment_replied_comment_path(@user,@resource,comment),:popup => ['你的回应...', 'height=300,width=600']  %></span>
       <div id="replied_comments">
         <% for replied_comment in comment.replied_comments %>

@@ -17,14 +17,14 @@ class LinkUrlResourcesController < ApplicationController
     @link_url_resource=current_user.link_url_resources.build(params[:link_url_resource])
     if @link_url_resource.save
       @link_url_resource.create_keyword_page(:keyword => @link_url_resource.keywords)
-      render :partial => "succeed",:layout => "comments"
+      render :partial => "succeed",:layout => "link_url_resources"
       n=current_user.news.create
       n.news_type="link_url_resource"
       n.owner=current_user
       n.resource=@link_url_resource
       n.save
     else
-      render :action => :new,:layout => "comments"
+      render :action => :new,:layout => "link_url_resources"
     end
   end
 
