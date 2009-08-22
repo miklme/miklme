@@ -4,6 +4,9 @@ class Resource < ActiveRecord::Base
   named_scope :by_owner_value, :include => :owner,:order => 'users.value DESC'
   named_scope :by_time,:order => "created_at DESC"
   named_scope :in_one_day,:conditions => ["created_at > ?",Time.now.yesterday]
+
+  validates_format_of :keywords,:with => %r{^[a-zA-Z][a-zA-Z0-9_]{4,15}$},:message =>"请避免使用太诡异的字符...."
+
   private
   def adjust_link_url
     if  !self.link_url=~/http:/ and !self.link_url=~/https:/ and  !self.link_url=~/ftp:/ and  !self.link_url=~/sftp:/

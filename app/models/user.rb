@@ -41,6 +41,7 @@ class User < ActiveRecord::Base
   # anything else you want your user to change should be added here.
   before_save :encrypt_password
 
+  attr_protected :value
   def self.authenticate(username, password)
     return nil if username.blank? or password.blank?
     u = find :first, :conditions => ['username = ? ', username] # need to get the salt

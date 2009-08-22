@@ -5,6 +5,7 @@ class ControlledKeywordsController < ApplicationController
   def index
     @keywords = @user.owned_keywords
     @controlled_keywords=@user.controlled_keywords
+    @user.followers
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @keywords }
@@ -22,37 +23,9 @@ class ControlledKeywordsController < ApplicationController
     end
   end
 
-  # GET /keywords/new
-  # GET /keywords/new.xml
-  def new
-    @keyword = Keyword.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @keyword }
-    end
-  end
-
   # GET /keywords/1/edit
   def edit
     @keyword = Keyword.find(params[:id])
-  end
-
-  # POST /keywords
-  # POST /keywords.xml
-  def create
-    @keyword = Keyword.new(params[:keyword])
-
-    respond_to do |format|
-      if @keyword.save
-        flash[:notice] = 'Keyword was successfully created.'
-        format.html { redirect_to(@keyword) }
-        format.xml  { render :xml => @keyword, :status => :created, :location => @keyword }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @keyword.errors, :status => :unprocessable_entity }
-      end
-    end
   end
 
   # PUT /keywords/1

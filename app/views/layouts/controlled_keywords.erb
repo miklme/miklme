@@ -16,28 +16,7 @@
             <%= flash[:error] or flash[:notice]%>
           </div>
         <% end %>
-        <div id="sidebar">
-          <div id="sidebar_top"></div>
-          <div id="sidebar_text">
-            <h2><%= link_to_unless_current "#{@user.nick_name}掌控的关键字： " %></h2>
-            <p>
-              <% for keyword in @controlled_keywords  %>
-                <span>
-                  <%= link_to "#{keyword}","/keyword_pages/#{KeywordPage.find_by_keyword(keyword).id}",:popup => true %>
-                </span>
-              <% end %>
-            </p>
-            <h2><%="#{@user.nick_name}朋友圈中谈论最多的关键字："%></h2>
-            <p>
-              <% for keyword in @keywords  %>
-                <span>
-                  <%= link_to "#{keyword}","/keyword_pages/#{KeywordPage.find_by_keyword(keyword).id}",:popup => true %>
-                </span>
-              <% end %>
-            </p>
-          </div>
-          <div id="sidebar_bottom"></div>
-        </div>
+        
         <%= @content_for_layout %>
       </div>
       <%= render :partial => "shared/footer" %>

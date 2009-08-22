@@ -2,7 +2,7 @@
   <div><cite>恭喜！根据价值点数的高低，该关键字的第一个排位是你分享的资源</cite>，因此，你可以：</div>
   <ul>
     <li>
-      <em><%=link_to "修改相关关键字",keyword_page_related_keywords_path(@keyword_page),:popup => ['修改相关关键字', 'height=300,width=600'] %>
+      <em><%=link_to "修改相关关键字",keyword_page_related_keywords_path(@keyword_page),:popup => ['修改相关关键字', 'height=500,width=450'] %>
       </em>
     </li>
     <li>
@@ -14,7 +14,7 @@
   </ul>
 <% end %>
 <div class="sb_ph"><h1>所有结果</h1>
-  <span>共 <%= @link_url_resources.count %> 条</span><span class="sc_bullet">·</span>
+  <span>共 <%=h @link_url_resources.count %> 条</span><span class="sc_bullet">·</span>
   <%= link_to "新建一个搜索结果条目",new_user_link_url_resource_path(current_user) %>
   <span class="sc_bullet">·</span>
   <%= link_to "新建一个单独的关键字",user_path(current_user) %>
@@ -22,7 +22,7 @@
 <div id="results">
   <ol class="sb_results" id="wg0">
     <%if @twitter_resource.present? %>
-      以下为 <%= @twitter_resource.owner.nick_name %>不包含链接的单一关键字及相关回复。
+      以下为 <%=h @twitter_resource.owner.nick_name %>不包含链接的单一关键字及相关回复。
       <%= render @twitter_resource %>
     <% end %>
     <%= render  @link_url_resources  %>

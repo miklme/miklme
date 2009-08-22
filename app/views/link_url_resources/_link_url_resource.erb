@@ -11,7 +11,7 @@
             <% end %>
             <ul class="sb_meta">
               <li><cite><%= link_to "#{link_url_resource.comments.size}条回应>>>", user_link_url_resource_comments_path(link_url_resource.owner,link_url_resource),:popup => true %></cite></li>
-              <li><%= link_url_resource.link_url %></li>
+              <li><%=h link_url_resource.link_url %></li>
             </ul>
             </td>
           <td width="100">

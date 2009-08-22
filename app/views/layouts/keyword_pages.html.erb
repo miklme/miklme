@@ -25,7 +25,7 @@
         </div>
         <div class="sw_tbb"></div>
         <div class="sw_box">
-          <h2><%= link_to "Mikl.Me",user_path(current_user),:class => "sw_logo"%>
+          <h2><%= link_to "Mikl.Me",new_user_searched_keyword_path(current_user),:class => "sw_logo"%>
           </h2>
           <div class="sw_bd">
             <%= text_field_with_auto_complete :resource, :keywords, {:onfocus => "resource_keywords_auto_completer.activate()"}, {:method => :get, :frequency => 0,:after_update_element =>
