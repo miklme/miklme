@@ -15,6 +15,16 @@ class CommentsController < ApplicationController
     end
   end
 
+  def index_by_time
+    @keyword_page=KeywordPage.find_by_keyword(@resource.keywords)
+    @related_keywords=@keyword_page.related_keywords
+    @comments = @resource.comments.parent_comments.by_time
+    @comment=@resource.comments.build
+    render :update do |page|
+      page.replace_html "content",:partial => "index_by_time"
+    end
+  end
+
   # GET /comments/1
   # GET /comments/1.xml
   def show
@@ -38,7 +48,7 @@ class CommentsController < ApplicationController
     @comment.owner=current_user
     if @comment.save
       u=User.find(params[:user_id])
-      u.value =u.value+params[:comment][:value].to_i
+      u.value =u.value+params[:comment][:rating].to_i
       u.save
       n=@resource.owner.news.create
       n.news_type="comment"

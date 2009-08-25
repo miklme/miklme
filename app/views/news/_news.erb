@@ -8,7 +8,7 @@
 <% if news.news_type=="comment" %>
   <p>
     <%= link_to news.owner.name_or_nick_name(current_user),user_path(news.owner) %>的分享
-    <%=link_to news.resource.description,news.resource.link_url,:popup => true %>（关键字为 <%=link_to news.resource.keywords,keyword_page_path(via_keyword_to_keyword_page(news.resource.keywords)) %>）被评论了
+    <%=link_to news.resource.description,news.resource.link_url,:popup => true,:class => "title" %>（关键字为 <%=link_to news.resource.keywords,keyword_page_path(via_keyword_to_keyword_page(news.resource.keywords)) %>）被评论了
     <%=link_to news.resource.comments.count,user_link_url_resource_comments_path(news.owner,news.resource),:popup => true %>次，
     <% a=news.resource.comments.map do |c| %>
       <% c.rating %>
@@ -18,6 +18,13 @@
     <% else %>
       价值点数减少了 <%=h -a.sum.to_i %>(反响恶劣)
     <% end %>
+  </p>
+  <% elsif news.news_type=="replied_comment" %>
+  <p>
+    <%=link_to news.owner.name_or_nick_name(current_user),user_path(news.owner) %>在 <%=link_to news.resource.keywords,keyword_page_path(via_keyword_to_keyword_page(news.resource.keywords)),:class => "title" %>
+    的讨论中被回复: 
+    <cite><%=h news.comment.content %>
+    </cite>
   </p>
 <% elsif news.news_type=="twitter_resource" %>
   <p>

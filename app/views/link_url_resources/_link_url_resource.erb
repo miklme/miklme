@@ -16,9 +16,7 @@
             </td>
           <td width="100">
             <% if not link_url_resource.owner == current_user %>
-              <%=button_to "此条目对我有用",add_value_user_link_url_resource_path(link_url_resource.owner,link_url_resource) %>
-              <span id="marked" style="display:none">该链接分享者提高了3点价值点数。</span>
-              <%= button_to "此条目与关键字不符",minus_value_user_link_url_resource_path(link_url_resource.owner,link_url_resource) %>
+              <%= button_to "此条目名不副实",minus_value_user_link_url_resource_path(link_url_resource.owner,link_url_resource) %>
             <% end %>
           </td>
           <td width="80"><%= render "shared/user_profile",:object => link_url_resource.owner %>

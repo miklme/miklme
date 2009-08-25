@@ -9,6 +9,11 @@ class RepliedCommentsController < ApplicationController
     @replied_comment.parent_comment=@comment
     @replied_comment.owner=current_user
     if @replied_comment.save
+      n=@replied_comment.parent_comment.owner.news.build
+      n.news_type="replied_comment"
+      n.resource=@link_url_resource
+      n.comment=@replied_comment
+      n.save
       redirect_to :back
     else
       render :action => :new

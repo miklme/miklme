@@ -36,24 +36,12 @@ class LinkUrlResourcesController < ApplicationController
     @not_authority_link_url_resources=@user.link_url_resources.scoped_by_authority(false)
   end
 
-  def add_value
-    o=Resource.find(params[:id]).owner
-    if not current_user==o
-      if Resource.find(params[:id]).authority?
-        o.value=o.value+3
-      elsif !Resource.find(params[:id]).authority?
-        o.value=o.value+1
-      end
-      o.save
-      redirect_to :back
-    end
-  end
-
   def minus_value
     o=Resource.find(params[:id]).owner
     if not current_user==o
       o.value=o.value-1
       o.save
+      flash[:notice]="创建这个链接的人减少了1点价值点数。"
       redirect_to :back
     end
   end

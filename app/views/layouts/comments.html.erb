@@ -25,10 +25,10 @@
               <h2>评论排序方式</h2>
               <ul>
                 <li class="sw_navA">
-                  <%= link_to_unless_current "用户价值点数" %>
+                  <%= link_to "用户价值点数",user_link_url_resource_comments_path(@user,@resource) %>
                 </li>
                 <li class="sw_navA">
-                  <%= link_to "发表时间" %>
+                  <%= link_to_remote "发表时间",:action => :index_by_time %>
                 </li>
               </ul>
             </div><div id="sc_expPane">
@@ -47,7 +47,6 @@
             </div>
           </div>
           <div id="content">
-            <div class="sb_ph"><%= link_to "<<<返回结果页面",keyword_page_path(@keyword_page) %></div>
             <%= @content_for_layout %>
 
           </div></div></div></div>
