@@ -1,3 +1,4 @@
+<span class="right">  <%=h news.created_at.advance(:hours => 8).to_s(:db)%></span>
 <% if news.news_type=="comment" %>
   <p>
     <%= link_to news.owner.name_or_nick_name(current_user),user_path(news.owner) %>的分享
@@ -46,8 +47,9 @@
   </p>
 <% elsif news.news_type=="twitter_resource_reply" %>
   <p>
-    <%=link_to news.owner.name_or_nick_name(current_user),user_path(news.owner) %>的话
-    <%=link_to news.resource.content,user_twitter_resource_path(news.owner,news.resource) %>被回复了
-    <%= news.resource.replies.count %>次,价值点数＋ <%=h news.resource.replies.count*0.2 %>
+    <%=link_to news.owner.name_or_nick_name(current_user),user_path(news.owner) %>的关键字
+    <cite><%=truncate news.resource.keywords,:length => 14%></cite>被回复了
+    <em><%=link_to "#{news.resource.replies.count}次>>>",keyword_page_path(via_keyword_to_keyword_page(news.resource.keywords)) %></em>,价值点数＋ <%=h news.resource.replies.count*0.2 %>
   </p>
 <%end  %>
+
