@@ -1,4 +1,10 @@
-<span class="right">  <%=h news.created_at.advance(:hours => 8).to_s(:db)%></span>
+<span class="right">
+  <% if news.created_at.advance(:hours => 8)>Time.now.yesterday %>
+  <em>
+    (今天)
+  </em>
+    <% end %>
+<%=h news.created_at.advance(:hours => 8).to_s(:db)%></span>
 <% if news.news_type=="comment" %>
   <p>
     <%= link_to news.owner.name_or_nick_name(current_user),user_path(news.owner) %>的分享
