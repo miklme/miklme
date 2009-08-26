@@ -17,7 +17,9 @@ class News < ActiveRecord::Base
   end
 
   def check_repeat
-    
+    if News.find(:all,:conditions => self).count>=2
+      News.find(:last,:conditions => self,:order => "news.created_at DESC").destroy
+    end
   end
 
 end

@@ -22263,3 +22263,568 @@ Rendered shared/_header (0.8ms)
   [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` INNER JOIN `be_follows` ON `users`.id = `be_follows`.follower_id WHERE ((`be_follows`.user_id = 1)) [0m
 Rendered shared/_footer (0.5ms)
 Completed in 198ms (View: 162, DB: 6) | 200 OK [http://localhost/users/1/news]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NewsController#index (for 127.0.0.1 at 2009-08-26 17:00:33) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mBeFollow Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `be_follows`[0m
+  [4;35;1mBeFollow Load (0.1ms)[0m   [0mSELECT * FROM `be_follows` WHERE (`be_follows`.`follower_id` = 1) [0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC[0m
+  [4;35;1mNews Load (0.1ms)[0m   [0mSELECT * FROM `news` WHERE (`news`.user_id = 2) ORDER BY created_at DESC[0m
+  [4;36;1mNews Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Rendering template within layouts/news
+Rendering news/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC[0m
+  [4;36;1mBeFollow Load (0.1ms)[0m   [0;1mSELECT * FROM `be_follows` WHERE (`be_follows`.`user_id` = 1 AND `be_follows`.`follower_id` = 2) LIMIT 1[0m
+  [4;35;1mResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mResource Load Including Associations (0.1ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`content` AS t0_r6, `resources`.`title` AS t0_r7, `resources`.`form` AS t0_r8, `resources`.`link_url` AS t0_r9, `resources`.`description` AS t0_r10, `resources`.`authority` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`id` = 15) ORDER BY users.value DESC[0m
+  [4;35;1mLinkUrlResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mKeywordPage Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `keyword_pages`[0m
+  [4;35;1mKeywordPage Load (0.1ms)[0m   [0mSELECT * FROM `keyword_pages` WHERE (`keyword_pages`.`keyword` = '不知道欸') LIMIT 1[0m
+  [4;36;1mComment Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.resource_id = 15) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT sum(`comments`.rating) AS sum_rating FROM `comments` WHERE (resource_id=15) [0m
+Rendered news/_news (28.2ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `be_follows` WHERE (`be_follows`.`user_id` = 1 AND `be_follows`.`follower_id` = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mBeFollow Load (0.1ms)[0m   [0;1mSELECT * FROM `be_follows` WHERE (`be_follows`.`user_id` = 1 AND `be_follows`.`follower_id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+Rendered news/_news (3.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `be_follows` WHERE (`be_follows`.`user_id` = 1 AND `be_follows`.`follower_id` = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `be_follows` WHERE (`be_follows`.`user_id` = 1 AND `be_follows`.`follower_id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+Rendered news/_news (2.7ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `be_follows` WHERE (`be_follows`.`user_id` = 1 AND `be_follows`.`follower_id` = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `be_follows` WHERE (`be_follows`.`user_id` = 1 AND `be_follows`.`follower_id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+Rendered news/_news (2.6ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `be_follows` WHERE (`be_follows`.`user_id` = 1 AND `be_follows`.`follower_id` = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`content` AS t0_r6, `resources`.`title` AS t0_r7, `resources`.`form` AS t0_r8, `resources`.`link_url` AS t0_r9, `resources`.`description` AS t0_r10, `resources`.`authority` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`id` = 15) ORDER BY users.value DESC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `keyword_pages` WHERE (`keyword_pages`.`keyword` = '不知道欸') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.resource_id = 15) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT sum(`comments`.rating) AS sum_rating FROM `comments` WHERE (resource_id=15) [0m
+Rendered news/_news (4.6ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `be_follows` WHERE (`be_follows`.`user_id` = 1 AND `be_follows`.`follower_id` = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`content` AS t0_r6, `resources`.`title` AS t0_r7, `resources`.`form` AS t0_r8, `resources`.`link_url` AS t0_r9, `resources`.`description` AS t0_r10, `resources`.`authority` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`id` = 15) ORDER BY users.value DESC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `keyword_pages` WHERE (`keyword_pages`.`keyword` = '不知道欸') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.resource_id = 15) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT sum(`comments`.rating) AS sum_rating FROM `comments` WHERE (resource_id=15) [0m
+Rendered news/_news (5.3ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `be_follows` WHERE (`be_follows`.`user_id` = 1 AND `be_follows`.`follower_id` = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`content` AS t0_r6, `resources`.`title` AS t0_r7, `resources`.`form` AS t0_r8, `resources`.`link_url` AS t0_r9, `resources`.`description` AS t0_r10, `resources`.`authority` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`id` = 15) ORDER BY users.value DESC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `keyword_pages` WHERE (`keyword_pages`.`keyword` = '不知道欸') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.resource_id = 15) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT sum(`comments`.rating) AS sum_rating FROM `comments` WHERE (resource_id=15) [0m
+Rendered news/_news (4.7ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `be_follows` WHERE (`be_follows`.`user_id` = 1 AND `be_follows`.`follower_id` = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`content` AS t0_r6, `resources`.`title` AS t0_r7, `resources`.`form` AS t0_r8, `resources`.`link_url` AS t0_r9, `resources`.`description` AS t0_r10, `resources`.`authority` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`id` = 15) ORDER BY users.value DESC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `keyword_pages` WHERE (`keyword_pages`.`keyword` = '不知道欸') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.resource_id = 15) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT sum(`comments`.rating) AS sum_rating FROM `comments` WHERE (resource_id=15) [0m
+Rendered news/_news (4.6ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `be_follows` WHERE (`be_follows`.`user_id` = 1 AND `be_follows`.`follower_id` = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`content` AS t0_r6, `resources`.`title` AS t0_r7, `resources`.`form` AS t0_r8, `resources`.`link_url` AS t0_r9, `resources`.`description` AS t0_r10, `resources`.`authority` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`id` = 15) ORDER BY users.value DESC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `keyword_pages` WHERE (`keyword_pages`.`keyword` = '不知道欸') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.resource_id = 15) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT sum(`comments`.rating) AS sum_rating FROM `comments` WHERE (resource_id=15) [0m
+Rendered news/_news (77.9ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `be_follows` WHERE (`be_follows`.`user_id` = 1 AND `be_follows`.`follower_id` = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`content` AS t0_r6, `resources`.`title` AS t0_r7, `resources`.`form` AS t0_r8, `resources`.`link_url` AS t0_r9, `resources`.`description` AS t0_r10, `resources`.`authority` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`id` = 15) ORDER BY users.value DESC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `keyword_pages` WHERE (`keyword_pages`.`keyword` = '不知道欸') LIMIT 1[0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.`id` = 3) [0m
+Rendered news/_news (6.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `be_follows` WHERE (`be_follows`.`user_id` = 1 AND `be_follows`.`follower_id` = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`content` AS t0_r6, `resources`.`title` AS t0_r7, `resources`.`form` AS t0_r8, `resources`.`link_url` AS t0_r9, `resources`.`description` AS t0_r10, `resources`.`authority` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`id` = 15) ORDER BY users.value DESC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `keyword_pages` WHERE (`keyword_pages`.`keyword` = '不知道欸') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.resource_id = 15) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT sum(`comments`.rating) AS sum_rating FROM `comments` WHERE (resource_id=15) [0m
+Rendered news/_news (5.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `be_follows` WHERE (`be_follows`.`user_id` = 1 AND `be_follows`.`follower_id` = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`content` AS t0_r6, `resources`.`title` AS t0_r7, `resources`.`form` AS t0_r8, `resources`.`link_url` AS t0_r9, `resources`.`description` AS t0_r10, `resources`.`authority` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`id` = 15) ORDER BY users.value DESC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `keyword_pages` WHERE (`keyword_pages`.`keyword` = '不知道欸') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.resource_id = 15) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT sum(`comments`.rating) AS sum_rating FROM `comments` WHERE (resource_id=15) [0m
+Rendered news/_news (5.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `be_follows` WHERE (`be_follows`.`user_id` = 1 AND `be_follows`.`follower_id` = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`content` AS t0_r6, `resources`.`title` AS t0_r7, `resources`.`form` AS t0_r8, `resources`.`link_url` AS t0_r9, `resources`.`description` AS t0_r10, `resources`.`authority` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`id` = 15) ORDER BY users.value DESC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `keyword_pages` WHERE (`keyword_pages`.`keyword` = '不知道欸') LIMIT 1[0m
+Rendered news/_news (4.2ms)
+Rendered shared/_header (0.8ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `be_follows` WHERE (`be_follows`.`follower_id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` INNER JOIN `be_follows` ON `users`.id = `be_follows`.follower_id WHERE ((`be_follows`.user_id = 1)) [0m
+Rendered shared/_footer (0.6ms)
+Completed in 194ms (View: 158, DB: 6) | 200 OK [http://localhost/users/1/news]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-08-26 17:00:36) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+Redirected to http://localhost:3000/users/1/resources
+Completed in 21ms (DB: 1) | 302 Found [http://localhost/users/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-08-26 17:00:36) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mNews Load (0.1ms)[0m   [0;1mSELECT * FROM `news` WHERE (user_id=1) ORDER BY created_at DESC LIMIT 0, 15[0m
+  [4;35;1mNews Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `news` WHERE (user_id=1) [0m
+  [4;35;1mLinkUrlResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mLinkUrlResource Load Including Associations (0.1ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`content` AS t0_r6, `resources`.`title` AS t0_r7, `resources`.`form` AS t0_r8, `resources`.`link_url` AS t0_r9, `resources`.`description` AS t0_r10, `resources`.`authority` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.user_id = 1) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) ORDER BY users.value DESC[0m
+  [4;35;1mResource Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mResource Load Including Associations (0.1ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`content` AS t0_r6, `resources`.`title` AS t0_r7, `resources`.`form` AS t0_r8, `resources`.`link_url` AS t0_r9, `resources`.`description` AS t0_r10, `resources`.`authority` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.user_id = 1) ORDER BY resources.created_at DESC, users.value DESC[0m
+  [4;35;1mTwitterResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/resources
+Rendering resources/index
+Rendered twitter_resources/_form (1.2ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mBeFollow Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `be_follows`[0m
+  [4;36;1mBeFollow Load (0.1ms)[0m   [0;1mSELECT * FROM `be_follows` WHERE (`be_follows`.`user_id` = 1 AND `be_follows`.`follower_id` = 1) LIMIT 1[0m
+  [4;35;1mResource Load Including Associations (0.1ms)[0m   [0mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`content` AS t0_r6, `resources`.`title` AS t0_r7, `resources`.`form` AS t0_r8, `resources`.`link_url` AS t0_r9, `resources`.`description` AS t0_r10, `resources`.`authority` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`id` = 38) ORDER BY users.value DESC[0m
+  [4;36;1mKeywordPage Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `keyword_pages`[0m
+  [4;35;1mKeywordPage Load (0.1ms)[0m   [0mSELECT * FROM `keyword_pages` WHERE (`keyword_pages`.`keyword` = '不知道欸') LIMIT 1[0m
+Rendered news/_news (17.1ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `be_follows` WHERE (`be_follows`.`user_id` = 1 AND `be_follows`.`follower_id` = 1) LIMIT 1[0m
+  [4;36;1mResource Load Including Associations (0.2ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`content` AS t0_r6, `resources`.`title` AS t0_r7, `resources`.`form` AS t0_r8, `resources`.`link_url` AS t0_r9, `resources`.`description` AS t0_r10, `resources`.`authority` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`id` = 37) ORDER BY users.value DESC[0m
+  [4;35;1mReply Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `replies`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `replies` WHERE (`replies`.resource_id = 37) [0m
+  [4;35;1mKeywordPage Load (0.0ms)[0m   [0mSELECT * FROM `keyword_pages` WHERE (`keyword_pages`.`keyword` = 'hehe') LIMIT 1[0m
+Rendered news/_news (85.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `be_follows` WHERE (`be_follows`.`user_id` = 1 AND `be_follows`.`follower_id` = 1) LIMIT 1[0m
+  [4;36;1mResource Load Including Associations (0.1ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`content` AS t0_r6, `resources`.`title` AS t0_r7, `resources`.`form` AS t0_r8, `resources`.`link_url` AS t0_r9, `resources`.`description` AS t0_r10, `resources`.`authority` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`id` = 16) ORDER BY users.value DESC[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `replies` WHERE (`replies`.resource_id = 16) [0m
+  [4;36;1mKeywordPage Load (0.0ms)[0m   [0;1mSELECT * FROM `keyword_pages` WHERE (`keyword_pages`.`keyword` = 'hehe ') LIMIT 1[0m
+Rendered news/_news (5.2ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `be_follows` WHERE (`be_follows`.`user_id` = 1 AND `be_follows`.`follower_id` = 1) LIMIT 1[0m
+  [4;35;1mResource Load Including Associations (0.1ms)[0m   [0mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`content` AS t0_r6, `resources`.`title` AS t0_r7, `resources`.`form` AS t0_r8, `resources`.`link_url` AS t0_r9, `resources`.`description` AS t0_r10, `resources`.`authority` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`id` = 2) ORDER BY users.value DESC[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `replies` WHERE (`replies`.resource_id = 2) [0m
+  [4;35;1mKeywordPage Load (0.1ms)[0m   [0mSELECT * FROM `keyword_pages` WHERE (`keyword_pages`.`keyword` = '什么万一') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `replies` WHERE (`replies`.resource_id = 2) [0m
+Rendered news/_news (5.6ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `be_follows` WHERE (`be_follows`.`user_id` = 1 AND `be_follows`.`follower_id` = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC[0m
+  [4;36;1mBeFollow Load (0.0ms)[0m   [0;1mSELECT * FROM `be_follows` WHERE (`be_follows`.`user_id` = 1 AND `be_follows`.`follower_id` = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC[0m
+Rendered news/_news (3.3ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `be_follows` WHERE (`be_follows`.`user_id` = 1 AND `be_follows`.`follower_id` = 1) LIMIT 1[0m
+  [4;36;1mResource Load Including Associations (0.1ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`content` AS t0_r6, `resources`.`title` AS t0_r7, `resources`.`form` AS t0_r8, `resources`.`link_url` AS t0_r9, `resources`.`description` AS t0_r10, `resources`.`authority` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`id` = 14) ORDER BY users.value DESC[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `replies` WHERE (`replies`.resource_id = 14) [0m
+  [4;36;1mKeywordPage Load (0.0ms)[0m   [0;1mSELECT * FROM `keyword_pages` WHERE (`keyword_pages`.`keyword` = '＃') LIMIT 1[0m
+Rendered news/_news (5.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `be_follows` WHERE (`be_follows`.`user_id` = 1 AND `be_follows`.`follower_id` = 1) LIMIT 1[0m
+  [4;35;1mResource Load Including Associations (0.1ms)[0m   [0mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`content` AS t0_r6, `resources`.`title` AS t0_r7, `resources`.`form` AS t0_r8, `resources`.`link_url` AS t0_r9, `resources`.`description` AS t0_r10, `resources`.`authority` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`id` = 13) ORDER BY users.value DESC[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `replies` WHERE (`replies`.resource_id = 13) [0m
+  [4;35;1mKeywordPage Load (0.0ms)[0m   [0mSELECT * FROM `keyword_pages` WHERE (`keyword_pages`.`keyword` = '你是说什么？可是我不知道欸欸真实地我日我日hhh') LIMIT 1[0m
+Rendered news/_news (5.2ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `be_follows` WHERE (`be_follows`.`user_id` = 1 AND `be_follows`.`follower_id` = 1) LIMIT 1[0m
+  [4;36;1mResource Load Including Associations (0.1ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`content` AS t0_r6, `resources`.`title` AS t0_r7, `resources`.`form` AS t0_r8, `resources`.`link_url` AS t0_r9, `resources`.`description` AS t0_r10, `resources`.`authority` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`id` = 12) ORDER BY users.value DESC[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `replies` WHERE (`replies`.resource_id = 12) [0m
+  [4;36;1mKeywordPage Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_pages` WHERE (`keyword_pages`.`keyword` = 'sdfsd') LIMIT 1[0m
+Rendered news/_news (5.2ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `be_follows` WHERE (`be_follows`.`user_id` = 1 AND `be_follows`.`follower_id` = 1) LIMIT 1[0m
+  [4;35;1mResource Load Including Associations (0.1ms)[0m   [0mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`content` AS t0_r6, `resources`.`title` AS t0_r7, `resources`.`form` AS t0_r8, `resources`.`link_url` AS t0_r9, `resources`.`description` AS t0_r10, `resources`.`authority` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`id` = 11) ORDER BY users.value DESC[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `replies` WHERE (`replies`.resource_id = 11) [0m
+  [4;35;1mKeywordPage Load (0.0ms)[0m   [0mSELECT * FROM `keyword_pages` WHERE (`keyword_pages`.`keyword` = 'hehehehehehehehe') LIMIT 1[0m
+Rendered news/_news (5.4ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `be_follows` WHERE (`be_follows`.`user_id` = 1 AND `be_follows`.`follower_id` = 1) LIMIT 1[0m
+  [4;36;1mResource Load Including Associations (0.1ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`content` AS t0_r6, `resources`.`title` AS t0_r7, `resources`.`form` AS t0_r8, `resources`.`link_url` AS t0_r9, `resources`.`description` AS t0_r10, `resources`.`authority` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`id` = 10) ORDER BY users.value DESC[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `replies` WHERE (`replies`.resource_id = 10) [0m
+  [4;36;1mKeywordPage Load (0.0ms)[0m   [0;1mSELECT * FROM `keyword_pages` WHERE (`keyword_pages`.`keyword` = 'Michael') LIMIT 1[0m
+Rendered news/_news (5.1ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `be_follows` WHERE (`be_follows`.`user_id` = 1 AND `be_follows`.`follower_id` = 1) LIMIT 1[0m
+  [4;35;1mResource Load Including Associations (0.1ms)[0m   [0mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`content` AS t0_r6, `resources`.`title` AS t0_r7, `resources`.`form` AS t0_r8, `resources`.`link_url` AS t0_r9, `resources`.`description` AS t0_r10, `resources`.`authority` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`id` = 5) ORDER BY users.value DESC[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `replies` WHERE (`replies`.resource_id = 5) [0m
+  [4;35;1mKeywordPage Load (0.1ms)[0m   [0mSELECT * FROM `keyword_pages` WHERE (`keyword_pages`.`keyword` = ' 123321') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `replies` WHERE (`replies`.resource_id = 5) [0m
+Rendered news/_news (5.7ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `be_follows` WHERE (`be_follows`.`user_id` = 1 AND `be_follows`.`follower_id` = 1) LIMIT 1[0m
+  [4;35;1mResource Load Including Associations (0.1ms)[0m   [0mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`content` AS t0_r6, `resources`.`title` AS t0_r7, `resources`.`form` AS t0_r8, `resources`.`link_url` AS t0_r9, `resources`.`description` AS t0_r10, `resources`.`authority` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`id` = 9) ORDER BY users.value DESC[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `replies` WHERE (`replies`.resource_id = 9) [0m
+  [4;35;1mKeywordPage Load (0.0ms)[0m   [0mSELECT * FROM `keyword_pages` WHERE (`keyword_pages`.`keyword` = '# <<< .＠＃ ＃阿#&( )#(@)!') LIMIT 1[0m
+Rendered news/_news (4.9ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `be_follows` WHERE (`be_follows`.`user_id` = 1 AND `be_follows`.`follower_id` = 1) LIMIT 1[0m
+  [4;36;1mResource Load Including Associations (0.1ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`content` AS t0_r6, `resources`.`title` AS t0_r7, `resources`.`form` AS t0_r8, `resources`.`link_url` AS t0_r9, `resources`.`description` AS t0_r10, `resources`.`authority` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`id` = 8) ORDER BY users.value DESC[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `replies` WHERE (`replies`.resource_id = 8) [0m
+  [4;36;1mKeywordPage Load (0.0ms)[0m   [0;1mSELECT * FROM `keyword_pages` WHERE (`keyword_pages`.`keyword` = ' 分享一个链接，可以是自己的博客文章地址，相册，或视频，也可以是随便的什么。 新建搜索结果条目>>> 分享一句话，作为一个更长的搜') LIMIT 1[0m
+Rendered news/_news (4.9ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `be_follows` WHERE (`be_follows`.`user_id` = 1 AND `be_follows`.`follower_id` = 1) LIMIT 1[0m
+  [4;35;1mResource Load Including Associations (0.1ms)[0m   [0mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`content` AS t0_r6, `resources`.`title` AS t0_r7, `resources`.`form` AS t0_r8, `resources`.`link_url` AS t0_r9, `resources`.`description` AS t0_r10, `resources`.`authority` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`id` = 7) ORDER BY users.value DESC[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `replies` WHERE (`replies`.resource_id = 7) [0m
+  [4;35;1mKeywordPage Load (0.0ms)[0m   [0mSELECT * FROM `keyword_pages` WHERE (`keyword_pages`.`keyword` = '# 分享一个链接，可以是自己的博客文章地址，相册，或视频，也可以是随便的什么。 新建搜索结果条目>>> # 分享一句话，作为一个更长的搜') LIMIT 1[0m
+Rendered news/_news (4.8ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `be_follows` WHERE (`be_follows`.`user_id` = 1 AND `be_follows`.`follower_id` = 1) LIMIT 1[0m
+  [4;36;1mResource Load Including Associations (0.1ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`content` AS t0_r6, `resources`.`title` AS t0_r7, `resources`.`form` AS t0_r8, `resources`.`link_url` AS t0_r9, `resources`.`description` AS t0_r10, `resources`.`authority` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`id` = 6) ORDER BY users.value DESC[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `replies` WHERE (`replies`.resource_id = 6) [0m
+  [4;36;1mKeywordPage Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_pages` WHERE (`keyword_pages`.`keyword` = '>>>') LIMIT 1[0m
+Rendered news/_news (5.0ms)
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47resources47index46erb at /home/michael/miklme/app/views/resources/index.erb:23)
+Rendered shared/_header (0.9ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `be_follows` WHERE (`be_follows`.`user_id` = 1 AND `be_follows`.`follower_id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `be_follows` WHERE (`be_follows`.`user_id` = 1 AND `be_follows`.`follower_id` = 1) LIMIT 1[0m
+Rendered shared/_user_profile_full (1.3ms)
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-25 17:00:36') AND (`resources`.user_id = 1)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-25 17:00:36') AND (`resources`.user_id = 1)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'TwitterResource' ) ) [0m
+Rendered shared/_footer (0.6ms)
+Completed in 236ms (View: 176, DB: 11) | 200 OK [http://localhost/users/1/resources]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TwitterResourcesController#create (for 127.0.0.1 at 2009-08-26 17:00:52) [POST]
+  Parameters: {"commit"=>"完成", "twitter_resource"=>{"keywords"=>"123"}, "user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mTwitterResource Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mTwitterResource Create (1.0ms)[0m   [0;1mINSERT INTO `resources` (`created_at`, `title`, `updated_at`, `type`, `user_id`, `form`, `content`, `authority`, `shoulu`, `description`, `keyword_page_id`, `keywords`, `link_url`) VALUES('2009-08-26 09:00:52', NULL, '2009-08-26 09:00:52', 'TwitterResource', 1, NULL, NULL, 0, 1, NULL, NULL, '123', NULL)[0m
+  [4;35;1mSQL (52.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mKeywordPage Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `keyword_pages`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mKeywordPage Exists (0.2ms)[0m   [0;1mSELECT `keyword_pages`.id FROM `keyword_pages` WHERE (`keyword_pages`.`keyword` = BINARY '123') LIMIT 1[0m
+  [4;35;1mKeywordPage Create (0.2ms)[0m   [0mINSERT INTO `keyword_pages` (`created_at`, `updated_at`, `keyword`) VALUES('2009-08-26 09:00:52', '2009-08-26 09:00:52', '123')[0m
+  [4;36;1mSQL (48.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mNews Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mNews Create (0.2ms)[0m   [0mINSERT INTO `news` (`created_at`, `resource_id`, `updated_at`, `follower_id`, `user_id`, `news_type`, `comment_id`) VALUES('2009-08-26 09:00:52', NULL, '2009-08-26 09:00:52', NULL, 1, NULL, NULL)[0m
+  [4;36;1mNews Load (0.0ms)[0m   [0;1mMysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1: SELECT * FROM `news` WHERE (#<News:0xb6dd0dcc>) ORDER BY created_at DESC[0m
+  [4;35;1mSQL (47.5ms)[0m   [0mROLLBACK[0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1: SELECT * FROM `news` WHERE (#<News:0xb6dd0dcc>)  ORDER BY created_at DESC):
+  app/models/news.rb:20:in `check_repeat'
+  app/controllers/twitter_resources_controller.rb:23:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (133.9ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TwitterResourcesController#create (for 127.0.0.1 at 2009-08-26 17:02:06) [POST]
+  Parameters: {"commit"=>"完成", "twitter_resource"=>{"keywords"=>"123"}, "user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mTwitterResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTwitterResource Create (0.2ms)[0m   [0mINSERT INTO `resources` (`created_at`, `title`, `updated_at`, `type`, `user_id`, `form`, `content`, `authority`, `shoulu`, `description`, `keyword_page_id`, `keywords`, `link_url`) VALUES('2009-08-26 09:02:07', NULL, '2009-08-26 09:02:07', 'TwitterResource', 1, NULL, NULL, 0, 1, NULL, NULL, '123', NULL)[0m
+  [4;36;1mSQL (65.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mKeywordPage Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `keyword_pages`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mKeywordPage Exists (0.2ms)[0m   [0mSELECT `keyword_pages`.id FROM `keyword_pages` WHERE (`keyword_pages`.`keyword` = BINARY '123') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mNews Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mNews Create (0.1ms)[0m   [0mINSERT INTO `news` (`created_at`, `resource_id`, `updated_at`, `follower_id`, `user_id`, `news_type`, `comment_id`) VALUES('2009-08-26 09:02:07', NULL, '2009-08-26 09:02:07', NULL, 1, NULL, NULL)[0m
+  [4;36;1mSQL (84.9ms)[0m   [0;1mROLLBACK[0m
+
+NameError (undefined local variable or method `params' for #<News:0xb6df8d2c>):
+  app/models/news.rb:20:in `check_repeat'
+  app/controllers/twitter_resources_controller.rb:23:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (121.9ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TwitterResourcesController#create (for 127.0.0.1 at 2009-08-26 17:05:33) [POST]
+  Parameters: {"commit"=>"完成", "twitter_resource"=>{"keywords"=>"123"}, "user_id"=>"1"}
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mTwitterResource Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTwitterResource Create (0.2ms)[0m   [0;1mINSERT INTO `resources` (`created_at`, `title`, `updated_at`, `type`, `user_id`, `form`, `content`, `authority`, `shoulu`, `description`, `keyword_page_id`, `keywords`, `link_url`) VALUES('2009-08-26 09:05:33', NULL, '2009-08-26 09:05:33', 'TwitterResource', 1, NULL, NULL, 0, 1, NULL, NULL, '123', NULL)[0m
+  [4;35;1mSQL (52.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mKeywordPage Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `keyword_pages`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mKeywordPage Exists (0.1ms)[0m   [0;1mSELECT `keyword_pages`.id FROM `keyword_pages` WHERE (`keyword_pages`.`keyword` = BINARY '123') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mNews Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mNews Create (0.2ms)[0m   [0;1mINSERT INTO `news` (`created_at`, `resource_id`, `updated_at`, `follower_id`, `user_id`, `news_type`, `comment_id`) VALUES('2009-08-26 09:05:33', NULL, '2009-08-26 09:05:33', NULL, 1, NULL, NULL)[0m
+  [4;35;1mNews Load (0.0ms)[0m   [0mMysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1: SELECT * FROM `news` WHERE (#<News:0xb6e9e254>) ORDER BY created_at DESC[0m
+  [4;36;1mSQL (47.0ms)[0m   [0;1mROLLBACK[0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1: SELECT * FROM `news` WHERE (#<News:0xb6e9e254>)  ORDER BY created_at DESC):
+  app/models/news.rb:20:in `check_repeat'
+  app/controllers/twitter_resources_controller.rb:23:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (53.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TwitterResourcesController#create (for 127.0.0.1 at 2009-08-26 17:05:58) [POST]
+  Parameters: {"commit"=>"完成", "twitter_resource"=>{"keywords"=>"123"}, "user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mTwitterResource Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mTwitterResource Create (0.2ms)[0m   [0;1mINSERT INTO `resources` (`created_at`, `title`, `updated_at`, `type`, `user_id`, `form`, `content`, `authority`, `shoulu`, `description`, `keyword_page_id`, `keywords`, `link_url`) VALUES('2009-08-26 09:05:58', NULL, '2009-08-26 09:05:58', 'TwitterResource', 1, NULL, NULL, 0, 1, NULL, NULL, '123', NULL)[0m
+  [4;35;1mSQL (63.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mKeywordPage Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `keyword_pages`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mKeywordPage Exists (0.1ms)[0m   [0;1mSELECT `keyword_pages`.id FROM `keyword_pages` WHERE (`keyword_pages`.`keyword` = BINARY '123') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mNews Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mNews Create (0.2ms)[0m   [0;1mINSERT INTO `news` (`created_at`, `resource_id`, `updated_at`, `follower_id`, `user_id`, `news_type`, `comment_id`) VALUES('2009-08-26 09:05:58', NULL, '2009-08-26 09:05:58', NULL, 1, NULL, NULL)[0m
+  [4;35;1mNews Load (0.0ms)[0m   [0mMysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1: SELECT * FROM `news` WHERE (#<News:0xb6f51908>) ORDER BY created_at DESC[0m
+  [4;36;1mSQL (56.1ms)[0m   [0;1mROLLBACK[0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1: SELECT * FROM `news` WHERE (#<News:0xb6f51908>)  ORDER BY created_at DESC):
+  app/models/news.rb:20:in `check_repeat'
+  app/controllers/twitter_resources_controller.rb:23:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (55.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TwitterResourcesController#create (for 127.0.0.1 at 2009-08-26 17:05:59) [POST]
+  Parameters: {"commit"=>"完成", "twitter_resource"=>{"keywords"=>"123"}, "user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (8.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mTwitterResource Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTwitterResource Create (0.2ms)[0m   [0;1mINSERT INTO `resources` (`created_at`, `title`, `updated_at`, `type`, `user_id`, `form`, `content`, `authority`, `shoulu`, `description`, `keyword_page_id`, `keywords`, `link_url`) VALUES('2009-08-26 09:05:59', NULL, '2009-08-26 09:05:59', 'TwitterResource', 1, NULL, NULL, 0, 1, NULL, NULL, '123', NULL)[0m
+  [4;35;1mSQL (57.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mKeywordPage Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `keyword_pages`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mKeywordPage Exists (0.1ms)[0m   [0;1mSELECT `keyword_pages`.id FROM `keyword_pages` WHERE (`keyword_pages`.`keyword` = BINARY '123') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mNews Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mNews Create (0.2ms)[0m   [0;1mINSERT INTO `news` (`created_at`, `resource_id`, `updated_at`, `follower_id`, `user_id`, `news_type`, `comment_id`) VALUES('2009-08-26 09:05:59', NULL, '2009-08-26 09:05:59', NULL, 1, NULL, NULL)[0m
+  [4;35;1mNews Load (0.0ms)[0m   [0mMysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1: SELECT * FROM `news` WHERE (#<News:0xb7042b28>) ORDER BY created_at DESC[0m
+  [4;36;1mSQL (44.0ms)[0m   [0;1mROLLBACK[0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1: SELECT * FROM `news` WHERE (#<News:0xb7042b28>)  ORDER BY created_at DESC):
+  app/models/news.rb:20:in `check_repeat'
+  app/controllers/twitter_resources_controller.rb:23:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (54.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TwitterResourcesController#create (for 127.0.0.1 at 2009-08-26 17:06:07) [POST]
+  Parameters: {"commit"=>"完成", "twitter_resource"=>{"keywords"=>"123"}, "user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mTwitterResource Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTwitterResource Create (0.2ms)[0m   [0;1mINSERT INTO `resources` (`created_at`, `title`, `updated_at`, `type`, `user_id`, `form`, `content`, `authority`, `shoulu`, `description`, `keyword_page_id`, `keywords`, `link_url`) VALUES('2009-08-26 09:06:07', NULL, '2009-08-26 09:06:07', 'TwitterResource', 1, NULL, NULL, 0, 1, NULL, NULL, '123', NULL)[0m
+  [4;35;1mSQL (47.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mKeywordPage Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `keyword_pages`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mKeywordPage Exists (0.1ms)[0m   [0;1mSELECT `keyword_pages`.id FROM `keyword_pages` WHERE (`keyword_pages`.`keyword` = BINARY '123') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mNews Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mNews Create (0.2ms)[0m   [0;1mINSERT INTO `news` (`created_at`, `resource_id`, `updated_at`, `follower_id`, `user_id`, `news_type`, `comment_id`) VALUES('2009-08-26 09:06:07', NULL, '2009-08-26 09:06:07', NULL, 1, NULL, NULL)[0m
+  [4;35;1mNews Load (0.0ms)[0m   [0mMysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1: SELECT * FROM `news` WHERE (#<News:0xb7139018>) ORDER BY created_at DESC[0m
+  [4;36;1mSQL (48.6ms)[0m   [0;1mROLLBACK[0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1: SELECT * FROM `news` WHERE (#<News:0xb7139018>)  ORDER BY created_at DESC):
+  app/models/news.rb:20:in `check_repeat'
+  app/controllers/twitter_resources_controller.rb:23:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (57.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TwitterResourcesController#create (for 127.0.0.1 at 2009-08-26 17:06:08) [POST]
+  Parameters: {"commit"=>"完成", "twitter_resource"=>{"keywords"=>"123"}, "user_id"=>"1"}
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mTwitterResource Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTwitterResource Create (0.2ms)[0m   [0;1mINSERT INTO `resources` (`created_at`, `title`, `updated_at`, `type`, `user_id`, `form`, `content`, `authority`, `shoulu`, `description`, `keyword_page_id`, `keywords`, `link_url`) VALUES('2009-08-26 09:06:08', NULL, '2009-08-26 09:06:08', 'TwitterResource', 1, NULL, NULL, 0, 1, NULL, NULL, '123', NULL)[0m
+  [4;35;1mSQL (60.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mKeywordPage Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `keyword_pages`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mKeywordPage Exists (0.0ms)[0m   [0;1mSELECT `keyword_pages`.id FROM `keyword_pages` WHERE (`keyword_pages`.`keyword` = BINARY '123') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mNews Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mNews Create (0.2ms)[0m   [0;1mINSERT INTO `news` (`created_at`, `resource_id`, `updated_at`, `follower_id`, `user_id`, `news_type`, `comment_id`) VALUES('2009-08-26 09:06:08', NULL, '2009-08-26 09:06:08', NULL, 1, NULL, NULL)[0m
+  [4;35;1mNews Load (0.0ms)[0m   [0mMysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1: SELECT * FROM `news` WHERE (#<News:0xb6d4af60>) ORDER BY created_at DESC[0m
+  [4;36;1mSQL (47.2ms)[0m   [0;1mROLLBACK[0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1: SELECT * FROM `news` WHERE (#<News:0xb6d4af60>)  ORDER BY created_at DESC):
+  app/models/news.rb:20:in `check_repeat'
+  app/controllers/twitter_resources_controller.rb:23:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (93.3ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TwitterResourcesController#create (for 127.0.0.1 at 2009-08-26 17:06:08) [POST]
+  Parameters: {"commit"=>"完成", "twitter_resource"=>{"keywords"=>"123"}, "user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mTwitterResource Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTwitterResource Create (0.2ms)[0m   [0;1mINSERT INTO `resources` (`created_at`, `title`, `updated_at`, `type`, `user_id`, `form`, `content`, `authority`, `shoulu`, `description`, `keyword_page_id`, `keywords`, `link_url`) VALUES('2009-08-26 09:06:08', NULL, '2009-08-26 09:06:08', 'TwitterResource', 1, NULL, NULL, 0, 1, NULL, NULL, '123', NULL)[0m
+  [4;35;1mSQL (82.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mKeywordPage Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `keyword_pages`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mKeywordPage Exists (0.1ms)[0m   [0;1mSELECT `keyword_pages`.id FROM `keyword_pages` WHERE (`keyword_pages`.`keyword` = BINARY '123') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mNews Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mNews Create (25.0ms)[0m   [0;1mINSERT INTO `news` (`created_at`, `resource_id`, `updated_at`, `follower_id`, `user_id`, `news_type`, `comment_id`) VALUES('2009-08-26 09:06:08', NULL, '2009-08-26 09:06:08', NULL, 1, NULL, NULL)[0m
+  [4;35;1mNews Load (0.0ms)[0m   [0mMysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1: SELECT * FROM `news` WHERE (#<News:0xb6d9a678>) ORDER BY created_at DESC[0m
+  [4;36;1mSQL (110.7ms)[0m   [0;1mROLLBACK[0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1: SELECT * FROM `news` WHERE (#<News:0xb6d9a678>)  ORDER BY created_at DESC):
+  app/models/news.rb:20:in `check_repeat'
+  app/controllers/twitter_resources_controller.rb:23:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (136.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
