@@ -41,7 +41,7 @@ class BeFollowsController < ApplicationController
     @be_follow.follower=current_user
     respond_to do |format|
       if @be_follow.save
-        @user.value=+3
+        @user.value=@user.value+3
         @user.save
         n=@user.news.create
         n.owner=@user
@@ -84,7 +84,8 @@ class BeFollowsController < ApplicationController
   def destroy
     @be_follow = BeFollow.find(params[:id])
     @be_follow.destroy
-    @be_follow.user.value=-2
+    @be_follow.user.value=@be_follow.user.value-2
+    @be_follow.user.save
     respond_to do |format|
       format.html { redirect_to(user_follows_path(current_user)) }
       format.xml  { head :ok }

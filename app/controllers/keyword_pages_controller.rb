@@ -3,7 +3,7 @@ class KeywordPagesController < ApplicationController
   auto_complete_for :resource,:keywords
   def show
     @keyword_page=KeywordPage.find(params[:id])
-    @link_url_resources=LinkUrlResource.scoped_by_keywords(@keyword_page.keyword).by_owner_value
+    @link_url_resources=LinkUrlResource.search_by_keywords(@keyword_page.keyword,params[:page]).by_owner_value
     @related_keywords=@keyword_page.related_keywords
     @twitter_resource=TwitterResource.find_by_keywords(@keyword_page.keyword)
     respond_to do |format|

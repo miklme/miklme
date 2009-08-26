@@ -9,4 +9,8 @@ class LinkUrlResource< Resource
 
   named_scope :hot_resources,:include => :comments,:condition => "comments.size>10"
 
+  def self.search_by_keywords(keywords,page)
+    paginate :per_page => 10,:page => page,:conditions => ["keywords=?",keywords]
+  end
+
 end

@@ -7,4 +7,6 @@ class News < ActiveRecord::Base
   def follower
     User.find(self.follower_id)
   end
+
+
 end
