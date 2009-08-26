@@ -333,12 +333,8 @@ a.sc_browseEntry:hover span {
     padding:0;
     width:100%;
 }
-.sb_pag ul, .sb_pag li {
-    list-style-type:none;
-    margin:0;
-    padding:0;
-}
-.sb_pag li {
+
+.sb_pag a,.sb_pag span {
     float:left;
 }
 .sb_pag h4 {

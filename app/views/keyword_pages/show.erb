@@ -25,7 +25,9 @@
       以下为 <%=h @twitter_resource.owner.nick_name %>不包含链接的单一关键字及相关回复。
       <%= render @twitter_resource %>
     <% end %>
-    <%= will_paginate  @link_url_resources  %>
+    <%= render  @link_url_resources  %>
   </ol>
 </div>
-<div class="sb_pag"><ul><li><%= link_to "1" %></li><li><%= link_to "下一页" %></li></ul></div>
+<div class="sb_pag">
+      <%= will_paginate @link_url_resources, :prev_label => '上一页', :next_label => '下一页', :container => true %>
+</div>
