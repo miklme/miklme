@@ -7,4 +7,5 @@
     <%= render  :partial => "link_url_resources/link_url_resource",:collection => @film_results %>
   </ol>
 </div>
-<div class="sb_pag"><ul><li><%= link_to "1" %></li><li><%= link_to "下一页" %></li></ul></div>
+<div class="sb_pag">      <%= will_paginate @film_results, :prev_label => '上一页', :next_label => '下一页' %>
+</div>
