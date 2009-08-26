@@ -4,9 +4,20 @@ class News < ActiveRecord::Base
   belongs_to :comment
   default_scope  :order => "created_at DESC"
 
+  after_save :check_repeat
   def follower
     User.find(self.follower_id)
   end
 
+  def self.list_self_news(current_user,page)
+    paginate :per_page => 15,
+      :page => page,
+      :order => "created_at DESC",
+      :conditions => ["user_id=?",current_user.id]
+  end
+
+  def check_repeat
+    
+  end
 
 end

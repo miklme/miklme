@@ -20,4 +20,5 @@
 
 <% if @news.present? %>
   <%= render :partial => "news/news",:collection => @news %>
-  <% end %>
+  <%= will_paginate @news, :prev_label => '上一页', :next_label => '下一页' %>
+<% end %>

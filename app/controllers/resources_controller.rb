@@ -2,13 +2,13 @@ class ResourcesController < ApplicationController
   before_filter :load_user,:only => [:create,:destroy,:edit,:index,:show,:update]
   auto_complete_for :resource,:keywords
   def index
-    @news=@user.news.find(:all,:order => "created_at DESC")
+    @news=News.list_self_news(current_user,params[:page])
     if @user.link_url_resources.blank?
       @variable_title="革命"
     else
       @variable_title="由你控制的搜索引擎"
     end
-    @resources=@user.resources.find(:all,:order => "created_at DESC")
+    @resources=@user.resources.find(:all,:order => "resources.created_at DESC")
     @twitter_resource=@user.twitter_resources.build
   end
   def show
