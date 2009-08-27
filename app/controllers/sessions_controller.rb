@@ -36,7 +36,7 @@ class SessionsController < ApplicationController
     redirect_to new_session_path
   end
 
-  protected
+  private
   # Track failed login attempts
   def note_failed_signin
     flash[:error] = "出了点小问题，请重新输入密码"

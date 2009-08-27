@@ -1,0 +1,45 @@
+<span class="right">
+  <% if others_news.created_at>Time.now.yesterday%>
+  <em>
+    (今天)
+  </em>
+    <% end %>
+<%=h others_news.created_at.advance(:hours => 8).to_s(:db)%></span>
+<% if others_news.news_type=="comment" %>
+  <p>
+    <%= link_to others_news.owner.name_or_nick_name(current_user),user_path(others_news.owner) %>的链接条目
+    <%=link_to others_news.resource.description,others_news.resource.link_url,:popup => true,:class => "title" %>被评论了
+    <%=link_to others_news.resource.comments.count,user_link_url_resource_comments_path(others_news.owner,others_news.resource),:popup => true %>次，
+    <% a=Comment.sum(:rating,:conditions => ["resource_id=?",others_news.resource.id]) %>
+    <% if a>=0 %>
+      价值点数+ <%=h a %>
+    <% else %>
+      价值点数减少了 <%=h -a %>(反响恶劣)
+    <% end %>
+  </p>
+<% elsif others_news.news_type=="twitter_resource" %>
+  <p>
+    <%=link_to others_news.owner.name_or_nick_name(current_user),user_path(others_news.owner) %>说：
+    <cite><%=h others_news.resource.keywords %></cite>
+    <em><%= link_to "#{others_news.resource.replies.count}条回应>>>", keyword_page_path(via_keyword_to_keyword_page(others_news.resource.keywords))%></em>
+  </p>
+<% elsif others_news.news_type=="link_url_resource" %>
+  <p>
+    <%= link_to "#{others_news.owner.name_or_nick_name(current_user)}",user_path(others_news.resource.owner) -%>创建了
+    <% if others_news.resource.authority? %>
+      <%= "原创" -%>
+    <% end %>
+    <% if others_news.resource.form=="视频" -%>
+      <%="视频" -%>
+    <% elsif others_news.resource.form=="音频" -%>
+      <%= "音乐" %>
+    <% elsif others_news.resource.form=="图片" %>
+      <%="图片" %>
+    <% elsif others_news.resource.form=="文字、文档" %>
+      <%="文章" %>
+    <% end %>
+    <%= link_to "#{others_news.resource.description}",others_news.resource.link_url,:popup => true,:class => "title" %>
+    （关键字为 <%=link_to others_news.resource.keywords,keyword_page_path(via_keyword_to_keyword_page(others_news.resource.keywords)) %>）
+  </p>
+<%end  %>
+

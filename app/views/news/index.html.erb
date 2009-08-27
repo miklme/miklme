@@ -1,1 +1,2 @@
-<%= render :partial => "news",:collection => @news %>
+<%= render :partial => "others_news",:collection => @others_news %>
+<%= will_paginate @others_news, :prev_label => '上一页', :next_label => '下一页' %>

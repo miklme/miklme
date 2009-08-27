@@ -20,6 +20,7 @@ class RepliedCommentsController < ApplicationController
     end
   end
 
+  private
   def find_user_and_resource_and_comment
     @user=User.find(params[:user_id])
     @link_url_resource=Resource.find(params[:link_url_resource_id])

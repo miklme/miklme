@@ -9,7 +9,7 @@
       <div id="replies">
         <%= render :partial  => "replies/reply",:collection => twitter_resource.replies %>
       </div>
+        <%= link_to "回复",new_user_twitter_resource_reply_path(twitter_resource.owner,twitter_resource),:popup => ['新回复', 'height=180,width=490'] %>
     </td>
   </tr>
 </table>
-<%= link_to "回复",new_user_twitter_resource_reply_path(twitter_resource.owner,@twitter_resource),:popup => ['新回复', 'height=180,width=490'] %>

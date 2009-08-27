@@ -1,10 +1,7 @@
 class NewsController < ApplicationController
   before_filter :load_user
   def index
-   n=@user.followings.map do |following|
-      following.news
-    end
-    @news=n.flatten
+    @others_news=News.list_others_news(@user,params[:page])
   end
 
   private

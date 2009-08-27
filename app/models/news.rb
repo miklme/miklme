@@ -4,7 +4,6 @@ class News < ActiveRecord::Base
   belongs_to :comment
   default_scope  :order => "created_at DESC"
 
-  after_save :check_repeat
   def follower
     User.find(self.follower_id)
   end
@@ -16,10 +15,14 @@ class News < ActiveRecord::Base
       :conditions => ["user_id=?",current_user.id]
   end
 
-  def check_repeat
-    if News.find(:all,:conditions => self).count>=2
-      News.find(:last,:conditions => self,:order => "news.created_at DESC").destroy
+  def self.list_others_news(user,page)
+    following_ids=user.followings.map do |f|
+      f.id
     end
+    paginate_by_user_id following_ids,
+      :per_page => 15,
+      :page => page,
+      :order  => "created_at DESC",
+      :conditions => "news_type='comment' or news_type='twitter_resource' or news_type='link_url_resource'"
   end
-
 end
