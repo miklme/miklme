@@ -29,6 +29,9 @@ a:visited {
 a:hover, h3 a {
     text-decoration:underline;
 }
+h3 a:visited {
+    color:#663399
+}
 h1, h2, h3, h4, h5, h6 {
     color:#525051;
     font-size:small;
@@ -69,13 +72,11 @@ h2 span a, h2 span a:hover {
 img {
     border:0 none;
 }
-cite, .sb_cite {
+cite a, .sb_cite,cite {
     color:#568E1A;
     font-style:normal;
-    word-wrap:break-word;
 }
 cite a{text-decoration:underline}
-cite a:visited {color:#568E1A}
 .sb_count {
     color:#898994;
     font-size:93%;

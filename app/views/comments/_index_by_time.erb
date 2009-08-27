@@ -9,15 +9,7 @@
       <%= render :partial => "shared/user_profile",:object => current_user %>
     </td>
     <td width="520">
-      <% form_for([@user,@resource,@comment]) do |f| %>
-        <%= f.error_messages %>
-        <p>
-          <%= f.text_area :content,:size => "48x4"%>
-        </p>
-        <p>
-          <%= f.submit '就这样' %>
-        </p>
-      <% end %>
+      <%= render :partial => "form" %>
     </td>
   </tr>
 </table>

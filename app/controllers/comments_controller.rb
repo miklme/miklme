@@ -7,7 +7,7 @@ class CommentsController < ApplicationController
   def index
     @keyword_page=KeywordPage.find_by_keyword(@resource.keywords)
     @related_keywords=@keyword_page.related_keywords
-    @comments = @resource.comments.parent_comments.by_owner_value
+    @comments=Comment.find_parent_comments(@resource,params[:page])
     @comment=@resource.comments.build
     respond_to do |format|
       format.html # index.html.erb
@@ -18,7 +18,7 @@ class CommentsController < ApplicationController
   def index_by_time
     @keyword_page=KeywordPage.find_by_keyword(@resource.keywords)
     @related_keywords=@keyword_page.related_keywords
-    @comments = @resource.comments.parent_comments.by_time
+    @comments=Comment.find_parent_comments_by_time(@resource,params[:page])
     @comment=@resource.comments.build
     render :update do |page|
       page.replace_html "content",:partial => "index_by_time"
