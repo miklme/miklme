@@ -5,7 +5,6 @@ class KeywordPagesController < ApplicationController
     @keyword_page=KeywordPage.find(params[:id])
     @link_url_resources=LinkUrlResource.search_by_keywords(@keyword_page.keyword,params[:page])
     @related_keywords=@keyword_page.related_keywords
-    @twitter_resource=TwitterResource.find_by_keywords(@keyword_page.keyword)
     flash[:keyword]="这个页面的关键字是“#{@keyword_page.keyword}”,因此你需要在“关键字”中输入“#{@keyword_page.keyword}”"
     respond_to do |format|
       format.html

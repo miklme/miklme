@@ -1,0 +1,22 @@
+<div id="header">
+  <div id="logo2">
+    <h1><%= link_to "Mikl",new_user_searched_keyword_path(current_user) %><%= link_to ".Me",user_path(current_user) %></h1>
+    <div>
+      <p>
+        <%= link_to_unless_current "搜索链接",new_user_searched_keyword_path(current_user) %>
+        <%= link_to_unless_current "搜索人们呓语什么",new_user_searched_content_path(current_user) %>
+      </p>
+      <% form_tag :action => :search do%>
+        <%= text_field :twitter_resource,:content,:size => 46%>
+        <%=submit_tag "搜索" %>
+      <% end %>
+      <div>
+        <%= link_to "新增一条呓语",user_path(current_user),:popup => true%>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="main">
+  <%= render :partial => "shared/footer" %>
+</div>

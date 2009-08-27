@@ -21,10 +21,6 @@
 </div>
 <div id="results">
   <ol class="sb_results" id="wg0">
-    <%if @twitter_resource.present? %>
-      以下为 <%=h @twitter_resource.owner.nick_name %>不包含链接的单一关键字及相关回复。
-      <%= render @twitter_resource %>
-    <% end %>
     <%= render  @link_url_resources  %>
   </ol>
 </div>

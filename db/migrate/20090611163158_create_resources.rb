@@ -2,18 +2,19 @@ class CreateResources < ActiveRecord::Migration
   def self.up
     create_table :resources do |t|
       t.integer :keyword_page_id
-      t.string :keywords,:limit => 139,:null => false
+      t.string :keywords,:limit => 20,:null => false
       t.string :type
       t.boolean :shoulu,:default => true
       t.integer :user_id
       #blog_resources
-      t.text :content
       t.string :title
       #attributes for link_url resources
       t.string :form
       t.string :link_url
       t.string :description
       t.boolean :authority,:default => false
+      #attributes for twitter_resources
+      t.text :content
       t.timestamps
     end
   end
