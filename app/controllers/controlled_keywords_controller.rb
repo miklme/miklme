@@ -3,7 +3,6 @@ class ControlledKeywordsController < ApplicationController
   # GET /keywords
   # GET /keywords.xml
   def index
-    @keywords = @user.owned_keywords
     @controlled_keywords=@user.controlled_keywords
     @user.followers
     respond_to do |format|
