@@ -12,40 +12,8 @@ class KeywordPagesController < ApplicationController
     end
   end
 
-  # GET /keyword_pages/new
-  # GET /keyword_pages/new.xml
-  def new
-    @keyword_page = KeywordPage.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @keyword_page }
-    end
-  end
-
-  # GET /keyword_pages/1/edit
-  def edit
-    @keyword_page=KeywordPage.find(params[:id])
-    redirect_to keyword_page_related_keywords_path(@keyword_page)
-  end
-
   # PUT /keyword_pages/1
   # PUT /keyword_pages/1.xml
-  def update
-    @keyword_page = KeywordPage.find(params[:id])
-
-    respond_to do |format|
-      if @keyword_page.update_attributes(params[:keyword_page])
-        flash[:notice] = 'KeywordPage was successfully updated.'
-        format.html { redirect_to(@keyword_page) }
-        format.xml  { head :ok }
-      else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @keyword_page.errors, :status => :unprocessable_entity }
-      end
-    end
-  end
-
   def show_film
     @keyword_page=KeywordPage.find(params[:id])
     @film_results=LinkUrlResource.search_by_keywords_and_form(@keyword_page.keyword,"视频",params[:page])
