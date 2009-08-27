@@ -12,8 +12,10 @@ class RepliesController < ApplicationController
     respond_to do |format|
       if @reply.save
         u=User.find(params[:user_id])
-        u.value=u.value+0.1
-        u.save
+        if not u==current_user
+          u.value=u.value+0.1
+          u.save
+        end
         n=@twitter_resource.owner.news.create
         n.owner=@twitter_resource.owner
         n.resource=@twitter_resource

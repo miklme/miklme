@@ -48,8 +48,10 @@ class CommentsController < ApplicationController
     @comment.owner=current_user
     if @comment.save
       u=User.find(params[:user_id])
-      u.value =u.value+params[:comment][:rating].to_i
-      u.save
+      if not u==current_user
+        u.value =u.value+params[:comment][:rating].to_i
+        u.save
+      end
       n=@resource.owner.news.create
       n.news_type="comment"
       n.resource=@resource
