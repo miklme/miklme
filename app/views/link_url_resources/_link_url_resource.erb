@@ -13,10 +13,13 @@
               <li><cite><%= link_to "#{link_url_resource.comments.size}条回应>>>", user_link_url_resource_comments_path(link_url_resource.owner,link_url_resource),:popup => true %></cite></li>
               <li><%=h link_url_resource.link_url %></li>
             </ul>
-            </td>
+          </td>
           <td width="100">
             <% if not link_url_resource.owner == current_user %>
               <%= button_to "此条目名不副实",minus_value_user_link_url_resource_path(link_url_resource.owner,link_url_resource) %>
+            <% else %>
+              <div><%= link_to "编辑",edit_user_link_url_resource_path(link_url_resource.owner,link_url_resource) %>(关键字：<strong><%= link_url_resource.keywords %></strong>)
+              </div>
             <% end %>
           </td>
           <td width="80"><%= render "shared/user_profile",:object => link_url_resource.owner %>

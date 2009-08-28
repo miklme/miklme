@@ -1,12 +1,12 @@
 class LinkUrlResourcesController < ApplicationController
-  before_filter :find_user,:only => [:add_value,:authority,:not_authority,:create,:edit,:index,:minus_value,:show,:new]
+  before_filter :find_user,:except => :auto_complete_for_link_url_resource_keywords
   auto_complete_for :link_url_resource,:keywords,:limit => 7
   def new
     @link_url_resource=@user.link_url_resources.build
   end
 
   def edit
-    
+    @link_url_resource=LinkUrlResource.find(params[:id])
   end
 
   def index
@@ -28,6 +28,15 @@ class LinkUrlResourcesController < ApplicationController
     end
   end
 
+  def update
+    @link_url_resource=@user.link_url_resources.find(params[:id])
+    @link_url_resource.update_attributes(params[:link_url_resource])
+    if @link_url_resource.save
+      flash[:updated]="修改成功。"
+      render :action => :edit,:layout => "link_url_resources"
+    end
+  end
+
   def authority
     @authority_link_url_resources=@user.link_url_resources.scoped_by_authority(true)
   end
@@ -35,6 +44,7 @@ class LinkUrlResourcesController < ApplicationController
   def not_authority
     @not_authority_link_url_resources=@user.link_url_resources.scoped_by_authority(false)
   end
+
 
   def minus_value
     o=Resource.find(params[:id]).owner

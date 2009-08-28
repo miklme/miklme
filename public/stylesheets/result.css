@@ -1,6 +1,7 @@
 * {
     vertical-align: text-top;
 }
+
 body {
     -moz-background-clip:border;
     -moz-background-inline-policy:continuous;
@@ -322,7 +323,6 @@ a.sc_browseEntry:hover span {
 .sb_results p {
     line-height:1.3em;
     margin:0;
-    word-wrap:break-word;
 }
 .sb_results .sb_meta li, .sp_pss li, .sb_sitespec li {
     display:inline;

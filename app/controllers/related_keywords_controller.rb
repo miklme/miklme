@@ -1,6 +1,6 @@
 class RelatedKeywordsController < ApplicationController
   auto_complete_for :resource,:keywords
-  before_filter :find_keyword_page,:only => [:new,:create,:destroy,:index]
+  before_filter :find_keyword_page,:except => :auto_complete_for_resource_keywords
   def index
     @related_keywords=@keyword_page.related_keywords
   end
