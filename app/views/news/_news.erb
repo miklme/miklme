@@ -27,8 +27,8 @@
 <% elsif news.news_type=="twitter_resource" %>
   <p>
     我说：
-    <cite><%=h news.resource.keywords %></cite>
-    <em><%= link_to "#{news.resource.replies.count}条回应>>>", keyword_page_path(via_keyword_to_keyword_page(news.resource.keywords))%></em>
+    <cite><%=h news.resource.content %></cite>
+    <em><%= link_to "#{news.resource.replies.count}条回应>>>", user_twitter_resource_path(news.resource.owner,news.resource)%></em>
   </p>
 <% elsif news.news_type=="link_url_resource" %>
   <p>
@@ -58,9 +58,9 @@
   </p>
 <% elsif news.news_type=="twitter_resource_reply" %>
   <p>
-    我的关键字
-    <cite><%=truncate news.resource.keywords,:length => 14%></cite>被回复了
-    <em><%=link_to "#{news.resource.replies.count}次>>>",keyword_page_path(via_keyword_to_keyword_page(news.resource.keywords)) %></em>,价值点数＋ <%=h news.resource.replies.count*0.2 %>
+    我的呓语
+    <cite><%=truncate news.resource.content,:length => 14%></cite>被回复了
+    <em><%=link_to "#{news.resource.replies.count}次>>>",user_twitter_resource_path(news.resource.owner,news.resource) %></em>,价值点数＋ <%=h news.resource.replies.count*0.2 %>
   </p>
 <%end  %>
 

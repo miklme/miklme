@@ -6,7 +6,7 @@
         <%= link_to_unless_current "搜索链接",new_user_searched_keyword_path(current_user) %>
         <%= link_to_unless_current "搜索人们呓语什么",new_user_searched_content_path(current_user) %>
       </p>
-      <% form_tag :action => :search do%>
+      <% form_tag :action => :show do%>
         <%= text_field :twitter_resource,:content,:size => 46%>
         <%=submit_tag "搜索" %>
       <% end %>

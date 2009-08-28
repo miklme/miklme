@@ -1,7 +1,7 @@
 class CreateResources < ActiveRecord::Migration
   def self.up
     create_table :resources do |t|
-      t.string :keywords,:limit => 20,:null => false
+      t.string :keywords,:limit => 20
       t.string :type
       t.boolean :shoulu,:default => true
       t.integer :user_id
