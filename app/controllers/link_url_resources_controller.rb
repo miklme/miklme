@@ -1,6 +1,6 @@
 class LinkUrlResourcesController < ApplicationController
   before_filter :find_user,:only => [:add_value,:authority,:not_authority,:create,:edit,:index,:minus_value,:show,:new]
-  auto_complete_for :link_url_resource,:keywords
+  auto_complete_for :link_url_resource,:keywords,:limit => 7
   def new
     @link_url_resource=@user.link_url_resources.build
   end
