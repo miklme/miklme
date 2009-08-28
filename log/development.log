@@ -6734,3 +6734,1421 @@ ActionView::MissingTemplate (Missing template comments/new.erb in view path app/
   /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
 
 Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#new (for 127.0.0.1 at 2009-08-27 20:10:09) [GET]
+  Parameters: {"user_id"=>"2"}
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+Rendering template within layouts/searched_keywords
+Rendering searched_keywords/new
+Rendered shared/_footer (0.5ms)
+Completed in 24ms (View: 4, DB: 1) | 200 OK [http://localhost/users/2/searched_keywords/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#notification (for 127.0.0.1 at 2009-08-27 20:10:09) [POST]
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+
+ActionView::MissingTemplate (Missing template searched_keywords/notification.erb in view path app/views):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedContentController#new (for 127.0.0.1 at 2009-08-27 20:10:10) [GET]
+  Parameters: {"user_id"=>"2"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+Rendering template within layouts/searched_content
+Rendering searched_content/new
+Rendered shared/_footer (0.6ms)
+Completed in 30ms (View: 4, DB: 1) | 200 OK [http://localhost/users/2/searched_content/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-08-27 20:10:13) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC[0m
+Redirected to http://localhost:3000/users/2/resources
+Completed in 20ms (DB: 1) | 302 Found [http://localhost/users/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-08-27 20:10:13) [GET]
+  Parameters: {"user_id"=>"2"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC[0m
+  [4;35;1mNews Load (0.1ms)[0m   [0mSELECT * FROM `news` WHERE (user_id=2) ORDER BY created_at DESC LIMIT 0, 15[0m
+  [4;36;1mLinkUrlResource Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mLinkUrlResource Load Including Associations (0.1ms)[0m   [0mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`content` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.user_id = 2) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) ORDER BY users.value DESC[0m
+  [4;36;1mResource Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mResource Load Including Associations (0.1ms)[0m   [0mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`content` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.user_id = 2) ORDER BY resources.created_at DESC, users.value DESC[0m
+  [4;36;1mTwitterResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/resources
+Rendering resources/index
+Rendered twitter_resources/_form (1.4ms)
+  [4;35;1mNews Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+  [4;36;1mResource Load Including Associations (0.1ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`content` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`id` = 1) ORDER BY users.value DESC[0m
+  [4;35;1mKeywordPage Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `keyword_pages`[0m
+  [4;36;1mKeywordPage Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_pages` WHERE (`keyword_pages`.`keyword` = 'sss') LIMIT 1[0m
+Rendered news/_news (12.2ms)
+Rendered shared/_header (0.8ms)
+  [4;35;1mBeFollow Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `be_follows`[0m
+  [4;36;1mBeFollow Load (0.1ms)[0m   [0;1mSELECT * FROM `be_follows` WHERE (`be_follows`.`follower_id` = 2 AND `be_follows`.`user_id` = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `be_follows` WHERE (`be_follows`.`follower_id` = 2 AND `be_follows`.`user_id` = 2) LIMIT 1[0m
+Rendered shared/_user_profile_full (6.2ms)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-26 20:10:13') AND (`resources`.user_id = 2)) AND (`resources`.user_id = 2)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-26 20:10:13') AND (`resources`.user_id = 2)) AND (`resources`.user_id = 2)) AND ( (`resources`.`type` = 'TwitterResource' ) ) [0m
+Rendered shared/_footer (0.5ms)
+Completed in 73ms (View: 25, DB: 6) | 200 OK [http://localhost/users/2/resources]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#new (for 127.0.0.1 at 2009-08-27 20:10:14) [GET]
+  Parameters: {"user_id"=>"2"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+Rendering template within layouts/searched_keywords
+Rendering searched_keywords/new
+Rendered shared/_footer (0.5ms)
+Completed in 28ms (View: 4, DB: 1) | 200 OK [http://localhost/users/2/searched_keywords/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#notification (for 127.0.0.1 at 2009-08-27 20:10:14) [POST]
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+
+ActionView::MissingTemplate (Missing template searched_keywords/notification.erb in view path app/views):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#notification (for 127.0.0.1 at 2009-08-27 20:11:51) [POST]
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC LIMIT 1[0m
+
+ActionView::MissingTemplate (Missing template searched_keywords/notification.erb in view path app/views):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-08-28 09:30:46) [GET]
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering sessions/new
+Rendered shared/_footer (17.6ms)
+Completed in 168ms (View: 69, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-08-28 09:30:52) [POST]
+  Parameters: {"commit"=>"  进入Michael  ", "username"=>"michael", "password"=>"123456"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (username = 'michael' ) ORDER BY value DESC LIMIT 1[0m
+Redirected to http://localhost:3000/users/1
+Completed in 22ms (DB: 1) | 302 Found [http://localhost/session]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-08-28 09:30:52) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+Redirected to http://localhost:3000/users/1/resources
+Completed in 248ms (DB: 3) | 302 Found [http://localhost/users/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2009-08-28 09:30:52) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mNews Load (0.4ms)[0m   [0mSELECT * FROM `news` WHERE (user_id=1) ORDER BY created_at DESC LIMIT 0, 15[0m
+  [4;36;1mLinkUrlResource Columns (4.4ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mLinkUrlResource Load Including Associations (0.7ms)[0m   [0mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`content` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.user_id = 1) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) ORDER BY users.value DESC[0m
+  [4;36;1mResource Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mResource Load Including Associations (0.5ms)[0m   [0mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`content` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.user_id = 1) ORDER BY resources.created_at DESC, users.value DESC[0m
+  [4;36;1mTwitterResource Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/resources
+Rendering resources/index
+Rendered twitter_resources/_form (9.0ms)
+Rendered shared/_header (17.9ms)
+  [4;35;1mBeFollow Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `be_follows`[0m
+  [4;36;1mBeFollow Load (0.2ms)[0m   [0;1mSELECT * FROM `be_follows` WHERE (`be_follows`.`follower_id` = 1 AND `be_follows`.`user_id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `be_follows` WHERE (`be_follows`.`follower_id` = 1 AND `be_follows`.`user_id` = 1) LIMIT 1[0m
+Rendered shared/_user_profile_full (43.2ms)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 09:30:52') AND (`resources`.user_id = 1)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 09:30:52') AND (`resources`.user_id = 1)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'TwitterResource' ) ) [0m
+Rendered shared/_footer (0.6ms)
+Completed in 335ms (View: 129, DB: 10) | 200 OK [http://localhost/users/1/resources]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LinkUrlResourcesController#new (for 127.0.0.1 at 2009-08-28 09:30:57) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mLinkUrlResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/link_url_resources
+Rendering link_url_resources/new
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 09:30:57') AND (`resources`.`authority` = 1)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 09:30:57') AND (`resources`.`authority` = 0)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+Rendered shared/_footer (1.2ms)
+Completed in 165ms (View: 73, DB: 2) | 200 OK [http://localhost/users/1/link_url_resources/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#new (for 127.0.0.1 at 2009-08-28 09:31:09) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+Rendering template within layouts/searched_keywords
+Rendering searched_keywords/new
+Rendered shared/_footer (1.0ms)
+Completed in 58ms (View: 38, DB: 1) | 200 OK [http://localhost/users/1/searched_keywords/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#notification (for 127.0.0.1 at 2009-08-28 09:31:09) [POST]
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+
+ActionView::MissingTemplate (Missing template searched_keywords/notification.erb in view path app/views):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#auto_complete_for_link_url_resource_keywords (for 127.0.0.1 at 2009-08-28 09:31:10) [GET]
+  Parameters: {"link_url_resource"=>{"keywords"=>""}}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mLinkUrlResource Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mLinkUrlResource Load Including Associations (0.7ms)[0m   [0mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`content` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (LOWER(`resources`.keywords) LIKE '%%') AND ( (`resources`.`type` = 'LinkUrlResource' ) ) ORDER BY users.value DESC LIMIT 15[0m
+Completed in 56ms (View: 25, DB: 3) | 200 OK [http://localhost/searched_keywords/auto_complete_for_link_url_resource_keywords?link_url_resource%5Bkeywords%5D=]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#auto_complete_for_link_url_resource_keywords (for 127.0.0.1 at 2009-08-28 09:31:11) [GET]
+  Parameters: {"link_url_resource"=>{"keywords"=>"sss"}}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mLinkUrlResource Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mLinkUrlResource Load Including Associations (0.8ms)[0m   [0mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`content` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (LOWER(`resources`.keywords) LIKE '%sss%') AND ( (`resources`.`type` = 'LinkUrlResource' ) ) ORDER BY users.value DESC LIMIT 15[0m
+Completed in 43ms (View: 5, DB: 3) | 200 OK [http://localhost/searched_keywords/auto_complete_for_link_url_resource_keywords?link_url_resource%5Bkeywords%5D=sss]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#create (for 127.0.0.1 at 2009-08-28 09:31:11) [POST]
+  Parameters: {"user_id"=>"1", "keywords"=>"sss"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mKeywordPage Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `keyword_pages`[0m
+  [4;35;1mKeywordPage Load (0.3ms)[0m   [0mSELECT * FROM `keyword_pages` WHERE (`keyword_pages`.`keyword` = 'sss') LIMIT 1[0m
+  [4;36;1mSearchedKeyword Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `searched_keywords`[0m
+  [4;35;1mSearchedKeyword Load (0.3ms)[0m   [0mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.`name` = 'sss') AND (`searched_keywords`.user_id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSearchedKeyword Exists (0.3ms)[0m   [0mSELECT `searched_keywords`.id FROM `searched_keywords` WHERE (`searched_keywords`.`name` = BINARY 'sss' AND `searched_keywords`.user_id = 1) LIMIT 1[0m
+  [4;36;1mSearchedKeyword Create (0.2ms)[0m   [0;1mINSERT INTO `searched_keywords` (`name`, `created_at`, `updated_at`, `searched_times`, `user_id`) VALUES('sss', '2009-08-28 01:31:11', '2009-08-28 01:31:11', 1, 1)[0m
+  [4;35;1mSQL (56.6ms)[0m   [0mCOMMIT[0m
+Completed in 125ms (View: 1, DB: 60) | 200 OK [http://localhost/users/1/searched_keywords]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordPagesController#show (for 127.0.0.1 at 2009-08-28 09:31:11) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mKeywordPage Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `keyword_pages`[0m
+  [4;35;1mKeywordPage Load (0.2ms)[0m   [0mSELECT * FROM `keyword_pages` WHERE (`keyword_pages`.`id` = 1) [0m
+  [4;36;1mLinkUrlResource Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mLinkUrlResource Load Including Associations (0.7ms)[0m   [0mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`content` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (keywords='sss') AND ( (`resources`.`type` = 'LinkUrlResource' ) ) ORDER BY users.value DESC LIMIT 0, 10[0m
+Rendering template within layouts/keyword_pages
+Rendering keyword_pages/show
+  [4;36;1mLinkUrlResource Load Including Associations (0.1ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`content` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.user_id = 1) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) ORDER BY users.value DESC[0m
+  [4;35;1mComment Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mComment Load Including Associations (1.3ms)[0m   [0;1mSELECT `comments`.`id` AS t0_r0, `comments`.`content` AS t0_r1, `comments`.`resource_id` AS t0_r2, `comments`.`user_id` AS t0_r3, `comments`.`rating` AS t0_r4, `comments`.`parent_comment_id` AS t0_r5, `comments`.`created_at` AS t0_r6, `comments`.`updated_at` AS t0_r7, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `comments` LEFT OUTER JOIN `users` ON `users`.id = `comments`.user_id WHERE (`comments`.resource_id = 1) AND (`comments`.resource_id = 1) ORDER BY users.value DESC LIMIT 3[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.resource_id = 1) [0m
+  [4;36;1mBeFollow Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `be_follows`[0m
+  [4;35;1mBeFollow Load (0.2ms)[0m   [0mSELECT * FROM `be_follows` WHERE (`be_follows`.`follower_id` = 1 AND `be_follows`.`user_id` = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `be_follows` WHERE (`be_follows`.`follower_id` = 1 AND `be_follows`.`user_id` = 2) LIMIT 1[0m
+Rendered shared/_user_profile (18.4ms)
+Rendered link_url_resources/_link_url_resource (48.7ms)
+  [4;35;1mRelatedKeyword Load (0.3ms)[0m   [0mSELECT * FROM `related_keywords` WHERE (`related_keywords`.keyword_page_id = 1) [0m
+Rendered shared/_footer (1.0ms)
+Completed in 143ms (View: 85, DB: 7) | 200 OK [http://localhost/keyword_pages/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2009-08-28 09:33:26) [GET]
+  Parameters: {"link_url_resource_id"=>"1", "user_id"=>"2"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC[0m
+  [4;35;1mLinkUrlResource Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mLinkUrlResource Load Including Associations (0.5ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`content` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`id` = 1) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) ORDER BY users.value DESC[0m
+  [4;35;1mKeywordPage Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `keyword_pages`[0m
+  [4;36;1mKeywordPage Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_pages` WHERE (`keyword_pages`.`keyword` = 'sss') LIMIT 1[0m
+  [4;35;1mComment Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mComment Load Including Associations (0.6ms)[0m   [0;1mSELECT `comments`.`id` AS t0_r0, `comments`.`content` AS t0_r1, `comments`.`resource_id` AS t0_r2, `comments`.`user_id` AS t0_r3, `comments`.`rating` AS t0_r4, `comments`.`parent_comment_id` AS t0_r5, `comments`.`created_at` AS t0_r6, `comments`.`updated_at` AS t0_r7, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `comments` LEFT OUTER JOIN `users` ON `users`.id = `comments`.user_id WHERE (resource_id=1 and parent_comment_id is NULL) ORDER BY users.value DESC LIMIT 0, 10[0m
+Rendering template within layouts/comments
+Rendering comments/index
+  [4;35;1mBeFollow Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `be_follows`[0m
+  [4;36;1mBeFollow Load (0.1ms)[0m   [0;1mSELECT * FROM `be_follows` WHERE (`be_follows`.`follower_id` = 1 AND `be_follows`.`user_id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `be_follows` WHERE (`be_follows`.`follower_id` = 1 AND `be_follows`.`user_id` = 1) LIMIT 1[0m
+Rendered shared/_user_profile (9.1ms)
+Rendered comments/_form (3.0ms)
+  [4;36;1mRelatedKeyword Load (0.1ms)[0m   [0;1mSELECT * FROM `related_keywords` WHERE (`related_keywords`.keyword_page_id = 1) [0m
+Rendered shared/_footer (3.3ms)
+Completed in 172ms (View: 58, DB: 6) | 200 OK [http://localhost/users/2/link_url_resources/1/comments]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-08-28 09:33:27) [GET]
+
+ActionController::RoutingError (No route matches "/users/2/link_url_resources/images/j2.jpg" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-08-28 09:33:27) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-08-28 09:34:42) [POST]
+  Parameters: {"comment"=>{"rating"=>"0", "content"=>"内容包含了包括《Thriller》在内的数十张专辑，以及在线试听。"}, "commit"=>"就这样", "link_url_resource_id"=>"1", "user_id"=>"2"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC[0m
+  [4;36;1mLinkUrlResource Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mLinkUrlResource Load Including Associations (0.1ms)[0m   [0mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`content` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`id` = 1) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) ORDER BY users.value DESC[0m
+  [4;36;1mComment Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mComment Create (0.2ms)[0m   [0;1mINSERT INTO `comments` (`rating`, `created_at`, `resource_id`, `updated_at`, `user_id`, `content`, `parent_comment_id`) VALUES(0, '2009-08-28 01:34:42', 1, '2009-08-28 01:34:42', 1, '内容包含了包括《Thriller》在内的数十张专辑，以及在线试听。', NULL)[0m
+  [4;35;1mSQL (72.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Exists (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`username`) = BINARY 'michael164' AND `users`.id <> 2) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mNews Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mBEGIN[0m
+  [4;36;1mNews Create (0.2ms)[0m   [0;1mINSERT INTO `news` (`created_at`, `resource_id`, `updated_at`, `follower_id`, `user_id`, `news_type`, `comment_id`) VALUES('2009-08-28 01:34:42', NULL, '2009-08-28 01:34:42', NULL, 2, NULL, NULL)[0m
+  [4;35;1mSQL (42.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mNews Update (0.2ms)[0m   [0mUPDATE `news` SET `updated_at` = '2009-08-28 01:34:42', `resource_id` = 1, `news_type` = 'comment' WHERE `id` = 2[0m
+  [4;36;1mSQL (53.6ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/users/2/link_url_resources/1/comments
+Completed in 437ms (DB: 174) | 302 Found [http://localhost/users/2/link_url_resources/1/comments]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2009-08-28 09:34:42) [GET]
+  Parameters: {"link_url_resource_id"=>"1", "user_id"=>"2"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) ORDER BY value DESC[0m
+  [4;36;1mLinkUrlResource Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mLinkUrlResource Load Including Associations (0.1ms)[0m   [0mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`content` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`id` = 1) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) ORDER BY users.value DESC[0m
+  [4;36;1mKeywordPage Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `keyword_pages`[0m
+  [4;35;1mKeywordPage Load (0.1ms)[0m   [0mSELECT * FROM `keyword_pages` WHERE (`keyword_pages`.`keyword` = 'sss') LIMIT 1[0m
+  [4;36;1mComment Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mComment Load Including Associations (0.6ms)[0m   [0mSELECT `comments`.`id` AS t0_r0, `comments`.`content` AS t0_r1, `comments`.`resource_id` AS t0_r2, `comments`.`user_id` AS t0_r3, `comments`.`rating` AS t0_r4, `comments`.`parent_comment_id` AS t0_r5, `comments`.`created_at` AS t0_r6, `comments`.`updated_at` AS t0_r7, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `comments` LEFT OUTER JOIN `users` ON `users`.id = `comments`.user_id WHERE (resource_id=1 and parent_comment_id is NULL) ORDER BY users.value DESC LIMIT 0, 10[0m
+Rendering template within layouts/comments
+Rendering comments/index
+  [4;36;1mBeFollow Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `be_follows`[0m
+  [4;35;1mBeFollow Load (0.1ms)[0m   [0mSELECT * FROM `be_follows` WHERE (`be_follows`.`follower_id` = 1 AND `be_follows`.`user_id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `be_follows` WHERE (`be_follows`.`follower_id` = 1 AND `be_follows`.`user_id` = 1) LIMIT 1[0m
+Rendered shared/_user_profile (9.9ms)
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.parent_comment_id = 1) [0m
+Rendered comments/_comment (126.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `be_follows` WHERE (`be_follows`.`follower_id` = 1 AND `be_follows`.`user_id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `be_follows` WHERE (`be_follows`.`follower_id` = 1 AND `be_follows`.`user_id` = 1) LIMIT 1[0m
+Rendered shared/_user_profile (1.4ms)
+Rendered comments/_form (1.9ms)
+  [4;36;1mRelatedKeyword Load (0.1ms)[0m   [0;1mSELECT * FROM `related_keywords` WHERE (`related_keywords`.keyword_page_id = 1) [0m
+Rendered shared/_footer (0.5ms)
+Completed in 255ms (View: 135, DB: 5) | 200 OK [http://localhost/users/2/link_url_resources/1/comments]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-08-28 09:34:43) [GET]
+
+ActionController::RoutingError (No route matches "/users/2/link_url_resources/images/j2.jpg" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-08-28 09:34:43) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordPagesController#show (for 127.0.0.1 at 2009-08-28 09:34:47) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mKeywordPage Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `keyword_pages`[0m
+  [4;36;1mKeywordPage Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_pages` WHERE (`keyword_pages`.`id` = 1) [0m
+  [4;35;1mLinkUrlResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mLinkUrlResource Load Including Associations (0.1ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`content` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (keywords='sss') AND ( (`resources`.`type` = 'LinkUrlResource' ) ) ORDER BY users.value DESC LIMIT 0, 10[0m
+Rendering template within layouts/keyword_pages
+Rendering keyword_pages/show
+  [4;35;1mLinkUrlResource Load Including Associations (0.1ms)[0m   [0mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`content` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.user_id = 1) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) ORDER BY users.value DESC[0m
+  [4;36;1mComment Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mComment Load Including Associations (0.7ms)[0m   [0mSELECT `comments`.`id` AS t0_r0, `comments`.`content` AS t0_r1, `comments`.`resource_id` AS t0_r2, `comments`.`user_id` AS t0_r3, `comments`.`rating` AS t0_r4, `comments`.`parent_comment_id` AS t0_r5, `comments`.`created_at` AS t0_r6, `comments`.`updated_at` AS t0_r7, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `comments` LEFT OUTER JOIN `users` ON `users`.id = `comments`.user_id WHERE (`comments`.resource_id = 1) AND (`comments`.resource_id = 1) ORDER BY users.value DESC LIMIT 3[0m
+  [4;36;1mSQL (13.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.resource_id = 1) [0m
+  [4;35;1mBeFollow Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `be_follows`[0m
+  [4;36;1mBeFollow Load (0.1ms)[0m   [0;1mSELECT * FROM `be_follows` WHERE (`be_follows`.`follower_id` = 1 AND `be_follows`.`user_id` = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `be_follows` WHERE (`be_follows`.`follower_id` = 1 AND `be_follows`.`user_id` = 2) LIMIT 1[0m
+Rendered shared/_user_profile (10.4ms)
+Rendered link_url_resources/_link_url_resource (96.3ms)
+  [4;36;1mRelatedKeyword Load (0.1ms)[0m   [0;1mSELECT * FROM `related_keywords` WHERE (`related_keywords`.keyword_page_id = 1) [0m
+Rendered shared/_footer (0.6ms)
+Completed in 146ms (View: 88, DB: 19) | 200 OK [http://localhost/keyword_pages/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LinkUrlResourcesController#new (for 127.0.0.1 at 2009-08-28 09:43:02) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mLinkUrlResource Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/link_url_resources
+Rendering link_url_resources/new
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 09:43:02') AND (`resources`.`authority` = 1)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 09:43:02') AND (`resources`.`authority` = 0)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+Rendered shared/_footer (0.5ms)
+Completed in 48ms (View: 13, DB: 3) | 200 OK [http://localhost/users/1/link_url_resources/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-08-28 09:43:02) [GET]
+
+ActionController::RoutingError (No route matches "/images/%E9%93%BE%E6%8E%A5%E6%8F%8F%E8%BF%B0" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LinkUrlResourcesController#new (for 127.0.0.1 at 2009-08-28 09:43:07) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mLinkUrlResource Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/link_url_resources
+Rendering link_url_resources/new
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 09:43:07') AND (`resources`.`authority` = 1)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 09:43:07') AND (`resources`.`authority` = 0)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+Rendered shared/_footer (0.6ms)
+Completed in 115ms (View: 10, DB: 3) | 200 OK [http://localhost/users/1/link_url_resources/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-08-28 09:43:08) [GET]
+
+ActionController::RoutingError (No route matches "/images/%E9%93%BE%E6%8E%A5%E6%8F%8F%E8%BF%B0" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LinkUrlResourcesController#new (for 127.0.0.1 at 2009-08-28 09:43:30) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mLinkUrlResource Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/link_url_resources
+Rendering link_url_resources/new
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 09:43:30') AND (`resources`.`authority` = 1)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 09:43:30') AND (`resources`.`authority` = 0)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+Rendered shared/_footer (0.5ms)
+Completed in 45ms (View: 12, DB: 3) | 200 OK [http://localhost/users/1/link_url_resources/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LinkUrlResourcesController#new (for 127.0.0.1 at 2009-08-28 09:44:31) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mLinkUrlResource Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/link_url_resources
+Rendering link_url_resources/new
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 09:44:31') AND (`resources`.`authority` = 1)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 09:44:31') AND (`resources`.`authority` = 0)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+Rendered shared/_footer (0.5ms)
+Completed in 48ms (View: 12, DB: 3) | 200 OK [http://localhost/users/1/link_url_resources/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LinkUrlResourcesController#new (for 127.0.0.1 at 2009-08-28 09:46:22) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mLinkUrlResource Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/link_url_resources
+Rendering link_url_resources/new
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 09:46:22') AND (`resources`.`authority` = 1)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 09:46:22') AND (`resources`.`authority` = 0)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+Rendered shared/_footer (0.6ms)
+Completed in 105ms (View: 73, DB: 3) | 200 OK [http://localhost/users/1/link_url_resources/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LinkUrlResourcesController#new (for 127.0.0.1 at 2009-08-28 09:47:00) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mLinkUrlResource Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/link_url_resources
+Rendering link_url_resources/new
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 09:47:00') AND (`resources`.`authority` = 1)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 09:47:00') AND (`resources`.`authority` = 0)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+Rendered shared/_footer (0.6ms)
+Completed in 48ms (View: 12, DB: 3) | 200 OK [http://localhost/users/1/link_url_resources/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LinkUrlResourcesController#new (for 127.0.0.1 at 2009-08-28 09:47:14) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mLinkUrlResource Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/link_url_resources
+Rendering link_url_resources/new
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 09:47:14') AND (`resources`.`authority` = 1)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 09:47:14') AND (`resources`.`authority` = 0)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+Rendered shared/_footer (0.6ms)
+Completed in 118ms (View: 14, DB: 3) | 200 OK [http://localhost/users/1/link_url_resources/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LinkUrlResourcesController#new (for 127.0.0.1 at 2009-08-28 09:47:35) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mLinkUrlResource Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/link_url_resources
+Rendering link_url_resources/new
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 09:47:35') AND (`resources`.`authority` = 1)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 09:47:35') AND (`resources`.`authority` = 0)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+Rendered shared/_footer (0.5ms)
+Completed in 53ms (View: 13, DB: 3) | 200 OK [http://localhost/users/1/link_url_resources/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LinkUrlResourcesController#new (for 127.0.0.1 at 2009-08-28 09:47:46) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mLinkUrlResource Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/link_url_resources
+Rendering link_url_resources/new
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 09:47:46') AND (`resources`.`authority` = 1)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 09:47:46') AND (`resources`.`authority` = 0)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+Rendered shared/_footer (0.5ms)
+Completed in 52ms (View: 12, DB: 3) | 200 OK [http://localhost/users/1/link_url_resources/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LinkUrlResourcesController#new (for 127.0.0.1 at 2009-08-28 09:47:58) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mLinkUrlResource Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/link_url_resources
+Rendering link_url_resources/new
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 09:47:58') AND (`resources`.`authority` = 1)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 09:47:58') AND (`resources`.`authority` = 0)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+Rendered shared/_footer (0.6ms)
+Completed in 46ms (View: 12, DB: 3) | 200 OK [http://localhost/users/1/link_url_resources/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LinkUrlResourcesController#new (for 127.0.0.1 at 2009-08-28 09:48:35) [GET]
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/link_url_resources_controller.rb:50:in `find_user'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (36.2ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LinkUrlResourcesController#new (for 127.0.0.1 at 2009-08-28 09:48:39) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mLinkUrlResource Columns (4.6ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/link_url_resources
+Rendering link_url_resources/new
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 09:48:39') AND (`resources`.`authority` = 1)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 09:48:39') AND (`resources`.`authority` = 0)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+Rendered shared/_footer (0.6ms)
+Completed in 111ms (View: 14, DB: 7) | 200 OK [http://localhost/users/1/link_url_resources/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LinkUrlResourcesController#new (for 127.0.0.1 at 2009-08-28 09:48:48) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mLinkUrlResource Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/link_url_resources
+Rendering link_url_resources/new
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 09:48:48') AND (`resources`.`authority` = 1)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 09:48:48') AND (`resources`.`authority` = 0)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+Rendered shared/_footer (0.5ms)
+Completed in 44ms (View: 12, DB: 3) | 200 OK [http://localhost/users/1/link_url_resources/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LinkUrlResourcesController#new (for 127.0.0.1 at 2009-08-28 09:51:09) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mLinkUrlResource Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/link_url_resources
+Rendering link_url_resources/new
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 09:51:09') AND (`resources`.`authority` = 1)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 09:51:09') AND (`resources`.`authority` = 0)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+Rendered shared/_footer (0.6ms)
+Completed in 118ms (View: 13, DB: 4) | 200 OK [http://localhost/users/1/link_url_resources/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LinkUrlResourcesController#new (for 127.0.0.1 at 2009-08-28 09:51:20) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mLinkUrlResource Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/link_url_resources
+Rendering link_url_resources/new
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 09:51:20') AND (`resources`.`authority` = 1)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 09:51:20') AND (`resources`.`authority` = 0)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+Rendered shared/_footer (0.5ms)
+Completed in 44ms (View: 12, DB: 3) | 200 OK [http://localhost/users/1/link_url_resources/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LinkUrlResourcesController#new (for 127.0.0.1 at 2009-08-28 09:51:34) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mLinkUrlResource Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/link_url_resources
+Rendering link_url_resources/new
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 09:51:34') AND (`resources`.`authority` = 1)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 09:51:34') AND (`resources`.`authority` = 0)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+Rendered shared/_footer (0.5ms)
+Completed in 48ms (View: 12, DB: 3) | 200 OK [http://localhost/users/1/link_url_resources/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LinkUrlResourcesController#new (for 127.0.0.1 at 2009-08-28 09:51:54) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mLinkUrlResource Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/link_url_resources
+Rendering link_url_resources/new
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 09:51:54') AND (`resources`.`authority` = 1)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 09:51:54') AND (`resources`.`authority` = 0)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+Rendered shared/_footer (0.6ms)
+Completed in 43ms (View: 10, DB: 3) | 200 OK [http://localhost/users/1/link_url_resources/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LinkUrlResourcesController#new (for 127.0.0.1 at 2009-08-28 09:52:34) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mLinkUrlResource Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/link_url_resources
+Rendering link_url_resources/new
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 09:52:34') AND (`resources`.`authority` = 1)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 09:52:34') AND (`resources`.`authority` = 0)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+Rendered shared/_footer (0.5ms)
+Completed in 43ms (View: 9, DB: 3) | 200 OK [http://localhost/users/1/link_url_resources/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#new (for 127.0.0.1 at 2009-08-28 09:52:41) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+Rendering template within layouts/searched_keywords
+Rendering searched_keywords/new
+Rendered shared/_footer (0.6ms)
+Completed in 84ms (View: 4, DB: 1) | 200 OK [http://localhost/users/1/searched_keywords/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#notification (for 127.0.0.1 at 2009-08-28 09:52:42) [POST]
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+
+ActionView::MissingTemplate (Missing template searched_keywords/notification.erb in view path app/views):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#auto_complete_for_link_url_resource_keywords (for 127.0.0.1 at 2009-08-28 09:52:43) [GET]
+  Parameters: {"link_url_resource"=>{"keywords"=>""}}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mLinkUrlResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mLinkUrlResource Load Including Associations (0.1ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`content` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (LOWER(`resources`.keywords) LIKE '%%') AND ( (`resources`.`type` = 'LinkUrlResource' ) ) ORDER BY users.value DESC LIMIT 15[0m
+Completed in 34ms (View: 4, DB: 2) | 200 OK [http://localhost/searched_keywords/auto_complete_for_link_url_resource_keywords?link_url_resource%5Bkeywords%5D=]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#auto_complete_for_link_url_resource_keywords (for 127.0.0.1 at 2009-08-28 09:52:45) [GET]
+  Parameters: {"link_url_resource"=>{"keywords"=>"Mi"}}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mLinkUrlResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mLinkUrlResource Load Including Associations (0.7ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`content` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (LOWER(`resources`.keywords) LIKE '%mi%') AND ( (`resources`.`type` = 'LinkUrlResource' ) ) ORDER BY users.value DESC LIMIT 15[0m
+Completed in 32ms (View: 4, DB: 3) | 200 OK [http://localhost/searched_keywords/auto_complete_for_link_url_resource_keywords?link_url_resource%5Bkeywords%5D=Mi]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#auto_complete_for_link_url_resource_keywords (for 127.0.0.1 at 2009-08-28 09:52:47) [GET]
+  Parameters: {"link_url_resource"=>{"keywords"=>"Michael Jackson"}}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mLinkUrlResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mLinkUrlResource Load Including Associations (0.7ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`content` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (LOWER(`resources`.keywords) LIKE '%michael jackson%') AND ( (`resources`.`type` = 'LinkUrlResource' ) ) ORDER BY users.value DESC LIMIT 15[0m
+Completed in 38ms (View: 4, DB: 3) | 200 OK [http://localhost/searched_keywords/auto_complete_for_link_url_resource_keywords?link_url_resource%5Bkeywords%5D=Michael%20Jackson]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#auto_complete_for_link_url_resource_keywords (for 127.0.0.1 at 2009-08-28 09:52:52) [GET]
+  Parameters: {"link_url_resource"=>{"keywords"=>"Michael J"}}
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mLinkUrlResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mLinkUrlResource Load Including Associations (0.6ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`content` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (LOWER(`resources`.keywords) LIKE '%michael j%') AND ( (`resources`.`type` = 'LinkUrlResource' ) ) ORDER BY users.value DESC LIMIT 15[0m
+Completed in 33ms (View: 4, DB: 3) | 200 OK [http://localhost/searched_keywords/auto_complete_for_link_url_resource_keywords?link_url_resource%5Bkeywords%5D=Michael%20J]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LinkUrlResourcesController#new (for 127.0.0.1 at 2009-08-28 09:52:55) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mLinkUrlResource Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/link_url_resources
+Rendering link_url_resources/new
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 09:52:55') AND (`resources`.`authority` = 1)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 09:52:55') AND (`resources`.`authority` = 0)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+Rendered shared/_footer (0.5ms)
+Completed in 46ms (View: 13, DB: 3) | 200 OK [http://localhost/users/1/link_url_resources/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LinkUrlResourcesController#auto_complete_for_link_url_resource_keywords (for 127.0.0.1 at 2009-08-28 09:53:09) [POST]
+  Parameters: {"link_url_resource"=>{"keywords"=>"Michael Jackson"}}
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mLinkUrlResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mLinkUrlResource Load Including Associations (0.7ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`content` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (LOWER(`resources`.keywords) LIKE '%michael jackson%') AND ( (`resources`.`type` = 'LinkUrlResource' ) ) ORDER BY users.value DESC LIMIT 10[0m
+Completed in 39ms (View: 4, DB: 3) | 200 OK [http://localhost/link_url_resources/auto_complete_for_link_url_resource_keywords]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LinkUrlResourcesController#create (for 127.0.0.1 at 2009-08-28 09:53:10) [POST]
+  Parameters: {"commit"=>"完成", "user_id"=>"1", "link_url_resource"=>{"form"=>"文字、文档", "authority"=>"false", "description"=>"sdffds", "keywords"=>"Michael Jackson", "link_url"=>"http://asdf"}}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;36;1mLinkUrlResource Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mLinkUrlResource Create (0.5ms)[0m   [0;1mINSERT INTO `resources` (`created_at`, `title`, `updated_at`, `type`, `user_id`, `form`, `authority`, `content`, `shoulu`, `description`, `keyword_page_id`, `keywords`, `link_url`) VALUES('2009-08-28 01:53:10', NULL, '2009-08-28 01:53:10', 'LinkUrlResource', 1, '文字、文档', 0, NULL, 1, 'sdffds', NULL, 'Michael Jackson', 'http://asdf')[0m
+  [4;35;1mSQL (50.1ms)[0m   [0mCOMMIT[0m
+
+NoMethodError (undefined method `create_keyword_page' for #<LinkUrlResource:0xb6fbf8a4>):
+  app/controllers/link_url_resources_controller.rb:19:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (32.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LinkUrlResourcesController#create (for 127.0.0.1 at 2009-08-28 09:55:04) [POST]
+  Parameters: {"commit"=>"完成", "user_id"=>"1", "link_url_resource"=>{"form"=>"文字、文档", "authority"=>"false", "description"=>"sdffds", "keywords"=>"Michael Jackson", "link_url"=>"http://asdf"}}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mLinkUrlResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mLinkUrlResource Create (0.2ms)[0m   [0mINSERT INTO `resources` (`created_at`, `title`, `updated_at`, `type`, `user_id`, `form`, `authority`, `content`, `shoulu`, `description`, `keyword_page_id`, `keywords`, `link_url`) VALUES('2009-08-28 01:55:04', NULL, '2009-08-28 01:55:04', 'LinkUrlResource', 1, '文字、文档', 0, NULL, 1, 'sdffds', NULL, 'Michael Jackson', 'http://asdf')[0m
+  [4;36;1mSQL (52.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mKeywordPage Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `keyword_pages`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mKeywordPage Exists (0.2ms)[0m   [0mSELECT `keyword_pages`.id FROM `keyword_pages` WHERE (`keyword_pages`.`keyword` = BINARY 'Michael Jackson') LIMIT 1[0m
+  [4;36;1mKeywordPage Create (0.1ms)[0m   [0;1mINSERT INTO `keyword_pages` (`created_at`, `updated_at`, `keyword`) VALUES('2009-08-28 01:55:04', '2009-08-28 01:55:04', 'Michael Jackson')[0m
+  [4;35;1mSQL (47.3ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/link_url_resources
+Rendered link_url_resources/_succeed (17.2ms)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 09:55:04') AND (`resources`.`authority` = 1)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 09:55:04') AND (`resources`.`authority` = 0)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+Rendered shared/_footer (1.3ms)
+  [4;36;1mNews Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mNews Create (0.1ms)[0m   [0;1mINSERT INTO `news` (`created_at`, `resource_id`, `updated_at`, `follower_id`, `user_id`, `news_type`, `comment_id`) VALUES('2009-08-28 01:55:04', NULL, '2009-08-28 01:55:04', NULL, 1, NULL, NULL)[0m
+  [4;35;1mSQL (53.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mNews Update (0.2ms)[0m   [0mUPDATE `news` SET `updated_at` = '2009-08-28 01:55:04', `resource_id` = 3, `news_type` = 'link_url_resource' WHERE `id` = 3[0m
+  [4;36;1mSQL (53.6ms)[0m   [0;1mCOMMIT[0m
+Completed in 373ms (View: 27, DB: 211) | 200 OK [http://localhost/users/1/link_url_resources]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#new (for 127.0.0.1 at 2009-08-28 09:55:07) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+Rendering template within layouts/searched_keywords
+Rendering searched_keywords/new
+Rendered shared/_footer (0.5ms)
+Completed in 24ms (View: 4, DB: 1) | 200 OK [http://localhost/users/1/searched_keywords/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#notification (for 127.0.0.1 at 2009-08-28 09:55:07) [POST]
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+
+ActionView::MissingTemplate (Missing template searched_keywords/notification.erb in view path app/views):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#auto_complete_for_link_url_resource_keywords (for 127.0.0.1 at 2009-08-28 09:55:08) [GET]
+  Parameters: {"link_url_resource"=>{"keywords"=>""}}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mLinkUrlResource Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mLinkUrlResource Load Including Associations (0.8ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`content` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (LOWER(`resources`.keywords) LIKE '%%') AND ( (`resources`.`type` = 'LinkUrlResource' ) ) ORDER BY users.value DESC LIMIT 15[0m
+Completed in 37ms (View: 5, DB: 3) | 200 OK [http://localhost/searched_keywords/auto_complete_for_link_url_resource_keywords?link_url_resource%5Bkeywords%5D=]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#auto_complete_for_link_url_resource_keywords (for 127.0.0.1 at 2009-08-28 09:55:15) [GET]
+  Parameters: {"link_url_resource"=>{"keywords"=>"Michael"}}
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mLinkUrlResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mLinkUrlResource Load Including Associations (0.7ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`content` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (LOWER(`resources`.keywords) LIKE '%michael%') AND ( (`resources`.`type` = 'LinkUrlResource' ) ) ORDER BY users.value DESC LIMIT 15[0m
+Completed in 33ms (View: 4, DB: 3) | 200 OK [http://localhost/searched_keywords/auto_complete_for_link_url_resource_keywords?link_url_resource%5Bkeywords%5D=Michael]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#auto_complete_for_link_url_resource_keywords (for 127.0.0.1 at 2009-08-28 09:55:16) [GET]
+  Parameters: {"link_url_resource"=>{"keywords"=>"Michael Jackson"}}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mLinkUrlResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mLinkUrlResource Load Including Associations (0.8ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`content` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (LOWER(`resources`.keywords) LIKE '%michael jackson%') AND ( (`resources`.`type` = 'LinkUrlResource' ) ) ORDER BY users.value DESC LIMIT 15[0m
+Completed in 101ms (View: 5, DB: 3) | 200 OK [http://localhost/searched_keywords/auto_complete_for_link_url_resource_keywords?link_url_resource%5Bkeywords%5D=Michael%20Jackson]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#auto_complete_for_link_url_resource_keywords (for 127.0.0.1 at 2009-08-28 09:56:04) [GET]
+  Parameters: {"link_url_resource"=>{"keywords"=>"Michael Jackson"}}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mLinkUrlResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mLinkUrlResource Load Including Associations (0.1ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`content` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (LOWER(`resources`.keywords) LIKE '%michael jackson%') AND ( (`resources`.`type` = 'LinkUrlResource' ) ) ORDER BY users.value DESC LIMIT 15[0m
+Completed in 39ms (View: 6, DB: 2) | 200 OK [http://localhost/searched_keywords/auto_complete_for_link_url_resource_keywords?link_url_resource%5Bkeywords%5D=Michael%20Jackson]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#auto_complete_for_link_url_resource_keywords (for 127.0.0.1 at 2009-08-28 09:56:06) [GET]
+  Parameters: {"link_url_resource"=>{"keywords"=>"Michael Jackson"}}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mLinkUrlResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mLinkUrlResource Load Including Associations (0.1ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`content` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (LOWER(`resources`.keywords) LIKE '%michael jackson%') AND ( (`resources`.`type` = 'LinkUrlResource' ) ) ORDER BY users.value DESC LIMIT 15[0m
+Completed in 31ms (View: 4, DB: 2) | 200 OK [http://localhost/searched_keywords/auto_complete_for_link_url_resource_keywords?link_url_resource%5Bkeywords%5D=Michael%20Jackson]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#auto_complete_for_link_url_resource_keywords (for 127.0.0.1 at 2009-08-28 09:56:54) [GET]
+  Parameters: {"link_url_resource"=>{"keywords"=>"Michael Jackson"}}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mLinkUrlResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mLinkUrlResource Load Including Associations (0.1ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`content` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (LOWER(`resources`.keywords) LIKE '%michael jackson%') AND ( (`resources`.`type` = 'LinkUrlResource' ) ) ORDER BY users.value DESC LIMIT 15[0m
+Completed in 109ms (View: 82, DB: 2) | 200 OK [http://localhost/searched_keywords/auto_complete_for_link_url_resource_keywords?link_url_resource%5Bkeywords%5D=Michael%20Jackson]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#auto_complete_for_link_url_resource_keywords (for 127.0.0.1 at 2009-08-28 09:57:10) [GET]
+  Parameters: {"link_url_resource"=>{"keywords"=>"Michael Jackson"}}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mLinkUrlResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mLinkUrlResource Load Including Associations (0.1ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`content` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (LOWER(`resources`.keywords) LIKE '%michael jackson%') AND ( (`resources`.`type` = 'LinkUrlResource' ) ) ORDER BY users.value DESC LIMIT 15[0m
+Completed in 38ms (View: 5, DB: 2) | 200 OK [http://localhost/searched_keywords/auto_complete_for_link_url_resource_keywords?link_url_resource%5Bkeywords%5D=Michael%20Jackson]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#auto_complete_for_link_url_resource_keywords (for 127.0.0.1 at 2009-08-28 09:57:12) [GET]
+  Parameters: {"link_url_resource"=>{"keywords"=>"Michael Jackson"}}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mLinkUrlResource Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mLinkUrlResource Load Including Associations (0.1ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`content` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (LOWER(`resources`.keywords) LIKE '%michael jackson%') AND ( (`resources`.`type` = 'LinkUrlResource' ) ) ORDER BY users.value DESC LIMIT 15[0m
+Completed in 33ms (View: 5, DB: 2) | 200 OK [http://localhost/searched_keywords/auto_complete_for_link_url_resource_keywords?link_url_resource%5Bkeywords%5D=Michael%20Jackson]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#auto_complete_for_link_url_resource_keywords (for 127.0.0.1 at 2009-08-28 09:57:12) [GET]
+  Parameters: {"link_url_resource"=>{"keywords"=>"Michael Jackson"}}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mLinkUrlResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mLinkUrlResource Load Including Associations (0.1ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`content` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (LOWER(`resources`.keywords) LIKE '%michael jackson%') AND ( (`resources`.`type` = 'LinkUrlResource' ) ) ORDER BY users.value DESC LIMIT 15[0m
+Completed in 31ms (View: 4, DB: 2) | 200 OK [http://localhost/searched_keywords/auto_complete_for_link_url_resource_keywords?link_url_resource%5Bkeywords%5D=Michael%20Jackson]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#auto_complete_for_link_url_resource_keywords (for 127.0.0.1 at 2009-08-28 09:57:15) [GET]
+  Parameters: {"link_url_resource"=>{"keywords"=>"Michael Jackson"}}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mLinkUrlResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mLinkUrlResource Load Including Associations (0.1ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`content` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (LOWER(`resources`.keywords) LIKE '%michael jackson%') AND ( (`resources`.`type` = 'LinkUrlResource' ) ) ORDER BY users.value DESC LIMIT 15[0m
+Completed in 48ms (View: 5, DB: 2) | 200 OK [http://localhost/searched_keywords/auto_complete_for_link_url_resource_keywords?link_url_resource%5Bkeywords%5D=Michael%20Jackson]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#auto_complete_for_link_url_resource_keywords (for 127.0.0.1 at 2009-08-28 09:58:39) [GET]
+  Parameters: {"link_url_resource"=>{"keywords"=>"Michael Jackson"}}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mLinkUrlResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mLinkUrlResource Load Including Associations (0.1ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`content` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (LOWER(`resources`.keywords) LIKE '%michael jackson%') AND ( (`resources`.`type` = 'LinkUrlResource' ) ) ORDER BY users.value DESC LIMIT 15[0m
+Completed in 33ms (View: 5, DB: 2) | 200 OK [http://localhost/searched_keywords/auto_complete_for_link_url_resource_keywords?link_url_resource%5Bkeywords%5D=Michael%20Jackson]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#auto_complete_for_link_url_resource_keywords (for 127.0.0.1 at 2009-08-28 09:58:44) [GET]
+  Parameters: {"link_url_resource"=>{"keywords"=>"Michael Jackson"}}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mLinkUrlResource Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mLinkUrlResource Load Including Associations (0.1ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`content` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (LOWER(`resources`.keywords) LIKE '%michael jackson%') AND ( (`resources`.`type` = 'LinkUrlResource' ) ) ORDER BY users.value DESC LIMIT 15[0m
+Completed in 32ms (View: 5, DB: 2) | 200 OK [http://localhost/searched_keywords/auto_complete_for_link_url_resource_keywords?link_url_resource%5Bkeywords%5D=Michael%20Jackson]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#auto_complete_for_link_url_resource_keywords (for 127.0.0.1 at 2009-08-28 09:58:45) [GET]
+  Parameters: {"link_url_resource"=>{"keywords"=>"Michael Jackson"}}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mLinkUrlResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mLinkUrlResource Load Including Associations (0.1ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`content` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (LOWER(`resources`.keywords) LIKE '%michael jackson%') AND ( (`resources`.`type` = 'LinkUrlResource' ) ) ORDER BY users.value DESC LIMIT 15[0m
+Completed in 41ms (View: 6, DB: 2) | 200 OK [http://localhost/searched_keywords/auto_complete_for_link_url_resource_keywords?link_url_resource%5Bkeywords%5D=Michael%20Jackson]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#create (for 127.0.0.1 at 2009-08-28 09:58:45) [POST]
+  Parameters: {"user_id"=>"1", "keywords"=>"Michael Jackson"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mKeywordPage Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `keyword_pages`[0m
+  [4;36;1mKeywordPage Load (0.2ms)[0m   [0;1mSELECT * FROM `keyword_pages` WHERE (`keyword_pages`.`keyword` = 'Michael Jackson') LIMIT 1[0m
+  [4;35;1mSearchedKeyword Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `searched_keywords`[0m
+  [4;36;1mSearchedKeyword Load (0.3ms)[0m   [0;1mSELECT * FROM `searched_keywords` WHERE (`searched_keywords`.`name` = 'Michael Jackson') AND (`searched_keywords`.user_id = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSearchedKeyword Exists (0.3ms)[0m   [0;1mSELECT `searched_keywords`.id FROM `searched_keywords` WHERE (`searched_keywords`.`name` = BINARY 'Michael Jackson' AND `searched_keywords`.user_id = 1) LIMIT 1[0m
+  [4;35;1mSearchedKeyword Create (0.2ms)[0m   [0mINSERT INTO `searched_keywords` (`name`, `created_at`, `updated_at`, `searched_times`, `user_id`) VALUES('Michael Jackson', '2009-08-28 01:58:45', '2009-08-28 01:58:45', 1, 1)[0m
+  [4;36;1mSQL (59.2ms)[0m   [0;1mCOMMIT[0m
+Completed in 97ms (View: 1, DB: 63) | 200 OK [http://localhost/users/1/searched_keywords]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordPagesController#show (for 127.0.0.1 at 2009-08-28 09:58:45) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;35;1mKeywordPage Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `keyword_pages`[0m
+  [4;36;1mKeywordPage Load (0.2ms)[0m   [0;1mSELECT * FROM `keyword_pages` WHERE (`keyword_pages`.`id` = 2) [0m
+  [4;35;1mLinkUrlResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mLinkUrlResource Load Including Associations (0.7ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`content` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (keywords='Michael Jackson') AND ( (`resources`.`type` = 'LinkUrlResource' ) ) ORDER BY users.value DESC LIMIT 0, 10[0m
+Rendering template within layouts/keyword_pages
+Rendering keyword_pages/show
+  [4;35;1mLinkUrlResource Load Including Associations (0.8ms)[0m   [0mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`content` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.user_id = 1) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) ORDER BY users.value DESC[0m
+  [4;36;1mResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mResource Load Including Associations (1.3ms)[0m   [0mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`content` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`keywords` = 'Michael Jackson') ORDER BY users.value DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keyword_page_id` AS t0_r1, `resources`.`keywords` AS t0_r2, `resources`.`type` AS t0_r3, `resources`.`shoulu` AS t0_r4, `resources`.`user_id` AS t0_r5, `resources`.`title` AS t0_r6, `resources`.`form` AS t0_r7, `resources`.`link_url` AS t0_r8, `resources`.`description` AS t0_r9, `resources`.`authority` AS t0_r10, `resources`.`content` AS t0_r11, `resources`.`created_at` AS t0_r12, `resources`.`updated_at` AS t0_r13, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (`resources`.`keywords` = 'Michael Jackson') ORDER BY users.value DESC LIMIT 1[0m
+  [4;35;1mComment Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mComment Load Including Associations (0.6ms)[0m   [0;1mSELECT `comments`.`id` AS t0_r0, `comments`.`content` AS t0_r1, `comments`.`resource_id` AS t0_r2, `comments`.`user_id` AS t0_r3, `comments`.`rating` AS t0_r4, `comments`.`parent_comment_id` AS t0_r5, `comments`.`created_at` AS t0_r6, `comments`.`updated_at` AS t0_r7, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `comments` LEFT OUTER JOIN `users` ON `users`.id = `comments`.user_id WHERE (`comments`.resource_id = 2) AND (`comments`.resource_id = 2) ORDER BY users.value DESC LIMIT 3[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.resource_id = 2) [0m
+  [4;36;1mBeFollow Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `be_follows`[0m
+  [4;35;1mBeFollow Load (0.1ms)[0m   [0mSELECT * FROM `be_follows` WHERE (`be_follows`.`follower_id` = 1 AND `be_follows`.`user_id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `be_follows` WHERE (`be_follows`.`follower_id` = 1 AND `be_follows`.`user_id` = 1) LIMIT 1[0m
+Rendered shared/_user_profile (8.7ms)
+Rendered link_url_resources/_link_url_resource (88.0ms)
+  [4;35;1mComment Load Including Associations (0.6ms)[0m   [0mSELECT `comments`.`id` AS t0_r0, `comments`.`content` AS t0_r1, `comments`.`resource_id` AS t0_r2, `comments`.`user_id` AS t0_r3, `comments`.`rating` AS t0_r4, `comments`.`parent_comment_id` AS t0_r5, `comments`.`created_at` AS t0_r6, `comments`.`updated_at` AS t0_r7, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `comments` LEFT OUTER JOIN `users` ON `users`.id = `comments`.user_id WHERE (`comments`.resource_id = 3) AND (`comments`.resource_id = 3) ORDER BY users.value DESC LIMIT 3[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.resource_id = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `be_follows` WHERE (`be_follows`.`follower_id` = 1 AND `be_follows`.`user_id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `be_follows` WHERE (`be_follows`.`follower_id` = 1 AND `be_follows`.`user_id` = 1) LIMIT 1[0m
+Rendered shared/_user_profile (1.2ms)
+Rendered link_url_resources/_link_url_resource (5.1ms)
+  [4;35;1mRelatedKeyword Load (0.2ms)[0m   [0mSELECT * FROM `related_keywords` WHERE (`related_keywords`.keyword_page_id = 2) [0m
+Rendered shared/_footer (0.6ms)
+Completed in 151ms (View: 105, DB: 9) | 200 OK [http://localhost/keyword_pages/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LinkUrlResourcesController#new (for 127.0.0.1 at 2009-08-28 09:58:54) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mLinkUrlResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/link_url_resources
+Rendering link_url_resources/new
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 09:58:54') AND (`resources`.`authority` = 1)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 09:58:54') AND (`resources`.`authority` = 0)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+Rendered shared/_footer (0.5ms)
+Completed in 45ms (View: 12, DB: 3) | 200 OK [http://localhost/users/1/link_url_resources/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LinkUrlResourcesController#new (for 127.0.0.1 at 2009-08-28 09:59:48) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mLinkUrlResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/link_url_resources
+Rendering link_url_resources/new
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 09:59:48') AND (`resources`.`authority` = 1)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 09:59:48') AND (`resources`.`authority` = 0)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+Rendered shared/_footer (0.6ms)
+Completed in 118ms (View: 85, DB: 3) | 200 OK [http://localhost/users/1/link_url_resources/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LinkUrlResourcesController#new (for 127.0.0.1 at 2009-08-28 10:00:42) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mLinkUrlResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/link_url_resources
+Rendering link_url_resources/new
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 10:00:42') AND (`resources`.`authority` = 1)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 10:00:42') AND (`resources`.`authority` = 0)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+Rendered shared/_footer (0.5ms)
+Completed in 47ms (View: 12, DB: 3) | 200 OK [http://localhost/users/1/link_url_resources/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LinkUrlResourcesController#new (for 127.0.0.1 at 2009-08-28 10:02:23) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mLinkUrlResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/link_url_resources
+Rendering link_url_resources/new
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 10:02:23') AND (`resources`.`authority` = 1)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 10:02:23') AND (`resources`.`authority` = 0)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+Rendered shared/_footer (0.5ms)
+Completed in 122ms (View: 13, DB: 3) | 200 OK [http://localhost/users/1/link_url_resources/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LinkUrlResourcesController#new (for 127.0.0.1 at 2009-08-28 10:03:00) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mLinkUrlResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/link_url_resources
+Rendering link_url_resources/new
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 10:03:00') AND (`resources`.`authority` = 1)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 10:03:00') AND (`resources`.`authority` = 0)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+Rendered shared/_footer (0.5ms)
+Completed in 43ms (View: 12, DB: 3) | 200 OK [http://localhost/users/1/link_url_resources/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LinkUrlResourcesController#new (for 127.0.0.1 at 2009-08-28 10:04:05) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mLinkUrlResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/link_url_resources
+Rendering link_url_resources/new
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 10:04:05') AND (`resources`.`authority` = 1)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 10:04:05') AND (`resources`.`authority` = 0)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+Rendered shared/_footer (0.5ms)
+Completed in 48ms (View: 12, DB: 3) | 200 OK [http://localhost/users/1/link_url_resources/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LinkUrlResourcesController#new (for 127.0.0.1 at 2009-08-28 10:04:34) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mLinkUrlResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/link_url_resources
+Rendering link_url_resources/new
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 10:04:34') AND (`resources`.`authority` = 1)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 10:04:34') AND (`resources`.`authority` = 0)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+Rendered shared/_footer (0.6ms)
+Completed in 116ms (View: 14, DB: 3) | 200 OK [http://localhost/users/1/link_url_resources/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LinkUrlResourcesController#new (for 127.0.0.1 at 2009-08-28 10:04:45) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mLinkUrlResource Columns (7.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/link_url_resources
+Rendering link_url_resources/new
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 10:04:45') AND (`resources`.`authority` = 1)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 10:04:45') AND (`resources`.`authority` = 0)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+Rendered shared/_footer (0.5ms)
+Completed in 52ms (View: 12, DB: 10) | 200 OK [http://localhost/users/1/link_url_resources/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LinkUrlResourcesController#new (for 127.0.0.1 at 2009-08-28 10:04:54) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mLinkUrlResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/link_url_resources
+Rendering link_url_resources/new
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 10:04:54') AND (`resources`.`authority` = 1)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 10:04:54') AND (`resources`.`authority` = 0)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+Rendered shared/_footer (0.5ms)
+Completed in 51ms (View: 13, DB: 3) | 200 OK [http://localhost/users/1/link_url_resources/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LinkUrlResourcesController#new (for 127.0.0.1 at 2009-08-28 10:05:16) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mLinkUrlResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/link_url_resources
+Rendering link_url_resources/new
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 10:05:16') AND (`resources`.`authority` = 1)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 10:05:16') AND (`resources`.`authority` = 0)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+Rendered shared/_footer (0.5ms)
+Completed in 45ms (View: 12, DB: 3) | 200 OK [http://localhost/users/1/link_url_resources/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LinkUrlResourcesController#new (for 127.0.0.1 at 2009-08-28 10:05:44) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mLinkUrlResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/link_url_resources
+Rendering link_url_resources/new
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 10:05:44') AND (`resources`.`authority` = 1)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 10:05:44') AND (`resources`.`authority` = 0)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+Rendered shared/_footer (0.6ms)
+Completed in 47ms (View: 12, DB: 3) | 200 OK [http://localhost/users/1/link_url_resources/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LinkUrlResourcesController#new (for 127.0.0.1 at 2009-08-28 10:06:26) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY value DESC[0m
+  [4;35;1mLinkUrlResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/link_url_resources
+Rendering link_url_resources/new
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 10:06:26') AND (`resources`.`authority` = 1)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (((resources.created_at > '2009-08-27 10:06:26') AND (`resources`.`authority` = 0)) AND (`resources`.user_id = 1)) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+Rendered shared/_footer (0.6ms)
+Completed in 110ms (View: 10, DB: 7) | 200 OK [http://localhost/users/1/link_url_resources/new]
