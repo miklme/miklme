@@ -11,10 +11,16 @@
         <table class="item">
           <tr>
             <td width="60px">
-              <%= t.created_at_s %>
+              <%= render :partial => "shared/user_profile",:object => t.owner %>
             </td>
-              <%= t.highlight(@content, :field=>:content) %>
-              <%= t.content %>
+            <td width="520px">
+              <p> <%= t.highlight(@content, :field=>:content,:pre_tag => "<span class='highlight'>",:post_tag => "</span>") %></p>
+              <div class="sb_meta"><%=h t.created_at_s  %></div>
+              <div id="replies">
+                <%= render :partial  => "replies/reply",:collection => t.replies %>
+              </div>
+              <%= link_to "回复",new_user_twitter_resource_reply_path(t.owner,t),:popup => ['新回复', 'height=180,width=490'] %>
+            </td>
           </tr>
         </table>
       </li>

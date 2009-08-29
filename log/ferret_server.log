@@ -416,3 +416,164 @@ index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6fb00ac>
   [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
 #method_missing(:find_ids, [:twitter_resource, "sss", {:models=>[TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :limit=>nil, :offset=>nil}])
 #method_missing(:highlight, [:twitter_resource, "TwitterResource-11", "sss", {:field=>:content}])
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6fb00ac>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:twitter_resource, "sss", {:models=>[TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :limit=>nil, :offset=>nil}])
+#method_missing(:highlight, [:twitter_resource, "TwitterResource-11", "sss", {:field=>:content}])
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6fb00ac>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:twitter_resource, "sss", {:models=>[TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :limit=>nil, :offset=>nil}])
+#method_missing(:highlight, [:twitter_resource, "TwitterResource-11", "sss", {:field=>:content}])
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6fb00ac>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:twitter_resource, "sss", {:models=>[TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :limit=>nil, :offset=>nil}])
+#method_missing(:highlight, [:twitter_resource, "TwitterResource-11", "sss", {:field=>:content}])
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6fb00ac>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:twitter_resource, "sss", {:models=>[TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :per_page=>1, :limit=>1, :page=>1, :offset=>0}])
+#method_missing(:highlight, [:twitter_resource, "TwitterResource-11", "sss", {:field=>:content}])
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6fb00ac>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6fb00ac>
+#method_missing(:add, [:twitter_resource, {:key=>"TwitterResource-12", :content=>"sssss", :created_at_s=>"2009-08-29 16:32:21", :id=>"12", :class_name=>"TwitterResource", :updated_at_s=>"2009-08-29 16:32:21"}])
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6fb00ac>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6fb00ac>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:twitter_resource, "s", {:models=>[TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :per_page=>1, :limit=>1, :page=>1, :offset=>0}])
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6fb00ac>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:twitter_resource, "ss", {:models=>[TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :per_page=>1, :limit=>1, :page=>1, :offset=>0}])
+#method_missing(:highlight, [:twitter_resource, "TwitterResource-10", "ss", {:field=>:content}])
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6fb00ac>
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:twitter_resource, "sss", {:models=>[TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :per_page=>1, :limit=>1, :page=>1, :offset=>0}])
+#method_missing(:highlight, [:twitter_resource, "TwitterResource-11", "sss", {:field=>:content}])
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6fb00ac>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:twitter_resource, "ssss", {:models=>[TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :per_page=>1, :limit=>1, :page=>1, :offset=>0}])
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6fb00ac>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:twitter_resource, "sssss", {:models=>[TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :per_page=>1, :limit=>1, :page=>1, :offset=>0}])
+#method_missing(:highlight, [:twitter_resource, "TwitterResource-12", "sssss", {:field=>:content}])
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6fb00ac>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6fb00ac>
+#method_missing(:add, [:twitter_resource, {:key=>"TwitterResource-13", :content=>"sssss哈哈", :created_at_s=>"2009-08-29 16:32:50", :id=>"13", :class_name=>"TwitterResource", :updated_at_s=>"2009-08-29 16:32:50"}])
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6fb00ac>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6fb00ac>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:twitter_resource, "sssss", {:models=>[TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :per_page=>1, :limit=>1, :page=>1, :offset=>0}])
+#method_missing(:highlight, [:twitter_resource, "TwitterResource-12", "sssss", {:field=>:content}])
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6fb00ac>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6fb00ac>
+#method_missing(:add, [:twitter_resource, {:key=>"TwitterResource-14", :content=>"Michael", :created_at_s=>"2009-08-29 16:33:11", :id=>"14", :class_name=>"TwitterResource", :updated_at_s=>"2009-08-29 16:33:11"}])
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6fb00ac>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6fb00ac>
+#method_missing(:add, [:twitter_resource, {:key=>"TwitterResource-15", :content=>"Michael Jackson", :created_at_s=>"2009-08-29 16:33:15", :id=>"15", :class_name=>"TwitterResource", :updated_at_s=>"2009-08-29 16:33:15"}])
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6fb00ac>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6fb00ac>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6fb00ac>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:twitter_resource, "Michael", {:models=>[TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :per_page=>1, :limit=>1, :page=>1, :offset=>0}])
+#method_missing(:highlight, [:twitter_resource, "TwitterResource-14", "Michael", {:field=>:content}])
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6fb00ac>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:twitter_resource, "Michael", {:models=>[TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :per_page=>1, :limit=>1, :page=>1, :offset=>0}])
+#method_missing(:highlight, [:twitter_resource, "TwitterResource-14", "Michael", {:field=>:content}])
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6fb00ac>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:twitter_resource, "Michael", {:models=>[TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :per_page=>1, :limit=>1, :page=>1, :offset=>0}])
+#method_missing(:highlight, [:twitter_resource, "TwitterResource-14", "Michael", {:field=>:content}])
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6fb00ac>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:twitter_resource, "Michael", {:models=>[TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :per_page=>1, :limit=>1, :page=>1, :offset=>0}])
+#method_missing(:highlight, [:twitter_resource, "TwitterResource-14", "Michael", {:field=>:content}])
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6fb00ac>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:twitter_resource, "Michael", {:models=>[TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :per_page=>2, :limit=>2, :page=>1, :offset=>0}])
+#method_missing(:highlight, [:twitter_resource, "TwitterResource-14", "Michael", {:field=>:content}])
+#method_missing(:highlight, [:twitter_resource, "TwitterResource-15", "Michael", {:field=>:content}])
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6fb00ac>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:twitter_resource, "Michael", {:models=>[TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :per_page=>2, :limit=>2, :page=>1, :offset=>0}])
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6fb00ac>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:twitter_resource, "Michael", {:models=>[TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :per_page=>2, :limit=>2, :page=>1, :offset=>0}])
+#method_missing(:highlight, [:twitter_resource, "TwitterResource-14", "Michael", {:field=>:content}])
+#method_missing(:highlight, [:twitter_resource, "TwitterResource-15", "Michael", {:field=>:content}])
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6fb00ac>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:twitter_resource, "Michael", {:models=>[TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :per_page=>2, :limit=>2, :page=>1, :offset=>0}])
+#method_missing(:highlight, [:twitter_resource, "TwitterResource-14", "Michael", {:field=>:content}])
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6fb00ac>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:twitter_resource, "Michael", {:models=>[TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :per_page=>2, :limit=>2, :page=>1, :offset=>0}])
+#method_missing(:highlight, [:twitter_resource, "TwitterResource-14", "Michael", {:field=>:content}])
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6fb00ac>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:twitter_resource, "Michael", {:models=>[TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :per_page=>2, :limit=>2, :page=>1, :offset=>0}])
+#method_missing(:highlight, [:twitter_resource, "TwitterResource-14", "Michael", {:field=>:content}])
+#method_missing(:highlight, [:twitter_resource, "TwitterResource-15", "Michael", {:field=>:content}])
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6fb00ac>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:twitter_resource, "Michael", {:models=>[TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :per_page=>2, :limit=>2, :page=>1, :offset=>0}])
+#method_missing(:highlight, [:twitter_resource, "TwitterResource-14", "Michael", {:pre_tag=>"<span class='hilite'>", :field=>:content, :post_tag=>"</span>"}])
+#method_missing(:highlight, [:twitter_resource, "TwitterResource-15", "Michael", {:pre_tag=>"<span class='hilite'>", :field=>:content, :post_tag=>"</span>"}])
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6fb00ac>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:twitter_resource, "Michael", {:models=>[TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :per_page=>2, :limit=>2, :page=>1, :offset=>0}])
+#method_missing(:highlight, [:twitter_resource, "TwitterResource-14", "Michael", {:pre_tag=>"<span class='hilite'>", :field=>:content, :post_tag=>"</span>"}])
+#method_missing(:highlight, [:twitter_resource, "TwitterResource-15", "Michael", {:pre_tag=>"<span class='hilite'>", :field=>:content, :post_tag=>"</span>"}])
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6fb00ac>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:twitter_resource, "Michael", {:models=>[TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :per_page=>2, :limit=>2, :page=>1, :offset=>0}])
+#method_missing(:highlight, [:twitter_resource, "TwitterResource-14", "Michael", {:pre_tag=>"<span class='highlight'>", :field=>:content, :post_tag=>"</span>"}])
+#method_missing(:highlight, [:twitter_resource, "TwitterResource-15", "Michael", {:pre_tag=>"<span class='highlight'>", :field=>:content, :post_tag=>"</span>"}])
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6fb00ac>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:twitter_resource, "Michael", {:models=>[TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :per_page=>2, :limit=>2, :page=>1, :offset=>0}])
+#method_missing(:highlight, [:twitter_resource, "TwitterResource-14", "Michael", {:pre_tag=>"<span class='highlight'>", :field=>:content, :post_tag=>"</span>"}])
+#method_missing(:highlight, [:twitter_resource, "TwitterResource-15", "Michael", {:pre_tag=>"<span class='highlight'>", :field=>:content, :post_tag=>"</span>"}])
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6fb00ac>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:twitter_resource, "jackson", {:models=>[TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :per_page=>2, :limit=>2, :page=>1, :offset=>0}])
+#method_missing(:highlight, [:twitter_resource, "TwitterResource-15", "jackson", {:pre_tag=>"<span class='highlight'>", :field=>:content, :post_tag=>"</span>"}])
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6fb00ac>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:twitter_resource, "jac", {:models=>[TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :per_page=>2, :limit=>2, :page=>1, :offset=>0}])
