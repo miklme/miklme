@@ -12,7 +12,8 @@ class SearchedContentsController < ApplicationController
     else
       @content = session[:content]
     end
-    @twitter_resources=TwitterResource.find_with_ferret(@content,:page=> params[:page],:per_page => 1)
+    s = Ferret::Search::SortField.new(:by_user_value, :reverse => false)
+    @twitter_resources=TwitterResource.find_with_ferret(@content,:page=> params[:page],:per_page => 15,:sort => s)
   end
 
 end
