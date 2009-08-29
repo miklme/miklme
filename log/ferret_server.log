@@ -1289,3 +1289,422 @@ index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6fb00ac>
 #method_missing(:highlight, [:twitter_resource, "TwitterResource-14", "Michael", {:pre_tag=>"<span class='highlight'>", :field=>:content, :post_tag=>"</span>"}])
 #method_missing(:highlight, [:twitter_resource, "TwitterResource-15", "Michael", {:pre_tag=>"<span class='highlight'>", :field=>:content, :post_tag=>"</span>"}])
 #method_missing(:highlight, [:twitter_resource, "TwitterResource-24", "Michael", {:pre_tag=>"<span class='highlight'>", :field=>:content, :post_tag=>"</span>"}])
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6fb00ac>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:twitter_resource, "michael", {:models=>[TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :per_page=>15, :limit=>15, :page=>1, :offset=>0}])
+#method_missing(:highlight, [:twitter_resource, "TwitterResource-14", "michael", {:pre_tag=>"<span class='highlight'>", :field=>:content, :post_tag=>"</span>"}])
+#method_missing(:highlight, [:twitter_resource, "TwitterResource-15", "michael", {:pre_tag=>"<span class='highlight'>", :field=>:content, :post_tag=>"</span>"}])
+#method_missing(:highlight, [:twitter_resource, "TwitterResource-24", "michael", {:pre_tag=>"<span class='highlight'>", :field=>:content, :post_tag=>"</span>"}])
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6fb00ac>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:twitter_resource, "michael", {:models=>[TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :per_page=>15, :limit=>15, :page=>1, :offset=>0}])
+#method_missing(:highlight, [:twitter_resource, "TwitterResource-14", "michael", {:pre_tag=>"<span class='highlight'>", :field=>:content, :post_tag=>"</span>"}])
+#method_missing(:highlight, [:twitter_resource, "TwitterResource-15", "michael", {:pre_tag=>"<span class='highlight'>", :field=>:content, :post_tag=>"</span>"}])
+#method_missing(:highlight, [:twitter_resource, "TwitterResource-24", "michael", {:pre_tag=>"<span class='highlight'>", :field=>:content, :post_tag=>"</span>"}])
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6fb00ac>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:twitter_resource, "michael", {:models=>[TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :per_page=>15, :limit=>15, :page=>1, :sort=>:by_user_value, :offset=>0}])
+#method_missing(:highlight, [:twitter_resource, "TwitterResource-14", "michael", {:pre_tag=>"<span class='highlight'>", :field=>:content, :post_tag=>"</span>"}])
+#method_missing(:highlight, [:twitter_resource, "TwitterResource-15", "michael", {:pre_tag=>"<span class='highlight'>", :field=>:content, :post_tag=>"</span>"}])
+#method_missing(:highlight, [:twitter_resource, "TwitterResource-24", "michael", {:pre_tag=>"<span class='highlight'>", :field=>:content, :post_tag=>"</span>"}])
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6fb00ac>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:twitter_resource, "michael", {:models=>[TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :per_page=>15, :limit=>15, :page=>1, :sort=>:by_user_value, :offset=>0}])
+#method_missing(:highlight, [:twitter_resource, "TwitterResource-14", "michael", {:pre_tag=>"<span class='highlight'>", :field=>:content, :post_tag=>"</span>"}])
+#method_missing(:highlight, [:twitter_resource, "TwitterResource-15", "michael", {:pre_tag=>"<span class='highlight'>", :field=>:content, :post_tag=>"</span>"}])
+#method_missing(:highlight, [:twitter_resource, "TwitterResource-24", "michael", {:pre_tag=>"<span class='highlight'>", :field=>:content, :post_tag=>"</span>"}])
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6fb00ac>
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:twitter_resource, "michael", {:models=>[TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :per_page=>15, :limit=>15, :page=>1, :sort=>:by_user_value, :offset=>0}])
+#method_missing(:highlight, [:twitter_resource, "TwitterResource-14", "michael", {:pre_tag=>"<span class='highlight'>", :field=>:content, :post_tag=>"</span>"}])
+#method_missing(:highlight, [:twitter_resource, "TwitterResource-15", "michael", {:pre_tag=>"<span class='highlight'>", :field=>:content, :post_tag=>"</span>"}])
+#method_missing(:highlight, [:twitter_resource, "TwitterResource-24", "michael", {:pre_tag=>"<span class='highlight'>", :field=>:content, :post_tag=>"</span>"}])
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6fb00ac>
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE ( (`resources`.`type` = 'TwitterResource' ) ) [0m
+reindexing model TwitterResource
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+using mysql specific batched find :all. Turn off with  :mysql_fast_batches => false if you encounter problems (i.e. because of non-integer UUIDs in the id column)
+  [4;36;1mTwitterResource Load Including Associations (1.6ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keywords` AS t0_r1, `resources`.`type` AS t0_r2, `resources`.`shoulu` AS t0_r3, `resources`.`user_id` AS t0_r4, `resources`.`title` AS t0_r5, `resources`.`form` AS t0_r6, `resources`.`link_url` AS t0_r7, `resources`.`description` AS t0_r8, `resources`.`authority` AS t0_r9, `resources`.`content` AS t0_r10, `resources`.`created_at` AS t0_r11, `resources`.`updated_at` AS t0_r12, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (resources.id > 0) AND ( (`resources`.`type` = 'TwitterResource' ) ) ORDER BY users.value DESC LIMIT 1000[0m
+creating doc for class: TwitterResource-24
+Adding field content with value 'Michael Jackson' to index
+Adding field created_at_s with value '' to index
+Adding field updated_at_s with value '' to index
+creating doc for class: TwitterResource-2
+Adding field content with value 'hhhhaaaa' to index
+Adding field created_at_s with value '' to index
+Adding field updated_at_s with value '' to index
+creating doc for class: TwitterResource-3
+Adding field content with value 'suosuo' to index
+Adding field created_at_s with value '' to index
+Adding field updated_at_s with value '' to index
+creating doc for class: TwitterResource-10
+Adding field content with value 'ss' to index
+Adding field created_at_s with value '' to index
+Adding field updated_at_s with value '' to index
+creating doc for class: TwitterResource-11
+Adding field content with value 'sss' to index
+Adding field created_at_s with value '' to index
+Adding field updated_at_s with value '' to index
+creating doc for class: TwitterResource-12
+Adding field content with value 'sssss' to index
+Adding field created_at_s with value '' to index
+Adding field updated_at_s with value '' to index
+creating doc for class: TwitterResource-13
+Adding field content with value 'sssss哈哈' to index
+Adding field created_at_s with value '' to index
+Adding field updated_at_s with value '' to index
+creating doc for class: TwitterResource-14
+Adding field content with value 'Michael' to index
+Adding field created_at_s with value '' to index
+Adding field updated_at_s with value '' to index
+creating doc for class: TwitterResource-15
+Adding field content with value 'Michael Jackson' to index
+Adding field created_at_s with value '' to index
+Adding field updated_at_s with value '' to index
+creating doc for class: TwitterResource-16
+Adding field content with value 'sss' to index
+Adding field created_at_s with value '' to index
+Adding field updated_at_s with value '' to index
+creating doc for class: TwitterResource-17
+Adding field content with value '123' to index
+Adding field created_at_s with value '' to index
+Adding field updated_at_s with value '' to index
+creating doc for class: TwitterResource-18
+Adding field content with value '321' to index
+Adding field created_at_s with value '' to index
+Adding field updated_at_s with value '' to index
+creating doc for class: TwitterResource-19
+Adding field content with value '12345' to index
+Adding field created_at_s with value '' to index
+Adding field updated_at_s with value '' to index
+creating doc for class: TwitterResource-20
+Adding field content with value '54321' to index
+Adding field created_at_s with value '' to index
+Adding field updated_at_s with value '' to index
+creating doc for class: TwitterResource-21
+Adding field content with value '12312' to index
+Adding field created_at_s with value '' to index
+Adding field updated_at_s with value '' to index
+creating doc for class: TwitterResource-22
+Adding field content with value '111' to index
+Adding field created_at_s with value '' to index
+Adding field updated_at_s with value '' to index
+reindex model TwitterResource : 137.50% complete : 0.01 secs to finish
+  [4;35;1mTwitterResource Load Including Associations (0.8ms)[0m   [0mSELECT `resources`.`id` AS t0_r0, `resources`.`keywords` AS t0_r1, `resources`.`type` AS t0_r2, `resources`.`shoulu` AS t0_r3, `resources`.`user_id` AS t0_r4, `resources`.`title` AS t0_r5, `resources`.`form` AS t0_r6, `resources`.`link_url` AS t0_r7, `resources`.`description` AS t0_r8, `resources`.`authority` AS t0_r9, `resources`.`content` AS t0_r10, `resources`.`created_at` AS t0_r11, `resources`.`updated_at` AS t0_r12, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (resources.id > 22) AND ( (`resources`.`type` = 'TwitterResource' ) ) ORDER BY users.value DESC LIMIT 1000[0m
+creating doc for class: TwitterResource-24
+Adding field content with value 'Michael Jackson' to index
+Adding field created_at_s with value '' to index
+Adding field updated_at_s with value '' to index
+reindex model TwitterResource : 150.00% complete : 0.00 secs to finish
+  [4;36;1mTwitterResource Load Including Associations (0.6ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keywords` AS t0_r1, `resources`.`type` AS t0_r2, `resources`.`shoulu` AS t0_r3, `resources`.`user_id` AS t0_r4, `resources`.`title` AS t0_r5, `resources`.`form` AS t0_r6, `resources`.`link_url` AS t0_r7, `resources`.`description` AS t0_r8, `resources`.`authority` AS t0_r9, `resources`.`content` AS t0_r10, `resources`.`created_at` AS t0_r11, `resources`.`updated_at` AS t0_r12, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (resources.id > 24) AND ( (`resources`.`type` = 'TwitterResource' ) ) ORDER BY users.value DESC LIMIT 1000[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6fb00ac>
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:twitter_resource, "michael", {:models=>[TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :per_page=>15, :limit=>15, :page=>1, :sort=>by_user_value:<auto>, :offset=>0}])
+ferret server error Argument Error occured at <except.c>:93 in xraise
+Error occured in sort.c:551 - field_cache_get_index
+	Cannot sort by field "by_user_value". It doesn't exist in the index.
+
+
+/usr/lib/ruby/gems/1.8/gems/ferret-0.11.6/lib/ferret/index.rb:394:in `search_each'
+/usr/lib/ruby/gems/1.8/gems/ferret-0.11.6/lib/ferret/index.rb:394:in `search_each'
+/usr/lib/ruby/1.8/monitor.rb:242:in `synchronize'
+/usr/lib/ruby/gems/1.8/gems/ferret-0.11.6/lib/ferret/index.rb:390:in `search_each'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:112:in `find_ids'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `method_missing'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `__send__'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `perform_without_block'
+/usr/lib/ruby/1.8/drb/drb.rb:1522:in `perform'
+/usr/lib/ruby/1.8/drb/drb.rb:1596:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1437:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1354:in `initialize'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `new'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `start_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:99:in `run_drb_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `call'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `fork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `safefork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:11:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/ferret_server:9
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6fb00ac>
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE ( (`resources`.`type` = 'TwitterResource' ) ) [0m
+reindexing model TwitterResource
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+using mysql specific batched find :all. Turn off with  :mysql_fast_batches => false if you encounter problems (i.e. because of non-integer UUIDs in the id column)
+  [4;35;1mTwitterResource Load Including Associations (0.1ms)[0m   [0mSELECT `resources`.`id` AS t0_r0, `resources`.`keywords` AS t0_r1, `resources`.`type` AS t0_r2, `resources`.`shoulu` AS t0_r3, `resources`.`user_id` AS t0_r4, `resources`.`title` AS t0_r5, `resources`.`form` AS t0_r6, `resources`.`link_url` AS t0_r7, `resources`.`description` AS t0_r8, `resources`.`authority` AS t0_r9, `resources`.`content` AS t0_r10, `resources`.`created_at` AS t0_r11, `resources`.`updated_at` AS t0_r12, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (resources.id > 0) AND ( (`resources`.`type` = 'TwitterResource' ) ) ORDER BY users.value DESC LIMIT 1000[0m
+creating doc for class: TwitterResource-24
+Adding field content with value 'Michael Jackson' to index
+Adding field created_at_s with value '' to index
+Adding field updated_at_s with value '' to index
+creating doc for class: TwitterResource-2
+Adding field content with value 'hhhhaaaa' to index
+Adding field created_at_s with value '' to index
+Adding field updated_at_s with value '' to index
+creating doc for class: TwitterResource-3
+Adding field content with value 'suosuo' to index
+Adding field created_at_s with value '' to index
+Adding field updated_at_s with value '' to index
+creating doc for class: TwitterResource-10
+Adding field content with value 'ss' to index
+Adding field created_at_s with value '' to index
+Adding field updated_at_s with value '' to index
+creating doc for class: TwitterResource-11
+Adding field content with value 'sss' to index
+Adding field created_at_s with value '' to index
+Adding field updated_at_s with value '' to index
+creating doc for class: TwitterResource-12
+Adding field content with value 'sssss' to index
+Adding field created_at_s with value '' to index
+Adding field updated_at_s with value '' to index
+creating doc for class: TwitterResource-13
+Adding field content with value 'sssss哈哈' to index
+Adding field created_at_s with value '' to index
+Adding field updated_at_s with value '' to index
+creating doc for class: TwitterResource-14
+Adding field content with value 'Michael' to index
+Adding field created_at_s with value '' to index
+Adding field updated_at_s with value '' to index
+creating doc for class: TwitterResource-15
+Adding field content with value 'Michael Jackson' to index
+Adding field created_at_s with value '' to index
+Adding field updated_at_s with value '' to index
+creating doc for class: TwitterResource-16
+Adding field content with value 'sss' to index
+Adding field created_at_s with value '' to index
+Adding field updated_at_s with value '' to index
+creating doc for class: TwitterResource-17
+Adding field content with value '123' to index
+Adding field created_at_s with value '' to index
+Adding field updated_at_s with value '' to index
+creating doc for class: TwitterResource-18
+Adding field content with value '321' to index
+Adding field created_at_s with value '' to index
+Adding field updated_at_s with value '' to index
+creating doc for class: TwitterResource-19
+Adding field content with value '12345' to index
+Adding field created_at_s with value '' to index
+Adding field updated_at_s with value '' to index
+creating doc for class: TwitterResource-20
+Adding field content with value '54321' to index
+Adding field created_at_s with value '' to index
+Adding field updated_at_s with value '' to index
+creating doc for class: TwitterResource-21
+Adding field content with value '12312' to index
+Adding field created_at_s with value '' to index
+Adding field updated_at_s with value '' to index
+creating doc for class: TwitterResource-22
+Adding field content with value '111' to index
+Adding field created_at_s with value '' to index
+Adding field updated_at_s with value '' to index
+reindex model TwitterResource : 137.50% complete : 0.01 secs to finish
+  [4;36;1mTwitterResource Load Including Associations (0.1ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keywords` AS t0_r1, `resources`.`type` AS t0_r2, `resources`.`shoulu` AS t0_r3, `resources`.`user_id` AS t0_r4, `resources`.`title` AS t0_r5, `resources`.`form` AS t0_r6, `resources`.`link_url` AS t0_r7, `resources`.`description` AS t0_r8, `resources`.`authority` AS t0_r9, `resources`.`content` AS t0_r10, `resources`.`created_at` AS t0_r11, `resources`.`updated_at` AS t0_r12, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (resources.id > 22) AND ( (`resources`.`type` = 'TwitterResource' ) ) ORDER BY users.value DESC LIMIT 1000[0m
+creating doc for class: TwitterResource-24
+Adding field content with value 'Michael Jackson' to index
+Adding field created_at_s with value '' to index
+Adding field updated_at_s with value '' to index
+reindex model TwitterResource : 150.00% complete : 0.00 secs to finish
+  [4;35;1mTwitterResource Load Including Associations (0.1ms)[0m   [0mSELECT `resources`.`id` AS t0_r0, `resources`.`keywords` AS t0_r1, `resources`.`type` AS t0_r2, `resources`.`shoulu` AS t0_r3, `resources`.`user_id` AS t0_r4, `resources`.`title` AS t0_r5, `resources`.`form` AS t0_r6, `resources`.`link_url` AS t0_r7, `resources`.`description` AS t0_r8, `resources`.`authority` AS t0_r9, `resources`.`content` AS t0_r10, `resources`.`created_at` AS t0_r11, `resources`.`updated_at` AS t0_r12, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (resources.id > 24) AND ( (`resources`.`type` = 'TwitterResource' ) ) ORDER BY users.value DESC LIMIT 1000[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+exit
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f2d170>
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mTwitterResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+#method_missing(:find_ids, [:twitter_resource, "Michael", {:limit=>15, :models=>[TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :per_page=>15, :page=>1, :sort=>by_user_value:<auto>, :offset=>0}])
+ferret server error Argument Error occured at <except.c>:93 in xraise
+Error occured in sort.c:551 - field_cache_get_index
+	Cannot sort by field "by_user_value". It doesn't exist in the index.
+
+
+/usr/lib/ruby/gems/1.8/gems/ferret-0.11.6/lib/ferret/index.rb:394:in `search_each'
+/usr/lib/ruby/gems/1.8/gems/ferret-0.11.6/lib/ferret/index.rb:394:in `search_each'
+/usr/lib/ruby/1.8/monitor.rb:242:in `synchronize'
+/usr/lib/ruby/gems/1.8/gems/ferret-0.11.6/lib/ferret/index.rb:390:in `search_each'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:112:in `find_ids'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `method_missing'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `__send__'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `perform_without_block'
+/usr/lib/ruby/1.8/drb/drb.rb:1522:in `perform'
+/usr/lib/ruby/1.8/drb/drb.rb:1596:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1437:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1354:in `initialize'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `new'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `start_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:99:in `run_drb_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `call'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `fork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `safefork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:11:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/ferret_server:9
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f2d170>
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:twitter_resource, "Michael", {:limit=>15, :models=>[TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :per_page=>15, :page=>1, :sort=>by_user_value:<auto>, :offset=>0}])
+ferret server error Argument Error occured at <except.c>:93 in xraise
+Error occured in sort.c:551 - field_cache_get_index
+	Cannot sort by field "by_user_value". It doesn't exist in the index.
+
+
+/usr/lib/ruby/gems/1.8/gems/ferret-0.11.6/lib/ferret/index.rb:394:in `search_each'
+/usr/lib/ruby/gems/1.8/gems/ferret-0.11.6/lib/ferret/index.rb:394:in `search_each'
+/usr/lib/ruby/1.8/monitor.rb:242:in `synchronize'
+/usr/lib/ruby/gems/1.8/gems/ferret-0.11.6/lib/ferret/index.rb:390:in `search_each'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:112:in `find_ids'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `method_missing'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `__send__'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `perform_without_block'
+/usr/lib/ruby/1.8/drb/drb.rb:1522:in `perform'
+/usr/lib/ruby/1.8/drb/drb.rb:1596:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1437:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1354:in `initialize'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `new'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `start_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:99:in `run_drb_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `call'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `fork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `safefork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:11:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/ferret_server:9
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f2d170>
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:twitter_resource, "Michael", {:limit=>15, :models=>[TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :per_page=>15, :page=>1, :sort=>by_user_value:<auto>, :offset=>0}])
+ferret server error Argument Error occured at <except.c>:93 in xraise
+Error occured in sort.c:551 - field_cache_get_index
+	Cannot sort by field "by_user_value". It doesn't exist in the index.
+
+
+/usr/lib/ruby/gems/1.8/gems/ferret-0.11.6/lib/ferret/index.rb:394:in `search_each'
+/usr/lib/ruby/gems/1.8/gems/ferret-0.11.6/lib/ferret/index.rb:394:in `search_each'
+/usr/lib/ruby/1.8/monitor.rb:242:in `synchronize'
+/usr/lib/ruby/gems/1.8/gems/ferret-0.11.6/lib/ferret/index.rb:390:in `search_each'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:112:in `find_ids'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `method_missing'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `__send__'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `perform_without_block'
+/usr/lib/ruby/1.8/drb/drb.rb:1522:in `perform'
+/usr/lib/ruby/1.8/drb/drb.rb:1596:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1437:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1354:in `initialize'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `new'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `start_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:99:in `run_drb_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `call'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `fork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `safefork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:11:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/ferret_server:9
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f2d170>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f2d170>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f2d170>
+#method_missing(:add, [:twitter_resource, {:key=>"TwitterResource-2", :class_name=>"TwitterResource", :created_at_s=>"2009-08-29 18:34:44", :by_user_value=>"3.0", :id=>"2", :content=>"Michael"}])
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f2d170>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f2d170>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f2d170>
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:twitter_resource, "Michael", {:limit=>15, :models=>[TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :per_page=>15, :page=>1, :sort=>by_user_value:<auto>, :offset=>0}])
+#method_missing(:highlight, [:twitter_resource, "TwitterResource-2", "Michael", {:pre_tag=>"<span class='highlight'>", :field=>:content, :post_tag=>"</span>"}])
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f2d170>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f2d170>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f2d170>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f2d170>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f2d170>
+#method_missing(:add, [:twitter_resource, {:key=>"TwitterResource-4", :class_name=>"TwitterResource", :created_at_s=>"2009-08-29 18:35:35", :by_user_value=>"2.5", :id=>"4", :content=>"Michael"}])
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f2d170>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f2d170>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:twitter_resource, "Michael", {:limit=>15, :models=>[TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :per_page=>15, :page=>1, :sort=>by_user_value:<auto>, :offset=>0}])
+#method_missing(:highlight, [:twitter_resource, "TwitterResource-4", "Michael", {:pre_tag=>"<span class='highlight'>", :field=>:content, :post_tag=>"</span>"}])
+#method_missing(:highlight, [:twitter_resource, "TwitterResource-2", "Michael", {:pre_tag=>"<span class='highlight'>", :field=>:content, :post_tag=>"</span>"}])
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f2d170>
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:twitter_resource, "Michael", {:limit=>15, :models=>[TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :per_page=>15, :page=>1, :sort=>by_user_value:<auto>!, :offset=>0}])
+#method_missing(:highlight, [:twitter_resource, "TwitterResource-2", "Michael", {:pre_tag=>"<span class='highlight'>", :field=>:content, :post_tag=>"</span>"}])
+#method_missing(:highlight, [:twitter_resource, "TwitterResource-4", "Michael", {:pre_tag=>"<span class='highlight'>", :field=>:content, :post_tag=>"</span>"}])

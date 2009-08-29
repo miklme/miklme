@@ -11463,3 +11463,143 @@ total hits: 3, results delivered: 3
 [twitter_resource] highlight: TwitterResource-14 query: Michael
 [twitter_resource] highlight: TwitterResource-15 query: Michael
 [twitter_resource] highlight: TwitterResource-24 query: Michael
+index_for [TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:page=>1, :offset=>0, :limit=>15, :per_page=>15}
+ar_options: {}
+[twitter_resource] stored_fields: nil
+[twitter_resource] query: michael
+-->+content:michael +(class_name:TwitterResource)
+[twitter_resource] now retrieving records from AR with options: {}
+[twitter_resource] 3 results from AR: [#<TwitterResource id: 14, keywords: nil, type: "TwitterResource", shoulu: true, user_id: 1, title: nil, form: nil, link_url: nil, description: nil, authority: false, content: "Michael", created_at: "2009-08-29 08:33:11", updated_at: "2009-08-29 08:33:11">, #<TwitterResource id: 15, keywords: nil, type: "TwitterResource", shoulu: true, user_id: 1, title: nil, form: nil, link_url: nil, description: nil, authority: false, content: "Michael Jackson", created_at: "2009-08-29 08:33:15", updated_at: "2009-08-29 08:33:15">, #<TwitterResource id: 24, keywords: nil, type: "TwitterResource", shoulu: true, user_id: 2, title: nil, form: nil, link_url: nil, description: nil, authority: false, content: "Michael Jackson", created_at: "2009-08-29 10:03:35", updated_at: "2009-08-29 10:03:35">]
+Query: michael
+total hits: 3, results delivered: 3
+[twitter_resource] highlight: TwitterResource-14 query: michael
+[twitter_resource] highlight: TwitterResource-15 query: michael
+[twitter_resource] highlight: TwitterResource-24 query: michael
+index_for [TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:page=>1, :offset=>0, :limit=>15, :per_page=>15}
+ar_options: {}
+[twitter_resource] stored_fields: nil
+[twitter_resource] query: michael
+-->+content:michael +(class_name:TwitterResource)
+[twitter_resource] now retrieving records from AR with options: {}
+[twitter_resource] 3 results from AR: [#<TwitterResource id: 14, keywords: nil, type: "TwitterResource", shoulu: true, user_id: 1, title: nil, form: nil, link_url: nil, description: nil, authority: false, content: "Michael", created_at: "2009-08-29 08:33:11", updated_at: "2009-08-29 08:33:11">, #<TwitterResource id: 15, keywords: nil, type: "TwitterResource", shoulu: true, user_id: 1, title: nil, form: nil, link_url: nil, description: nil, authority: false, content: "Michael Jackson", created_at: "2009-08-29 08:33:15", updated_at: "2009-08-29 08:33:15">, #<TwitterResource id: 24, keywords: nil, type: "TwitterResource", shoulu: true, user_id: 2, title: nil, form: nil, link_url: nil, description: nil, authority: false, content: "Michael Jackson", created_at: "2009-08-29 10:03:35", updated_at: "2009-08-29 10:03:35">]
+Query: michael
+total hits: 3, results delivered: 3
+[twitter_resource] highlight: TwitterResource-14 query: michael
+[twitter_resource] highlight: TwitterResource-15 query: michael
+[twitter_resource] highlight: TwitterResource-24 query: michael
+index_for [TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:page=>1, :sort=>:by_user_value, :offset=>0, :limit=>15, :per_page=>15}
+ar_options: {}
+[twitter_resource] stored_fields: nil
+[twitter_resource] query: michael
+-->+content:michael +(class_name:TwitterResource)
+[twitter_resource] now retrieving records from AR with options: {}
+[twitter_resource] 3 results from AR: [#<TwitterResource id: 14, keywords: nil, type: "TwitterResource", shoulu: true, user_id: 1, title: nil, form: nil, link_url: nil, description: nil, authority: false, content: "Michael", created_at: "2009-08-29 08:33:11", updated_at: "2009-08-29 08:33:11">, #<TwitterResource id: 15, keywords: nil, type: "TwitterResource", shoulu: true, user_id: 1, title: nil, form: nil, link_url: nil, description: nil, authority: false, content: "Michael Jackson", created_at: "2009-08-29 08:33:15", updated_at: "2009-08-29 08:33:15">, #<TwitterResource id: 24, keywords: nil, type: "TwitterResource", shoulu: true, user_id: 2, title: nil, form: nil, link_url: nil, description: nil, authority: false, content: "Michael Jackson", created_at: "2009-08-29 10:03:35", updated_at: "2009-08-29 10:03:35">]
+Query: michael
+total hits: 3, results delivered: 3
+[twitter_resource] highlight: TwitterResource-14 query: michael
+[twitter_resource] highlight: TwitterResource-15 query: michael
+[twitter_resource] highlight: TwitterResource-24 query: michael
+index_for [TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:page=>1, :sort=>:by_user_value, :offset=>0, :limit=>15, :per_page=>15}
+ar_options: {}
+[twitter_resource] stored_fields: nil
+[twitter_resource] query: michael
+-->+content:michael +(class_name:TwitterResource)
+[twitter_resource] now retrieving records from AR with options: {}
+[twitter_resource] 3 results from AR: [#<TwitterResource id: 14, keywords: nil, type: "TwitterResource", shoulu: true, user_id: 1, title: nil, form: nil, link_url: nil, description: nil, authority: false, content: "Michael", created_at: "2009-08-29 08:33:11", updated_at: "2009-08-29 08:33:11">, #<TwitterResource id: 15, keywords: nil, type: "TwitterResource", shoulu: true, user_id: 1, title: nil, form: nil, link_url: nil, description: nil, authority: false, content: "Michael Jackson", created_at: "2009-08-29 08:33:15", updated_at: "2009-08-29 08:33:15">, #<TwitterResource id: 24, keywords: nil, type: "TwitterResource", shoulu: true, user_id: 2, title: nil, form: nil, link_url: nil, description: nil, authority: false, content: "Michael Jackson", created_at: "2009-08-29 10:03:35", updated_at: "2009-08-29 10:03:35">]
+Query: michael
+total hits: 3, results delivered: 3
+[twitter_resource] highlight: TwitterResource-14 query: michael
+[twitter_resource] highlight: TwitterResource-15 query: michael
+[twitter_resource] highlight: TwitterResource-24 query: michael
+index_for [TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:page=>1, :sort=>:by_user_value, :offset=>0, :limit=>15, :per_page=>15}
+ar_options: {}
+[twitter_resource] stored_fields: nil
+[twitter_resource] query: michael
+-->+content:michael +(class_name:TwitterResource)
+[twitter_resource] now retrieving records from AR with options: {}
+[twitter_resource] 3 results from AR: [#<TwitterResource id: 14, keywords: nil, type: "TwitterResource", shoulu: true, user_id: 1, title: nil, form: nil, link_url: nil, description: nil, authority: false, content: "Michael", created_at: "2009-08-29 08:33:11", updated_at: "2009-08-29 08:33:11">, #<TwitterResource id: 15, keywords: nil, type: "TwitterResource", shoulu: true, user_id: 1, title: nil, form: nil, link_url: nil, description: nil, authority: false, content: "Michael Jackson", created_at: "2009-08-29 08:33:15", updated_at: "2009-08-29 08:33:15">, #<TwitterResource id: 24, keywords: nil, type: "TwitterResource", shoulu: true, user_id: 2, title: nil, form: nil, link_url: nil, description: nil, authority: false, content: "Michael Jackson", created_at: "2009-08-29 10:03:35", updated_at: "2009-08-29 10:03:35">]
+Query: michael
+total hits: 3, results delivered: 3
+[twitter_resource] highlight: TwitterResource-14 query: michael
+[twitter_resource] highlight: TwitterResource-15 query: michael
+[twitter_resource] highlight: TwitterResource-24 query: michael
+Will use remote index server which should be available at druby://localhost:9010
+[twitter_resource] [twitter_resource] changing index dir to /home/michael/miklme/index/development/twitter_resource/20090829102704
+[twitter_resource] reopening index at /home/michael/miklme/index/development/twitter_resource/20090829102704
+[twitter_resource] [twitter_resource] index dir is now /home/michael/miklme/index/development/twitter_resource/20090829102704
+index_for [TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:page=>1, :sort=>by_user_value:<auto>, :offset=>0, :limit=>15, :per_page=>15}
+ar_options: {}
+[twitter_resource] stored_fields: nil
+[twitter_resource] query: michael
+-->+content:michael +(class_name:TwitterResource)
+Will use remote index server which should be available at druby://localhost:9010
+[twitter_resource] [twitter_resource] changing index dir to /home/michael/miklme/index/development/twitter_resource/20090829103151
+[twitter_resource] reopening index at /home/michael/miklme/index/development/twitter_resource/20090829103151
+[twitter_resource] [twitter_resource] index dir is now /home/michael/miklme/index/development/twitter_resource/20090829103151
+Will use local index.
+Will use local index.
+Will use remote index server which should be available at druby://localhost:9010
+using index in /home/michael/miklme/index/development/twitter_resource/20090829103151
+[twitter_resource] register class TwitterResource with index twitter_resource
+[twitter_resource] default field list for index twitter_resource: [:content]
+index_for [TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>15, :page=>1, :per_page=>15, :sort=>by_user_value:<auto>, :offset=>0}
+ar_options: {}
+[twitter_resource] stored_fields: nil
+[twitter_resource] query: Michael
+-->+content:michael +(class_name:TwitterResource)
+Will use remote index server which should be available at druby://localhost:9010
+Will use remote index server which should be available at druby://localhost:9010
+index_for [TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>15, :page=>1, :per_page=>15, :sort=>by_user_value:<auto>, :offset=>0}
+ar_options: {}
+[twitter_resource] stored_fields: nil
+[twitter_resource] query: Michael
+-->+content:michael +(class_name:TwitterResource)
+index_for [TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>15, :page=>1, :per_page=>15, :sort=>by_user_value:<auto>, :offset=>0}
+ar_options: {}
+[twitter_resource] stored_fields: nil
+[twitter_resource] query: Michael
+-->+content:michael +(class_name:TwitterResource)
+index_for [TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>15, :page=>1, :per_page=>15, :sort=>by_user_value:<auto>, :offset=>0}
+ar_options: {}
+[twitter_resource] stored_fields: nil
+[twitter_resource] query: Michael
+-->+content:michael +(class_name:TwitterResource)
+[twitter_resource] now retrieving records from AR with options: {}
+[twitter_resource] 1 results from AR: [#<TwitterResource id: 2, keywords: nil, type: "TwitterResource", shoulu: true, user_id: 2, title: nil, form: nil, link_url: nil, description: nil, authority: false, content: "Michael", created_at: "2009-08-29 10:34:44", updated_at: "2009-08-29 10:34:44">]
+Query: Michael
+total hits: 4, results delivered: 1
+[twitter_resource] highlight: TwitterResource-2 query: Michael
+index_for [TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>15, :page=>1, :per_page=>15, :sort=>by_user_value:<auto>, :offset=>0}
+ar_options: {}
+[twitter_resource] stored_fields: nil
+[twitter_resource] query: Michael
+-->+content:michael +(class_name:TwitterResource)
+[twitter_resource] now retrieving records from AR with options: {}
+[twitter_resource] 2 results from AR: [#<TwitterResource id: 4, keywords: nil, type: "TwitterResource", shoulu: true, user_id: 1, title: nil, form: nil, link_url: nil, description: nil, authority: false, content: "Michael", created_at: "2009-08-29 10:35:35", updated_at: "2009-08-29 10:35:35">, #<TwitterResource id: 2, keywords: nil, type: "TwitterResource", shoulu: true, user_id: 2, title: nil, form: nil, link_url: nil, description: nil, authority: false, content: "Michael", created_at: "2009-08-29 10:34:44", updated_at: "2009-08-29 10:34:44">]
+Query: Michael
+total hits: 5, results delivered: 2
+[twitter_resource] highlight: TwitterResource-4 query: Michael
+[twitter_resource] highlight: TwitterResource-2 query: Michael
+index_for [TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>15, :page=>1, :per_page=>15, :sort=>by_user_value:<auto>!, :offset=>0}
+ar_options: {}
+[twitter_resource] stored_fields: nil
+[twitter_resource] query: Michael
+-->+content:michael +(class_name:TwitterResource)
+[twitter_resource] now retrieving records from AR with options: {}
+[twitter_resource] 2 results from AR: [#<TwitterResource id: 2, keywords: nil, type: "TwitterResource", shoulu: true, user_id: 2, title: nil, form: nil, link_url: nil, description: nil, authority: false, content: "Michael", created_at: "2009-08-29 10:34:44", updated_at: "2009-08-29 10:34:44">, #<TwitterResource id: 4, keywords: nil, type: "TwitterResource", shoulu: true, user_id: 1, title: nil, form: nil, link_url: nil, description: nil, authority: false, content: "Michael", created_at: "2009-08-29 10:35:35", updated_at: "2009-08-29 10:35:35">]
+Query: Michael
+total hits: 5, results delivered: 2
+[twitter_resource] highlight: TwitterResource-2 query: Michael
+[twitter_resource] highlight: TwitterResource-4 query: Michael
