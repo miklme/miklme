@@ -20,10 +20,9 @@ class TwitterResource<Resource
   validates_presence_of :content,:message => "请填写完全"
 
 
-  def self.search_by_content(content,page)
+  def self.search_by_content(page)
     paginate :per_page => 15,
       :page => page,
-      :conditions => ["resources.content like ?","%"+content+"%"],
       :include => :owner,
       :order => 'users.value DESC'
   end

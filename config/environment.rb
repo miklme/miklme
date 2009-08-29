@@ -12,7 +12,6 @@ Rails::Initializer.run do |config|
   config.gem "rmmseg"
 #  config.gem "locale"
 #  config.gem "net-ssh"
-#  config.gem "passenger"
 #  config.gem "net-ssh-gateway"
 #  config.gem "launchy"
 #  config.gem "rmagick"

@@ -27,4 +27,5 @@ class ApplicationController < ActionController::Base
       page.show "hide"
     end
   end
+
 end
