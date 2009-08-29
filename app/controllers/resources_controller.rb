@@ -1,5 +1,5 @@
 class ResourcesController < ApplicationController
-  before_filter :load_user,:only => [:create,:destroy,:edit,:index,:show,:update]
+  before_filter :load_user,:except => :auto_complete_for_resource_keywords
   auto_complete_for :resource,:keywords
   def index
     @news=News.list_self_news(current_user,params[:page])

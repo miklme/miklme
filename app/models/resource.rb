@@ -1,4 +1,21 @@
+require 'rmmseg'
+require 'rmmseg/ferret'
+
 class Resource < ActiveRecord::Base
+  acts_as_ferret({
+      :fields=>{
+        :keywords=>{
+          :store=>:yes,
+          #:boost => 2
+          #可以设置权重
+        },
+      },
+      #  :remote => true,
+      #  生产环境下别忘记。
+      :store_class_name=>true,
+      :analyzer=>RMMSeg::Ferret::Analyzer.new
+    })
+  
   belongs_to :owner,:class_name => 'User',:foreign_key =>"user_id"
   default_scope :include => :owner,:order => 'users.value DESC'
   named_scope :by_time,:order => "created_at DESC"

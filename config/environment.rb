@@ -7,16 +7,16 @@ require File.join(File.dirname(__FILE__), 'boot')
 
 Rails::Initializer.run do |config|
   # Specify gems that this application depends on and have them installed with rake gems:install
- config.gem "ferret"
- config.gem "will_paginate"
- config.gem "locale"
- config.gem "net-ssh"
- config.gem "passenger"
- config.gem "net-ssh-gateway"
- config.gem "launchy"
- config.gem "rmagick"
- config.gem "configuration"
-
+  config.gem "ferret"
+  config.gem "acts_as_ferret"
+  config.gem "rmmseg"
+#  config.gem "locale"
+#  config.gem "net-ssh"
+#  config.gem "passenger"
+#  config.gem "net-ssh-gateway"
+#  config.gem "launchy"
+#  config.gem "rmagick"
+#  config.gem "configuration"
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
   # config.plugins = [ :exception_notification, :ssl_requirement, :all ]
