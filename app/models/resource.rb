@@ -11,9 +11,11 @@ class Resource < ActiveRecord::Base
         },
         :content => {
           :store => :yes
-        }
+        },
+        :created_at_s=>{:index=>:untokenized,:store=>:yes},
+        :updated_at_s=>{:index=>:untokenized,:store=>:yes}
       },
-      #  :remote => true,
+        :remote => true,
       #  生产环境下别忘记。
       :store_class_name=>true,
       :analyzer=>RMMSeg::Ferret::Analyzer.new
@@ -31,4 +33,10 @@ class Resource < ActiveRecord::Base
     end
   end
 
+  def created_at_s
+    created_at.advance(:hours => 8).to_s(:db)
+  end
+  def updated_at_s
+    updated_at.advance(:hours => 8).to_s(:db)
+  end
 end

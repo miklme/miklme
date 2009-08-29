@@ -6,9 +6,21 @@
 </div>
 <div id="results">
   <ol class="sb_results" id="wg0">
-    <%= render  @twitter_resources  %>
+    <% for t in @twitter_resources %>
+      <li>
+        <table class="item">
+          <tr>
+            <td width="60px">
+              <%= t.created_at_s %>
+            </td>
+              <%= t.highlight(@content, :field=>:content) %>
+              <%= t.content %>
+          </tr>
+        </table>
+      </li>
+    <% end %>
   </ol>
 </div>
 <div class="sb_pag">
-      <%= will_paginate @twitter_resources, :prev_label => '上一页', :next_label => '下一页' %>
+  <%= will_paginate @twitter_resources, :prev_label => '上一页', :next_label => '下一页' %>
 </div>

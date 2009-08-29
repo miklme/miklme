@@ -12,4 +12,6 @@ class TwitterResource<Resource
       :include => :owner,
       :order => 'users.value DESC'
   end
+
+ 
 end

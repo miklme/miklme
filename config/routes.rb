@@ -3,7 +3,7 @@ ActionController::Routing::Routes.draw do |map|
     user.resources :controlled_keywords
     user.resource :portrait
     user.resources :searched_keywords
-    user.resources :searched_content
+    user.resources :searched_contents
     user.resource :true_portrait
     user.resources :be_follows
     user.resources :follows,:new => {:search_user => :get}
