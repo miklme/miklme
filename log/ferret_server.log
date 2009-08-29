@@ -1,0 +1,358 @@
+# Logfile created on Sat Aug 29 16:08:54 +0800 2009 by /
+Address already in use - bind(2)
+############ registerclass Resource
+index for class Resource: #<ActsAsFerret::LocalIndex:0xb710ad94>
+#method_missing(:find_ids, [:resource, "h", #<DRb::DRbUnknown:0xb70e6c3c @buf="\004\b{\b:\vmodels[\006c\024TwitterResource:\voffset0:\nlimit0", @name="TwitterResource">])
+ferret server error undefined method `[]' for #<DRb::DRbUnknown:0xb70e6c3c>
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/local_index.rb:167:in `determine_stored_fields'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:106:in `find_ids'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `method_missing'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `__send__'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `perform_without_block'
+/usr/lib/ruby/1.8/drb/drb.rb:1522:in `perform'
+/usr/lib/ruby/1.8/drb/drb.rb:1596:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1437:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1354:in `initialize'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `new'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `start_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:99:in `run_drb_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `call'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `fork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `safefork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:11:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/ferret_server:9
+############ registerclass Resource
+index for class Resource: #<ActsAsFerret::LocalIndex:0xb710ad94>
+#method_missing(:find_ids, [:resource, "h", #<DRb::DRbUnknown:0xb70e13e0 @buf="\004\b{\b:\vmodels[\006c\024TwitterResource:\voffset0:\nlimit0", @name="TwitterResource">])
+ferret server error undefined method `[]' for #<DRb::DRbUnknown:0xb70e13e0>
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/local_index.rb:167:in `determine_stored_fields'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:106:in `find_ids'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `method_missing'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `__send__'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `perform_without_block'
+/usr/lib/ruby/1.8/drb/drb.rb:1522:in `perform'
+/usr/lib/ruby/1.8/drb/drb.rb:1596:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1437:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1354:in `initialize'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `new'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `start_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:99:in `run_drb_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `call'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `fork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `safefork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:11:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/ferret_server:9
+############ registerclass Resource
+index for class Resource: #<ActsAsFerret::LocalIndex:0xb710ad94>
+#method_missing(:find_ids, [:resource, "h", #<DRb::DRbUnknown:0xb70dd240 @buf="\004\b{\b:\vmodels[\006c\024TwitterResource:\voffset0:\nlimit0", @name="TwitterResource">])
+ferret server error undefined method `[]' for #<DRb::DRbUnknown:0xb70dd240>
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/local_index.rb:167:in `determine_stored_fields'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:106:in `find_ids'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `method_missing'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `__send__'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `perform_without_block'
+/usr/lib/ruby/1.8/drb/drb.rb:1522:in `perform'
+/usr/lib/ruby/1.8/drb/drb.rb:1596:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1437:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1354:in `initialize'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `new'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `start_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:99:in `run_drb_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `call'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `fork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `safefork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:11:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/ferret_server:9
+############ registerclass Resource
+index for class Resource: #<ActsAsFerret::LocalIndex:0xb710ad94>
+#method_missing(:find_ids, [:resource, "h", #<DRb::DRbUnknown:0xb70d93fc @buf="\004\b{\b:\vmodels[\006c\024TwitterResource:\voffset0:\nlimit0", @name="TwitterResource">])
+ferret server error undefined method `[]' for #<DRb::DRbUnknown:0xb70d93fc>
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/local_index.rb:167:in `determine_stored_fields'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:106:in `find_ids'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `method_missing'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `__send__'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `perform_without_block'
+/usr/lib/ruby/1.8/drb/drb.rb:1522:in `perform'
+/usr/lib/ruby/1.8/drb/drb.rb:1596:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1437:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1354:in `initialize'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `new'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `start_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:99:in `run_drb_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `call'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `fork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `safefork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:11:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/ferret_server:9
+############ registerclass Resource
+index for class Resource: #<ActsAsFerret::LocalIndex:0xb710ad94>
+#method_missing(:find_ids, [:resource, "h", #<DRb::DRbUnknown:0xb70d43ac @buf="\004\b{\b:\vmodels[\006c\024TwitterResource:\voffset0:\nlimit0", @name="TwitterResource">])
+ferret server error undefined method `[]' for #<DRb::DRbUnknown:0xb70d43ac>
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/local_index.rb:167:in `determine_stored_fields'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:106:in `find_ids'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `method_missing'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `__send__'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `perform_without_block'
+/usr/lib/ruby/1.8/drb/drb.rb:1522:in `perform'
+/usr/lib/ruby/1.8/drb/drb.rb:1596:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1437:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1354:in `initialize'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `new'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `start_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:99:in `run_drb_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `call'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `fork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `safefork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:11:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/ferret_server:9
+############ registerclass Resource
+index for class Resource: #<ActsAsFerret::LocalIndex:0xb710ad94>
+#method_missing(:find_ids, [:resource, "11", #<DRb::DRbUnknown:0xb70cfa78 @buf="\004\b{\b:\vmodels[\006c\024TwitterResource:\voffset0:\nlimit0", @name="TwitterResource">])
+ferret server error undefined method `[]' for #<DRb::DRbUnknown:0xb70cfa78>
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/local_index.rb:167:in `determine_stored_fields'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:106:in `find_ids'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `method_missing'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `__send__'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `perform_without_block'
+/usr/lib/ruby/1.8/drb/drb.rb:1522:in `perform'
+/usr/lib/ruby/1.8/drb/drb.rb:1596:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1437:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1354:in `initialize'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `new'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `start_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:99:in `run_drb_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `call'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `fork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `safefork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:11:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/ferret_server:9
+############ registerclass Resource
+index for class Resource: #<ActsAsFerret::LocalIndex:0xb710ad94>
+#method_missing(:find_ids, [:resource, "11", #<DRb::DRbUnknown:0xb70cbc84 @buf="\004\b{\b:\vmodels[\006c\024TwitterResource:\voffset0:\nlimit0", @name="TwitterResource">])
+ferret server error undefined method `[]' for #<DRb::DRbUnknown:0xb70cbc84>
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/local_index.rb:167:in `determine_stored_fields'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:106:in `find_ids'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `method_missing'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `__send__'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `perform_without_block'
+/usr/lib/ruby/1.8/drb/drb.rb:1522:in `perform'
+/usr/lib/ruby/1.8/drb/drb.rb:1596:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1437:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1354:in `initialize'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `new'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `start_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:99:in `run_drb_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `call'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `fork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `safefork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:11:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/ferret_server:9
+############ registerclass Resource
+index for class Resource: #<ActsAsFerret::LocalIndex:0xb710ad94>
+#method_missing(:find_ids, [:resource, "11", #<DRb::DRbUnknown:0xb70c7b48 @buf="\004\b{\b:\vmodels[\006c\024TwitterResource:\voffset0:\nlimit0", @name="TwitterResource">])
+ferret server error undefined method `[]' for #<DRb::DRbUnknown:0xb70c7b48>
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/local_index.rb:167:in `determine_stored_fields'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:106:in `find_ids'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `method_missing'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `__send__'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `perform_without_block'
+/usr/lib/ruby/1.8/drb/drb.rb:1522:in `perform'
+/usr/lib/ruby/1.8/drb/drb.rb:1596:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1437:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1354:in `initialize'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `new'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `start_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:99:in `run_drb_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `call'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `fork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `safefork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:11:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/ferret_server:9
+############ registerclass Resource
+index for class Resource: #<ActsAsFerret::LocalIndex:0xb710ad94>
+#method_missing(:find_ids, [:resource, "11", #<DRb::DRbUnknown:0xb70c39bc @buf="\004\b{\b:\vmodels[\006c\024TwitterResource:\voffset0:\nlimit0", @name="TwitterResource">])
+ferret server error undefined method `[]' for #<DRb::DRbUnknown:0xb70c39bc>
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/local_index.rb:167:in `determine_stored_fields'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:106:in `find_ids'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `method_missing'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `__send__'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `perform_without_block'
+/usr/lib/ruby/1.8/drb/drb.rb:1522:in `perform'
+/usr/lib/ruby/1.8/drb/drb.rb:1596:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1437:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1354:in `initialize'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `new'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `start_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:99:in `run_drb_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `call'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `fork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `safefork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:11:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/ferret_server:9
+############ registerclass Resource
+index for class Resource: #<ActsAsFerret::LocalIndex:0xb710ad94>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb70b351c>
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mTwitterResource Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+#method_missing(:find_ids, [:twitter_resource, "11", {:models=>[TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :limit=>nil, :offset=>nil}])
+############ registerclass Resource
+index for class Resource: #<ActsAsFerret::LocalIndex:0xb710ad94>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb70b351c>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:twitter_resource, "s", {:models=>[TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :limit=>nil, :offset=>nil}])
+############ registerclass Resource
+index for class Resource: #<ActsAsFerret::LocalIndex:0xb710ad94>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb70b351c>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:twitter_resource, "h", {:models=>[TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :limit=>nil, :offset=>nil}])
+############ registerclass Resource
+index for class Resource: #<ActsAsFerret::LocalIndex:0xb710ad94>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb70b351c>
+############ registerclass Resource
+index for class Resource: #<ActsAsFerret::LocalIndex:0xb710ad94>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb70b351c>
+############ registerclass Resource
+index for class Resource: #<ActsAsFerret::LocalIndex:0xb710ad94>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb70b351c>
+############ registerclass Resource
+index for class Resource: #<ActsAsFerret::LocalIndex:0xb710ad94>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb70b351c>
+############ registerclass Resource
+index for class Resource: #<ActsAsFerret::LocalIndex:0xb710ad94>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb70b351c>
