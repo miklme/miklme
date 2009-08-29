@@ -9,6 +9,9 @@ class Resource < ActiveRecord::Base
           #:boost => 2
           #可以设置权重
         },
+        :content => {
+          :store => :yes
+        }
       },
       #  :remote => true,
       #  生产环境下别忘记。
