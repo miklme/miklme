@@ -1,5 +1,5 @@
 class LinkUrlResourcesController < ApplicationController
-  before_filter :find_user,:except => :auto_complete_for_link_url_resource_keywords
+  before_filter :find_user,:except => [:auto_complete_for_link_url_resource_keywords,:redirect_and_adjust_value]
   auto_complete_for :link_url_resource,:keywords,:limit => 7
   def new
     @link_url_resource=@user.link_url_resources.build
@@ -55,9 +55,6 @@ class LinkUrlResourcesController < ApplicationController
     end
   end
 
-  def redirect_to_address
-    
-  end
   private
   def find_user
     @user=User.find(params[:user_id])
