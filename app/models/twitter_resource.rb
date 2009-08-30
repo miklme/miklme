@@ -10,7 +10,7 @@ class TwitterResource<Resource
       #  :remote => true,
       #  生产环境下别忘记。
       :store_class_name=>true,
-      :analyzer=>RMMSeg::Ferret::Analyzer.new
+      :analyzer=>RMMSeg::Ferret::Analyzer.new { |tokenizer| Ferret::Analysis::LowerCaseFilter.new(tokenizer) } 
     })
   
   has_many :replies,:foreign_key => "resource_id"
