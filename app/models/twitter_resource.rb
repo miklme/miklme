@@ -1,4 +1,9 @@
+require 'rmmseg'
+require 'rmmseg/ferret'
 class TwitterResource<Resource
+  analyzer = RMMSeg::Ferret::Analyzer.new { |tokenizer|
+    Ferret::Analysis::LowerCaseFilter.new(tokenizer)
+  }
   acts_as_ferret({
       :fields=>{
         :content => {
@@ -10,8 +15,9 @@ class TwitterResource<Resource
       #  :remote => true,
       #  生产环境下别忘记。
       :store_class_name=>true,
-      :analyzer=>RMMSeg::Ferret::Analyzer.new { |tokenizer| Ferret::Analysis::LowerCaseFilter.new(tokenizer) } 
+      :analyzer=>analyzer
     })
+
   
   has_many :replies,:foreign_key => "resource_id"
   has_many :repliers,:through => :replies,:source => :user
