@@ -45,15 +45,18 @@ class LinkUrlResourcesController < ApplicationController
     @not_authority_link_url_resources=@user.link_url_resources.scoped_by_authority(false)
   end
 
-
   def minus_value
     o=Resource.find(params[:id]).owner
     if not current_user==o
-      o.value=o.value-1
+      o.value=o.value-0.6
       o.save
-      flash[:notice]="创建这个链接的人减少了1点价值点数。"
+      flash[:notice]="创建这个链接的人减少了0.6点价值点数。"
       redirect_to :back
     end
+  end
+
+  def redirect_to_address
+    
   end
   private
   def find_user

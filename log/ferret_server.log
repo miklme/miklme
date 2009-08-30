@@ -1708,3 +1708,19 @@ index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f2d170>
 #method_missing(:find_ids, [:twitter_resource, "Michael", {:limit=>15, :models=>[TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :per_page=>15, :page=>1, :sort=>by_user_value:<auto>!, :offset=>0}])
 #method_missing(:highlight, [:twitter_resource, "TwitterResource-2", "Michael", {:pre_tag=>"<span class='highlight'>", :field=>:content, :post_tag=>"</span>"}])
 #method_missing(:highlight, [:twitter_resource, "TwitterResource-4", "Michael", {:pre_tag=>"<span class='highlight'>", :field=>:content, :post_tag=>"</span>"}])
+exit
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6ed8e04>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6ed8e04>
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mTwitterResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+#method_missing(:find_ids, [:twitter_resource, "s", {:limit=>15, :models=>[TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :per_page=>15, :page=>1, :sort=>by_user_value:<auto>!, :offset=>0}])
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6ed8e04>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:twitter_resource, "Michael", {:limit=>15, :models=>[TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :per_page=>15, :page=>1, :sort=>by_user_value:<auto>!, :offset=>0}])
+#method_missing(:highlight, [:twitter_resource, "TwitterResource-2", "Michael", {:pre_tag=>"<span class='highlight'>", :field=>:content, :post_tag=>"</span>"}])
+#method_missing(:highlight, [:twitter_resource, "TwitterResource-4", "Michael", {:pre_tag=>"<span class='highlight'>", :field=>:content, :post_tag=>"</span>"}])
