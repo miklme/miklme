@@ -12616,3 +12616,1993 @@ total hits: 1, results delivered: 1
 [link_url_resource] highlight: LinkUrlResource-1 query: Michael
 Will use remote index server which should be available at druby://localhost:9010
 Will use remote index server which should be available at druby://localhost:9010
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Mi
+-->+keywords:mi +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Mi
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Mic
+-->+keywords:mic +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Mic
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Micha
+-->+keywords:micha +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Micha
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Michael
+-->+keywords:michael +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 1 results from AR: [#<LinkUrlResource id: 1, keywords: "Michael", type: "LinkUrlResource", shoulu: true, user_id: 1, title: nil, form: "文字、文档", link_url: "http://123321", description: "mIhcae", authority: false, content: nil, created_at: "2009-08-30 04:44:21", updated_at: "2009-08-30 04:44:21">]
+Query: Michael
+total hits: 1, results delivered: 1
+[link_url_resource] highlight: LinkUrlResource-1 query: Michael
+index_for [TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>15, :page=>1, :per_page=>15, :sort=>by_user_value:<auto>!, :offset=>0}
+ar_options: {}
+[twitter_resource] stored_fields: nil
+[twitter_resource] query: michael
+-->+content:michael +(class_name:TwitterResource)
+[twitter_resource] now retrieving records from AR with options: {}
+[twitter_resource] 0 results from AR: []
+Query: michael
+total hits: 5, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: M
+-->+keywords:m +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: M
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: M
+-->+keywords:m +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: M
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Mi
+-->+keywords:mi +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Mi
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Mich
+-->+keywords:mich +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Mich
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Micha
+-->+keywords:micha +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Micha
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Michael
+-->+keywords:michael +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 1 results from AR: [#<LinkUrlResource id: 1, keywords: "Michael", type: "LinkUrlResource", shoulu: true, user_id: 1, title: nil, form: "文字、文档", link_url: "http://123321", description: "mIhcae", authority: false, content: nil, created_at: "2009-08-30 04:44:21", updated_at: "2009-08-30 04:44:21">]
+Query: Michael
+total hits: 1, results delivered: 1
+[link_url_resource] highlight: LinkUrlResource-1 query: Michael
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: M
+-->+keywords:m +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: M
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Michael
+-->+keywords:michael +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 2 results from AR: [#<LinkUrlResource id: 1, keywords: "Michael", type: "LinkUrlResource", shoulu: true, user_id: 1, title: nil, form: "文字、文档", link_url: "http://123321", description: "mIhcae", authority: false, content: nil, created_at: "2009-08-30 04:44:21", updated_at: "2009-08-30 04:44:21">, #<LinkUrlResource id: 2, keywords: "Michael", type: "LinkUrlResource", shoulu: true, user_id: 1, title: nil, form: "文字、文档", link_url: "http://g.cn", description: "123", authority: false, content: nil, created_at: "2009-08-30 08:08:34", updated_at: "2009-08-30 08:08:34">]
+Query: Michael
+total hits: 2, results delivered: 2
+[link_url_resource] highlight: LinkUrlResource-1 query: Michael
+[link_url_resource] highlight: LinkUrlResource-2 query: Michael
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: M
+-->+keywords:m +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: M
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Mich
+-->+keywords:mich +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Mich
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Michae
+-->+keywords:michae +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Michae
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Michael
+-->+keywords:michael +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 2 results from AR: [#<LinkUrlResource id: 1, keywords: "Michael", type: "LinkUrlResource", shoulu: true, user_id: 1, title: nil, form: "文字、文档", link_url: "http://123321", description: "mIhcae", authority: false, content: nil, created_at: "2009-08-30 04:44:21", updated_at: "2009-08-30 04:44:21">, #<LinkUrlResource id: 2, keywords: "Michael", type: "LinkUrlResource", shoulu: true, user_id: 1, title: nil, form: "文字、文档", link_url: "http://g.cn", description: "123", authority: false, content: nil, created_at: "2009-08-30 08:08:34", updated_at: "2009-08-30 08:08:34">]
+Query: Michael
+total hits: 2, results delivered: 2
+[link_url_resource] highlight: LinkUrlResource-1 query: Michael
+[link_url_resource] highlight: LinkUrlResource-2 query: Michael
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: zh'o
+-->+keywords:zh'o +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: zh'o
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: zhou
+-->+keywords:zhou +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: zhou
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: 周
+-->+keywords:周 +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: 周
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: zh'o
+-->+keywords:zh'o +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: zh'o
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: zhou
+-->+keywords:zhou +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: zhou
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: 周
+-->+keywords:周 +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: 周
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: 周g'o'n
+-->+keywords:周g'o'n +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: 周g'o'n
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: 周gong
+-->+keywords:周gong +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: 周gong
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: 周公
+-->+keywords:周公 +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: 周公
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: M
+-->+keywords:m +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: M
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Michael
+-->+keywords:michael +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 2 results from AR: [#<LinkUrlResource id: 1, keywords: "Michael", type: "LinkUrlResource", shoulu: true, user_id: 1, title: nil, form: "文字、文档", link_url: "http://123321", description: "mIhcae", authority: false, content: nil, created_at: "2009-08-30 04:44:21", updated_at: "2009-08-30 04:44:21">, #<LinkUrlResource id: 2, keywords: "Michael", type: "LinkUrlResource", shoulu: true, user_id: 1, title: nil, form: "文字、文档", link_url: "http://g.cn", description: "123", authority: false, content: nil, created_at: "2009-08-30 08:08:34", updated_at: "2009-08-30 08:08:34">]
+Query: Michael
+total hits: 2, results delivered: 2
+[link_url_resource] highlight: LinkUrlResource-1 query: Michael
+[link_url_resource] highlight: LinkUrlResource-2 query: Michael
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Micha
+-->+keywords:micha +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Micha
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Micha
+-->+keywords:micha +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Micha
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Mich
+-->+keywords:mich +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Mich
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Mi
+-->+keywords:mi +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Mi
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: M
+-->+keywords:m +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: M
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: zh'o
+-->+keywords:zh'o +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: zh'o
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: zhou
+-->+keywords:zhou +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: zhou
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: 周
+-->+keywords:周 +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: 周
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: 周g'o'n
+-->+keywords:周g'o'n +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: 周g'o'n
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: 周gong
+-->+keywords:周gong +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: 周gong
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: 周工
+-->+keywords:周工 +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: 周工
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: 周
+-->+keywords:周 +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: 周
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: 周gong
+-->+keywords:周gong +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: 周gong
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: 周公
+-->+keywords:周公 +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: 周公
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: 周公jie'm
+-->+keywords:周公jie'm +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: 周公jie'm
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: 周公jie'meng
+-->+keywords:周公jie'meng +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: 周公jie'meng
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: 周公结盟
+-->+keywords:周公结盟 +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: 周公结盟
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: 周公
+-->+keywords:周公 +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: 周公
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: 周公
+-->+keywords:周公 +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: 周公
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: 周公jie'm
+-->+keywords:周公jie'm +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: 周公jie'm
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: 周公jie'men
+-->+keywords:周公jie'men +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: 周公jie'men
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: 周公jie'meng
+-->+keywords:周公jie'meng +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: 周公jie'meng
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: 周公解梦
+-->+keywords:周公解梦 +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 1 results from AR: [#<LinkUrlResource id: 3, keywords: "周公解梦", type: "LinkUrlResource", shoulu: true, user_id: 1, title: nil, form: "文字、文档", link_url: "http://123321.com", description: "哈哈", authority: false, content: nil, created_at: "2009-08-30 08:16:57", updated_at: "2009-08-30 08:16:57">]
+Query: 周公解梦
+total hits: 1, results delivered: 1
+[link_url_resource] highlight: LinkUrlResource-3 query: 周公解梦
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: 周公解
+-->+keywords:周公解 +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: 周公解
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: 周公
+-->+keywords:周公 +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: 周公
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: jie'meng
+-->+keywords:jie'meng +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: jie'meng
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: jie'meng
+-->+keywords:jie'meng +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: jie'meng
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: 解梦
+-->+keywords:解梦 +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: 解梦
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: zh'o
+-->+keywords:zh'o +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: zh'o
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: zhou
+-->+keywords:zhou +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: zhou
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: 周
+-->+keywords:周 +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: 周
+total hits: 0, results delivered: 0
+index_for [TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>15, :page=>1, :per_page=>15, :sort=>by_user_value:<auto>!, :offset=>0}
+ar_options: {}
+[twitter_resource] stored_fields: nil
+[twitter_resource] query: 你
+-->+content:你 +(class_name:TwitterResource)
+[twitter_resource] now retrieving records from AR with options: {}
+[twitter_resource] 0 results from AR: []
+Query: 你
+total hits: 0, results delivered: 0
+index_for [TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>15, :page=>1, :per_page=>15, :sort=>by_user_value:<auto>!, :offset=>0}
+ar_options: {}
+[twitter_resource] stored_fields: nil
+[twitter_resource] query: 应该
+-->+content:应该 +(class_name:TwitterResource)
+[twitter_resource] now retrieving records from AR with options: {}
+[twitter_resource] 0 results from AR: []
+Query: 应该
+total hits: 0, results delivered: 0
+index_for [TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>15, :page=>1, :per_page=>15, :sort=>by_user_value:<auto>!, :offset=>0}
+ar_options: {}
+[twitter_resource] stored_fields: nil
+[twitter_resource] query: 你应该
+-->+content:你应该 +(class_name:TwitterResource)
+[twitter_resource] now retrieving records from AR with options: {}
+[twitter_resource] 0 results from AR: []
+Query: 你应该
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: 周
+-->+keywords:周 +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: 周
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: 周
+-->+keywords:周 +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: 周
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: 周
+-->+keywords:周 +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: 周
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: zh'o
+-->+keywords:zh'o +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: zh'o
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: zhou
+-->+keywords:zhou +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: zhou
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: 周
+-->+keywords:周 +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: 周
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: 周
+-->+keywords:周 +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: 周
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: 周 gong
+-->+(+keywords:周 +keywords:gong) +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: 周 gong
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: 周 公
+-->+(+keywords:周 +keywords:公) +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: 周 公
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: 周
+-->+keywords:周 +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: 周
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: ha
+-->+keywords:ha +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: ha
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: ha'ha
+-->+keywords:ha'ha +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: ha'ha
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: ha'ha
+-->+keywords:ha'ha +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: ha'ha
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: 哈哈
+-->+keywords:哈哈 +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: 哈哈
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: jie
+-->+keywords:jie +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: jie
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: jie'men
+-->+keywords:jie'men +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: jie'men
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: jie'men
+-->+keywords:jie'men +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: jie'men
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: jie'meng
+-->+keywords:jie'meng +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: jie'meng
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: 解梦
+-->+keywords:解梦 +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: 解梦
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: 解梦zhong
+-->+keywords:解梦zhong +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: 解梦zhong
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: 解梦zhong'w
+-->+keywords:解梦zhong'w +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: 解梦zhong'w
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: 解梦zhong'wen
+-->+keywords:解梦zhong'wen +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: 解梦zhong'wen
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: 解梦中文
+-->+keywords:解梦中文 +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: 解梦中文
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: 解梦中文fen'c
+-->+keywords:解梦中文fen'c +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: 解梦中文fen'c
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: 解梦中文fen'ci
+-->+keywords:解梦中文fen'ci +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: 解梦中文fen'ci
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: 解梦中文分词
+-->+keywords:解梦中文分词 +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: 解梦中文分词
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: 解梦中文
+-->+keywords:解梦中文 +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: 解梦中文
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: 解梦中
+-->+keywords:解梦中 +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: 解梦中
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: 解梦
+-->+keywords:解梦 +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: 解梦
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: 解
+-->+keywords:解 +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: 解
+total hits: 0, results delivered: 0
+index_for [TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>15, :page=>1, :per_page=>15, :sort=>by_user_value:<auto>!, :offset=>0}
+ar_options: {}
+[twitter_resource] stored_fields: nil
+[twitter_resource] query: Jackson Michael
+-->+(+content:jackson +content:michael) +(class_name:TwitterResource)
+[twitter_resource] now retrieving records from AR with options: {}
+[twitter_resource] 0 results from AR: []
+Query: Jackson Michael
+total hits: 2, results delivered: 0
+index_for [TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>15, :page=>1, :per_page=>15, :sort=>by_user_value:<auto>!, :offset=>0}
+ar_options: {}
+[twitter_resource] stored_fields: nil
+[twitter_resource] query: Michael
+-->+content:michael +(class_name:TwitterResource)
+[twitter_resource] now retrieving records from AR with options: {}
+[twitter_resource] 0 results from AR: []
+Query: Michael
+total hits: 4, results delivered: 0
+index_for [TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>15, :page=>1, :per_page=>15, :sort=>by_user_value:<auto>!, :offset=>0}
+ar_options: {}
+[twitter_resource] stored_fields: nil
+[twitter_resource] query: Jackson Michael
+-->+(+content:jackson +content:michael) +(class_name:TwitterResource)
+[twitter_resource] now retrieving records from AR with options: {}
+[twitter_resource] 1 results from AR: [#<TwitterResource id: 5, keywords: nil, type: "TwitterResource", shoulu: true, user_id: 1, title: nil, form: nil, link_url: nil, description: nil, authority: false, content: "Michael Jackson\r\n", created_at: "2009-08-30 08:25:22", updated_at: "2009-08-30 08:25:22">]
+Query: Jackson Michael
+total hits: 3, results delivered: 1
+[twitter_resource] highlight: TwitterResource-5 query: Jackson Michael
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: M
+-->+keywords:m +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: M
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Mi
+-->+keywords:mi +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Mi
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Mic
+-->+keywords:mic +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Mic
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Michael
+-->+keywords:michael +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 2 results from AR: [#<LinkUrlResource id: 1, keywords: "Michael", type: "LinkUrlResource", shoulu: true, user_id: 1, title: nil, form: "文字、文档", link_url: "http://123321", description: "mIhcae", authority: false, content: nil, created_at: "2009-08-30 04:44:21", updated_at: "2009-08-30 04:44:21">, #<LinkUrlResource id: 2, keywords: "Michael", type: "LinkUrlResource", shoulu: true, user_id: 1, title: nil, form: "文字、文档", link_url: "http://g.cn", description: "123", authority: false, content: nil, created_at: "2009-08-30 08:08:34", updated_at: "2009-08-30 08:08:34">]
+Query: Michael
+total hits: 2, results delivered: 2
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: M
+-->+keywords:m +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: M
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: M
+-->+keywords:m +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: M
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: M
+-->+keywords:m +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: M
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: M
+-->+keywords:m +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: M
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :group=>"keywords", :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: M
+-->+keywords:m +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: M
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :group=>"keywords", :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Mi
+-->+keywords:mi +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Mi
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :group=>"keywords", :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Micha
+-->+keywords:micha +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Micha
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :group=>"keywords", :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Michael
+-->+keywords:michael +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 2 results from AR: [#<LinkUrlResource id: 1, keywords: "Michael", type: "LinkUrlResource", shoulu: true, user_id: 1, title: nil, form: "文字、文档", link_url: "http://123321", description: "mIhcae", authority: false, content: nil, created_at: "2009-08-30 04:44:21", updated_at: "2009-08-30 04:44:21">, #<LinkUrlResource id: 2, keywords: "Michael", type: "LinkUrlResource", shoulu: true, user_id: 1, title: nil, form: "文字、文档", link_url: "http://g.cn", description: "123", authority: false, content: nil, created_at: "2009-08-30 08:08:34", updated_at: "2009-08-30 08:08:34">]
+Query: Michael
+total hits: 2, results delivered: 2
+[link_url_resource] highlight: LinkUrlResource-1 query: Michael
+[link_url_resource] highlight: LinkUrlResource-2 query: Michael
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>1, :page=>nil, :offset=>0}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: M
+-->+keywords:m +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: M
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>1, :page=>nil, :offset=>0}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Michael
+-->+keywords:michael +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 1 results from AR: [#<LinkUrlResource id: 1, keywords: "Michael", type: "LinkUrlResource", shoulu: true, user_id: 1, title: nil, form: "文字、文档", link_url: "http://123321", description: "mIhcae", authority: false, content: nil, created_at: "2009-08-30 04:44:21", updated_at: "2009-08-30 04:44:21">]
+Query: Michael
+total hits: 2, results delivered: 1
+[link_url_resource] highlight: LinkUrlResource-1 query: Michael
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>15, :page=>nil, :offset=>0}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: M
+-->+keywords:m +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: M
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>15, :page=>nil, :offset=>0}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Mic
+-->+keywords:mic +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Mic
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>15, :page=>nil, :offset=>0}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Mich
+-->+keywords:mich +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Mich
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>15, :page=>nil, :offset=>0}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Michael
+-->+keywords:michael +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 2 results from AR: [#<LinkUrlResource id: 1, keywords: "Michael", type: "LinkUrlResource", shoulu: true, user_id: 1, title: nil, form: "文字、文档", link_url: "http://123321", description: "mIhcae", authority: false, content: nil, created_at: "2009-08-30 04:44:21", updated_at: "2009-08-30 04:44:21">, #<LinkUrlResource id: 2, keywords: "Michael", type: "LinkUrlResource", shoulu: true, user_id: 1, title: nil, form: "文字、文档", link_url: "http://g.cn", description: "123", authority: false, content: nil, created_at: "2009-08-30 08:08:34", updated_at: "2009-08-30 08:08:34">]
+Query: Michael
+total hits: 2, results delivered: 2
+[link_url_resource] highlight: LinkUrlResource-1 query: Michael
+[link_url_resource] highlight: LinkUrlResource-2 query: Michael
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>15, :page=>nil, :offset=>0}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Mi
+-->+keywords:mi +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Mi
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>15, :page=>nil, :offset=>0}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Mich
+-->+keywords:mich +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Mich
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>15, :page=>nil, :offset=>0}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Michae
+-->+keywords:michae +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Michae
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>15, :page=>nil, :offset=>0}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Michael
+-->+keywords:michael +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 2 results from AR: [#<LinkUrlResource id: 1, keywords: "Michael", type: "LinkUrlResource", shoulu: true, user_id: 1, title: nil, form: "文字、文档", link_url: "http://123321", description: "mIhcae", authority: false, content: nil, created_at: "2009-08-30 04:44:21", updated_at: "2009-08-30 04:44:21">, #<LinkUrlResource id: 2, keywords: "Michael", type: "LinkUrlResource", shoulu: true, user_id: 1, title: nil, form: "文字、文档", link_url: "http://g.cn", description: "123", authority: false, content: nil, created_at: "2009-08-30 08:08:34", updated_at: "2009-08-30 08:08:34">]
+Query: Michael
+total hits: 2, results delivered: 2
+[link_url_resource] highlight: LinkUrlResource-1 query: Michael
+[link_url_resource] highlight: LinkUrlResource-2 query: Michael
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: M
+-->+keywords:m +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: M
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: M
+-->+keywords:m +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: M
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Mic
+-->+keywords:mic +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Mic
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Micha
+-->+keywords:micha +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Micha
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Michael
+-->+keywords:michael +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 2 results from AR: [#<LinkUrlResource id: 1, keywords: "Michael", type: "LinkUrlResource", shoulu: true, user_id: 1, title: nil, form: "文字、文档", link_url: "http://123321", description: "mIhcae", authority: false, content: nil, created_at: "2009-08-30 04:44:21", updated_at: "2009-08-30 04:44:21">, #<LinkUrlResource id: 2, keywords: "Michael", type: "LinkUrlResource", shoulu: true, user_id: 1, title: nil, form: "文字、文档", link_url: "http://g.cn", description: "123", authority: false, content: nil, created_at: "2009-08-30 08:08:34", updated_at: "2009-08-30 08:08:34">]
+Query: Michael
+total hits: 2, results delivered: 2
+[link_url_resource] highlight: LinkUrlResource-1 query: Michael
+[link_url_resource] highlight: LinkUrlResource-2 query: Michael
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: li
+-->+keywords:li +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: li
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: lim
+-->+keywords:lim +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: lim
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: limi
+-->+keywords:limi +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: limi
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: li
+-->+keywords:li +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: li
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: li
+-->+keywords:li +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: li
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Mi
+-->+keywords:mi +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Mi
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Mich
+-->+keywords:mich +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Mich
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Michae
+-->+keywords:michae +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Michae
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Michael
+-->+keywords:michael +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 2 results from AR: [#<LinkUrlResource id: 1, keywords: "Michael", type: "LinkUrlResource", shoulu: true, user_id: 1, title: nil, form: "文字、文档", link_url: "http://123321", description: "mIhcae", authority: false, content: nil, created_at: "2009-08-30 04:44:21", updated_at: "2009-08-30 04:44:21">, #<LinkUrlResource id: 2, keywords: "Michael", type: "LinkUrlResource", shoulu: true, user_id: 1, title: nil, form: "文字、文档", link_url: "http://g.cn", description: "123", authority: false, content: nil, created_at: "2009-08-30 08:08:34", updated_at: "2009-08-30 08:08:34">]
+Query: Michael
+total hits: 2, results delivered: 2
+[link_url_resource] highlight: LinkUrlResource-1 query: Michael
+[link_url_resource] highlight: LinkUrlResource-2 query: Michael
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Mi
+-->+keywords:mi +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Mi
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Michael
+-->+keywords:michael +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 2 results from AR: [#<LinkUrlResource id: 1, keywords: "Michael", type: "LinkUrlResource", shoulu: true, user_id: 1, title: nil, form: "文字、文档", link_url: "http://123321", description: "mIhcae", authority: false, content: nil, created_at: "2009-08-30 04:44:21", updated_at: "2009-08-30 04:44:21">, #<LinkUrlResource id: 2, keywords: "Michael", type: "LinkUrlResource", shoulu: true, user_id: 1, title: nil, form: "文字、文档", link_url: "http://g.cn", description: "123", authority: false, content: nil, created_at: "2009-08-30 08:08:34", updated_at: "2009-08-30 08:08:34">]
+Query: Michael
+total hits: 2, results delivered: 2
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Mi
+-->+keywords:mi +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Mi
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Michael
+-->+keywords:michael +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 2 results from AR: [#<LinkUrlResource id: 1, keywords: "Michael", type: "LinkUrlResource", shoulu: true, user_id: 1, title: nil, form: "文字、文档", link_url: "http://123321", description: "mIhcae", authority: false, content: nil, created_at: "2009-08-30 04:44:21", updated_at: "2009-08-30 04:44:21">, #<LinkUrlResource id: 2, keywords: "Michael", type: "LinkUrlResource", shoulu: true, user_id: 1, title: nil, form: "文字、文档", link_url: "http://g.cn", description: "123", authority: false, content: nil, created_at: "2009-08-30 08:08:34", updated_at: "2009-08-30 08:08:34">]
+Query: Michael
+total hits: 2, results delivered: 2
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Mic
+-->+keywords:mic +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Mic
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Micah
+-->+keywords:micah +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Micah
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Micahel
+-->+keywords:micahel +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Micahel
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Micahe
+-->+keywords:micahe +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Micahe
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Mica
+-->+keywords:mica +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Mica
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Mic
+-->+keywords:mic +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Mic
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Mic
+-->+keywords:mic +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Mic
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Michae
+-->+keywords:michae +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Michae
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Michael
+-->+keywords:michael +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 2 results from AR: [#<LinkUrlResource id: 1, keywords: "Michael", type: "LinkUrlResource", shoulu: true, user_id: 1, title: nil, form: "文字、文档", link_url: "http://123321", description: "mIhcae", authority: false, content: nil, created_at: "2009-08-30 04:44:21", updated_at: "2009-08-30 04:44:21">, #<LinkUrlResource id: 2, keywords: "Michael", type: "LinkUrlResource", shoulu: true, user_id: 1, title: nil, form: "文字、文档", link_url: "http://g.cn", description: "123", authority: false, content: nil, created_at: "2009-08-30 08:08:34", updated_at: "2009-08-30 08:08:34">]
+Query: Michael
+total hits: 2, results delivered: 2
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Mi
+-->+keywords:mi +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Mi
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Micha
+-->+keywords:micha +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Micha
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Michael
+-->+keywords:michael +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 2 results from AR: [#<LinkUrlResource id: 1, keywords: "Michael", type: "LinkUrlResource", shoulu: true, user_id: 1, title: nil, form: "文字、文档", link_url: "http://123321", description: "mIhcae", authority: false, content: nil, created_at: "2009-08-30 04:44:21", updated_at: "2009-08-30 04:44:21">, #<LinkUrlResource id: 2, keywords: "Michael", type: "LinkUrlResource", shoulu: true, user_id: 1, title: nil, form: "文字、文档", link_url: "http://g.cn", description: "123", authority: false, content: nil, created_at: "2009-08-30 08:08:34", updated_at: "2009-08-30 08:08:34">]
+Query: Michael
+total hits: 2, results delivered: 2
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Michael
+-->+keywords:michael +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 2 results from AR: [#<LinkUrlResource id: 1, keywords: "Michael", type: "LinkUrlResource", shoulu: true, user_id: 1, title: nil, form: "文字、文档", link_url: "http://123321", description: "mIhcae", authority: false, content: nil, created_at: "2009-08-30 04:44:21", updated_at: "2009-08-30 04:44:21">, #<LinkUrlResource id: 2, keywords: "Michael", type: "LinkUrlResource", shoulu: true, user_id: 1, title: nil, form: "文字、文档", link_url: "http://g.cn", description: "123", authority: false, content: nil, created_at: "2009-08-30 08:08:34", updated_at: "2009-08-30 08:08:34">]
+Query: Michael
+total hits: 2, results delivered: 2
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Mi
+-->+keywords:mi +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Mi
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Micha
+-->+keywords:micha +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Micha
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Michael
+-->+keywords:michael +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 2 results from AR: [#<LinkUrlResource id: 1, keywords: "Michael", type: "LinkUrlResource", shoulu: true, user_id: 1, title: nil, form: "文字、文档", link_url: "http://123321", description: "mIhcae", authority: false, content: nil, created_at: "2009-08-30 04:44:21", updated_at: "2009-08-30 04:44:21">, #<LinkUrlResource id: 2, keywords: "Michael", type: "LinkUrlResource", shoulu: true, user_id: 1, title: nil, form: "文字、文档", link_url: "http://g.cn", description: "123", authority: false, content: nil, created_at: "2009-08-30 08:08:34", updated_at: "2009-08-30 08:08:34">]
+Query: Michael
+total hits: 2, results delivered: 2
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Mi
+-->+keywords:mi +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Mi
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Micha
+-->+keywords:micha +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Micha
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Michael
+-->+keywords:michael +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 2 results from AR: [#<LinkUrlResource id: 1, keywords: "Michael", type: "LinkUrlResource", shoulu: true, user_id: 1, title: nil, form: "文字、文档", link_url: "http://123321", description: "mIhcae", authority: false, content: nil, created_at: "2009-08-30 04:44:21", updated_at: "2009-08-30 04:44:21">, #<LinkUrlResource id: 2, keywords: "Michael", type: "LinkUrlResource", shoulu: true, user_id: 1, title: nil, form: "文字、文档", link_url: "http://g.cn", description: "123", authority: false, content: nil, created_at: "2009-08-30 08:08:34", updated_at: "2009-08-30 08:08:34">]
+Query: Michael
+total hits: 2, results delivered: 2
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Mi
+-->+keywords:mi +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Mi
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Mic
+-->+keywords:mic +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Mic
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Michae
+-->+keywords:michae +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Michae
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Michael
+-->+keywords:michael +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 2 results from AR: [#<LinkUrlResource id: 1, keywords: "Michael", type: "LinkUrlResource", shoulu: true, user_id: 1, title: nil, form: "文字、文档", link_url: "http://123321", description: "mIhcae", authority: false, content: nil, created_at: "2009-08-30 04:44:21", updated_at: "2009-08-30 04:44:21">, #<LinkUrlResource id: 2, keywords: "Michael", type: "LinkUrlResource", shoulu: true, user_id: 1, title: nil, form: "文字、文档", link_url: "http://g.cn", description: "123", authority: false, content: nil, created_at: "2009-08-30 08:08:34", updated_at: "2009-08-30 08:08:34">]
+Query: Michael
+total hits: 2, results delivered: 2
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Michael
+-->+keywords:michael +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 2 results from AR: [#<LinkUrlResource id: 1, keywords: "Michael", type: "LinkUrlResource", shoulu: true, user_id: 1, title: nil, form: "文字、文档", link_url: "http://123321", description: "mIhcae", authority: false, content: nil, created_at: "2009-08-30 04:44:21", updated_at: "2009-08-30 04:44:21">, #<LinkUrlResource id: 2, keywords: "Michael", type: "LinkUrlResource", shoulu: true, user_id: 1, title: nil, form: "文字、文档", link_url: "http://g.cn", description: "123", authority: false, content: nil, created_at: "2009-08-30 08:08:34", updated_at: "2009-08-30 08:08:34">]
+Query: Michael
+total hits: 2, results delivered: 2
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Mi
+-->+keywords:mi +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Mi
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Micha
+-->+keywords:micha +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Micha
+total hits: 0, results delivered: 0
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Michael
+-->+keywords:michael +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 2 results from AR: [#<LinkUrlResource id: 1, keywords: "Michael", type: "LinkUrlResource", shoulu: true, user_id: 1, title: nil, form: "文字、文档", link_url: "http://123321", description: "mIhcae", authority: false, content: nil, created_at: "2009-08-30 04:44:21", updated_at: "2009-08-30 04:44:21">, #<LinkUrlResource id: 2, keywords: "Michael", type: "LinkUrlResource", shoulu: true, user_id: 1, title: nil, form: "文字、文档", link_url: "http://g.cn", description: "123", authority: false, content: nil, created_at: "2009-08-30 08:08:34", updated_at: "2009-08-30 08:08:34">]
+Query: Michael
+total hits: 2, results delivered: 2
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: m
+-->+keywords:m +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: m
+total hits: 0, results delivered: 0
+[link_url_resource] highlight: LinkUrlResource-1 query: m
+[link_url_resource] highlight: LinkUrlResource-2 query: m
+[link_url_resource] highlight: LinkUrlResource-3 query: m
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: M'i
+-->+keywords:m'i +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: M'i
+total hits: 0, results delivered: 0
+[link_url_resource] highlight: LinkUrlResource-1 query: M'i
+[link_url_resource] highlight: LinkUrlResource-2 query: M'i
+[link_url_resource] highlight: LinkUrlResource-3 query: M'i
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: M'i'cha
+-->+keywords:m'i'cha +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: M'i'cha
+total hits: 0, results delivered: 0
+[link_url_resource] highlight: LinkUrlResource-1 query: M'i'cha
+[link_url_resource] highlight: LinkUrlResource-2 query: M'i'cha
+[link_url_resource] highlight: LinkUrlResource-3 query: M'i'cha
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: M'i'cha'e'l
+-->+keywords:m'i'cha'e'l +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: M'i'cha'e'l
+total hits: 0, results delivered: 0
+[link_url_resource] highlight: LinkUrlResource-1 query: M'i'cha'e'l
+[link_url_resource] highlight: LinkUrlResource-2 query: M'i'cha'e'l
+[link_url_resource] highlight: LinkUrlResource-3 query: M'i'cha'e'l
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: M
+-->+keywords:m +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: M
+total hits: 0, results delivered: 0
+[link_url_resource] highlight: LinkUrlResource-1 query: M
+[link_url_resource] highlight: LinkUrlResource-2 query: M
+[link_url_resource] highlight: LinkUrlResource-3 query: M
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Mi
+-->+keywords:mi +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Mi
+total hits: 0, results delivered: 0
+[link_url_resource] highlight: LinkUrlResource-1 query: Mi
+[link_url_resource] highlight: LinkUrlResource-2 query: Mi
+[link_url_resource] highlight: LinkUrlResource-3 query: Mi
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Mic
+-->+keywords:mic +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Mic
+total hits: 0, results delivered: 0
+[link_url_resource] highlight: LinkUrlResource-1 query: Mic
+[link_url_resource] highlight: LinkUrlResource-2 query: Mic
+[link_url_resource] highlight: LinkUrlResource-3 query: Mic
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Michae
+-->+keywords:michae +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Michae
+total hits: 0, results delivered: 0
+[link_url_resource] highlight: LinkUrlResource-1 query: Michae
+[link_url_resource] highlight: LinkUrlResource-2 query: Michae
+[link_url_resource] highlight: LinkUrlResource-3 query: Michae
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Michael
+-->+keywords:michael +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 2 results from AR: [#<LinkUrlResource id: 1, keywords: "Michael", type: "LinkUrlResource", shoulu: true, user_id: 1, title: nil, form: "文字、文档", link_url: "http://123321", description: "mIhcae", authority: false, content: nil, created_at: "2009-08-30 04:44:21", updated_at: "2009-08-30 04:44:21">, #<LinkUrlResource id: 2, keywords: "Michael", type: "LinkUrlResource", shoulu: true, user_id: 1, title: nil, form: "文字、文档", link_url: "http://g.cn", description: "123", authority: false, content: nil, created_at: "2009-08-30 08:08:34", updated_at: "2009-08-30 08:08:34">]
+Query: Michael
+total hits: 2, results delivered: 2
+[link_url_resource] highlight: LinkUrlResource-1 query: Michael
+[link_url_resource] highlight: LinkUrlResource-2 query: Michael
+[link_url_resource] highlight: LinkUrlResource-3 query: Michael
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Michae
+-->+keywords:michae +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Michae
+total hits: 0, results delivered: 0
+[link_url_resource] highlight: LinkUrlResource-1 query: Michae
+[link_url_resource] highlight: LinkUrlResource-2 query: Michae
+[link_url_resource] highlight: LinkUrlResource-3 query: Michae
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Micha
+-->+keywords:micha +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Micha
+total hits: 0, results delivered: 0
+[link_url_resource] highlight: LinkUrlResource-1 query: Micha
+[link_url_resource] highlight: LinkUrlResource-2 query: Micha
+[link_url_resource] highlight: LinkUrlResource-3 query: Micha
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Mich
+-->+keywords:mich +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Mich
+total hits: 0, results delivered: 0
+[link_url_resource] highlight: LinkUrlResource-1 query: Mich
+[link_url_resource] highlight: LinkUrlResource-2 query: Mich
+[link_url_resource] highlight: LinkUrlResource-3 query: Mich
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Mi
+-->+keywords:mi +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Mi
+total hits: 0, results delivered: 0
+[link_url_resource] highlight: LinkUrlResource-1 query: Mi
+[link_url_resource] highlight: LinkUrlResource-2 query: Mi
+[link_url_resource] highlight: LinkUrlResource-3 query: Mi
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: M
+-->+keywords:m +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: M
+total hits: 0, results delivered: 0
+[link_url_resource] highlight: LinkUrlResource-1 query: M
+[link_url_resource] highlight: LinkUrlResource-2 query: M
+[link_url_resource] highlight: LinkUrlResource-3 query: M
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: M
+-->+keywords:m +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: M
+total hits: 0, results delivered: 0
+[link_url_resource] highlight: LinkUrlResource-1 query: M
+[link_url_resource] highlight: LinkUrlResource-2 query: M
+[link_url_resource] highlight: LinkUrlResource-3 query: M
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: zh'o
+-->+keywords:zh'o +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: zh'o
+total hits: 0, results delivered: 0
+[link_url_resource] highlight: LinkUrlResource-1 query: zh'o
+[link_url_resource] highlight: LinkUrlResource-2 query: zh'o
+[link_url_resource] highlight: LinkUrlResource-3 query: zh'o
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: zhou
+-->+keywords:zhou +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: zhou
+total hits: 0, results delivered: 0
+[link_url_resource] highlight: LinkUrlResource-1 query: zhou
+[link_url_resource] highlight: LinkUrlResource-2 query: zhou
+[link_url_resource] highlight: LinkUrlResource-3 query: zhou
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: 周
+-->+keywords:周 +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: 周
+total hits: 0, results delivered: 0
+[link_url_resource] highlight: LinkUrlResource-1 query: 周
+[link_url_resource] highlight: LinkUrlResource-2 query: 周
+[link_url_resource] highlight: LinkUrlResource-3 query: 周
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: zh'o
+-->+keywords:zh'o +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: zh'o
+total hits: 0, results delivered: 0
+[link_url_resource] highlight: LinkUrlResource-1 query: zh'o
+[link_url_resource] highlight: LinkUrlResource-2 query: zh'o
+[link_url_resource] highlight: LinkUrlResource-3 query: zh'o
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: zhou
+-->+keywords:zhou +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: zhou
+total hits: 0, results delivered: 0
+[link_url_resource] highlight: LinkUrlResource-1 query: zhou
+[link_url_resource] highlight: LinkUrlResource-2 query: zhou
+[link_url_resource] highlight: LinkUrlResource-3 query: zhou
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: 周
+-->+keywords:周 +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: 周
+total hits: 0, results delivered: 0
+[link_url_resource] highlight: LinkUrlResource-1 query: 周
+[link_url_resource] highlight: LinkUrlResource-2 query: 周
+[link_url_resource] highlight: LinkUrlResource-3 query: 周
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: M
+-->+keywords:m +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: M
+total hits: 0, results delivered: 0
+[link_url_resource] highlight: LinkUrlResource-1 query: M
+[link_url_resource] highlight: LinkUrlResource-2 query: M
+[link_url_resource] highlight: LinkUrlResource-3 query: M
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Mi
+-->+keywords:mi +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Mi
+total hits: 0, results delivered: 0
+[link_url_resource] highlight: LinkUrlResource-1 query: Mi
+[link_url_resource] highlight: LinkUrlResource-2 query: Mi
+[link_url_resource] highlight: LinkUrlResource-3 query: Mi
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Mis
+-->+keywords:mis +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Mis
+total hits: 0, results delivered: 0
+[link_url_resource] highlight: LinkUrlResource-1 query: Mis
+[link_url_resource] highlight: LinkUrlResource-2 query: Mis
+[link_url_resource] highlight: LinkUrlResource-3 query: Mis
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Misee
+-->+keywords:misee +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Misee
+total hits: 0, results delivered: 0
+[link_url_resource] highlight: LinkUrlResource-1 query: Misee
+[link_url_resource] highlight: LinkUrlResource-2 query: Misee
+[link_url_resource] highlight: LinkUrlResource-3 query: Misee
+index_for [LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[link_url_resource] stored_fields: nil
+[link_url_resource] query: Misee
+-->+keywords:misee +(class_name:LinkUrlResource)
+[link_url_resource] now retrieving records from AR with options: {}
+[link_url_resource] 0 results from AR: []
+Query: Misee
+total hits: 0, results delivered: 0
+[link_url_resource] highlight: LinkUrlResource-1 query: Misee
+[link_url_resource] highlight: LinkUrlResource-2 query: Misee
+[link_url_resource] highlight: LinkUrlResource-3 query: Misee
+index_for [TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>15, :page=>1, :per_page=>15, :sort=>by_user_value:<auto>!, :offset=>0}
+ar_options: {}
+[twitter_resource] stored_fields: nil
+[twitter_resource] query: 周公
+-->+content:周公 +(class_name:TwitterResource)
+[twitter_resource] now retrieving records from AR with options: {}
+[twitter_resource] 0 results from AR: []
+Query: 周公
+total hits: 0, results delivered: 0
+Will use remote index server which should be available at druby://localhost:9010

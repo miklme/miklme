@@ -3,7 +3,7 @@
     <tbody>
       <tr>
         <td width="500">
-          <h3><%= link_to highlight(link_url_resource.description,link_url_resource.keywords)%></h3>
+          <h3><%= link_to highlight(link_url_resource.description,link_url_resource.keywords),user_link_url_resource_path(link_url_resource.owner,link_url_resource)%></h3>
           <% for comment in link_url_resource.comments.good_comments do%>
               <p>
                 <%= auto_link(highlight(truncate(comment.content,:length => 140),link_url_resource.keywords)) %>
