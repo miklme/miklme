@@ -1,4 +1,17 @@
 class LinkUrlResource< Resource
+  acts_as_ferret({
+      :fields=>{
+        :keywords => {
+          :store => :yes
+        },
+        :created_at_s=>{:index=>:untokenized,:store=>:yes},
+      },
+      #  :remote => true,
+      #  生产环境下别忘记。
+      :store_class_name=>true,
+      :analyzer=>RMMSeg::Ferret::Analyzer.new
+    })
+  
   has_many :comments,:foreign_key => "resource_id"
   has_many :commenters,:through => :comments,:source => :user
   validates_presence_of :keywords,:message => "这是别人看到你的条目的最重要的渠道"

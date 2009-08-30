@@ -1724,3 +1724,1261 @@ index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6ed8e04>
 #method_missing(:find_ids, [:twitter_resource, "Michael", {:limit=>15, :models=>[TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :per_page=>15, :page=>1, :sort=>by_user_value:<auto>!, :offset=>0}])
 #method_missing(:highlight, [:twitter_resource, "TwitterResource-2", "Michael", {:pre_tag=>"<span class='highlight'>", :field=>:content, :post_tag=>"</span>"}])
 #method_missing(:highlight, [:twitter_resource, "TwitterResource-4", "Michael", {:pre_tag=>"<span class='highlight'>", :field=>:content, :post_tag=>"</span>"}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6eb3d48>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mLinkUrlResource Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+#method_missing(:find_ids, [:link_url_resource, nil, {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+ferret server error Cannot add NilClass to a BooleanQuery
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:131:in `add_query'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:131:in `scope_query_to_models'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:109:in `find_ids'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `method_missing'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `__send__'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `perform_without_block'
+/usr/lib/ruby/1.8/drb/drb.rb:1522:in `perform'
+/usr/lib/ruby/1.8/drb/drb.rb:1596:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1437:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1354:in `initialize'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `new'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `start_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:99:in `run_drb_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `call'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `fork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `safefork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:11:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/ferret_server:9
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6eb3d48>
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+reindexing model LinkUrlResource
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+using mysql specific batched find :all. Turn off with  :mysql_fast_batches => false if you encounter problems (i.e. because of non-integer UUIDs in the id column)
+  [4;36;1mLinkUrlResource Load Including Associations (0.9ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keywords` AS t0_r1, `resources`.`type` AS t0_r2, `resources`.`shoulu` AS t0_r3, `resources`.`user_id` AS t0_r4, `resources`.`title` AS t0_r5, `resources`.`form` AS t0_r6, `resources`.`link_url` AS t0_r7, `resources`.`description` AS t0_r8, `resources`.`authority` AS t0_r9, `resources`.`content` AS t0_r10, `resources`.`created_at` AS t0_r11, `resources`.`updated_at` AS t0_r12, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (resources.id > 0) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) ORDER BY users.value DESC LIMIT 1000[0m
+creating doc for class: LinkUrlResource-1
+Adding field created_at_s with value '2009-08-29 18:34:37' to index
+Adding field keywords with value 'sdfa' to index
+creating doc for class: LinkUrlResource-3
+Adding field created_at_s with value '2009-08-29 18:35:30' to index
+Adding field keywords with value 'sdfadaf' to index
+reindex model LinkUrlResource : 150.00% complete : 0.04 secs to finish
+  [4;35;1mLinkUrlResource Load Including Associations (0.8ms)[0m   [0mSELECT `resources`.`id` AS t0_r0, `resources`.`keywords` AS t0_r1, `resources`.`type` AS t0_r2, `resources`.`shoulu` AS t0_r3, `resources`.`user_id` AS t0_r4, `resources`.`title` AS t0_r5, `resources`.`form` AS t0_r6, `resources`.`link_url` AS t0_r7, `resources`.`description` AS t0_r8, `resources`.`authority` AS t0_r9, `resources`.`content` AS t0_r10, `resources`.`created_at` AS t0_r11, `resources`.`updated_at` AS t0_r12, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (resources.id > 3) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) ORDER BY users.value DESC LIMIT 1000[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+exit
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mLinkUrlResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+#method_missing(:find_ids, [:link_url_resource, nil, {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+ferret server error Cannot add NilClass to a BooleanQuery
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:131:in `add_query'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:131:in `scope_query_to_models'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:109:in `find_ids'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `method_missing'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `__send__'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `perform_without_block'
+/usr/lib/ruby/1.8/drb/drb.rb:1522:in `perform'
+/usr/lib/ruby/1.8/drb/drb.rb:1596:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1437:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1354:in `initialize'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `new'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `start_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:99:in `run_drb_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `call'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `fork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `safefork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:11:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/ferret_server:9
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6e39a20>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+#method_missing(:add, [:link_url_resource, {:key=>"LinkUrlResource-1", :class_name=>"LinkUrlResource", :created_at_s=>"2009-08-30 12:44:21", :keywords=>"Michael", :id=>"1"}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, nil, {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+ferret server error Cannot add NilClass to a BooleanQuery
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:131:in `add_query'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:131:in `scope_query_to_models'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:109:in `find_ids'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `method_missing'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `__send__'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `perform_without_block'
+/usr/lib/ruby/1.8/drb/drb.rb:1522:in `perform'
+/usr/lib/ruby/1.8/drb/drb.rb:1596:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1437:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1354:in `initialize'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `new'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `start_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:99:in `run_drb_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `call'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `fork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `safefork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:11:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/ferret_server:9
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, nil, {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+ferret server error Cannot add NilClass to a BooleanQuery
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:131:in `add_query'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:131:in `scope_query_to_models'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:109:in `find_ids'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `method_missing'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `__send__'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `perform_without_block'
+/usr/lib/ruby/1.8/drb/drb.rb:1522:in `perform'
+/usr/lib/ruby/1.8/drb/drb.rb:1596:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1437:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1354:in `initialize'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `new'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `start_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:99:in `run_drb_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `call'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `fork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `safefork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:11:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/ferret_server:9
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, nil, {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+ferret server error Cannot add NilClass to a BooleanQuery
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:131:in `add_query'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:131:in `scope_query_to_models'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:109:in `find_ids'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `method_missing'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `__send__'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `perform_without_block'
+/usr/lib/ruby/1.8/drb/drb.rb:1522:in `perform'
+/usr/lib/ruby/1.8/drb/drb.rb:1596:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1437:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1354:in `initialize'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `new'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `start_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:99:in `run_drb_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `call'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `fork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `safefork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:11:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/ferret_server:9
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, nil, {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+ferret server error Cannot add NilClass to a BooleanQuery
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:131:in `add_query'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:131:in `scope_query_to_models'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:109:in `find_ids'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `method_missing'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `__send__'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `perform_without_block'
+/usr/lib/ruby/1.8/drb/drb.rb:1522:in `perform'
+/usr/lib/ruby/1.8/drb/drb.rb:1596:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1437:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1354:in `initialize'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `new'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `start_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:99:in `run_drb_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `call'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `fork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `safefork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:11:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/ferret_server:9
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, nil, {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+ferret server error Cannot add NilClass to a BooleanQuery
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:131:in `add_query'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:131:in `scope_query_to_models'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:109:in `find_ids'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `method_missing'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `__send__'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `perform_without_block'
+/usr/lib/ruby/1.8/drb/drb.rb:1522:in `perform'
+/usr/lib/ruby/1.8/drb/drb.rb:1596:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1437:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1354:in `initialize'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `new'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `start_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:99:in `run_drb_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `call'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `fork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `safefork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:11:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/ferret_server:9
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, nil, {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+ferret server error Cannot add NilClass to a BooleanQuery
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:131:in `add_query'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:131:in `scope_query_to_models'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:109:in `find_ids'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `method_missing'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `__send__'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `perform_without_block'
+/usr/lib/ruby/1.8/drb/drb.rb:1522:in `perform'
+/usr/lib/ruby/1.8/drb/drb.rb:1596:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1437:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1354:in `initialize'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `new'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `start_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:99:in `run_drb_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `call'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `fork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `safefork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:11:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/ferret_server:9
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, nil, {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+ferret server error Cannot add NilClass to a BooleanQuery
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:131:in `add_query'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:131:in `scope_query_to_models'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:109:in `find_ids'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `method_missing'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `__send__'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `perform_without_block'
+/usr/lib/ruby/1.8/drb/drb.rb:1522:in `perform'
+/usr/lib/ruby/1.8/drb/drb.rb:1596:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1437:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1354:in `initialize'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `new'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `start_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:99:in `run_drb_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `call'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `fork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `safefork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:11:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/ferret_server:9
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, nil, {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+ferret server error Cannot add NilClass to a BooleanQuery
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:131:in `add_query'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:131:in `scope_query_to_models'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:109:in `find_ids'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `method_missing'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `__send__'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `perform_without_block'
+/usr/lib/ruby/1.8/drb/drb.rb:1522:in `perform'
+/usr/lib/ruby/1.8/drb/drb.rb:1596:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1437:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1354:in `initialize'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `new'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `start_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:99:in `run_drb_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `call'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `fork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `safefork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:11:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/ferret_server:9
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, nil, {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+ferret server error Cannot add NilClass to a BooleanQuery
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:131:in `add_query'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:131:in `scope_query_to_models'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:109:in `find_ids'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `method_missing'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `__send__'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `perform_without_block'
+/usr/lib/ruby/1.8/drb/drb.rb:1522:in `perform'
+/usr/lib/ruby/1.8/drb/drb.rb:1596:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1437:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1354:in `initialize'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `new'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `start_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:99:in `run_drb_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `call'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `fork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `safefork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:11:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/ferret_server:9
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, nil, {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+ferret server error Cannot add NilClass to a BooleanQuery
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:131:in `add_query'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:131:in `scope_query_to_models'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:109:in `find_ids'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `method_missing'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `__send__'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `perform_without_block'
+/usr/lib/ruby/1.8/drb/drb.rb:1522:in `perform'
+/usr/lib/ruby/1.8/drb/drb.rb:1596:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1437:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1354:in `initialize'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `new'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `start_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:99:in `run_drb_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `call'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `fork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `safefork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:11:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/ferret_server:9
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, nil, {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+ferret server error Cannot add NilClass to a BooleanQuery
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:131:in `add_query'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:131:in `scope_query_to_models'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:109:in `find_ids'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `method_missing'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `__send__'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `perform_without_block'
+/usr/lib/ruby/1.8/drb/drb.rb:1522:in `perform'
+/usr/lib/ruby/1.8/drb/drb.rb:1596:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1437:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1354:in `initialize'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `new'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `start_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:99:in `run_drb_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `call'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `fork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `safefork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:11:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/ferret_server:9
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, nil, {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+ferret server error Cannot add NilClass to a BooleanQuery
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:131:in `add_query'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:131:in `scope_query_to_models'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:109:in `find_ids'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `method_missing'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `__send__'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `perform_without_block'
+/usr/lib/ruby/1.8/drb/drb.rb:1522:in `perform'
+/usr/lib/ruby/1.8/drb/drb.rb:1596:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1437:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1354:in `initialize'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `new'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `start_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:99:in `run_drb_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `call'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `fork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `safefork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:11:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/ferret_server:9
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, nil, {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+ferret server error Cannot add NilClass to a BooleanQuery
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:131:in `add_query'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:131:in `scope_query_to_models'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:109:in `find_ids'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `method_missing'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `__send__'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `perform_without_block'
+/usr/lib/ruby/1.8/drb/drb.rb:1522:in `perform'
+/usr/lib/ruby/1.8/drb/drb.rb:1596:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1437:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1354:in `initialize'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `new'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `start_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:99:in `run_drb_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `call'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `fork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `safefork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:11:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/ferret_server:9
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, nil, {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+ferret server error Cannot add NilClass to a BooleanQuery
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:131:in `add_query'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:131:in `scope_query_to_models'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:109:in `find_ids'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `method_missing'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `__send__'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `perform_without_block'
+/usr/lib/ruby/1.8/drb/drb.rb:1522:in `perform'
+/usr/lib/ruby/1.8/drb/drb.rb:1596:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1437:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1354:in `initialize'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `new'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `start_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:99:in `run_drb_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `call'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `fork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `safefork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:11:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/ferret_server:9
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, nil, {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+ferret server error Cannot add NilClass to a BooleanQuery
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:131:in `add_query'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:131:in `scope_query_to_models'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:109:in `find_ids'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `method_missing'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `__send__'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `perform_without_block'
+/usr/lib/ruby/1.8/drb/drb.rb:1522:in `perform'
+/usr/lib/ruby/1.8/drb/drb.rb:1596:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1437:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1354:in `initialize'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `new'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `start_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:99:in `run_drb_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `call'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `fork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `safefork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:11:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/ferret_server:9
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, nil, {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+ferret server error Cannot add NilClass to a BooleanQuery
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:131:in `add_query'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:131:in `scope_query_to_models'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:109:in `find_ids'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `method_missing'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `__send__'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `perform_without_block'
+/usr/lib/ruby/1.8/drb/drb.rb:1522:in `perform'
+/usr/lib/ruby/1.8/drb/drb.rb:1596:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1437:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1354:in `initialize'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `new'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `start_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:99:in `run_drb_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `call'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `fork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `safefork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:11:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/ferret_server:9
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, nil, {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+ferret server error Cannot add NilClass to a BooleanQuery
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:131:in `add_query'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:131:in `scope_query_to_models'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:109:in `find_ids'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `method_missing'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `__send__'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `perform_without_block'
+/usr/lib/ruby/1.8/drb/drb.rb:1522:in `perform'
+/usr/lib/ruby/1.8/drb/drb.rb:1596:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1437:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1354:in `initialize'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `new'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `start_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:99:in `run_drb_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `call'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `fork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `safefork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:11:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/ferret_server:9
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, nil, {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+ferret server error Cannot add NilClass to a BooleanQuery
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:131:in `add_query'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:131:in `scope_query_to_models'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:109:in `find_ids'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `method_missing'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `__send__'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `perform_without_block'
+/usr/lib/ruby/1.8/drb/drb.rb:1522:in `perform'
+/usr/lib/ruby/1.8/drb/drb.rb:1596:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1437:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1354:in `initialize'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `new'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `start_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:99:in `run_drb_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `call'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `fork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `safefork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:11:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/ferret_server:9
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, nil, {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+ferret server error Cannot add NilClass to a BooleanQuery
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:131:in `add_query'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:131:in `scope_query_to_models'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:109:in `find_ids'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `method_missing'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `__send__'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `perform_without_block'
+/usr/lib/ruby/1.8/drb/drb.rb:1522:in `perform'
+/usr/lib/ruby/1.8/drb/drb.rb:1596:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1437:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1354:in `initialize'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `new'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `start_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:99:in `run_drb_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `call'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `fork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `safefork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:11:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/ferret_server:9
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, nil, {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+ferret server error Cannot add NilClass to a BooleanQuery
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:131:in `add_query'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:131:in `scope_query_to_models'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:109:in `find_ids'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `method_missing'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `__send__'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `perform_without_block'
+/usr/lib/ruby/1.8/drb/drb.rb:1522:in `perform'
+/usr/lib/ruby/1.8/drb/drb.rb:1596:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1437:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1354:in `initialize'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `new'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `start_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:99:in `run_drb_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `call'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `fork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `safefork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:11:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/ferret_server:9
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, nil, {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+ferret server error Cannot add NilClass to a BooleanQuery
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:131:in `add_query'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:131:in `scope_query_to_models'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:109:in `find_ids'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `method_missing'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `__send__'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `perform_without_block'
+/usr/lib/ruby/1.8/drb/drb.rb:1522:in `perform'
+/usr/lib/ruby/1.8/drb/drb.rb:1596:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1437:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1354:in `initialize'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `new'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `start_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:99:in `run_drb_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `call'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `fork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `safefork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:11:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/ferret_server:9
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, nil, {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+ferret server error Cannot add NilClass to a BooleanQuery
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:131:in `add_query'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:131:in `scope_query_to_models'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:109:in `find_ids'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `method_missing'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `__send__'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `perform_without_block'
+/usr/lib/ruby/1.8/drb/drb.rb:1522:in `perform'
+/usr/lib/ruby/1.8/drb/drb.rb:1596:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1437:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1354:in `initialize'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `new'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `start_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:99:in `run_drb_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `call'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `fork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `safefork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:11:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/ferret_server:9
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, nil, {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+ferret server error Cannot add NilClass to a BooleanQuery
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:131:in `add_query'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:131:in `scope_query_to_models'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_find_methods.rb:109:in `find_ids'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:139:in `method_missing'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `__send__'
+/usr/lib/ruby/1.8/drb/drb.rb:1562:in `perform_without_block'
+/usr/lib/ruby/1.8/drb/drb.rb:1522:in `perform'
+/usr/lib/ruby/1.8/drb/drb.rb:1596:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1592:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1588:in `main_loop'
+/usr/lib/ruby/1.8/drb/drb.rb:1437:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `start'
+/usr/lib/ruby/1.8/drb/drb.rb:1434:in `run'
+/usr/lib/ruby/1.8/drb/drb.rb:1354:in `initialize'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `new'
+/usr/lib/ruby/1.8/drb/drb.rb:1634:in `start_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:99:in `run_drb_service'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `call'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `fork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `safefork'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:11:in `platform_daemon'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53:in `send'
+/usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/ferret_server:9
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "M", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Mi", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Mic", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Micha", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Michael", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+#method_missing(:highlight, [:link_url_resource, "LinkUrlResource-1", "Michael", {:pre_tag=>"<span class='highlight'>", :field=>:keywords, :post_tag=>"</span>"}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Micha", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Mich", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Mic", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Mic", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Mi", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "M", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "M", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Mic", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Mic", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Mich", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Micha", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Michael", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+#method_missing(:highlight, [:link_url_resource, "LinkUrlResource-1", "Michael", {:pre_tag=>"<span class='highlight'>", :field=>:keywords, :post_tag=>"</span>"}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Michael", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+#method_missing(:highlight, [:link_url_resource, "LinkUrlResource-1", "Michael", {:pre_tag=>"<span class='highlight'>", :field=>:keywords, :post_tag=>"</span>"}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Michael", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+#method_missing(:highlight, [:link_url_resource, "LinkUrlResource-1", "Michael", {:pre_tag=>"<span class='highlight'>", :field=>:keywords, :post_tag=>"</span>"}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Michae", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Michael", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+#method_missing(:highlight, [:link_url_resource, "LinkUrlResource-1", "Michael", {:pre_tag=>"<span class='highlight'>", :field=>:keywords, :post_tag=>"</span>"}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "M", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Micha", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Michae", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Michael", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+#method_missing(:highlight, [:link_url_resource, "LinkUrlResource-1", "Michael", {:pre_tag=>"<span class='highlight'>", :field=>:keywords, :post_tag=>"</span>"}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Mi", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Michael", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+#method_missing(:highlight, [:link_url_resource, "LinkUrlResource-1", "Michael", {:pre_tag=>"<span class='highlight'>", :field=>:keywords, :post_tag=>"</span>"}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Michae", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e57188>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Michael", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+#method_missing(:highlight, [:link_url_resource, "LinkUrlResource-1", "Michael", {:pre_tag=>"<span class='highlight'>", :field=>:keywords, :post_tag=>"</span>"}])
+exit
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f046d0>
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mLinkUrlResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+#method_missing(:find_ids, [:link_url_resource, "M", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f046d0>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Mic", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f046d0>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Michae", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f046d0>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Michael", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+#method_missing(:highlight, [:link_url_resource, "LinkUrlResource-1", "Michael", {:pre_tag=>"<span class='highlight'>", :field=>:keywords, :post_tag=>"</span>"}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f046d0>
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+reindexing model LinkUrlResource
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+using mysql specific batched find :all. Turn off with  :mysql_fast_batches => false if you encounter problems (i.e. because of non-integer UUIDs in the id column)
+  [4;36;1mLinkUrlResource Load Including Associations (0.8ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keywords` AS t0_r1, `resources`.`type` AS t0_r2, `resources`.`shoulu` AS t0_r3, `resources`.`user_id` AS t0_r4, `resources`.`title` AS t0_r5, `resources`.`form` AS t0_r6, `resources`.`link_url` AS t0_r7, `resources`.`description` AS t0_r8, `resources`.`authority` AS t0_r9, `resources`.`content` AS t0_r10, `resources`.`created_at` AS t0_r11, `resources`.`updated_at` AS t0_r12, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (resources.id > 0) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) ORDER BY users.value DESC LIMIT 1000[0m
+creating doc for class: LinkUrlResource-1
+Adding field created_at_s with value '2009-08-30 12:44:21' to index
+Adding field keywords with value 'Michael' to index
+reindex model LinkUrlResource : 100.00% complete : 0.04 secs to finish
+  [4;35;1mLinkUrlResource Load Including Associations (0.7ms)[0m   [0mSELECT `resources`.`id` AS t0_r0, `resources`.`keywords` AS t0_r1, `resources`.`type` AS t0_r2, `resources`.`shoulu` AS t0_r3, `resources`.`user_id` AS t0_r4, `resources`.`title` AS t0_r5, `resources`.`form` AS t0_r6, `resources`.`link_url` AS t0_r7, `resources`.`description` AS t0_r8, `resources`.`authority` AS t0_r9, `resources`.`content` AS t0_r10, `resources`.`created_at` AS t0_r11, `resources`.`updated_at` AS t0_r12, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (resources.id > 1) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) ORDER BY users.value DESC LIMIT 1000[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f046d0>
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Mi", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f046d0>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Mi", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f046d0>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Michael", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+#method_missing(:highlight, [:link_url_resource, "LinkUrlResource-1", "Michael", {:pre_tag=>"<span class='highlight'>", :field=>:keywords, :post_tag=>"</span>"}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f046d0>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Mi", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f046d0>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Michael", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+#method_missing(:highlight, [:link_url_resource, "LinkUrlResource-1", "Michael", {:pre_tag=>"<strong>", :field=>:keywords, :post_tag=>"</strong>"}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f046d0>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Mi", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f046d0>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Michael", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+#method_missing(:highlight, [:link_url_resource, "LinkUrlResource-1", "Michael", {:pre_tag=>"<strong>", :field=>:keywords, :post_tag=>"</strong>"}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f046d0>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Mi", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f046d0>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Mic", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f046d0>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Michae", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f046d0>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Michael", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+#method_missing(:highlight, [:link_url_resource, "LinkUrlResource-1", "Michael", {:pre_tag=>"<strong>", :field=>:keywords, :post_tag=>"</strong>"}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f046d0>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "i", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f046d0>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "ic", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f046d0>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "ic", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f046d0>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "mic", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f046d0>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "micha", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f046d0>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "michael", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+#method_missing(:highlight, [:link_url_resource, "LinkUrlResource-1", "michael", {:pre_tag=>"<strong>", :field=>:keywords, :post_tag=>"</strong>"}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f046d0>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f046d0>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "liu'z", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f046d0>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "liu'zi'jia", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f046d0>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "刘子嘉", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f046d0>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "M'i", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f046d0>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "M'i'c", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f046d0>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "M'i'c", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f046d0>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "M", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f046d0>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "M", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f046d0>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Micha", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f046d0>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Michael", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+#method_missing(:highlight, [:link_url_resource, "LinkUrlResource-1", "Michael", {:pre_tag=>"<strong>", :field=>:keywords, :post_tag=>"</strong>"}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f046d0>
+  [4;36;1mSQL (7.6ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Mi", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f046d0>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Michael", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+#method_missing(:highlight, [:link_url_resource, "LinkUrlResource-1", "Michael", {:pre_tag=>"<strong>", :field=>:keywords, :post_tag=>"</strong>"}])

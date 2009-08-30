@@ -6,8 +6,11 @@
         <%= link_to_unless_current "搜索链接",new_user_searched_keyword_path(current_user) %>
         <%= link_to_unless_current "搜索人们呓语什么",new_user_searched_content_path(current_user) %>
       </p>
-      <%= text_field_with_auto_complete :link_url_resource, :keywords, {:size => 50,:onfocus => "link_url_resource_keywords_auto_completer.activate()"}, {:method => :get, :frequency => 0,:on_hide => remote_function(:url => {:action => :notification}), :after_update_element =>
-          "function(element,value){" + remote_function(:url => {:action => :create},:with=>"'keywords='+element.value") + "}"} %>
+      <%= text_field 'link_url_resource','keywords' %>
+      <div class="auto_complete" id="link_url_resource_keywords_auto_complete">
+      </div>
+      <%= auto_complete_field :link_url_resource_keywords,:size => 77,:url => {:action => 'auto_complete_for_link_url_resource_keywords'},:frequency => 0.1,:after_update_element =>
+        "function(element,value){" + remote_function(:url => {:action => :create},:with=>"'keywords='+element.value") + "}",:on_hide => remote_function(:url => {:action => :notification})%>
       <div><%= link_to "新增一个搜索链接结果",new_user_link_url_resource_path(current_user),:popup => true%></div>
     </div>
   </div>

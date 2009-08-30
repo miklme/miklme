@@ -1,0 +1,5 @@
+<ul class="auto_complete_list">
+  <% for l in @link_url_resources %>
+    <li class="auto_complete_item"><%= l.highlight(params[:link_url_resource][:keywords],:field => :keywords,:pre_tag => "<strong>",:post_tag => "</strong>") %></li>
+    <% end %>
+</ul>
