@@ -5034,3 +5034,6 @@ index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
 index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
 exit
 exit
+
+
+Address already in use - bind(2)
