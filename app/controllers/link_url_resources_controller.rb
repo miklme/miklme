@@ -13,15 +13,6 @@ class LinkUrlResourcesController < ApplicationController
     @link_url_resources=@user.link_url_resources
   end
 
-  def show
-    link_url_resource=LinkUrlResource.find(params[:id])
-    if redirect_to "#{link_url_resource.link_url}"
-      u=User.find(params[:user_id])
-      u.value+=0.4
-      u.save
-    end
-  end
-  
   def create
     @link_url_resource=current_user.link_url_resources.build(params[:link_url_resource])
     if @link_url_resource.save

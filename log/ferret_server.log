@@ -4247,3 +4247,711 @@ index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6eb22e0>
   [4;35;1mTwitterResource Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
 #method_missing(:find_ids, [:twitter_resource, "最后", {:page=>1, :per_page=>15, :limit=>15, :models=>[TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :sort=>by_user_value:<auto>!, :offset=>0}])
 #method_missing(:highlight, [:twitter_resource, "TwitterResource-7", "最后", {:post_tag=>"</span>", :field=>:content, :pre_tag=>"<span class='highlight'>"}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6eb22e0>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6eb22e0>
+#method_missing(:add, [:twitter_resource, {:key=>"TwitterResource-8", :created_at_s=>"2009-08-31 09:58:05", :content=>"哈哈哈哈哈高兴死了", :class_name=>"TwitterResource", :id=>"8", :by_user_value=>"18.1"}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6eb22e0>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6eb22e0>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:twitter_resource, "高兴", {:page=>1, :per_page=>15, :limit=>15, :models=>[TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :sort=>by_user_value:<auto>!, :offset=>0}])
+#method_missing(:highlight, [:twitter_resource, "TwitterResource-8", "高兴", {:post_tag=>"</span>", :field=>:content, :pre_tag=>"<span class='highlight'>"}])
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6eb22e0>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:twitter_resource, "哈", {:page=>1, :per_page=>15, :limit=>15, :models=>[TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :sort=>by_user_value:<auto>!, :offset=>0}])
+#method_missing(:highlight, [:twitter_resource, "TwitterResource-8", "哈", {:post_tag=>"</span>", :field=>:content, :pre_tag=>"<span class='highlight'>"}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6eb22e0>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mLinkUrlResource Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+#method_missing(:find_ids, [:link_url_resource, "a", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "asd", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "asdf", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "asdf", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "asdf", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "as", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "a", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "asd", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "asdf", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+#method_missing(:add, [:link_url_resource, {:key=>"LinkUrlResource-9", :created_at_s=>"2009-08-31 10:03:51", :class_name=>"LinkUrlResource", :keywords=>"Michael", :id=>"9"}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "M", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Micha", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Michae", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Michael", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+#method_missing(:add, [:link_url_resource, {:key=>"LinkUrlResource-10", :created_at_s=>"2009-08-31 10:04:19", :class_name=>"LinkUrlResource", :keywords=>"Michael", :id=>"10"}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "as", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Mi", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Micha", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Michael", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Mi", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Micha", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Michael", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+#method_missing(:add, [:link_url_resource, {:key=>"LinkUrlResource-11", :created_at_s=>"2009-08-31 10:05:51", :class_name=>"LinkUrlResource", :keywords=>"Michael", :id=>"11"}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "mich", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "michael", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "M", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Mic", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Micha", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Michael", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "micha", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "michael", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "michae", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "michael", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "mic", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "mic", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "micahel", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "micahe", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "mica", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "mica", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "mic", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "michael", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "michaele", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+#method_missing(:add, [:link_url_resource, {:key=>"LinkUrlResource-12", :created_at_s=>"2009-08-31 10:10:07", :class_name=>"LinkUrlResource", :keywords=>"哈哈哈成功了", :id=>"12"}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "ha", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "ha'ha", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈ha", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈哈", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈哈che", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈哈cheng", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈哈cheng'gong", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈哈成功le", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈哈成功了", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈哈成功", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈哈", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ec2460>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+exit
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+#method_missing(:add, [:link_url_resource, {:key=>"LinkUrlResource-13", :created_at_s=>"2009-08-31 10:11:41", :class_name=>"LinkUrlResource", :keywords=>"哈哈哈成功了", :id=>"13"}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mLinkUrlResource Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+#method_missing(:find_ids, [:link_url_resource, "ha'ha", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "ha'ha", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈ha", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈哈", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈哈ch", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈哈chen", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈哈cheng", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈哈cheng'g'o'n", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈哈cheng'gong", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈哈成功", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈哈成功le", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈哈成功了", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈哈成功", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈哈成", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈哈", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈ha'ha", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈哈哈", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈哈", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "he'he", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "呵呵", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "ha", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "M", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Michael", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Michae", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Micha", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Mich", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Mi", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "M", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "M", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "ha", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "ha'h", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "ha'ha", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈ha", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈哈", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈哈ch", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈哈che", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈哈cheng", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈哈cheng'g'o'n", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈哈cheng'gong", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈哈成功", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈哈成功le", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈哈成功了", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈哈", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈哈", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈哈ch", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈哈che", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈哈che'g", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈哈che", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈哈ch", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈哈chen", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈哈cheng'g", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈哈cheng'g'o'n", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈哈cheng'gong", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈哈成功", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈哈成功了", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈哈成功", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6d13e20>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+#method_missing(:add, [:link_url_resource, {:key=>"LinkUrlResource-14", :created_at_s=>"2009-08-31 10:15:32", :class_name=>"LinkUrlResource", :keywords=>"再次尝试", :id=>"14"}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "za", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "zai", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "zai'c", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "zai'ci", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "再次", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "再次cha", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "再次chang", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "再次chang'shi", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "再次尝试", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "z", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "zai'c", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "再次", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "再次", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "za", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "zai'c", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "再次", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "再次", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "che", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "cheng'g", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "cheng'g'o'n", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "cheng'gong", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "成功", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "ha", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "ha'ha", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "ha'ha'ch", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "ha'ha'che", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "ha'ha'chen", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "ha'ha'cheng", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "ha'ha'cheng'gong", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈成功", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "ha'ha", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "ha'ha'le", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈le", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "哈哈了", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])

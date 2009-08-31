@@ -1,4 +1,5 @@
 class LinkUrlResource< Resource
+  analyzer = RMMSeg::Ferret::Analyzer.new
   acts_as_ferret({
       :fields=>{
         :keywords => {
@@ -9,7 +10,7 @@ class LinkUrlResource< Resource
       #  :remote => true,
       #  生产环境下别忘记。
       :store_class_name=>true,
-      :analyzer=>RMMSeg::Ferret::Analyzer.new
+      :ferret => {:analyzer => analyzer}
     })
   
   has_many :comments,:foreign_key => "resource_id"
