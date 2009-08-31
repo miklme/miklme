@@ -17,7 +17,7 @@
   <p><cite>你的价值点数<%=current_user.value%>在这个页面中是最高的，因此，如果你建立关键字为</cite><strong><%=h @keyword_page.keyword %></strong><cite>的链接，该关键字的第一个排位将是你分享的资源</cite></p>
 <% end %>
 <div class="sb_ph"><h1>“<%=h @keyword_page.keyword %>”的所有结果</h1>
-  <span>共 <%=h @link_url_resources.count %> 条</span><span class="sc_bullet">·</span>
+  <span>共 <%=h @link_url_resources.size %> 条</span><span class="sc_bullet">·</span>
   <%= link_to "新建一个搜索结果条目",new_user_link_url_resource_path(current_user) %>
   <span class="sc_bullet">·</span>
   <%= link_to "新的呓语",user_path(current_user) %>

@@ -9,7 +9,7 @@
   <p>
     <%= link_to others_news.owner.name_or_nick_name(current_user),user_path(others_news.owner) %>的链接条目
     <%=link_to others_news.resource.description,others_news.resource.link_url,:popup => true,:class => "title" %>被评论了
-    <%=link_to others_news.resource.comments.count,user_link_url_resource_comments_path(others_news.owner,others_news.resource),:popup => true %>次，
+    <%=link_to others_news.resource.comments.size,user_link_url_resource_comments_path(others_news.owner,others_news.resource),:popup => true %>次，
     <% a=Comment.sum(:rating,:conditions => ["resource_id=?",others_news.resource.id]) %>
     <% if a>=0 %>
       价值点数+ <%=h a %>
@@ -21,7 +21,7 @@
   <p>
     <%=link_to others_news.owner.name_or_nick_name(current_user),user_path(others_news.owner) %>说：
     <cite><%=h others_news.resource.content %></cite>
-    <em><%= link_to "#{others_news.resource.replies.count}条回应>>>", user_twitter_resource_path(others_news.resource.owner,news.resource)%></em>
+    <em><%= link_to "#{others_news.resource.replies.size}条回应>>>", user_twitter_resource_path(others_news.resource.owner,news.resource)%></em>
   </p>
 <% elsif others_news.news_type=="link_url_resource" %>
   <p>
