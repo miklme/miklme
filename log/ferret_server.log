@@ -4955,3 +4955,80 @@ index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
 index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
   [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
 #method_missing(:find_ids, [:link_url_resource, "哈哈了", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6d13e20>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "M", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(DISTINCT `resources`.id) AS count_all FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE ( (`resources`.`type` = 'LinkUrlResource' ) ) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+using mysql specific batched find :all. Turn off with  :mysql_fast_batches => false if you encounter problems (i.e. because of non-integer UUIDs in the id column)
+  [4;36;1mLinkUrlResource Load Including Associations (1.1ms)[0m   [0;1mSELECT `resources`.`id` AS t0_r0, `resources`.`keywords` AS t0_r1, `resources`.`type` AS t0_r2, `resources`.`shoulu` AS t0_r3, `resources`.`user_id` AS t0_r4, `resources`.`title` AS t0_r5, `resources`.`form` AS t0_r6, `resources`.`link_url` AS t0_r7, `resources`.`description` AS t0_r8, `resources`.`authority` AS t0_r9, `resources`.`content` AS t0_r10, `resources`.`created_at` AS t0_r11, `resources`.`updated_at` AS t0_r12, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (resources.id > 0) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) ORDER BY users.value DESC LIMIT 1000[0m
+creating doc for class: LinkUrlResource-1
+Adding field created_at_s with value '2009-08-30 21:38:16' to index
+Adding field keywords with value 'asdf' to index
+creating doc for class: LinkUrlResource-9
+Adding field created_at_s with value '2009-08-31 10:03:51' to index
+Adding field keywords with value 'Michael' to index
+creating doc for class: LinkUrlResource-10
+Adding field created_at_s with value '2009-08-31 10:04:19' to index
+Adding field keywords with value 'Michael' to index
+creating doc for class: LinkUrlResource-11
+Adding field created_at_s with value '2009-08-31 10:05:51' to index
+Adding field keywords with value 'Michael' to index
+creating doc for class: LinkUrlResource-12
+Adding field created_at_s with value '2009-08-31 10:10:07' to index
+Adding field keywords with value '哈哈哈成功了' to index
+creating doc for class: LinkUrlResource-13
+Adding field created_at_s with value '2009-08-31 10:11:41' to index
+Adding field keywords with value '哈哈哈成功了' to index
+creating doc for class: LinkUrlResource-14
+Adding field created_at_s with value '2009-08-31 10:15:32' to index
+Adding field keywords with value '再次尝试' to index
+  [4;35;1mLinkUrlResource Load Including Associations (0.7ms)[0m   [0mSELECT `resources`.`id` AS t0_r0, `resources`.`keywords` AS t0_r1, `resources`.`type` AS t0_r2, `resources`.`shoulu` AS t0_r3, `resources`.`user_id` AS t0_r4, `resources`.`title` AS t0_r5, `resources`.`form` AS t0_r6, `resources`.`link_url` AS t0_r7, `resources`.`description` AS t0_r8, `resources`.`authority` AS t0_r9, `resources`.`content` AS t0_r10, `resources`.`created_at` AS t0_r11, `resources`.`updated_at` AS t0_r12, `users`.`id` AS t1_r0, `users`.`name` AS t1_r1, `users`.`crypted_password` AS t1_r2, `users`.`salt` AS t1_r3, `users`.`remember_token` AS t1_r4, `users`.`remember_token_expires_at` AS t1_r5, `users`.`nick_name` AS t1_r6, `users`.`value` AS t1_r7, `users`.`terms` AS t1_r8, `users`.`birthday` AS t1_r9, `users`.`username` AS t1_r10, `users`.`mobile_phone` AS t1_r11, `users`.`email` AS t1_r12, `users`.`province` AS t1_r13, `users`.`city` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16 FROM `resources` LEFT OUTER JOIN `users` ON `users`.id = `resources`.user_id WHERE (resources.id > 14) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) ORDER BY users.value DESC LIMIT 1000[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Mich", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Michae", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Michael", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Mi", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Micha", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Michael", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6df2418>

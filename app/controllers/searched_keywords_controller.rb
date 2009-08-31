@@ -18,7 +18,7 @@ class SearchedKeywordsController < ApplicationController
     keywords=link_url_resources.map do |l|
       l.keywords
     end
-    @keywords=keywords.uniq
+    @keywords=keywords.uniq.first(15)
     render :layout => false
   end
 

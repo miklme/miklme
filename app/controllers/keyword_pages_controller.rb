@@ -1,6 +1,6 @@
 class KeywordPagesController < ApplicationController
   before_filter :load_user
-  auto_complete_for :resource,:keywords
+  auto_complete_for :resource,:keywords,:limit => 10
   def show
     @keyword_page=KeywordPage.find(params[:id])
     @link_url_resources=LinkUrlResource.search_by_keywords(@keyword_page.keyword,params[:page])
