@@ -8,7 +8,7 @@ class TwitterResource<Resource
         :created_at_s=>{:index=>:untokenized,:store=>:yes},
         :by_user_value => {:index=>:untokenized,:store => :yes}
       },
-      #  :remote => true,
+        :remote => true,
       #  生产环境下别忘记。
       :store_class_name=>true,
       :ferret => {:analyzer => analyzer}
