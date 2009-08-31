@@ -14606,3 +14606,138 @@ ar_options: {}
 Query: 周公
 total hits: 0, results delivered: 0
 Will use remote index server which should be available at druby://localhost:9010
+Will use local index.
+Will use local index.
+Will use remote index server which should be available at druby://localhost:9010
+Will use remote index server which should be available at druby://localhost:9010
+Will use local index.
+Will use local index.
+Will use local index.
+Will use local index.
+Will use remote index server which should be available at druby://localhost:9010
+using index in /home/michael/miklme/index/development/twitter_resource
+[twitter_resource] rebuild index with models: []
+[twitter_resource] reopening index at /home/michael/miklme/index/development/twitter_resource
+[twitter_resource] register class TwitterResource with index twitter_resource
+[twitter_resource] default field list for index twitter_resource: [:content]
+index_for [TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>15, :per_page=>15, :sort=>by_user_value:<auto>!, :offset=>0, :page=>1}
+ar_options: {}
+[twitter_resource] stored_fields: nil
+[twitter_resource] query: 我
+-->+content:我 +(class_name:TwitterResource)
+[twitter_resource] now retrieving records from AR with options: {}
+[twitter_resource] 0 results from AR: []
+Query: 我
+total hits: 0, results delivered: 0
+using index in /home/michael/miklme/index/development/link_url_resource
+[link_url_resource] rebuild index with models: []
+[link_url_resource] reopening index at /home/michael/miklme/index/development/link_url_resource
+[link_url_resource] register class LinkUrlResource with index link_url_resource
+[link_url_resource] default field list for index link_url_resource: [:keywords]
+index_for [TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>15, :per_page=>15, :sort=>by_user_value:<auto>!, :offset=>0, :page=>1}
+ar_options: {}
+[twitter_resource] stored_fields: nil
+[twitter_resource] query: 试一下
+-->+content:试一下 +(class_name:TwitterResource)
+[twitter_resource] now retrieving records from AR with options: {}
+[twitter_resource] 0 results from AR: []
+Query: 试一下
+total hits: 0, results delivered: 0
+index_for [TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>15, :per_page=>15, :sort=>by_user_value:<auto>!, :offset=>0, :page=>1}
+ar_options: {}
+[twitter_resource] stored_fields: nil
+[twitter_resource] query: 试一下
+-->+content:试一下 +(class_name:TwitterResource)
+[twitter_resource] now retrieving records from AR with options: {}
+[twitter_resource] 0 results from AR: []
+Query: 试一下
+total hits: 0, results delivered: 0
+index_for [TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>15, :per_page=>15, :sort=>by_user_value:<auto>!, :offset=>0, :page=>1}
+ar_options: {}
+[twitter_resource] stored_fields: nil
+[twitter_resource] query: 试一下试一下
+-->+content:试一下试一下 +(class_name:TwitterResource)
+[twitter_resource] now retrieving records from AR with options: {}
+[twitter_resource] 1 results from AR: [#<TwitterResource id: 5, keywords: nil, type: "TwitterResource", shoulu: true, user_id: 1, title: nil, form: nil, link_url: nil, description: nil, authority: false, content: "试一下试一下", created_at: "2009-08-31 01:34:56", updated_at: "2009-08-31 01:34:56">]
+Query: 试一下试一下
+total hits: 1, results delivered: 1
+[twitter_resource] highlight: TwitterResource-5 query: 试一下试一下
+index_for [TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>15, :per_page=>15, :sort=>by_user_value:<auto>!, :offset=>0, :page=>1}
+ar_options: {}
+[twitter_resource] stored_fields: nil
+[twitter_resource] query: 以下
+-->+content:以下 +(class_name:TwitterResource)
+[twitter_resource] now retrieving records from AR with options: {}
+[twitter_resource] 0 results from AR: []
+Query: 以下
+total hits: 0, results delivered: 0
+index_for [TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>15, :per_page=>15, :sort=>by_user_value:<auto>!, :offset=>0, :page=>1}
+ar_options: {}
+[twitter_resource] stored_fields: nil
+[twitter_resource] query: 一下
+-->+content:一下 +(class_name:TwitterResource)
+[twitter_resource] now retrieving records from AR with options: {}
+[twitter_resource] 0 results from AR: []
+Query: 一下
+total hits: 0, results delivered: 0
+Will use remote index server which should be available at druby://localhost:9010
+index_for [TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>15, :per_page=>15, :sort=>by_user_value:<auto>!, :offset=>0, :page=>1}
+ar_options: {}
+[twitter_resource] stored_fields: nil
+[twitter_resource] query: 我晕倒
+-->+content:我晕倒 +(class_name:TwitterResource)
+[twitter_resource] now retrieving records from AR with options: {}
+[twitter_resource] 0 results from AR: []
+Query: 我晕倒
+total hits: 0, results delivered: 0
+index_for [TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>15, :per_page=>15, :sort=>by_user_value:<auto>!, :offset=>0, :page=>1}
+ar_options: {}
+[twitter_resource] stored_fields: nil
+[twitter_resource] query: 我晕倒了
+-->+content:我晕倒了 +(class_name:TwitterResource)
+[twitter_resource] now retrieving records from AR with options: {}
+[twitter_resource] 1 results from AR: [#<TwitterResource id: 6, keywords: nil, type: "TwitterResource", shoulu: true, user_id: 1, title: nil, form: nil, link_url: nil, description: nil, authority: false, content: "我晕倒了", created_at: "2009-08-31 01:41:44", updated_at: "2009-08-31 01:41:44">]
+Query: 我晕倒了
+total hits: 1, results delivered: 1
+[twitter_resource] highlight: TwitterResource-6 query: 我晕倒了
+index_for [TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>15, :per_page=>15, :sort=>by_user_value:<auto>!, :offset=>0, :page=>1}
+ar_options: {}
+[twitter_resource] stored_fields: nil
+[twitter_resource] query: 我
+-->+content:我 +(class_name:TwitterResource)
+[twitter_resource] now retrieving records from AR with options: {}
+[twitter_resource] 0 results from AR: []
+Query: 我
+total hits: 0, results delivered: 0
+Will use local index.
+Will use local index.
+using index in /home/michael/miklme/index/development/link_url_resource
+[link_url_resource] rebuild index with models: []
+[link_url_resource] reopening index at /home/michael/miklme/index/development/link_url_resource
+[link_url_resource] register class LinkUrlResource with index link_url_resource
+[link_url_resource] default field list for index link_url_resource: [:keywords]
+using index in /home/michael/miklme/index/development/twitter_resource
+[twitter_resource] rebuild index with models: []
+[twitter_resource] reopening index at /home/michael/miklme/index/development/twitter_resource
+[twitter_resource] register class TwitterResource with index twitter_resource
+[twitter_resource] default field list for index twitter_resource: [:content]
+index_for [TwitterResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)]
+options: {:limit=>15, :per_page=>15, :sort=>by_user_value:<auto>!, :offset=>0, :page=>1}
+ar_options: {}
+[twitter_resource] stored_fields: nil
+[twitter_resource] query: 最后
+-->+content:最后 +(class_name:TwitterResource)
+[twitter_resource] now retrieving records from AR with options: {}
+[twitter_resource] 1 results from AR: [#<TwitterResource id: 7, keywords: nil, type: "TwitterResource", shoulu: true, user_id: 1, title: nil, form: nil, link_url: nil, description: nil, authority: false, content: "最后一次\r\n", created_at: "2009-08-31 01:52:06", updated_at: "2009-08-31 01:52:06">]
+Query: 最后
+total hits: 1, results delivered: 1
+[twitter_resource] highlight: TwitterResource-7 query: 最后
