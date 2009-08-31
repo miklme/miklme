@@ -16349,3 +16349,12 @@ Will use local index.
 Will use local index.
 Will use local index.
 Will use local index.
+Will use remote index server which should be available at druby://localhost:9010
+using index in /home/michael/miklme/index/development/link_url_resource
+[link_url_resource] register class LinkUrlResource with index link_url_resource
+[link_url_resource] default field list for index link_url_resource: [:keywords]
+using index in /home/michael/miklme/index/development/twitter_resource
+[twitter_resource] rebuild index with models: []
+[twitter_resource] reopening index at /home/michael/miklme/index/development/twitter_resource
+[twitter_resource] register class TwitterResource with index twitter_resource
+[twitter_resource] default field list for index twitter_resource: [:content]

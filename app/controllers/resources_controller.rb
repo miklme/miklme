@@ -2,7 +2,7 @@ class ResourcesController < ApplicationController
   before_filter :load_user,:except => :auto_complete_for_resource_keywords
   auto_complete_for :resource,:keywords,:limit => 10
   def index
-    @news=News.list_self_news(current_user,params[:page])
+    @news=News.list_self_news(@user,params[:page])
     if @user.link_url_resources.blank?
       @variable_title="革命"
     else

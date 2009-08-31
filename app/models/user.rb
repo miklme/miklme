@@ -58,23 +58,26 @@ class User < ActiveRecord::Base
   #Below methods are the user self,he is active,not positive.ie.He treat others as friends/strangers.
   def followings
     b=BeFollow.scoped_by_follower_id(self.id)
-    b.map do |a|
-      a.user
+    user_ids=b.map do |a|
+      a.user.id
     end
+    User.find(user_ids)
   end
 
   def real_friends
     b=BeFollow.scoped_by_follower_id(self.id).scoped_by_provide_name(true)
-    b.map do |c|
-      c.user
+    user_ids=b.map do |c|
+      c.user.id
     end
+    User.find(user_ids)
   end
 
   def interested_people
     b=BeFollow.scoped_by_follower_id(self.id).scoped_by_provide_name(false)
-    b.map do |c|
-      c.user
+    user_ids=b.map do |c|
+      c.user.id
     end
+    User.find(user_ids)
   end
 
   def regard_real_friend?(user)
