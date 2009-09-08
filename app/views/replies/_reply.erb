@@ -4,7 +4,7 @@
       <%= render :partial => "shared/user_profile",:object => reply.owner %>
     </td>
     <td width="520px">
-      <p><%= reply.content %></p>
+      <p class="twitter_reply"><%= reply.content %></p>
       <div class="sb_meta"><%=reply.created_at.advance(:hours => 8).to_s(:db)  %></div>
     </td>
   </tr>
