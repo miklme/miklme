@@ -7,7 +7,7 @@
       <%= f.text_area :content,:size => "42*20",:disabled => true %>
   <% end %>
   <% if !user.link_url_resources.blank? %>
-    <%=f.submit "完成" %>
+    <%=f.submit "完成",:onclick => "this.disabled = true"  %>
   <% end %>
       </p>
 <% end %>

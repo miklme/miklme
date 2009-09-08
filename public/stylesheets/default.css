@@ -14,6 +14,7 @@ strong {color :#fefefe;
 cite{
     font-style: normal;
     font-size:12px;
+    display:block
 }
 em,em a{color:white;
         font-size:12px
@@ -42,6 +43,7 @@ a:hover {
     border-bottom-style: solid;
     border-bottom-width: 1px;
     border-bottom-color: #4a4a4a;
+    padding-bottom:5px
 }
 #sidebar {float:right; width:227px; background-color:#0b0e10; margin:10px 10px 0 0; }
 #sidebar_top { width:227px; height:40px; background:url(../images/sidebar_top.jpg) no-repeat;}
@@ -87,4 +89,18 @@ h1 {margin:30px 0 0 0; padding:5px 0 7px 45px; text-transform:uppercase; font-si
 }
 h3{
     font-weight: normal;
+}
+table .item{
+    border-right-style: solid;
+    border-left-style: solid;
+    border-bottom-style: solid;
+    border-top-style: solid;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+    border-top-width: 1px;
+    border-right-color: #a0a0a0;
+    border-left-color: #a0a0a0;
+    border-bottom-color: #a0a0a0;
+    border-top-color: #a0a0a0;
 }

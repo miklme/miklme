@@ -8,7 +8,7 @@
         <%= link_to "新建搜索结果条目>>>",new_user_link_url_resource_path(current_user),:popup => true%>
       </li>
       <li>
-        呓语（少于130字）。你应通过此功能分享大脑中随时浮现出的点点信息。<strong>请不要包含链接,</strong>直接写在下面：
+        呓语（少于130字）。你应通过此功能分享大脑中随时浮现出的点点信息。<strong>请不要包含链接，</strong>直接写在下面：
         <%= render :partial => "twitter_resources/form",:locals => { :user => @user,:twitter_resource => @twitter_resource }  %>
       </li>
     </ul>

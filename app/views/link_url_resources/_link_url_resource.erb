@@ -1,9 +1,9 @@
 <li>
-  <table rules="rows">
+  <table>
     <tbody>
       <tr>
         <td width="500">
-          <h3><%= link_to highlight(link_url_resource.description,link_url_resource.keywords),link_url_resource.link_url%></h3>
+          <h3><%= link_to highlight(link_url_resource.description,link_url_resource.keywords),link_url_resource.link_url,:popup => true%></h3>
           <% for comment in link_url_resource.comments.good_comments do%>
               <p>
                 <%= auto_link(highlight(truncate(comment.content,:length => 140),link_url_resource.keywords)) %>

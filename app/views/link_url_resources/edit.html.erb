@@ -10,6 +10,6 @@
       <tr><td><%= f.label :keywords,"用户需要输入什么才能够查找到这条链接，如图(请尽量使用下拉列表中提示的关键字以增大被检索的可能)*" %><%= image_tag "关键字.jpg",:size => "332x73" %></td><td><%= text_field_with_auto_complete :link_url_resource,:keywords,{:onfocus => "link_url_resource_keywords_auto_completer.activate()"},{} %></td></tr>
       <tr><td><%= f.check_box :authority,{},true,false %><%= f.label :authority,"链接内容是我的原创作品，如博客文章，生活照片等。（原创作品可以获得更高的价值点数评分）" %></td>
     </table>
-  <p><%= f.submit "修改完成" %>  <strong><%= flash[:updated] %></strong></p>
+  <p><%= f.submit "修改完成",:onclick => "this.disabled = true" %>  <strong><%= flash[:updated] %></strong></p>
   <% end %>
 </li>

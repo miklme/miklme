@@ -117,6 +117,6 @@ class User < ActiveRecord::Base
         "nil"
       end
     end
-    ks-["nil"]
+    ks=(ks-["nil"]).uniq
   end
 end

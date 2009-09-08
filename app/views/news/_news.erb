@@ -27,7 +27,7 @@
 <% elsif news.news_type=="twitter_resource" %>
   <p>
   <%=link_to news.owner.name_or_nick_name(current_user),user_path(news.owner) %>说：
-    <cite><%=h news.resource.content %></cite>
+ <cite><%=h news.resource.content %></cite>
     <em><%= link_to "#{news.resource.replies.size}条回应>>>", user_twitter_resource_path(news.resource.owner,news.resource)%></em>
   </p>
 <% elsif news.news_type=="link_url_resource" %>
