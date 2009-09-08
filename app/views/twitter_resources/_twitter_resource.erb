@@ -4,12 +4,12 @@
       <%= render :partial => "shared/user_profile",:object => twitter_resource.owner %>
     </td>
     <td width="520px">
-      <p><%= h twitter_resource.content  %></p>
-      <div class="sb_meta"><%=h twitter_resource.created_at_s  %></div>
+      <p class="twitter"><%= h twitter_resource.content  %></p>
+      <div class="sb_meta"><%=h twitter_resource.created_at_s  %>        <%= link_to "回复",new_user_twitter_resource_reply_path(twitter_resource.owner,twitter_resource),:popup => ['新回复', 'height=180,width=490'] %>
+</div>
       <div id="replies">
         <%= render :partial  => "replies/reply",:collection => twitter_resource.replies %>
       </div>
-        <%= link_to "回复",new_user_twitter_resource_reply_path(twitter_resource.owner,twitter_resource),:popup => ['新回复', 'height=180,width=490'] %>
     </td>
   </tr>
 </table>

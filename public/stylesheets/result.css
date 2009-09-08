@@ -101,6 +101,9 @@ cite a{text-decoration:underline}
     position:static;
     z-index:3;
 }
+.twitter {font-size:larger;
+margin-top:0px;
+margin-bottom:1em}
 #sw_canvas {
     padding:0 0 0 15px;
 }

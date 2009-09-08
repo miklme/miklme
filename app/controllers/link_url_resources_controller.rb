@@ -10,7 +10,7 @@ class LinkUrlResourcesController < ApplicationController
   end
 
   def index
-    @link_url_resources=@user.link_url_resources
+    @link_url_resources=LinkUrlResource.find_by_user(@user,params[:page])
   end
 
   def create
@@ -38,11 +38,11 @@ class LinkUrlResourcesController < ApplicationController
   end
 
   def authority
-    @authority_link_url_resources=@user.link_url_resources.scoped_by_authority(true)
+    @authority_link_url_resources=LinkUrlResource.authority_resources(@user,params[:page])
   end
 
   def not_authority
-    @not_authority_link_url_resources=@user.link_url_resources.scoped_by_authority(false)
+    @not_authority_link_url_resources=LinkUrlResource.not_authority_resources(@user,params[:page])
   end
 
   def minus_value

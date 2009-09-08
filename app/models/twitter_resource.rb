@@ -8,7 +8,7 @@ class TwitterResource<Resource
         :created_at_s=>{:index=>:untokenized,:store=>:yes},
         :by_user_value => {:index=>:untokenized,:store => :yes}
       },
-        :remote => true,
+      :remote => true,
       #  生产环境下别忘记。
       :store_class_name=>true,
       :ferret => {:analyzer => analyzer}
@@ -23,5 +23,11 @@ class TwitterResource<Resource
 
   def by_user_value
     self.owner.value
+  end
+
+  def self.find_by_user(user,page)
+    paginate :per_page => 15,
+      :page => page,
+      :conditions => ["user_id=?",user.id]
   end
 end

@@ -1,7 +1,7 @@
 class TwitterResourcesController < ApplicationController
   before_filter :find_user
   def index
-    @twitter_resources=@user.twitter_resources
+    @twitter_resources=TwitterResource.find_by_user(@user,params[:page])
   end
 
   def show
