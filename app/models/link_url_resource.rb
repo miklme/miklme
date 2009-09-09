@@ -7,8 +7,6 @@ class LinkUrlResource< Resource
         },
         :created_at_s=>{:index=>:untokenized,:store=>:yes},
       },
-      :remote => true,
-      #  生产环境下别忘记。
       :store_class_name=>true,
       :ferret => {:analyzer => analyzer}
     })

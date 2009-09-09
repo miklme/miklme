@@ -10,8 +10,7 @@ class ControlledKeywordsController < ApplicationController
       format.xml  { render :xml => @keywords }
     end
   end
-
-  # GET /keywords/1
+  
   # GET /keywords/1.xml
   def show
     @keyword = Keyword.find(params[:id])
