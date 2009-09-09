@@ -54,3 +54,26 @@ starting ferret server...
 starting ferret server...
 starting ferret server...
 starting ferret server...
+/usr/lib/ruby/1.8/drb/drb.rb:866:in `initialize': Address already in use - bind(2) (Errno::EADDRINUSE)
+	from /usr/lib/ruby/1.8/drb/drb.rb:866:in `open'
+	from /usr/lib/ruby/1.8/drb/drb.rb:866:in `open_server'
+	from /usr/lib/ruby/1.8/drb/drb.rb:759:in `open_server'
+	from /usr/lib/ruby/1.8/drb/drb.rb:757:in `each'
+	from /usr/lib/ruby/1.8/drb/drb.rb:757:in `open_server'
+	from /usr/lib/ruby/1.8/drb/drb.rb:1346:in `initialize'
+	from /usr/lib/ruby/1.8/drb/drb.rb:1634:in `new'
+	from /usr/lib/ruby/1.8/drb/drb.rb:1634:in `start_service'
+	from /usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:99:in `run_drb_service'
+	from /usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+	from /usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `call'
+	from /usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:18:in `platform_daemon'
+	from /usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `fork'
+	from /usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:41:in `safefork'
+	from /usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/unix_daemon.rb:11:in `platform_daemon'
+	from /usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/ferret_server.rb:86:in `start'
+	from /usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53:in `send'
+	from /usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/server_manager.rb:53
+	from /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+	from /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+	from script/ferret_server:9
+starting ferret server...

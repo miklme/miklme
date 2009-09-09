@@ -43969,3 +43969,7 @@ script/server:3
 /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
 /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
 script/server:3
+Will use remote index server which should be available at druby://localhost:9010
+Will use local index.
+Will use local index.
+Will use local index.
