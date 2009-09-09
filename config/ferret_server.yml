@@ -7,7 +7,7 @@
 # log_level: log level for the server's logger
 production:
   host: mikl.me
-  port: 9010
+  port: 443
   pid_file: log/ferret.pid
   log_file: log/ferret_server.log
   log_level: warn
