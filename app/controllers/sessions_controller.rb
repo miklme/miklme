@@ -23,7 +23,7 @@ class SessionsController < ApplicationController
       redirect_to user_path(current_user)
       flash[:notice] = "成功登入，即刻将体验Michael带给你的...无限"
     else
-      note_failed_signin
+      flash[:error] = "出了点小问题，请重新输入密码"
       @name       = params[:username]
       @remember_me = params[:remember_me]
       render :action => 'new'
@@ -34,13 +34,6 @@ class SessionsController < ApplicationController
     session[:user_id]=nil
     flash[:notice] = "成功离开Michael"
     redirect_to new_session_path
-  end
-
-  private
-  # Track failed login attempts
-  def note_failed_signin
-    flash[:error] = "出了点小问题，请重新输入密码"
-    logger.warn "Failed login for '#{params[:username]}' from #{request.remote_ip} at #{Time.now.utc}"
   end
 
 end
