@@ -24,7 +24,7 @@ class SessionsController < ApplicationController
       flash[:notice] = "成功登入，即刻将体验Michael带给你的...无限"
     else
       note_failed_signin
-      @name       = params[:name]
+      @name       = params[:username]
       @remember_me = params[:remember_me]
       render :action => 'new'
     end
