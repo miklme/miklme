@@ -32,4 +32,18 @@ class SearchedKeywordsController < ApplicationController
       page.visual_effect :puff,"more"
     end
   end
+
+  def search_link_url
+    render :update do |page|
+      page.visual_effect(:puff,"search_twitter")
+      page.visual_effect(:appear,"search_link_url",:duration => 2)
+    end
+  end
+
+  def search_twitter
+    render :update do |page|
+      page.visual_effect(:puff,"search_link_url")
+      page.visual_effect(:appear,"search_twitter",:duration => 2)
+    end
+  end
 end

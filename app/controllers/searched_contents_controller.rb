@@ -1,10 +1,4 @@
 class SearchedContentsController < ApplicationController
-
-  def new
-    render :layout => "searched_keywords"
-  end
-
-
   def show
     if !params[:twitter_resource].nil?
       @content = params[:twitter_resource][:content]
