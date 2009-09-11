@@ -30,17 +30,28 @@
 </div>
 
 <div id="main">
-  <div id="more">最近被创建的关键字：
-    <% for keyword in @all_keywords %>
-      <span><%= link_to "#{keyword}","/keyword_pages/#{KeywordPage.find_by_keyword(keyword).id}",:popup => true,:class => "keywords" %>
-      </span>
+  <div>价值点数最高的用户：
+    <% for u in @top_users %>
+      <%=link_to u.nick_name,user_path(u) %>(<%= u.value %>)
     <% end %>
-    <p>
-      <%= link_to_remote "更多>>>",:url => {:action => :about_all_keywords } %>
+    <p> <%= link_to_remote "更多，世界说>>>",:url => {:action => :about_all_keywords } %>
     </p>
-    <p>当您幸运的发现没有出现自动提示的关键字时，就意味着您自己可以任意编辑该关键字的内容，从而被别人看见。 </p>
+    <div id="more" style="display:none">
+      <p>来自世界的最新话题： <% for keyword in @all_keywords %>
+          <span><%= link_to "#{keyword}","/keyword_pages/#{KeywordPage.find_by_keyword(keyword).id}",:popup => true,:class => "keywords" %>
+          </span>
+        <% end %>
+      </p>
+      热门话题：
+       <% for keyword in @hot_keywords %>
+          <span><%= link_to "#{keyword}","/keyword_pages/#{KeywordPage.find_by_keyword(keyword).id}",:popup => true,:class => "keywords" %>
+          </span>
+        <% end %>
+    </div>
   </div>
-  <div id="hide">
+  <div>
+    <p>当您幸运的发现没有出现自动提示的关键字时，就意味着您自己可以任意编辑该关键字的内容，从而被别人看见。
+    </p>
   </div>
   <%= render :partial => "shared/footer" %>
 </div>

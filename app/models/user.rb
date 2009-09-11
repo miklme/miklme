@@ -4,7 +4,10 @@ class User < ActiveRecord::Base
   include Authentication
   include Authentication::ByPassword
   include Authentication::ByCookieToken
-  
+
+  attr_accessor :password_confirmation
+  attr_protected :value
+
   default_scope :order => 'value DESC'
   named_scope :by_value,:order => 'value DESC'
 
@@ -28,7 +31,8 @@ class User < ActiveRecord::Base
 
   accepts_nested_attributes_for :true_portrait, :allow_destroy => true
   accepts_nested_attributes_for :portrait, :allow_destroy => true
-
+  
+  validates_confirmation_of :password,:message => "不一致"
   validates_uniqueness_of :username,:case_sensitive => false
   validates_format_of :username,:with => %r{^[a-zA-Z][a-zA-Z0-9_]{4,15}$},:message =>"请避免使用太过诡异的字符及汉字"
   validates_length_of :nick_name,:maximum=>10,:on => :update
@@ -41,7 +45,6 @@ class User < ActiveRecord::Base
   # anything else you want your user to change should be added here.
   before_save :encrypt_password
 
-  attr_protected :value
   def self.authenticate(username, password)
     return nil if username.blank? or password.blank?
     u = find :first, :conditions => ['username = ? ', username] # need to get the salt

@@ -8,12 +8,21 @@ class Resource < ActiveRecord::Base
   named_scope :by_time,:order => "created_at DESC"
   named_scope :in_one_day,:conditions => ["resources.created_at > ?",Time.now.yesterday]
   named_scope :by_owner_value,:include => :owner,:order => 'users.value DESC'
-
-  def self.keywords
-    keywords=Resource.find(:all,:order => "resources.created_at DESC").map do |r|
+  
+  def self.all_keywords
+    keywords=Resource.find(:all,:order => "resources.created_at DESC",:limit => 100).map do |r|
       r.keywords
     end
-    (keywords-[nil]).uniq
+    keywords.compact.uniq
+  end
+
+  def self.hot_keywords
+    keywords=Resource.find(:all,:order => "resources.created_at DESC",:limit => 10000).map do |r|
+      r.keywords
+    end
+    keywords=keywords.compact
+    uniqed_keywords=keywords.uniq.sort_by { |k| keywords.count(k) }
+    uniqed_keywords.first(50)
   end
 
   def created_at_s
@@ -30,6 +39,5 @@ class Resource < ActiveRecord::Base
       self.link_url = ("http://"+self.link_url).to_s
     end
   end
-
 
 end
