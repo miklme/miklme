@@ -42,7 +42,7 @@
           </span>
         <% end %>
       </p>
-      排名较前的用户话题：
+      价值点数较高的用户话题：
        <% for keyword in @high_keywords %>
           <span><%= link_to "#{keyword}","/keyword_pages/#{KeywordPage.find_by_keyword(keyword).id}",:popup => true,:class => "keywords" %>
           </span>

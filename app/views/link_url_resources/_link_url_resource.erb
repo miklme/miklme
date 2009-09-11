@@ -16,7 +16,7 @@
           </td>
           <td width="100">
             <% if not link_url_resource.owner == current_user %>
-              <%= button_to "此条目与关键字不符",minus_value_user_link_url_resource_path(link_url_resource.owner,link_url_resource) %>
+              <%= button_to "此条目与关键字不符",minus_value_user_link_url_resource_path(link_url_resource.owner,link_url_resource),:confirm => "发布者将降低0.6价值点数，而你将降低0.3价值点数。继续？" %>
             <% else %>
               <div><%= link_to "编辑",edit_user_link_url_resource_path(link_url_resource.owner,link_url_resource) %>(关键字：<strong><%= link_url_resource.keywords %></strong>)
               </div>

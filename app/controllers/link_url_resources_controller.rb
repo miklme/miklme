@@ -47,10 +47,14 @@ class LinkUrlResourcesController < ApplicationController
 
   def minus_value
     o=Resource.find(params[:id]).owner
-    if not current_user==o
-      o.value=o.value-0.4
+    if !current_user==o and current_user.value<0
+      flash[:notice]="不太爽的是，你的价值点数低于0了，暂时不能作出这种中肯评价。"
+    else
+      o.value=o.value-0.6
+      current_user.value=current_user.value-0.3
+      current_user.save
       o.save
-      flash[:notice]="创建这个链接的人减少了0.4点价值点数。"
+      flash[:notice]="感谢反馈。"
       redirect_to :back
     end
   end

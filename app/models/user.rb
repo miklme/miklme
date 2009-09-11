@@ -64,75 +64,75 @@ class User < ActiveRecord::Base
     keywords.compact.uniq.first(15)
   end
 
-  def owned_keywords
-    resources=self.link_url_resources
-    resources.collect do |r|
-      r.keywords
-    end
+def owned_keywords
+  resources=self.link_url_resources
+  resources.collect do |r|
+    r.keywords
   end
+end
 
-  #Below methods are the user self,he is active,not positive.ie.He treat others as friends/strangers.
-  def followings
-    b=BeFollow.scoped_by_follower_id(self.id)
-    user_ids=b.map do |a|
-      a.user.id
-    end
-    User.find(user_ids)
+#Below methods are the user self,he is active,not positive.ie.He treat others as friends/strangers.
+def followings
+  b=BeFollow.scoped_by_follower_id(self.id)
+  user_ids=b.map do |a|
+    a.user.id
   end
+  User.find(user_ids)
+end
 
-  def real_friends
-    b=BeFollow.scoped_by_follower_id(self.id).scoped_by_provide_name(true)
-    user_ids=b.map do |c|
-      c.user.id
-    end
-    User.find(user_ids)
+def real_friends
+  b=BeFollow.scoped_by_follower_id(self.id).scoped_by_provide_name(true)
+  user_ids=b.map do |c|
+    c.user.id
   end
+  User.find(user_ids)
+end
 
-  def interested_people
-    b=BeFollow.scoped_by_follower_id(self.id).scoped_by_provide_name(false)
-    user_ids=b.map do |c|
-      c.user.id
-    end
-    User.find(user_ids)
+def interested_people
+  b=BeFollow.scoped_by_follower_id(self.id).scoped_by_provide_name(false)
+  user_ids=b.map do |c|
+    c.user.id
   end
+  User.find(user_ids)
+end
 
-  def regard_real_friend?(user)
-    if BeFollow.find_by_user_id_and_follower_id(user.id,self.id).present? and BeFollow.find_by_user_id_and_follower_id(user.id,self.id).provide_name?
-      true
-    else
-      false
-    end
+def regard_real_friend?(user)
+  if BeFollow.find_by_user_id_and_follower_id(user.id,self.id).present? and BeFollow.find_by_user_id_and_follower_id(user.id,self.id).provide_name?
+    true
+  else
+    false
   end
+end
 
-  def interested_in?(user)
-    if BeFollow.find_by_user_id_and_follower_id(user.id,self.id).present? and !BeFollow.find_by_user_id_and_follower_id(user.id,self.id).provide_name?
-      true
-    else
-      false
-    end
+def interested_in?(user)
+  if BeFollow.find_by_user_id_and_follower_id(user.id,self.id).present? and !BeFollow.find_by_user_id_and_follower_id(user.id,self.id).provide_name?
+    true
+  else
+    false
   end
+end
 
-  def name_or_nick_name(current_user)
-    if self.regard_real_friend?(current_user)
-      self.name
-    elsif self==current_user
-      "我"
-    else
-      self.nick_name
-    end
+def name_or_nick_name(current_user)
+  if self.regard_real_friend?(current_user)
+    self.name
+  elsif self==current_user
+    "我"
+  else
+    self.nick_name
   end
+end
   
-  def controlled_keywords
-    keywords=self.owned_keywords
-    ks=keywords.map do |k|
-      rs=Resource.scoped_by_keywords(k)
-      top_keywords_owner=rs.by_owner_value.first.owner
-      if top_keywords_owner==self
-        k
-      else
-        "nil"
-      end
+def controlled_keywords
+  keywords=self.owned_keywords
+  ks=keywords.map do |k|
+    rs=Resource.scoped_by_keywords(k)
+    top_keywords_owner=rs.by_owner_value.first.owner
+    if top_keywords_owner==self
+      k
+    else
+      "nil"
     end
-    ks=(ks-["nil"]).uniq
   end
+  ks=(ks-["nil"]).uniq
+end
 end

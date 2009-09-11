@@ -49,54 +49,64 @@ class CommentsController < ApplicationController
     if @comment.save
       u=User.find(params[:user_id])
       if not u==current_user
-        u.value =u.value+params[:comment][:rating].to_i
-        u.save
+        if current_user.value<0 and params[:comment][:rating].to_i<0
+          flash[:notice]="不太爽的是，你的价值点数低于0了，暂时不能作出这种中肯评价。"
+        elsif current_user.value>=0 and params[:comment][:rating].to_i<0
+          flash[:notice]="差评成功，你的价值点数降低了0.5，对方降低了1.0"
+          u.value =u.value+params[:comment][:rating].to_i
+          current_user.value-=0.5
+          current_user.save
+        else
+          flash[:notice]="评论成功"
+          u.value =u.value+params[:comment][:rating].to_i
+          u.save
+        end
       end
-      n=@resource.owner.news.create
-      n.news_type="comment"
-      n.comment=@comment
-      n.resource=@resource
-      n.save
-      redirect_to :back
-    else
-      render :action => "new" 
-    end
-  end
-
-  # PUT /comments/1
-  # PUT /comments/1.xml
-  def update
-    @comment = Comment.find(params[:id])
-
-    respond_to do |format|
-      if @comment.update_attributes(params[:comment])
-
-        flash[:notice] = 'Comment was successfully updated.'
-        format.html { redirect_to(@comment) }
-        format.xml  { head :ok }
+        n=@resource.owner.news.create
+        n.news_type="comment"
+        n.comment=@comment
+        n.resource=@resource
+        n.save
+        redirect_to :back
       else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @comment.errors, :status => :unprocessable_entity }
+        render :action => "new"
       end
     end
-  end
 
-  # DELETE /comments/1
-  # DELETE /comments/1.xml
-  def destroy
-    @comment = Comment.find(params[:id])
-    @comment.destroy
+    # PUT /comments/1
+    # PUT /comments/1.xml
+    def update
+      @comment = Comment.find(params[:id])
 
-    respond_to do |format|
-      format.html { redirect_to(comments_url) }
-      format.xml  { head :ok }
+      respond_to do |format|
+        if @comment.update_attributes(params[:comment])
+
+          flash[:notice] = 'Comment was successfully updated.'
+          format.html { redirect_to(@comment) }
+          format.xml  { head :ok }
+        else
+          format.html { render :action => "edit" }
+          format.xml  { render :xml => @comment.errors, :status => :unprocessable_entity }
+        end
+      end
+    end
+
+    # DELETE /comments/1
+    # DELETE /comments/1.xml
+    def destroy
+      @comment = Comment.find(params[:id])
+      @comment.destroy
+
+      respond_to do |format|
+        format.html { redirect_to(comments_url) }
+        format.xml  { head :ok }
+      end
+    end
+
+    private
+
+    def load_user_and_resource
+      @user=User.find(params[:user_id])
+      @resource=LinkUrlResource.find(params[:link_url_resource_id])
     end
   end
-
-  private
-
-  def load_user_and_resource
-    @user=User.find(params[:user_id])
-    @resource=LinkUrlResource.find(params[:link_url_resource_id])
-  end
-end

@@ -47,6 +47,11 @@
           </div>
         </div>
         <div id="content">
+          <% if flash[:notice].present? %>
+            <p>
+            <strong><%=h flash[:notice] %></strong>
+            </p>
+            <% end %>
           <%= @content_for_layout %>
           <div class="sb_pag">
             <%= will_paginate @comments, :prev_label => '上一页', :next_label => '下一页' %>
