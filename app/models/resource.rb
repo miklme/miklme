@@ -9,21 +9,16 @@ class Resource < ActiveRecord::Base
   named_scope :in_one_day,:conditions => ["resources.created_at > ?",Time.now.yesterday]
   named_scope :by_owner_value,:include => :owner,:order => 'users.value DESC'
   
-  def self.all_keywords
-    keywords=Resource.find(:all,:order => "resources.created_at DESC",:limit => 100).map do |r|
-      r.keywords
-    end
-    keywords.compact.uniq
-  end
 
-  def self.hot_keywords
-    keywords=Resource.find(:all,:order => "resources.created_at DESC",:limit => 10000).map do |r|
-      r.keywords
-    end
-    keywords=keywords.compact
-    uniqed_keywords=keywords.uniq.sort_by { |k| keywords.count(k) }
-    uniqed_keywords.first(50)
-  end
+  #这个方法不能用于ruby1.8.6
+#  def self.hot_keywords
+#    keywords=Resource.find(:all,:order => "resources.created_at DESC",:limit => 10000).map do |r|
+#      r.keywords
+#    end
+#    keywords=keywords.compact
+#    uniqed_keywords=keywords.uniq.sort_by { |k| Resource.find_by_keywords(k).count(k) }
+#    uniqed_keywords.first(50)
+#  end
 
   def created_at_s
     created_at.advance(:hours => 8).to_s(:db)

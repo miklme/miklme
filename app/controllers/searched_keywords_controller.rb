@@ -1,7 +1,7 @@
 class SearchedKeywordsController < ApplicationController
   def new
-    @all_keywords=Resource.all_keywords.first(10)
-    @hot_keywords=Resource.hot_keywords
+    @new_keywords=LinkUrlResource.new_keywords
+    @high_keywords=User.high_keywords
     @top_users=User.find(:all,:order => "value DESC",:limit => 15)
   end
 

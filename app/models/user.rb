@@ -51,6 +51,19 @@ class User < ActiveRecord::Base
     u && u.authenticated?(password) ? u : nil
   end
 
+  def self.high_keywords
+    x=(self.count/4).to_i
+    users=self.find(:all,:order => "value DESC",:limit => x)
+    ids=users.map do |u|
+      u.id
+    end
+    ls=LinkUrlResource.find_all_by_user_id(ids,:order => "resources.created_at DESC")
+    keywords= ls.map do |l|
+      l.keywords
+    end
+    keywords.compact.uniq.first(15)
+  end
+
   def owned_keywords
     resources=self.link_url_resources
     resources.collect do |r|

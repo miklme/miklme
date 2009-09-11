@@ -55,4 +55,11 @@ class LinkUrlResource< Resource
       :page => page,
       :conditions => ["authority = :false and user_id=:user_id",{:false =>false,:user_id => user.id }]
   end
+
+def self.new_keywords
+    keywords=Resource.find(:all,:order => "resources.created_at DESC",:limit => 100).map do |r|
+      r.keywords
+    end
+    keywords.compact.uniq.first(15)
+  end
 end
