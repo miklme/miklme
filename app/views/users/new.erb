@@ -18,6 +18,7 @@
     <div id="text">
       <h1>由此开始：</h1>
       <% @user.password = nil %>
+      <% @user.password_confirmation=nil %>
       <% form_for @user do |f| -%>
         <%=f.error_messages %>
         <table cellpadding="5" cellspacing="5">
