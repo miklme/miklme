@@ -7,7 +7,7 @@
   <strong>（我关注的人）</strong>
   <cite><%=h "价值点数：#{user_profile.value}" %></cite>
 <% elsif user_profile==current_user%>
-  <em><%= link_to user_profile.name,user_path(user_profile) %></em>
+  <em><%= link_to "我自己",user_path(user_profile) %></em>
   <cite><%=h "价值点数：#{user_profile.value}" %></cite>
 <% else %>
   <span class="nick_name"><%= link_to user_profile.nick_name ,user_path(user_profile)%></span>

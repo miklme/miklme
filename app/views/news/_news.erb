@@ -8,13 +8,14 @@
 <% if news.news_type=="comment" %>
   <p>
     <%= link_to news.owner.name_or_nick_name(current_user),user_path(news.owner) %>的链接条目
-    <%=link_to news.resource.description,news.resource.link_url,:popup => true,:class => "title" %>被评论了
-    <%=link_to news.resource.comments.size,user_link_url_resource_comments_path(news.owner,news.resource),:popup => true %>次，
+    <%=link_to news.resource.description,news.resource.link_url,:popup => true,:class => "title" %>被评论：
+    <%=h news.comment %>
+    （共<%=link_to news.resource.comments.size,user_link_url_resource_comments_path(news.owner,news.resource),:popup => true %>评论）
     <% a=Comment.sum(:rating,:conditions => ["resource_id=?",news.resource.id]) %>
     <% if a>=0 %>
-      价值点数+ <%=h a %>
+      价值点数共增加 <%=h a %>
     <% else %>
-      价值点数减少了 <%=h -a %>(反响恶劣)
+      价值点数共减少了 <%=h -a %>(反响恶劣)
     <% end %>
   </p>
   <% elsif news.news_type=="replied_comment" %>

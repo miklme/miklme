@@ -54,6 +54,7 @@ class CommentsController < ApplicationController
       end
       n=@resource.owner.news.create
       n.news_type="comment"
+      n.comment=@comment
       n.resource=@resource
       n.save
       redirect_to :back
