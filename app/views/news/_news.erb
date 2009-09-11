@@ -9,7 +9,8 @@
   <p>
     <%= link_to news.owner.name_or_nick_name(current_user),user_path(news.owner) %>的链接条目
     <%=link_to news.resource.description,news.resource.link_url,:popup => true,:class => "title" %>被评论：
-    <%=h news.comment %>
+    <cite><%=truncate news.comment.try(:content),:length => 140 %>
+    </cite>
     （共<%=link_to news.resource.comments.size,user_link_url_resource_comments_path(news.owner,news.resource),:popup => true %>评论）
     <% a=Comment.sum(:rating,:conditions => ["resource_id=?",news.resource.id]) %>
     <% if a>=0 %>
