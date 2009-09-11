@@ -21,7 +21,7 @@
   <p>
     <%=link_to others_news.owner.name_or_nick_name(current_user),user_path(others_news.owner) %>说：
     <cite><%=h others_news.resource.content %></cite>
-    <em><%= link_to "#{others_news.resource.replies.size}条回应>>>", user_twitter_resource_path(others_news.resource.owner,news.resource)%></em>
+    <em><%= link_to "#{others_news.resource.replies.size}条回应>>>", user_twitter_resource_path(others_news.resource.owner,others_news.resource)%></em>
   </p>
 <% elsif others_news.news_type=="link_url_resource" %>
   <p>

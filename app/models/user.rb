@@ -52,7 +52,7 @@ class User < ActiveRecord::Base
   end
 
   def self.high_keywords
-    x=(self.all.size/4).to_i
+    x=(self.all.length/4).to_i
     users=self.find(:all,:order => "value DESC",:limit => x)
     ids=users.map do |u|
       u.id
