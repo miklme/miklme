@@ -1,6 +1,6 @@
 class SearchedKeywordsController < ApplicationController
   def new
-
+    @all_keywords=Resource.keywords.first(10)
   end
 
 
@@ -24,6 +24,12 @@ class SearchedKeywordsController < ApplicationController
       s=current_user.searched_keywords.find_by_name(params[:keywords])
       s.searched_times=s.searched_times+1
       s.save
+    end
+  end
+
+  def about_all_keywords
+    render :update do |page|
+      page.visual_effect :puff,"more"
     end
   end
 end

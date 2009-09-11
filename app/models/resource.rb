@@ -9,7 +9,13 @@ class Resource < ActiveRecord::Base
   named_scope :in_one_day,:conditions => ["resources.created_at > ?",Time.now.yesterday]
   named_scope :by_owner_value,:include => :owner,:order => 'users.value DESC'
 
-  
+  def self.keywords
+    keywords=Resource.find(:all,:order => "resources.created_at DESC").map do |r|
+      r.keywords
+    end
+    (keywords-[nil]).uniq
+  end
+
   def created_at_s
     created_at.advance(:hours => 8).to_s(:db)
   end

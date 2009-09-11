@@ -19,7 +19,7 @@ cite{
 em,em a{color:white;
         font-size:12px
 }
-
+#logo a:hover {color:#BED7E6}
 a:hover {
     text-decoration: underline;
 }

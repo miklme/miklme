@@ -6,7 +6,7 @@ body { line-height:16px; font-family: 微软雅黑,新宋体,华文宋体,sans-s
 }
 a { color:white;text-decoration:none}
 a:hover { text-decoration:none;
-          color: #fefefe;
+          color: #BED7E6;
 }
 #login {
     position: relative;
@@ -155,4 +155,11 @@ div.auto_complete ul strong.highlight {
 }
 #content a{
     font-size:14px;
+}
+
+.keywords{font-weight:bold;
+color:#FFA615}
+.keywords:hover{
+    color:#FFA615;
+    text-decoration: underline;
 }

@@ -17,7 +17,17 @@
 </div>
 
 <div id="main">
-  <p>当您幸运的发现关键字没有出现在列表中时，就意味着您自己可以任意编辑该关键字的内容，从而被别人看见。 </p>
-
-  <%= render :partial => "shared/footer" %>
+  <div id="more">最近被创建的关键字：
+    <% for keyword in @all_keywords %>
+      <span><%= link_to "#{keyword}","/keyword_pages/#{KeywordPage.find_by_keyword(keyword).id}",:popup => true,:class => "keywords" %>
+      </span>
+    <% end %>
+    <p>
+      <%= link_to_remote "更多>>>",:url => {:action => :about_all_keywords } %>
+    </p>
+  <p>当您幸运的发现没有出现自动提示的关键字时，就意味着您自己可以任意编辑该关键字的内容，从而被别人看见。 </p>
+</div>
+  <div id="hide">
+  </div>
+<%= render :partial => "shared/footer" %>
 </div>
