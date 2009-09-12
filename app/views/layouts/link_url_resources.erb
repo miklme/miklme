@@ -36,8 +36,10 @@
         <div id="content">
           <div id="results">
             <ul class="sb_results" id="wg0">
-                  <li><%= link_to "新建搜索结果条目>>>",new_user_link_url_resource_path(current_user) %></li>
-                <%= @content_for_layout%>
+              <% if current_user==@user %>
+                <li><%= link_to "新建搜索结果条目>>>",new_user_link_url_resource_path(current_user) %></li>
+              <% end %>
+              <%= @content_for_layout%>
             </ul>
           </div>
         </div></div></div>
