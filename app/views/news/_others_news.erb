@@ -1,5 +1,5 @@
 <span class="right">
-  <% if others_news.created_at>Time.now.at_beginning_of_day%>
+  <% if others_news.created_at.advance(:hours => 8)>Time.now.at_beginning_of_day%>
   <em>
     (今天)
   </em>
