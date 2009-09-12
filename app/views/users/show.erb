@@ -1,0 +1,24 @@
+<% if current_user==@user %>
+  <div id="new_resource">
+    <h1><%= @variable_title %></h1>
+    <h2>我们可以这样开始：</h2>
+    <ul>
+      <li>
+        分享一个链接，就像使用网络书签那样；或是发一个帖子（在Mikl.me这等同于写一篇Blog，二者其实一样)。
+        <%= link_to "新建搜索结果条目>>>",new_user_link_url_resource_path(current_user),:popup => true%>
+      </li>
+      <li>
+        呓语（少于130字）。你应通过此功能分享大脑中随时浮现出的点点信息。<strong>请不要包含链接，</strong>直接写在下面：
+        <%= render :partial => "twitter_resources/form",:locals => { :user => @user,:twitter_resource => @twitter_resource }  %>
+      </li>
+    </ul>
+    <p>
+      <strong>形式平平无奇。不过请先尝试。</strong>
+    </p>
+  </div>
+<% end %>
+
+<% if @news.present? %>
+  <%= render :partial => "news/news",:collection => @news %>
+  <%= will_paginate @news, :prev_label => '上一页', :next_label => '下一页' %>
+<% end %>

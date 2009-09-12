@@ -35,6 +35,16 @@ class BlogResourcesController < ApplicationController
       render :action => :new,:layout => "blog_resources"
     end
   end
+
+   def update
+    @blog_resource=@user.blog_resources.find(params[:id])
+    @blog_resource.update_attributes(params[:blog_resource])
+    @blog_resource.keywords=params[:resource][:keywords]
+    if @blog_resource.save
+      flash[:updated]="修改成功。"
+      render :action => :edit,:layout => "link_url_resources"
+    end
+  end
   private
   def find_user
     @user=User.find(params[:user_id])

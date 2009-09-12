@@ -25,7 +25,7 @@
             <h2>评论排序方式</h2>
             <ul>
               <li class="sw_navA">
-                <%= link_to "用户价值点数",user_link_url_resource_comments_path(@user,@resource) %>
+                <%= link_to "用户价值点数",user_resource_comments_path(@user,@resource) %>
               </li>
               <li class="sw_navA">
                 <%= link_to_remote "发表时间",:action => :index_by_time %>

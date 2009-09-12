@@ -11,14 +11,14 @@ class Resource < ActiveRecord::Base
   
 
   #这个方法不能用于ruby1.8.6
-#  def self.hot_keywords
-#    keywords=Resource.find(:all,:order => "resources.created_at DESC",:limit => 10000).map do |r|
-#      r.keywords
-#    end
-#    keywords=keywords.compact
-#    uniqed_keywords=keywords.uniq.sort_by { |k| Resource.find_by_keywords(k).count(k) }
-#    uniqed_keywords.first(50)
-#  end
+  #  def self.hot_keywords
+  #    keywords=Resource.find(:all,:order => "resources.created_at DESC",:limit => 10000).map do |r|
+  #      r.keywords
+  #    end
+  #    keywords=keywords.compact
+  #    uniqed_keywords=keywords.uniq.sort_by { |k| Resource.find_by_keywords(k).count(k) }
+  #    uniqed_keywords.first(50)
+  #  end
 
   def created_at_s
     created_at.advance(:hours => 8).to_s(:db)
@@ -28,8 +28,9 @@ class Resource < ActiveRecord::Base
     updated_at.advance(:hours => 8).to_s(:db)
   end
 
-    def self.search_by_keywords(keywords,page)
-    paginate :per_page => 10,
+  def self.search_by_keywords(keywords,page)
+    resources=Resource.find_all_by_type(["LinkUrlResource","BlogResource"])
+    resources.paginate :per_page => 10,
       :page => page,
       :conditions => ["keywords=?",keywords],
       :include => :owner,
@@ -37,7 +38,8 @@ class Resource < ActiveRecord::Base
   end
 
   def self.search_by_keywords_and_form(keywords,form,page)
-    paginate :per_page => 10,
+    resources=Resource.find_all_by_type(["LinkUrlResource","BlogResource"])
+    resources.paginate :per_page => 10,
       :page => page,
       :conditions => ["keywords=:keywords and form=:form",{:keywords =>keywords,:form => form }]
   end
@@ -45,23 +47,23 @@ class Resource < ActiveRecord::Base
   def self.find_by_user(user,page)
     paginate :per_page => 15,
       :page => page,
-      :conditions => ["user_id=?",user.id]
+      :conditions => ["user_id=? and keywords is NOT NULL",user.id]
   end
 
   def self.authority_resources(user,page)
     paginate :per_page => 15,
       :page => page,
-      :conditions => ["authority = :true and user_id=:user_id",{:true =>true,:user_id => user.id }]
+      :conditions => ["resources.authority = :true and user_id=:user_id and keywords is NOT NULL",{:true =>true,:user_id => user.id }]
   end
 
   def self.not_authority_resources(user,page)
     paginate :per_page => 15,
       :page => page,
-      :conditions => ["authority = :false and user_id=:user_id",{:false =>false,:user_id => user.id }]
+      :conditions => ["resources.authority = :false and user_id=:user_id and keywords is NOT NULL",{:false =>false,:user_id => user.id }]
   end
 
   def self.new_keywords
-    keywords=Resource.find(:all,:order => "resources.created_at DESC",:limit => 100).map do |r|
+    keywords=Resource.find(:all,:order => "resources.created_at DESC",:limit => 1000).map do |r|
       r.keywords
     end
     keywords.compact.uniq.first(15)

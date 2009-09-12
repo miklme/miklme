@@ -11,7 +11,7 @@
     <%=link_to news.resource.description,news.resource.link_url,:popup => true,:class => "title" %>被评论：
     <cite><%=truncate news.comment.try(:content),:length => 140 %>
     </cite>
-    <em>共<%=link_to "#{news.resource.comments.size}条评论>>>",user_link_url_resource_comments_path(news.owner,news.resource),:popup => true %></em>
+    <em>共<%=link_to "#{news.resource.comments.size}条评论>>>",user_resource_comments_path(news.owner,news.resource),:popup => true %></em>
     <% a=Comment.sum(:rating,:conditions => ["resource_id=?",news.resource.id]) %>
     <span class="little_white">
       <% if a>=0 %>

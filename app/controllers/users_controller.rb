@@ -33,8 +33,16 @@ class UsersController < ApplicationController
 
 
   def show
-    @user =User.find(params[:id])
-    redirect_to user_resources_path(@user)
+    @user=User.find(params[:id])
+    @news=News.list_self_news(@user,params[:page])
+    if @user.link_url_resources.blank?
+      @variable_title="革命"
+    else
+      @variable_title="由你控制的搜索引擎"
+    end
+    @resources=@user.resources.find(:all,:order => "resources.created_at DESC")
+    @twitter_resource=@user.twitter_resources.build
+    render :layout => "resources"
   end
   def search
     @user=current_user

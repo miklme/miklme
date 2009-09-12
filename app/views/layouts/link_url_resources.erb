@@ -22,13 +22,13 @@
             <h2><%=h @user.name_or_nick_name(current_user) %>分享的条目</h2>
             <ul>
               <li >
-                <%= link_to_unless_current "全部", user_link_url_resources_path(@user)%>
+                <%= link_to_unless_current "全部", user_resources_path(@user)%>
               </li>
               <li>
-                <%= link_to_unless_current "原创内容(#{@user.link_url_resources.scoped_by_authority(true).in_one_day.size}新)" ,authority_user_link_url_resources_path(@user)%>
+                <%= link_to_unless_current "原创内容(#{@user.link_url_resources.scoped_by_authority(true).in_one_day.size}新)" ,authority_user_resources_path(@user)%>
               </li>
               <li>
-                <%= link_to_unless_current "非原创内容(#{@user.link_url_resources.scoped_by_authority(false).in_one_day.size}新)",not_authority_user_link_url_resources_path(@user) %>
+                <%= link_to_unless_current "非原创内容(#{@user.link_url_resources.scoped_by_authority(false).in_one_day.size}新)",not_authority_user_resources_path(@user) %>
               </li>
             </ul>
           </div>
@@ -37,7 +37,7 @@
           <div id="results">
             <% if current_user==@user %>
               <div><cite>新建搜索结果条目的两种方式：</cite></div>
-              <%= link_to_unless_current "分享一个外部链接>>>",new_user_link_url_resource_path(current_user) %><span class="sb_count">（使用类似网络书签）</span>
+              <%= link_to_unless_current "分享一个外部链接>>>",new_user_link_url_resource_path(current_user) %><span class="sb_count">（使用方式类似网络书签）</span>
               |  <%= link_to_unless_current "新建一个帖子，或是blog>>>",new_user_blog_resource_path(current_user)%>
             <% end %>
             <ul class="sb_results" id="wg0">

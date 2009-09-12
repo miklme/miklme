@@ -1,0 +1,58 @@
+<% if resource.class.to_s=="LinkUrlResource" %>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td width="500">
+            <h3><%= link_to highlight(resource.description,resource.keywords),resource.link_url,:popup => true%></h3>
+            <% for comment in resource.comments.good_comments do%>
+                <p>
+                  <%= auto_link(highlight(truncate(comment.content,:length => 140),resource.keywords)) %>
+                </p>
+              <% end %>
+              <ul class="sb_meta">
+                <li><cite><%= link_to "#{resource.comments.size}条回应>>>", user_resource_comments_path(resource.owner,resource),:popup => true %></cite></li>
+                <li><%=h resource.link_url %></li>
+              </ul>
+            </td>
+            <td width="100">
+              <% if not resource.owner == current_user %>
+                <%= button_to "此条目与关键字不符",minus_value_user_link_url_resource_path(resource.owner,resource),:confirm => "发布者将降低0.6价值点数，而你将降低0.3价值点数。继续？" %>
+              <% else %>
+                <div><%= link_to "编辑",edit_user_link_url_resource_path(resource.owner,resource),:popup => true %>(关键字：<strong><%= resource.keywords %></strong>)
+                </div>
+              <% end %>
+            </td>
+            <td width="80"><%= render "shared/user_profile",:object => resource.owner %>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </li>
+  <% elsif resource.class.to_s=="BlogResource" %>
+    <li>
+      <table>
+        <tbody>
+          <tr>
+            <td width="500">
+              <h3><%= link_to highlight(resource.title,resource.keywords),user_blog_resource_path(resource.owner,resource),:popup => true%></h3>
+              <p>
+                <%= highlight(truncate(resource.content,:length => 120),resource.keywords) %>
+              </p>
+              <ul class="sb_meta">
+                <li><cite><%= link_to "#{resource.comments.size}条回应>>>", user_resource_comments_path(resource.owner,resource),:popup => true %></cite></li>
+              </ul>
+            </td>
+            <td width="100">
+              <% if  resource.owner == current_user %>
+                <div><%= link_to "编辑",edit_user_blog_resource_path(resource.owner,resource),:popup => true %>(关键字：<strong><%= resource.keywords %></strong>)
+                </div>
+              <% end %>
+            </td>
+            <td width="80"><%= render "shared/user_profile",:object => resource.owner %>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </li>
+  <% end %>
