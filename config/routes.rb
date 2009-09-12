@@ -7,7 +7,12 @@ ActionController::Routing::Routes.draw do |map|
     user.resource :true_portrait
     user.resources :be_follows
     user.resources :follows,:new => {:search_user => :get}
-    user.resources :resources,:collection => {:authority => :get,:not_authority => :get}
+    user.resources :resources,
+      :collection => {:authority => :get,:not_authority => :get} do |resource|
+      resource.resources :comments do |comment|
+        comment.resources :replied_comments
+      end
+      end
     user.resources :controlled_keywords
     user.resources :blog_resources
     user.resources :twitter_resources do |twitter_resource|
@@ -16,12 +21,7 @@ ActionController::Routing::Routes.draw do |map|
     user.resources :news
     user.resources :keywords
     user.resources :link_url_resources,
-      :member => {:add_value =>:post,:minus_value => :post },
-      :collection => {:authority => :get,:not_authority => :get} do |link_url_resource|
-      link_url_resource.resources :comments do |comment|
-        comment.resources :replied_comments
-      end
-    end
+      :member => {:add_value =>:post,:minus_value => :post }
   end
   map.resource :session
   map.resources :keyword_pages do |keyword_page|

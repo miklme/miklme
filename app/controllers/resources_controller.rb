@@ -68,6 +68,13 @@ class ResourcesController < ApplicationController
     end
   end
 
+    def authority
+    @authority_resources=Resource.authority_resources(@user,params[:page])
+  end
+
+  def not_authority
+    @not_authority_resources=Resource.not_authority_resources(@user,params[:page])
+  end
   private
   def load_user
     @user=User.find(params[:user_id])

@@ -38,14 +38,6 @@ class LinkUrlResourcesController < ApplicationController
     end
   end
 
-  def authority
-    @authority_link_url_resources=LinkUrlResource.authority_resources(@user,params[:page])
-  end
-
-  def not_authority
-    @not_authority_link_url_resources=LinkUrlResource.not_authority_resources(@user,params[:page])
-  end
-
   def minus_value
     o=Resource.find(params[:id]).owner
     if !current_user==o and current_user.value<0
