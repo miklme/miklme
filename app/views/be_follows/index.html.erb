@@ -1,1 +1,5 @@
-<%= render :partial => "shared/user_profile_full",:collection => @followers %>
+<% for f in @followers %>
+<p>
+<%= render :partial => "shared/user_profile_full",:object =>f%>
+</p>
+<% end %>

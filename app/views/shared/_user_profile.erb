@@ -21,13 +21,13 @@
     <strong>（关注我的人）</strong>
   </div>
 <% elsif user_profile==current_user%>
-  <p>
+  <div>
     <em><%= link_to user_profile.nick_name,user_path(user_profile) %></em>
     <cite><%= "价值点数：#{user_profile.value}" %></cite>
-  </p>
+  </div>
 <% else %>
-  <p>
+  <div>
     <span><%= link_to user_profile.nick_name ,user_path(user_profile)%></span>
     <cite><em><%="价值点数：#{user_profile.value}" %></em></cite>
-  </p>
+  </div>
 <% end %>

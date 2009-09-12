@@ -1,4 +1,4 @@
-<h1>真实朋友：</h1>
+<h1>我的真实朋友：</h1>
 <% for r in @real_friends %>
   <p><span><%=link_to r.name,user_path(r) %><%= "（#{r.nick_name}）" %></span>
   <span><%= "价值点数：#{r.value}" %></span>
@@ -6,7 +6,7 @@
 </p>
 <% end %>
 
-  <h1><%= "#{@user.nick_name}" %>感兴趣的陌生用户：</h1>
+  <h1>我感兴趣的陌生用户：</h1>
 <% for r in @interested_people %>
   <p>
   <span><%= link_to "#{r.nick_name}",user_path(r) %></span>

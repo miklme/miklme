@@ -1,2 +1,19 @@
-<%= render :partial => "others_news",:collection => @others_news %>
-<%= will_paginate @others_news, :prev_label => '上一页', :next_label => '下一页' %>
+<% if current_user==@user %>
+  <%= render :partial => "others_news",:collection => @others_news %>
+  <%= will_paginate @others_news, :prev_label => '上一页', :next_label => '下一页' %>
+<% else %>
+  <h1><%= "#{@user.name_or_nick_name(current_user)}" %>的真实朋友：</h1>
+  <% for r in @real_friends %>
+    <p>
+      <%= render  :partial => "shared/user_profile_full",:object => r %>
+    </p>
+  <% end %>
+  <h1><%= "#{@user.name_or_nick_name(current_user)}" %>感兴趣的陌生用户：</h1>
+  <% for i in @interested_people %>
+  <p>
+    <%= render  :partial => "shared/user_profile_full",:object => i %>
+  </p>
+  <% end %>
+<% end %>
+
+

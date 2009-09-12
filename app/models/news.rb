@@ -2,6 +2,7 @@ class News < ActiveRecord::Base
   belongs_to :owner,:class_name => "User",:foreign_key => "user_id"
   belongs_to :resource
   belongs_to :comment
+  belongs_to :reply
   default_scope  :order => "created_at DESC"
 
   def follower
@@ -19,10 +20,11 @@ class News < ActiveRecord::Base
     following_ids=user.followings.map do |f|
       f.id
     end
-    paginate_by_user_id following_ids,
+    self.paginate_by_user_id following_ids,
       :per_page => 15,
       :page => page,
       :order  => "created_at DESC",
-      :conditions => "news_type='comment' or news_type='twitter_resource' or news_type='link_url_resource'"
+      :conditions => "news_type='twitter_resource' or news_type='link_url_resource'"
   end
+
 end
