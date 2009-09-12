@@ -19,7 +19,7 @@
       <div id="sw_canvas">
         <div id="sw_aside">
           <div id="sw_nav">
-            <h2>筛选条目</h2>
+            <h2><%=h @user.name_or_nick_name(current_user) %>分享的条目</h2>
             <ul>
               <li >
                 <%= link_to_unless_current "全部", user_link_url_resources_path(@user)%>
