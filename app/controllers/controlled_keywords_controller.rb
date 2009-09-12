@@ -4,6 +4,7 @@ class ControlledKeywordsController < ApplicationController
   # GET /keywords.xml
   def index
     @controlled_keywords=@user.controlled_keywords
+    @lost_keywords=@user.owned_keywords-@user.controlled_keywords
     @user.followers
     respond_to do |format|
       format.html # index.html.erb

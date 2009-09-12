@@ -1,12 +1,19 @@
 <div id="text">
   <h1><%= link_to_unless_current "#{@user.nick_name}掌控的关键字： " %></h1>
     <strong>(也就是价值点数在关键字页面中最高的关键字。)</strong>
-
   <p>
     <% for keyword in @controlled_keywords  %>
       <span>
         <%= link_to "#{keyword}","/keyword_pages/#{KeywordPage.find_by_keyword(keyword).id}",:popup => true %>
       </span>
+    <% end %>
+  </p>
+  <h1>别人排位高于自己的关键字</h1>
+  <p>
+      <% for keyword in @lost_keywords%>
+      <cite>
+        <%= link_to "#{keyword}","/keyword_pages/#{KeywordPage.find_by_keyword(keyword).id}",:popup => true %>
+      </cite>
     <% end %>
   </p>
 </div>
