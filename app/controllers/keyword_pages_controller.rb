@@ -3,7 +3,7 @@ class KeywordPagesController < ApplicationController
   auto_complete_for :resource,:keywords,:limit => 10
   def show
     @keyword_page=KeywordPage.find(params[:id])
-    @link_url_resources=LinkUrlResource.search_by_keywords(@keyword_page.keyword,params[:page])
+    @resources=Resource.search_by_keywords(@keyword_page.keyword,params[:page])
     @related_keywords=@keyword_page.related_keywords
     flash[:keyword]="这个页面的关键字是“#{@keyword_page.keyword}”,若想要在本页面中增加条目，需要在“关键字”中输入“#{@keyword_page.keyword}”"
     respond_to do |format|

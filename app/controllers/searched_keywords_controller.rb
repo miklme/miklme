@@ -1,17 +1,21 @@
 class SearchedKeywordsController < ApplicationController
   def new
-    @new_keywords=LinkUrlResource.new_keywords
+    @new_keywords=Resource.new_keywords
     @high_keywords=User.high_keywords
     @top_users=User.find(:all,:order => "value DESC",:limit => 15)
   end
 
 
-  def auto_complete_for_link_url_resource_keywords
-    link_url_resources=LinkUrlResource.find_with_ferret(params[:link_url_resource][:keywords]+"~")
-    keywords=link_url_resources.map do |l|
+  def auto_complete_for_resource_keywords
+    link_url_resources=LinkUrlResource.find_with_ferret(params[:resource][:keywords]+"~")
+    blog_resources=BlogResource.find_with_ferret(params[:resource][:keywords]+"~")
+    keywords1=link_url_resources.map do |l|
       l.keywords
     end
-    @keywords=keywords.uniq.first(15)
+    keywords2=blog_resources.map do |l|
+      l.keywords
+    end
+    @keywords=(keywords1+keywords2).uniq.first(15)
     render :layout => false
   end
 

@@ -7,7 +7,7 @@ ActionController::Routing::Routes.draw do |map|
     user.resource :true_portrait
     user.resources :be_follows
     user.resources :follows,:new => {:search_user => :get}
-    user.resources :resources
+    user.resources :resources,:collection => {:authority => :get,:not_authority => :get}
     user.resources :controlled_keywords
     user.resources :blog_resources
     user.resources :twitter_resources do |twitter_resource|

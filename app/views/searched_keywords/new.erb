@@ -6,10 +6,10 @@
         搜索链接
         <%= link_to_remote "搜索人们呓语什么",:url => {:action => :search_twitter}%>
       </p>
-      <%= text_field 'link_url_resource','keywords' %>
-      <div class="auto_complete" id="link_url_resource_keywords_auto_complete">
+      <%= text_field 'resource','keywords' %>
+      <div class="auto_complete" id="resource_keywords_auto_complete">
       </div>
-      <%= auto_complete_field :link_url_resource_keywords,:url => {:action => 'auto_complete_for_link_url_resource_keywords'},:frequency => 0.1,:after_update_element =>
+      <%= auto_complete_field :resource_keywords,:url => {:action => 'auto_complete_for_resource_keywords'},:frequency => 0.1,:after_update_element =>
         "function(element,value){" + remote_function(:url => {:action => :create},:with=>"'keywords='+element.value") + "}"%>
       <div><%= link_to "新增一个搜索结果",new_user_link_url_resource_path(current_user),:popup => true%></div>
     </div>

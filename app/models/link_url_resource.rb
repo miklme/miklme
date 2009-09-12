@@ -22,42 +22,5 @@ class LinkUrlResource< Resource
   validates_length_of :link_url,:maximum => 1000
   named_scope :hot_resources,:include => :comments,:condition => "comments.size>10"
 
-  def self.search_by_keywords(keywords,page)
-    paginate :per_page => 10,
-      :page => page,
-      :conditions => ["keywords=?",keywords],
-      :include => :owner,
-      :order => 'users.value DESC'
-  end
 
-  def self.search_by_keywords_and_form(keywords,form,page)
-    paginate :per_page => 10,
-      :page => page,
-      :conditions => ["keywords=:keywords and form=:form",{:keywords =>keywords,:form => form }]
-  end
-
-  def self.find_by_user(user,page)
-    paginate :per_page => 15,
-      :page => page,
-      :conditions => ["user_id=?",user.id]
-  end
-
-  def self.authority_resources(user,page)
-    paginate :per_page => 15,
-      :page => page,
-      :conditions => ["authority = :true and user_id=:user_id",{:true =>true,:user_id => user.id }]
-  end
-
-  def self.not_authority_resources(user,page)
-    paginate :per_page => 15,
-      :page => page,
-      :conditions => ["authority = :false and user_id=:user_id",{:false =>false,:user_id => user.id }]
-  end
-
-  def self.new_keywords
-    keywords=Resource.find(:all,:order => "resources.created_at DESC",:limit => 100).map do |r|
-      r.keywords
-    end
-    keywords.compact.uniq.first(15)
-  end
 end

@@ -23,7 +23,7 @@
   到时你将可以.......胡作非为了，哈哈～</p>
 <% end %>
 <div class="sb_ph"><h1>“<%=h @keyword_page.keyword %>”的所有结果</h1>
-  <span>共 <%=h @link_url_resources.size %> 条</span><span class="sc_bullet">·</span>
+  <span>共 <%=h @resources.size %> 条</span><span class="sc_bullet">·</span>
   <%= link_to "新建一个搜索结果条目>>>",new_user_link_url_resource_path(current_user) %>
   <!--
 有趣的分割点
@@ -32,9 +32,9 @@
 </div>
 <div id="results">
   <ol class="sb_results" id="wg0">
-    <%= render  @link_url_resources  %>
+    <%= render  @resources  %>
   </ol>
 </div>
 <div class="sb_pag">
-  <%= will_paginate @link_url_resources, :prev_label => '上一页', :next_label => '下一页' %>
+  <%= will_paginate @resources, :prev_label => '上一页', :next_label => '下一页' %>
 </div>
