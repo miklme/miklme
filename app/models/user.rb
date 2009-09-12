@@ -38,8 +38,8 @@ class User < ActiveRecord::Base
   validates_length_of :nick_name,:maximum=>10,:on => :update
   validates_length_of :username,:within => 5..20,:message => "请保持在5到20个字节内"
   validates_length_of :name,:within =>1..  4,:on => :update,:message => "真实姓名会使朋友更快找到你，Mikl.me会保护你的隐私，不要担心"
-  validates_length_of :province,:within => 2..4,:message => "请输入您的省份"
-  validates_length_of :city,:within => 2..5,:message => "可便于Mikl.me识别你周围的朋友"
+  validates_length_of :province,:within => 2..4,:message => "请输入您的省份",:on => :update
+  validates_length_of :city,:within => 2..5,:message => "便于Mikl.me识别你周围的朋友",:on => :update
   validates_presence_of :nick_name,:name,:on => :update
   validates_acceptance_of :terms,:message => '请同意服务条款以继续...',:on => :create,:accept => 1
   # how to do attr_accessible from here?
