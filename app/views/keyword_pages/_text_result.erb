@@ -4,7 +4,7 @@
 </div>
 <div id="results">
   <ol class="sb_results" id="wg0">
-    <%= render  :partial => "link_url_resources/link_url_resource",:collection => @text_results %>
+    <%= render  :partial => "resources/resource",:collection => @text_results %>
   </ol>
 </div>
 <div class="sb_pag"><%= will_paginate @text_results, :prev_label => '上一页', :next_label => '下一页' %></div>

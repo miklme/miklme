@@ -29,8 +29,7 @@ class Resource < ActiveRecord::Base
   end
 
   def self.search_by_keywords(keywords,page)
-    resources=Resource.find_all_by_type(["LinkUrlResource","BlogResource"])
-    resources.paginate :per_page => 10,
+    paginate :per_page => 10,
       :page => page,
       :conditions => ["keywords=?",keywords],
       :include => :owner,
@@ -38,8 +37,7 @@ class Resource < ActiveRecord::Base
   end
 
   def self.search_by_keywords_and_form(keywords,form,page)
-    resources=Resource.find_all_by_type(["LinkUrlResource","BlogResource"])
-    resources.paginate :per_page => 10,
+    paginate :per_page => 10,
       :page => page,
       :conditions => ["keywords=:keywords and form=:form",{:keywords =>keywords,:form => form }]
   end
@@ -68,7 +66,15 @@ class Resource < ActiveRecord::Base
     end
     keywords.compact.uniq.first(15)
   end
-  
+
+  def description_or_title
+    if self.class.to_s=="LinkUrlResource"
+      description
+    elsif self.class.to_s=="BlogResource"
+      title
+    end
+  end
+
   private
   def adjust_link_url
     if  !self.link_url=~/http:/ and !self.link_url=~/https:/ and  !self.link_url=~/ftp:/ and  !self.link_url=~/sftp:/

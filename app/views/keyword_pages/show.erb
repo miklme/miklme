@@ -32,7 +32,7 @@
 </div>
 <div id="results">
   <ol class="sb_results" id="wg0">
-    <%= render  @resources  %>
+    <%= render  :partial => "resources/resource",:collection => @resources  %>
   </ol>
 </div>
 <div class="sb_pag">

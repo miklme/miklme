@@ -16,7 +16,7 @@ class KeywordPagesController < ApplicationController
   # PUT /keyword_pages/1.xml
   def show_film
     @keyword_page=KeywordPage.find(params[:id])
-    @film_results=LinkUrlResource.search_by_keywords_and_form(@keyword_page.keyword,"视频",params[:page])
+    @film_results=Resource.search_by_keywords_and_form(@keyword_page.keyword,"视频",params[:page])
     @related_keywords=@keyword_page.related_keywords
       render :update do |page|
       page.replace_html "content",:partial => "film_result"
@@ -25,7 +25,7 @@ class KeywordPagesController < ApplicationController
 
   def show_music
     @keyword_page=KeywordPage.find(params[:id])
-    @music_results=LinkUrlResource.search_by_keywords_and_form(@keyword_page.keyword,"音频",params[:page])
+    @music_results=Resource.search_by_keywords_and_form(@keyword_page.keyword,"音频",params[:page])
     @related_keywords=@keyword_page.related_keywords
     render :update do |page|
       page.replace_html "content",:partial => "music_result"
@@ -34,7 +34,7 @@ class KeywordPagesController < ApplicationController
 
   def show_picture
     @keyword_page=KeywordPage.find(params[:id])
-    @picture_results=LinkUrlResource.search_by_keywords_and_form(@keyword_page.keyword,"图片",params[:page])
+    @picture_results=Resource.search_by_keywords_and_form(@keyword_page.keyword,"图片",params[:page])
     @related_keywords=@keyword_page.related_keywords
     render :update do |page|
       page.replace_html "content",:partial => "picture_result"
@@ -43,7 +43,7 @@ class KeywordPagesController < ApplicationController
   
   def show_text
     @keyword_page=KeywordPage.find(params[:id])
-    @text_results=LinkUrlResource.search_by_keywords_and_form(@keyword_page.keyword,"文字、文档",params[:page])
+    @text_results=Resource.search_by_keywords_and_form(@keyword_page.keyword,"文字、文档",params[:page])
     @related_keywords=@keyword_page.related_keywords
     render :update  do |page|
       page.replace_html "content",:partial => "text_result"

@@ -107,6 +107,6 @@ class CommentsController < ApplicationController
 
     def load_user_and_resource
       @user=User.find(params[:user_id])
-      @resource=LinkUrlResource.find(params[:link_url_resource_id])
+      @resource=Resource.find(params[:resource_id])
     end
   end

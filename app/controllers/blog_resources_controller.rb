@@ -7,6 +7,7 @@ class BlogResourcesController < ApplicationController
   end
 
   def show
+   @blog_resource=Resource.find(params[:id])
   end
 
   def edit

@@ -7751,3 +7751,1140 @@ index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
 index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
 ############ registerclass LinkUrlResource
 index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Mi~", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:blog_resource, "Mi~", {:limit=>nil, :models=>[BlogResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Michael~", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:blog_resource, "Michael~", {:limit=>nil, :models=>[BlogResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+#method_missing(:add, [:twitter_resource, {:key=>"TwitterResource-40", :by_user_value=>"19.5", :created_at_s=>"2009-09-13 00:14:35", :content=>"sdafasd ", :class_name=>"TwitterResource", :id=>"40"}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+#method_missing(:add, [:twitter_resource, {:key=>"TwitterResource-41", :by_user_value=>"19.5", :created_at_s=>"2009-09-13 00:14:39", :content=>"wodadaf ", :class_name=>"TwitterResource", :id=>"41"}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+#method_missing(:add, [:link_url_resource, {:key=>"LinkUrlResource-42", :created_at_s=>"2009-09-13 00:24:08", :class_name=>"LinkUrlResource", :keywords=>"asdfasf", :id=>"42"}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+#method_missing(:add, [:blog_resource, {:key=>"BlogResource-43", :created_at_s=>"2009-09-13 00:43:07", :class_name=>"BlogResource", :keywords=>"Michael", :id=>"43"}])
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "M~", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:blog_resource, "M~", {:limit=>nil, :models=>[BlogResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Mic~", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:blog_resource, "Mic~", {:limit=>nil, :models=>[BlogResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Michae~", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:blog_resource, "Michae~", {:limit=>nil, :models=>[BlogResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Michael~", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:blog_resource, "Michael~", {:limit=>nil, :models=>[BlogResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+#method_missing(:add, [:link_url_resource, {:key=>"LinkUrlResource-44", :created_at_s=>"2009-09-13 00:49:09", :class_name=>"LinkUrlResource", :keywords=>"asdf", :id=>"44"}])
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+#method_missing(:add, [:twitter_resource, {:key=>"TwitterResource-45", :by_user_value=>"19.5", :created_at_s=>"2009-09-13 01:12:58", :content=>"asdf ", :class_name=>"TwitterResource", :id=>"45"}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+#method_missing(:add, [:blog_resource, {:key=>"BlogResource-46", :created_at_s=>"2009-09-13 01:32:48", :class_name=>"BlogResource", :keywords=>"Michael", :id=>"46"}])
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
