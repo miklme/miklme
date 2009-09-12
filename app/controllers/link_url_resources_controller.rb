@@ -1,8 +1,8 @@
 class LinkUrlResourcesController < ApplicationController
-  before_filter :find_user,:except => [:auto_complete_for_link_url_resource_keywords,:redirect_and_adjust_value]
-  auto_complete_for :link_url_resource,:keywords,:limit => 7
+  before_filter :find_user,:except => [:auto_complete_for_resource_keywords]
+  auto_complete_for :resource,:keywords,:limit => 7
   def new
-    @link_url_resource=@user.link_url_resources.build
+    @link_url_resource=current_user.link_url_resources.build
   end
 
   def edit
