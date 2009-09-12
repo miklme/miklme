@@ -47,7 +47,7 @@
     </div>
   </div>
   <div>
-    <p>当您幸运的发现没有出现自动提示的关键字时，就意味着您自己可以任意编辑该关键字的内容，从而被别人看见。
+    <p>当您幸运的发现没有出现自动提示的关键字时，就意味着您自己可以<%= link_to "任意编辑",new_user_link_url_resource_path(current_user) %>该关键字的内容，从而被别人看见。
     </p>
   </div>
   <%= render :partial => "shared/footer" %>
