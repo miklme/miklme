@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   include Authentication::ByCookieToken
 
   attr_accessor :password_confirmation
-  attr_protected :value
+  attr_protected :value,:name
 
   default_scope :order => 'value DESC'
   named_scope :by_value,:order => 'value DESC'
