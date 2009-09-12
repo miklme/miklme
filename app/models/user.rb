@@ -7,7 +7,8 @@ class User < ActiveRecord::Base
 
   attr_accessor :password_confirmation
   attr_protected :value,:name
-
+  after_find :leave_out_wrong_user
+  
   default_scope :order => 'value DESC'
   named_scope :by_value,:order => 'value DESC'
 
@@ -136,4 +137,5 @@ class User < ActiveRecord::Base
     end
     ks=(ks-["nil"]).uniq
   end
+
 end
