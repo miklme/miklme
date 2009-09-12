@@ -34,7 +34,11 @@
   </p>
 <% end %>
 <em>生日: <%= user_profile_full.birthday %></em>
-<% if  user_profile_full.city.present? %>
-  <em><%= user_profile_full.province %>省<%= user_profile_full.city %>市</em>
+<em>
+  <% if user_profile_full.province.present? %>
+    <%= user_profile_full.province %>省
+  <% end %>
+  <% if  user_profile_full.city.present? %>
+    <%= user_profile_full.city %>市</em>
 <% end %>
 <em>用户ID <%= user_profile_full.id %></em>
