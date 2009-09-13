@@ -8993,3 +8993,385 @@ index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
 ############ registerclass TwitterResource
 index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
 exit
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6e943f8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mLinkUrlResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+#method_missing(:find_ids, [:link_url_resource, "qian~", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mBlogResource Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+#method_missing(:find_ids, [:blog_resource, "qian~", {:limit=>nil, :models=>[BlogResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "前~", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:blog_resource, "前~", {:limit=>nil, :models=>[BlogResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6e943f8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6e943f8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "qia~", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:blog_resource, "qia~", {:limit=>nil, :models=>[BlogResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "qian~", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:blog_resource, "qian~", {:limit=>nil, :models=>[BlogResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "qian~", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:blog_resource, "qian~", {:limit=>nil, :models=>[BlogResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "前~", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:blog_resource, "前~", {:limit=>nil, :models=>[BlogResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6e943f8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+#method_missing(:add, [:blog_resource, {:key=>"BlogResource-50", :created_at_s=>"2009-09-13 12:56:41", :class_name=>"BlogResource", :id=>"50", :keywords=>"钱劲宇是白痴"}])
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6e943f8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "qia~", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:blog_resource, "qia~", {:limit=>nil, :models=>[BlogResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "qian~", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:blog_resource, "qian~", {:limit=>nil, :models=>[BlogResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "钱~", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:blog_resource, "钱~", {:limit=>nil, :models=>[BlogResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "q~", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:blog_resource, "q~", {:limit=>nil, :models=>[BlogResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "qi~", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:blog_resource, "qi~", {:limit=>nil, :models=>[BlogResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "qia~", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:blog_resource, "qia~", {:limit=>nil, :models=>[BlogResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "qian~", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:blog_resource, "qian~", {:limit=>nil, :models=>[BlogResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "钱~", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:blog_resource, "钱~", {:limit=>nil, :models=>[BlogResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6e943f8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "qia~", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:blog_resource, "qia~", {:limit=>nil, :models=>[BlogResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "qian~", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:blog_resource, "qian~", {:limit=>nil, :models=>[BlogResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "钱~", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:blog_resource, "钱~", {:limit=>nil, :models=>[BlogResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6e943f8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6e943f8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6e943f8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6e943f8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+#method_missing(:add, [:blog_resource, {:key=>"BlogResource-51", :created_at_s=>"2009-09-13 13:01:48", :class_name=>"BlogResource", :id=>"51", :keywords=>"asdfasf"}])
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6e943f8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Mich~", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:blog_resource, "Mich~", {:limit=>nil, :models=>[BlogResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Michae~", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:blog_resource, "Michae~", {:limit=>nil, :models=>[BlogResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "Michael~", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:blog_resource, "Michael~", {:limit=>nil, :models=>[BlogResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6e943f8>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+#method_missing(:add, [:blog_resource, {:key=>"BlogResource-36", :created_at_s=>"2009-09-12 22:25:26", :class_name=>"BlogResource", :id=>"36", :keywords=>"Michael"}])
+#method_missing(:add, [:blog_resource, {:key=>"BlogResource-36", :created_at_s=>"2009-09-12 22:25:26", :class_name=>"BlogResource", :id=>"36", :keywords=>"Michael"}])
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6ed46d8>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+#method_missing(:add, [:blog_resource, {:key=>"BlogResource-50", :created_at_s=>"2009-09-13 12:56:41", :class_name=>"BlogResource", :id=>"50", :keywords=>"钱劲宇是白痴"}])
+#method_missing(:add, [:blog_resource, {:key=>"BlogResource-50", :created_at_s=>"2009-09-13 12:56:41", :class_name=>"BlogResource", :id=>"50", :keywords=>"Michael"}])
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6eb4b44>
