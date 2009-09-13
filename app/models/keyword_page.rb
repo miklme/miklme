@@ -7,8 +7,13 @@ class KeywordPage < ActiveRecord::Base
     user_ids=resources.map do |r|
       r.owner.id
     end
-    if User.find(user_ids,:order => "value DESC").first.value<=user.value and !User.find(user_ids).include?(user)
-      true
+    users=User.find(user_ids,:order => "value DESC")
+    if users.present?
+      if  users.first.value<=user.value and !User.find(user_ids).include?(user)
+        true
+      else
+        false
+      end
     else
       false
     end
