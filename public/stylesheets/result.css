@@ -125,8 +125,9 @@ margin-bottom:1em}
 #sw_aside {
     color:#525051;
     float:left;
-    margin:0 0 0 -195px;
     width:185px;
+    position: absolute;
+    left: 0px;
 }
 #sw_aside ul, #sw_aside li {
     list-style-type:none;
