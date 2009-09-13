@@ -92,6 +92,10 @@ cite a{text-decoration:underline}
 .sb_alert a {
     font-style:italic;
 }
+.title{
+background:#F7F7F7 none repeat scroll 0 0;
+border-bottom:1px solid #D8DFEA;
+border-top:1px solid #005EAC;}
 #sw_hdr, #sw_content, #sw_main, #sw_foot {
     float:left;
     width:100%;

@@ -1,3 +1,4 @@
+<%= javascript_include_tag :fckeditor %> 
 <% form_for [@user,@blog_resource] do |f|%>
   <ul class="sb_results">
     <li>
@@ -9,7 +10,7 @@
     <li>
     <%= f.label :title,"标题" %><%= f.text_field :title %></li>
     <li>
-      <%= f.text_area :content, :rows => 15, :cols => 55%>
+      <%= fckeditor_textarea(:blog_resource,:content,:toolbarSet => "Easy",:width => '90%',:height => '300px') %>
     </li>
     <li>
       <p><%= f.label :keywords,"用户需要输入什么才能够查找到这些内容，如图(请尽量使用下拉列表中提示的关键字以增大被检索的可能)*" %>

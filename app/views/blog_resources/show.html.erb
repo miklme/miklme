@@ -1,6 +1,8 @@
-<li>
-  <h3><%= h @blog_resource.title %></h3>
+<li >
+  <h3 class="title"><%= h @blog_resource.title %></h3>
   <div class="sb_ph"><%= @blog_resource.created_at_s %></div>
+</li>
+<li>
   <div>
     <%=simple_format @blog_resource.content %>
   </div>
