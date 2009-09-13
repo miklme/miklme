@@ -1,6 +1,6 @@
 class LinkUrlResourcesController < ApplicationController
-  before_filter :find_user,:except => [:auto_complete_for_resource_keywords]
-  auto_complete_for :resource,:keywords,:limit => 7
+  before_filter :find_user,:except => [:auto_complete_for_keyword_page_keyword]
+  auto_complete_for :keyword_page,:keyword,:limit => 7
   def new
     @link_url_resource=current_user.link_url_resources.build
   end
@@ -9,12 +9,11 @@ class LinkUrlResourcesController < ApplicationController
     @link_url_resource=LinkUrlResource.find(params[:id])
   end
 
-  
-
   def create
     @link_url_resource=current_user.link_url_resources.build(params[:link_url_resource])
-    @link_url_resource.keywords=params[:resource][:keywords]
+    @link_url_resource.keywords=params[:keyword_page][:keyword]
     if @link_url_resource.save
+      @link_url_resource.keywords=params[:resource][:keywords]
       KeywordPage.create(:keyword => @link_url_resource.keywords)
       render :partial => "succeed",:layout => "link_url_resources"
       n=current_user.news.create
@@ -30,10 +29,13 @@ class LinkUrlResourcesController < ApplicationController
   def update
     @link_url_resource=@user.link_url_resources.find(params[:id])
     @link_url_resource.update_attributes(params[:link_url_resource])
-    @link_url_resource.keywords=params[:resource][:keywords]
+    @link_url_resource.keywords=params[:keyword_page][:keyword]
     if @link_url_resource.save
+      KeywordPage.create(:keyword => @link_url_resource.keywords)
       flash[:notice]="修改成功。"
       redirect_to keyword_page_path(KeywordPage.find_by_keyword(@link_url_resource.keywords))
+    else
+      render :action => :edit,:layout => "link_url_resources"
     end
   end
 

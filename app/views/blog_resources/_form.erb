@@ -1,0 +1,32 @@
+<%= javascript_include_tag :fckeditor %> 
+<% form_for [@user,@blog_resource] do |f|%>
+  <ul class="sb_results">
+    <li>
+      <strong><%= f.error_messages %>
+        <%= flash[:keyword] %>
+        <%= flash[:updated] %>
+      </strong>
+    </li>
+    <li>
+    <%= f.label :title,"标题" %><%= f.text_field :title %></li>
+    <li>
+      <%= fckeditor_textarea(:blog_resource,:content,:toolbarSet => "Easy",:width => '90%',:height => '300px') %>
+    </li>
+    <li>
+      <p><%= f.label :keywords,"用户需要输入什么才能够查找到这些内容，如图(请尽量使用下拉列表中提示的关键字以增大被检索的可能)*" %>
+      </p>
+      <p>
+        <%= text_field_with_auto_complete :keyword_page,:keyword,{:onfocus => "keyword_page_keyword_auto_completer.activate()"},{} %>
+      </p>
+      <p>
+        <%= image_tag "关键字.jpg",:size => "332x73" %>
+      </p>
+    </li>
+    <!--
+    将来或许会有图片型的博客，先留着，默认为文字文档
+    <tr><td><%= f.label :form,"请指定目标链接所包含主体内容的类型*：" %></td><td><%= f.select :form,%w{ 文字、文档 视频 图片  音频  }%></td>
+    -->
+
+    <%= f.submit "完成",:onclick => "this.disabled = true"  %>
+  </ul>
+<% end %>

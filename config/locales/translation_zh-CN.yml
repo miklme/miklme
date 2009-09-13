@@ -9,7 +9,7 @@ zh-CN:
         link_url: 地址
         title: 标题
         keywords: 关键字
-
+        content: 内容
       related_keyword:
         name: "相关关键字"
       user:
