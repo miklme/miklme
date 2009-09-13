@@ -42,8 +42,8 @@ class BlogResourcesController < ApplicationController
     @blog_resource.update_attributes(params[:blog_resource])
     @blog_resource.keywords=params[:resource][:keywords]
     if @blog_resource.save
-      flash[:updated]="修改成功。"
-      render :action => :edit,:layout => "link_url_resources"
+      flash[:notice]="修改成功。"
+      redirect_to keyword_page_path(KeywordPage.find_by_keyword(@blog_resource.keywords))
     end
   end
   private
