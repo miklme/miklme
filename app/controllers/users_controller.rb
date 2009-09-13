@@ -36,7 +36,7 @@ class UsersController < ApplicationController
     @user=User.find(params[:id])
     @news=News.list_self_news(@user,params[:page])
     if @user.link_url_resources.blank?
-      @variable_title="革命"
+      @variable_title="这里开始..."
     else
       @variable_title="由你控制的搜索引擎"
     end
