@@ -39,6 +39,10 @@ a:hover { text-decoration:none;
 }
 #content {width:780px; margin:0 auto;
 }
+.top_users {width:540px;
+           margin:auto;
+           line-height:23px
+}
 #text { width:520px;
         text-align: center;
         font-size: 14px;
