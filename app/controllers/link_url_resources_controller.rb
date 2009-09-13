@@ -41,8 +41,9 @@ class LinkUrlResourcesController < ApplicationController
 
   def minus_value
     o=Resource.find(params[:id]).owner
-    if !current_user==o and current_user.value<0
-      flash[:notice]="不太爽的是，你的价值点数低于0了，暂时不能作出这种中肯评价。"
+    if current_user.value<0 and
+      flash[:notice]="不太爽的是，你的价值点数低于0了，暂时不能作出这种评价。"
+      redirect_to :back
     else
       o.value=o.value-0.6
       current_user.value=current_user.value-0.3
