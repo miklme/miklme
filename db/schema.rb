@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090912062014) do
+ActiveRecord::Schema.define(:version => 20090913134145) do
 
   create_table "addresses", :force => true do |t|
     t.string   "province"
@@ -78,7 +78,7 @@ ActiveRecord::Schema.define(:version => 20090912062014) do
   end
 
   create_table "resources", :force => true do |t|
-    t.string   "keywords",    :limit => 20
+    t.string   "keywords",    :limit => 50
     t.string   "type"
     t.boolean  "shoulu",                    :default => true
     t.integer  "user_id"

@@ -13,7 +13,6 @@ class LinkUrlResourcesController < ApplicationController
     @link_url_resource=current_user.link_url_resources.build(params[:link_url_resource])
     @link_url_resource.keywords=params[:keyword_page][:keyword]
     if @link_url_resource.save
-      @link_url_resource.keywords=params[:resource][:keywords]
       KeywordPage.create(:keyword => @link_url_resource.keywords)
       render :partial => "succeed",:layout => "link_url_resources"
       n=current_user.news.create
