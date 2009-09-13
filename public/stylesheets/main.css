@@ -32,10 +32,7 @@ a:hover { text-decoration:none;
                    margin-bottom: 15px;
 }
 #main {background: url(../images/body_all_bckg.jpg) repeat-y top center;
-
-       position: relative;
-       top: 220px;
-       z-index: -1;
+       margin-top: 220px;
 }
 #content {width:780px; margin:0 auto;
 }
