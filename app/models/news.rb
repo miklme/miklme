@@ -24,7 +24,7 @@ class News < ActiveRecord::Base
       :per_page => 15,
       :page => page,
       :order  => "created_at DESC",
-      :conditions => "news_type='twitter_resource' or news_type='link_url_resource'"
+      :conditions => "news_type='twitter_resource' or news_type='link_url_resource' or news_type='blog_resource'"
   end
 
 end

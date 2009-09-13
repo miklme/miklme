@@ -8980,3 +8980,16 @@ index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
 index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
 ############ registerclass BlogResource
 index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6faaae4>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6fcc5cc>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6f874b8>
+exit

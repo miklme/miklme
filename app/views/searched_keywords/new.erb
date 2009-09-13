@@ -4,7 +4,7 @@
     <div id="search_link_url">
       <p>
         搜索链接
-        <%= link_to_remote "搜索人们呓语什么",:url => {:action => :search_twitter}%>
+        <%= link_to_remote "搜索人们在做什么",:url => {:action => :search_twitter}%>
       </p>
       <%= text_field 'resource','keywords' %>
       <div class="auto_complete" id="resource_keywords_auto_complete">
@@ -16,7 +16,7 @@
     <div id="search_twitter" style="display:none">
       <p>
         <%= link_to_remote "搜索链接",:url => {:action => :search_link_url} %>
-        搜索人们呓语什么
+        搜索人们在做什么
       </p>
       <% form_tag :controller => :searched_contents,:action => :show do%>
         <%= text_field :twitter_resource,:content,:size => 46%>

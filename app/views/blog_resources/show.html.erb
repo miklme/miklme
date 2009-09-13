@@ -1,8 +1,12 @@
-<h3><%= h @blog_resource.title %></h3>
-<div class="sb_ph"><%= @blog_resource.created_at_s %></div>
-<p>
-  <%= auto_link @blog_resource.content %>
-</p>
-<cite>
-  <%= link_to "#{@blog_resource.comments.size}条评论>>>",user_resource_comments_path(@blog_resource.owner,@blog_resource) %>
-</cite>
+<li>
+  <h3><%= h @blog_resource.title %></h3>
+  <div class="sb_ph"><%= @blog_resource.created_at_s %></div>
+  <p>
+    <%= auto_link @blog_resource.content %>
+  </p>
+  <div class="sb_ph">
+    <cite>
+      <%= link_to "#{@blog_resource.comments.size}条评论>>>",user_resource_comments_path(@blog_resource.owner,@blog_resource) %>
+    </cite>
+  </div>
+</li>

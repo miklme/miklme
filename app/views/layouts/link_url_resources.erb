@@ -25,10 +25,10 @@
                 <%= link_to_unless_current "全部", user_resources_path(@user)%>
               </li>
               <li>
-                <%= link_to_unless_current "原创内容(#{@user.link_url_resources.scoped_by_authority(true).in_one_day.size}新)" ,authority_user_resources_path(@user)%>
+                <%= link_to_unless_current "原创内容(#{@user.resources.scoped_by_authority(true).in_one_day.size}新)" ,authority_user_resources_path(@user)%>
               </li>
               <li>
-                <%= link_to_unless_current "非原创内容(#{@user.link_url_resources.scoped_by_authority(false).in_one_day.size}新)",not_authority_user_resources_path(@user) %>
+                <%= link_to_unless_current "非原创内容(#{@user.resources.scoped_by_authority(false).in_one_day.size}新)",not_authority_user_resources_path(@user) %>
               </li>
             </ul>
           </div>

@@ -9,7 +9,7 @@
     <li>
     <%= f.label :title,"标题" %><%= f.text_field :title %></li>
     <li>
-      <%= f.text_area :content%>
+      <%= f.text_area :content, :rows => 15, :cols => 55%>
     </li>
     <li>
       <p><%= f.label :keywords,"用户需要输入什么才能够查找到这些内容，如图(请尽量使用下拉列表中提示的关键字以增大被检索的可能)*" %>
