@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     if @user.save
       session[:user_id]=@user.id
-      flash[:notice] = "感谢注册，即刻将体验Michael带给您的...无限。"
+      flash[:notice] = "感谢注册，即刻体验Michael带给你的..."
       redirect_to edit_user_path(current_user)
     else
       render new_user_path,:layout => "users"
@@ -21,12 +21,13 @@ class UsersController < ApplicationController
   def edit
     @user=User.find(current_user)
   end
+  
   def update
     @user = User.find(params[:id])
-    if @user.update_attributes(params[:user])
+    if  @user.update_attributes(params[:user])
       redirect_to(user_path(@user))
     else
-      render :action => "edit",:layout => "users"
+      render :action => "edit"
     end
   end
 

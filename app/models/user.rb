@@ -35,7 +35,7 @@ class User < ActiveRecord::Base
   
   validates_confirmation_of :password,:message => "不一致"
   validates_uniqueness_of :username,:case_sensitive => false
-  validates_format_of :username,:with => %r{^[a-zA-Z][a-zA-Z0-9_]{4,15}$},:message =>"请避免使用太过诡异的字符及汉字"
+  validates_format_of :username,:with => %r{^[a-zA-Z][a-zA-Z0-9_]{4,15}$},:message =>"请避免使用太诡异的字符及汉字"
   validates_length_of :nick_name,:maximum=>10,:on => :update
   validates_length_of :username,:within => 5..20,:message => "请保持在5到20个字节内"
   validates_length_of :name,:within =>1..  4,:on => :update,:message => "真实姓名会使朋友更快找到你，Mikl.me会保护你的隐私，不要担心"
