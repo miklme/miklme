@@ -1,10 +1,5 @@
 <span class="right">
-  <% if news.created_at>Time.now.at_beginning_of_day%>
-    <em>
-      (今天)
-    </em>
-  <% end %>
-  <%=h news.created_at.advance(:hours => 8).to_s(:db)%></span>
+  <%=distance_of_time_in_words(Time.now, news.created_at, true)%></span>
   <% if news.news_type=="comment" %>
   <p>
     <%= link_to news.owner.name_or_nick_name(current_user),user_path(news.owner) %>的条目

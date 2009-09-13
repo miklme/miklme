@@ -1,10 +1,5 @@
 <span class="right">
-  <% if others_news.created_at>Time.now.at_beginning_of_day%>
-    <em>
-      (今天)
-    </em>
-  <% end %>
-  <%=h others_news.created_at.advance(:hours => 8).to_s(:db)%></span>
+  <%=distance_of_time_in_words(Time.now, others_news.created_at, true)%></span>
   <% if others_news.news_type=="twitter_resource" %>
   <p>
     <%=link_to others_news.owner.name_or_nick_name(current_user),user_path(others_news.owner) %>说：
