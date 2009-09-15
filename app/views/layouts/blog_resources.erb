@@ -37,8 +37,8 @@
           <div id="results">
             <% if current_user==@user %>
             <div><cite>新建搜索结果条目的两种方式：</cite></div>
-              <%= link_to_unless_current "分享一个外部链接>>>",new_user_link_url_resource_path(current_user) %><span class="sb_count">（使用方式类似网络书签）</span>
-              |  <%= link_to_unless_current "新建一个帖子，或是blog>>>",new_user_blog_resource_path(current_user)%>
+              <%= link_to_unless_current "分享一个链接>>>",new_user_link_url_resource_path(current_user) %><span class="sb_count">（使用方式类似网络书签）</span>
+              |  <%= link_to_unless_current "写一篇不会被删的文章>>>",new_user_blog_resource_path(current_user)%>
             <% end %>
             <ul class="sb_results" id="wg0">
 
