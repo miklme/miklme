@@ -1,5 +1,6 @@
 class KeywordPage < ActiveRecord::Base
   has_many :related_keywords
+  has_many :resources
   belongs_to :user
   validates_uniqueness_of :keyword,:scope => :user_id,:message => "领域名称重复了"
 

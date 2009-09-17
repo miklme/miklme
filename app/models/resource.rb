@@ -2,7 +2,8 @@ require 'rmmseg'
 require 'rmmseg/ferret'
 
 class Resource < ActiveRecord::Base
-
+  
+  belongs_to :keyword_page
   belongs_to :owner,:class_name => 'User',:foreign_key =>"user_id"
   default_scope :include => :owner,:order => 'users.value DESC'
   named_scope :by_time,:order => "created_at DESC"
