@@ -30,6 +30,11 @@ class ApplicationController < ActionController::Base
   
   private
   def load_user
-    @user=User.find(params[:user_id])
+    begin
+      @user=User.find(params[:user_id])
+    rescue
+      flash[:notice]='请登录以继续...'
+      redirect_to new_session_path
+    end
   end
 end

@@ -21,6 +21,15 @@
           <div id="sidebar_text">
             <h2>个人信息：</h2>
             <p><%= render :partial => "shared/user_profile_full",:object => @user %></p>
+            <div>
+              <% for k in @user.keyword_pages %>
+              <p>
+                领域：<%=link_to k.keyword,keyword_page_path(KeywordPage.find_by_keyword(k.keyword)) %>
+                <cite>价值点数：<strong><%= k.value(@user) %></strong>,排名：(<span class="highlight"><%= ValueOrder.order(@user,KeywordPage.find_by_keyword(k.keyword)) %></span>/<%= k.users.size %>)
+                </cite>
+              </p>
+<% end %>
+            </div>
           </div>
           <div id="sidebar_bottom"></div>
         </div>

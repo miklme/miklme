@@ -14309,3 +14309,215 @@ index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
 index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6dbc7f0>
 ############ registerclass TwitterResource
 index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6dbc7f0>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6dbc7f0>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6dbc7f0>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6dbc7f0>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6dbc7f0>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6dbc7f0>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6dbc7f0>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6dbc7f0>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6dbc7f0>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6dbc7f0>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6dbc7f0>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6dbc7f0>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6dbc7f0>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6dbc7f0>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6dbc7f0>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6dbc7f0>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6dbc7f0>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6dbc7f0>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+#method_missing(:add, [:keyword_page, {:key=>"KeywordPage-1", :created_at_s=>"", :class_name=>"KeywordPage", :id=>"1", :keyword=>"Michael"}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "M~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "Mi~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "Mich~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "Michael~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6dbc7f0>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6dbc7f0>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6dbc7f0>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+#method_missing(:add, [:keyword_page, {:key=>"KeywordPage-2", :created_at_s=>"", :class_name=>"KeywordPage", :id=>"2", :keyword=>"ccc"}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6dbc7f0>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6dbc7f0>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6dbc7f0>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6dbc7f0>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6dbc7f0>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6dbc7f0>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6dbc7f0>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6dbc7f0>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6dbc7f0>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6dbc7f0>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6dbc7f0>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6dbc7f0>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6dbc7f0>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6dbc7f0>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6dbc7f0>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6dbc7f0>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6dbc7f0>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6dbc7f0>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6dbc7f0>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6dbc7f0>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6dbc7f0>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6dbc7f0>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+############ registerclass TwitterResource
+index for class TwitterResource: #<ActsAsFerret::LocalIndex:0xb6dbc7f0>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6dd9530>

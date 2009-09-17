@@ -1,7 +1,7 @@
 <p class="item">
   Mikl.me为你呈现了下面这些条目，条目排列的顺序清晰而简单——有关该领域用户的
   <strong>
-    <%=link_to_value_help %></strong>的降序排列。
+  <%=link_to_value_help %></strong>的降序排列。
 </p>
 <% if current_user.controlled_keywords.include?(@keyword_page.keyword).present? %>
   <div><cite>根据<strong><%= link_to_value_help %></strong>的高低，你的价值点数在该领域内的所有用户中是最高的。</cite>，因此：</div>
@@ -21,7 +21,7 @@
 <% end %>
 <% if @keyword_page.can_be_top_owner?(current_user) %>
   <p><cite>你的价值点数<%=current_user.value%>高于这个页面中最高用户的价值点数，因此，如果你建立关键字为</cite><strong><%=h @keyword_page.keyword %></strong><cite>的链接，该关键字的第一个排位将是你分享的资源</cite>，
-  到时你将可以.......胡作非为了，哈哈～</p>
+    到时你将可以.......胡作非为了，哈哈～</p>
 <% end %>
 <div class="sb_ph"><h1>有关“<%=h @keyword_page.keyword %>”的所有条目</h1>
   <span>共 <%=h @resources.size %> 条</span><span class="sc_bullet">·</span>
@@ -29,7 +29,7 @@
   <!--
 有趣的分割点
 <span class="sc_bullet">·</span>%>
-    -->
+  -->
 </div>
 <div id="results">
   <ol class="sb_results" id="wg0">

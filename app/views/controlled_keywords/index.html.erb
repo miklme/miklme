@@ -8,12 +8,4 @@
       </span>
     <% end %>
   </p>
-  <h1>别人排位高于<%=@user.nick_name  %>的关键字</h1>
-  <p>
-      <% for keyword in @lost_keywords%>
-      <cite>
-        <%= link_to "#{keyword}","/keyword_pages/#{KeywordPage.find_by_keyword(keyword).id}",:popup => true %>
-      </cite>
-    <% end %>
-  </p>
 </div>

@@ -42,4 +42,9 @@ class KeywordPage < ActiveRecord::Base
       false
     end
   end
+
+  def value(user)
+    v=ValueOrder.find_by_keyword_page_id_and_user_id(self.id,user.id)
+    v.value
+  end
 end

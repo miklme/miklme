@@ -69,13 +69,6 @@ class User < ActiveRecord::Base
     keywords.compact.uniq.first(15)
   end
 
-  def owned_keywords
-    resources=self.link_url_resources
-    resources.collect do |r|
-      r.keywords
-    end
-  end
-
   #Below methods are the user self,he is active,not positive.ie.He treat others as friends/strangers.
   def followings
     b=BeFollow.scoped_by_follower_id(self.id)
@@ -128,17 +121,19 @@ class User < ActiveRecord::Base
   end
   
   def controlled_keywords
-    keywords=self.owned_keywords
+    keywords=self.keyword_pages.map do |k|
+      k.keyword
+    end
     ks=keywords.map do |k|
       rs=Resource.scoped_by_keywords(k)
       top_keywords_owner=rs.by_owner_value.first.owner
       if top_keywords_owner==self
         k
       else
-        "nil"
+        nil
       end
     end
-    ks=(ks-["nil"]).uniq
+    ks.compact!.uniq!
   end
 
 end
