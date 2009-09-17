@@ -1,25 +1,24 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :users,:collection => {:search => :get} do |user|
-    user.resources :controlled_keywords
     user.resource :portrait
+    user.resource :true_portrait
     user.resources :searched_keywords
     user.resources :searched_contents
-    user.resource :true_portrait
+    user.resources :controlled_keywords
     user.resources :be_follows
     user.resources :follows,:new => {:search_user => :get}
+    user.resources :keyword_pages
     user.resources :resources,
       :collection => {:authority => :get,:not_authority => :get} do |resource|
       resource.resources :comments do |comment|
         comment.resources :replied_comments
       end
-      end
-    user.resources :controlled_keywords
+    end
     user.resources :blog_resources
     user.resources :twitter_resources do |twitter_resource|
       twitter_resource.resources :replies
     end
     user.resources :news
-    user.resources :keywords
     user.resources :link_url_resources,
       :member => {:add_value =>:post,:minus_value => :post }
   end

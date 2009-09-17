@@ -1,24 +1,31 @@
 class KeywordPagesController < ApplicationController
   before_filter :load_user
   auto_complete_for :resource,:keywords,:limit => 10
+
   def index
     
   end
 
+  def new
+
+  end
+
+  def destroy
+    
+  end
+  
   def show
     @keyword_page=KeywordPage.find(params[:id])
     @resources=Resource.search_by_keywords(@keyword_page.keyword,params[:page])
     @related_keywords=@keyword_page.related_keywords
-    flash[:keyword]="这个是关于“#{@keyword_page.keyword}”的页面,若想要在本页面中增加条目，需要在“领域”中输入“#{@keyword_page.keyword}”"
+    flash[:keyword]="这个是关于“#{@keyword_page.keyword}”的页面,若想要在本页面中增加条目，需要在“领域”中选择“#{@keyword_page.keyword}”
+    ，所以首先你要将这个领域添加进'我的领域'"
     respond_to do |format|
       format.html
       format.xml  { render :xml => @resources }
     end
   end
 
-  def edit
-    
-  end
   # PUT /keyword_pages/1
   # PUT /keyword_pages/1.xml
   def show_film
