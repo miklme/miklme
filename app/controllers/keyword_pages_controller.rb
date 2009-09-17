@@ -1,6 +1,10 @@
 class KeywordPagesController < ApplicationController
   before_filter :load_user
   auto_complete_for :resource,:keywords,:limit => 10
+  def index
+    
+  end
+
   def show
     @keyword_page=KeywordPage.find(params[:id])
     @resources=Resource.search_by_keywords(@keyword_page.keyword,params[:page])
@@ -12,6 +16,9 @@ class KeywordPagesController < ApplicationController
     end
   end
 
+  def edit
+    
+  end
   # PUT /keyword_pages/1
   # PUT /keyword_pages/1.xml
   def show_film

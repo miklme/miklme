@@ -1,5 +1,6 @@
 class KeywordPage < ActiveRecord::Base
   has_many :related_keywords
+  belongs_to :user
   validates_uniqueness_of :keyword
 
   def can_be_top_owner?(user)

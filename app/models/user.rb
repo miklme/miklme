@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
   default_scope :order => 'value DESC'
   named_scope :by_value,:order => 'value DESC'
 
+  has_many :keyword_pages
   has_many :news
   has_many :searched_keywords
   has_many :comments
