@@ -1,7 +1,7 @@
 class KeywordPage < ActiveRecord::Base
   has_many :related_keywords
   belongs_to :user
-  validates_uniqueness_of :keyword
+  validates_uniqueness_of :keyword,:scope => :user_id,:message => "领域名称重复了"
 
   def can_be_top_owner?(user)
     resources=Resource.find_all_by_keywords(self.keyword)

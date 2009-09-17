@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   skip_before_filter :login_required,:except=>[:edit,:update,:show]
   skip_before_filter :check_profile_status
+  auto_complete_for :keyword_page,:keyword
   def new
     session[:user_id]=nil
     @user=User.new
@@ -20,6 +21,13 @@ class UsersController < ApplicationController
 
   def edit
     @user=User.find(current_user)
+    @user.keyword_pages.build
+  end
+
+  def manage_keywords
+    render :update do |page|
+      page.visual_effect(:appear, "my_keywords")
+    end
   end
   
   def update

@@ -1,3 +1,4 @@
+<%= javascript_include_tag :defaults,:cache => true  %>
 <div id="text_wide">
   <h1>我的个人信息：</h1>
   <% form_for @user do |f|%>
@@ -15,16 +16,30 @@
       </tr>
       <tr><td><%= f.label :birthday,'生日*' %></td><td><%= f.date_select :birthday,:start_year => 1970,:end_year => Time.now.year-8%></td><td>你的年龄对于自身营销或许很重要...</td></tr>
       <tr><td><%= f.label :address,"常居地" %></td><td><%= f.text_field :province,:size => 3 %>省<%= f.text_field :city,:size => 4 %>市</td></tr>
-      <tr><td>我的领域</td><td>
+      <tr><td>我目前的"领域"</td><td>
           <% for k in @user.keyword_pages %>
             <%= k.keyword %>
           <% end %>
         </td>
         <td>
-          这是一个核心，请你务必了解Mikl.me的"领域"功能。请点击<%= link_to "管理我的领域",user %>
+          这是一个核心，请你务必了解Mikl.me的"领域"功能。请点击<%= link_to_remote "管理我的领域",:url => {:action => :manage_keywords} %>
         </td>
       </tr>
     </table>
+    <div id="my_keywords" style="display:none">
+      <p class="bold">"领域"功能，组织形式上相当于我们经常见到的小组功能——无论是专业的（如C++讨论小组），娱乐的（如“曾哥NC粉丝团”），
+        还是其它各种各样的小组（如“TED中国”、“科幻世界杂志”、“北航xx社团”、“北京大学经济管理学院”）等等。
+        区别是，<strong>你在该有关小组主题的行为（如分享资源，原创文章）将会被别人赋予价值点数评分，这样你就可以直观的明白自己在这个“领域”（小组）
+          内被认可的程度与自我营销的成果。</strong></p>
+          <p>现在，请选择你的“领域”，你最多可以拥有25个领域。<%= link_to "查看所有领域>>>" %></p>
+      <% f.fields_for :keyword_pages do |k| %>
+        <table cellpadding="5" cellspacing="5">
+          <tr>
+            <td><%= k.text_field_with_auto_complete :keyword %></td>
+          </tr>
+        </table>
+      <% end %>
+    </div>
     <%= submit_tag '就这样'%>
   <% end %>
 </div>

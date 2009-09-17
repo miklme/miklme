@@ -3,7 +3,7 @@ class KeywordPagesController < ApplicationController
   auto_complete_for :resource,:keywords,:limit => 10
 
   def index
-    
+ 
   end
 
   def new

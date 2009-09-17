@@ -88,6 +88,7 @@ h1 {margin:30px 0 0 0; padding:5px 0 7px 45px; text-transform:uppercase; font-si
 }
 .highlight{color: #f6a1a1;
 }
+.bold{font-weight:bold}
 h3{
     font-weight: normal;
 }

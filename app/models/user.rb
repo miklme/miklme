@@ -12,6 +12,8 @@ class User < ActiveRecord::Base
   named_scope :by_value,:order => 'value DESC'
 
   has_many :keyword_pages
+  accepts_nested_attributes_for :keyword_pages, :allow_destroy => true
+
   has_many :news
   has_many :searched_keywords
   has_many :comments
