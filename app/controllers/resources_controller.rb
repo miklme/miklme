@@ -1,5 +1,5 @@
 class ResourcesController < ApplicationController
-  before_filter :load_user,:except => :auto_complete_for_resource_keywords
+  before_filter :load_user,:except => :auto_complete_for_keyword_page_keyword
   auto_complete_for :resource,:keywords,:limit => 10
   layout "link_url_resources"
   def index
@@ -30,9 +30,5 @@ class ResourcesController < ApplicationController
   def not_authority
     @not_authority_resources=Resource.not_authority_resources(@user,params[:page])
   end
-  private
-  def load_user
-    @user=User.find(params[:user_id])
-  end
-
+ 
 end

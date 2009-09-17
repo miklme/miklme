@@ -21,7 +21,7 @@ class UsersController < ApplicationController
 
   def edit
     @user=User.find(current_user)
-    @user.keyword_pages.build
+    @keyword_pages=@user.keyword_pages
   end
 
   def manage_keywords

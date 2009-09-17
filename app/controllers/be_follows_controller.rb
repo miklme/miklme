@@ -91,8 +91,5 @@ class BeFollowsController < ApplicationController
       format.xml  { head :ok }
     end
   end
-  private
-  def load_user
-    @user=User.find(params[:user_id])
-  end
+
 end

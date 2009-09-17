@@ -25,13 +25,6 @@ class KeywordPage < ActiveRecord::Base
 
   validates_uniqueness_of :keyword
 
-  def value_order(keyword_page)
-    value_orders=ValueOrder.find_by_keyword_page_id(keyword_page.id,:order => "value DESC")
-    ids=value_orders.map do |v|
-      v.resource_id
-    end
-  end
-
 
   def can_be_top_owner?(user)
     resources=Resource.find_all_by_keywords(self.keyword)

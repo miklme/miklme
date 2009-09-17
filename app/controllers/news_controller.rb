@@ -6,8 +6,4 @@ class NewsController < ApplicationController
     @interested_people=@user.interested_people
   end
 
-  private
-  def load_user
-    @user=User.find(params[:user_id])
-  end
 end

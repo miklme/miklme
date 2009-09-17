@@ -2,7 +2,7 @@ class Resource < ActiveRecord::Base
   
   belongs_to :keyword_page
   belongs_to :owner,:class_name => 'User',:foreign_key =>"user_id"
-  default_scope :include => :owner,:order => 'users.value DESC'
+  default_scope :order => "created_at DESC"
   named_scope :by_time,:order => "created_at DESC"
   named_scope :in_one_day,:conditions => ["resources.created_at > ?",Time.now.yesterday]
   named_scope :by_owner_value,:include => :owner,:order => 'users.value DESC'
@@ -27,12 +27,16 @@ class Resource < ActiveRecord::Base
     updated_at.advance(:hours => 8).to_s(:db)
   end
 
-  def self.find_by_keyword_page(keyword_page,page)
+  def self.find_by_keyword_page_and_time(keyword_page,page)
     paginate_by_keyword_page_id keyword_page.id,
       :per_page => 10,
       :page => page,
       :include => :owner,
-      :order => 'users.value DESC'
+      :order => 'resources.created_at DESC'
+  end
+
+  def self.find_by_keyword_page_and_value
+    
   end
 
   def self.search_by_keywords_and_form(keywords,form,page)
@@ -77,6 +81,11 @@ class Resource < ActiveRecord::Base
     end
   end
 
+  def after_save_or_update
+    keyword_page=KeywordPage.find_by_keyword(self.keywords)
+    self.keyword_page=keyword_page
+    self.save
+  end
   private
   def adjust_link_url
     if  !self.link_url=~/http:/ and !self.link_url=~/https:/ and  !self.link_url=~/ftp:/ and  !self.link_url=~/sftp:/
