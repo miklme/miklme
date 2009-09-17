@@ -41,15 +41,15 @@ class SearchedKeywordsController < ApplicationController
 
   def search_link_url
     render :update do |page|
-      page.visual_effect(:hide,"search_twitter")
-      page.visual_effect(:appear,"search_link_url",:duration => 2)
+      page.visual_effect(:fade,"search_twitter",:duration => 0.5)
+      page.visual_effect(:appear,"search_link_url",:duration => 1,:delay => 0.5)
     end
   end
 
   def search_twitter
     render :update do |page|
-      page.visual_effect(:hide,"search_link_url")
-      page.visual_effect(:appear,"search_twitter",:duration => 2)
+      page.visual_effect(:fade,"search_link_url",:duration => 0.5)
+      page.visual_effect(:appear,"search_twitter",:duration => 1,:delay => 0.5)
     end
   end
 end

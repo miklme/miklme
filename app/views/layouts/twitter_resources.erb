@@ -20,21 +20,10 @@
     </div>
     <div id="sw_content">
       <div id="sw_canvas">
+        <%= render :partial => "shared/resources_side" %>
         <div id="sw_aside">
           <div id="sw_nav">
           </div><div id="sc_expPane">
-            <div class="sw_menu" id="sw_rel">
-              <h2>相关搜索关键字</h2>
-              <ul>
-                <% if not @related_keywords.blank? %>
-                  <% for related_keyword in @related_keywords %>
-                    <li>
-                      <%= link_to highlight(related_keyword.name,@keyword_page.keyword),"/keyword_pages/#{KeywordPage.find_by_keyword(related_keyword.name).id}",:popup => true %>
-                    </li>
-                  <% end %>
-                <% end %>
-              </ul>
-            </div>
           </div>
         </div>
         <div id="content">

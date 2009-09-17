@@ -10,18 +10,18 @@
           <%= link_to_unless_current ".Me",user_path(header) %>
         </li>
         <li>
-          <%= link_to_unless_current "关系网络",user_news_index_path(current_user) %>
+          <%= link_to_unless_current "好友近况",user_news_index_path(current_user) %>
         </li>
-        <li><%= link_to_unless_current"我的关键字",user_controlled_keywords_path(header) %>
+        <li><%= link_to_unless_current"我的领域",user_controlled_keywords_path(header) %>
         </li>
       <% else %>
         <li>
           <%= link_to_unless_current ".Me（#{header.nick_name}）",user_path(header) %>
         </li>
         <li>
-          <%= link_to_unless_current "#{header.nick_name}的关系网络",user_news_index_path(header) %>
+          <%= link_to_unless_current "#{header.nick_name}的好友",user_news_index_path(header) %>
         </li>
-        <li><%= link_to_unless_current "#{header.nick_name}的关键字",user_controlled_keywords_path(header) %>
+        <li><%= link_to_unless_current "#{header.nick_name}的相关领域",user_controlled_keywords_path(header) %>
         </li>
       <% end %>
 

@@ -1,6 +1,6 @@
 <div id="text">
-  <h1><%= @user.nick_name %>掌控的关键字 </h1>
-    <strong>(也就是价值点数在关键字页面中最高的关键字。)</strong>
+  <h1><%= @user.nick_name %>所擅长的领域 </h1>
+    <strong>(也就是价值点数在该领域中较高的领域。)</strong>
   <p>
     <% for keyword in @controlled_keywords  %>
       <span>

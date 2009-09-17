@@ -4,17 +4,17 @@
     <%=link_to_value_help %></strong>的降序排列。
 </p>
 <% if current_user.controlled_keywords.include?(@keyword_page.keyword).present? %>
-  <div><cite>根据<strong><%= link_to_value_help %></strong>的高低，该关键字的第一个排位是你分享的资源</cite>，因此，你可以：</div>
+  <div><cite>根据<strong><%= link_to_value_help %></strong>的高低，你的价值点数在该领域内的所有用户中是最高的。</cite>，因此：</div>
   <ul>
     <li>
-      <span><%=link_to "修改相关关键字",keyword_page_related_keywords_path(@keyword_page),:popup => ['修改相关关键字', 'height=500,width=450'] %>
-      </span>
+      <span>你有义务<%=link_to "修改相关领域",keyword_page_related_keywords_path(@keyword_page),:popup => ['修改相关领域', 'height=500,width=450'] %>
+      </span>，如果这样，相关的所有领域的条目都会出现在这里。
     </li>
     <li>
-      <span>在这个关键字搜索出的<strong>各个条目</strong>下方的<cite>"n条回应"</cite>页面中用红字发表意见</span>
+      <span>在这个领域中的<strong>各个条目</strong>下方的<cite>"n条回应"</cite>页面中用红字发表意见</span>
     </li>
     <li>
-      <span> 获得更多关注，提高价值点数，获得更靠前的排位。</span>
+      <span>获得更多关注，进一步提高价值点数</span>
     </li>
   </ul>
 <% end %>
@@ -22,9 +22,9 @@
   <p><cite>你的价值点数<%=current_user.value%>高于这个页面中最高用户的价值点数，因此，如果你建立关键字为</cite><strong><%=h @keyword_page.keyword %></strong><cite>的链接，该关键字的第一个排位将是你分享的资源</cite>，
   到时你将可以.......胡作非为了，哈哈～</p>
 <% end %>
-<div class="sb_ph"><h1>“<%=h @keyword_page.keyword %>”的所有结果</h1>
+<div class="sb_ph"><h1>“<%=h @keyword_page.keyword %>”的所有条目</h1>
   <span>共 <%=h @resources.size %> 条</span><span class="sc_bullet">·</span>
-  <%= link_to "新建一个搜索结果条目>>>",new_user_link_url_resource_path(current_user) %>
+  <%= link_to "分享新的条目>>>",new_user_link_url_resource_path(current_user) %>
   <!--
 有趣的分割点
 <span class="sc_bullet">·</span>%>

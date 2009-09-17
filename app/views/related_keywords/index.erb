@@ -1,4 +1,4 @@
-<h1>修改"<%= @keyword_page.keyword %>"的相关关键字</h1>
+<h1>修改"<%= @keyword_page.keyword %>"的相关领域</h1>
 <ul><% for related_keyword in @related_keywords %>
     <li>
       <%= related_keyword.name %>
@@ -6,4 +6,4 @@
     </li>
   <% end %>
 </ul>
-<p><%= link_to "添加新的相关关键字",new_keyword_page_related_keyword_path(@keyword_page) %></p>
+<p><%= link_to "添加新的相关领域",new_keyword_page_related_keyword_path(@keyword_page) %></p>

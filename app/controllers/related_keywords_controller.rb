@@ -26,7 +26,7 @@ class RelatedKeywordsController < ApplicationController
     if !related_keyword.auto?
       related_keyword.destroy
     else
-      flash[:notice]="这个关键字是别人关联到你这里的，不能删除"
+      flash[:notice]="这个领域是别人关联到你这里的，不能删除"
     end
     redirect_to keyword_page_related_keywords_path(@keyword_page)
   end

@@ -1,17 +1,17 @@
 <% if current_user==@user %>
   <div id="new_resource">
-    <h1><%= @variable_title %>    <strong><%= link_to "管理我所有的分享",user_resources_path(current_user) %></strong>
-</h1>
-
+    <h1><%= @variable_title %>
+    </h1>
+    <strong><%= link_to "(管理我所有的分享>>>)",user_resources_path(current_user),:class => "title" %></strong>
     <ul>
       <li>
-        <%= link_to " 汇集你所接触的链接",new_user_link_url_resource_path(current_user),:popup => true%>
-        ，就像使用网络书签那样；</li>
+        <%= link_to " 汇集所有你认为有价值的链接",new_user_link_url_resource_path(current_user),:popup => true%>——发表的blog文章、参与的wiki页面， 喜爱的音乐、图片，喜欢的商品，发表的主题贴等等
+        （不必暴露隐私）；</li>
       <li>
-        或是 <%= link_to "发表言论",new_user_blog_resource_path(current_user),:popup => true %>，就像写Blog或发帖子。
+        或是 <%= link_to "发表言论",new_user_blog_resource_path(current_user),:popup => true %>，这里就像你的个人Blog。
       </li>
       <li>
-        或是分享身边<strong>随时发生的事</strong>（少于130字）。让别人更细化地了解你的点点滴滴。<strong>请不要包含链接，</strong>直接写在下面：
+        或是分享身边<strong>随时发生的事</strong>（少于130字）。让关注你的人更细化地了解你的点点滴滴。<strong>请不要包含链接，</strong>直接写在下面：
         <%= render :partial => "twitter_resources/form",:locals => { :user => @user,:twitter_resource => @twitter_resource }  %>
       </li>
     </ul>
@@ -19,9 +19,15 @@
       <strong>形式平平无奇。不过请先尝试。</strong>
     </p>
   </div>
+  <% if @news.present? %>
+    <%= render :partial => "news/news",:collection => @news %>
+    <%= will_paginate @news, :prev_label => '上一页', :next_label => '下一页' %>
+  <% end %>
+<% else %>
+  <strong><%= link_to "查看#{@user.nick_name}的所有条目>>>",user_resources_path(@user),:class => "title" %></strong>
+  <% if @self_news_for_others.present? %>
+    <%= render :partial => "news/others_news",:collection => @self_news_for_others %>
+    <%= will_paginate @self_news_for_others, :prev_label => '上一页', :next_label => '下一页' %>
+  <% end %>
 <% end %>
 
-<% if @news.present? %>
-  <%= render :partial => "news/news",:collection => @news %>
-  <%= will_paginate @news, :prev_label => '上一页', :next_label => '下一页' %>
-<% end %>

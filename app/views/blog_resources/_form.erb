@@ -13,7 +13,7 @@
       <%= fckeditor_textarea(:blog_resource,:content,:toolbarSet => "Easy",:width => '90%',:height => '300px') %>
     </li>
     <li>
-      <p><%= f.label :keywords,"用户需要输入什么才能够查找到这些内容，如图(请尽量使用下拉列表中提示的关键字以增大被检索的可能)*" %>
+      <p><%= f.label :keywords,"你需要在你的哪个'领域'发布这个条目？如果都不太符合，那么你应点击这里设定自己的'领域'*" %>
       </p>
       <p>
         <%= text_field_with_auto_complete :keyword_page,:keyword,{:onfocus => "keyword_page_keyword_auto_completer.activate()"},{} %>

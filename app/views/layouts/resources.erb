@@ -21,8 +21,6 @@
           <div id="sidebar_text">
             <h2>个人信息：</h2>
             <p><%= render :partial => "shared/user_profile_full",:object => @user %></p>
-            <h2><%= link_to_unless_current "#{@user.nick_name}的所有结果条目(#{@user.link_url_resources.in_one_day.size}新)" ,user_resources_path(@user),:popup => true%></h2>
-            <h2><%= link_to_unless_current "#{@user.nick_name}在做什么(#{@user.twitter_resources.in_one_day.size}新)",user_twitter_resources_path(@user),:popup => true %></h2>
           </div>
           <div id="sidebar_bottom"></div>
         </div>

@@ -1,4 +1,4 @@
-<div id="text">
+<div id="text_wide">
   <h1>我的个人信息：</h1>
   <% form_for @user do |f|%>
     <%= f.error_messages %>
@@ -8,17 +8,14 @@
         <td><%= f. label :name,'真实姓名*'%></td>
         <% if @user.resources.blank? %>
           <td><%= f.text_field :name,:size => 21 %></td>
-          <td>真实姓名不会以<strong>任何形式</strong>泄露，仅好友可见。通过真实姓名，朋友才会找到你。<strong>不可更改。</strong></td>
         <% else %>
           <td><%= h @user.name %></td>
         <% end %>
+        <td>真实姓名不会以<strong>任何形式</strong>泄露(请相信Mikl.me)，除非你同意。通过真实姓名，朋友才会找到你。<strong>不可更改。</strong></td>
       </tr>
-      <tr><td><%= f.label :birthday,'生日*' %></td><td><%= f.date_select :birthday,:start_year => 1970,:end_year => Time.now.year-8%></td><td>如果告诉Michael你的年龄，或许有一天，你会获得传说一般的搜索体验。</td></tr>
+      <tr><td><%= f.label :birthday,'生日*' %></td><td><%= f.date_select :birthday,:start_year => 1970,:end_year => Time.now.year-8%></td><td>你的年龄对于自身营销或许很重要...</td></tr>
       <tr><td><%= f.label :address,"常居地" %></td><td><%= f.text_field :province,:size => 3 %>省<%= f.text_field :city,:size => 4 %>市</td></tr>
     </table>
-    <p>
-      <strong>此外，你将拥有这样一个个人地址：mikl.me/真实姓名。</strong>
-      （当你和别人的姓名重复时，会员用户理应得到该地址）</p>
     <%= submit_tag '就这样'%>
   <% end %>
 </div>

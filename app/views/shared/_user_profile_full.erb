@@ -1,6 +1,6 @@
 <% if user_profile_full.regard_real_friend?(current_user)%>
   <div>
-    对方向我提供了真实姓名：<span><%= link_to user_profile_full.name,user_path(user_profile_full)%></span><span class="nick_name">昵称：<%= "（#{user_profile_full.nick_name}）" %></span>
+    <span><%= link_to user_profile_full.name,user_path(user_profile_full)%></span><cite>(对方向我提供了真实姓名)</cite><span class="nick_name">昵称：<%= "#{user_profile_full.nick_name}" %></span>
     <cite><%= "价值点数：#{user_profile_full.value}" %></cite>
   </div>
 <% elsif current_user.regard_real_friend?(user_profile_full) %>

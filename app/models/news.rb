@@ -27,4 +27,12 @@ class News < ActiveRecord::Base
       :conditions => "news_type='twitter_resource' or news_type='link_url_resource' or news_type='blog_resource'"
   end
 
+  def self.self_news_for_others(user,page)
+    paginate_by_user_id user.id,
+      :per_page => 20,
+      :page => page,
+      :order => "created_at DESC",
+      :conditions => "news_type='twitter_resource' or news_type='link_url_resource' or news_type='blog_resource'"
+  end
+
 end
