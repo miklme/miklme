@@ -10,7 +10,7 @@ class News < ActiveRecord::Base
   end
 
   def self.list_self_news(current_user,page)
-    paginate :per_page => 15,
+    paginate :per_page => 25,
       :page => page,
       :order => "created_at DESC",
       :conditions => ["user_id=?",current_user.id]
@@ -21,7 +21,7 @@ class News < ActiveRecord::Base
       f.id
     end
     self.paginate_by_user_id following_ids,
-      :per_page => 15,
+      :per_page => 30,
       :page => page,
       :order  => "created_at DESC",
       :conditions => "news_type='twitter_resource' or news_type='link_url_resource' or news_type='blog_resource'"
