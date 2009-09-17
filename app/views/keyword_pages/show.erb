@@ -1,5 +1,5 @@
 <p class="item">
-  Mikl.me为你呈现了下面这些条目，条目排列的顺序清晰而简单——提供该条目用户的
+  Mikl.me为你呈现了下面这些条目，条目排列的顺序清晰而简单——有关该领域用户的
   <strong>
     <%=link_to_value_help %></strong>的降序排列。
 </p>
@@ -7,14 +7,15 @@
   <div><cite>根据<strong><%= link_to_value_help %></strong>的高低，你的价值点数在该领域内的所有用户中是最高的。</cite>，因此：</div>
   <ul>
     <li>
-      <span>你有义务<%=link_to "修改相关领域",keyword_page_related_keywords_path(@keyword_page),:popup => ['修改相关领域', 'height=500,width=450'] %>
-      </span>，如果这样，相关的所有领域的条目都会出现在这里。
+      <span>你应该仔细<%=link_to "修改相关领域",keyword_page_related_keywords_path(@keyword_page),:popup => ['修改相关领域', 'height=500,width=450'] %>
+      </span>，如果这样，你的这个领域的条目就会被相关领域的人看到。
+      比如：你对Michael Jackson感兴趣，你的领域是Michael Jackson，如果你添加一个“迈克尔杰克逊”的领域（前提是该领域存在），对"迈克尔杰克逊"领域感兴趣的人就会看到你这里的内容。
     </li>
     <li>
       <span>在这个领域中的<strong>各个条目</strong>下方的<cite>"n条回应"</cite>页面中用红字发表意见</span>
     </li>
     <li>
-      <span>获得更多关注，进一步提高价值点数</span>
+      <span>获得更多关注，进一步提高你在<strong>该领域</strong>价值点数</span>
     </li>
   </ul>
 <% end %>
@@ -22,7 +23,7 @@
   <p><cite>你的价值点数<%=current_user.value%>高于这个页面中最高用户的价值点数，因此，如果你建立关键字为</cite><strong><%=h @keyword_page.keyword %></strong><cite>的链接，该关键字的第一个排位将是你分享的资源</cite>，
   到时你将可以.......胡作非为了，哈哈～</p>
 <% end %>
-<div class="sb_ph"><h1>“<%=h @keyword_page.keyword %>”的所有条目</h1>
+<div class="sb_ph"><h1>有关“<%=h @keyword_page.keyword %>”的所有条目</h1>
   <span>共 <%=h @resources.size %> 条</span><span class="sc_bullet">·</span>
   <%= link_to "分享新的条目>>>",new_user_link_url_resource_path(current_user) %>
   <!--
