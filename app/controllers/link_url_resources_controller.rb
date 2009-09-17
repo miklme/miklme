@@ -13,7 +13,9 @@ class LinkUrlResourcesController < ApplicationController
     @link_url_resource=current_user.link_url_resources.build(params[:link_url_resource])
     @link_url_resource.keywords=params[:keyword_page][:keyword]
     if @link_url_resource.save
-      KeywordPage.create(:keyword => @link_url_resource.keywords)
+      keyword_page=KeywordPage.find_by_keyword(@link_url_resource.keywords)
+      @link_url_resource.keyword_page=keyword_page
+      @link_url_resource.save
       render :partial => "succeed",:layout => "link_url_resources"
       n=current_user.news.create
       n.news_type="link_url_resource"
@@ -30,7 +32,6 @@ class LinkUrlResourcesController < ApplicationController
     @link_url_resource.update_attributes(params[:link_url_resource])
     @link_url_resource.keywords=params[:keyword_page][:keyword]
     if @link_url_resource.save
-      KeywordPage.create(:keyword => @link_url_resource.keywords)
       flash[:notice]="修改成功。"
       redirect_to keyword_page_path(KeywordPage.find_by_keyword(@link_url_resource.keywords))
     else
@@ -38,21 +39,21 @@ class LinkUrlResourcesController < ApplicationController
     end
   end
 
-#  暂时视图中没有这个功能。
-#  def minus_value
-#    o=Resource.find(params[:id]).owner
-#    if current_user.value<0
-#      flash[:notice]="不太爽的是，你的价值点数低于0了，暂时不能作出这种评价。"
-#      redirect_to :back
-#    else
-#      o.value=o.value-0.6
-#      current_user.value=current_user.value-0.3
-#      current_user.save
-#      o.save
-#      flash[:notice]="感谢反馈。"
-#      redirect_to :back
-#    end
-#  end
+  #  暂时视图中没有这个功能。
+  #  def minus_value
+  #    o=Resource.find(params[:id]).owner
+  #    if current_user.value<0
+  #      flash[:notice]="不太爽的是，你的价值点数低于0了，暂时不能作出这种评价。"
+  #      redirect_to :back
+  #    else
+  #      o.value=o.value-0.6
+  #      current_user.value=current_user.value-0.3
+  #      current_user.save
+  #      o.save
+  #      flash[:notice]="感谢反馈。"
+  #      redirect_to :back
+  #    end
+  #  end
 
   private
   def find_user

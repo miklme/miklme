@@ -1,6 +1,6 @@
 <h1>新的相关领域</h1>
 <p>
-    <%= text_field_with_auto_complete :resource,:keywords,{}, {:method => :get, :frequency => 0, :after_update_element =>
-      "function(element,value){" + remote_function(:url => {:action => :create},:with=>"'keywords='+element.value") + "}" } %>
+    <%= text_field_with_auto_complete :keyword_page,:keyword,{}, {:method => :get, :frequency => 0, :after_update_element =>
+      "function(element,value){" + remote_function(:url => {:action => :create},:with=>"'keyword='+element.value") + "}" } %>
 </p>
 <%= link_to "取消",keyword_page_related_keywords_path(@keyword_page) %>

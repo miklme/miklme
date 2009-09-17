@@ -11,8 +11,8 @@ class User < ActiveRecord::Base
   default_scope :order => 'value DESC'
   named_scope :by_value,:order => 'value DESC'
 
-  has_many :keyword_pages
-  accepts_nested_attributes_for :keyword_pages, :allow_destroy => true
+  has_many :value_orders
+  has_many :keyword_pages,:through => :value_orders,:source => :keyword_page
 
   has_many :news
   has_many :searched_keywords
@@ -34,7 +34,8 @@ class User < ActiveRecord::Base
 
   accepts_nested_attributes_for :true_portrait, :allow_destroy => true
   accepts_nested_attributes_for :portrait, :allow_destroy => true
-  
+  accepts_nested_attributes_for :keyword_pages, :allow_destroy => true
+
   validates_confirmation_of :password,:message => "不一致"
   validates_uniqueness_of :username,:case_sensitive => false
   validates_format_of :username,:with => %r{^[a-zA-Z][a-zA-Z0-9_]{4,15}$},:message =>"请避免使用太诡异的字符及汉字"

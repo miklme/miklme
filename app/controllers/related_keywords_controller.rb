@@ -1,6 +1,6 @@
 class RelatedKeywordsController < ApplicationController
-  auto_complete_for :resource,:keywords,:limit => 10
-  before_filter :find_keyword_page,:except => :auto_complete_for_resource_keywords
+  auto_complete_for :keyword_page,:keyword,:limit => 10
+  before_filter :find_keyword_page,:except => :auto_complete_for_keyword_page_keyword
   def index
     @related_keywords=@keyword_page.related_keywords
   end
@@ -10,7 +10,7 @@ class RelatedKeywordsController < ApplicationController
   end
 
   def create
-    @related_keyword=@keyword_page.related_keywords.build(:name => params[:keywords])
+    @related_keyword=@keyword_page.related_keywords.build(:name => params[:keyword])
     if @related_keyword.save
       flash[:notice]="修改成功"
       k=KeywordPage.find_by_keyword(@related_keyword.name)
@@ -23,11 +23,7 @@ class RelatedKeywordsController < ApplicationController
 
   def destroy
     related_keyword=@keyword_page.related_keywords.find(params[:id])
-    if !related_keyword.auto?
-      related_keyword.destroy
-    else
-      flash[:notice]="这个领域是别人关联到你这里的，不能删除"
-    end
+    related_keyword.destroy
     redirect_to keyword_page_related_keywords_path(@keyword_page)
   end
   private

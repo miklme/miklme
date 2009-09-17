@@ -1,6 +1,3 @@
-require 'rmmseg'
-require 'rmmseg/ferret'
-
 class Resource < ActiveRecord::Base
   
   belongs_to :keyword_page
@@ -9,8 +6,8 @@ class Resource < ActiveRecord::Base
   named_scope :by_time,:order => "created_at DESC"
   named_scope :in_one_day,:conditions => ["resources.created_at > ?",Time.now.yesterday]
   named_scope :by_owner_value,:include => :owner,:order => 'users.value DESC'
-  
 
+  before_validation :his_fields
   #这个方法不能用于ruby1.8.6
   #  def self.hot_keywords
   #    keywords=Resource.find(:all,:order => "resources.created_at DESC",:limit => 10000).map do |r|
@@ -21,6 +18,7 @@ class Resource < ActiveRecord::Base
   #    uniqed_keywords.first(50)
   #  end
 
+
   def created_at_s
     created_at.advance(:hours => 8).to_s(:db)
   end
@@ -29,10 +27,10 @@ class Resource < ActiveRecord::Base
     updated_at.advance(:hours => 8).to_s(:db)
   end
 
-  def self.search_by_keywords(keywords,page)
-    paginate :per_page => 10,
+  def self.find_by_keyword_page(keyword_page,page)
+    paginate_by_keyword_page_id keyword_page.id,
+      :per_page => 10,
       :page => page,
-      :conditions => ["keywords=?",keywords],
       :include => :owner,
       :order => 'users.value DESC'
   end
@@ -86,4 +84,15 @@ class Resource < ActiveRecord::Base
     end
   end
 
+  def his_fields
+    ks=self.owner.keyword_pages.map do |k|
+      k.keyword
+    end
+    ks.compact!
+    if ks.include?(self.keywords) or self.keywords.blank?
+      true
+    else
+      false
+    end
+  end
 end

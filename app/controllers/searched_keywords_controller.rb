@@ -7,15 +7,11 @@ class SearchedKeywordsController < ApplicationController
 
 
   def auto_complete_for_resource_keywords
-    link_url_resources=LinkUrlResource.find_with_ferret(params[:resource][:keywords]+"~")
-    blog_resources=BlogResource.find_with_ferret(params[:resource][:keywords]+"~")
-    keywords1=link_url_resources.map do |l|
-      l.keywords
+    keyword_pages=KeywordPage.find_with_ferret(params[:resource][:keywords]+"~")
+    k2=keyword_pages.map do |k|
+      k.keyword
     end
-    keywords2=blog_resources.map do |l|
-      l.keywords
-    end
-    @keywords=(keywords1+keywords2).uniq.first(15)
+    @keywords=k2.uniq.first(15)
     render :layout => false
   end
 

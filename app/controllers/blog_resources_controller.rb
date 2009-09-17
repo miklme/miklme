@@ -7,7 +7,7 @@ class BlogResourcesController < ApplicationController
   end
 
   def show
-   @blog_resource=Resource.find(params[:id])
+    @blog_resource=Resource.find(params[:id])
   end
 
   def edit
@@ -25,7 +25,9 @@ class BlogResourcesController < ApplicationController
     @blog_resource.authority=true
     @blog_resource.form="文字、文档"
     if @blog_resource.save
-      KeywordPage.create(:keyword => @blog_resource.keywords)
+      keyword_page=KeywordPage.find_by_keyword(@blog_resource.keywords)
+      @blog_resource.keyword_page=keyword_page
+      @blog_resource.save
       render :partial => "link_url_resources/succeed",:layout => "blog_resources"
       n=current_user.news.create
       n.news_type="blog_resource"
@@ -37,12 +39,11 @@ class BlogResourcesController < ApplicationController
     end
   end
 
-   def update
+  def update
     @blog_resource=@user.blog_resources.find(params[:id])
     @blog_resource.update_attributes(params[:blog_resource])
     @blog_resource.keywords=params[:keyword_page][:keyword]
     if @blog_resource.save
-      KeywordPage.create(:keyword => @blog_resource.keywords)
       flash[:notice]="修改成功。"
       redirect_to keyword_page_path(KeywordPage.find_by_keyword(@blog_resource.keywords))
     end
