@@ -14,19 +14,21 @@ class KeywordPagesController < ApplicationController
   end
 
   def create
-    if KeywordPage.find_by_keyword(params[:keyword_page][:keyword]).present?
-      @user.keyword_pages<<KeywordPage.find_by_keyword(params[:keyword_page][:keyword])
-      flash[:notice]="成功。要查看该领域内容，请点击'Mikl'链接"
-    else
-      @keyword_page=KeywordPage.create(:keyword => params[:keyword_page][:keyword])
-      v=ValueOrder.new
-      v.keyword_page=@keyword_page
-      v.user=@user
-      v.save
-      flash[:notice]="要知道，你是第一个进入这个领域的人。想要让更多人认识到你，你最好让更多人关注你，
-      或者是进入该领域页面，编辑‘相关领域。’"
+    @keyword_page=KeywordPage.find_or_create_by_keyword(:keyword => params[:keyword_page][:keyword])
+    value_order=@user.value_orders.find_by_keyword_page_id(@keyword_page.id)
+    begin
+      @user.keyword_pages<<@keyword_page
+      if @keyword_page.top_owner==current_user
+        flash[:notice]="成功。要知道，你是第一个进入这个领域的人。想要让更多人认识到你，你最好让更多人关注你，
+      或者是进入该领域页面，编辑“相关领域。”"
+      else
+        flash[:notice]="成功。要查看该领域内容，可以点击'Mikl'链接"
+      end
+      redirect_to :back
+    rescue
+      flash[:notice]="对不起，你已经进入该领域了。"
+      redirect_to :back
     end
-    redirect_to edit_user_path(@user)
   end
   
   def show

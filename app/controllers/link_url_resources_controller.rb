@@ -1,6 +1,5 @@
 class LinkUrlResourcesController < ApplicationController
   before_filter :find_user,:except => [:auto_complete_for_keyword_page_keyword]
-  auto_complete_for :keyword_page,:keyword,:limit => 7
   def new
     @link_url_resource=current_user.link_url_resources.build
   end
@@ -11,7 +10,6 @@ class LinkUrlResourcesController < ApplicationController
 
   def create
     @link_url_resource=current_user.link_url_resources.build(params[:link_url_resource])
-    @link_url_resource.keywords=params[:keyword_page][:keyword]
     if @link_url_resource.save
       @link_url_resource.after_save_or_update
       render :partial => "succeed",:layout => "link_url_resources"
@@ -28,7 +26,6 @@ class LinkUrlResourcesController < ApplicationController
   def update
     @link_url_resource=@user.link_url_resources.find(params[:id])
     @link_url_resource.update_attributes(params[:link_url_resource])
-    @link_url_resource.keywords=params[:keyword_page][:keyword]
     if @link_url_resource.save
       @link_url_resource.after_save_or_update
       flash[:notice]="修改成功。"

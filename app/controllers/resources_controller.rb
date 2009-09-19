@@ -1,7 +1,7 @@
 class ResourcesController < ApplicationController
   before_filter :load_user,:except => :auto_complete_for_keyword_page_keyword
-  auto_complete_for :resource,:keywords,:limit => 10
   layout "link_url_resources"
+  
   def index
     @resources=Resource.find_by_user(@user,params[:page])
   end

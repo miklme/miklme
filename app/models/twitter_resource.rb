@@ -1,3 +1,7 @@
+require 'rmmseg'
+require 'rmmseg/ferret'
+
+
 class TwitterResource<Resource
   analyzer = RMMSeg::Ferret::Analyzer.new
   acts_as_ferret({

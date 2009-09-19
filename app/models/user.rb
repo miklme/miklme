@@ -121,19 +121,15 @@ class User < ActiveRecord::Base
   end
   
   def controlled_keywords
-    keywords=self.keyword_pages.map do |k|
-      k.keyword
-    end
-    ks=keywords.map do |k|
-      rs=Resource.scoped_by_keywords(k)
-      top_keywords_owner=rs.by_owner_value.first.owner
-      if top_keywords_owner==self
-        k
+    pages=self.keyword_pages
+    ks=pages.map do |p|
+      if p.top_owner==self
+        p.keyword
       else
         nil
       end
     end
-    ks.compact!.uniq!
+    ks.try(:compact).try(:uniq)
   end
 
 end

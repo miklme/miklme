@@ -1,7 +1,6 @@
 require 'rmmseg'
 require 'rmmseg/ferret'
 
-
 class KeywordPage < ActiveRecord::Base
   analyzer = RMMSeg::Ferret::Analyzer.new
   acts_as_ferret({
@@ -22,29 +21,23 @@ class KeywordPage < ActiveRecord::Base
   has_many :value_orders
   has_many :users,:through => :value_orders,:source => :user
 
-
   validates_uniqueness_of :keyword
+  validates_presence_of :keyword
 
+  named_scope :user_fields, lambda { |user_id| {
+      :include => :value_orders,
+      :conditions => [ "value_orders.user_id = ?", user_id ]
+    } }
 
-  def can_be_top_owner?(user)
-    resources=Resource.find_all_by_keywords(self.keyword)
-    user_ids=resources.map do |r|
-      r.owner.id
-    end
-    users=User.find(user_ids,:order => "value DESC")
-    if users.present?
-      if  users.first.value<=user.value and !User.find(user_ids).include?(user)
-        true
-      else
-        false
-      end
-    else
-      false
-    end
-  end
 
   def value(user)
     v=ValueOrder.find_by_keyword_page_id_and_user_id(self.id,user.id)
     v.value
   end
+
+  def top_owner
+    users=self.users
+    users.find(:first,:order => "value_orders.value")
+  end
+
 end
