@@ -1,15 +1,13 @@
 <p class="item">
-  Mikl.me为你呈现了下面这些条目，条目排列的顺序清晰而简单——有关该领域用户的
-  <strong>
-  <%=link_to_value_help %></strong>的降序排列。
+  Mikl.me为你呈现了下面这些条目，条目排列的顺序清晰而简单——用户在<strong>该领域内</strong>的价值点数
+  的降序排列。
 </p>
 <% if current_user.controlled_keywords.include?(@keyword_page.keyword).present? %>
-  <div><cite>根据<strong><%= link_to_value_help %></strong>的高低，你的价值点数在该领域内的所有用户中是最高的。</cite>因此：</div>
+  <div><cite>根据<strong>用户在该领域内价值点数</strong>的高低，你的价值点数在该领域内的所有用户中是最高的。</cite>因此：</div>
   <ul>
     <li>
       <span>你应该仔细<%=link_to "修改相关领域",keyword_page_related_keywords_path(@keyword_page),:popup => ['修改相关领域', 'height=500,width=450'] %>
-      </span>，如果这样，你的这个领域的条目就会被相关领域的人看到。
-      比如：你对Michael Jackson感兴趣，你的领域是Michael Jackson，如果你添加一个“迈克尔杰克逊”的领域（前提是该领域存在），对"迈克尔杰克逊"领域感兴趣的人就会看到你这里的内容。
+      </span>，如果这样，你在该领域的条目就容易被相关领域的人看到。
     </li>
     <li>
       <span>在这个领域中的<strong>各个条目</strong>下方的<cite>"n条回应"</cite>页面中用红字发表意见</span>

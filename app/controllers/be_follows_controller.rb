@@ -39,57 +39,53 @@ class BeFollowsController < ApplicationController
     @be_follow = BeFollow.new(params[:be_follow])
     @be_follow.user=@user
     @be_follow.follower=current_user
-    respond_to do |format|
-      if @be_follow.save
-        @user.value=@user.value+3
-        @user.save
-        n=@user.news.create
-        n.owner=@user
-        n.follower_id=current_user.id
-        if @be_follow.provide_name?
-          n.news_type="friend_follow"
-        else
-          n.news_type="stranger_follow"
-        end
-        n.save
-        flash[:notice] = "成功关注该用户，之后你会自动获得该用户的一些信息，现在你可以逛逛他的主页"
-        format.html { redirect_to user_path(@user) }
-        format.xml  { render :xml => @be_follow, :status => :created, :location => @be_follow }
+    if @be_follow.save
+      k=KeywordPage.find_by_keyword(params[:keyword_page][:keyword])
+      @user.change_value(k,3)
+      @user.save
+      n=@user.news.create
+      n.owner=@user
+      n.follower_id=current_user.id
+      if @be_follow.provide_name?
+        n.news_type="friend_follow"
       else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @be_follow.errors, :status => :unprocessable_entity }
+        n.news_type="stranger_follow"
       end
+      n.save
+      flash[:notice] = "成功关注该用户，之后你会自动获得该用户的一些信息，现在你可以逛逛他的主页"
+      redirect_to user_path(@user)
+    else
+      render  :action => "new"
     end
-  end
+end
 
-  # PUT /be_follows/1
-  # PUT /be_follows/1.xml
-  def update
-    @be_follow = BeFollow.find(params[:id])
+# PUT /be_follows/1
+# PUT /be_follows/1.xml
+def update
+  @be_follow = BeFollow.find(params[:id])
 
-    respond_to do |format|
-      if @be_follow.update_attributes(params[:be_follow])
-        flash[:notice] = 'BeFollow was successfully updated.'
-        format.html { redirect_to(@be_follow) }
-        format.xml  { head :ok }
-      else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @be_follow.errors, :status => :unprocessable_entity }
-      end
-    end
-  end
-
-  # DELETE /be_follows/1
-  # DELETE /be_follows/1.xml
-  def destroy
-    @be_follow = BeFollow.find(params[:id])
-    @be_follow.destroy
-    @be_follow.user.value=@be_follow.user.value-2
-    @be_follow.user.save
-    respond_to do |format|
-      format.html { redirect_to(user_follows_path(current_user)) }
+  respond_to do |format|
+    if @be_follow.update_attributes(params[:be_follow])
+      flash[:notice] = 'BeFollow was successfully updated.'
+      format.html { redirect_to(@be_follow) }
       format.xml  { head :ok }
+    else
+      format.html { render :action => "edit" }
+      format.xml  { render :xml => @be_follow.errors, :status => :unprocessable_entity }
     end
   end
+end
+
+# DELETE /be_follows/1
+# DELETE /be_follows/1.xml
+def destroy
+  @be_follow = BeFollow.find(params[:id])
+  @be_follow.destroy
+  @be_follow.user.save
+  respond_to do |format|
+    format.html { redirect_to(user_follows_path(current_user)) }
+    format.xml  { head :ok }
+  end
+end
 
 end
