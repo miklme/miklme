@@ -11,7 +11,7 @@
         或是 <%= link_to "发表言论",new_user_blog_resource_path(current_user),:popup => true %>，这里就像你的个人Blog。
       </li>
       <li>
-        或是分享身边<strong>随时发生的事</strong>（少于130字）。让关注你的人更细化地了解你的点点滴滴。<strong>请不要包含链接，</strong>直接写在下面：
+        或是分享身边<strong>"有趣"的事</strong>（少于130字）。让关注你的人更细化地了解你的点点滴滴。<strong>请不要包含链接，</strong>直接写在下面：
         <%= render :partial => "twitter_resources/form",:locals => { :user => @user,:twitter_resource => @twitter_resource }  %>
       </li>
     </ul>

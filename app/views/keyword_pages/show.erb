@@ -4,7 +4,7 @@
   <%=link_to_value_help %></strong>的降序排列。
 </p>
 <% if current_user.controlled_keywords.include?(@keyword_page.keyword).present? %>
-  <div><cite>根据<strong><%= link_to_value_help %></strong>的高低，你的价值点数在该领域内的所有用户中是最高的。</cite>，因此：</div>
+  <div><cite>根据<strong><%= link_to_value_help %></strong>的高低，你的价值点数在该领域内的所有用户中是最高的。</cite>因此：</div>
   <ul>
     <li>
       <span>你应该仔细<%=link_to "修改相关领域",keyword_page_related_keywords_path(@keyword_page),:popup => ['修改相关领域', 'height=500,width=450'] %>

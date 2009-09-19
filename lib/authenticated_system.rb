@@ -9,12 +9,7 @@ module AuthenticatedSystem
   # Accesses the current user from the session.
   # Future calls avoid the database because nil is not equal to false.
   def current_user
-    begin
       @current_user ||= (login_from_session || login_from_basic_auth || login_from_cookie) unless @current_user == false
-    rescue
-      flash[:notice]='请登录以继续...'
-      redirect_to new_session_path
-    end
   end
 
   # Store the given user id in the session.

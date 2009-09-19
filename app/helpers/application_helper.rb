@@ -9,7 +9,7 @@ module ApplicationHelper
   end
 
   def link_to_value_help
-    link_to "价值点数[?]",{:controller => :shared,:action => :value},:popup => ['关于价值点数', 'height=300,width=600']
+    link_to "总价值点数[?]",{:controller => :shared,:action => :value},:popup => ['关于价值点数', 'height=300,width=600']
   end
 
 

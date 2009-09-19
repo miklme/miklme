@@ -1,7 +1,7 @@
 <table class="item" cellspacing="5">
   <tr>
     <td width="60px">
-      <%= render :partial => "shared/user_profile",:object => comment.owner %>
+      <%= render :partial => "shared/field_profile",:locals => {:user => comment.owner,:keyword_page => comment.resource.keyword_page} %>
     </td>
     <td width="520px">
       <p><%= h comment.content  %></p>

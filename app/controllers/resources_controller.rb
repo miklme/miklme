@@ -30,5 +30,6 @@ class ResourcesController < ApplicationController
   def not_authority
     @not_authority_resources=Resource.not_authority_resources(@user,params[:page])
   end
- 
+
+
 end

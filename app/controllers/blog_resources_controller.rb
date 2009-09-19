@@ -1,5 +1,5 @@
 class BlogResourcesController < ApplicationController
-  before_filter :find_user,:except => [:auto_complete_for_keyword_page_keyword]
+  before_filter :load_user,:user_keywords,:except => [:auto_complete_for_keyword_page_keyword]
   def new
     @blog_resource=current_user.blog_resources.build
   end
@@ -44,7 +44,7 @@ class BlogResourcesController < ApplicationController
     end
   end
   private
-  def find_user
-    @user=User.find(params[:user_id])
+  def user_keywords
+    @ks=@user.keyword_pages
   end
 end

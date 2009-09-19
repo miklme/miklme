@@ -7,9 +7,7 @@ class User < ActiveRecord::Base
 
   attr_accessor :password_confirmation
   attr_protected :value
-  
-  default_scope :order => 'value DESC'
-  named_scope :by_value,:order => 'value DESC'
+  named_scope :by_total_value,:order => "users.total_value DESC"
 
   has_many :value_orders
   has_many :keyword_pages,:through => :value_orders,:source => :keyword_page
@@ -58,7 +56,7 @@ class User < ActiveRecord::Base
 
   def self.high_keywords
     x=(self.all.length/4).to_i
-    users=self.find(:all,:order => "value DESC",:limit => x)
+    users=self.find(:all,:limit => x)
     ids=users.map do |u|
       u.id
     end
@@ -69,6 +67,24 @@ class User < ActiveRecord::Base
     keywords.compact.uniq.first(15)
   end
 
+  def value(keyword_page)
+    v=ValueOrder.find_by_keyword_page_id_and_user_id(keyword_page.id,self.id)
+    v.value
+  end
+
+  def change_value(keyword_page,value)
+    v=ValueOrder.find_by_keyword_page_id_and_user_id(keyword_page.id,self.id)
+    v.value+=value
+    v.save
+  end
+
+  def total_value
+    ids=self.keyword_pages.map do |k|
+      k.id
+    end
+    vs=ValueOrder.find_all_by_keyword_page_id(ids)
+    vs.sum {|item| item.value}
+  end
   #Below methods are the user self,he is active,not positive.ie.He treat others as friends/strangers.
   def followings
     b=BeFollow.scoped_by_follower_id(self.id)
@@ -123,13 +139,13 @@ class User < ActiveRecord::Base
   def controlled_keywords
     pages=self.keyword_pages
     ks=pages.map do |p|
-      if p.top_owner==self
+      if p.top_user==self
         p.keyword
       else
         nil
       end
     end
-    ks.try(:compact).try(:uniq)
+    ks.compact
   end
 
 end

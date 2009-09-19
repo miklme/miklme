@@ -20,6 +20,8 @@ class KeywordPage < ActiveRecord::Base
   has_many :resources
   has_many :value_orders
   has_many :users,:through => :value_orders,:source => :user
+  has_one :top_user,:through => :value_orders,:source => :user,:order => "value DESC"
+  has_many :users_by_value,:through => :value_orders,:source => :user, :order => "value DESC"
 
   validates_uniqueness_of :keyword
   validates_presence_of :keyword
@@ -35,9 +37,5 @@ class KeywordPage < ActiveRecord::Base
     v.value
   end
 
-  def top_owner
-    users=self.users
-    users.find(:first,:order => "value_orders.value")
-  end
 
 end
