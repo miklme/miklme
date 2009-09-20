@@ -82,7 +82,7 @@ class User < ActiveRecord::Base
     ids=self.keyword_pages.map do |k|
       k.id
     end
-    vs=ValueOrder.find_all_by_keyword_page_id(ids)
+    vs=ValueOrder.find_all_by_keyword_page_id_and_user_id(ids,self.id)
     vs.sum {|item| item.value}
   end
   #Below methods are the user self,he is active,not positive.ie.He treat others as friends/strangers.
