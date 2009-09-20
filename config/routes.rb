@@ -2,7 +2,6 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :users,:collection => {:search => :get} do |user|
     user.resource :portrait
     user.resource :true_portrait
-    user.resources :searched_keywords
     user.resources :searched_contents
     user.resources :controlled_keywords
     user.resources :be_follows
@@ -26,6 +25,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :keyword_pages do |keyword_page|
     keyword_page.resources :related_keywords
   end
+  map.resources :searched_keywords
   map.activate '/activate/:activation_code', :controller => 'users', :action => 'activate'
   map.root :controller=>'sessions',:action=>'new'
 

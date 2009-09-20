@@ -1,4 +1,5 @@
 class SearchedKeywordsController < ApplicationController
+  skip_before_filter :login_required
   def new
     @new_keyword_pages=KeywordPage.find(:all,:order => "created_at DESC",:limit => 15)
     @high_resources=User.high_resources
@@ -19,13 +20,6 @@ class SearchedKeywordsController < ApplicationController
     keyword_page=KeywordPage.find_by_keyword(params[:keyword])
     render :update do |page|
       page.redirect_to keyword_page_path(keyword_page)
-    end
-    if current_user.searched_keywords.find_by_name(params[:keyword]).blank?
-      s=current_user.searched_keywords.create(:name => params[:keyword])
-    else
-      s=current_user.searched_keywords.find_by_name(params[:keyword])
-      s.searched_times=s.searched_times+1
-      s.save
     end
   end
 

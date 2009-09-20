@@ -47,7 +47,7 @@ class Resource < ActiveRecord::Base
   def self.find_by_user(user,page)
     paginate :per_page => 15,
       :page => page,
-      :conditions => ["user_id=? and keywords is NOT NULL",user.id],
+      :conditions => ["user_id=?",user.id],
       :order => "resources.created_at DESC"
   end
 
@@ -55,13 +55,13 @@ class Resource < ActiveRecord::Base
     paginate :per_page => 15,
       :page => page,
       :order => "resources.created_at DESC",
-      :conditions => ["resources.authority = :true and user_id=:user_id and keywords is NOT NULL",{:true =>true,:user_id => user.id }]
+      :conditions => ["resources.authority = :true and user_id=:user_id",{:true =>true,:user_id => user.id }]
   end
 
   def self.not_authority_resources(user,page)
     paginate :per_page => 15,
       :page => page,
-      :conditions => ["resources.authority = :false and user_id=:user_id and keywords is NOT NULL",{:false =>false,:user_id => user.id }],
+      :conditions => ["resources.authority = :false and user_id=:user_id",{:false =>false,:user_id => user.id }],
       :order => "resources.created_at DESC"
   end
 

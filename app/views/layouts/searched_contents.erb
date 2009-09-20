@@ -16,16 +16,16 @@
         <div class="sw_tb">
           <ul>
             <li>
-              <%= link_to "Mikl",new_user_searched_keyword_path(current_user) %>
+              <%= link_to "Mikl",new_searched_keyword_path %>
             </li>
             <li>
-              <%= link_to ".Me",user_path(current_user) %>
+              <%= link_to_me %>
             </li>
           </ul>
         </div>
         <div class="sw_tbb"></div>
         <div class="sw_box">
-          <h2><%= link_to "Mikl.Me",new_user_searched_keyword_path(current_user),:class => "sw_logo"%>
+          <h2><%= link_to "Mikl.Me",new_searched_keyword_path,:class => "sw_logo"%>
           </h2>
           <div class="sw_bd">
             <% form_tag :action => :show do%>

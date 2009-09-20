@@ -1,4 +1,5 @@
 class BlogResourcesController < ApplicationController
+  skip_before_filter :login_required,:only => [:show]
   before_filter :load_user,:user_keywords,:except => [:auto_complete_for_keyword_page_keyword]
   def new
     @blog_resource=current_user.blog_resources.build
