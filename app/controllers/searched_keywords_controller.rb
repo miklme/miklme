@@ -1,13 +1,13 @@
 class SearchedKeywordsController < ApplicationController
   def new
-    @new_keywords=Resource.new_keywords
-    @high_keywords=User.high_keywords
+    @new_keyword_pages=KeywordPage.find(:all,:order => "created_at DESC",:limit => 15)
+    @high_resources=User.high_resources
     @top_users=User.find(:all,:limit => 15)
   end
 
 
-  def auto_complete_for_resource_keywords
-    keyword_pages=KeywordPage.find_with_ferret(params[:resource][:keywords]+"~")
+  def auto_complete_for_keyword_page_keyword
+    keyword_pages=KeywordPage.find_with_ferret(params[:keyword_page][:keyword]+"~")
     k2=keyword_pages.map do |k|
       k.keyword
     end
@@ -16,14 +16,14 @@ class SearchedKeywordsController < ApplicationController
   end
 
   def create
-    keyword_page=KeywordPage.find_by_keyword(params[:keywords])
+    keyword_page=KeywordPage.find_by_keyword(params[:keyword])
     render :update do |page|
-      page.redirect_to "/keyword_pages/#{keyword_page.id}"
+      page.redirect_to keyword_page_path(keyword_page)
     end
-    if current_user.searched_keywords.find_by_name(params[:keywords]).blank?
-      s=current_user.searched_keywords.create(:name => params[:keywords])
+    if current_user.searched_keywords.find_by_name(params[:keyword]).blank?
+      s=current_user.searched_keywords.create(:name => params[:keyword])
     else
-      s=current_user.searched_keywords.find_by_name(params[:keywords])
+      s=current_user.searched_keywords.find_by_name(params[:keyword])
       s.searched_times=s.searched_times+1
       s.save
     end

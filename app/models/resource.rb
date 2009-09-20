@@ -7,7 +7,6 @@ class Resource < ActiveRecord::Base
   named_scope :in_one_day,:conditions => ["resources.created_at > ?",Time.now.yesterday]
   named_scope :by_owner_value,:include => :owner,:order => 'users.value DESC'
 
-  before_validation :his_fields
   #这个方法不能用于ruby1.8.6
   #  def self.hot_keywords
   #    keywords=Resource.find(:all,:order => "resources.created_at DESC",:limit => 10000).map do |r|
@@ -66,12 +65,6 @@ class Resource < ActiveRecord::Base
       :order => "resources.created_at DESC"
   end
 
-  def self.new_keywords
-    keywords=Resource.find(:all,:order => "resources.created_at DESC",:limit => 1000).map do |r|
-      r.keywords
-    end
-    keywords.compact.uniq.first(15)
-  end
 
   def description_or_title
     if self.class.to_s=="LinkUrlResource"
@@ -81,10 +74,13 @@ class Resource < ActiveRecord::Base
     end
   end
 
-  def after_save_or_update
-    keyword_page=KeywordPage.find_by_keyword(self.keywords)
-    self.keyword_page=keyword_page
-    self.save
+  def before_save_or_update(params)
+    keyword_page=self.owner.keyword_pages.find_by_keyword(params)
+    if keyword_page.present?
+      self.keyword_page=keyword_page
+    else
+      self.errors.add("领域")
+    end
   end
   private
   def adjust_link_url
@@ -93,15 +89,4 @@ class Resource < ActiveRecord::Base
     end
   end
 
-  def his_fields
-    ks=self.owner.keyword_pages.map do |k|
-      k.keyword
-    end
-    ks.compact!
-    if ks.include?(self.keywords) or self.keywords.blank?
-      true
-    else
-      false
-    end
-  end
 end

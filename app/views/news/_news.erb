@@ -57,13 +57,13 @@
       <%="文章" %>
     <% end %>
     <%= link_to "#{news.resource.description}",news.resource.link_url,:popup => true,:class => "title" %>
-    （领域： <%=link_to news.resource.keywords,keyword_page_path(via_keyword_to_keyword_page(news.resource.keywords)) %>）
+    （领域： <%=link_to news.resource.keywords,keyword_page_path(news.resource.keyword_page) %>）
   </p>
 <% elsif news.news_type=="blog_resource" %>
   <p>
     <%= link_to "#{news.owner.name_or_nick_name(current_user)}",user_path(news.resource.owner) -%>发表了日志
     <%= link_to "#{news.resource.title}", user_blog_resource_path(news.resource.owner,news.resource),:popup => true,:class => "title"%>
-    （领域： <%=link_to news.resource.keywords,keyword_page_path(via_keyword_to_keyword_page(news.resource.keywords)) %>）
+    （领域： <%=link_to news.resource.keywords,keyword_page_path(news.resource.keyword_page) %>）
   </p>
 <% elsif news.news_type=="stranger_follow" %>
   <p>

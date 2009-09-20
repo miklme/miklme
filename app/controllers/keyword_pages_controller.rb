@@ -15,7 +15,6 @@ class KeywordPagesController < ApplicationController
 
   def create
     @keyword_page=KeywordPage.find_or_create_by_keyword(:keyword => params[:keyword_page][:keyword])
-    value_order=@user.value_orders.find_by_keyword_page_id(@keyword_page.id)
     begin
       @user.keyword_pages<<@keyword_page
       if @keyword_page.top_user==current_user

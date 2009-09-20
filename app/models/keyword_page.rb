@@ -8,7 +8,6 @@ class KeywordPage < ActiveRecord::Base
         :keyword => {
           :store => :yes
         },
-        :created_at_s=>{:index=>:untokenized,:store=>:yes},
       },
       :remote => true,
       #  生产环境下别忘记。

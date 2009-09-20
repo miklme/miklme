@@ -21,14 +21,18 @@ class BlogResourcesController < ApplicationController
     @blog_resource=current_user.blog_resources.build(params[:blog_resource])
     @blog_resource.authority=true
     @blog_resource.form="文字、文档"
-    if @blog_resource.save
-      @blog_resource.after_save_or_update
-      render :partial => "link_url_resources/succeed",:layout => "blog_resources"
-      n=current_user.news.create
-      n.news_type="blog_resource"
-      n.owner=current_user
-      n.resource=@blog_resource
-      n.save
+    @blog_resource.before_save_or_update(params[:blog_resource][:keywords])
+    if  @blog_resource.errors.blank?
+      if @blog_resource.save
+        render :partial => "link_url_resources/succeed",:layout => "blog_resources"
+        n=current_user.news.create
+        n.news_type="blog_resource"
+        n.owner=current_user
+        n.resource=@blog_resource
+        n.save
+      else
+        render :action => :new,:layout => "blog_resources"
+      end
     else
       render :action => :new,:layout => "blog_resources"
     end
@@ -37,10 +41,12 @@ class BlogResourcesController < ApplicationController
   def update
     @blog_resource=@user.blog_resources.find(params[:id])
     @blog_resource.update_attributes(params[:blog_resource])
+    @blog_resource.before_save_or_update(params[:blog_resource][:keywords])
     if @blog_resource.save
-      @blog_resource.after_save_or_update
       flash[:notice]="修改成功。"
-      redirect_to keyword_page_path(KeywordPage.find_by_keyword(@blog_resource.keywords))
+      redirect_to keyword_page_path(@blog_resource.keyword_page)
+    else
+      render :action => :edit,:layout => "blog_resources"
     end
   end
   private
