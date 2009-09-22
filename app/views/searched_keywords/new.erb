@@ -35,27 +35,23 @@
 </div>
 
 <div id="main">
-  <div class="top_users"> <p>价值点数最高的用户：
-
-      <% for u in @top_users %>
-        <%=link_to u.nick_name,user_path(u) %>(<%= u.total_value %>)
-      <% end %>
+  <div class="top_users">
     <p> <%= link_to_remote "更多，世界说>>>",:url => {:action => :about_all_keywords } %>
     </p>
     <div id="more" style="display:none">
-      <p>最新建立的领域： <% for page in @new_keyword_pages %>
-          <span><%= link_to page.keyword,keyword_page_path(page),:popup => true,:class => "keywords" %>
-          </span>
+      <% for k in @keyword_pages %>
+        <div class="left">
+          <%= link_to k.keyword,keyword_page_path(k) %>
+          <ul>
+            <%for r in k.resources.recent%>
+              <li>
+                <%= link_to_resource(r)%>
+              </li>
+              <% end %>
+            </ul>
+          </div>
         <% end %>
-      </p>
-      <p>
-        价值点数较高的用户话题：
-        <% for resource in @high_resources %>
-          <span><%= link_to resource.description_or_title,user_blog_resource_path(resource.owner,resource),:popup => true,:class => "keywords" %>
-          </span>
-        <% end %>
-      </p>
+      </div>
     </div>
+    <%= render :partial => "shared/footer" %>
   </div>
-  <%= render :partial => "shared/footer" %>
-</div>

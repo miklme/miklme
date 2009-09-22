@@ -20,4 +20,11 @@ module ApplicationHelper
       link_to ".Me",new_session_path
     end
   end
+  def link_to_resource(resource)
+    if resource.class.to_s=="LinkUrlResource"
+      link_to resource.description_or_title,resource.link_url
+    elsif resource.class.to_s=="BlogResource"
+      link_to resource.description_or_title,user_blog_resource_path(resource.owner,resource)
+    end
+  end
 end

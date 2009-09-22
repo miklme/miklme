@@ -5,8 +5,7 @@ class Resource < ActiveRecord::Base
   default_scope :order => "created_at DESC"
   named_scope :by_time,:order => "created_at DESC"
   named_scope :in_one_day,:conditions => ["resources.created_at > ?",Time.now.yesterday]
-  named_scope :by_owner_value,:include => :owner,:order => 'users.value DESC'
-
+  named_scope :recent,:limit => 10,:order => "created_at DESC"
   #这个方法不能用于ruby1.8.6
   #  def self.hot_keywords
   #    keywords=Resource.find(:all,:order => "resources.created_at DESC",:limit => 10000).map do |r|

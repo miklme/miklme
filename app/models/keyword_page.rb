@@ -29,7 +29,7 @@ class KeywordPage < ActiveRecord::Base
       :include => :value_orders,
       :conditions => [ "value_orders.user_id = ?", user_id ]
     } }
-
+  named_scope :hots,:limit => 15,:include => "users.size DESC"
 
   def value(user)
     v=ValueOrder.find_by_keyword_page_id_and_user_id(self.id,user.id)

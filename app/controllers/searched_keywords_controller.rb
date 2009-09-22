@@ -2,8 +2,7 @@ class SearchedKeywordsController < ApplicationController
   skip_before_filter :login_required
   def new
     @new_keyword_pages=KeywordPage.find(:all,:order => "created_at DESC",:limit => 15)
-    @high_resources=User.high_resources
-    @top_users=User.find(:all,:limit => 15)
+    @keyword_pages=KeywordPage.find(:all)
   end
 
 
