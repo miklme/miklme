@@ -3,7 +3,6 @@ class Resource < ActiveRecord::Base
   belongs_to :keyword_page
   belongs_to :owner,:class_name => 'User',:foreign_key =>"user_id"
   default_scope :order => "created_at DESC"
-  named_scope :by_time,:order => "created_at DESC"
   named_scope :in_one_day,:conditions => ["resources.created_at > ?",Time.now.yesterday]
   named_scope :recent,:limit => 10,:order => "created_at DESC"
   #这个方法不能用于ruby1.8.6

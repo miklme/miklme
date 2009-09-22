@@ -9,7 +9,7 @@
         <%= render :partial => "shared/field_profile",:locals => {:user => current_user,:keyword_page => @resource.keyword_page}%>
       </td>
       <td width="520">
-        <%= render :partial => "form" %>
+        <%= render :partial => "form",:object => comment %>
       </td>
     </tr>
   </table>

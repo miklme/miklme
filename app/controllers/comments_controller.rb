@@ -9,10 +9,6 @@ class CommentsController < ApplicationController
     @related_keywords=@keyword_page.related_keywords
     @comments=@resource.comments_by_value(params[:page])
     @comment=@resource.comments.build
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @comments }
-    end
   end
 
   def by_time
