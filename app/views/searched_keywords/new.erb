@@ -3,7 +3,7 @@
     <h1><%= link_to "Mikl",new_searched_keyword_path %><%= link_to_me %></h1>
     <div id="search_link_url">
       <p>
-        进入领域
+        搜索领域
         <%= link_to_remote "全站搜索",:url => {:action => :search_twitter}%>
       </p>
       <%= text_field 'keyword_page','keyword' %>

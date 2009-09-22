@@ -6,7 +6,7 @@
       <tr><td><%= f.label :link_url,"链接地址*" %></td><td><%= f.text_field :link_url %></td></tr>
       <tr><td><%= f.label :description,"一句简单的描述，也就是下图中蓝字部分的内容*：" %><%= image_tag "链接描述.jpg",:size => "331x78" %></td><td><%= f.text_field :description%></td></tr>
       <tr>
-        <td>这条链接是关于你的哪个领域，进入领域的方式如图*<%= image_tag "关键字.jpg",:size => "332x73" %></td>
+        <td>这条链接是关于你的哪个领域，搜索领域的方式如图*<%= image_tag "关键字.jpg",:size => "332x73" %></td>
         <td>
           <% for k in @ks %>
             <cite>
