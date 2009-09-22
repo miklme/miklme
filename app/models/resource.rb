@@ -26,22 +26,17 @@ class Resource < ActiveRecord::Base
     updated_at.advance(:hours => 8).to_s(:db)
   end
 
-  def self.find_by_keyword_page_and_time(keyword_page,page)
-    paginate_by_keyword_page_id keyword_page.id,
-      :per_page => 10,
-      :page => page,
-      :include => :owner,
-      :order => 'resources.created_at DESC'
+
+  def comments_by_value(page)
+    cs=self.comments.parent_comments
+    comments=cs.sort_by do |c|
+      c.owner.value(c.resource.keyword_page)
+    end
+    comments.reverse.paginate(:per_page => 10,:page => page)
   end
 
-  def self.find_by_keyword_page_and_value
-    
-  end
-
-  def self.search_by_keywords_and_form(keywords,form,page)
-    paginate :per_page => 10,
-      :page => page,
-      :conditions => ["keywords=:keywords and form=:form",{:keywords =>keywords,:form => form }]
+  def comments_by_time(page)
+    self.comments.parent_comments.paginate(:per_page => 10,:page => page,:order => "created_at DESC")
   end
 
   def self.find_by_user(user,page)
@@ -50,6 +45,7 @@ class Resource < ActiveRecord::Base
       :conditions => ["user_id=?",user.id],
       :order => "resources.created_at DESC"
   end
+
 
   def self.authority_resources(user,page)
     paginate :per_page => 15,

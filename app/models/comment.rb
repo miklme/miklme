@@ -10,17 +10,5 @@ class Comment < ActiveRecord::Base
   named_scope :parent_comments,:conditions => "parent_comment_id is NULL"
   validates_presence_of :content
 
-  def self.find_parent_comments(resource,page)
-    paginate :page => page,
-      :per_page => 10,
-      :conditions => ["resource_id=? and parent_comment_id is NULL",resource.id],
-      :order => "created_at DESC"
-  end
-
-  def self.find_parent_comments_by_time(resource,page)
-    paginate :page => page,
-      :per_page => 10,
-      :conditions => ["resource_id=? and parent_comment_id is NULL",resource.id],
-      :order => "comments.created_at DESC"
-  end
+  
 end

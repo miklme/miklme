@@ -26,6 +26,11 @@
       <div><%= link_to user_profile.nick_name,user_path(user_profile) %></div>
       <cite><%= link_to_value_help%><%= user_profile.total_value %></cite>
     </div>
+  <% else %>
+    <div>
+      <div><%= link_to user_profile.nick_name ,user_path(user_profile)%></div>
+      <cite><em><%="总价值点数：#{user_profile.total_value}" %></em></cite>
+    </div>
   <% end %>
 <% else %>
   <div>

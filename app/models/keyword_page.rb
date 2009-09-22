@@ -36,5 +36,15 @@ class KeywordPage < ActiveRecord::Base
     v.value
   end
 
+  def resources_by_value(page)
+    ss=self.resources.sort_by do |resource|
+      self.value_orders.find_by_user_id(resource.owner).value
+    end
+    ss.reverse.paginate(:per_page => 15,:page => page)
+  end
+
+  def resources_by_time(page)
+    self.resources.paginate(:all,:order => "resources.created_at DESC",:per_page => 15,:page => page)
+  end
 
 end

@@ -4,7 +4,7 @@
     <div id="search_link_url">
       <p>
         进入领域
-        <%= link_to_remote "搜索人们在做什么",:url => {:action => :search_twitter}%>
+        <%= link_to_remote "全站搜索",:url => {:action => :search_twitter}%>
       </p>
       <%= text_field 'keyword_page','keyword' %>
       <div class="auto_complete" id="keyword_page_keyword_auto_complete">
@@ -17,19 +17,26 @@
     <div id="search_twitter" style="display:none">
       <p>
         <%= link_to_remote "进入领域",:url => {:action => :search_link_url} %>
-        搜索人们在做什么
+        全站搜索
       </p>
-      <% form_tag :controller => :searched_contents,:action => :show do%>
-        <%= text_field :twitter_resource,:content,:size => 46%>
-        <%=submit_tag "搜索" %>
-      <% end %>
+      <form action=" http://mikl.me/searched_contents/all_results" id="cse-search-box">
+        <div>
+          <input type="hidden" name="cx" value="008267320220414684862:pkmhwv8hnu4" />
+          <input type="hidden" name="cof" value="FORID:9" />
+          <input type="hidden" name="ie" value="UTF-8" />
+          <input type="text" name="q" size="31" />
+          <input type="submit" name="sa" value="Search" />
+        </div>
+      </form>
+      <script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=en"></script>
+
     </div>
   </div>
 </div>
 
 <div id="main">
   <div class="top_users"> <p>价值点数最高的用户：
-   
+
       <% for u in @top_users %>
         <%=link_to u.nick_name,user_path(u) %>(<%= u.total_value %>)
       <% end %>
@@ -42,11 +49,11 @@
         <% end %>
       </p>
       <p>
-      价值点数较高的用户话题：
-      <% for resource in @high_resources %>
-        <span><%= link_to resource.description_or_title,user_blog_resource_path(resource.owner,resource),:popup => true,:class => "keywords" %>
-        </span>
-      <% end %>
+        价值点数较高的用户话题：
+        <% for resource in @high_resources %>
+          <span><%= link_to resource.description_or_title,user_blog_resource_path(resource.owner,resource),:popup => true,:class => "keywords" %>
+          </span>
+        <% end %>
       </p>
     </div>
   </div>

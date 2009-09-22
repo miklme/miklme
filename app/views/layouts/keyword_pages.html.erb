@@ -41,12 +41,9 @@
             <div id="sw_nav">
               <ul>
                 <li>
-                  <%= link_to "所有条目",keyword_page_path(@keyword_page) %>
+                  <%= link_to "按用户价值点数排序",keyword_page_path(@keyword_page) %>
                 </li>
-                <li><%= link_to_remote  "文字",:url => {:action => :show_text,:id => @keyword_page.id } %></li>
-                <li><%= link_to_remote "视频",:url => {:action => :show_film ,:id => @keyword_page.id }%></li>
-                <li><%= link_to_remote "音乐" ,:url =>{:action => :show_music,:id => @keyword_page.id }%></li>
-                <li><%= link_to_remote "图片" ,:url =>{:action => :show_picture,:id => @keyword_page.id }%></li>
+                <li><%= link_to "按时间排序",by_time_keyword_page_path(@keyword_page)%></li>
               </ul>
             </div><div id="sc_expPane">
               <div class="sw_menu" id="sw_rel">

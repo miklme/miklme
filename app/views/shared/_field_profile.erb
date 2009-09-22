@@ -26,6 +26,11 @@
       <div><%= link_to user.nick_name,user_path(user) %></div>
       <cite>价值点数<%= user.value(keyword_page) %></cite>
     </div>
+  <% else %>
+    <div>
+      <div><%= link_to user.nick_name ,user_path(user)%></div>
+      <cite><%="价值点数：#{user.value(keyword_page)}" %></cite>
+    </div>
   <% end %>
 <% else %>
   <div>

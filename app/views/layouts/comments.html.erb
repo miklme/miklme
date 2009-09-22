@@ -28,7 +28,7 @@
                 <%= link_to "用户价值点数",user_resource_comments_path(@user,@resource) %>
               </li>
               <li class="sw_navA">
-                <%= link_to_remote "发表时间",:action => :index_by_time %>
+                <%= link_to "发表时间",by_time_user_resource_comments_path(@user,@resource) %>
               </li>
             </ul>
           </div><div id="sc_expPane">
