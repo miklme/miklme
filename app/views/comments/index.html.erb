@@ -2,14 +2,17 @@
 <% for comment in @comments %>
   <%= render :partial => "comment",:object => comment %>
 <% end %>
-<table class="item" cellspacing="5">
-  <tr>
-    <td width="60">
-      <%= render :partial => "shared/field_profile",:locals => {:user => current_user,:keyword_page => @resource.keyword_page}%>
-    </td>
-    <td width="520">
-      <%= render :partial => "form" %>
-    </td>
-  </tr>
-</table>
+<% if logged_in? %>
+  <table class="item" cellspacing="5">
+    <tr>
+      <td width="60">
+        <%= render :partial => "shared/field_profile",:locals => {:user => current_user,:keyword_page => @resource.keyword_page}%>
+      </td>
+      <td width="520">
+        <%= render :partial => "form" %>
+      </td>
+    </tr>
+  </table>
+<% end %>
+
 
