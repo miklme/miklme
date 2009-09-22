@@ -1,5 +1,6 @@
 class ResourcesController < ApplicationController
   before_filter :load_user,:except => :auto_complete_for_keyword_page_keyword
+  skip_before_filter :login_required,:only => [:index,:authority,:not_authority]
   layout "link_url_resources"
   
   def index

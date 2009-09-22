@@ -123,13 +123,13 @@ class User < ActiveRecord::Base
   end
 
   def name_or_nick_name(current_user)
-    if self.regard_real_friend?(current_user)
-      self.name
-    elsif self==current_user
-      "我"
-    else
-      self.nick_name
-    end
+      if self.regard_real_friend?(current_user)
+        self.name
+      elsif self==current_user
+        "我"
+      else
+        self.nick_name
+      end
   end
   
   def controlled_keywords

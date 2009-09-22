@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
   before_filter :load_user_and_resource
-  skip_before_filter :login_required,:only => :index
+  skip_before_filter :login_required,:only => [:index,:by_time]
   # GET /comments
   # GET /comments.xml
   

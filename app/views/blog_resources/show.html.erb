@@ -1,6 +1,11 @@
 <li >
   <h3 class="title"><%= h @blog_resource.title %></h3>
-  <div class="sb_ph"><%= @blog_resource.created_at_s %></div>
+  <div class="sb_ph">
+    ——by  <%=link_to @blog_resource.owner.nick_name,user_path(@blog_resource.owner) %>，<%= @blog_resource.created_at_s %>
+  </div>
+  <div class="sb_ph">
+  领域：<%= link_to @blog_resource.keyword_page.keyword,keyword_page_path(@blog_resource.keyword_page) %>
+  </div>
 </li>
 <li>
   <div>

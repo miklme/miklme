@@ -1,6 +1,6 @@
 class KeywordPagesController < ApplicationController
   before_filter :load_user,:only => [:index,:new,:destroy,:create,:update,:edit]
-  skip_before_filter :login_required,:only => [:show,:show_text,:show_film,:show_music,:show_picture]
+  skip_before_filter :login_required,:only => [:show,:by_time]
   auto_complete_for :keyword_page,:keyword,:limit => 10
 
   def new
