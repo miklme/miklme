@@ -36,7 +36,7 @@
       <ul>
         <% for k in @keyword_pages %>
           <li>
-            <%=h k.keyword %>   价值点数：<%= k.value(@user) %>
+            <%=h k.keyword %>   价值点数：<%= k.field_value(@user) %>
           </li>
         <% end %>
       </ul>

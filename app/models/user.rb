@@ -63,7 +63,7 @@ class User < ActiveRecord::Base
     BlogResource.find_all_by_user_id(ids,:order => "resources.created_at DESC")
   end
 
-  def value(keyword_page)
+  def field_value(keyword_page)
     v=ValueOrder.find_by_keyword_page_id_and_user_id(keyword_page.id,self.id)
     v.value
   end

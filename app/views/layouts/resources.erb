@@ -25,7 +25,7 @@
               <% for k in @user.keyword_pages %>
               <p>
                 领域：<%=link_to k.keyword,keyword_page_path(KeywordPage.find_by_keyword(k.keyword)) %>
-                <cite>价值点数：<strong><%= k.value(@user) %></strong>,排名：(<span class="highlight"><%= ValueOrder.order(@user,KeywordPage.find_by_keyword(k.keyword)) %></span>/<%= k.users.size %>)
+                <cite>价值点数：<strong><%= k.field_value(@user) %></strong>,排名：(<span class="highlight"><%= ValueOrder.order(@user,KeywordPage.find_by_keyword(k.keyword)) %></span>/<%= k.users.size %>)
                 </cite>
               </p>
 <% end %>

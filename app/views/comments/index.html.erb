@@ -6,10 +6,10 @@
   <table class="item" cellspacing="5">
     <tr>
       <td width="60">
-        <%= render :partial => "shared/field_profile",:locals => {:user => current_user,:keyword_page => @resource.keyword_page}%>
+        <div><%= current_user.nick_name %></div><cite>(不属于该领域)</cite>
       </td>
       <td width="520">
-        <%= render :partial => "form",:object => comment %>
+        <%= render :partial => "form",:object => @comment %>
       </td>
     </tr>
   </table>

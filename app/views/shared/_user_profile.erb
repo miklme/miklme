@@ -1,4 +1,4 @@
-<% if current_user.present? %>
+<% if logged_in? %>
   <% if user_profile.regard_real_friend?(current_user)%>
     <div>
       <div><%= link_to user_profile.name,user_path(user_profile)%></div><strong>(对方向我提供了真实姓名)</strong>

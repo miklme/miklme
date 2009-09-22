@@ -1,6 +1,6 @@
-<% form_for  ([@user,:resource,@comment]) do |f| %>
+<% form_for  ([form.resource.owner,:resource,form]) do |f| %>
   <%= f.error_messages %>
-<% if !@resource.commenters.include?(current_user) and current_user.keyword_pages.include?(@resource.keyword_page) and !current_user==form.resource.owner%>
+<% if !form.resource.commenters.include?(current_user) and current_user.keyword_pages.include?(form.resource.keyword_page)%>
   <p>
     <%=f.radio_button :rating,"-1"%>
     <strong>价值点数-1</strong>

@@ -2,7 +2,7 @@
   Mikl.me为你呈现了下面这些条目，条目排列的顺序清晰而简单——用户在<strong>该领域内</strong>的价值点数
   的降序排列。
 </p>
-<% if current_user.present? and current_user.controlled_keywords.include?(@keyword_page.keyword).present? %>
+<% if logged_in? and current_user.controlled_keywords.include?(@keyword_page.keyword).present? %>
   <div><cite>根据<strong>用户在该领域内价值点数</strong>的高低，你的价值点数在该领域内的所有用户中是最高的。</cite>因此：</div>
   <ul>
     <li>
