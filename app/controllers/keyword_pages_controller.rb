@@ -1,6 +1,6 @@
 class KeywordPagesController < ApplicationController
-  before_filter :load_user,:only => [:index,:new,:destroy,:create,:update,:edit]
-  skip_before_filter :login_required,:only => [:show,:by_time]
+  before_filter :load_user,:only => [:new,:destroy,:create,:update,:edit]
+  skip_before_filter :login_required,:only => [:show,:by_time,:index]
   skip_before_filter :check_profile_status
   auto_complete_for :keyword_page,:keyword,:limit => 10
 
@@ -9,6 +9,10 @@ class KeywordPagesController < ApplicationController
     render :layout => "related_keywords"
   end
 
+  def index
+    render :layout => "related_keywords"
+  end
+  
   def destroy
     keyword_page=@user.keyword_pages.find(params[:id])
     keyword_page.destroy

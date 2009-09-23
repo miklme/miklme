@@ -11,7 +11,7 @@
       </div>
       <%= auto_complete_field :keyword_page_keyword,:url => {:action => 'auto_complete_for_keyword_page_keyword'},:frequency => 0.1,:after_update_element =>
         "function(element,value){" + remote_function(:url => {:action => :create},:with=>"'keyword='+element.value") + "}"%>
-      <div><%= link_to "新的分享",new_user_link_url_resource_path(current_user),:popup => true%></div>
+      <div><%= link_to "查看全部领域",keyword_pages_path,:popup => true%></div>
     </div>
 
     <div id="search_twitter" style="display:none">
