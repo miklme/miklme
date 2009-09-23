@@ -24,7 +24,7 @@
               <p>
                 <%= f.error_messages %>
               </p>
-                <%= f.text_field_with_auto_complete :keyword %>
+              <%= f.text_field_with_auto_complete :keyword %>
               <%= f.submit "添加该领域为我的领域" %>
             <% end %>
           <% end %>
@@ -45,7 +45,7 @@
             </p>
           <% end %>
           <table>
-            <tr><th>热门领域</th><th>最新创立领域</th><th>名字最长领域</th></tr>
+            <tr><th>热门领域</th><th>最新创立领域</th><th>名字最长领域</th><th></tr>
             <tr><td>
                 <ol>
                   <% for k in @hot_keyword_pages %>
@@ -72,8 +72,24 @@
                     </li>
                   <% end %>
                 </ol>
-              </td><tr>
+              </td></tr>
           </table>
+          <% if @news.present? %>
+            <table>
+              <tr>
+                <th>最新话题</th>
+              </tr>
+              <tr><td>
+                  <ul>
+                    <% for n in @news %>
+                      <li><%=link_to_resource(n) %>
+                        <span class="sb_ph">领域：<%=link_to n.keyword_page.keyword,keyword_page_path(n.keyword_page) %></span>
+                      </li>
+                    <% end %>
+                  </ul>
+                </td></tr>
+            </table>
+          <% end %>
         </div></div></div></div>
   <%= render :partial => "shared/footer" %>
 </body>

@@ -4,7 +4,8 @@ class Resource < ActiveRecord::Base
   belongs_to :owner,:class_name => 'User',:foreign_key =>"user_id"
   default_scope :order => "created_at DESC"
   named_scope :in_one_day,:conditions => ["resources.created_at > ?",Time.now.yesterday]
-  named_scope :recent,:limit => 10,:order => "created_at DESC"
+  named_scope :recent,:limit => 15,:order => "resources.created_at DESC"
+  named_scope :blog_and_link_url_resources, :conditions => "type='BlogResource' or type='LinkUrlResource'"
   #这个方法不能用于ruby1.8.6
   #  def self.hot_keywords
   #    keywords=Resource.find(:all,:order => "resources.created_at DESC",:limit => 10000).map do |r|

@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   skip_before_filter :login_required,:except=>[:edit,:update,:show]
-  skip_before_filter :check_profile_status
+  skip_before_filter :check_profile_status,:except => :show
   auto_complete_for :keyword_page,:keyword
   def new
     session[:user_id]=nil

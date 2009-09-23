@@ -19,12 +19,6 @@ class SearchedKeywordsController < ApplicationController
     end
   end
 
-  def about_all_keywords
-    render :update do |page|
-      page.visual_effect :toggle_blind,"more"
-    end
-  end
-
   def search_link_url
     render :update do |page|
       page.visual_effect(:fade,"search_twitter",:duration => 0.5)

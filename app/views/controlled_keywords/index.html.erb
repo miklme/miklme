@@ -1,11 +1,12 @@
 <div id="text">
-  <h1><%= @user.nick_name %>所擅长的领域 </h1>
-    <strong>(也就是价值点数在该领域中较高的领域。)</strong>
-  <p>
-    <% for keyword in @controlled_keywords  %>
-      <span>
-        <%= link_to "#{keyword}","/keyword_pages/#{KeywordPage.find_by_keyword(keyword).id}",:popup => true %>
-      </span>
+  <h1><%= @user.nick_name %>关注的人的"领域" </h1>
+  <% for u in @user.followings %>
+    <p>
+      <%=link_to u.name_or_nick_name(current_user),user_path(u) %>：
+      <% for page in u.keyword_pages %>
+      <cite> 领域：<%=link_to page.keyword,keyword_page_path(page) %>，价值点数：<%= page.field_value(u) %>
+      </cite>
+        <% end %>
+      </p>
     <% end %>
-  </p>
-</div>
+  </div>

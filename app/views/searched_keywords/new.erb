@@ -35,23 +35,5 @@
 </div>
 
 <div id="main">
-  <div class="top_users">
-    <p> <%= link_to_remote "更多，世界说>>>",:url => {:action => :about_all_keywords } %>
-    </p>
-    <div id="more" style="display:none">
-      <% for k in @keyword_pages %>
-        <div class="left">
-          <%= link_to k.keyword,keyword_page_path(k) %>
-          <ul>
-            <%for r in k.resources.recent%>
-              <li>
-                <%= link_to_resource(r)%>
-              </li>
-              <% end %>
-            </ul>
-          </div>
-        <% end %>
-      </div>
-    </div>
     <%= render :partial => "shared/footer" %>
   </div>
