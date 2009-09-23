@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   attr_accessor :password_confirmation
   attr_protected :value
   named_scope :by_total_value,:order => "users.total_value DESC"
+  named_scope :ten,:limit => 10
 
   has_many :value_orders
   has_many :keyword_pages,:through => :value_orders,:source => :keyword_page
@@ -65,7 +66,11 @@ class User < ActiveRecord::Base
 
   def field_value(keyword_page)
     v=ValueOrder.find_by_keyword_page_id_and_user_id(keyword_page.id,self.id)
-    v.value
+    if v.present?
+      v.value
+    else
+      "<strong>无</strong>(未加入该领域)"
+    end
   end
 
   def change_value(keyword_page,value)
@@ -123,13 +128,13 @@ class User < ActiveRecord::Base
   end
 
   def name_or_nick_name(current_user)
-      if self.regard_real_friend?(current_user)
-        self.name
-      elsif self==current_user
-        "我"
-      else
-        self.nick_name
-      end
+    if self.regard_real_friend?(current_user)
+      self.name
+    elsif self==current_user
+      "我"
+    else
+      self.nick_name
+    end
   end
   
   def controlled_keywords

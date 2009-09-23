@@ -59,6 +59,12 @@
                     <% end %>
                   <% end %>
                 </ul>
+                <h2>该领域内用户TOP10</h2>
+                <ol>
+                  <% for u in @keyword_page.users_by_value.ten %>
+                    <li><%=link_to u.nick_name,user_path(u) %>（<strong><%= u.field_value(@keyword_page) %></strong>）</li>
+                  <% end %>
+                </ol>
               </div>
             </div>
           </div>
