@@ -30,7 +30,7 @@
   <div class="top_users"> <p>价值点数最高的用户：
    
       <% for u in @top_users %>
-        <%=link_to u.nick_name,user_path(u) %>(<%= u.value %>)
+        <%=link_to u.nick_name,user_path(u) %>(<%= u.total_value %>)
       <% end %>
     <p> <%= link_to_remote "更多，世界说>>>",:url => {:action => :about_all_keywords } %>
     </p>

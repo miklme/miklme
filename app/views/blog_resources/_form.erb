@@ -12,11 +12,16 @@
       <%= fckeditor_textarea(:blog_resource,:content,:toolbarSet => "Easy",:width => '90%',:height => '300px') %>
     </li>
     <li>
-      <p><%= f.label :keywords,"你需要在你的哪个'领域'发布这个条目？如果都不太符合，那么你应点击这里设定自己的'领域'*" %>
+      <p>你需要在你的哪个'领域'发布这个条目？＊如果都不太符合，那么你应点击<%= link_to "这里",edit_user_path(@user) %>
+        设定自己的“领域”
       </p>
-      <p>
-        <%= text_field_with_auto_complete :keyword_page,:keyword,{:onfocus => "keyword_page_keyword_auto_completer.activate()"},{} %>
-      </p>
+      <% for k in @ks %>
+        <cite>
+          <%= f.radio_button :keywords,k.keyword %><%= k.keyword %>
+        </cite>
+      <% end %>
+    </li>
+    <li>
       <p>
         <%= image_tag "关键字.jpg",:size => "332x73" %>
       </p>

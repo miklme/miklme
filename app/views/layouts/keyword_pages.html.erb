@@ -50,6 +50,8 @@
               </ul>
             </div><div id="sc_expPane">
               <div class="sw_menu" id="sw_rel">
+                <h2>目前所在领域</h2>
+                <cite><%=h @keyword_page.keyword %></cite>
                 <h2>相关领域</h2>
                 <ul>
                   <% if not @related_keywords.blank? %>
@@ -65,9 +67,9 @@
           </div>
           <div id="content">
             <% if flash[:notice].present? %>
-            <p>
-            <strong><%=h flash[:notice] %></strong>
-            </p>
+              <p>
+                <strong><%=h flash[:notice] %></strong>
+              </p>
             <% end %>
             <%= @content_for_layout %>
           </div></div></div></div>

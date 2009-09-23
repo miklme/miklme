@@ -17,11 +17,11 @@
             </td>
             <td width="100">
               <% if resource.owner == current_user %>
-                <div><%= link_to "编辑",edit_user_link_url_resource_path(resource.owner,resource),:popup => true %>(领域：<strong><%= resource.keywords %></strong>)
+                <div><%= link_to "编辑",edit_user_link_url_resource_path(resource.owner,resource),:popup => true %>(所在领域：<strong><%= resource.keywords %></strong>)
                 </div>
               <% end %>
             </td>
-            <td width="80"><%= render "shared/user_profile",:object => resource.owner %>
+            <td width="80"><%= render :partial => "shared/field_profile",:locals => {:user => resource.owner,:keyword_page => resource.keyword_page} %>
             </td>
           </tr>
         </tbody>
@@ -43,11 +43,11 @@
             </td>
             <td width="100">
               <% if  resource.owner == current_user %>
-                <div><%= link_to "编辑",edit_user_blog_resource_path(resource.owner,resource),:popup => true %>(领域：<strong><%= resource.keywords %></strong>)
+                <div><%= link_to "编辑",edit_user_blog_resource_path(resource.owner,resource),:popup => true %>(所在领域：<strong><%= resource.keywords %></strong>)
                 </div>
               <% end %>
             </td>
-            <td width="80"><%= render "shared/user_profile",:object => resource.owner %>
+            <td width="80"><%= render :partial => "shared/field_profile",:locals => {:user => resource.owner,:keyword_page => resource.keyword_page}%>
             </td>
           </tr>
         </tbody>

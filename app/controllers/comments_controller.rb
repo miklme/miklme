@@ -47,18 +47,18 @@ class CommentsController < ApplicationController
     @comment = @resource.comments.build(params[:comment])
     @comment.owner=current_user
     if @comment.save
-      u=User.find(params[:user_id])
+      u=User.find(@comment.owner)
       if not u==current_user
-        if current_user.value<0 and params[:comment][:rating].to_i<0
-          flash[:notice]="不太爽的是，你的价值点数低于0了，暂时不能作出这种中肯评价。"
-        elsif current_user.value>=0 and params[:comment][:rating].to_i<0
+        if current_user.value(@resource.keyword_page)<0 and params[:comment][:rating].to_i<0
+          flash[:notice]="不太爽的是，这个领域内你的价值点数低于0了，暂时不能作出这种中肯评价。"
+        elsif current_user.value(@resource.keyword_page)>=0 and params[:comment][:rating].to_i<0
           flash[:notice]="差评成功，你的价值点数降低了0.5，对方降低了1.0"
-          u.value =u.value+params[:comment][:rating].to_i
-          current_user.value-=0.5
+          u.change_value(@resource.keyword_page,params[:comment][:rating].to_i)
+          current_user.change_value(@resource.keyword_page,-0.5)
           current_user.save
         else
           flash[:notice]="评论成功"
-          u.value =u.value+params[:comment][:rating].to_i
+          u.change_value @resource.keyword_page,params[:comment][:rating].to_i
           u.save
         end
       end

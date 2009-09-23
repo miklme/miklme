@@ -1,5 +1,13 @@
 <% form_for [@user,@be_follow] do |f| %>
   <%= f.error_messages %>
+  <div>
+    该用户的哪个"领域"吸引了你，或者说你认为该用户在哪个"领域"内最为擅长
+  <p>
+    <% for k in @user.keyword_pages %>
+      <%= radio_button :keyword_page,:keyword,k.keyword %><%= k.keyword %>
+    <% end %>
+  </p>
+  </div>
   <%= f.check_box :provide_name,{},true,false %>
   <%= f.label :provide_name,"我信任该用户，告诉他我的真实姓名，以便他知道我是谁。" %>
   <%= f.submit "就这样",:onclick => "this.disabled = true"%>

@@ -33,6 +33,8 @@
             </ul>
           </div><div id="sc_expPane">
             <div class="sw_menu" id="sw_rel">
+              <h2>条目所在领域</h2>
+              <cite><%=link_to @resource.keyword_page.keyword,keyword_page_path(KeywordPage.find_by_keyword(@resource.keyword_page.keyword)) %></cite>
               <h2>相关领域</h2>
               <ul>
                 <% if not @related_keywords.blank? %>
@@ -49,9 +51,9 @@
         <div id="content">
           <% if flash[:notice].present? %>
             <p>
-            <strong><%=h flash[:notice] %></strong>
+              <strong><%=h flash[:notice] %></strong>
             </p>
-            <% end %>
+          <% end %>
           <%= @content_for_layout %>
           <div class="sb_pag">
             <%= will_paginate @comments, :prev_label => '上一页', :next_label => '下一页' %>
