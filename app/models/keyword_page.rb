@@ -29,7 +29,8 @@ class KeywordPage < ActiveRecord::Base
       :include => :value_orders,
       :conditions => [ "value_orders.user_id = ?", user_id ]
     } }
-  named_scope :hots,:limit => 15,:include => "users.size DESC"
+  named_scope :hots,:limit => 10,:order => "users.size DESC"
+  
   def field_value(user)
     v=ValueOrder.find_by_keyword_page_id_and_user_id(self.id,user.id)
     v.value
@@ -46,4 +47,13 @@ class KeywordPage < ActiveRecord::Base
     self.resources.paginate(:all,:order => "resources.created_at DESC",:per_page => 15,:page => page)
   end
 
+  def self.hot_keyword_pages
+    a=self.find(:all).sort_by { |k| k.users.size }
+    a.reverse.first(15)
+  end
+
+  def self.long_name_keyword_pages
+    a=self.find(:all).sort_by {|k| k.keyword.length}
+    a.reverse.first(15)
+  end
 end

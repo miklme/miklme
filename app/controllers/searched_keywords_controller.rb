@@ -8,10 +8,7 @@ class SearchedKeywordsController < ApplicationController
 
   def auto_complete_for_keyword_page_keyword
     keyword_pages=KeywordPage.find_with_ferret(params[:keyword_page][:keyword]+"~")
-    k2=keyword_pages.map do |k|
-      k.keyword
-    end
-    @keywords=k2.uniq.first(15)
+    @keyword_pages=keyword_pages.first(15)
     render :layout => false
   end
 

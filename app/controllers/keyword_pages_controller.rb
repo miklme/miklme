@@ -6,10 +6,16 @@ class KeywordPagesController < ApplicationController
 
   def new
     @keyword_page=@user.keyword_pages.build
-    render :layout => "related_keywords"
+    @hot_keyword_pages=KeywordPage.hot_keyword_pages
+    @new_keyword_pages=KeywordPage.find(:all,:order => "created_at DESC",:limit => 15)
+    @long_name_keyword_pages=KeywordPage.long_name_keyword_pages
+    render :action => :index,:layout => "related_keywords"
   end
 
   def index
+    @hot_keyword_pages=KeywordPage.hot_keyword_pages
+    @new_keyword_pages=KeywordPage.find(:all,:order => "created_at DESC",:limit => 15)
+    @long_name_keyword_pages=KeywordPage.long_name_keyword_pages
     render :layout => "related_keywords"
   end
   
