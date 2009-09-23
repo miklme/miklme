@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
 
   def new
     if logged_in?
-      redirect_to new_user_searched_keyword_path(current_user)
+      redirect_to new_searched_keyword_path
     end
     @user=User.new
   end

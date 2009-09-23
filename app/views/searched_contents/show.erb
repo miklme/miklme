@@ -6,27 +6,30 @@
 </div>
 <div id="results">
   <ol class="sb_results" id="wg0">
+
+
     <% for t in @twitter_resources %>
-      <li>
-        <table class="item">
-          <tr>
-            <td width="60px">
-              <%= render :partial => "shared/user_profile",:object => t.owner %>
-            </td>
-            <td width="520px">
-              <p> <%= t.highlight(@content, :field=>:content,:pre_tag => "<span class='highlight'>",:post_tag => "</span>") %></p>
-              <div class="sb_meta"><%=h t.created_at_s  %></div>
-              <div id="replies">
-                <%= render :partial  => "replies/reply",:collection => t.replies %>
-              </div>
-              <%= link_to "回复",new_user_twitter_resource_reply_path(t.owner,t),:popup => ['新回复', 'height=180,width=490'] %>
-            </td>
-          </tr>
-        </table>
-      </li>
+        <li>
+          <table class="item">
+            <tr>
+              <td width="60px">
+      <%= render :partial => "shared/user_profile",:object => t.owner %>
+              </td>
+              <td width="520px">
+                <p> <%= t.highlight(@content, :field=>:content,:pre_tag => "<span class='highlight'>",:post_tag => "</span>") %></p>
+                <div class="sb_meta"><%=h t.created_at_s  %></div>
+                <div id="replies">
+      <%= render :partial  => "replies/reply",:collection => t.replies %>
+                </div>
+      <%= link_to "回复",new_user_twitter_resource_reply_path(t.owner,t),:popup => ['新回复', 'height=180,width=490'] %>
+              </td>
+            </tr>
+          </table>
+        </li>
     <% end %>
+
   </ol>
 </div>
-<div class="sb_pag">
+<div>
   <%= will_paginate @twitter_resources, :prev_label => '上一页', :next_label => '下一页' %>
 </div>

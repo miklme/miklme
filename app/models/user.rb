@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   attr_accessor :password_confirmation
   attr_protected :value
   named_scope :by_total_value,:order => "users.total_value DESC"
+  named_scope :ten,:limit => 10
 
   has_many :value_orders
   has_many :keyword_pages,:through => :value_orders,:source => :keyword_page
@@ -54,22 +55,22 @@ class User < ActiveRecord::Base
     u && u.authenticated?(password) ? u : nil
   end
 
-  def self.high_keywords
+  def self.high_resources
     x=(self.all.length/4).to_i
     users=self.find(:all,:limit => x)
     ids=users.map do |u|
       u.id
     end
-    ls=LinkUrlResource.find_all_by_user_id(ids,:order => "resources.created_at DESC")
-    keywords= ls.map do |l|
-      l.keywords
-    end
-    keywords.compact.uniq.first(15)
+    BlogResource.find_all_by_user_id(ids,:order => "resources.created_at DESC")
   end
 
-  def value(keyword_page)
+  def field_value(keyword_page)
     v=ValueOrder.find_by_keyword_page_id_and_user_id(keyword_page.id,self.id)
-    v.value
+    if v.present?
+      v.value
+    else
+      "<strong>无</strong>(未加入该领域)"
+    end
   end
 
   def change_value(keyword_page,value)
@@ -82,7 +83,8 @@ class User < ActiveRecord::Base
     ids=self.keyword_pages.map do |k|
       k.id
     end
-    vs=ValueOrder.find_all_by_keyword_page_id(ids)
+
+    vs=ValueOrder.find_all_by_keyword_page_id_and_user_id(ids,self.id)
     vs.sum {|item| item.value}
   end
   #Below methods are the user self,he is active,not positive.ie.He treat others as friends/strangers.

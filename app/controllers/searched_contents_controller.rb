@@ -10,4 +10,8 @@ class SearchedContentsController < ApplicationController
     @twitter_resources=TwitterResource.find_with_ferret(@content+"~",:page=> params[:page],:per_page => 15,:sort => s)
   end
 
+  def all_results
+    
+  end
+
 end

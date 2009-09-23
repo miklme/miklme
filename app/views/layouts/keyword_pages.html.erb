@@ -16,22 +16,20 @@
         <div class="sw_tb">
           <ul>
             <li>
-              <%= link_to "Mikl",new_user_searched_keyword_path(current_user) %>
+              <%= link_to "Mikl",new_searched_keyword_path %>
             </li>
             <li>
-              <%= link_to ".Me",user_path(current_user) %>
+              <%= link_to_me %>
             </li>
           </ul>
         </div>
         <div class="sw_tbb"></div>
         <div class="sw_box">
-          <h2><%= link_to "Mikl.Me",new_user_searched_keyword_path(current_user),:class => "sw_logo"%>
+          <h2><%= link_to "Mikl.Me",new_searched_keyword_path,:class => "sw_logo"%>
           </h2>
           <div class="sw_bd">
-            <!--位置正好的一个搜索框
-            -->
-<%#= text_field_with_auto_complete :resource, :keywords, {:onfocus => "resource_keywords_auto_completer.activate()"}, {:method => :get, :frequency => 0,:after_update_element =>
-"function(element,value){" + remote_function(:url => {:controller => :searched_keywords,:action => :create},:with=>"'keywords='+element.value") + "}"} %>
+           <!--搜索框
+           -->
           </div>
         </div>
       </div>
@@ -41,12 +39,9 @@
             <div id="sw_nav">
               <ul>
                 <li>
-                  <%= link_to "所有条目",keyword_page_path(@keyword_page) %>
+                  <%= link_to "按用户价值点数排序",keyword_page_path(@keyword_page) %>
                 </li>
-                <li><%= link_to_remote  "文字",:url => {:action => :show_text,:id => @keyword_page.id } %></li>
-                <li><%= link_to_remote "视频",:url => {:action => :show_film ,:id => @keyword_page.id }%></li>
-                <li><%= link_to_remote "音乐" ,:url =>{:action => :show_music,:id => @keyword_page.id }%></li>
-                <li><%= link_to_remote "图片" ,:url =>{:action => :show_picture,:id => @keyword_page.id }%></li>
+                <li><%= link_to "按时间排序",by_time_keyword_page_path(@keyword_page)%></li>
               </ul>
             </div><div id="sc_expPane">
               <div class="sw_menu" id="sw_rel">
@@ -62,6 +57,12 @@
                     <% end %>
                   <% end %>
                 </ul>
+                <h2>该领域内用户TOP10</h2>
+                <ol>
+                  <% for u in @keyword_page.users_by_value.ten %>
+                    <li><%=link_to u.nick_name,user_path(u) %>（<strong><%= u.field_value(@keyword_page) %></strong>）</li>
+                  <% end %>
+                </ol>
               </div>
             </div>
           </div>

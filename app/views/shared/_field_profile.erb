@@ -1,33 +1,35 @@
-<% if user.regard_real_friend?(current_user)%>
-  <div>
-    <div><%= link_to user.name,user_path(user)%></div><strong>(对方向我提供了真实姓名)</strong>
-    <cite><%= "价值点数：#{user.value(keyword_page)}" %></cite>
-  </div>
-<% elsif current_user.regard_real_friend?(user) %>
-  <div>
-    <div><%= link_to user.nick_name,user_path(user) %></div>
-    <strong>(我的真实朋友)</strong>
-    <cite><%= "价值点数：#{user.value(keyword_page)}" %></cite>
-  </div>
-<% elsif current_user.interested_in?(user)  %>
-  <div>
-    <div><%= link_to user.nick_name,user_path(user) %></div>
-    <strong>（我关注的人）</strong>
-    <cite><%= "价值点数：#{user.value(keyword_page)}" %></cite>
-  </div>
-<% elsif user.interested_in?(current_user)%>
-  <div>
-    <div><%= link_to user.nick_name,user_path(user) %></div>
-    <strong>（关注我的人）</strong>
-  </div>
-<% elsif user==current_user%>
-  <div>
-    <div><%= link_to user.nick_name,user_path(user) %></div>
-    <cite>价值点数<%= user.value(keyword_page) %></cite>
-  </div>
+<% if logged_in? %>
+  <% if user.regard_real_friend?(current_user)%>
+    <div>
+      <div><%= link_to user.name,user_path(user)%></div><strong>(对方向我提供了真实姓名)</strong>
+      <cite><%= "价值点数：#{user.field_value(keyword_page)}" %></cite>
+    </div>
+  <% elsif current_user.regard_real_friend?(user) %>
+    <div>
+      <div><%= link_to user.nick_name,user_path(user) %></div>
+      <strong>(我的真实朋友)</strong>
+      <cite><%= "价值点数：#{user.field_value(keyword_page)}" %></cite>
+    </div>
+  <% elsif current_user.interested_in?(user)  %>
+    <div>
+      <div><%= link_to user.nick_name,user_path(user) %></div>
+      <strong>（我关注的人）</strong>
+      <cite><%= "价值点数：#{user.field_value(keyword_page)}" %></cite>
+    </div>
+  <% elsif user.interested_in?(current_user)%>
+    <div>
+      <div><%= link_to user.nick_name,user_path(user) %></div>
+      <strong>（关注我的人）</strong>
+    </div>
+  <% else %>
+    <div>
+      <div><%= link_to user.nick_name ,user_path(user)%></div>
+      <cite><%="价值点数：#{user.field_value(keyword_page)}" %></cite>
+    </div>
+  <% end %>
 <% else %>
   <div>
     <div><%= link_to user.nick_name ,user_path(user)%></div>
-    <cite><%="价值点数：#{user.value(keyword_page)}" %></cite>
+    <cite><%="价值点数：#{user.field_value(keyword_page)}" %></cite>
   </div>
 <% end %>

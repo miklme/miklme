@@ -2,7 +2,8 @@
   Mikl.me为你呈现了下面这些条目，条目排列的顺序清晰而简单——用户在<strong>该领域内</strong>的价值点数
   的降序排列。
 </p>
-<% if current_user.controlled_keywords.include?(@keyword_page.keyword).present? %>
+
+<% if logged_in? and current_user.controlled_keywords.include?(@keyword_page.keyword).present? %>
   <div><cite>根据<strong>用户在该领域内价值点数</strong>的高低，你的价值点数在该领域内的所有用户中是最高的。</cite>因此：</div>
   <ul>
     <li>
@@ -10,10 +11,10 @@
       </span>，如果这样，你在该领域的条目就容易被相关领域的人看到。
     </li>
     <li>
-      <span>在这个领域中的<strong>各个条目</strong>下方的<cite>"n条回应"</cite>页面中用红字发表意见</span>
+      <span>在这个领域中的各个条目下方的"n条回应"页面中用红字发表意见</span>
     </li>
     <li>
-      <span>获得更多关注，进一步提高你在<strong>该领域</strong>价值点数</span>
+      <span>获得更多关注，进一步提高你在该领域价值点数</span>
     </li>
   </ul>
 <% end %>

@@ -1,7 +1,7 @@
 <div id="header">
   <div id="logo">
-    <%= link_to "Mikl",new_user_searched_keyword_path(header) %>
-    <%= link_to ".Me",user_path(current_user) %>
+    <%= link_to "Mikl",new_searched_keyword_path %>
+    <%= link_to_me %>
   </div>
   <div id="menu">
     <ul>
@@ -12,7 +12,7 @@
         <li>
           <%= link_to_unless_current "好友近况",user_news_index_path(current_user) %>
         </li>
-        <li><%= link_to_unless_current"我的领域",user_controlled_keywords_path(header) %>
+        <li><%= link_to_unless_current"周围人的领域",user_controlled_keywords_path(header) %>
         </li>
       <% else %>
         <li>

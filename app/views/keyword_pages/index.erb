@@ -1,0 +1,95 @@
+<%= stylesheet_link_tag "result"  %>
+<body>
+  <div style="background-image: url(../images/j2.jpg); opacity: 1" id="sw_im">
+  </div>
+  <div id="sw_page">
+    <div id="sw_hdr">
+      <div class="sw_tb">
+        <ul>
+          <li>
+            <%= link_to "Mikl",new_searched_keyword_path %>
+          </li>
+          <li>
+            <%= link_to_me %>
+          </li>
+        </ul>
+      </div>
+      <div class="sw_tbb"></div>
+      <div class="sw_box">
+        <h2><%= link_to "Mikl.Me",new_searched_keyword_path,:class => "sw_logo"%>
+        </h2>
+        <div class="sw_bd">
+          <% if controller.action_name=="new" %>
+            <% form_for [@user,@keyword_page] do |f| %>
+              <p>
+                <%= f.error_messages %>
+              </p>
+              <%= f.text_field_with_auto_complete :keyword %>
+              <%= f.submit "添加该领域为我的领域" %>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div id="sw_content">
+      <div id="sw_canvas">
+        <div id="sw_aside">
+          <div id="sw_nav">
+
+          </div>
+        </div>
+        <div id="content">
+          <% if flash[:notice].present? %>
+            <p>
+              <strong><%=h flash[:notice] %></strong>
+            </p>
+          <% end %>
+          <table>
+            <tr><th>热门领域</th><th>最新创立领域</th><th>名字最长领域</th><th></tr>
+            <tr><td>
+                <ol>
+                  <% for k in @hot_keyword_pages %>
+                    <li>
+                      <%=link_to k.keyword,keyword_page_path(k),:popup => true %><span class="sb_ph">(<%= k.users.size %>人)</span>
+                    </li>
+                  <% end %>
+                </ol>
+              </td>
+              <td>
+                <ol>
+                  <% for k in @new_keyword_pages %>
+                    <li>
+                      <%= link_to k.keyword,keyword_page_path(k),:popup => true %>
+                    </li>
+                  <% end %>
+                </ol>
+              </td>
+              <td>
+                <ol>
+                  <% for k in @long_name_keyword_pages %>
+                    <li>
+                      <%= link_to k.keyword,keyword_page_path(k),:popup => true %>
+                    </li>
+                  <% end %>
+                </ol>
+              </td></tr>
+          </table>
+          <% if @news.present? %>
+            <table>
+              <tr>
+                <th>最新话题</th>
+              </tr>
+              <tr><td>
+                  <ul>
+                    <% for n in @news %>
+                      <li><%=link_to_resource(n) %>
+                        <span class="sb_ph">领域：<%=link_to n.keyword_page.keyword,keyword_page_path(n.keyword_page) %></span>
+                      </li>
+                    <% end %>
+                  </ul>
+                </td></tr>
+            </table>
+          <% end %>
+        </div></div></div></div>
+  <%= render :partial => "shared/footer" %>
+</body>

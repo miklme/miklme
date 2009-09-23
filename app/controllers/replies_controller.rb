@@ -11,12 +11,6 @@ class RepliesController < ApplicationController
     @reply.owner=current_user
     respond_to do |format|
       if @reply.save
-        #暂时的设定是回复twitter并不改变价值点数。
-#        u=User.find(params[:user_id])
-#        if not u==current_user
-#          u.value=u.value+0.1
-#          u.save
-#        end
         n=@twitter_resource.owner.news.create
         n.owner=@twitter_resource.owner
         n.resource=@twitter_resource

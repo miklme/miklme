@@ -1,9 +1,9 @@
-<% form_for  ([@user,:resource,@comment]) do |f| %>
+<% form_for  ([form.resource.owner,:resource,form]) do |f| %>
   <%= f.error_messages %>
+<% if !form.resource.commenters.include?(current_user)%>
   <p>
     <%=f.radio_button :rating,"-1"%>
     <strong>价值点数-1</strong>
-
     <%=f.radio_button :rating,"0" %>
     不评分
     <%=f.radio_button :rating,"1" %>
@@ -13,6 +13,7 @@
       <cite>价值点数+3</cite>
     <% end %>
   </p>
+  <% end %>
   <p>
     <%= f.text_area :content,:size => "48x4"%>
   </p>
