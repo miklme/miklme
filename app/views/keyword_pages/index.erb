@@ -78,6 +78,7 @@
             <table>
               <tr>
                 <th>最新话题</th>
+                <th>价值点数较高用户的话题</th>
               </tr>
               <tr><td>
                   <ul>
@@ -87,7 +88,18 @@
                       </li>
                     <% end %>
                   </ul>
-                </td></tr>
+                </td>
+                <td>
+                  <ul>
+                    <% for g in @goods %>
+                      <li>
+                        <%= link_to_resource(g) %>
+                        <span class="sb_ph">领域：<%=link_to_page(g.keyword_page) %></span>
+                      </li>
+                    <% end %>
+                  </ul>
+                </td>
+              </tr>
             </table>
           <% end %>
         </div></div></div></div>

@@ -44,6 +44,13 @@ class KeywordPage < ActiveRecord::Base
     ss.reverse.paginate(:per_page => 15,:page => page)
   end
 
+  def top_resource
+    ss=self.resources.sort_by do |resource|
+      [self.value_orders.find_by_user_id(resource.owner).value,resource.created_at]
+    end
+    ss.reverse.first
+  end
+  
   def resources_by_time(page)
     self.resources.paginate(:all,:order => "resources.updated_at DESC",:per_page => 15,:page => page)
   end

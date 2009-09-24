@@ -27,4 +27,8 @@ module ApplicationHelper
       link_to resource.description_or_title,user_blog_resource_path(resource.owner,resource)
     end
   end
+  
+  def link_to_page(keyword_page)
+    link_to keyword_page.keyword,keyword_page_path(keyword_page),:popup => true
+  end
 end

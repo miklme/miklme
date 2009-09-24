@@ -21,8 +21,6 @@
         <li>
           <%= link_to_unless_current "#{header.nick_name}的好友",user_news_index_path(header) %>
         </li>
-        <li><%= link_to_unless_current "#{header.nick_name}的相关领域",user_controlled_keywords_path(header) %>
-        </li>
       <% end %>
 
       <% if header.id==current_user.id %>

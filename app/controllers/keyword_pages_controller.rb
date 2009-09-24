@@ -17,6 +17,11 @@ class KeywordPagesController < ApplicationController
     @new_keyword_pages=KeywordPage.find(:all,:order => "created_at DESC",:limit => 15)
     @long_name_keyword_pages=KeywordPage.long_name_keyword_pages
     @news=Resource.blog_and_link_url_resources.recent
+    gs=KeywordPage.find(:all).map do |k|
+      k.top_resource
+    end
+    gs=gs.compact.sort_by {|g| g.created_at}
+    @goods=gs.reverse
     render :layout => "related_keywords"
   end
   

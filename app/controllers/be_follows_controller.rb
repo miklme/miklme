@@ -40,8 +40,10 @@ class BeFollowsController < ApplicationController
     @be_follow.user=@user
     @be_follow.follower=current_user
     if @be_follow.save
-      k=KeywordPage.find_by_keyword(params[:keyword_page][:keyword])
-      @user.change_value(k,3)
+      if params[:keyword_page].present?
+        k=KeywordPage.find_by_keyword(params[:keyword_page][:keyword])
+        @user.change_value(k,3)
+      end
       @user.save
       n=@user.news.create
       n.owner=@user
@@ -57,35 +59,35 @@ class BeFollowsController < ApplicationController
     else
       render  :action => "new"
     end
-end
+  end
 
-# PUT /be_follows/1
-# PUT /be_follows/1.xml
-def update
-  @be_follow = BeFollow.find(params[:id])
+  # PUT /be_follows/1
+  # PUT /be_follows/1.xml
+  def update
+    @be_follow = BeFollow.find(params[:id])
 
-  respond_to do |format|
-    if @be_follow.update_attributes(params[:be_follow])
-      flash[:notice] = 'BeFollow was successfully updated.'
-      format.html { redirect_to(@be_follow) }
-      format.xml  { head :ok }
-    else
-      format.html { render :action => "edit" }
-      format.xml  { render :xml => @be_follow.errors, :status => :unprocessable_entity }
+    respond_to do |format|
+      if @be_follow.update_attributes(params[:be_follow])
+        flash[:notice] = 'BeFollow was successfully updated.'
+        format.html { redirect_to(@be_follow) }
+        format.xml  { head :ok }
+      else
+        format.html { render :action => "edit" }
+        format.xml  { render :xml => @be_follow.errors, :status => :unprocessable_entity }
+      end
     end
   end
-end
 
-# DELETE /be_follows/1
-# DELETE /be_follows/1.xml
-def destroy
-  @be_follow = BeFollow.find(params[:id])
-  @be_follow.destroy
-  @be_follow.user.save
-  respond_to do |format|
-    format.html { redirect_to(user_follows_path(current_user)) }
-    format.xml  { head :ok }
+  # DELETE /be_follows/1
+  # DELETE /be_follows/1.xml
+  def destroy
+    @be_follow = BeFollow.find(params[:id])
+    @be_follow.destroy
+    @be_follow.user.save
+    respond_to do |format|
+      format.html { redirect_to(user_follows_path(current_user)) }
+      format.xml  { head :ok }
+    end
   end
-end
 
 end

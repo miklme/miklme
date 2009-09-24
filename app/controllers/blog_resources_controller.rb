@@ -21,7 +21,6 @@ class BlogResourcesController < ApplicationController
   def create
     @blog_resource=current_user.blog_resources.build(params[:blog_resource])
     @blog_resource.authority=true
-    @blog_resource.form="文字、文档"
     @blog_resource.before_save_or_update(params[:blog_resource][:keywords])
     if  @blog_resource.errors.blank?
       if @blog_resource.save
