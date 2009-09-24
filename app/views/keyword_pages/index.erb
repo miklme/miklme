@@ -1,6 +1,6 @@
 <%= stylesheet_link_tag "result"  %>
 <body>
-  <div style="background-image: url(../images/j2.jpg); opacity: 1" id="sw_im">
+  <div style="background-image: url(/images/j2.jpg); opacity: 1" id="sw_im">
   </div>
   <div id="sw_page">
     <div id="sw_hdr">
@@ -45,7 +45,7 @@
             </p>
           <% end %>
           <table>
-            <tr><th>热门领域</th><th>最新创立领域</th><th>名字最长领域</th><th></tr>
+            <tr><th>热门领域</th><th>最新创立领域</th><th>名字最长领域</th><th>最受女生欢迎的领域</th></tr>
             <tr><td>
                 <ol>
                   <% for k in @hot_keyword_pages %>
@@ -72,7 +72,16 @@
                     </li>
                   <% end %>
                 </ol>
-              </td></tr>
+              </td>
+            <td>
+                  <ol>
+                    <% for p in @girls_pages %>
+                      <li>
+                        <%= link_to_page(p) %>
+                      </li>
+                    <% end %>
+                  </ol>
+                </td></tr>
           </table>
           <% if @news.present? %>
             <table>

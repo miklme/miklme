@@ -36,6 +36,7 @@ class User < ActiveRecord::Base
   accepts_nested_attributes_for :keyword_pages, :allow_destroy => true
 
   validates_confirmation_of :password,:message => "不一致"
+  validates_inclusion_of :sex,:within => 0..1,:message => "请选择你的性别",:on => :update
   validates_uniqueness_of :username,:case_sensitive => false
   validates_format_of :username,:with => %r{^[a-zA-Z][a-zA-Z0-9_]{4,15}$},:message =>"请避免使用太诡异的字符及汉字"
   validates_length_of :nick_name,:maximum=>10,:on => :update

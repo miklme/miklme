@@ -64,4 +64,18 @@ class KeywordPage < ActiveRecord::Base
     a=self.find(:all).sort_by {|k| k.keyword.length}
     a.reverse.first(15)
   end
+
+  def self.girls_pages
+    pages=self.find(:all).map do |k|
+      girls_amount=k.users.find(:all,:conditions => "sex=0").size
+      total_amount=k.users.find(:all).size+1
+      if (girls_amount/total_amount)>0.7
+        k
+      else
+        nil
+      end
+    end
+    pages=pages.compact.sort_by {|p| p.users.size}
+    pages.reverse
+  end
 end

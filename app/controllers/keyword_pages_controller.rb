@@ -8,6 +8,7 @@ class KeywordPagesController < ApplicationController
     @keyword_page=@user.keyword_pages.build
     @hot_keyword_pages=KeywordPage.hot_keyword_pages
     @new_keyword_pages=KeywordPage.find(:all,:order => "created_at DESC",:limit => 15)
+    @girls_pages=KeywordPage.girls_pages
     @long_name_keyword_pages=KeywordPage.long_name_keyword_pages
     render :action => :index,:layout => "related_keywords"
   end
@@ -16,6 +17,7 @@ class KeywordPagesController < ApplicationController
     @hot_keyword_pages=KeywordPage.hot_keyword_pages
     @new_keyword_pages=KeywordPage.find(:all,:order => "created_at DESC",:limit => 15)
     @long_name_keyword_pages=KeywordPage.long_name_keyword_pages
+    @girls_pages=KeywordPage.girls_pages
     @news=Resource.blog_and_link_url_resources.recent
     gs=KeywordPage.find(:all).map do |k|
       k.top_resource
