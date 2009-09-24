@@ -4,6 +4,7 @@ class ControlledKeywordsController < ApplicationController
   # GET /keywords.xml
   def index
     @controlled_keywords=@user.controlled_keywords
+    @followings=@user.followings.paginate(:page => params[:page],:per_page => 15)
   end
   
   # GET /keywords/1.xml

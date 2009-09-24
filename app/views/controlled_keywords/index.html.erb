@@ -1,12 +1,14 @@
 <div id="text">
   <h1><%= @user.nick_name %>关注的人的"领域" </h1>
-  <% for u in @user.followings %>
+  <% for u in @followings %>
     <p>
       <%=link_to u.name_or_nick_name(current_user),user_path(u) %>：
       <% for page in u.keyword_pages %>
-      <cite> 领域：<%=link_to page.keyword,keyword_page_path(page) %>，价值点数：<%= page.field_value(u) %>
-      </cite>
-        <% end %>
-      </p>
-    <% end %>
-  </div>
+        <cite> 领域：<%=link_to page.keyword,keyword_page_path(page) %>，价值点数：<%= page.field_value(u) %>
+        </cite>
+      <% end %>
+    </p>
+  <% end %>
+  <%= will_paginate @followings, :prev_label => '上一页', :next_label => '下一页' %>
+
+</div>

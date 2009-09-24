@@ -26,6 +26,8 @@
                 <% elsif @user.sex==0%>
                   她
                 <% end %>
+                <% else %>
+                  我
               <% end %>
               的个人信息：</h2>
             <p><%= render :partial => "shared/user_profile_full",:object => @user %></p>
