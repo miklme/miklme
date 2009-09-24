@@ -84,7 +84,7 @@
                   <ul>
                     <% for n in @news %>
                       <li><%=link_to_resource(n) %>
-                        <span class="sb_ph">领域：<%=link_to n.keyword_page.keyword,keyword_page_path(n.keyword_page) %></span>
+                        <span class="sb_ph">领域：<%=link_to_page(n.keyword_page) %></span>
                       </li>
                     <% end %>
                   </ul>

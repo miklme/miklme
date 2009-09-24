@@ -21,7 +21,7 @@ class KeywordPagesController < ApplicationController
       k.top_resource
     end
     gs=gs.compact.sort_by {|g| g.created_at}
-    @goods=gs.reverse
+    @goods=gs.reverse.first(15)
     render :layout => "related_keywords"
   end
   
