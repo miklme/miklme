@@ -40,7 +40,7 @@ class CommentsController < ApplicationController
   def create
     @comment = @resource.comments.build(params[:comment])
     @comment.owner=current_user
-    if @comment.save
+      if @comment.save
       u=User.find(@comment.resource.owner)
       if not u==current_user
         if current_user.field_value(@resource.keyword_page)<0 and params[:comment][:rating].to_i<0

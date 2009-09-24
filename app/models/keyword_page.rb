@@ -45,7 +45,7 @@ class KeywordPage < ActiveRecord::Base
   end
 
   def resources_by_time(page)
-    self.resources.paginate(:all,:order => "resources.created_at DESC",:per_page => 15,:page => page)
+    self.resources.paginate(:all,:order => "resources.updated_at DESC",:per_page => 15,:page => page)
   end
 
   def self.hot_keyword_pages
