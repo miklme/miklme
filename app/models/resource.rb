@@ -1,6 +1,7 @@
 class Resource < ActiveRecord::Base
   
   belongs_to :keyword_page
+  has_many :news,:dependent => :destroy
   belongs_to :owner,:class_name => 'User',:foreign_key =>"user_id"
   default_scope :order => "created_at DESC"
   named_scope :in_one_day,:conditions => ["resources.created_at > ?",Time.now.yesterday]

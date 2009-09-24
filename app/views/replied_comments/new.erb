@@ -1,5 +1,5 @@
 <% form_for [@replied_comment], :url => { :controller => :replied_comments,:action => "create" } do |f| %>
   <%= f.error_messages %>
-  <%= f.text_area :content,:size => "20x3" %>
+  <%= f.text_area :content,:size => "45x4" %>
   <%= f.submit "就这样"%>
 <% end %>

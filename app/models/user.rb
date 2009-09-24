@@ -12,6 +12,7 @@ class User < ActiveRecord::Base
 
   has_many :value_orders
   has_many :keyword_pages,:through => :value_orders,:source => :keyword_page
+  has_many :appear_keyword_pages,:through => :value_orders,:source => :keyword_page,:conditions => "hidden=false"
 
   has_many :news
   has_many :searched_keywords

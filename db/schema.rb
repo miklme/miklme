@@ -132,6 +132,7 @@ ActiveRecord::Schema.define(:version => 20090924040626) do
   create_table "value_orders", :force => true do |t|
     t.integer "user_id"
     t.integer "keyword_page_id"
+    t.boolean "hidden",                                        :default => false
     t.decimal "value",           :precision => 8, :scale => 1, :default => 0.0
   end
 

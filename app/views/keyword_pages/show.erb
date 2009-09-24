@@ -1,3 +1,6 @@
+<% if logged_in? and !current_user.keyword_pages.include?(@keyword_page)%>
+  (你需要对该领域的内容感兴趣，并且也乐于分享类似的内容才适合<%= link_to "加入该领域" ,:confirm => "sadf",:action => :join_field,:id => @keyword_page,:method => :post%>)
+<% end %>
 <p class="item">
   Mikl.me为你呈现了下面这些条目，条目默认按照用户在<strong>该领域内</strong>的价值点数降序排列。
 </p>

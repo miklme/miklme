@@ -19,13 +19,13 @@
         <h2><%= link_to "Mikl.Me",new_searched_keyword_path,:class => "sw_logo"%>
         </h2>
         <div class="sw_bd">
-          <% if controller.action_name=="new" %>
+          <% if logged_in? %>
             <% form_for [@user,@keyword_page] do |f| %>
               <p>
                 <%= f.error_messages %>
               </p>
               <%= f.text_field_with_auto_complete :keyword %>
-              <%= f.submit "添加该领域为我的领域" %>
+              <%= f.submit "创建这个领域" %>
             <% end %>
           <% end %>
         </div>
@@ -73,15 +73,15 @@
                   <% end %>
                 </ol>
               </td>
-            <td>
-                  <ol>
-                    <% for p in @girls_pages %>
-                      <li>
-                        <%= link_to_page(p) %>
-                      </li>
-                    <% end %>
-                  </ol>
-                </td></tr>
+              <td>
+                <ol>
+                  <% for p in @girls_pages %>
+                    <li>
+                      <%= link_to_page(p) %>
+                    </li>
+                  <% end %>
+                </ol>
+              </td></tr>
           </table>
           <% if @news.present? %>
             <table>
