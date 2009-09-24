@@ -3,7 +3,7 @@
   <% for u in @followings %>
     <p>
       <%=link_to u.name_or_nick_name(current_user),user_path(u) %>：
-      <% for page in u.keyword_pages %>
+      <% for page in u.appear_keyword_pages %>
         <cite> 领域：<%=link_to page.keyword,keyword_page_path(page) %>，价值点数：<%= page.field_value(u) %>
         </cite>
       <% end %>
