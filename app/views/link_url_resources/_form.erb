@@ -1,6 +1,7 @@
 <li>
   <% form_for [@user,@link_url_resource] do |f|%>
     <strong><%= f.error_messages %>
+      <%= flash[:keyword] %>
     </strong>
     <table cellspacing="5">
       <tr><td><%= f.label :link_url,"链接地址*" %></td><td><%= f.text_field :link_url %></td></tr>
