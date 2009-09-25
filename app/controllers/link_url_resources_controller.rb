@@ -45,6 +45,6 @@ class LinkUrlResourcesController < ApplicationController
 
   private
   def user_keywords
-    @ks=@user.keyword_pages
+    @ks=@user.appear_keyword_pages
   end
 end
