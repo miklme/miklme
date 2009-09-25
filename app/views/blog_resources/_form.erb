@@ -12,8 +12,8 @@
       <%= fckeditor_textarea(:blog_resource,:content,:toolbarSet => "Easy",:width => '90%',:height => '300px') %>
     </li>
     <li>
-      <p>你需要在你的哪个'领域'发布这个条目？＊如果都不太符合，那么你应点击<%= link_to "这里",edit_user_path(@user) %>
-        设定自己的“领域”
+      <p>这个条目发布在哪个领域* <%= link_to "管理我的领域",keyword_pages_path,:popup => true %>
+
       </p>
       <% for k in @ks %>
         <cite>

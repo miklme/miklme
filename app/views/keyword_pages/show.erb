@@ -2,7 +2,7 @@
   (你需要对该领域的内容感兴趣，并且也乐于分享类似的内容才适合<%= link_to "加入该领域" ,:confirm => "sadf",:action => :join_field,:id => @keyword_page,:method => :post%>)
 <% end %>
 <p class="item">
-  Mikl.me为你呈现了下面这些条目，条目默认按照用户在<strong>该领域内</strong>的价值点数降序排列。
+  Mikl.me为你呈现了下面这些条目，条目默认按照用户在<strong>该领域内</strong>的价值点数降序排列。某一用户的价值点数决定于别人的评价
 </p>
 
 <% if logged_in? and current_user.controlled_keywords.include?(@keyword_page.keyword).present? %>
@@ -11,12 +11,6 @@
     <li>
       <span>你应该仔细<%=link_to "修改相关领域",keyword_page_related_keywords_path(@keyword_page),:popup => ['修改相关领域', 'height=500,width=450'] %>
       </span>，如果这样，你在该领域的条目就容易被相关领域的人看到。
-    </li>
-    <li>
-      <span>用其他颜色的字体发表评论</span>
-    </li>
-    <li>
-      <span>你的条目在该领域内会获得靠前排位，获得更多关注，进一步提高你在该领域价值点数</span>
     </li>
   </ul>
 <% end %>
