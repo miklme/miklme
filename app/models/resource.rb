@@ -25,7 +25,10 @@ class Resource < ActiveRecord::Base
   def updated_at_s
     updated_at.advance(:hours => 8).to_s(:db)
   end
-
+  
+  def by_user_value
+    self.owner.total_value
+  end
 
   def comments_by_value(page)
     cs=self.comments.parent_comments
