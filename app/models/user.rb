@@ -7,7 +7,6 @@ class User < ActiveRecord::Base
 
   attr_accessor :password_confirmation
   attr_protected :value
-  named_scope :by_total_value,:order => "users.total_value DESC"
   named_scope :ten,:limit => 10
 
   has_many :value_orders

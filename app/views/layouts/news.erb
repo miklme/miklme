@@ -23,7 +23,6 @@
             <h2><%= link_to_unless_current "#{@user.nick_name}关注的人（#{@user.followings.size}）" ,user_follows_path(@user)%></h2>
             <h2><%= link_to_unless_current "关注#{@user.nick_name}的人（#{@user.followers.size}）",user_be_follows_path(@user) %></h2>
             <% end %>
-            <h2><%= link_to_unless_current "查找用户>>>", search_user_new_user_follow_path(@user)%></h2>
           </div>
           <div id="sidebar_bottom"></div>
         </div>
