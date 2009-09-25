@@ -1,35 +1,78 @@
 <div class="sb_ph"><h1>“<%=@content %>”的所有结果</h1>
-  <span>共 <%=h @twitter_resources.size %> 条</span><span class="sc_bullet">·</span>
-  <%= link_to "分享新的价值内容",new_user_twitter_resource_path(current_user) %>
-  <span class="sc_bullet">·</span>
-  <%= link_to "更新我在做什么",user_path(current_user) %>
+  <span>共 <%=h @resources.size %> 条</span><span class="sc_bullet">·</span>
 </div>
 <div id="results">
+  <div class="item">
+    这个是在整个网站范围内的搜索。搜索结果排序依据是用户的总的价值点数。
+  </div>
   <ol class="sb_results" id="wg0">
-
-
-    <% for t in @twitter_resources %>
-        <li>
-          <table class="item">
-            <tr>
-              <td width="60px">
-      <%= render :partial => "shared/user_profile",:object => t.owner %>
-              </td>
-              <td width="520px">
-                <p> <%= t.highlight(@content, :field=>:content,:pre_tag => "<span class='highlight'>",:post_tag => "</span>") %></p>
-                <div class="sb_meta"><%=h t.created_at_s  %></div>
-                <div id="replies">
-      <%= render :partial  => "replies/reply",:collection => t.replies %>
-                </div>
-      <%= link_to "回复",new_user_twitter_resource_reply_path(t.owner,t),:popup => ['新回复', 'height=180,width=490'] %>
-              </td>
-            </tr>
-          </table>
+    <% for resource in @resources %>
+      <li>
+        <% if resource.class.to_s=="LinkUrlResource" %>
+          <table>
+            <tbody>
+              <tr>
+                <td width="500">
+                  <h3><%= link_to_resource(resource)%></h3>
+                  <% for comment in resource.comments.recent_comments do%>
+                      <p>
+                        <%=truncate(comment.content,:length => 140) %>
+                      </p>
+                    <% end %>
+                    <ul class="sb_meta">
+                      <li><cite><%= link_to "#{resource.comments.size}条回应>>>", user_resource_comments_path(resource.owner,resource),:popup => true %></cite></li>
+                      <li><%=truncate(resource.link_url,:length => 33)  %></li>
+                    </ul>
+                  </td>
+                  <!--
+                  这个功能似乎伤害用户体验，用户会比较困惑
+                  <td width="100">
+                    <% if resource.owner == current_user %>
+                      <div><%= link_to "编辑",edit_user_link_url_resource_path(resource.owner,resource),:popup => true %>(所在领域：<strong><%= resource.keywords %></strong>)
+                      </div>
+                    <% end %>
+                  </td>
+                  -->
+                  <td width="80"><div><%= link_to resource.owner.nick_name,user_path(resource.owner) %></div>
+                    <cite><%= link_to_value_help %><%=resource.owner.total_value %></cite>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          <% elsif resource.class.to_s=="BlogResource" %>
+            <table>
+              <tbody>
+                <tr>
+                  <td width="500">
+                    <h3><%= link_to_resource(resource)%></h3>
+                    <p>
+                      <%= truncate(resource.content,:length => 120)%>
+                    </p>
+                    <ul class="sb_meta">
+                      <li><cite><%= link_to "#{resource.comments.size}条回应>>>", user_resource_comments_path(resource.owner,resource),:popup => true %></cite></li>
+                    </ul>
+                  </td>
+                  <!--
+                  同以上，对用户体验不利
+                  <td width="100">
+                    <% if  resource.owner == current_user %>
+                      <div><%= link_to "编辑",edit_user_blog_resource_path(resource.owner,resource),:popup => true %>(所在领域：<strong><%= resource.keywords %></strong>)
+                      </div>
+                    <% end %>
+                  </td>
+                  -->
+                  <td width="80"><div><%= link_to resource.owner.nick_name,user_path(resource.owner) %></div>
+                    <cite><%= link_to_value_help %><%=resource.owner.total_value %></cite>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          <% end %>
         </li>
-    <% end %>
+      <% end %>
 
-  </ol>
-</div>
-<div>
-  <%= will_paginate @twitter_resources, :prev_label => '上一页', :next_label => '下一页' %>
-</div>
+    </ol>
+  </div>
+  <div class="sb_pag">
+    <%= will_paginate @resources, :prev_label => '上一页', :next_label => '下一页' %>
+  </div>

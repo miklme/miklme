@@ -28,23 +28,10 @@
           <h2><%= link_to "Mikl.Me",new_searched_keyword_path,:class => "sw_logo"%>
           </h2>
           <div class="sw_bd">
-            <form action=" http://mikl.me/searched_contents/all_results" id="cse-search-box">
-              <div>
-                <input type="hidden" name="cx" value="008267320220414684862:pkmhwv8hnu4" />
-                <input type="hidden" name="cof" value="FORID:9" />
-                <input type="hidden" name="ie" value="UTF-8" />
-                <input type="text" name="q" size="31" />
-                <input type="submit" name="sa" value="Search" />
-              </div>
-            </form>
-            <script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=en"></script>
-            <!--
-            原先的twitter搜索
-            <% form_tag :action => :show do%>
-              <%= text_field :twitter_resource,:content,:size => 40%>
+            <% form_tag :controller => :searched_contents,:action => :show do%>
+              <%= text_field :resource,:content,:size => 40%>
               <%=submit_tag "搜索" %>
             <% end %>
-            -->
           </div>
         </div>
       </div>

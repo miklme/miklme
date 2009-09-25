@@ -1,3 +1,6 @@
+require 'rmmseg'
+require 'rmmseg/ferret'
+
 class Resource < ActiveRecord::Base
   
   belongs_to :keyword_page
