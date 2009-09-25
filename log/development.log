@@ -22620,3 +22620,428 @@ Rendered shared/_header (0.9ms)
   [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` INNER JOIN `be_follows` ON `users`.id = `be_follows`.follower_id WHERE ((`be_follows`.user_id = 1)) [0m
 Rendered shared/_footer (0.7ms)
 Completed in 38ms (View: 11, DB: 2) | 200 OK [http://localhost/users/1/follows/new/search_user]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-09-25 18:24:39) [GET]
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Redirected to http://localhost:3000/searched_keywords/new
+Completed in 22ms (DB: 1) | 302 Found [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20090523150301)
+Migrating to CreatePortraits (20090606045951)
+Migrating to CreateTruePortraits (20090611094020)
+Migrating to CreateResources (20090611163158)
+Migrating to CreateComments (20090712100836)
+Migrating to CreateAddresses (20090725045750)
+Migrating to CreateRelatedKeywords (20090729021859)
+Migrating to CreateKeywordPages (20090730121815)
+Migrating to CreateBeFollows (20090731054632)
+Migrating to CreateNews (20090808074346)
+Migrating to CreateReplies (20090810141711)
+Migrating to AddReplyIdColumnToNews (20090912062014)
+Migrating to ChangeResourceKeywordsLimit (20090913134145)
+Migrating to AddKeywordPageIdToResource (20090917052759)
+Migrating to CreateValueOrders (20090917072841)
+Migrating to RemoveValueFromUsers (20090919044414)
+Migrating to AddSexColumnToUsers (20090924040626)
+Migrating to AddHiddenColumnToValueOrders (20090925033518)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mMysql::Error: Duplicate column name 'hidden': ALTER TABLE `value_orders` ADD `hidden` tinyint(1) DEFAULT 0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to AddSexColumnToUsers (20090924040626)
+  [4;36;1mSQL (264.3ms)[0m   [0;1mALTER TABLE `users` DROP `sex`[0m
+  [4;35;1mSQL (144.0ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20090924040626'[0m
+Migrating to RemoveValueFromUsers (20090919044414)
+  [4;36;1mSQL (268.0ms)[0m   [0;1mALTER TABLE `users` ADD `value` decimal(8,1) DEFAULT 0[0m
+  [4;35;1mSQL (44.1ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20090919044414'[0m
+Migrating to CreateValueOrders (20090917072841)
+  [4;36;1mSQL (43.0ms)[0m   [0;1mDROP TABLE `value_orders`[0m
+  [4;35;1mSQL (45.7ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20090917072841'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `addresses`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `addresses`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `addresses`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `be_follows`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `be_follows`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `be_follows`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `comments`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `comments`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `keyword_pages`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `keyword_pages`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `keyword_pages`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `news`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `news`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `portraits`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `portraits`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `portraits`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW FIELDS FROM `related_keywords`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `related_keywords`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `related_keywords`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `replies`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `replies`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `replies`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `resources`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `resources`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `searched_keywords`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `searched_keywords`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `searched_keywords`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW FIELDS FROM `true_portraits`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `true_portraits`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `true_portraits`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20090523150301)
+Migrating to CreatePortraits (20090606045951)
+Migrating to CreateTruePortraits (20090611094020)
+Migrating to CreateResources (20090611163158)
+Migrating to CreateComments (20090712100836)
+Migrating to CreateAddresses (20090725045750)
+Migrating to CreateRelatedKeywords (20090729021859)
+Migrating to CreateKeywordPages (20090730121815)
+Migrating to CreateBeFollows (20090731054632)
+Migrating to CreateNews (20090808074346)
+Migrating to CreateReplies (20090810141711)
+Migrating to AddReplyIdColumnToNews (20090912062014)
+Migrating to ChangeResourceKeywordsLimit (20090913134145)
+Migrating to AddKeywordPageIdToResource (20090917052759)
+Migrating to CreateValueOrders (20090917072841)
+  [4;36;1mSQL (127.3ms)[0m   [0;1mCREATE TABLE `value_orders` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `keyword_page_id` int(11), `value` decimal(8,1) DEFAULT 0) ENGINE=InnoDB[0m
+  [4;35;1mSQL (55.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090917072841')[0m
+Migrating to RemoveValueFromUsers (20090919044414)
+  [4;36;1mSQL (333.5ms)[0m   [0;1mALTER TABLE `users` DROP `value`[0m
+  [4;35;1mSQL (44.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090919044414')[0m
+Migrating to AddSexColumnToUsers (20090924040626)
+  [4;36;1mSQL (277.8ms)[0m   [0;1mALTER TABLE `users` ADD `sex` int(11)[0m
+  [4;35;1mSQL (44.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090924040626')[0m
+Migrating to AddHiddenColumnToValueOrders (20090925033518)
+  [4;36;1mSQL (222.1ms)[0m   [0;1mALTER TABLE `value_orders` ADD `hidden` tinyint(1) DEFAULT 0[0m
+  [4;35;1mSQL (44.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090925033518')[0m
+Migrating to AddLastIpColumnToUsers (20090925112445)
+  [4;36;1mSQL (279.7ms)[0m   [0;1mALTER TABLE `users` ADD `last_ip` varchar(255)[0m
+  [4;35;1mSQL (55.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090925112445')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `addresses`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `addresses`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `addresses`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `be_follows`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `be_follows`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `be_follows`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `comments`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `comments`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `keyword_pages`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mdescribe `keyword_pages`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `keyword_pages`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `news`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `news`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `portraits`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `portraits`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `portraits`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW FIELDS FROM `related_keywords`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `related_keywords`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `related_keywords`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `replies`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `replies`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `replies`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `resources`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `resources`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `searched_keywords`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `searched_keywords`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `searched_keywords`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW FIELDS FROM `true_portraits`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `true_portraits`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `true_portraits`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW FIELDS FROM `value_orders`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `value_orders`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `value_orders`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-09-25 19:27:51) [GET]
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Redirected to http://localhost:3001/searched_keywords/new
+Completed in 35ms (DB: 1) | 302 Found [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchedKeywordsController#new (for 127.0.0.1 at 2009-09-25 19:27:51) [GET]
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mKeywordPage Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_pages` ORDER BY created_at DESC LIMIT 15[0m
+  [4;35;1mKeywordPage Load (0.0ms)[0m   [0mSELECT * FROM `keyword_pages` [0m
+Rendering template within layouts/searched_keywords
+Rendering searched_keywords/new
+Rendered shared/_footer (3.1ms)
+Completed in 70ms (View: 24, DB: 1) | 200 OK [http://localhost/searched_keywords/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-09-25 19:27:53) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mNews Load (0.1ms)[0m   [0mSELECT * FROM `news` WHERE (user_id=1) ORDER BY created_at DESC LIMIT 0, 25[0m
+  [4;36;1mNews Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+  [4;35;1mNews Load (0.1ms)[0m   [0mSELECT * FROM `news` WHERE (news_type='twitter_resource' or news_type='link_url_resource' or news_type='blog_resource') AND (`news`.`user_id` = 1) ORDER BY created_at DESC LIMIT 0, 20[0m
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) ORDER BY resources.created_at DESC, created_at DESC[0m
+  [4;35;1mResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mTwitterResource Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/resources
+Rendering users/show
+  [4;35;1mLinkUrlResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mLinkUrlResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) ORDER BY created_at DESC[0m
+Rendered twitter_resources/_form (5.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mBeFollow Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `be_follows`[0m
+  [4;35;1mBeFollow Load (0.1ms)[0m   [0mSELECT * FROM `be_follows` WHERE (`be_follows`.`user_id` = 1 AND `be_follows`.`follower_id` = 1) LIMIT 1[0m
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.`id` = 2) ORDER BY created_at DESC[0m
+  [4;35;1mBlogResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mComment Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.resource_id = 2) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT sum(`comments`.rating) AS sum_rating FROM `comments` WHERE (resource_id=2) [0m
+Rendered news/_news (120.1ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `be_follows` WHERE (`be_follows`.`user_id` = 1 AND `be_follows`.`follower_id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.`id` = 2) ORDER BY created_at DESC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mKeywordPage Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `keyword_pages`[0m
+  [4;36;1mKeywordPage Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_pages` WHERE (`keyword_pages`.`id` = 2) [0m
+Rendered news/_news (18.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `be_follows` WHERE (`be_follows`.`user_id` = 1 AND `be_follows`.`follower_id` = 1) LIMIT 1[0m
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.`id` = 1) ORDER BY created_at DESC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `keyword_pages` WHERE (`keyword_pages`.`id` = 2) [0m
+Rendered news/_news (5.5ms)
+Rendered shared/_header (2.2ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `be_follows` WHERE (`be_follows`.`user_id` = 1 AND `be_follows`.`follower_id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `be_follows` WHERE (`be_follows`.`user_id` = 1 AND `be_follows`.`follower_id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `be_follows` WHERE (`be_follows`.`user_id` = 1 AND `be_follows`.`follower_id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `be_follows` WHERE (`be_follows`.`user_id` = 1 AND `be_follows`.`follower_id` = 1) LIMIT 1[0m
+  [4;36;1mKeywordPage Load (0.3ms)[0m   [0;1mSELECT `keyword_pages`.* FROM `keyword_pages` INNER JOIN `value_orders` ON `keyword_pages`.id = `value_orders`.keyword_page_id WHERE ((`value_orders`.user_id = 1)) [0m
+  [4;35;1mValueOrder Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `value_orders`[0m
+  [4;36;1mValueOrder Load (0.1ms)[0m   [0;1mSELECT * FROM `value_orders` WHERE (`value_orders`.`user_id` = 1 AND `value_orders`.`keyword_page_id` IN (NULL)) [0m
+Rendered shared/_user_profile_full (11.8ms)
+  [4;35;1mKeywordPage Load (0.1ms)[0m   [0mSELECT `keyword_pages`.* FROM `keyword_pages` INNER JOIN `value_orders` ON `keyword_pages`.id = `value_orders`.keyword_page_id WHERE ((`value_orders`.user_id = 1) AND ((hidden=false))) [0m
+Rendered shared/_footer (1.3ms)
+Completed in 258ms (View: 184, DB: 9) | 200 OK [http://localhost/users/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-09-25 19:27:56) [DELETE]
+Redirected to http://localhost:3001/session/new
+Completed in 4ms (DB: 0) | 302 Found [http://localhost/session]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-09-25 19:27:56) [GET]
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering sessions/new
+  [4;35;1mKeywordPage Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `keyword_pages`[0m
+  [4;36;1mKeywordPage Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_pages` WHERE (`keyword_pages`.`id` = 1) [0m
+  [4;35;1mKeywordPage Load (0.1ms)[0m   [0mSELECT * FROM `keyword_pages` WHERE (`keyword_pages`.`id` = 3) [0m
+  [4;36;1mKeywordPage Load (0.0ms)[0m   [0;1mSELECT * FROM `keyword_pages` WHERE (`keyword_pages`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `keyword_pages` WHERE (`keyword_pages`.`id` = 3) [0m
+Rendered shared/_footer (1.4ms)
+Completed in 113ms (View: 91, DB: 2) | 200 OK [http://localhost/session/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-09-25 19:28:00) [POST]
+  Parameters: {"commit"=>"  进入Michael  ", "username"=>"michael", "password"=>"123456"}
+  [4;36;1mUser Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (username = 'michael' ) LIMIT 1[0m
+Redirected to http://localhost:3001/users/1
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`username`) = BINARY 'michael' AND `users`.id <> 1) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+Completed in 104ms (DB: 2) | 302 Found [http://localhost/session]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-09-25 19:28:00) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mNews Load (0.1ms)[0m   [0;1mSELECT * FROM `news` WHERE (user_id=1) ORDER BY created_at DESC LIMIT 0, 25[0m
+  [4;35;1mNews Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+  [4;36;1mNews Load (0.1ms)[0m   [0;1mSELECT * FROM `news` WHERE (news_type='twitter_resource' or news_type='link_url_resource' or news_type='blog_resource') AND (`news`.`user_id` = 1) ORDER BY created_at DESC LIMIT 0, 20[0m
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) ORDER BY resources.created_at DESC, created_at DESC[0m
+  [4;36;1mResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mTwitterResource Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/resources
+Rendering users/show
+  [4;36;1mLinkUrlResource Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mLinkUrlResource Load (0.1ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) ORDER BY created_at DESC[0m
+Rendered twitter_resources/_form (3.7ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mBeFollow Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `be_follows`[0m
+  [4;36;1mBeFollow Load (0.1ms)[0m   [0;1mSELECT * FROM `be_follows` WHERE (`be_follows`.`user_id` = 1 AND `be_follows`.`follower_id` = 1) LIMIT 1[0m
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.`id` = 2) ORDER BY created_at DESC[0m
+  [4;36;1mBlogResource Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mComment Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.resource_id = 2) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT sum(`comments`.rating) AS sum_rating FROM `comments` WHERE (resource_id=2) [0m
+Rendered news/_news (26.7ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `be_follows` WHERE (`be_follows`.`user_id` = 1 AND `be_follows`.`follower_id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.`id` = 2) ORDER BY created_at DESC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mKeywordPage Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `keyword_pages`[0m
+  [4;35;1mKeywordPage Load (0.1ms)[0m   [0mSELECT * FROM `keyword_pages` WHERE (`keyword_pages`.`id` = 2) [0m
+Rendered news/_news (16.3ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `be_follows` WHERE (`be_follows`.`user_id` = 1 AND `be_follows`.`follower_id` = 1) LIMIT 1[0m
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.`id` = 1) ORDER BY created_at DESC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `keyword_pages` WHERE (`keyword_pages`.`id` = 2) [0m
+Rendered news/_news (5.7ms)
+Rendered shared/_header (0.9ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `be_follows` WHERE (`be_follows`.`user_id` = 1 AND `be_follows`.`follower_id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `be_follows` WHERE (`be_follows`.`user_id` = 1 AND `be_follows`.`follower_id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `be_follows` WHERE (`be_follows`.`user_id` = 1 AND `be_follows`.`follower_id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `be_follows` WHERE (`be_follows`.`user_id` = 1 AND `be_follows`.`follower_id` = 1) LIMIT 1[0m
+  [4;35;1mKeywordPage Load (0.1ms)[0m   [0mSELECT `keyword_pages`.* FROM `keyword_pages` INNER JOIN `value_orders` ON `keyword_pages`.id = `value_orders`.keyword_page_id WHERE ((`value_orders`.user_id = 1)) [0m
+  [4;36;1mValueOrder Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `value_orders`[0m
+  [4;35;1mValueOrder Load (0.1ms)[0m   [0mSELECT * FROM `value_orders` WHERE (`value_orders`.`user_id` = 1 AND `value_orders`.`keyword_page_id` IN (NULL)) [0m
+Rendered shared/_user_profile_full (71.6ms)
+  [4;36;1mKeywordPage Load (0.1ms)[0m   [0;1mSELECT `keyword_pages`.* FROM `keyword_pages` INNER JOIN `value_orders` ON `keyword_pages`.id = `value_orders`.keyword_page_id WHERE ((`value_orders`.user_id = 1) AND ((hidden=false))) [0m
+Rendered shared/_footer (0.8ms)
+Completed in 200ms (View: 125, DB: 8) | 200 OK [http://localhost/users/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-09-25 19:30:24) [DELETE]
+Redirected to http://localhost:3001/session/new
+Completed in 4ms (DB: 0) | 302 Found [http://localhost/session]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-09-25 19:30:24) [GET]
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/sessions
+Rendering sessions/new
+  [4;36;1mKeywordPage Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `keyword_pages`[0m
+  [4;35;1mKeywordPage Load (0.1ms)[0m   [0mSELECT * FROM `keyword_pages` WHERE (`keyword_pages`.`id` = 1) [0m
+  [4;36;1mKeywordPage Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_pages` WHERE (`keyword_pages`.`id` = 3) [0m
+  [4;35;1mKeywordPage Load (0.0ms)[0m   [0mSELECT * FROM `keyword_pages` WHERE (`keyword_pages`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `keyword_pages` WHERE (`keyword_pages`.`id` = 3) [0m
+Rendered shared/_footer (0.7ms)
+Completed in 41ms (View: 19, DB: 2) | 200 OK [http://localhost/session/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-09-25 19:30:28) [POST]
+  Parameters: {"commit"=>"  进入Michael  ", "username"=>"michael", "password"=>"123456"}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (username = 'michael' ) LIMIT 1[0m
+Redirected to http://localhost:3001/users/1
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`username`) = BINARY 'michael' AND `users`.id <> 1) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Completed in 31ms (DB: 1) | 302 Found [http://localhost/session]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-09-25 19:30:28) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mNews Load (0.1ms)[0m   [0mSELECT * FROM `news` WHERE (user_id=1) ORDER BY created_at DESC LIMIT 0, 25[0m
+  [4;36;1mNews Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+  [4;35;1mNews Load (0.1ms)[0m   [0mSELECT * FROM `news` WHERE (news_type='twitter_resource' or news_type='link_url_resource' or news_type='blog_resource') AND (`news`.`user_id` = 1) ORDER BY created_at DESC LIMIT 0, 20[0m
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) ORDER BY resources.created_at DESC, created_at DESC[0m
+  [4;35;1mResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mTwitterResource Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `resources`[0m
+Rendering template within layouts/resources
+Rendering users/show
+  [4;35;1mLinkUrlResource Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mLinkUrlResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.user_id = 1) AND ( (`resources`.`type` = 'LinkUrlResource' ) ) ORDER BY created_at DESC[0m
+Rendered twitter_resources/_form (4.2ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mBeFollow Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `be_follows`[0m
+  [4;35;1mBeFollow Load (0.1ms)[0m   [0mSELECT * FROM `be_follows` WHERE (`be_follows`.`user_id` = 1 AND `be_follows`.`follower_id` = 1) LIMIT 1[0m
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM `resources` WHERE (`resources`.`id` = 2) ORDER BY created_at DESC[0m
+  [4;35;1mBlogResource Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `resources`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mComment Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.`id` = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.resource_id = 2) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT sum(`comments`.rating) AS sum_rating FROM `comments` WHERE (resource_id=2) [0m
+Rendered news/_news (26.5ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `be_follows` WHERE (`be_follows`.`user_id` = 1 AND `be_follows`.`follower_id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.`id` = 2) ORDER BY created_at DESC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mKeywordPage Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `keyword_pages`[0m
+  [4;36;1mKeywordPage Load (0.0ms)[0m   [0;1mSELECT * FROM `keyword_pages` WHERE (`keyword_pages`.`id` = 2) [0m
+Rendered news/_news (15.7ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `be_follows` WHERE (`be_follows`.`user_id` = 1 AND `be_follows`.`follower_id` = 1) LIMIT 1[0m
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM `resources` WHERE (`resources`.`id` = 1) ORDER BY created_at DESC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `keyword_pages` WHERE (`keyword_pages`.`id` = 2) [0m
+Rendered news/_news (5.2ms)
+Rendered shared/_header (0.9ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `be_follows` WHERE (`be_follows`.`user_id` = 1 AND `be_follows`.`follower_id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `be_follows` WHERE (`be_follows`.`user_id` = 1 AND `be_follows`.`follower_id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `be_follows` WHERE (`be_follows`.`user_id` = 1 AND `be_follows`.`follower_id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `be_follows` WHERE (`be_follows`.`user_id` = 1 AND `be_follows`.`follower_id` = 1) LIMIT 1[0m
+  [4;36;1mKeywordPage Load (0.1ms)[0m   [0;1mSELECT `keyword_pages`.* FROM `keyword_pages` INNER JOIN `value_orders` ON `keyword_pages`.id = `value_orders`.keyword_page_id WHERE ((`value_orders`.user_id = 1)) [0m
+  [4;35;1mValueOrder Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `value_orders`[0m
+  [4;36;1mValueOrder Load (0.0ms)[0m   [0;1mSELECT * FROM `value_orders` WHERE (`value_orders`.`user_id` = 1 AND `value_orders`.`keyword_page_id` IN (NULL)) [0m
+Rendered shared/_user_profile_full (8.3ms)
+  [4;35;1mKeywordPage Load (0.0ms)[0m   [0mSELECT `keyword_pages`.* FROM `keyword_pages` INNER JOIN `value_orders` ON `keyword_pages`.id = `value_orders`.keyword_page_id WHERE ((`value_orders`.user_id = 1) AND ((hidden=false))) [0m
+Rendered shared/_footer (0.7ms)
+Completed in 138ms (View: 61, DB: 8) | 200 OK [http://localhost/users/1]

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090924040626) do
+ActiveRecord::Schema.define(:version => 20090925112445) do
 
   create_table "addresses", :force => true do |t|
     t.string   "province"
@@ -125,6 +125,7 @@ ActiveRecord::Schema.define(:version => 20090924040626) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "sex"
+    t.string   "last_ip"
   end
 
   add_index "users", ["username"], :name => "index_users_on_username"
@@ -132,8 +133,8 @@ ActiveRecord::Schema.define(:version => 20090924040626) do
   create_table "value_orders", :force => true do |t|
     t.integer "user_id"
     t.integer "keyword_page_id"
-    t.boolean "hidden",                                        :default => false
     t.decimal "value",           :precision => 8, :scale => 1, :default => 0.0
+    t.boolean "hidden",                                        :default => false
   end
 
 end

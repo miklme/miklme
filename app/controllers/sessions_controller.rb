@@ -21,6 +21,8 @@ class SessionsController < ApplicationController
       new_cookie_flag = (params[:remember_me] == "1")
       new_cookie_flag
       redirect_to user_path(current_user)
+      current_user.last_ip=request.remote_ip
+      current_user.save
       flash[:notice] = "成功登入，即刻将体验Michael带给你的...无限"
     else
       flash[:error] = "出了点小问题，请重新输入密码"
