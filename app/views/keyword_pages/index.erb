@@ -12,6 +12,14 @@
           <li>
             <%= link_to_me %>
           </li>
+          <% if not logged_in? %>
+            <li>
+              <%= link_to "登录",new_session_path %>
+            </li>
+          <% end %>
+          <li>
+            <%= link_to "注册新用户",new_user_path %>
+          </li>
         </ul>
       </div>
       <div class="sw_tbb"></div>
@@ -25,7 +33,7 @@
                 <%= f.error_messages %>
               </p>
               <%= f.text_field_with_auto_complete :keyword %>
-              <%= f.submit "创建这个领域" %>
+              <%= f.submit "创建或加入这个领域" %>
             <% end %>
           <% end %>
         </div>

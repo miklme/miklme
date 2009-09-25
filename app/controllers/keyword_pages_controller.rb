@@ -6,7 +6,9 @@ class KeywordPagesController < ApplicationController
 
   def index
     @user=current_user
-    @keyword_page=@user.keyword_pages.build
+    if logged_in?
+      @keyword_page=@user.keyword_pages.build
+    end
     @hot_keyword_pages=KeywordPage.hot_keyword_pages
     @new_keyword_pages=KeywordPage.find(:all,:order => "created_at DESC",:limit => 15)
     @long_name_keyword_pages=KeywordPage.long_name_keyword_pages
@@ -28,11 +30,11 @@ class KeywordPagesController < ApplicationController
         flash[:notice]="成功。要知道，你是这个”领域“价值点数最高的人。想要让更多人认识到你，你最好让更多人关注你，
       或者是进入该领域页面，编辑“相关领域。”"
       else
-        flash[:notice]="成功。"
+        flash[:notice]="成功。你创建了这个领域，或者你加入了它。"
       end
       redirect_to :back
     rescue
-      flash[:notice]="出了点小问题，你已经添加该领域了，或者你没有填写名称。"
+      flash[:notice]="出了点小问题，你已经添加该领域了，或者你没有填写领域名称。"
       redirect_to :back
     end
   end
