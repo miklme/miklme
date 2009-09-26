@@ -9,7 +9,7 @@
     <li>
     <%= f.label :title,"标题" %><%= f.text_field :title %></li>
     <li>
-      <%= fckeditor_textarea(:blog_resource,:content,:toolbarSet => "Easy",:width => '90%',:height => '300px') %>
+      <%= fckeditor_textarea(:blog_resource,:content,:toolbarSet => "Easy",:width => '90%',:height => '400px') %>
     </li>
     <li>
       <p>这个条目发布在哪个领域* <%= link_to "管理我的领域",keyword_pages_path,:popup => true %>

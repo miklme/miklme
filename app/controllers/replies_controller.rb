@@ -27,15 +27,6 @@ class RepliesController < ApplicationController
   end
   # DELETE /replies/1
   # DELETE /replies/1.xml
-  def destroy
-    @reply = @twitter_resource.replies.find(params[:reply_id])
-    @reply.destroy
-
-    respond_to do |format|
-      format.html { redirect_to(replies_url) }
-      format.xml  { head :ok }
-    end
-  end
 
   private
   def find_user_and_resource
