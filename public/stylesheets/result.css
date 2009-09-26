@@ -93,9 +93,9 @@ cite a{text-decoration:underline}
     font-style:italic;
 }
 .title{
-background:#F7F7F7 none repeat scroll 0 0;
-border-bottom:1px solid #D8DFEA;
-border-top:1px solid #005EAC;}
+    background:#F7F7F7 none repeat scroll 0 0;
+    border-bottom:1px solid #D8DFEA;
+    border-top:1px solid #005EAC;}
 #sw_hdr, #sw_content, #sw_main, #sw_foot {
     float:left;
     width:100%;
@@ -106,7 +106,7 @@ border-top:1px solid #005EAC;}
     z-index:3;
 }
 .item p{margin-top:0px;
-margin-bottom:1em}
+        margin-bottom:1em}
 .twitter {font-size:larger;
 }
 .blog{line-height:15px}
@@ -143,27 +143,27 @@ margin-bottom:1em}
     word-wrap:break-word;
 }
 div#sw_nav ul, div#sw_nav li, #sw_nav a {
-display:block;
-margin:0;
-padding:0;
-width:170px;
-text-align:center
+    display:block;
+    margin:0;
+    padding:0;
+    width:170px;
+    text-align:center
 }
 div#sw_nav li {
-margin:0 0 1px;
+    margin:0 0 1px;
 
 }
 #sw_nav li a {
--moz-background-clip:border;
--moz-background-inline-policy:continuous;
--moz-background-origin:padding;
-background:#F3F3F3 none repeat scroll 0 0;
-color:#0033CC;
-padding:4px 20px;
-width:127px;
+    -moz-background-clip:border;
+    -moz-background-inline-policy:continuous;
+    -moz-background-origin:padding;
+    background:#F3F3F3 none repeat scroll 0 0;
+    color:#0033CC;
+    padding:4px 20px;
+    width:127px;
 }
 #sw_nav a:hover {
-background-color:#E5E5E5;
+    background-color:#E5E5E5;
 }
 
 #results{max-width:590px}
@@ -176,9 +176,15 @@ background-color:#E5E5E5;
     background: #FFF;
     margin-bottom: 8px;
     vertical-align: text-top;
-
 }
 
+.item_blue {
+    padding: 6px 12px;
+    border: 1px solid #d3d3d3;
+    margin-bottom: 8px;
+    vertical-align: text-top;
+    background:AliceBlue
+}
 .sw_menu {
     -moz-background-clip:border;
     -moz-background-inline-policy:continuous;
