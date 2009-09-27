@@ -20,7 +20,7 @@
           </p>
         </td>
       </tr>
-      <tr><td><%= f.check_box :authority,{},true,false %><%= f.label :authority,"链接内容是我的原创作品，如论坛发表的文字，原创视频、照片作品，原创音乐等。（原创作品可以获得更高的价值点数评分）" %></td>
+      <tr><td><%= f.check_box :authority,{},true,false %><%= f.label :authority,"链接内容为原创，如论坛发表的文字，原创视频、照片作品，原创音乐等。" %></td>
     </table>
     <p><%= f.submit "完成",:onclick => "this.disabled = true" %> </p>
   <% end %>

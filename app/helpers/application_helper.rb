@@ -31,4 +31,8 @@ module ApplicationHelper
   def link_to_page(keyword_page)
     link_to keyword_page.keyword,keyword_page_path(keyword_page),:popup => true
   end
+
+  def comment_value(keyword_page)
+    current_user.field_value(keyword_page)/10+0.5
+  end
 end

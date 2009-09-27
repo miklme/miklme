@@ -1,23 +1,20 @@
 <% form_for  ([form.resource.owner,:resource,form]) do |f| %>
   <%= f.error_messages %>
-<% if !form.resource.commenters.include?(current_user) and form.resource.owner.last_ip!=current_user.last_ip%>
-  <p>
-    <%=f.radio_button :rating,"-1"%>
-    <strong>价值点数-1</strong>
-    <%=f.radio_button :rating,"0" %>
-    不评分
-    <%=f.radio_button :rating,"1" %>
-    <cite>价值点数+1</cite>
-    <% if @resource.authority? %>
-      <%=f.radio_button :rating,"3" %>
-      <cite>价值点数+3</cite>
+  <% if !form.resource.commenters.include?(current_user) and form.resource.owner.last_ip!=current_user.last_ip%>
+    <p>
+      <%=f.radio_button :rating,"-"%>
+      <strong>价值点数-<%= comment_value(form.resource.keyword_page) %></strong>
+      <%=f.radio_button :rating,"=" %>
+      不评分
+      <%=f.radio_button :rating,"+" %>
+      <cite>价值点数+<%= comment_value(form.resource.keyword_page) %></cite>
     <% end %>
   </p>
-  <% end %>
-  <p>
-    <%= f.text_area :content,:size => "48x4"%>
-  </p>
-  <p>
-    <%= f.submit '就这样',:onclick => "this.disabled = true" %>
-  </p>
+<% end %>
+<p>
+  <%= f.text_area :content,:size => "48x4"%>
+</p>
+<p>
+  <%= f.submit '就这样',:onclick => "this.disabled = true" %>
+</p>
 <% end %>
