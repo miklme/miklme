@@ -8,13 +8,12 @@
       不评分
       <%=f.radio_button :rating,"+" %>
       <cite>价值点数+<%= comment_value(form.resource.keyword_page) %></cite>
-    <% end %>
+    </p>
+  <% end %>
+  <p>
+    <%= f.text_area :content,:size => "48x4"%>
   </p>
-<% end %>
-<p>
-  <%= f.text_area :content,:size => "48x4"%>
-</p>
-<p>
-  <%= f.submit '就这样',:onclick => "this.disabled = true" %>
-</p>
+  <p>
+    <%= f.submit '就这样',:onclick => "this.disabled = true" %>
+  </p>
 <% end %>
