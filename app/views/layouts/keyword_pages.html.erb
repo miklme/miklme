@@ -22,9 +22,9 @@
               <%= link_to_me %>
             </li>
             <% if not logged_in? %>
-            <li>
-              <%= link_to "登录",new_session_path %>
-            </li>
+              <li>
+                <%= link_to "登录",new_session_path %>
+              </li>
             <% end %>
             <li>
               <%= link_to "注册新用户",new_user_path %>
@@ -36,8 +36,10 @@
           <h2><%= link_to "Mikl.Me",new_searched_keyword_path,:class => "sw_logo"%>
           </h2>
           <div class="sw_bd">
-           <!--搜索框
-           -->
+            <% form_tag :controller => :searched_contents,:action => :show do%>
+              <%= text_field :resource,:content,:size => 40%>
+              <%=submit_tag "搜索全部" %>
+            <% end %>
           </div>
         </div>
       </div>

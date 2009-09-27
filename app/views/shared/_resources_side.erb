@@ -11,9 +11,12 @@
       <li>
         <%= link_to_unless_current "非原创内容(#{@user.resources.scoped_by_authority(false).in_one_day.size}新)",not_authority_user_resources_path(@user) %>
       </li>
+      <!--
+      暂时去掉了这部分功能。
       <li>
         <%= link_to_unless_current "我的点点滴滴（#{@user.twitter_resources.in_one_day.size}新）",user_twitter_resources_path(@user) %>
       </li>
+      -->
     </ul>
   </div>
 </div>

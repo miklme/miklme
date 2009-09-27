@@ -24,6 +24,7 @@ class BlogResourcesController < ApplicationController
     @blog_resource.before_save_or_update(params[:blog_resource][:keywords])
     if  @blog_resource.errors.blank?
       if @blog_resource.save
+        flash[:keyword_page]=@blog_resource.keyword_page
         render :partial => "link_url_resources/succeed",:layout => "blog_resources"
         n=current_user.news.create
         n.news_type="blog_resource"

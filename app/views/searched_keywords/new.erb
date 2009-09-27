@@ -1,10 +1,10 @@
 <div id="header">
   <div id="logo2">
     <h1><%= link_to "Mikl",new_searched_keyword_path %><%= link_to_me %></h1>
-    <div id="search_link_url">
+    <div id="search_link_url"  style="display:none">
       <p>
+           <%= link_to_remote "搜索全部",:url => {:action => :search_twitter}%>
         搜索领域
-        <%= link_to_remote "全站搜索",:url => {:action => :search_twitter}%>
       </p>
       <%= text_field 'keyword_page','keyword',:size => 40 %>
       <div class="auto_complete" id="keyword_page_keyword_auto_complete">
@@ -14,10 +14,10 @@
       <div><%= link_to "查看全部领域",keyword_pages_path,:popup => true%></div>
     </div>
 
-    <div id="search_twitter" style="display:none">
+    <div id="search_twitter">
       <p>
+        搜索全部
         <%= link_to_remote "搜索领域",:url => {:action => :search_link_url} %>
-        全站搜索
       </p>
       <% form_tag :controller => :searched_contents,:action => :show do%>
         <%= text_field :resource,:content,:size => 40%>

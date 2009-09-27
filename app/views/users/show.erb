@@ -4,10 +4,13 @@
     </h1>
     <strong><%= link_to "(管理我所有的分享>>>)",user_resources_path(current_user),:class => "title" %></strong>
     <ul>
+      <!--
+      暂时去掉这个不是核心的功能
       <li>
         现在你可以<strong>更新你的状态</strong>（少于130字），说点什么，让关注你的人了解你的点点滴滴。<strong>这与领域功能无关</strong>。
         <%= render :partial => "twitter_resources/form",:locals => { :user => @user,:twitter_resource => @twitter_resource }  %>
       </li>
+      -->
       <li>
         <%= link_to " 汇集所有你认为有价值的链接",new_user_link_url_resource_path(current_user),:popup => true%>——发表的blog文章、参与的wiki页面， 喜爱的音乐、图片，喜欢的商品，发表的主题贴等等
         ；</li>

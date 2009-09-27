@@ -27,6 +27,10 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def comment_value(keyword_page)
+    current_user.field_value(keyword_page)
+    
+  end
   
   private
   def load_user

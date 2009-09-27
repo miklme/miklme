@@ -23,7 +23,7 @@ class SessionsController < ApplicationController
       redirect_to user_path(current_user)
       current_user.last_ip=request.remote_ip
       current_user.save
-      flash[:notice] = "成功登入，即刻将体验Michael带给你的...无限"
+      flash[:notice] = "成功登入，即刻体验."
     else
       flash[:error] = "出了点小问题，请重新输入密码"
       @name       = params[:username]
