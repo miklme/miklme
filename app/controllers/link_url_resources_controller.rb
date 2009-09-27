@@ -13,7 +13,7 @@ class LinkUrlResourcesController < ApplicationController
     @link_url_resource.before_save_or_update(params[:link_url_resource][:keywords])
     if @link_url_resource.errors.blank?
       if @link_url_resource.save
-        flash[:keyword_page]=@link_url_resource.keyword_page
+        flash[:keyword_page]=@link_url_resource.keyword_page.id
         render :partial => "succeed",:layout => "link_url_resources"
         n=current_user.news.create
         n.news_type="link_url_resource"

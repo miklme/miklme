@@ -28,7 +28,7 @@ class ApplicationController < ActionController::Base
   end
 
   def comment_value(keyword_page)
-    current_user.field_value(keyword_page)
+    current_user.field_value(keyword_page)/10+0.5
     
   end
   
