@@ -1,6 +1,6 @@
 class KeywordPagesController < ApplicationController
   before_filter :load_user,:only => [:destroy,:create,:update,:edit]
-  skip_before_filter :login_required,:only => [:show,:by_time,:index]
+  skip_before_filter :login_required,:only => [:show,:by_time,:index,:auto_complete_for_keyword_page_keyword]
   skip_before_filter :check_profile_status
   auto_complete_for :keyword_page,:keyword,:limit => 10
 
@@ -30,14 +30,15 @@ class KeywordPagesController < ApplicationController
         flash[:notice]="成功。要知道，你是这个”领域“价值点数最高的人。想要让更多人认识到你，你最好让更多人关注你，
       或者是进入该领域页面，编辑“相关领域。”"
       else
-        flash[:notice]="成功。你创建了这个领域，或者你加入了它。"
+        flash[:notice]="成功。你创建了这个领域。如果这个领域已经存在，你就加入了它。"
       end
       redirect_to :back
     rescue
-      flash[:notice]="出了点小问题，你已经添加该领域了，或者你没有填写领域名称。"
+      flash[:notice]="出了点小问题，你是这个领域的成员，或者你没有填写领域名称。"
       redirect_to :back
     end
   end
+   
   
   def show
     @keyword_page=KeywordPage.find(params[:id])
@@ -82,5 +83,18 @@ class KeywordPagesController < ApplicationController
     v.hidden=false
     v.save
     redirect_to :back
+  end
+
+  def auto_complete_for_keyword_page_keyword
+    keyword_pages=KeywordPage.find_with_ferret(params[:keyword_page][:keyword]+"~")
+    @keyword_pages=keyword_pages.first(15)
+    render :layout => false
+  end
+
+  def redirect
+    keyword_page=KeywordPage.find_by_keyword(params[:keyword])
+    render :update do |page|
+      page.redirect_to keyword_page_path(keyword_page)
+    end
   end
 end

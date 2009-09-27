@@ -2,11 +2,11 @@
   <%= f.error_messages %>
   <% if !form.resource.commenters.include?(current_user) and form.resource.owner.last_ip!=current_user.last_ip%>
     <p>
-      <%=f.radio_button :rating,"-"%>
+      <%=f.radio_button :rating,-1%>
       <strong>价值点数-<%= comment_value(form.resource.keyword_page) %></strong>
-      <%=f.radio_button :rating,"=" %>
+      <%=f.radio_button :rating,0%>
       不评分
-      <%=f.radio_button :rating,"+" %>
+      <%=f.radio_button :rating,1 %>
       <cite>价值点数+<%= comment_value(form.resource.keyword_page) %></cite>
     </p>
   <% end %>

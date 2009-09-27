@@ -32,8 +32,12 @@
               <p>
                 <%= f.error_messages %>
               </p>
-              <%= f.text_field_with_auto_complete :keyword %>
-              <%= f.submit "创建或加入这个领域" %>
+              <span>创建新领域：</span>
+              <%= text_field 'keyword_page','keyword',:size => 40 %>
+              <div class="auto_complete" id="keyword_page_keyword_auto_complete">
+              </div>
+              <%= auto_complete_field :keyword_page_keyword,:url => {:action => 'auto_complete_for_keyword_page_keyword'},:frequency => 0.1%>
+              <%= f.submit "创建！" %>
             <% end %>
           <% end %>
         </div>

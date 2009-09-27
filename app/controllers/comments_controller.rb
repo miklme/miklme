@@ -43,14 +43,14 @@ class CommentsController < ApplicationController
       if @comment.save
       u=User.find(@comment.resource.owner)
       if not u==current_user
-        if current_user.field_value(@resource.keyword_page)<0 and params[:comment][:rating]=="-"
+        if current_user.field_value(@resource.keyword_page)<0 and params[:comment][:rating]=="-1"
           flash[:notice]="这个领域内你的价值点数低于0了，暂时不能作出这种评价。"
-        elsif current_user.field_value(@resource.keyword_page)>=0 and params[:comment][:rating]=="-"
+        elsif current_user.field_value(@resource.keyword_page)>=0 and params[:comment][:rating]=="-1"
           flash[:notice]="差评成功，对方降低了一定价值点数，不过你也有所降低。"
           u.change_value(@resource.keyword_page,-@resource.keyword_page.comment_value(current_user))
           current_user.change_value(@resource.keyword_page,-@resource.keyword_page.comment_value(current_user)/2)
           current_user.save
-        else
+        elsif params[:comment][:rating]=="1"
           flash[:notice]="评论成功"
           u.change_value @resource.keyword_page,@resource.keyword_page.comment_value(current_user)
           u.save

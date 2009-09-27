@@ -15,9 +15,9 @@
     <% a=Comment.sum(:rating,:conditions => ["resource_id=?",news.resource.id]) %>
     <span class="little_white">
       <% if a>=0 %>
-        相应领域的价值点数共增加 <%=h a %>
+        相应领域的价值点数增加.
       <% else %>
-        相应领域的价值点数共减少了 <%=h -a %>(反响恶劣)
+        相应领域的价值点数减少了(反响恶劣)
       <% end %>
     </span>
   </p>

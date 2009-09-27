@@ -36,10 +36,13 @@
           <h2><%= link_to "Mikl.Me",new_searched_keyword_path,:class => "sw_logo"%>
           </h2>
           <div class="sw_bd">
-            <% form_tag :controller => :searched_contents,:action => :show do%>
-              <%= text_field :resource,:content,:size => 40%>
-              <%=submit_tag "搜索全站" %>
-            <% end %>
+                搜索领域
+              <%= text_field 'keyword_page','keyword',:size => 40 %>
+              <div class="auto_complete" id="keyword_page_keyword_auto_complete">
+              </div>
+              <%= auto_complete_field :keyword_page_keyword,:url => {:action => 'auto_complete_for_keyword_page_keyword'},:frequency => 0.1,:after_update_element =>
+                "function(element,value){" + remote_function(:url => {:action => :redirect},:with=>"'keyword='+element.value") + "}"%>
+            <%= link_to "查看所有领域/创建新领域",keyword_pages_path %>
           </div>
         </div>
       </div>
