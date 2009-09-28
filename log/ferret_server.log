@@ -22561,3 +22561,220 @@ index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6f323a0>
 index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f0d348>
 ############ registerclass KeywordPage
 index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6f323a0>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6f323a0>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f0d348>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6f323a0>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f0d348>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6f323a0>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6f323a0>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f0d348>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6f323a0>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f0d348>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6f323a0>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6f323a0>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f0d348>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6f323a0>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6f323a0>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6f323a0>
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "ccc~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6f323a0>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f0d348>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6f323a0>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f0d348>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6f323a0>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6f323a0>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f0d348>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6f323a0>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f0d348>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6f323a0>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f0d348>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6f323a0>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f0d348>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6f323a0>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f0d348>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6f323a0>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f0d348>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6f323a0>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f0d348>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6f323a0>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6f323a0>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f0d348>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f0d348>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6f323a0>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f0d348>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6f323a0>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f0d348>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6f323a0>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f0d348>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6f323a0>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f0d348>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6f323a0>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6f323a0>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f0d348>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "rails~", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime, keyword_page_id: integer)], :sort=>by_user_value:<auto>!, :offset=>nil}])
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6e73d24>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:blog_resource, "rails~", {:limit=>nil, :models=>[BlogResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime, keyword_page_id: integer)], :sort=>by_user_value:<auto>!, :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f0d348>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6f323a0>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6f323a0>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f0d348>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6f323a0>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6f323a0>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f0d348>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f0d348>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6f323a0>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f0d348>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6f323a0>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6f323a0>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f0d348>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f0d348>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6f323a0>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6f323a0>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f0d348>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6f323a0>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f0d348>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6f323a0>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f0d348>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6f323a0>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f0d348>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f0d348>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6f323a0>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6f323a0>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f0d348>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "rails~", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime, keyword_page_id: integer)], :sort=>by_user_value:<auto>!, :offset=>nil}])
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6e73d24>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:blog_resource, "rails~", {:limit=>nil, :models=>[BlogResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime, keyword_page_id: integer)], :sort=>by_user_value:<auto>!, :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f0d348>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "ruby~", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime, keyword_page_id: integer)], :sort=>by_user_value:<auto>!, :offset=>nil}])
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6e73d24>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:blog_resource, "ruby~", {:limit=>nil, :models=>[BlogResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime, keyword_page_id: integer)], :sort=>by_user_value:<auto>!, :offset=>nil}])
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f0d348>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6f323a0>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6f323a0>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f0d348>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6f323a0>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f0d348>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6f323a0>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f0d348>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6f323a0>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f0d348>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6f323a0>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6f323a0>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f0d348>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6f323a0>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6f323a0>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6f323a0>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6f0d348>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:link_url_resource, "rails~", {:limit=>nil, :models=>[LinkUrlResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime, keyword_page_id: integer)], :sort=>by_user_value:<auto>!, :offset=>nil}])
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6e73d24>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:blog_resource, "rails~", {:limit=>nil, :models=>[BlogResource(id: integer, keywords: string, type: string, shoulu: boolean, user_id: integer, title: string, form: string, link_url: string, description: string, authority: boolean, content: text, created_at: datetime, updated_at: datetime, keyword_page_id: integer)], :sort=>by_user_value:<auto>!, :offset=>nil}])
+exit
