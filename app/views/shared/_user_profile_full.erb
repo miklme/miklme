@@ -33,7 +33,7 @@
     <span><%= link_to "关注该用户",new_user_be_follow_path(user_profile_full) %></span>
   </div>
 <% end %>
-<em>生日: <%= user_profile_full.birthday %></em>
+<em>生日: <%= user_profile_full.birthday.to_s(:short) %></em>
 <em>
   <% if user_profile_full.province.present? %>
     <%= user_profile_full.province %>省
