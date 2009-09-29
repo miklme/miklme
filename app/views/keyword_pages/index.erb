@@ -7,7 +7,7 @@
       <div class="sw_tb">
         <ul>
           <li>
-            <%= link_to "Michael",new_searched_keyword_path %>
+            <%= link_to "Michael",keyword_pages_path %>
           </li>
           <li>
             <%= link_to_me %>
@@ -24,20 +24,29 @@
       </div>
       <div class="sw_tbb"></div>
       <div class="sw_box">
-        <h2><%= link_to "Mikl.Me",new_searched_keyword_path,:class => "sw_logo"%>
+        <h2><%= link_to "Mikl.Me",keyword_pages_path,:class => "sw_logo"%>
         </h2>
         <div class="sw_bd">
+
+
+          <% form_tag :controller => :searched_contents,:action => :show do%>
+            <%= text_field 'keyword_page','keyword',:size => 40 %>
+            <div class="auto_complete" id="keyword_page_keyword_auto_complete">
+            </div>
+            <%= auto_complete_field :keyword_page_keyword,:url => {:action => 'auto_complete_for_keyword_page_keyword'},:after_update_element =>
+              "function(element,value){" + remote_function(:url => {:action => :redirect},:with=>"'keyword='+element.value") + "}"%>
+            <%=submit_tag "搜索全部" %>
+          <% end %>
           <% if logged_in? %>
             <% form_for [@user,@keyword_page] do |f| %>
               <p>
                 <%= f.error_messages %>
               </p>
-              <span>创建新领域：</span>
               <%= text_field 'keyword_page','keyword',:size => 40 %>
               <div class="auto_complete" id="keyword_page_keyword_auto_complete">
               </div>
               <%= auto_complete_field :keyword_page_keyword,:url => {:action => 'auto_complete_for_keyword_page_keyword'},:frequency => 0.1%>
-              <%= f.submit "创建或加入！" %>
+              <%= f.submit "创建这个领域，或加入它" %>
             <% end %>
           <% end %>
         </div>

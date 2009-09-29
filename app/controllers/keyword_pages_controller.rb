@@ -2,8 +2,6 @@ class KeywordPagesController < ApplicationController
   before_filter :load_user,:only => [:destroy,:create,:update,:edit]
   skip_before_filter :login_required,:only => [:show,:by_time,:index,:auto_complete_for_keyword_page_keyword]
   skip_before_filter :check_profile_status
-  auto_complete_for :keyword_page,:keyword,:limit => 10
-
   def index
     @user=current_user
     if logged_in?
@@ -44,8 +42,7 @@ class KeywordPagesController < ApplicationController
     @keyword_page=KeywordPage.find(params[:id])
     @resources=@keyword_page.resources_by_value(params[:page])
     @related_keywords=@keyword_page.related_keywords
-    flash[:keyword]="这个是关于“#{@keyword_page.keyword}”的页面,若想要在本页面中增加条目，需要在“领域”中选择“#{@keyword_page.keyword}”
-    ，所以首先你要加入该领域'"
+    flash[:keyword]="这个是关于“#{@keyword_page.keyword}”的页面,若想要在本页面中增加条目，需要在“领域”中选择“#{@keyword_page.keyword}”"
   end
 
   def by_time

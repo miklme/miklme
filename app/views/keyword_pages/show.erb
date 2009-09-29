@@ -4,7 +4,7 @@
 </p>
 <% end %>
 <p class="item_blue">
-  Mikl.me为你呈现了下面这些条目，你发表的内容越受好评，你下次发表内容时排序就会越靠前(可以参考价值点数的多少)，并且在<%= link_to "全站搜索",new_searched_keyword_path %>中你发表的内容也会越靠前。
+  Mikl.me为你呈现了下面这些条目，你发表的内容越受好评，你下次发表内容时排序就会越靠前(可以参考价值点数的多少)，并且在<%= link_to "全站搜索",keyword_pages_path %>中你发表的内容也会越靠前。
 </p>
 <% if logged_in? and current_user.controlled_keywords.include?(@keyword_page.keyword).present? %>
   <div><cite>根据<strong>用户在这个领域内价值点数</strong>的高低，你的价值点数在这个领域内的所有用户中是最高的。</cite>因此：</div>
@@ -15,7 +15,7 @@
     </li>
   </ul>
 <% end %>
-<div class="sb_ph"><h1>有关“<%=h @keyword_page.keyword %>”的所有条目</h1>
+<div class="sb_ph"><h1>“<%=h @keyword_page.keyword %>”领域内的所有条目</h1>
   <span>共 <%=h @resources.size %> 条</span><span class="sc_bullet">·</span>
   <%= link_to "发表新的条目>>>",new_user_link_url_resource_path(current_user) %>
   <!--

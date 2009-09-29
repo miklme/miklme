@@ -1,2 +1,0 @@
-module SearchedKeywordsHelper
-end
