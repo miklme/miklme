@@ -26005,3 +26005,15 @@ index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6eba440>
 index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e95244>
 ############ registerclass BlogResource
 index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6e8275c>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6eba440>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e95244>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6e8275c>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6eba440>
+############ registerclass LinkUrlResource
+index for class LinkUrlResource: #<ActsAsFerret::LocalIndex:0xb6e95244>
+############ registerclass BlogResource
+index for class BlogResource: #<ActsAsFerret::LocalIndex:0xb6e8275c>

@@ -14,7 +14,6 @@ class User < ActiveRecord::Base
   has_many :appear_keyword_pages,:through => :value_orders,:source => :keyword_page,:conditions => "hidden=false"
 
   has_many :news
-  has_many :searched_keywords
   has_many :comments
   has_many :commented_resources,:through => :comments,:source => :resource
   has_many :replies
