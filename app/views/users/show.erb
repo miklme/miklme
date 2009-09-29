@@ -8,15 +8,12 @@
       暂时去掉这个不是核心的功能
       <li>
         现在你可以<strong>更新你的状态</strong>（少于130字），说点什么，让关注你的人了解你的点点滴滴。<strong>这与领域功能无关</strong>。
-        <%= render :partial => "twitter_resources/form",:locals => { :user => @user,:twitter_resource => @twitter_resource }  %>
+      <%= render :partial => "twitter_resources/form",:locals => { :user => @user,:twitter_resource => @twitter_resource }  %>
       </li>
       -->
       <li>
-        <%= link_to " 汇集所有你认为有价值的链接",new_user_link_url_resource_path(current_user),:popup => true%>——发表的blog文章、参与的wiki页面， 喜爱的音乐、图片，喜欢的商品，发表的主题贴等等
-        ；</li>
-      <li>
-        或是 <%= link_to "发表你认为具有价值的言论",new_user_blog_resource_path(current_user),:popup => true %>，这里就像发个帖子。
-      </li>
+        <strong>你参与的"领域"会显示在右边，如果暂时没有，可以点击<%= link_to"这里",keyword_pages_path %>看看有没有自己感兴趣的。
+        </strong></li>
     </ul>
     <p>
       <strong>形式平平无奇。不过请先尝试。</strong>
