@@ -1,6 +1,6 @@
 <% form_for  ([form.resource.owner,:resource,form]) do |f| %>
   <%= f.error_messages %>
-  <% if !form.resource.commenters.include?(current_user) and form.resource.owner.last_ip!=current_user.last_ip%>
+  <%# if !form.resource.commenters.include?(current_user) and form.resource.owner.last_ip!=current_user.last_ip%>
     <p>
       <%=f.radio_button :rating,-1%>
       <strong>价值点数-<%= comment_value(form.resource.keyword_page) %></strong>
@@ -9,7 +9,7 @@
       <%=f.radio_button :rating,1 %>
       <cite>价值点数+<%= comment_value(form.resource.keyword_page) %></cite>
     </p>
-  <% end %>
+  <%# end %>
   <p>
     <%= f.text_area :content,:size => "48x4"%>
   </p>
