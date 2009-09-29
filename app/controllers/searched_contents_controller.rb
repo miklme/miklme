@@ -1,4 +1,5 @@
 class SearchedContentsController < ApplicationController
+  skip_before_filter :login_required
   def show
     if !params[:keyword_page].nil?
       @keyword = params[:keyword_page][:keyword]

@@ -1,6 +1,6 @@
 class KeywordPagesController < ApplicationController
   before_filter :load_user,:only => [:destroy,:create,:update,:edit]
-  skip_before_filter :login_required,:only => [:show,:by_time,:index,:auto_complete_for_keyword_page_keyword]
+  skip_before_filter :login_required,:only => [:show,:by_time,:index,:auto_complete_for_keyword_page_keyword,:redirect]
   skip_before_filter :check_profile_status
   def index
     @user=current_user
