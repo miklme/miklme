@@ -4,10 +4,10 @@
       <tbody>
         <tr>
           <td width="500">
-            <h3><%= link_to highlight(resource.description,resource.keywords),resource.link_url,:popup => true%></h3>
+            <h3><%= link_to resource.description,resource.link_url,:popup => true%></h3>
             <% for comment in resource.comments.recent_comments do%>
                 <p>
-                  <%= auto_link(truncate(comment.content,:length => 140),resource.keywords) %>
+                  <%= truncate(comment.content,:length => 140)%>
                 </p>
               <% end %>
               <ul class="sb_meta">
@@ -33,7 +33,7 @@
         <tbody>
           <tr>
             <td width="500">
-              <h3><%= link_to highlight(resource.title,resource.keywords),user_blog_resource_path(resource.owner,resource),:popup => true%></h3>
+              <h3><%= link_to resource.title,user_blog_resource_path(resource.owner,resource),:popup => true%></h3>
               <p>
                 <%= truncate(resource.content,:length => 120)%>
               </p>
