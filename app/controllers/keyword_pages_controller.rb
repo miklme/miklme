@@ -1,6 +1,6 @@
 class KeywordPagesController < ApplicationController
   before_filter :load_user,:only => [:destroy,:create,:update,:edit]
-  skip_before_filter :login_required,:only => [:show,:by_time,:index,:auto_complete_for_keyword_page_keyword,:redirect]
+  skip_before_filter :login_required,:only => [:show_hidden,:show,:by_time,:index,:auto_complete_for_keyword_page_keyword,:redirect]
   skip_before_filter :check_profile_status
   def index
     @user=current_user
@@ -92,6 +92,12 @@ class KeywordPagesController < ApplicationController
     keyword_page=KeywordPage.find_by_keyword(params[:keyword])
     render :update do |page|
       page.redirect_to keyword_page_path(keyword_page)
+    end
+  end
+
+  def show_hidden
+    render :update do |page|
+      page.toggle "hidden"
     end
   end
 end

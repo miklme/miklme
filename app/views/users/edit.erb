@@ -12,13 +12,8 @@
     <% end %>
     </p>
     <p>
-      这是Mikl.me的核心，请你务必了解Mikl.me的"领域"功能。现在就可以<%= link_to_remote "了解该功能>>>",:url => {:action => :manage_keywords} %>
+        点击 <%= link_to "这里",keyword_pages_path,:popup => true %>来决定自己要加入哪些感兴趣的领域，当然你也可以以后选择。
     </p>
-    <div id="my_keywords" style="display:none">
-      <p class="bold">"领域"功能，组织形式上相当于我们经常见到的贴吧、小组功能。区别是，领域功能一个重要设定是：<strong>你在该有关小组主题的行为（如分享资源，原创文章）收获越多好评，之后你再发表的内容就会排序靠前。在整个网站内的搜索结果也会更靠前，进而会获得更多关注。</strong></p>
-          <p>点击 <%= link_to "这里",keyword_pages_path,:popup => true %>来决定自己要加入哪些感兴趣的领域</p>
-
-    </div>
     <table cellpadding="5" cellspacing="5">
       <tr><td><%= f.label :nick_name,'名号*'%></td><td><%= f.text_field :nick_name,:size => 21 %></td><td>任何人都能看到，请随意填写。</td></tr>
       <tr>

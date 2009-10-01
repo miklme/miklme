@@ -1,23 +1,36 @@
 <% if logged_in? and !current_user.keyword_pages.include?(@keyword_page)%>
-<p class="item_blue">
-(你需要对该领域的内容感兴趣，并且也乐于分享类似的内容才适合<%= link_to "加入该领域" ,:confirm => "sadf",:action => :join_field,:id => @keyword_page,:method => :post%>)
-</p>
+  <div class="item_blue">
+    你需要对该领域的内容感兴趣，并且对于类似内容有所见解才适合<%= link_to "加入该领域>>" ,:confirm => "sadf",:action => :join_field,:id => @keyword_page,:method => :post%>
+  </div>
 <% end %>
-<p class="item_blue">
-  Mikl.me为你呈现了下面这些条目，你发表的内容越受好评，你下次发表内容时排序就会越靠前(可以参考价值点数的多少)，并且在<%= link_to "全站搜索",keyword_pages_path %>中你发表的内容也会越靠前。
+<div class="item_blue">
+  规则：价值点数最高者为擂主，在此领域内，擂主发布的信息排位居首，以轰击众人之视觉；并拥有极大之淫威（威力大小与价值点数成正比），以决定谁人之信息可浮出水面，谁人之信息被灭其踪迹；
+谁人得永生，谁人无全尸。
+<%= link_to_remote "查看如何提高价值点数>>>",:url => {:action => :show_hidden} %>
+<ul id="hidden" style="display:none">
+  <li>
+  被人施以好评（价值点数提高程度决定于施主的价值点数高低）
+  </li>
+  <li>
+    被更多人关注（请勿尝试马甲刷分等行为）。可以发送这个地址邀请你的好友：<p><%= "http://users/new" %></p>好友注册后，会自动关注你。
+  </li>
+</ul>
 </p>
+</div>
+
 <% if logged_in? and current_user.controlled_keywords.include?(@keyword_page.keyword).present? %>
-  <div><cite>根据<strong>用户在这个领域内价值点数</strong>的高低，你的价值点数在这个领域内的所有用户中是最高的。</cite>因此：</div>
-  <ul>
-    <li>
-      <span>你有权利<%=link_to "修改相关领域",keyword_page_related_keywords_path(@keyword_page),:popup => ['修改相关领域', 'height=500,width=450'] %>
-      </span>，如果这样，这个领域的条目就容易被相关领域的人看到。
-    </li>
-  </ul>
+  <div class="item_blue">根据用户在这个领域内价值点数的高低，你的价值点数在这个领域内的所有用户中是最高的。因此：
+    <ul>
+      <li>
+        <span>你有权利<%=link_to "修改相关领域",keyword_page_related_keywords_path(@keyword_page),:popup => ['修改相关领域', 'height=500,width=450'] %>
+        </span>，如果这样，这个领域的条目就容易被相关领域的人看到。
+      </li>
+    </ul>
+  </div>
 <% end %>
 <div class="sb_ph"><h1>“<%=h @keyword_page.keyword %>”领域内的所有条目</h1>
   <span>共 <%=h @resources.size %> 条</span><span class="sc_bullet">·</span>
-  <%= link_to "发表新的条目>>>",new_user_link_url_resource_path(current_user) %>
+  <%= link_to "发表新的条目>>>",new_user_blog_resource_path(current_user) %>
   <!--
 有趣的分割点
 <span class="sc_bullet">·</span>%>
