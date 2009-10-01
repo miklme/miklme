@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090925112445) do
+ActiveRecord::Schema.define(:version => 20091001092244) do
 
   create_table "addresses", :force => true do |t|
     t.string   "province"
@@ -126,6 +126,8 @@ ActiveRecord::Schema.define(:version => 20090925112445) do
     t.datetime "updated_at"
     t.integer  "sex"
     t.string   "last_ip"
+    t.integer  "inviter_id"
+    t.integer  "inviter_value_order_id"
   end
 
   add_index "users", ["username"], :name => "index_users_on_username"
