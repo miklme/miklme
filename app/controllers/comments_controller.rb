@@ -40,9 +40,11 @@ class CommentsController < ApplicationController
   # POST /comments.xml
   def create
     @comment = @resource.comments.build(params[:comment])
-    v=ValueOrder.find_by_keyword_page_id_and_user_id(@resource.keyword_page.id,current_user.id)
-    v.actived=true
-    v.save
+    if not current_user.keyword_pages.include?(@keyword_page)
+      v=ValueOrder.find_by_keyword_page_id_and_user_id(@resource.keyword_page.id,current_user.id)
+      v.actived=true
+      v.save
+    end
     @comment.owner=current_user
     if @comment.save
       u=User.find(@comment.resource.owner)

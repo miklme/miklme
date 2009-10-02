@@ -1,18 +1,21 @@
 <div class="item_blue">
   规则：价值点数最高者为擂主，在此领域内，擂主发布的信息排位居首，以轰击众人之视觉；并拥有极大之淫威（威力大小与价值点数成正比），以决定谁人之信息可浮出水面，谁人之信息被灭其踪迹；
-谁人得永生，谁人无全尸。
-<%= link_to_remote "查看如何提高价值点数>>>",:url => {:action => :show_hidden} %>
-<ul id="hidden" style="display:none">
-  <li>
-  被人施以好评（价值点数提高程度决定于施主的价值点数高低）
-  </li>
-  <li>
-    被更多人关注（请勿尝试马甲刷分等行为）。
-    <% if logged_in? and current_user.keyword_pages.include?(@keyword_page)%>
-      可以发送这些话邀请你的好友：<p class="item_blue">我<%= current_user.name %>，在玩一个很搞的应用，现在玩得有点窝火，赶快来这里注册帮帮我：<%= "http://users/new/#{current_user.id}/#{ValueOrder.find_by_user_id_and_keyword_page_id(current_user.id,@keyword_page.id).id}" %></p>好友注册后，会自动关注你。
-    <% end %>
-  </li>
-</ul>
+  谁人得永生，谁人无全尸。
+  <%= link_to_remote "查看如何提高价值点数>>>",:url => {:action => :show_hidden} %>
+  <ul id="hidden" style="display:none">
+    <li>
+      被人施以好评（价值点数提高程度决定于施主的价值点数高低）
+    </li>
+    <li>
+      被更多人关注（请勿尝试马甲刷分等行为）。
+      <% if logged_in? and current_user.keyword_pages.include?(@keyword_page)%>
+        可以发送这些话邀请你的好友：
+        <p class="item_blue"><cite>真实朋友:</cite>我<%= current_user.name %>，在玩一个很搞的应用，现在玩得有点窝火，赶快来这里注册帮帮我：<%= "http://mikl.me/users/new/#{current_user.id}/#{ValueOrder.find_by_user_id_and_keyword_page_id(current_user.id,@keyword_page.id).id}/realfriend" %></p>
+        <p class="item_blue"><cite>匿名网友:</cite>我<%= current_user.nick_name %>，在玩一个很搞的应用，现在玩得有点窝火，赶快来这里注册帮帮我：<%= "http://mikl.me/users/new/#{current_user.id}/#{ValueOrder.find_by_user_id_and_keyword_page_id(current_user.id,@keyword_page.id).id}/commonfriend" %></p>
+        好友注册后，会自动关注你。
+      <% end %>
+    </li>
+  </ul>
 </p>
 </div>
 

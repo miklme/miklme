@@ -2,7 +2,7 @@ class BlogResourcesController < ApplicationController
   skip_before_filter :login_required,:only => [:show]
   before_filter :user_keywords,:except => [:auto_complete_for_keyword_page_keyword]
   def new
-    if not current_user.appear_keyword_pages.include?(@keyword_page)
+    if not current_user.keyword_pages.include?(@keyword_page)
       v=ValueOrder.new
       v.user=current_user
       v.keyword_page=@keyword_page

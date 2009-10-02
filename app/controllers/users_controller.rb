@@ -7,6 +7,15 @@ class UsersController < ApplicationController
     @user=User.new
   end
 
+  def invite
+    session[:user_id]=nil
+    @user=User.new
+    session[:inviter_id]=params[:inviter_id]
+    session[:value_order_id]=params[:value_order_id]
+    session[:relationship]=params[:relationship]
+    render :action => :new
+  end
+  
   def create
     session[:user_id]=nil
     @user = User.new(params[:user])
@@ -15,7 +24,7 @@ class UsersController < ApplicationController
       flash[:notice] = "感谢注册，即刻体验Michael带给你的..."
       redirect_to edit_user_path(current_user)
     else
-      render new_user_path,:layout => "users"
+      render :action => :new
     end
   end
 
@@ -33,6 +42,22 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if  @user.update_attributes(params[:user])
+      if session[:inviter_id].present? and self.last_ip!=User.find(session[:inviter_id]).last_ip
+        b=BeFollow.new
+        b.user=User.find(session[:inviter_id])
+        b.follower=current_user
+        v=ValueOrder.find(session[:value_order_id])
+        v.value+=3
+        v.save
+        if session[:relationship]=="realfriend"
+          b.provide_name=true
+        elsif session[:relationship]=="commonfriend"
+          b.provide_name=false
+        end
+        b.save
+        flash[:notice]="你关注了#{User.find(session[:inviter_id]).name_or_nick_name(current_user)}"
+        session[:relationship]=session[:inviter_id]=session[:value_order_id]=nil
+      end
       redirect_to(user_path(@user))
     else
       render :action => "edit"

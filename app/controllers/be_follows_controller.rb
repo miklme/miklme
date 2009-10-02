@@ -11,7 +11,7 @@ class BeFollowsController < ApplicationController
   end
   def index
     @be_follows=@user.be_follows
-    @followers=@user.followers
+    @real=@user.followers
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @be_follows }
