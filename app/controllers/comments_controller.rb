@@ -8,7 +8,9 @@ class CommentsController < ApplicationController
     @keyword_page=KeywordPage.find_by_keyword(@resource.keyword_page.keyword)
     if not current_user.keyword_pages.include?(@keyword_page)
       v=ValueOrder.new
-
+      v.user=current_user
+      v.keyword_page=@keyword_page
+      v.save
     end
     @related_keywords=@keyword_page.related_keywords
     @comments=@resource.comments_by_value(params[:page])
@@ -34,15 +36,13 @@ class CommentsController < ApplicationController
     end
   end
 
-  # GET /comments/1/edit
-  def edit
-    @comment = Comment.find(params[:id])
-  end
-
   # POST /comments
   # POST /comments.xml
   def create
     @comment = @resource.comments.build(params[:comment])
+    v=ValueOrder.find_by_keyword_page_id_and_user_id(@resource.keyword_page.id,current_user.id)
+    v.actived=true
+    v.save
     @comment.owner=current_user
     if @comment.save
       u=User.find(@comment.resource.owner)
@@ -73,24 +73,6 @@ class CommentsController < ApplicationController
 
   # PUT /comments/1
   # PUT /comments/1.xml
-  def update
-    @comment = Comment.find(params[:id])
-
-    respond_to do |format|
-      if @comment.update_attributes(params[:comment])
-
-        flash[:notice] = 'Comment was successfully updated.'
-        format.html { redirect_to(@comment) }
-        format.xml  { head :ok }
-      else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @comment.errors, :status => :unprocessable_entity }
-      end
-    end
-  end
-
-  # DELETE /comments/1
-  # DELETE /comments/1.xml
   def destroy
     @comment = Comment.find(params[:id])
     @comment.destroy

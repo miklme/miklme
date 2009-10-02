@@ -21,20 +21,20 @@ class KeywordPagesController < ApplicationController
   end
   
   def create
-    @keyword_page=KeywordPage.find_or_create_by_keyword(:keyword => params[:keyword_page][:keyword])
-    begin
-      @user.keyword_pages<<@keyword_page
-      if @keyword_page.top_user==current_user
-        flash[:notice]="成功。要知道，你是这个”领域“价值点数最高的人。想要让更多人认识到你，你最好让更多人关注你，
-      或者是进入该领域页面，编辑“相关领域。”"
-      else
-        flash[:notice]="创建成功。"
-      end
-      redirect_to :back
-    rescue
-      flash[:notice]="出了点小问题，你是这个领域已经存在了，或者你没有填写领域名称。"
-      redirect_to :back
+    @keyword_page=KeywordPage.find_by_keyword(params[:keyword_page][:keyword])
+    if @keyword_page.present?
+      flash[:notice]="出了点小问题，这个领域已经存在"
+    else
+      k=KeywordPage.create(:keyword => params[:keyword_page][:keyword])
+      v=ValueOrder.new
+      v.user=@user
+      v.keyword_page=k
+      v.actived=true
+      v.save
+      flash[:notice]="创建成功。"
     end
+    redirect_to :back
+
   end
    
   
