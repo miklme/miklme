@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
   
   def index
     @keyword_page=KeywordPage.find_by_keyword(@resource.keyword_page.keyword)
-    if not current_user.keyword_pages.include?(@keyword_page)
+    if logged_in? and !current_user.keyword_pages.include?(@keyword_page)
       v=ValueOrder.new
       v.user=current_user
       v.keyword_page=@keyword_page

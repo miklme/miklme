@@ -6,7 +6,7 @@
     <td width="520px">
       <p><%= h comment.content  %></p>
       <div class="sb_meta"><%=h comment.created_at.advance(:hours => 8).to_s(:db)  %></div>
-      <span><%= link_to "回应该用户",new_user_resource_comment_replied_comment_path(@user,@resource,comment),:popup => ['你的回应...', 'height=200,width=480']  %></span>
+      <span><%= link_to "回应该用户",new_user_resource_comment_replied_comment_path(@user,@resource,comment),:popup => ['你的回应...', 'height=300,width=480']  %></span>
       <div id="replied_comments">
         <% for replied_comment in comment.replied_comments %>
           <%= render :partial  => "comment",:object => replied_comment %>

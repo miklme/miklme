@@ -16,8 +16,10 @@
               </ul>
             </td>
             <td width="100">
+              <% if  resource.owner == current_user %>
                 <div>(所在领域：<strong><%= resource.keyword_page.keyword %></strong>)
                 </div>
+              <% end %>
             </td>
             <td width="80"><%= render :partial => "shared/field_profile",:locals => {:user => resource.owner,:keyword_page => resource.keyword_page} %>
             </td>
