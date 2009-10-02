@@ -93,14 +93,6 @@ ActiveRecord::Schema.define(:version => 20091002060407) do
     t.integer  "keyword_page_id"
   end
 
-  create_table "searched_keywords", :force => true do |t|
-    t.integer  "searched_times", :default => 1
-    t.string   "name"
-    t.string   "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "true_portraits", :force => true do |t|
     t.integer  "user_id"
     t.string   "image_file"

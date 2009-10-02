@@ -41,8 +41,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if  @user.update_attributes(params[:user])
-      if session[:inviter_id].present?
-        #and self.last_ip!=User.find(session[:inviter_id]).last_ip
+      if session[:inviter_id].present? and @user.last_ip!=User.find(session[:inviter_id]).last_ip
         b=BeFollow.new
         b.user=User.find(session[:inviter_id])
         b.follower=current_user

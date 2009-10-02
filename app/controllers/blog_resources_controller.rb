@@ -9,7 +9,7 @@ class BlogResourcesController < ApplicationController
       v.actived=true
       v.save
     end
-    @blog_resource=@user.blog_resources.build
+    @blog_resource=current_user.blog_resources.build
   end
 
   def show

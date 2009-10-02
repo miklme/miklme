@@ -8,7 +8,7 @@ class LinkUrlResourcesController < ApplicationController
       v.actived=true
       v.save
     end
-    @link_url_resource=@user.link_url_resources.build
+    @link_url_resource=current_user.link_url_resources.build
   end
 
   def edit
@@ -32,8 +32,4 @@ class LinkUrlResourcesController < ApplicationController
     end
   end
 
-  private
-  def keyword_page
-    @keyword_page=KeywordPage.find(params[:keyword_page_id])
-  end
 end
