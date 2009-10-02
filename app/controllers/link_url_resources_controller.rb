@@ -1,5 +1,5 @@
 class LinkUrlResourcesController < ApplicationController
-  before_filter :user_keywords,:except => [:auto_complete_for_keyword_page_keyword]
+  before_filter :load_user
   def new
     if not current_user.keyword_pages.include?(@keyword_page)
       v=ValueOrder.new
@@ -8,7 +8,7 @@ class LinkUrlResourcesController < ApplicationController
       v.actived=true
       v.save
     end
-    @link_url_resource=@keyword_page.link_url_resources.build
+    @link_url_resource=@user.link_url_resources.build
   end
 
   def edit
@@ -16,8 +16,9 @@ class LinkUrlResourcesController < ApplicationController
   end
 
   def create
-    @link_url_resource=@keyword_page.link_url_resources.build(params[:link_url_resource])
-    @link_url_resource.owner=current_user
+    @keyword_page=KeywordPage.find(session[:current_keyword_page_id])
+    @link_url_resource=@user.link_url_resources.build(params[:link_url_resource])
+    @link_url_resource.keyword_page=@keyword_page
     if @link_url_resource.save
       flash[:keyword_page]=@link_url_resource.keyword_page.id
       render :partial => "succeed",:layout => "link_url_resources"
@@ -32,8 +33,7 @@ class LinkUrlResourcesController < ApplicationController
   end
 
   private
-  def user_keywords
-    @user=current_user
+  def keyword_page
     @keyword_page=KeywordPage.find(params[:keyword_page_id])
   end
 end

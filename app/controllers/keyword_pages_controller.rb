@@ -40,6 +40,7 @@ class KeywordPagesController < ApplicationController
   
   def show
     @keyword_page=KeywordPage.find(params[:id])
+    session[:current_keyword_page_id]=@keyword_page.id
     @resources=@keyword_page.resources_by_value(params[:page])
     @related_keywords=@keyword_page.related_keywords
   end

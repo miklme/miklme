@@ -1,8 +1,7 @@
 class BlogResourcesController < ApplicationController
   skip_before_filter :login_required,:only => [:show]
-  before_filter :user_keywords,:except => [:new,:create]
+  before_filter :load_user
   def new
-    @keyword_page=KeywordPage.find(params[:keyword_page_id])
     if not current_user.keyword_pages.include?(@keyword_page)
       v=ValueOrder.new
       v.user=current_user
@@ -10,7 +9,7 @@ class BlogResourcesController < ApplicationController
       v.actived=true
       v.save
     end
-    @blog_resource=@keyword_page.blog_resources.build
+    @blog_resource=@user.blog_resources.build
   end
 
   def show
@@ -26,10 +25,10 @@ class BlogResourcesController < ApplicationController
   end
 
   def create
-    @keyword_page=KeywordPage.find(params[:keyword_page_id])
-    @blog_resource=@keyword_page.blog_resources.build(params[:blog_resource])
+    @keyword_page=KeywordPage.find(session[:current_keyword_page_id])
+    @blog_resource=@user.blog_resources.build(params[:blog_resource])
     @blog_resource.authority=true
-    @blog_resource.owner=current_user
+    @blog_resource.keyword_page=@keyword_page
     if @blog_resource.save
       flash[:keyword_page]=@blog_resource.keyword_page.id
       render :partial => "link_url_resources/succeed",:layout => "blog_resources"
@@ -39,7 +38,7 @@ class BlogResourcesController < ApplicationController
       n.resource=@blog_resource
       n.save
     else
-      redirect_to new_keyword_page_blog_resource_path(@keyword_page)
+redirect_to :back
     end
   end
 
@@ -53,8 +52,5 @@ class BlogResourcesController < ApplicationController
       render :action => :edit,:layout => "blog_resources"
     end
   end
-  private
-  def user_keywords
-    @user=User.find(params[:user_id])
-  end
+  
 end

@@ -16,11 +16,9 @@
     </div>
     <div id="sw_content">
       <div id="sw_canvas">
-        <% if action_name!="new" and action_name!="create"%>
           <div id="sw_aside">
             <%= render :partial => "shared/resources_side" %>
           </div>
-        <% end %>
         <div id="content">
           <div id="results">
             <%= @content_for_layout%>
