@@ -27,10 +27,8 @@
                   <!--
                   这个功能似乎伤害用户体验，用户会比较困惑
                   <td width="100">
-                    <% if resource.owner == current_user %>
-                      <div><%= link_to "编辑",edit_user_link_url_resource_path(resource.owner,resource),:popup => true %>(所在领域：<strong><%= resource.keywords %></strong>)
+                      <div>(所在领域：<strong><%= resource.keyword_page.keyword %></strong>)
                       </div>
-                    <% end %>
                   </td>
                   -->
                   <td width="80"><div><%= link_to resource.owner.nick_name,user_path(resource.owner) %></div>
@@ -56,7 +54,7 @@
                   同以上，对用户体验不利
                   <td width="100">
                     <% if  resource.owner == current_user %>
-                      <div><%= link_to "编辑",edit_user_blog_resource_path(resource.owner,resource),:popup => true %>(所在领域：<strong><%= resource.keywords %></strong>)
+                      <div><%= link_to "编辑",edit_user_blog_resource_path(resource.owner,resource),:popup => true %>(所在领域：<strong><%= resource.keyword_page.keyword %></strong>)
                       </div>
                     <% end %>
                   </td>

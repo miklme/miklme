@@ -1,8 +1,7 @@
-<% form_for [@user,@blog_resource] do |f|%>
+<% form_for [@keyword_page,@blog_resource] do |f|%>
   <ul class="sb_results">
     <li>
       <strong><%= f.error_messages %>
-        <%= flash[:keyword] %>
         <%= flash[:updated] %>
       </strong>
     </li>
@@ -10,16 +9,6 @@
     <%= f.label :title,"标题" %><%= f.text_field :title %></li>
     <li>
       <%= fckeditor_textarea(:blog_resource,:content,:toolbarSet => "Easy",:width => '90%',:height => '400px') %>
-    </li>
-    <li>
-      <p>这个条目发布在哪个领域* <%= link_to "管理我的领域",keyword_pages_path,:popup => true %>
-
-      </p>
-      <% for k in @ks %>
-        <cite>
-          <%= f.radio_button :keywords,k.keyword %><%= k.keyword %>
-        </cite>
-      <% end %>
     </li>
     <!--
     将来或许会有图片型的博客，先留着，默认为文字文档

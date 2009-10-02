@@ -1,3 +1,7 @@
-<li>
-<%= render :partial => "form" %>
-</li>
+<% if current_user==@user %>
+  <%= link_to_unless_current "相关链接>>>",new_keyword_page_link_url_resource_path(@keyword_page) %><span class="sb_count">（使用方式类似网络书签）</span>
+  |  <%= link_to_unless_current "一篇文章>>>",new_keyword_page_blog_resource_path(@keyword_page)%><span class="sb_count">（就象写一篇blog或发个帖子）</span>
+<% end %>
+<ul class="sb_results" id="wg0">
+  <%= render :partial => "form" %>
+</ul>

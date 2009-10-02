@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091001092244) do
+ActiveRecord::Schema.define(:version => 20091002060407) do
 
   create_table "addresses", :force => true do |t|
     t.string   "province"
@@ -137,6 +137,7 @@ ActiveRecord::Schema.define(:version => 20091001092244) do
     t.integer "keyword_page_id"
     t.decimal "value",           :precision => 8, :scale => 1, :default => 0.0
     t.boolean "hidden",                                        :default => false
+    t.boolean "actived",                                       :default => false
   end
 
 end

@@ -76,14 +76,6 @@ class Resource < ActiveRecord::Base
     end
   end
 
-  def before_save_or_update(params)
-    keyword_page=self.owner.keyword_pages.find_by_keyword(params)
-    if keyword_page.present?
-      self.keyword_page=keyword_page
-    else
-      self.errors.add("领域")
-    end
-  end
   private
   def adjust_link_url
     if  !self.link_url=~/http:/ and !self.link_url=~/https:/ and  !self.link_url=~/ftp:/ and  !self.link_url=~/sftp:/

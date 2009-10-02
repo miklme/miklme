@@ -23,13 +23,13 @@
       <%="文章" %>
     <% end %>
     <%= link_to "#{others_news.resource.description}",others_news.resource.link_url,:popup => true,:class => "title" %>
-    （关于： <%=link_to others_news.resource.keywords,keyword_page_path(via_keyword_to_keyword_page(others_news.resource.keywords)) %>）
+    （关于： <%=link_to others_news.resource.keyword_page.keyword,keyword_page_path(via_keyword_to_keyword_page(others_news.resource.keyword_page.keyword)) %>）
   </p>
 <% elsif others_news.news_type=="blog_resource" %>
   <p>
     <%= link_to "#{others_news.owner.name_or_nick_name(current_user)}",user_path(others_news.resource.owner) -%>发表了日志
     <%= link_to "#{others_news.resource.title}", user_blog_resource_path(others_news.resource.owner,others_news.resource),:popup => true,:class => "title"%>
-    （关于： <%=link_to others_news.resource.keywords,keyword_page_path(via_keyword_to_keyword_page(others_news.resource.keywords)) %>）
+    （关于： <%=link_to others_news.resource.keyword_page.keyword,keyword_page_path(via_keyword_to_keyword_page(others_news.resource.keyword_page.keyword)) %>）
   </p>
 <%end  %>
 

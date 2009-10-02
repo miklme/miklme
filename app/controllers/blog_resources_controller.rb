@@ -1,8 +1,15 @@
 class BlogResourcesController < ApplicationController
   skip_before_filter :login_required,:only => [:show]
-  before_filter :load_user,:user_keywords,:except => [:auto_complete_for_keyword_page_keyword]
+  before_filter :user_keywords,:except => [:auto_complete_for_keyword_page_keyword]
   def new
-    @blog_resource=current_user.blog_resources.build
+    if not current_user.keyword_pages.include?(@keyword_page)
+      v=ValueOrder.new
+      v.user=current_user
+      v.keyword_page=@keyword_page
+      v.actived=true
+      v.save
+    end
+    @blog_resource=@keyword_page.blog_resources.build
   end
 
   def show
@@ -19,30 +26,25 @@ class BlogResourcesController < ApplicationController
   end
 
   def create
-    @blog_resource=current_user.blog_resources.build(params[:blog_resource])
+    @blog_resource=@keyword_page.blog_resources.build(params[:blog_resource])
     @blog_resource.authority=true
-    @blog_resource.before_save_or_update(params[:blog_resource][:keywords])
-    if  @blog_resource.errors.blank?
-      if @blog_resource.save
-        flash[:keyword_page]=@blog_resource.keyword_page.id
-        render :partial => "link_url_resources/succeed",:layout => "blog_resources"
-        n=current_user.news.create
-        n.news_type="blog_resource"
-        n.owner=current_user
-        n.resource=@blog_resource
-        n.save
-      else
-        render :action => :new,:layout => "blog_resources"
-      end
+    @blog_resource.owner=current_user
+    if @blog_resource.save
+      flash[:keyword_page]=@blog_resource.keyword_page.id
+      render :partial => "link_url_resources/succeed",:layout => "blog_resources"
+      n=current_user.news.create
+      n.news_type="blog_resource"
+      n.owner=current_user
+      n.resource=@blog_resource
+      n.save
     else
-      render :action => :new,:layout => "blog_resources"
+      redirect_to new_keyword_page_blog_resource_path(@keyword_page)
     end
   end
 
   def update
     @blog_resource=@user.blog_resources.find(params[:id])
     @blog_resource.update_attributes(params[:blog_resource])
-    @blog_resource.before_save_or_update(params[:blog_resource][:keywords])
     if @blog_resource.save
       flash[:notice]="修改成功。"
       redirect_to keyword_page_path(@blog_resource.keyword_page)
@@ -52,6 +54,8 @@ class BlogResourcesController < ApplicationController
   end
   private
   def user_keywords
+    @user=current_user
     @ks=@user.appear_keyword_pages
+    @keyword_page=KeywordPage.find(params[:keyword_page_id])
   end
 end

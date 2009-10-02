@@ -5,7 +5,6 @@
 
 <% if logged_in? %>
   <table class="item" cellspacing="5">
-    <% if current_user.keyword_pages.include?(@resource.keyword_page) %>
       <tr>
         <td width="60">
           <%= render :partial => "shared/field_profile",:locals => {:user => current_user,:keyword_page => @resource.keyword_page}%>
@@ -14,9 +13,6 @@
           <%= render :partial => "form",:object => @comment %>
         </td>
       </tr>
-    <% else %>
-      <tr><td>在加入该领域之前，你仅可回应其他用户，不能够回应发布者</td></tr>
-    <% end %>
   </table>
 <% end %>
 

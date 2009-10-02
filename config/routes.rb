@@ -18,12 +18,12 @@ ActionController::Routing::Routes.draw do |map|
       twitter_resource.resources :replies
     end
     user.resources :news
-    user.resources :link_url_resources,
-      :member => {:add_value =>:post,:minus_value => :post }
   end
   map.resource :session
   map.resources :keyword_pages,:member => {:by_time => :get} do |keyword_page|
     keyword_page.resources :related_keywords
+    keyword_page.resources :blog_resources
+    keyword_page.resources :link_url_resources
   end
   map.activate '/activate/:activation_code', :controller => 'users', :action => 'activate'
   map.root :controller=>'sessions',:action=>'new'

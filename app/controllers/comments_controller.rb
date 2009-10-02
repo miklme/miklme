@@ -5,14 +5,18 @@ class CommentsController < ApplicationController
   # GET /comments.xml
   
   def index
-    @keyword_page=KeywordPage.find_by_keyword(@resource.keywords)
+    @keyword_page=KeywordPage.find_by_keyword(@resource.keyword_page.keyword)
+    if not current_user.keyword_pages.include?(@keyword_page)
+      v=ValueOrder.new
+
+    end
     @related_keywords=@keyword_page.related_keywords
     @comments=@resource.comments_by_value(params[:page])
     @comment=@resource.comments.build
   end
 
   def by_time
-    @keyword_page=KeywordPage.find_by_keyword(@resource.keywords)
+    @keyword_page=KeywordPage.find_by_keyword(@resource.keyword_page.keyword)
     @related_keywords=@keyword_page.related_keywords
     @comments=@resource.comments_by_time(params[:page])
     @comment=@resource.comments.build
@@ -40,7 +44,7 @@ class CommentsController < ApplicationController
   def create
     @comment = @resource.comments.build(params[:comment])
     @comment.owner=current_user
-      if @comment.save
+    if @comment.save
       u=User.find(@comment.resource.owner)
       if not u==current_user
         if current_user.field_value(@resource.keyword_page)<0 and params[:comment][:rating]=="-1"

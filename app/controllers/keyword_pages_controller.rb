@@ -28,11 +28,11 @@ class KeywordPagesController < ApplicationController
         flash[:notice]="成功。要知道，你是这个”领域“价值点数最高的人。想要让更多人认识到你，你最好让更多人关注你，
       或者是进入该领域页面，编辑“相关领域。”"
       else
-        flash[:notice]="成功。你创建了这个领域。如果这个领域已经存在，你就加入了它。"
+        flash[:notice]="创建成功。"
       end
       redirect_to :back
     rescue
-      flash[:notice]="出了点小问题，你是这个领域的成员，或者你没有填写领域名称。"
+      flash[:notice]="出了点小问题，你是这个领域已经存在了，或者你没有填写领域名称。"
       redirect_to :back
     end
   end
@@ -42,7 +42,6 @@ class KeywordPagesController < ApplicationController
     @keyword_page=KeywordPage.find(params[:id])
     @resources=@keyword_page.resources_by_value(params[:page])
     @related_keywords=@keyword_page.related_keywords
-    flash[:keyword]="这个是关于“#{@keyword_page.keyword}”的页面,若想要在本页面中增加条目，需要在“领域”中选择“#{@keyword_page.keyword}”"
   end
 
   def by_time
@@ -50,22 +49,6 @@ class KeywordPagesController < ApplicationController
     @resources=@keyword_page.resources_by_time(params[:page])
     @related_keywords=@keyword_page.related_keywords
     render :action => :show
-  end
-
-  def join_field
-    begin
-      current_user.keyword_pages<<KeywordPage.find(params[:id])
-      if KeywordPage.find(params[:id]).top_user==current_user
-        flash[:notice]="成功。要知道，你是这个”领域“价值点数最高的人。想要让更多人认识到你，你最好让更多人关注你，
-      或者是编辑“相关领域。”"
-      else
-        flash[:notice]="成功加入该领域。"
-      end
-      redirect_to :back
-    rescue
-      flash[:notice]="出了点小问题，可能你已经加入过该领域了。"
-      redirect_to :back
-    end
   end
 
   def hide_field

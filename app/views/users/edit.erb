@@ -4,15 +4,13 @@
   <% form_for @user do |f|%>
     <%= f.error_messages %>
     <p>我目前的"领域":  <% for k in @user.keyword_pages %>
-        <% if @user.value_orders.find_by_keyword_page_id(k.id).hidden==false %>
-        <strong><%=link_to k.keyword,keyword_page_path(k) %></strong><span class="little_white"><%= link_to "  删除  ",:controller => :keyword_pages,:action => :hide_field,:id => k%></span>
+        <% v=@user.value_orders.find_by_keyword_page_id(k.id) %>
+        <% if v.hidden==false%>
+        <strong><%=link_to k.keyword,keyword_page_path(k) %></strong><span class="little_white"><%= link_to "  隐藏  ",:controller => :keyword_pages,:action => :hide_field,:id => k%></span>
         <% else %>
-         <%= k.keyword %> <strong>(已删除)</strong><span class="little_white"><%= link_to "恢复",:controller => :keyword_pages,:action => :appear_field,:id => k %></span>
+         <%= k.keyword %> <strong>(已隐藏)</strong><span class="little_white"><%= link_to "恢复",:controller => :keyword_pages,:action => :appear_field,:id => k %></span>
     <% end %>
     <% end %>
-    </p>
-    <p>
-        点击 <%= link_to "这里",keyword_pages_path,:popup => true %>来决定自己要加入哪些感兴趣的领域，当然你也可以以后选择。
     </p>
     <table cellpadding="5" cellspacing="5">
       <tr><td><%= f.label :nick_name,'名号*'%></td><td><%= f.text_field :nick_name,:size => 21 %></td><td>任何人都能看到，请随意填写。</td></tr>
