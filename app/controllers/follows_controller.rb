@@ -4,8 +4,7 @@ class FollowsController < ApplicationController
   # GET /follows
   # GET /follows.xml
   def index
-    @real_friends = @user.real_friends
-    @interested_people=@user.interested_people
+    @followings = @user.followings
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @follows }

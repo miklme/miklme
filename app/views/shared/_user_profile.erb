@@ -1,25 +1,15 @@
 <% if logged_in? %>
-  <% if user_profile.regard_real_friend?(current_user)%>
-    <div>
-      <div><%= link_to user_profile.name,user_path(user_profile)%></div><strong>(对方向我提供了真实姓名)</strong>
-      <cite><%= "总价值点数：#{user_profile.total_value}" %></cite>
-    </div>
-  <% elsif current_user.regard_real_friend?(user_profile) %>
-    <div>
-      <div><%= link_to user_profile.nick_name,user_path(user_profile) %></div>
-      <strong>(我的真实朋友)</strong>
-      <cite><%= "总价值点数：#{user_profile.total_value}" %></cite>
-    </div>
-  <% elsif current_user.interested_in?(user_profile)  %>
+  <% if current_user.followings.include?(user_profile)  %>
     <div>
       <div><%= link_to user_profile.nick_name,user_path(user_profile) %></div>
       <strong>（我关注的人）</strong>
       <cite><%= "总价值点数：#{user_profile.total_value}" %></cite>
     </div>
-  <% elsif user_profile.interested_in?(current_user)%>
+  <% elsif current_user.followers.include?(user_profile)%>
     <div>
       <div><%= link_to user_profile.nick_name,user_path(user_profile) %></div>
       <strong>（关注我的人）</strong>
+      <cite><%= "总价值点数：#{user_profile.total_value}" %></cite>
     </div>
   <% elsif user_profile==current_user%>
     <div>

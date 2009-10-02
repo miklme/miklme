@@ -49,11 +49,6 @@ class UsersController < ApplicationController
         v=ValueOrder.find(session[:value_order_id])
         v.value+=3
         v.save
-        if session[:relationship]=="realfriend"
-          b.provide_name=true
-        elsif session[:relationship]=="commonfriend"
-          b.provide_name=false
-        end
         b.save
         flash[:notice]="你关注了#{User.find(session[:inviter_id]).name_or_nick_name(current_user)}"
         session[:relationship]=session[:inviter_id]=session[:value_order_id]=nil

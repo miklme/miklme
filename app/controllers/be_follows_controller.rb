@@ -11,7 +11,7 @@ class BeFollowsController < ApplicationController
   end
   def index
     @be_follows=@user.be_follows
-    @real=@user.followers
+    @followers=@user.followers
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @be_follows }
@@ -29,10 +29,6 @@ class BeFollowsController < ApplicationController
     end
   end
 
-  def edit
-    @be_follow = BeFollow.find(params[:id])
-  end
-
   # POST /be_follows
   # POST /be_follows.xml
   def create
@@ -48,11 +44,7 @@ class BeFollowsController < ApplicationController
       n=@user.news.create
       n.owner=@user
       n.follower_id=current_user.id
-      if @be_follow.provide_name?
-        n.news_type="friend_follow"
-      else
-        n.news_type="stranger_follow"
-      end
+      n.news_type="be_follow"
       n.save
       flash[:notice] = "成功关注该用户，之后你会自动获得该用户的一些信息，现在你可以逛逛他的主页"
       redirect_to user_path(@user)

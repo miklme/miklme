@@ -65,13 +65,9 @@
     <%= link_to "#{news.resource.title}", user_blog_resource_path(news.resource.owner,news.resource),:popup => true,:class => "title"%>
     （领域： <%=link_to news.resource.keyword_page.keyword,keyword_page_path(news.resource.keyword_page) %>）
   </p>
-<% elsif news.news_type=="stranger_follow" %>
+<% elsif news.news_type=="be_follow" %>
   <p>
     <%=link_to news.owner.name_or_nick_name(current_user),user_path(news.owner) %>被 <%=link_to news.follower.name_or_nick_name(current_user),user_path(news.follower) %>关注，<span class="little_white">相应领域的价值点数+3。</span>
-  </p>
-<% elsif news.news_type=="friend_follow" %>
-  <p>
-    <%=link_to news.owner.name_or_nick_name(current_user),user_path(news.owner) %>被 <%=link_to news.follower.name_or_nick_name(current_user),user_path(news.follower) %>加为朋友，对方信任我并向我提供了真实姓名。<span class="little_white">相应领域的价值点数+3.</span>
   </p>
 <% elsif news.news_type=="twitter_resource_reply" %>
   <p>

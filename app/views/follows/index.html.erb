@@ -1,14 +1,5 @@
-<h1>真实朋友：</h1>
-<% for r in @real_friends %>
-  <p><span><%=link_to r.name,user_path(r) %><%= "（#{r.nick_name}）" %></span>
-  <span><%= link_to "删除这个好友",user_be_follow_path(r,r.be_follows.find_by_follower_id(@user.id)),:method => :delete,:confirm => "确定删除这个好友？" %></span>
-</p>
-<% end %>
-
-  <h1>陌生用户：</h1>
-<% for r in @interested_people %>
+<% for r in @followings %>
   <p>
-  <span><%= link_to "#{r.nick_name}",user_path(r) %></span>
-  <span><%= link_to "取消关注",user_be_follow_path(r,r.be_follows.find_by_follower_id(@user.id)),:method => :delete,:confirm => "确定么？以后你将不能看到该用户的所有近况了。" %></span>
+    <%= render :partial => "shared/user_profile_full",:object =>r%>
   </p>
 <% end %>

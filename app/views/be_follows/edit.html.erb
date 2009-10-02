@@ -1,5 +1,0 @@
-<% form_for [@user,@be_follow] do |f| %>
-  <%= f.check_box :provide_name,{},true,false %>
-  <%= f.label :provide_name,"我和该用户在现实当中认识。" %>
-  <%= f.submit "就这样",:onclick => "this.disabled = true"%>
-<% end %>

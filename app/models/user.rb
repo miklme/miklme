@@ -96,42 +96,8 @@ class User < ActiveRecord::Base
     User.find(user_ids)
   end
 
-  def real_friends
-    b=BeFollow.scoped_by_follower_id(self.id).scoped_by_provide_name(true)
-    user_ids=b.map do |c|
-      c.user.id
-    end
-    User.find(user_ids)
-  end
-
-  def interested_people
-    b=BeFollow.scoped_by_follower_id(self.id).scoped_by_provide_name(false)
-    user_ids=b.map do |c|
-      c.user.id
-    end
-    User.find(user_ids)
-  end
-
-  def regard_real_friend?(user)
-    if BeFollow.find_by_user_id_and_follower_id(user.id,self.id).present? and BeFollow.find_by_user_id_and_follower_id(user.id,self.id).provide_name?
-      true
-    else
-      false
-    end
-  end
-
-  def interested_in?(user)
-    if BeFollow.find_by_user_id_and_follower_id(user.id,self.id).present? and !BeFollow.find_by_user_id_and_follower_id(user.id,self.id).provide_name?
-      true
-    else
-      false
-    end
-  end
-
   def name_or_nick_name(current_user)
-    if self.regard_real_friend?(current_user)
-      self.name
-    elsif self==current_user
+    if self==current_user
       "我"
     else
       self.nick_name

@@ -1,8 +1,5 @@
-<h1>真实朋友：</h1>
-
 <% for f in @followers %>
 <p>
-<%= render :partial => "shared/user_profile_full",:object =>f%>
+  <%= render :partial => "shared/user_profile_full",:object =>f%>
 </p>
 <% end %>
-  <h1>陌生用户：</h1>
