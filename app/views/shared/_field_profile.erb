@@ -2,7 +2,7 @@
   <% if current_user.followings.include?(user)  %>
     <div>
       <div><%= link_to user.nick_name,user_path(user) %></div>
-      <strong>（我关注的人）</strong>
+      <strong>（我已关注）</strong>
       <cite><%= "价值点数：#{user.field_value(keyword_page)}" %></cite>
     </div>
   <% elsif current_user.followers.include?(user)%>

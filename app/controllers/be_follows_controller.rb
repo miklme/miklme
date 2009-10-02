@@ -36,7 +36,7 @@ class BeFollowsController < ApplicationController
     @be_follow.user=@user
     @be_follow.follower=current_user
     if @be_follow.save
-      if params[:keyword_page].present?
+      if params[:keyword_page].present? and @user.last_ip!=current_user.last_ip
         k=KeywordPage.find_by_keyword(params[:keyword_page][:keyword])
         @user.change_value(k,3)
       end
