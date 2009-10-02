@@ -8,7 +8,13 @@
     <p>
       <%= render  :partial => "shared/user_profile_full",:object => r %>
     </p>
-    <% end %>
   <% end %>
+  <h1>关注<%= "#{@user.name_or_nick_name(current_user)}" %>的人们：</h1>
+  <% for f in @followers %>
+    <p>
+      <%= render  :partial => "shared/user_profile_full",:object => f %>
+    </p>
+  <% end   %>
+<% end %>
 
 

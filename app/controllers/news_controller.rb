@@ -3,7 +3,7 @@ class NewsController < ApplicationController
   def index
     @others_news=News.list_others_news(@user,params[:page])
     @followings = @user.followings
-    @followings=@user.followings
+    @followers=@user.followers
   end
 
 end

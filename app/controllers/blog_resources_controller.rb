@@ -1,7 +1,8 @@
 class BlogResourcesController < ApplicationController
   skip_before_filter :login_required,:only => [:show]
-  before_filter :user_keywords,:except => [:auto_complete_for_keyword_page_keyword]
+  before_filter :user_keywords,:except => [:new,:create]
   def new
+    @keyword_page=KeywordPage.find(params[:keyword_page_id])
     if not current_user.keyword_pages.include?(@keyword_page)
       v=ValueOrder.new
       v.user=current_user
@@ -18,7 +19,6 @@ class BlogResourcesController < ApplicationController
 
   def edit
     @blog_resource=BlogResource.find(params[:id])
-
   end
 
   def index
@@ -26,6 +26,7 @@ class BlogResourcesController < ApplicationController
   end
 
   def create
+    @keyword_page=KeywordPage.find(params[:keyword_page_id])
     @blog_resource=@keyword_page.blog_resources.build(params[:blog_resource])
     @blog_resource.authority=true
     @blog_resource.owner=current_user
@@ -54,8 +55,6 @@ class BlogResourcesController < ApplicationController
   end
   private
   def user_keywords
-    @user=current_user
-    @ks=@user.appear_keyword_pages
-    @keyword_page=KeywordPage.find(params[:keyword_page_id])
+    @user=User.find(params[:user_id])
   end
 end

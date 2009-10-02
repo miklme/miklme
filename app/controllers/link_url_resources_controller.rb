@@ -34,7 +34,6 @@ class LinkUrlResourcesController < ApplicationController
   private
   def user_keywords
     @user=current_user
-    @ks=@user.appear_keyword_pages
     @keyword_page=KeywordPage.find(params[:keyword_page_id])
   end
 end
