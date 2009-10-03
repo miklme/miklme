@@ -22,13 +22,12 @@
       <div id="sw_canvas">
         <div id="sw_aside">
           <div id="sw_nav">
-            <h2>评论排序方式</h2>
             <ul>
               <li class="sw_navA">
-                <%= link_to "用户价值点数",user_resource_comments_path(@user,@resource) %>
+                <%= link_to "按价值点数排序",user_resource_comments_path(@user,@resource) %>
               </li>
               <li class="sw_navA">
-                <%= link_to "发表时间",by_time_user_resource_comments_path(@user,@resource) %>
+                <%= link_to "按时间排序",by_time_user_resource_comments_path(@user,@resource) %>
               </li>
             </ul>
           </div><div id="sc_expPane">

@@ -63,7 +63,7 @@ class UsersController < ApplicationController
     @user=User.find(params[:id])
     @news=News.list_self_news(@user,params[:page])
     @self_news_for_others=News.self_news_for_others(@user,params[:page])
-    @variable_title="这里开始..."
+    @variable_title="开始啦！"
     @resources=@user.resources.find(:all,:order => "resources.created_at DESC")
     @twitter_resource=@user.twitter_resources.build
     render :layout => "resources"

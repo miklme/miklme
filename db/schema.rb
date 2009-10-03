@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091002060407) do
+ActiveRecord::Schema.define(:version => 20091003064405) do
 
   create_table "addresses", :force => true do |t|
     t.string   "province"
@@ -35,6 +35,8 @@ ActiveRecord::Schema.define(:version => 20091002060407) do
     t.integer  "parent_comment_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "action_one"
+    t.string   "action_two"
   end
 
   create_table "keyword_pages", :force => true do |t|

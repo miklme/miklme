@@ -11,7 +11,7 @@
                 </p>
               <% end %>
               <ul class="sb_meta">
-                <li><cite><%= link_to "#{resource.comments.size}条回应>>>", user_resource_comments_path(resource.owner,resource),:popup => true %></cite></li>
+                <li><cite><%= link_to  "回他一招！(共#{resource.comments.size}条)", user_resource_comments_path(resource.owner,resource),:popup => true %></cite></li>
                 <li><%=truncate(resource.link_url,:length => 33)  %></li>
               </ul>
             </td>
@@ -41,7 +41,7 @@
                 <%= truncate(resource.content,:length => 120)%>
               </p>
               <ul class="sb_meta">
-                <li><cite><%= link_to "#{resource.comments.size}条回应>>>", user_resource_comments_path(resource.owner,resource),:popup => true %></cite></li>
+                <li><cite><%= link_to  "回他一招！(共#{resource.comments.size}条)", user_resource_comments_path(resource.owner,resource),:popup => true %></cite></li>
               </ul>
             </td>
             <td width="100">

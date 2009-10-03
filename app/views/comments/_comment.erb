@@ -1,11 +1,17 @@
 <table class="item" cellspacing="5">
   <tr>
     <td width="60px">
-        <%= render :partial => "shared/field_profile",:locals => {:user => comment.owner,:keyword_page => comment.resource.keyword_page} %>
+      <%= render :partial => "shared/field_profile",:locals => {:user => comment.owner,:keyword_page => comment.resource.keyword_page} %>
     </td>
     <td width="520px">
       <p><%= h comment.content  %></p>
-      <div class="sb_meta"><%=h comment.created_at.advance(:hours => 8).to_s(:db)  %></div>
+      <div class="sb_meta">
+        <%=h comment.created_at.advance(:hours => 8).to_s(:db)  %>
+        <% if comment.action_one.present? %>
+          ,
+          <%="#{comment.resource.owner.nick_name}的#{comment.action_two}被#{comment.owner.nick_name}#{comment.action_one}了"  %>
+        <% end %>
+      </div>
       <span><%= link_to "回应该用户",new_user_resource_comment_replied_comment_path(@user,@resource,comment),:popup => ['你的回应...', 'height=300,width=480']  %></span>
       <div id="replied_comments">
         <% for replied_comment in comment.replied_comments %>

@@ -3,23 +3,23 @@
     <div>
       <div><%= link_to user.nick_name,user_path(user) %></div>
       <strong>（我已关注）</strong>
-      <cite><%= "价值点数：#{user.field_value(keyword_page)}" %></cite>
+      <cite><%=user.field_value(keyword_page) %></cite>
     </div>
   <% elsif current_user.followers.include?(user)%>
     <div>
       <div><%= link_to user.nick_name,user_path(user) %></div>
       <strong>（关注我的人）</strong>
-      <cite><%= "价值点数：#{user.field_value(keyword_page)}" %></cite>
+      <cite><%= "#{user.field_value(keyword_page)}" %></cite>
     </div>
   <% else %>
     <div>
       <div><%= link_to user.nick_name ,user_path(user)%></div>
-      <cite><%="价值点数：#{user.field_value(keyword_page)}" %></cite>
+      <cite><%="#{user.field_value(keyword_page)}" %></cite>
     </div>
   <% end %>
 <% else %>
   <div>
     <div><%= link_to user.nick_name ,user_path(user)%></div>
-    <cite><%="价值点数：#{user.field_value(keyword_page)}" %></cite>
+    <cite><%="#{user.field_value(keyword_page)}" %></cite>
   </div>
 <% end %>
