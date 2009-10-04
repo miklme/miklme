@@ -1,8 +1,8 @@
 <span class="right">
-  <%=distance_of_time_in_words(Time.now, news.created_at, true)%></span>
-  <% if news.news_type=="comment" %>
+<%=distance_of_time_in_words(Time.now, news.created_at, true)%></span>
+<% if news.news_type=="comment" %>
   <p>
-    <%= link_to news.owner.name_or_nick_name(current_user),user_path(news.owner) %>的条目
+    <%= link_to news.owner.name_or_nick_name(current_user),user_path(news.owner) %>的言论
     <% if news.resource.class.to_s=="LinkUrlResource" %>
       <%=link_to news.resource.description,news.resource.link_url,:popup => true,:class => "title" %>
     <% elsif news.resource.class.to_s=="BlogResource" %>
@@ -11,15 +11,18 @@
     被评论：
     <cite><%=truncate news.comment.try(:content),:length => 140 %>
     </cite>
-    <em>共<%=link_to "#{news.resource.comments.size}条评论>>>",user_resource_comments_path(news.owner,news.resource),:popup => true %></em>
+    <em><%=link_to "#{news.resource.comments.size}条回应>>>",user_resource_comments_path(news.owner,news.resource),:popup => true %></em>
+    <!--
+  这是一个条目内总的价值点数情况，暂时不使用
     <% a=Comment.sum(:rating,:conditions => ["resource_id=?",news.resource.id]) %>
     <span class="little_white">
-      <% if a>=0 %>
-        相应领域的价值点数增加.
-      <% else %>
-        相应领域的价值点数减少了(反响恶劣)
-      <% end %>
+    <% if a>=0 %>
+            相应领域的价值点数增加.
+    <% else %>
+            相应领域的价值点数减少了(反响恶劣)
+    <% end %>
     </span>
+    -->
   </p>
 <% elsif news.news_type=="replied_comment" %>
   <p>
@@ -30,7 +33,7 @@
       <%=link_to news.resource.title,user_blog_resource_path(news.resource.owner,news.resource),:popup => true,:class => "title" %>
     <% end %>
     中被回复:
-    <cite><%=news.comment.content %>
+    <cite><%=truncate news.comment.content,:length => 160 %>
       <em><%= link_to "详细>>",user_resource_comments_path(news.comment.resource.owner,news.comment.resource) %></em>
     </cite>
   </p>
@@ -43,18 +46,9 @@
   </p>
 <% elsif news.news_type=="link_url_resource" %>
   <p>
-    <%= link_to "#{news.owner.name_or_nick_name(current_user)}",user_path(news.resource.owner) -%>分享了
+    <%= link_to "#{news.owner.name_or_nick_name(current_user)}",user_path(news.resource.owner) -%>发表了
     <% if news.resource.authority? %>
       <%= "原创" -%>
-    <% end %>
-    <% if news.resource.form=="视频" -%>
-      <%="视频" -%>
-    <% elsif news.resource.form=="音频" -%>
-      <%= "音乐" %>
-    <% elsif news.resource.form=="图片" %>
-      <%="图片" %>
-    <% elsif news.resource.form=="文字、文档" %>
-      <%="文章" %>
     <% end %>
     <%= link_to "#{news.resource.description}",news.resource.link_url,:popup => true,:class => "title" %>
     （领域： <%=link_to news.resource.keyword_page.keyword,keyword_page_path(news.resource.keyword_page) %>）
@@ -74,7 +68,7 @@
     <%=link_to news.owner.name_or_nick_name(current_user),user_path(news.owner) %>的状态
     <cite><%=truncate news.resource.content,:length => 10%></cite>被回复：
     <cite><%= truncate news.try(:reply).try(:content),:length => 140 %></cite>
-    <em>共<%=link_to "#{news.resource.replies.size}条回复>>>",user_twitter_resource_path(news.resource.owner,news.resource) %></em>，<span class="little_white">相应领域的价值点数＋ <%=h news.resource.replies.size*0.1 %></span>
+    <em><%=link_to "#{news.resource.replies.size}条回应>>>",user_twitter_resource_path(news.resource.owner,news.resource) %></em>，<span class="little_white">相应领域的价值点数＋ <%=h news.resource.replies.size*0.1 %></span>
   </p>
 <%end  %>
 
