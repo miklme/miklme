@@ -1,15 +1,15 @@
 <% form_for  ([form.resource.owner,:resource,form]) do |f| %>
   <%= f.error_messages %>
-  <% if !form.resource.commenters.include?(current_user) and form.resource.owner.last_ip!=current_user.last_ip%>
+  <%# if !form.resource.commenters.include?(current_user) and form.resource.owner.last_ip!=current_user.last_ip%>
     <p>
       <%=f.radio_button :rating,-1%>
-      <strong>-<%= comment_value(form.resource.keyword_page) %></strong>
+      <strong>消灭此言论(<%= comment_value(form.resource.keyword_page) %>伤害)</strong>
       <%=f.radio_button :rating,0%>
       不评分
       <%=f.radio_button :rating,1 %>
-      <cite>+<%= comment_value(form.resource.keyword_page) %></cite>
+      <cite>赞成此言论(<%= comment_value(form.resource.keyword_page) %>加成)</cite>
     </p>
-  <% end %>
+  <%# end %>
 
   <p>出招吧，句式：v.+"其"+n. <span class="sb_meta">（如：侮辱其人格，弹其小JJ，发扬其精神等等）</span>
   </p>
