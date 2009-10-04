@@ -1,6 +1,7 @@
 class LinkUrlResourcesController < ApplicationController
   before_filter :load_user
   def new
+    @keyword_page=KeywordPage.find(session[:current_keyword_page_id])
     if not current_user.keyword_pages.include?(@keyword_page)
       v=ValueOrder.new
       v.user=current_user
@@ -9,10 +10,6 @@ class LinkUrlResourcesController < ApplicationController
       v.save
     end
     @link_url_resource=current_user.link_url_resources.build
-  end
-
-  def edit
-    @link_url_resource=LinkUrlResource.find(params[:id])
   end
 
   def create

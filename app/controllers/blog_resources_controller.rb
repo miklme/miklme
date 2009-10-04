@@ -2,6 +2,7 @@ class BlogResourcesController < ApplicationController
   skip_before_filter :login_required,:only => [:show]
   before_filter :load_user
   def new
+    @keyword_page=KeywordPage.find(session[:current_keyword_page_id])
     if not current_user.keyword_pages.include?(@keyword_page)
       v=ValueOrder.new
       v.user=current_user
@@ -38,7 +39,7 @@ class BlogResourcesController < ApplicationController
       n.resource=@blog_resource
       n.save
     else
-redirect_to :back
+      redirect_to :back
     end
   end
 

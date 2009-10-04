@@ -1,20 +1,23 @@
 <% form_for  ([form.resource.owner,:resource,form]) do |f| %>
   <%= f.error_messages %>
-  <%# if !form.resource.commenters.include?(current_user) and form.resource.owner.last_ip!=current_user.last_ip%>
-  <p>
-    <%=f.radio_button :rating,-1%>
-    <strong>-<%= comment_value(form.resource.keyword_page) %></strong>
-    <%=f.radio_button :rating,0%>
-    不评分
-    <%=f.radio_button :rating,1 %>
-    <cite>+<%= comment_value(form.resource.keyword_page) %></cite>
-  </p>
+  <% if !form.resource.commenters.include?(current_user) and form.resource.owner.last_ip!=current_user.last_ip%>
+    <p>
+      <%=f.radio_button :rating,-1%>
+      <strong>-<%= comment_value(form.resource.keyword_page) %></strong>
+      <%=f.radio_button :rating,0%>
+      不评分
+      <%=f.radio_button :rating,1 %>
+      <cite>+<%= comment_value(form.resource.keyword_page) %></cite>
+    </p>
+  <% end %>
+
   <p>出招吧，句式：v.+"其"+n. <span class="sb_meta">（如：侮辱其人格，弹其小JJ，发扬其精神等等）</span>
   </p>
+
   <p>
-  <%=f.text_field :action_one,:size => 4%>其 <%= f.text_field :action_two,:size => 4 %>
+    <%=f.text_field :action_one,:size => 4%>其 <%= f.text_field :action_two,:size => 4 %>
   </p>
-  <%# end %>
+  评论内容
   <p>
     <%= f.text_area :content,:size => "48x4"%>
   </p>
