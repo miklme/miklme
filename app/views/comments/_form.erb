@@ -1,17 +1,23 @@
 <% form_for  ([form.resource.owner,:resource,form]) do |f| %>
   <%= f.error_messages %>
   <%# if !form.resource.commenters.include?(current_user) and form.resource.owner.last_ip!=current_user.last_ip%>
-    <p>
-      <%=f.radio_button :rating,-1%>
-      <strong>消灭此言论(<%= comment_value(form.resource.keyword_page) %>伤害)</strong>
-      <%=f.radio_button :rating,0%>
-      不评分
-      <%=f.radio_button :rating,1 %>
-      <cite>赞成此言论(<%= comment_value(form.resource.keyword_page) %>加成)</cite>
-    </p>
+  <p>
+    <%=f.radio_button :rating,-1%>
+    <strong>消灭此言论
+    </strong>
+    <em><%= link_to_remote "(#{comment_value(form.resource.keyword_page)}伤害)",:url => {:controller => :keyword_pages,:action => :show_hidden}%>
+    <%=f.radio_button :rating,0%></em>
+    不出招
+    <%=f.radio_button :rating,1 %>
+    <cite>赞成此言论
+    </cite>
+    <em><%= link_to_remote "(#{comment_value(form.resource.keyword_page)}加成)",:url => {:controller => :keyword_pages,:action => :show_hidden}%>
+    </em>
+  </p>
+  <cite id="hidden" style="display:none">给别人伤害／加成的数值和你自己的价值点数成正比。</cite>
   <%# end %>
 
-  <p>出招吧，句式：v.+"其"+n. <span class="sb_meta">（如：侮辱其人格，弹其小JJ，发扬其精神等等）</span>
+  <p>给你的招式取个名字，句式：v.+"其"+n. <span class="sb_meta">（如：侮辱其人格，弹其小JJ，断其一指等等）</span>
   </p>
 
   <p>
