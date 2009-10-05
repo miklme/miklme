@@ -31,7 +31,7 @@ class KeywordPagesController < ApplicationController
       v.keyword_page=k
       v.actived=true
       v.save
-      flash[:notice]="创建成功。"
+      flash[:notice]="创建成功。由于你是创建者，你拥有3点价值点数，而新加入的人为0。"
     end
     redirect_to :back
 
