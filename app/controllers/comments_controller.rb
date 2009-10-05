@@ -57,7 +57,7 @@ class CommentsController < ApplicationController
           current_user.change_value(@resource.keyword_page,-@resource.keyword_page.comment_value(current_user)/2)
           current_user.save
         elsif params[:comment][:rating]=="1"
-          flash[:notice]="评论成功"
+          flash[:notice]="回应成功"
           u.change_value @resource.keyword_page,@resource.keyword_page.comment_value(current_user)
           u.save
         end

@@ -2,9 +2,15 @@
 <%=distance_of_time_in_words(Time.now, news.created_at, true)%></span>
 <% if news.news_type=="be_comment" %>
   <p>
-    <%= link_to news.comment.owner.name_or_nick_name(current_user) %><em>(<%= news.comment.owner.field_value(news.comment.resource.keyword_page) %>)</em>
+    <%= link_to news.comment.owner.name_or_nick_name(current_user) %>
     <% if news.comment.action_one.present? and news.comment.action_two.present? -%>
       <%= news.comment.action_one -%>了我的<%=news.comment.action_two -%>
+      <% if news.comment.rating>0 %>
+        (价值点数+<%= news.comment.owner.field_value(news.comment.resource.keyword_page)/10+0.5 %>)
+
+      <% elsif news.comment.rating<0 %>
+        (价值点数-<%= news.comment.owner.field_value(news.comment.resource.keyword_page)/10+0.5 %>)
+      <% end %>
       并
     <% end %>
     回应我：
@@ -16,9 +22,9 @@
     <% a=Comment.sum(:rating,:conditions => ["resource_id=?",news.resource.id]) %>
     <span class="little_white">
     <% if a>=0 %>
-                                相应领域的价值点数增加.
+                                      相应领域的价值点数增加.
     <% else %>
-                                相应领域的价值点数减少了(反响恶劣)
+                                      相应领域的价值点数减少了(反响恶劣)
     <% end %>
     </span>
     -->
