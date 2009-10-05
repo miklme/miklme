@@ -22,9 +22,9 @@ module ApplicationHelper
   end
   def link_to_resource(resource)
     if resource.class.to_s=="LinkUrlResource"
-      link_to resource.description_or_title,resource.link_url,:popup => true
+      link_to resource.description_or_title,resource.link_url,:popup => true,:class => "title"
     elsif resource.class.to_s=="BlogResource"
-      link_to resource.description_or_title,user_blog_resource_path(resource.owner,resource),:popup => true
+      link_to resource.description_or_title,user_blog_resource_path(resource.owner,resource),:popup => true,:class => "title"
     end
   end
   

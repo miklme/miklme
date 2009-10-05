@@ -1,71 +1,77 @@
 <span class="right">
 <%=distance_of_time_in_words(Time.now, news.created_at, true)%></span>
-<% if news.news_type=="comment" %>
+<% if news.news_type=="be_comment" %>
   <p>
-    <%= link_to news.owner.name_or_nick_name(current_user),user_path(news.owner) %>的言论
-    <% if news.resource.class.to_s=="LinkUrlResource" %>
-      <%=link_to news.resource.description,news.resource.link_url,:popup => true,:class => "title" %>
-    <% elsif news.resource.class.to_s=="BlogResource" %>
-      <%=link_to news.resource.title,user_blog_resource_path(news.resource.owner,news.resource),:popup => true,:class => "title" %>
+    <%= link_to news.comment.owner.name_or_nick_name(current_user) %><em>(<%= news.comment.owner.field_value(news.comment.resource.keyword_page) %>)</em>
+    <% if news.comment.action_one.present? and news.comment.action_two.present? -%>
+      <%= news.comment.action_one -%>了我的<%=news.comment.action_two -%>
+      并
     <% end %>
-    被评论：
+    回应我：
     <cite><%=truncate news.comment.try(:content),:length => 140 %>
     </cite>
-    <em><%=link_to "#{news.resource.comments.size}条回应>>>",user_resource_comments_path(news.owner,news.resource),:popup => true %></em>
+    <em><%=link_to "共#{news.resource.comments.size}回应>>>",user_resource_comments_path(news.owner,news.resource),:popup => true %></em>
     <!--
   这是一个条目内总的价值点数情况，暂时不使用
     <% a=Comment.sum(:rating,:conditions => ["resource_id=?",news.resource.id]) %>
     <span class="little_white">
     <% if a>=0 %>
-            相应领域的价值点数增加.
+                              相应领域的价值点数增加.
     <% else %>
-            相应领域的价值点数减少了(反响恶劣)
+                              相应领域的价值点数减少了(反响恶劣)
     <% end %>
     </span>
     -->
   </p>
+<% elsif news.news_type=="comment" %>
+  <p>
+    我
+    <% if news.comment.action_one.present? and news.comment.action_two.present? %>
+      <%= news.comment.action_one %>了<%=link_to news.resource.owner.name_or_nick_name(current_user),user_path(news.resource.owner)%>的<%=news.comment.action_two%>并
+    <% end %>
+    回应<%= link_to news.resource.owner.name_or_nick_name(current_user),user_path(news.resource.owner) %>：
+    <cite>
+      <%=truncate news.comment.content,:length => 140 %>
+    </cite>
+    <em><%= link_to "详细>>",user_resource_comments_path(news.resource.owner,news.resource) %></em>
+  </p>
 <% elsif news.news_type=="replied_comment" %>
   <p>
-    <%=link_to news.owner.name_or_nick_name(current_user),user_path(news.owner) %>在
-    <% if news.resource.class.to_s=="LinkUrlResource" %>
-      <%=link_to news.resource.description,news.resource.link_url,:popup => true,:class => "title" %>
-    <% elsif news.resource.class.to_s=="BlogResource" %>
-      <%=link_to news.resource.title,user_blog_resource_path(news.resource.owner,news.resource),:popup => true,:class => "title" %>
-    <% end %>
-    中被回复:
+    我被回复:
     <cite><%=truncate news.comment.content,:length => 160 %>
       <em><%= link_to "详细>>",user_resource_comments_path(news.comment.resource.owner,news.comment.resource) %></em>
     </cite>
   </p>
+
+<% elsif news.news_type=="link_url_resource" %>
+  <p>
+    我分享一链接
+    <%= link_to_resource(news.resource) %>
+    （领域： <%=link_to_page news.resource.keyword_page%>）
+  </p>
+<% elsif news.news_type=="blog_resource" %>
+  <p>
+    我发表高论
+    <%= link_to_resource(news.resource) %>
+    （领域： <%=link_to_page news.resource.keyword_page %>）
+  </p>
+<% elsif news.news_type=="be_follow" %>
+  <p>
+    我被<%=link_to news.follower.name_or_nick_name(current_user),user_path(news.follower) %>关注，<span class="little_white">相应领域的价值点数+3。</span>
+  </p>
+
+
 <% elsif news.news_type=="twitter_resource" %>
   <p>
-    <%=link_to news.owner.name_or_nick_name(current_user),user_path(news.owner) %>说：
+    我说：
     <cite><%=h news.resource.content %></cite>
     <em><%= link_to "#{news.resource.replies.size}条回应>>>", user_twitter_resource_path(news.resource.owner,news.resource)%>
     </em>
   </p>
-<% elsif news.news_type=="link_url_resource" %>
-  <p>
-    <%= link_to "#{news.owner.name_or_nick_name(current_user)}",user_path(news.resource.owner) -%>发表了
-    <% if news.resource.authority? %>
-      <%= "原创" -%>
-    <% end %>
-    <%= link_to "#{news.resource.description}",news.resource.link_url,:popup => true,:class => "title" %>
-    （领域： <%=link_to news.resource.keyword_page.keyword,keyword_page_path(news.resource.keyword_page) %>）
-  </p>
-<% elsif news.news_type=="blog_resource" %>
-  <p>
-    <%= link_to "#{news.owner.name_or_nick_name(current_user)}",user_path(news.resource.owner) -%>发表了日志
-    <%= link_to "#{news.resource.title}", user_blog_resource_path(news.resource.owner,news.resource),:popup => true,:class => "title"%>
-    （领域： <%=link_to news.resource.keyword_page.keyword,keyword_page_path(news.resource.keyword_page) %>）
-  </p>
-<% elsif news.news_type=="be_follow" %>
-  <p>
-    <%=link_to news.owner.name_or_nick_name(current_user),user_path(news.owner) %>被 <%=link_to news.follower.name_or_nick_name(current_user),user_path(news.follower) %>关注，<span class="little_white">相应领域的价值点数+3。</span>
-  </p>
+
 <% elsif news.news_type=="twitter_resource_reply" %>
   <p>
-    <%=link_to news.owner.name_or_nick_name(current_user),user_path(news.owner) %>的状态
+    我的状态
     <cite><%=truncate news.resource.content,:length => 10%></cite>被回复：
     <cite><%= truncate news.try(:reply).try(:content),:length => 140 %></cite>
     <em><%=link_to "#{news.resource.replies.size}条回应>>>",user_twitter_resource_path(news.resource.owner,news.resource) %></em>，<span class="little_white">相应领域的价值点数＋ <%=h news.resource.replies.size*0.1 %></span>

@@ -1,0 +1,51 @@
+<% f=friends_news %>
+
+<span class="right">
+<%=distance_of_time_in_words(Time.now, f.created_at, true)%></span>
+
+<% if f.news_type=="twitter_resource" %>
+  <p>
+    <%=link_to f.owner.name_or_nick_name(current_user),user_path(f.owner) %>说：
+    <cite><%=h f.resource.content %></cite>
+    <em><%= link_to "#{f.resource.replies.size}条回应>>>", user_twitter_resource_path(f.resource.owner,f.resource)%>
+    </em>
+  </p>
+<% elsif f.news_type=="link_url_resource" %>
+  <p>
+    <%= link_to "#{f.owner.name_or_nick_name(current_user)}",user_path(f.resource.owner) -%>分享了链接
+    <%= link_to_resource(f.resource) %>
+    （领域： <%=link_to_page f.resource.keyword_page%>）
+  </p>
+<% elsif f.news_type=="blog_resource" %>
+  <p>
+    <%= link_to "#{f.owner.name_or_nick_name(current_user)}",user_path(f.resource.owner) -%>发表高论
+    <%= link_to_resource f.resource%>
+    （领域： <%=link_to_page f.resource.keyword_page %>）
+  </p>
+<% elsif f.news_type=="be_comment"%>
+  <p>
+    <%= link_to f.owner.nick_name,user_path(f.owner) %>
+    <% if f.comment.action_one.present? and f.comment.action_two.present? %>
+      的<%=f.comment.action_two  %>被<%= link_to f.comment.owner.nick_name,user_path(f.comment.owner) %><%=f.comment.action_one  %>了
+      并
+    <% end %>
+    被回应：
+    <cite><%= truncate f.comment.content,:length => 140 %>
+    </cite>
+    赶快去<%=link_to "这里",user_resource_comments_path(f.owner,f.resource)%>看看
+  </p>
+<% elsif f.news_type=="comment" %>
+  <p>
+    <%= link_to f.owner.nick_name,user_path(f.owner) %>
+    <% if f.comment.action_one.present? and f.comment.action_two.present? %>
+      <%= f.comment.action_one %>了<%= link_to f.resource.owner.nick_name,user_path(f.resource.owner) %>的<%=f.comment.action_two%>
+      并
+    <% end %>
+    回应：
+    <cite>
+      <%=truncate f.comment.content,:length => 140 %>
+    </cite>
+    赶快去<%= link_to "这里",user_resource_comments_path(f.resource.owner,f.resource) %>看看
+  </p>
+<%end  %>
+

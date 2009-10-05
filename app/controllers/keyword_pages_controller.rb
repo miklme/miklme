@@ -27,6 +27,7 @@ class KeywordPagesController < ApplicationController
     else
       k=KeywordPage.create(:keyword => params[:keyword_page][:keyword])
       v=ValueOrder.new
+      v.value=3
       v.user=@user
       v.keyword_page=k
       v.actived=true

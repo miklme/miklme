@@ -1,6 +1,6 @@
 <div><%= link_to_unless_current "查找用户>>>", search_user_new_user_follow_path(@user),:class => "title"%></div>
 <% if current_user==@user %>
-  <%= render :partial => "others_news",:collection => @others_news %>
+  <%= render :partial => "friends_news",:collection => @others_news %>
   <%= will_paginate @others_news, :prev_label => '上一页', :next_label => '下一页' %>
 <% else %>
   <h1><%= "#{@user.name_or_nick_name(current_user)}" %>关注的人们：</h1>
