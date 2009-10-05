@@ -16,9 +16,9 @@
     <% a=Comment.sum(:rating,:conditions => ["resource_id=?",news.resource.id]) %>
     <span class="little_white">
     <% if a>=0 %>
-                              相应领域的价值点数增加.
+                                相应领域的价值点数增加.
     <% else %>
-                              相应领域的价值点数减少了(反响恶劣)
+                                相应领域的价值点数减少了(反响恶劣)
     <% end %>
     </span>
     -->
@@ -60,21 +60,4 @@
     我被<%=link_to news.follower.name_or_nick_name(current_user),user_path(news.follower) %>关注，<span class="little_white">相应领域的价值点数+3。</span>
   </p>
 
-
-<% elsif news.news_type=="twitter_resource" %>
-  <p>
-    我说：
-    <cite><%=h news.resource.content %></cite>
-    <em><%= link_to "#{news.resource.replies.size}条回应>>>", user_twitter_resource_path(news.resource.owner,news.resource)%>
-    </em>
-  </p>
-
-<% elsif news.news_type=="twitter_resource_reply" %>
-  <p>
-    我的状态
-    <cite><%=truncate news.resource.content,:length => 10%></cite>被回复：
-    <cite><%= truncate news.try(:reply).try(:content),:length => 140 %></cite>
-    <em><%=link_to "#{news.resource.replies.size}条回应>>>",user_twitter_resource_path(news.resource.owner,news.resource) %></em>，<span class="little_white">相应领域的价值点数＋ <%=h news.resource.replies.size*0.1 %></span>
-  </p>
-<%end  %>
-
+<% end %>
