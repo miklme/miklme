@@ -22,11 +22,14 @@
 </div>
 
 <% if logged_in? and current_user.controlled_keywords.include?(@keyword_page.keyword).present? %>
-  <div class="item_blue">你的经验值在这里最高。因此：
+  <div class="item_blue">你是擂主。因此：
     <ul>
       <li>
         <span>你能够<%=link_to "修改相关擂台",keyword_page_related_keywords_path(@keyword_page),:popup => ['修改相关擂台', 'height=500,width=450'] %>
         </span>，如果这样，这个擂台的条目就容易被相关擂台的人看到。
+      </li>
+      <li>
+        请注意自己言论的影响，以及出手轻重。
       </li>
     </ul>
   </div>
