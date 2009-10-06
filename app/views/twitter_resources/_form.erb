@@ -1,5 +1,0 @@
-<% form_for([user,twitter_resource])  do |f|%>
-  <%= f.error_messages %>
-  <%= f.text_area :content,:size => '42*20' %>
-  <%=f.submit "完成",:onclick => "this.disabled = true"  %>
-<% end %>

@@ -14,10 +14,6 @@ ActionController::Routing::Routes.draw do |map|
       end
     end
     user.resources :blog_resources
-    user.resources :link_url_resources
-    user.resources :twitter_resources do |twitter_resource|
-      twitter_resource.resources :replies
-    end
     user.resources :news
   end
   map.resource :session

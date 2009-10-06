@@ -2,15 +2,7 @@
   <div id="new_resource">
     <h1><%= @variable_title %>
     </h1>
-    <strong><%= link_to "（查看我所有的行径>>>）",user_resources_path(current_user),:class => "title" %></strong>
     <ul>
-      <!--
-      暂时去掉这个不是核心的功能
-      <li>
-        现在你可以<strong>更新你的状态</strong>（少于130字），说点什么，让关注你的人了解你的点点滴滴。<strong>这与擂台功能无关</strong>。
-      <%= render :partial => "twitter_resources/form",:locals => { :user => @user,:twitter_resource => @twitter_resource }  %>
-      </li>
-      -->
       <li>
      你参与的"擂台"会显示在右边，如果暂时没有，可以点击<%= link_to"Michael",keyword_pages_path %>看看有没有自己感兴趣的。
        </li>

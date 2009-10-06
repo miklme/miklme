@@ -8,44 +8,15 @@
   <ol class="sb_results" id="wg0">
     <% for resource in @resources %>
       <li>
-        <% if resource.class.to_s=="LinkUrlResource" %>
-          <table>
-            <tbody>
-              <tr>
-                <td width="500">
-                  <h3><%= link_to_resource(resource)%></h3>
-                  <% for comment in resource.comments.recent_comments do%>
-                      <p>
-                        <%=truncate(comment.content,:length => 140) %>
-                      </p>
-                    <% end %>
-                    <ul class="sb_meta">
-                      <li><cite><%= link_to  "回他一招！(共#{resource.comments.size}条)", user_resource_comments_path(resource.owner,resource),:popup => true %></cite></li>
-                      <li><%=truncate(resource.link_url,:length => 33)  %></li>
-                    </ul>
-                  </td>
-                  <!--
-                  这个功能似乎伤害用户体验，用户会比较困惑
-                  <td width="100">
-                      <div>(所在擂台：<strong><%= resource.keyword_page.keyword %></strong>)
-                      </div>
-                  </td>
-                  -->
-                  <td width="80"><div><%= link_to resource.owner.nick_name,user_path(resource.owner) %></div>
-                    <cite><%= link_to_value_help %><%=resource.owner.total_value %></cite>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          <% elsif resource.class.to_s=="BlogResource" %>
+          <% if resource.class.to_s=="BlogResource" %>
             <table>
               <tbody>
                 <tr>
                   <td width="500">
-                    <h3><%= link_to_resource(resource)%></h3>
                     <p>
-                      <%= truncate(resource.content,:length => 120)%>
+                      <%=simple_format(auto_link(resource.content))%>
                     </p>
+                    <span class="sb_meta">所在擂台：<strong><%= resource.keyword_page.keyword %></strong></span>
                     <ul class="sb_meta">
                       <li><cite><%= link_to "回他一招！(共#{resource.comments.size}条)", user_resource_comments_path(resource.owner,resource),:popup => true %></cite></li>
                     </ul>
@@ -54,7 +25,7 @@
                   同以上，对用户体验不利
                   <td width="100">
                     <% if  resource.owner == current_user %>
-                      <div><%= link_to "编辑",edit_user_blog_resource_path(resource.owner,resource),:popup => true %>(所在擂台：<strong><%= resource.keyword_page.keyword %></strong>)
+                      <div><%= link_to "编辑",edit_user_blog_resource_path(resource.owner,resource),:popup => true %>
                       </div>
                     <% end %>
                   </td>

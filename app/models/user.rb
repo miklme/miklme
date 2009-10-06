@@ -24,9 +24,7 @@ class User < ActiveRecord::Base
   has_many :followers,
     :through => :be_follows,
     :class_name => "User"
-  has_many :link_url_resources
   has_many :blog_resources
-  has_many :twitter_resources
   has_one :portrait
   has_one :true_portrait
 

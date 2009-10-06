@@ -16,15 +16,15 @@
     回应我：
     <cite><%=truncate news.comment.try(:content),:length => 140 %>
     </cite>
-    <em><%=link_to "共#{news.resource.comments.size}回应>>>",user_resource_comments_path(news.owner,news.resource),:popup => true %></em>
+    <em><%=link_to "#{news.resource.comments.size}回应>>>",user_resource_comments_path(news.owner,news.resource),:popup => true %></em>
     <!--
   这是一个条目内总的经验值情况，暂时不使用
     <% a=Comment.sum(:rating,:conditions => ["resource_id=?",news.resource.id]) %>
     <span class="little_white">
     <% if a>=0 %>
-                                      相应擂台的经验值增加.
+                                        相应擂台的经验值增加.
     <% else %>
-                                      相应擂台的经验值减少了(反响恶劣)
+                                        相应擂台的经验值减少了(反响恶劣)
     <% end %>
     </span>
     -->
@@ -39,7 +39,7 @@
     <cite>
       <%=truncate news.comment.content,:length => 140 %>
     </cite>
-    <em><%= link_to "详细>>",user_resource_comments_path(news.resource.owner,news.resource) %></em>
+    <em><%= link_to "#{news.resource.comments.size}回应>>>",user_resource_comments_path(news.resource.owner,news.resource) %></em>
   </p>
 <% elsif news.news_type=="replied_comment" %>
   <p>
@@ -48,17 +48,12 @@
       <em><%= link_to "详细>>",user_resource_comments_path(news.comment.resource.owner,news.comment.resource) %></em>
     </cite>
   </p>
-
-<% elsif news.news_type=="link_url_resource" %>
-  <p>
-    我分享一链接
-    <%= link_to_resource(news.resource) %>
-    （擂台： <%=link_to_page news.resource.keyword_page%>）
-  </p>
 <% elsif news.news_type=="blog_resource" %>
   <p>
     我发表高论
-    <%= link_to_resource(news.resource) %>
+    <cite><%=auto_link(news.resource.content)%></cite>
+    <em><%= link_to "#{news.resource.comments.size}回应>>>",user_resource_comments_path(news.resource.owner,news.resource) %></em>
+
     （擂台： <%=link_to_page news.resource.keyword_page %>）
   </p>
 <% elsif news.news_type=="be_follow" %>

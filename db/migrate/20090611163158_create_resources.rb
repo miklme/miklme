@@ -12,7 +12,6 @@ class CreateResources < ActiveRecord::Migration
       t.string :link_url
       t.string :description
       t.boolean :authority,:default => false
-      #attributes for twitter_resources and blog_resources
       t.text :content
       t.timestamps
     end

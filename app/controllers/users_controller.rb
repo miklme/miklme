@@ -65,7 +65,6 @@ class UsersController < ApplicationController
     @self_news_for_others=News.self_news_for_others(@user,params[:page])
     @variable_title="开始论战了"
     @resources=@user.resources.find(:all,:order => "resources.created_at DESC")
-    @twitter_resource=@user.twitter_resources.build
     render :layout => "resources"
   end
   def search

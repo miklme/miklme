@@ -1,18 +1,6 @@
 class BlogResourcesController < ApplicationController
   skip_before_filter :login_required,:only => [:show]
   before_filter :load_user
-  def new
-    @keyword_page=KeywordPage.find(session[:current_keyword_page_id])
-    if not current_user.keyword_pages.include?(@keyword_page)
-      v=ValueOrder.new
-      v.user=current_user
-      v.keyword_page=@keyword_page
-      v.actived=true
-      v.save
-    end
-    @blog_resource=current_user.blog_resources.build
-  end
-
   def show
     @blog_resource=Resource.find(params[:id])
   end
@@ -31,6 +19,13 @@ class BlogResourcesController < ApplicationController
     @blog_resource.authority=true
     @blog_resource.keyword_page=@keyword_page
     if @blog_resource.save
+      if not current_user.keyword_pages.include?(@keyword_page)
+        v=ValueOrder.new
+        v.user=current_user
+        v.keyword_page=@keyword_page
+        v.actived=true
+        v.save
+      end
       flash[:keyword_page]=@blog_resource.keyword_page.id
       redirect_to keyword_page_path(@blog_resource.keyword_page)
       n=current_user.news.create

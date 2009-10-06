@@ -2,12 +2,7 @@ class BlogResource<Resource
   analyzer = RMMSeg::Ferret::Analyzer.new
   acts_as_ferret({
       :fields=>{
-        :title => {
-          :store => :yes,
-          :boost=> 20 #设置权重
-        },
-        :body => {
-          :boost=> 5,
+        :content => {
           :store => :yes,
         },
         :created_at_s=>{:index=>:untokenized,:store=>:yes},

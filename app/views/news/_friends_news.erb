@@ -3,16 +3,11 @@
 <span class="right">
 <%=distance_of_time_in_words(Time.now, f.created_at, true)%></span>
 
-<% if f.news_type=="link_url_resource" %>
-  <p>
-    <%= link_to "#{f.owner.name_or_nick_name(current_user)}",user_path(f.resource.owner) -%>分享了链接
-    <%= link_to_resource(f.resource) %>
-    （擂台： <%=link_to_page f.resource.keyword_page%>）
-  </p>
-<% elsif f.news_type=="blog_resource" %>
+<% if f.news_type=="blog_resource" %>
   <p>
     <%= link_to "#{f.owner.name_or_nick_name(current_user)}",user_path(f.resource.owner) -%>发表高论
-    <%= link_to_resource f.resource%>
+    <cite><%=auto_link(f.resource.content) %></cite>
+    <em><%= link_to "#{friends_news.resource.comments.size}回应>>>",user_resource_comments_path(f.resource.owner,f.resource) %></em>
     （擂台： <%=link_to_page f.resource.keyword_page %>）
   </p>
 <% elsif f.news_type=="be_comment"%>
