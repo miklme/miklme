@@ -46,7 +46,7 @@ class KeywordPage < ActiveRecord::Base
     ss=self.resources.sort_by do |resource|
       [self.value_orders.find_by_user_id(resource.owner).value,resource.created_at]
     end
-    ss.reverse.paginate(:per_page => 10,:page => page)
+    ss.reverse.paginate(:per_page => 8,:page => page)
   end
 
   def top_resource
@@ -57,7 +57,7 @@ class KeywordPage < ActiveRecord::Base
   end
   
   def resources_by_time(page)
-    self.resources.paginate(:all,:order => "resources.created_at DESC",:per_page => 15,:page => page)
+    self.resources.paginate(:all,:order => "resources.created_at DESC",:per_page => 10,:page => page)
   end
 
   def self.hot_keyword_pages

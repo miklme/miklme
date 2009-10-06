@@ -3,7 +3,7 @@
 </div>
 <div id="results">
   <div class="item">
-    这个是在整个网站范围内的搜索。搜索结果排序依据是用户的总的价值点数。
+    这个是在整个网站范围内的搜索。搜索结果排序依据是用户的总的经验值。
   </div>
   <ol class="sb_results" id="wg0">
     <% for resource in @resources %>
@@ -27,7 +27,7 @@
                   <!--
                   这个功能似乎伤害用户体验，用户会比较困惑
                   <td width="100">
-                      <div>(所在领域：<strong><%= resource.keyword_page.keyword %></strong>)
+                      <div>(所在擂台：<strong><%= resource.keyword_page.keyword %></strong>)
                       </div>
                   </td>
                   -->
@@ -54,7 +54,7 @@
                   同以上，对用户体验不利
                   <td width="100">
                     <% if  resource.owner == current_user %>
-                      <div><%= link_to "编辑",edit_user_blog_resource_path(resource.owner,resource),:popup => true %>(所在领域：<strong><%= resource.keyword_page.keyword %></strong>)
+                      <div><%= link_to "编辑",edit_user_blog_resource_path(resource.owner,resource),:popup => true %>(所在擂台：<strong><%= resource.keyword_page.keyword %></strong>)
                       </div>
                     <% end %>
                   </td>

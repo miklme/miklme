@@ -4,13 +4,13 @@
   <p>
     <%= link_to "#{others_news.owner.name_or_nick_name(current_user)}",user_path(others_news.resource.owner) -%>分享了链接
     <%= link_to_resource(others_news.resource) %>
-    （领域： <%=link_to_page others_news.resource.keyword_page%>）
+    （擂台： <%=link_to_page others_news.resource.keyword_page%>）
   </p>
 <% elsif others_news.news_type=="blog_resource" %>
   <p>
     <%= link_to "#{others_news.owner.name_or_nick_name(current_user)}",user_path(others_news.resource.owner) -%>发表高论
     <%= link_to_resource others_news.resource%>
-    （领域： <%=link_to_page others_news.resource.keyword_page %>）
+    （擂台： <%=link_to_page others_news.resource.keyword_page %>）
   </p>
   <% elsif others_news.news_type=="comment" %>
   <p>

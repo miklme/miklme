@@ -31,19 +31,30 @@
               <% end %>
               的个人信息：</h2>
             <p><%= render :partial => "shared/user_profile_full",:object => @user %></p>
+            <h2>
+              <% if not @user==current_user %>
+                <% if @user.sex==1 %>
+                  他
+                <% elsif @user.sex==0%>
+                  她
+                <% end %>
+              <% else %>
+                我
+              <% end %>
+              参与的擂台：</h2>
             <div>
               <% for k in @user.appear_keyword_pages %>
                 <p>
-                  领域：<%=link_to k.keyword,keyword_page_path(KeywordPage.find_by_keyword(k.keyword)) %>
+                  <%=link_to k.keyword,keyword_page_path(KeywordPage.find_by_keyword(k.keyword)) %>
                   <!--
-                  隐藏领域的功能，暂时不打算使用
+                  隐藏擂台的功能，暂时不打算使用
                   <% if @user.value_orders.find_by_keyword_page_id(k).hidden==false%>
                     <strong><%=link_to k.keyword,keyword_page_path(k) %></strong><span class="little_white"><%= link_to "  隐藏  ",:controller => :keyword_pages,:action => :hide_field,:id => k%></span>
                   <% else %>
                     <%= k.keyword %> <strong>(已隐藏)</strong><span class="little_white"><%= link_to "恢复",:controller => :keyword_pages,:action => :appear_field,:id => k %></span>
                   <% end %>
                   -->
-                  <cite>价值点数：<strong><%= k.field_value(@user) %></strong>,排名：(<span class="highlight"><%= ValueOrder.order(@user,KeywordPage.find_by_keyword(k.keyword)) %></span>/<%= k.users.size %>)
+                  <cite>经验值：<strong><%= k.field_value(@user) %></strong>,排名：(<span class="highlight"><%= ValueOrder.order(@user,KeywordPage.find_by_keyword(k.keyword)) %></span>/<%= k.users.size %>)
                   </cite>
                 </p>
               <% end %>

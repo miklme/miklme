@@ -1,10 +1,10 @@
 <div id="text">
-  <h1><%= @user.nick_name %>关注的人的"领域" </h1>
+  <h1><%= @user.nick_name %>关注的人的"擂台" </h1>
   <% for u in @followings %>
     <p>
       <%=link_to u.name_or_nick_name(current_user),user_path(u) %>：
       <% for page in u.appear_keyword_pages %>
-        <cite> 领域：<%=link_to page.keyword,keyword_page_path(page) %>，价值点数：<%= page.field_value(u) %>
+        <cite> 擂台：<%=link_to page.keyword,keyword_page_path(page) %>，经验值：<%= page.field_value(u) %>
         </cite>
       <% end %>
     </p>

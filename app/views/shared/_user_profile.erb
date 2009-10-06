@@ -3,13 +3,13 @@
     <div>
       <div><%= link_to user_profile.nick_name,user_path(user_profile) %></div>
       <strong>（我已关注）</strong>
-      <cite><%= "总价值点数：#{user_profile.total_value}" %></cite>
+      <cite><%= "总经验值：#{user_profile.total_value}" %></cite>
     </div>
   <% elsif current_user.followers.include?(user_profile)%>
     <div>
       <div><%= link_to user_profile.nick_name,user_path(user_profile) %></div>
       <strong>（关注我的人）</strong>
-      <cite><%= "总价值点数：#{user_profile.total_value}" %></cite>
+      <cite><%= "总经验值：#{user_profile.total_value}" %></cite>
     </div>
   <% elsif user_profile==current_user%>
     <div>
@@ -19,12 +19,12 @@
   <% else %>
     <div>
       <div><%= link_to user_profile.nick_name ,user_path(user_profile)%></div>
-      <cite><em><%="总价值点数：#{user_profile.total_value}" %></em></cite>
+      <cite><em><%="总经验值：#{user_profile.total_value}" %></em></cite>
     </div>
   <% end %>
 <% else %>
   <div>
     <div><%= link_to user_profile.nick_name ,user_path(user_profile)%></div>
-    <cite><em><%="总价值点数：#{user_profile.total_value}" %></em></cite>
+    <cite><em><%="总经验值：#{user_profile.total_value}" %></em></cite>
   </div>
 <% end %>

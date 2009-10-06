@@ -23,7 +23,8 @@ class KeywordPagesController < ApplicationController
   def create
     @keyword_page=KeywordPage.find_by_keyword(params[:keyword_page][:keyword])
     if @keyword_page.present?
-      flash[:notice]="出了点小问题，这个领域已经存在"
+      flash[:notice]="出了点小问题，这个擂台已经存在"
+      redirect_to :back
     else
       k=KeywordPage.create(:keyword => params[:keyword_page][:keyword])
       v=ValueOrder.new
@@ -32,9 +33,9 @@ class KeywordPagesController < ApplicationController
       v.keyword_page=k
       v.actived=true
       v.save
-      flash[:notice]="创建成功。由于你是创建者，你拥有3点价值点数，而新加入的人为0。"
+      flash[:notice]="创建成功。由于你是创建者，你拥有3点经验值，而新加入者为0。"
+      redirect_to keyword_page_path(k)
     end
-    redirect_to :back
 
   end
    

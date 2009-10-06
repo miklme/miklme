@@ -7,13 +7,13 @@
   <p>
     <%= link_to "#{f.owner.name_or_nick_name(current_user)}",user_path(f.resource.owner) -%>分享了链接
     <%= link_to_resource(f.resource) %>
-    （领域： <%=link_to_page f.resource.keyword_page%>）
+    （擂台： <%=link_to_page f.resource.keyword_page%>）
   </p>
 <% elsif f.news_type=="blog_resource" %>
   <p>
     <%= link_to "#{f.owner.name_or_nick_name(current_user)}",user_path(f.resource.owner) -%>发表高论
     <%= link_to_resource f.resource%>
-    （领域： <%=link_to_page f.resource.keyword_page %>）
+    （擂台： <%=link_to_page f.resource.keyword_page %>）
   </p>
 <% elsif f.news_type=="be_comment"%>
   <p>
