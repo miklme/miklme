@@ -5,11 +5,14 @@
         <%= flash[:updated] %>
       </strong>
     </li>
+    <%= f.text_area :content,:cols => 40,:rows => 7 %>
+    <!--
+    靠，先不用这个了
     <li>
-    <%= f.label :title,"标题" %><%= f.text_field :title %></li>
-    <li>
-      <%= fckeditor_textarea(:blog_resource,:content,:toolbarSet => "Easy",:width => '90%',:height => '400px') %>
+      <%= fckeditor_textarea(:blog_resource,:content,:toolbarSet => "Easy",:width => '85%',:height => '150px') %>
     </li>
+    -->
+
     <!--
     将来或许会有图片型的博客，先留着，默认为文字文档
     <tr><td><%= f.label :form,"请指定目标链接所包含主体内容的类型*：" %></td><td><%= f.select :form,%w{ 文字、文档 视频 图片  音频  }%></td>

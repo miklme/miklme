@@ -72,7 +72,7 @@ class Resource < ActiveRecord::Base
     if self.class.to_s=="LinkUrlResource"
       description
     elsif self.class.to_s=="BlogResource"
-      title
+      content.first(15)
     end
   end
 

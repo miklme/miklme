@@ -32,7 +32,7 @@ class BlogResourcesController < ApplicationController
     @blog_resource.keyword_page=@keyword_page
     if @blog_resource.save
       flash[:keyword_page]=@blog_resource.keyword_page.id
-      render :partial => "link_url_resources/succeed",:layout => "blog_resources"
+      redirect_to keyword_page_path(@blog_resource.keyword_page)
       n=current_user.news.create
       n.news_type="blog_resource"
       n.owner=current_user

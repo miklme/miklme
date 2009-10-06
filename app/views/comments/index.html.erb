@@ -1,5 +1,4 @@
 <%@something=@resource.description%>
-<h2><%= link_to_resource(@resource) %></h2>
 <% for comment in @comments %>
   <%= render :partial => "comment",:object => comment %>
 <% end %>

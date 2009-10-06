@@ -36,9 +36,8 @@
         <tbody>
           <tr>
             <td width="500">
-              <h3><%= link_to resource.title,user_blog_resource_path(resource.owner,resource),:popup => true%></h3>
               <p>
-                <%= truncate(resource.content,:length => 400)%>
+                <%=resource.content%>
               </p>
               <ul class="sb_meta">
                 <li><cite><%= link_to  "回他一招！(共被回#{resource.comments.size}招)", user_resource_comments_path(resource.owner,resource),:popup => true %></cite></li>
