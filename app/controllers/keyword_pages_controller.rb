@@ -28,12 +28,11 @@ class KeywordPagesController < ApplicationController
     else
       k=KeywordPage.create(:keyword => params[:keyword_page][:keyword])
       v=ValueOrder.new
-      v.value=3
       v.user=@user
       v.keyword_page=k
       v.actived=true
       v.save
-      flash[:notice]="创建成功。由于你是创建者，你拥有3点经验值，而新加入者为0。"
+      flash[:notice]="创建成功。在这个领域内你的初始经验值为0"
       redirect_to keyword_page_path(k)
     end
 
