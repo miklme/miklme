@@ -21,7 +21,7 @@
 </p>
 </div>
 <% if logged_in? and current_user.controlled_keywords.include?(@keyword_page.keyword).present? %>
-  <div class="item_blue">你是擂主。因此：
+  <div class="item_blue">你是老大。因此：
     <ul>
       <li>
         <span>你能够<%=link_to "修改相关领域",keyword_page_related_keywords_path(@keyword_page),:popup => ['修改相关领域', 'height=500,width=450'] %>

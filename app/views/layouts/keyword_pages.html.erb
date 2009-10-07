@@ -73,7 +73,7 @@
                 </ul>
                 <h2>该领域内用户TOP10</h2>
                 <ol>
-                  <strong>擂主为 <%= @keyword_page.users_by_value.first.nick_name %></strong>
+                  <strong>老大为 <%= @keyword_page.users_by_value.first.nick_name %></strong>
                   <% for u in @keyword_page.users_by_value.ten %>
                     <li><%=link_to u.nick_name,user_path(u) %>（<cite><%= u.field_value(@keyword_page) %></cite>）</li>
                   <% end %>
