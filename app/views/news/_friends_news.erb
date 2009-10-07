@@ -10,20 +10,6 @@
     <em><%= link_to "#{friends_news.resource.comments.size}回应>>>",user_resource_comments_path(f.resource.owner,f.resource) %></em>
     （领域： <%=link_to_page f.resource.keyword_page %>）
   </p>
-  <!-- hide the function
-<% elsif f.news_type=="be_comment"%>
-  <p>
-    <%= link_to f.owner.nick_name,user_path(f.owner) %>
-    <% if f.comment.action_one.present? and f.comment.action_two.present? %>
-      的<%=f.comment.action_two  %>被<%= link_to f.comment.owner.nick_name,user_path(f.comment.owner) %><%=f.comment.action_one  %>了
-      并
-    <% end %>
-    被回应：
-    <cite><%= truncate f.comment.content,:length => 140 %>
-    </cite>
-    <em><%=link_to "赶快去看看>>",user_resource_comments_path(f.owner,f.resource)%></em>
-  </p>
-  -->
 <% elsif f.news_type=="comment" %>
   <p>
     <%= link_to f.owner.nick_name,user_path(f.owner) %>
