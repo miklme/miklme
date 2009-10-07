@@ -39,6 +39,8 @@
 <span class="sc_bullet">·</span>%>
   -->
 </div>
+
+<div id="results">
 <% if logged_in? %>
   开始了，算是打擂，长短均可：
   <% form_for [@user,@blog_resource] do |f|%>
@@ -59,8 +61,6 @@
     </ul>
   <% end %>
 <% end %>
-<div id="results">
-
   <ol class="sb_results" id="wg0">
     <%= render  :partial => "resources/resource",:collection => @resources  %>
   </ol>
