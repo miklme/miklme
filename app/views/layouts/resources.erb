@@ -41,13 +41,13 @@
               <% else %>
                 我
               <% end %>
-              参与的擂台：</h2>
+              参与的领域：</h2>
             <div>
               <% for k in @user.appear_keyword_pages %>
                 <p>
                   <%=link_to k.keyword,keyword_page_path(KeywordPage.find_by_keyword(k.keyword)) %>
                   <!--
-                  隐藏擂台的功能，暂时不打算使用
+                  隐藏领域的功能，暂时不打算使用
                   <% if @user.value_orders.find_by_keyword_page_id(k).hidden==false%>
                     <strong><%=link_to k.keyword,keyword_page_path(k) %></strong><span class="little_white"><%= link_to "  隐藏  ",:controller => :keyword_pages,:action => :hide_field,:id => k%></span>
                   <% else %>

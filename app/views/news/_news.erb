@@ -22,9 +22,9 @@
     <% a=Comment.sum(:rating,:conditions => ["resource_id=?",news.resource.id]) %>
     <span class="little_white">
     <% if a>=0 %>
-                                        相应擂台的经验值增加.
+                                        相应领域的经验值增加.
     <% else %>
-                                        相应擂台的经验值减少了(反响恶劣)
+                                        相应领域的经验值减少了(反响恶劣)
     <% end %>
     </span>
     -->
@@ -54,11 +54,11 @@
     <cite><%=auto_link(news.resource.content)%></cite>
     <em><%= link_to "#{news.resource.comments.size}回应>>>",user_resource_comments_path(news.resource.owner,news.resource) %></em>
 
-    （擂台： <%=link_to_page news.resource.keyword_page %>）
+    （领域： <%=link_to_page news.resource.keyword_page %>）
   </p>
 <% elsif news.news_type=="be_follow" %>
   <p>
-    我被<%=link_to news.follower.name_or_nick_name(current_user),user_path(news.follower) %>关注，<span class="little_white">相应擂台的经验值+3。</span>
+    我被<%=link_to news.follower.name_or_nick_name(current_user),user_path(news.follower) %>关注，<span class="little_white">相应领域的经验值+3。</span>
   </p>
 
 <% end %>

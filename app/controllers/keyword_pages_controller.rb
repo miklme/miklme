@@ -23,7 +23,7 @@ class KeywordPagesController < ApplicationController
   def create
     @keyword_page=KeywordPage.find_by_keyword(params[:keyword_page][:keyword])
     if @keyword_page.present?
-      flash[:notice]="出了点小问题，这个擂台已经存在"
+      flash[:notice]="出了点小问题，这个领域已经存在"
       redirect_to :back
     else
       k=KeywordPage.create(:keyword => params[:keyword_page][:keyword])

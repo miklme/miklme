@@ -59,9 +59,9 @@
               </ul>
             </div><div id="sc_expPane">
               <div class="sw_menu" id="sw_rel">
-                <h2>目前所在擂台</h2>
+                <h2>目前所在领域</h2>
                 <cite><%=h @keyword_page.keyword %></cite>
-                <h2>相关擂台</h2>
+                <h2>相关领域</h2>
                 <ul>
                   <% if not @related_keywords.blank? %>
                     <% for related_keyword in @related_keywords %>
@@ -71,7 +71,7 @@
                     <% end %>
                   <% end %>
                 </ul>
-                <h2>该擂台内用户TOP10</h2>
+                <h2>该领域内用户TOP10</h2>
                 <ol>
                   <strong>擂主为 <%= @keyword_page.users_by_value.first.nick_name %></strong>
                   <% for u in @keyword_page.users_by_value.ten %>

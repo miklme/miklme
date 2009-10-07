@@ -1,43 +1,11 @@
-<% if resource.class.to_s=="LinkUrlResource" %>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td width="500">
-            <h3><%= link_to resource.description,resource.link_url,:popup => true%></h3>
-            <% for comment in resource.comments.recent_comments do%>
-                <p class="sb_meta">
-                  “<%= truncate(comment.content,:length => 300)%>”
-                </p>
-              <% end %>
-              <ul class="sb_meta">
-                <li><cite><%= link_to  "回他一招>>>(共被回#{resource.comments.size}招)", user_resource_comments_path(resource.owner,resource),:popup => true %></cite></li>
-                <li><%=truncate(resource.link_url,:length => 33)  %></li>
-              </ul>
-            </td>
-            <td width="100">
-              <!--
-              似乎不需要这个
-              <% if  resource.owner == current_user %>
-                <div>(所在擂台：<strong><%= resource.keyword_page.keyword %></strong>)
-                </div>
-              <% end %>
-              -->
-            </td>
-            <td width="80"><%= render :partial => "shared/field_profile",:locals => {:user => resource.owner,:keyword_page => resource.keyword_page} %>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </li>
-  <% elsif resource.class.to_s=="BlogResource" %>
+  <% if resource.class.to_s=="BlogResource" %>
     <li>
       <table>
         <tbody>
           <tr>
             <td width="500">
               <p>
-                <%=simple_format(auto_link(resource.content))%>
+                <%=simple_format(auto_link(resource.content),:class => "twitter")%>
               </p>
               <ul class="sb_meta">
                 <li><cite><%= link_to  "回他一招>>>(共被回#{resource.comments.size}招)", user_resource_comments_path(resource.owner,resource),:popup => true %></cite></li>

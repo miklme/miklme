@@ -1,10 +1,10 @@
 <div class="item_blue">
-  <p>规则：在此擂台内(也就是现在这个页面)，各方豪杰言论默认按其经验值降序排列，经验值最高者为擂主。擂主言论排位居首，以轰击众人之视觉；并拥有极大之淫威（威力大小与经验值成正比），以决定谁人之言论可浮出水面，谁人之信息被灭其踪迹；
+  <p>规则：在此领域内(也就是现在这个页面)，各方豪杰言论默认按其经验值降序排列，经验值最高者为擂主。擂主言论排位居首，以轰击众人之视觉；并拥有极大之淫威（威力大小与经验值成正比），以决定谁人之言论可浮出水面，谁人之信息被灭其踪迹；
     谁人得永生，谁人无全尸。</p>
   <p>
     赶快邀请好友来这里PK吧。
   </p>
-  <%= link_to_remote "如何提高你在这个擂台的经验值>>>",:url => {:action => :show_hidden} %>
+  <%= link_to_remote "如何提高你在这个领域的经验值>>>",:url => {:action => :show_hidden} %>
   <ul id="hidden" style="display:none">
     <li>
       被人施以好评（经验值提高程度取决于施主的经验值高低）
@@ -13,8 +13,8 @@
       被更多人关注（请勿尝试马甲刷分等行为）。
       <% if logged_in? and current_user.keyword_pages.include?(@keyword_page)%>
         可以发送这些话邀请你的好友，好友注册后，会自动关注你：
-        <p class="item_blue"><cite>真实朋友:</cite>我<%= current_user.name %>，在玩一个很搞的应用，现在玩得有点窝火，赶快来这里注册帮帮我：<%= "http://mikl.me/users/new/#{current_user.id}/#{ValueOrder.find_by_user_id_and_keyword_page_id(current_user.id,@keyword_page.id).id}/realfriend" %></p>
-        <p class="item_blue"><cite>匿名网友:</cite>我发现了一个很独特的平台，你可以控制别人说什么。你快点注册，帮我一下：<%= "http://mikl.me/users/new/#{current_user.id}/#{ValueOrder.find_by_user_id_and_keyword_page_id(current_user.id,@keyword_page.id).id}/commonfriend" %></p>
+        <p class="item_blue"><cite>真实朋友:</cite>我<%= current_user.name %>，在玩一个很独特的应用，你也赶快来试试：<%= "http://mikl.me/users/new/#{current_user.id}/#{ValueOrder.find_by_user_id_and_keyword_page_id(current_user.id,@keyword_page.id).id}/realfriend" %></p>
+        <p class="item_blue"><cite>匿名网友:</cite>我发现了一个很独特的平台，你快点注册，关注我一下：<%= "http://mikl.me/users/new/#{current_user.id}/#{ValueOrder.find_by_user_id_and_keyword_page_id(current_user.id,@keyword_page.id).id}/commonfriend" %></p>
       <% end %>
     </li>
   </ul>
@@ -24,8 +24,8 @@
   <div class="item_blue">你是擂主。因此：
     <ul>
       <li>
-        <span>你能够<%=link_to "修改相关擂台",keyword_page_related_keywords_path(@keyword_page),:popup => ['修改相关擂台', 'height=500,width=450'] %>
-        </span>，如果这样，这个擂台的条目就容易被相关擂台的人看到。
+        <span>你能够<%=link_to "修改相关领域",keyword_page_related_keywords_path(@keyword_page),:popup => ['修改相关领域', 'height=500,width=450'] %>
+        </span>，如果这样，这个领域的条目就容易被相关领域的人看到。
       </li>
       <li>
         请注意自己言论的影响，以及出手轻重。

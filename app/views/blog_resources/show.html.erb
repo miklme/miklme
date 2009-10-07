@@ -6,7 +6,7 @@
       ——by  <%=link_to @blog_resource.owner.nick_name,user_path(@blog_resource.owner) %>，<%= @blog_resource.created_at_s %>
     </div>
     <div class="sb_ph">
-      擂台：<%= link_to @blog_resource.keyword_page.keyword,keyword_page_path(@blog_resource.keyword_page) %>
+      领域：<%= link_to @blog_resource.keyword_page.keyword,keyword_page_path(@blog_resource.keyword_page) %>
     </div>
   </li>
   <li>

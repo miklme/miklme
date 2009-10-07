@@ -43,7 +43,7 @@
                 <%= f.error_messages %>
               </p>
               <%= text_field 'keyword_page','keyword',:size => 40 %>
-              <%= f.submit "创建这个擂台" %>
+              <%= f.submit "创建这个领域" %>
               <div class="auto_complete" id="keyword_page_keyword_auto_complete">
               </div>
               <%= auto_complete_field :keyword_page_keyword,:url => {:action => 'auto_complete_for_keyword_page_keyword'},:frequency => 0.1%>
@@ -66,7 +66,7 @@
             </p>
           <% end %>
           <table>
-            <tr><th>热门擂台</th><th>最新创立擂台</th><th>名字最长擂台</th><th>最受女生欢迎的擂台</th></tr>
+            <tr><th>热门领域</th><th>最新创立领域</th><th>名字最长领域</th><th>最受女生欢迎的领域</th></tr>
             <tr><td>
                 <ol>
                   <% for k in @hot_keyword_pages %>

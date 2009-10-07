@@ -38,11 +38,11 @@ class Resource < ActiveRecord::Base
     comments=cs.sort_by do |c|
       c.owner.field_value(c.resource.keyword_page)
     end
-    comments.reverse.paginate(:per_page => 15,:page => page)
+    comments.reverse.paginate(:per_page => 25,:page => page)
   end
 
   def comments_by_time(page)
-    self.comments.parent_comments.paginate(:per_page => 15,:page => page,:order => "created_at")
+    self.comments.parent_comments.paginate(:per_page => 25,:page => page,:order => "created_at")
   end
 
   def self.find_by_user(user,page)
