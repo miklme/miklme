@@ -39,8 +39,7 @@
 <span class="sc_bullet">·</span>%>
   -->
 </div>
-
-<div id="results">
+<div>
 <% if logged_in? %>
   开始了，算是打擂，长短均可：
   <% form_for [@user,@blog_resource] do |f|%>
@@ -49,7 +48,7 @@
         <strong><%= f.error_messages %>
         </strong>
       </li>
-      <%= f.text_area :content,:cols => 45,:rows => 5 %>
+      <li><p><%= f.text_area :content,:cols => 45,:rows => 5 %></p></li>
       <!--
       靠，先不用这个了
       <li>
@@ -61,6 +60,9 @@
     </ul>
   <% end %>
 <% end %>
+</div>
+<div id="results">
+
   <ol class="sb_results" id="wg0">
     <%= render  :partial => "resources/resource",:collection => @resources  %>
   </ol>
