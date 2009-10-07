@@ -24,7 +24,7 @@ class News < ActiveRecord::Base
       :per_page => 30,
       :page => page,
       :order  => "created_at DESC",
-      :conditions => "news_type='be_comment' or news_type='blog_resource'"
+      :conditions => "news_type='comment' or news_type='blog_resource'"
   end
 
   def self.self_news_for_others(user,page)
@@ -32,7 +32,7 @@ class News < ActiveRecord::Base
       :per_page => 20,
       :page => page,
       :order => "created_at DESC",
-      :conditions => "news_type='comment' or news_type='blog_resource' or news_type='be_comment'"
+      :conditions => "news_type='comment' or news_type='blog_resource'"
   end
 
 end

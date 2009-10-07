@@ -21,17 +21,5 @@
     </cite>
     <em><%= link_to "#{others_news.resource.comments.size}回应>>>",user_resource_comments_path(others_news.resource.owner,others_news.resource.comments) %></em>
   </p>
-  <% elsif others_news.news_type="be_comment" %>
-  <p>
-    <%= link_to others_news.owner.nick_name,user_path(others_news.owner) %>
-    <% if others_news.comment.action_one.present? and others_news.comment.action_two.present? %>
-      的<%=others_news.comment.action_two  %>被<%= link_to others_news.comment.owner.nick_name,user_path(others_news.comment.owner) %><%=others_news.comment.action_one  %>了
-      并
-    <% end %>
-    被回应：
-    <cite><%= truncate others_news.comment.content,:length => 140 %>
-    </cite>
-    <em><%=link_to "#{others_news.resource.comments.size}回应>>>",user_resource_comments_path(others_news.owner,others_news.resource)%></em>
-  </p>
 <%end  %>
 
