@@ -71,7 +71,7 @@
                 <ol>
                   <% for k in @hot_keyword_pages %>
                     <li>
-                      <%=link_to k.keyword,keyword_page_path(k),:popup => true %><span class="sb_ph">(<%= k.users.size %>人)</span>
+                      <%=link_to k.keyword,keyword_page_path(k),:popup => true %>
                     </li>
                   <% end %>
                 </ol>
