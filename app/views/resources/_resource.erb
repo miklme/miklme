@@ -1,26 +1,26 @@
-  <% if resource.class.to_s=="BlogResource" %>
-    <li>
-      <table>
-        <tbody>
-          <tr>
-            <td width="500">
-              <p class="twitter">
-                <%=auto_link(resource.content)%>
-              </p>
-              <ul class="sb_meta">
-                <li><cite><%= link_to  "回他一招>>>(共被回#{resource.comments.size}招)", user_resource_comments_path(resource.owner,resource),:popup => true %></cite></li>
-              </ul>
-            </td>
-            <td width="100">
-              <% if  resource.owner == current_user %>
-                <div><%= link_to "转发",edit_user_blog_resource_path(resource.owner,resource),:popup => true %>
-                </div>
-              <% end %>
-            </td>
-            <td width="80"><%= render :partial => "shared/field_profile",:locals => {:user => resource.owner,:keyword_page => resource.keyword_page}%>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </li>
-  <% end %>
+<% if resource.class.to_s=="BlogResource" %>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td width="500">
+            <p class="twitter">
+              <%=auto_link(resource.content)%>
+            </p>
+            <ul class="sb_meta">
+              <li><cite><%= link_to  "回他一招>>>(共被回#{resource.comments.size}招)", user_resource_comments_path(resource.owner,resource),:popup => true %></cite></li>
+            </ul>
+          </td>
+          <td width="100">
+            <!--
+            <div><%= link_to "转发",new_user_blog_resource_path(resource.owner,resource),:popup => true %>
+            </div>
+            -->
+          </td>
+          <td width="80"><%= render :partial => "shared/field_profile",:locals => {:user => resource.owner,:keyword_page => resource.keyword_page}%>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+<% end %>
