@@ -13,7 +13,6 @@
     <%= will_paginate @news, :prev_label => '上一页', :next_label => '下一页' %>
   <% end %>
 <% else %>
-  <strong><%= link_to "查看#{@user.nick_name}的所有价值信息>>>",user_resources_path(@user),:class => "title" %></strong>
   <% if @self_news_for_others.present? %>
     <%= render :partial => "news/others_news",:collection => @self_news_for_others %>
     <%= will_paginate @self_news_for_others, :prev_label => '上一页', :next_label => '下一页' %>
