@@ -7,6 +7,6 @@
       <tr><td><%= f.label :description,"一句描述，算是标题*：" %></td><td><%= f.text_field :description%></td></tr>
       <tr><td><%= f.check_box :authority,{},true,false %><%= f.label :authority,"链接内容为原创，如论坛发表的文字，原创视频、照片作品，原创音乐等。" %></td>
     </table>
-    <p><%= f.submit "完成",:onclick => "this.disabled = true" %> </p>
+    <p><%= f.submit "完成"%> </p>
   <% end %>
 </li>
