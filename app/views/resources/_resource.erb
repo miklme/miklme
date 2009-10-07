@@ -13,7 +13,7 @@
             </td>
             <td width="100">
               <% if  resource.owner == current_user %>
-                <div><%= link_to "编辑",edit_user_blog_resource_path(resource.owner,resource),:popup => true %>
+                <div><%= link_to "转发",edit_user_blog_resource_path(resource.owner,resource),:popup => true %>
                 </div>
               <% end %>
             </td>
