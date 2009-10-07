@@ -1,8 +1,8 @@
 <div class="item_blue">
   <p>规则：在此领域内(也就是现在这个页面)，各方豪杰言论默认按其经验值降序排列(经验值显示为<cite>绿色</cite>数字)，经验值最高者为擂主。擂主言论排位居首，以轰击众人之视觉；并拥有极大之淫威（威力大小与经验值成正比），以决定谁人之言论可浮出水面，谁人之信息被灭其踪迹。
-</p>
+  </p>
   <p>
-    赶快邀请好友来这里PK吧。
+    想让自己的言论长期置顶？设法提高经验值就行了。
   </p>
   <%= link_to_remote "如何提高你在这个领域的经验值>>>",:url => {:action => :show_hidden} %>
   <ul id="hidden" style="display:none">
@@ -40,26 +40,26 @@
   -->
 </div>
 <div>
-<% if logged_in? %>
-  开始了，随便说点什么看看大家的反应，长短均可：
-  <% form_for [@user,@blog_resource] do |f|%>
-    <ul class="sb_results">
-      <li>
-        <strong><%= f.error_messages %>
-        </strong>
-      </li>
-      <li><p><%= f.text_area :content,:cols => 45,:rows => 5 %></p></li>
-      <!--
-      靠，先不用这个了
-      <li>
-      <%= fckeditor_textarea(:blog_resource,:content,:toolbarSet => "Easy",:width => '85%',:height => '150px') %>
-      </li>
-      -->
-      <li><p><%= f.submit "完成",:onclick => "this.disabled = true"  %></p>
-      </li>
-    </ul>
+  <% if logged_in? %>
+    开始了，随便说点什么看看大家的反应，长短均可：
+    <% form_for [@user,@blog_resource] do |f|%>
+      <ul class="sb_results">
+        <li>
+          <strong><%= f.error_messages %>
+          </strong>
+        </li>
+        <li><p><%= f.text_area :content,:cols => 45,:rows => 5 %></p></li>
+        <!--
+        靠，先不用这个了
+        <li>
+        <%= fckeditor_textarea(:blog_resource,:content,:toolbarSet => "Easy",:width => '85%',:height => '150px') %>
+        </li>
+        -->
+        <li><p><%= f.submit "完成",:onclick => "this.disabled = true"  %></p>
+        </li>
+      </ul>
+    <% end %>
   <% end %>
-<% end %>
 </div>
 <div id="results">
 
