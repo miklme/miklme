@@ -27,9 +27,7 @@ a {
 a:visited {
     color:#663399;
 }
-a:hover, h3 a {
-    text-decoration:underline;
-}
+
 h3 a:visited {
     color:#663399
 }
@@ -459,6 +457,9 @@ a.sb_pagP, a.sb_pagN {
 #sw_hdr .sw_tb a {
     color:#FFFFFF;
 }
+#sw_hdr .sw_tb a:hover{
+    color:AliceBlue
+}
 .sw_tb a, .sw_tb span {
     margin:0 0.5em;
 }
@@ -622,7 +623,8 @@ div.sw_cbjv {
 #sw_hdr .sw_tb {
     font-size:small;
     line-height:normal;
-    padding-left:10px
+    padding-left:10px;
+      text-align:center
 }
 .sb_form_align {
 }

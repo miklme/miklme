@@ -50,14 +50,7 @@
       <div id="sw_content">
         <div id="sw_canvas">
           <div id="sw_aside">
-            <div id="sw_nav">
-              <ul>
-                <li>
-                  <%= link_to "默认排序",keyword_page_path(@keyword_page) %>
-                </li>
-                <li><%= link_to "按发表时间排序",by_time_keyword_page_path(@keyword_page)%></li>
-              </ul>
-            </div><div id="sc_expPane">
+            <div id="sc_expPane">
               <div class="sw_menu" id="sw_rel">
                 <h2>目前所在领域</h2>
                 <cite><%=h @keyword_page.keyword %></cite>
@@ -79,6 +72,14 @@
                   <% end %>
                 </ol>
               </div>
+            </div>
+            <div id="sw_nav">
+              <ul>
+                <li>
+                  <%= link_to "默认排序",keyword_page_path(@keyword_page) %>
+                </li>
+                <li><%= link_to "按发表时间排序",by_time_keyword_page_path(@keyword_page)%></li>
+              </ul>
             </div>
           </div>
           <div id="content">
