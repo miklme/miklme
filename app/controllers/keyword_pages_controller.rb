@@ -44,8 +44,13 @@ class KeywordPagesController < ApplicationController
     @keyword_page=KeywordPage.find(params[:id])
     @resources=@keyword_page.resources
     session[:current_keyword_page_id]=(params[:id])
+    ids=@resources.map do |r|
+    r.user_id
+    end
+    ids.uniq!
+    users=User.find(ids).sort_by { |u| u.field_value(@keyword_page)}
+    @users=users.reverse.paginate(:page => params[:page],:per_page => 10)
     @related_keywords=@keyword_page.related_keywords
-    @users=@keyword_page.users_by_value.paginate(:page => params[:page],:per_page => 10)
   end
 
   def by_time
