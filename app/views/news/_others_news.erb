@@ -8,13 +8,25 @@
     <em><%= link_to "#{others_news.resource.comments.size}回应>>>",user_resource_comments_path(others_news.resource.owner,others_news.resource) %></em>
     （关键字： <%=link_to_page others_news.resource.keyword_page %>）
   </p>
-<% elsif others_news.news_type=="comment" or others_news.news_type=="replied_comment"%>
+<% elsif others_news.news_type=="comment"%>
   <p>
     <%= link_to others_news.owner.nick_name,user_path(others_news.owner) %>
     <% if others_news.comment.action_one.present? and others_news.comment.action_two.present? %>
       <%= others_news.comment.action_one %>了<%=link_to others_news.resource.owner.name_or_nick_name(current_user),user_path(others_news.resource.owner)%>的<%=others_news.comment.action_two%>并
     <% end %>
     回应<%= link_to others_news.resource.owner.name_or_nick_name(current_user),user_path(others_news.resource.owner) %>：
+    <cite>
+      <%=truncate others_news.comment.content,:length => 140 %>
+    </cite>
+    <em><%= link_to "#{others_news.resource.comments.size}回应>>>",user_resource_comments_path(others_news.resource.owner,others_news.resource) %></em>
+  </p>
+<% elsif others_news.news_type=="replied_comment"%>
+  <p>
+    <%= link_to others_news.owner.nick_name,user_path(others_news.owner) %>
+    <% if others_news.comment.action_one.present? and others_news.comment.action_two.present? %>
+      <%= others_news.comment.action_one %>了<%=link_to others_news.comment.parent_comment.owner.name_or_nick_name(current_user),user_path(others_news.resource.owner)%>的<%=others_news.comment.action_two%>并
+    <% end %>
+    回应<%= link_to others_news.comment.parent_comment.owner.name_or_nick_name(current_user),user_path(others_news.resource.owner) %>：
     <cite>
       <%=truncate others_news.comment.content,:length => 140 %>
     </cite>

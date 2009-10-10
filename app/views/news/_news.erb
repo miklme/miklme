@@ -1,6 +1,6 @@
 <span class="right">
 <%=distance_of_time_in_words(Time.now, news.created_at, true)%></span>
-<% if news.news_type=="be_comment" or news.news_type=="be_replied_comment"%>
+<% if news.news_type=="be_comment" %>
   <p>
     <%= link_to news.comment.owner.name_or_nick_name(current_user),user_path(news.comment.owner) %>
     <% if news.comment.action_one.present? and news.comment.action_two.present? -%>
@@ -45,5 +45,22 @@
   <p>
     我被<%=link_to news.follower.name_or_nick_name(current_user),user_path(news.follower) %>关注，<span class="little_white">相应关键字的声望+3。</span>
   </p>
+  <% elsif  news.news_type=="be_replied_comment"%>
+<p>
+    <%= link_to news.comment.owner.name_or_nick_name(current_user),user_path(news.comment.owner) %>
+    <% if news.comment.action_one.present? and news.comment.action_two.present? -%>
+      <%= news.comment.action_one -%>了我的<%=news.comment.action_two -%>
+      <% if news.comment.rating>0 %>
+        (声望+<%= news.comment.owner.field_value(news.comment.resource.keyword_page)/10+0.5 %>)
 
+      <% elsif news.comment.rating<0 %>
+        (声望-<%= news.comment.owner.field_value(news.comment.resource.keyword_page)/10+0.5 %>)
+      <% end %>
+      并
+    <% end %>
+    回应我：
+    <cite><%=truncate news.comment.try(:content),:length => 140 %>
+    </cite>
+    <em><%=link_to "#{news.resource.comments.size}回应>>>",user_resource_comments_path(news.resource.owner,news.resource),:popup => true %></em>
+  </p>
 <% end %>

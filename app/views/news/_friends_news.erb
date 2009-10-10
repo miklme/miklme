@@ -10,13 +10,25 @@
     <em><%= link_to "#{f.resource.comments.size}回应>>>",user_resource_comments_path(f.resource.owner,f.resource) %></em>
     （关键字： <%=link_to_page f.resource.keyword_page %>）
   </p>
-<% elsif f.news_type=="comment" or f.news_type=="replied_comment"%>
+<% elsif f.news_type=="comment"%>
   <p>
     <%= link_to f.owner.nick_name,user_path(f.owner) %>
     <% if f.comment.action_one.present? and f.comment.action_two.present? %>
       <%= f.comment.action_one %>了<%=link_to f.resource.owner.name_or_nick_name(current_user),user_path(f.resource.owner)%>的<%=f.comment.action_two%>并
     <% end %>
     回应<%= link_to f.resource.owner.name_or_nick_name(current_user),user_path(f.resource.owner) %>：
+    <cite>
+      <%=truncate f.comment.content,:length => 140 %>
+    </cite>
+    <em><%= link_to "#{f.resource.comments.size}回应>>>",user_resource_comments_path(f.resource.owner,f.resource) %></em>
+  </p>
+  <% elsif f.news_type=="replied_comment" %>
+  <p>
+    <%= link_to f.owner.nick_name,user_path(f.owner) %>
+    <% if f.comment.action_one.present? and f.comment.action_two.present? %>
+      <%= f.comment.action_one %>了<%=link_to f.comment.parent_comment.owner.name_or_nick_name(current_user),user_path(f.resource.owner)%>的<%=f.comment.action_two%>并
+    <% end %>
+    回应<%= link_to f.comment.parent_comment.owner.name_or_nick_name(current_user),user_path(f.resource.owner) %>：
     <cite>
       <%=truncate f.comment.content,:length => 140 %>
     </cite>
