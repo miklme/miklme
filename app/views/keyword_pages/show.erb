@@ -3,23 +3,7 @@
   声望最高的人和他的想法排列在首位，并以此类推。你在各个关键字内的声望<strong>互不影响</strong>。</p>
   <p>你可以<cite>提高</cite>／<strong>降低</strong>某人声望（通过"回他一招>>>"页面，<cite>提高</cite>／<strong>降低</strong>数值和你的声望值成正比）。
   </p>
-  <p>
-    想让自己的思想在这里被广泛传播？请设法提高声望。
-  </p>
-  <%= link_to_remote "提高你在这个关键字内的声望/邀请好友>>>",:url => {:action => :show_hidden} %>
-  <ul id="hidden" style="display:none">
-    <li>
-      被人施以好评，声望提高；（"回他一招>>>"页面）
-    </li>
-    <li>
-      被更多人关注，声望提高。（请勿尝试马甲刷分等行为）。
-      <% if logged_in? and current_user.keyword_pages.include?(@keyword_page)%>
-        可以发送这些话邀请你的好友，好友注册后，会自动关注你：
-        <p class="item_blue"><cite>真实朋友:</cite>我<%= current_user.name %>，在玩一个很独特的应用，你也赶快来试试：<%= "http://mikl.me/users/new/#{current_user.id}/#{ValueOrder.find_by_user_id_and_keyword_page_id(current_user.id,@keyword_page.id).id}/realfriend" %></p>
-        <p class="item_blue"><cite>匿名网友:</cite>我发现了一个很独特的平台，你快点注册，关注我一下：<%= "http://mikl.me/users/new/#{current_user.id}/#{ValueOrder.find_by_user_id_and_keyword_page_id(current_user.id,@keyword_page.id).id}/commonfriend" %></p>
-      <% end %>
-    </li>
-  </ul>
+ 
 </p>
 </div>
 <% if logged_in? and current_user.controlled_keywords.include?(@keyword_page.keyword).present? %>
@@ -47,7 +31,20 @@
 
 <div id="form">
   <% if logged_in? %>
-    关于<strong><%= @keyword_page.keyword %></strong>，你能想到什么?长短均可。
+    关于<strong><%= @keyword_page.keyword %></strong>，你能想到什么?长短均可。 <%= link_to_remote "迅速提升在#{@keyword_page.keyword}中声望/邀请好友>>>",:url => {:action => :show_hidden} %>
+  <ul id="hidden" style="display:none">
+    <li>
+      被人施以好评，声望提高；（"回他一招>>>"页面）
+    </li>
+    <li>
+      被更多人关注，声望提高。（请勿尝试马甲刷分等行为）。
+      <% if logged_in? and current_user.keyword_pages.include?(@keyword_page)%>
+        可以发送这些话邀请你的好友，好友注册后，会自动关注你：
+        <p class="item_pink"><cite>真实朋友:</cite>我<%= current_user.name %>，在玩一个很独特的应用，你也赶快来试试：<%= "http://mikl.me/users/new/#{current_user.id}/#{ValueOrder.find_by_user_id_and_keyword_page_id(current_user.id,@keyword_page.id).id}/realfriend" %></p>
+        <p class="item_pink"><cite>匿名网友:</cite>我发现了一个很独特的平台，你快点注册，关注我一下：<%= "http://mikl.me/users/new/#{current_user.id}/#{ValueOrder.find_by_user_id_and_keyword_page_id(current_user.id,@keyword_page.id).id}/commonfriend" %></p>
+      <% end %>
+    </li>
+  </ul>
 <% remote_form_for [@user,@blog_resource] do |f|%>
       <strong><%= f.error_messages %>
       </strong>
