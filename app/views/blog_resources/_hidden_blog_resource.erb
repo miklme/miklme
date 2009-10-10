@@ -1,0 +1,14 @@
+<% if hidden_blog_resource.class.to_s=="BlogResource" %>
+  <% @variety="hidden_"+hidden_blog_resource.id.to_s %>
+<li style="display:none" id="<%=@variety%>">
+    <span class="sb_meta"><%=distance_of_time_in_words(Time.now, hidden_blog_resource.created_at, true)%></span>
+    <div class="margin_left">
+      <p>
+        <%=auto_link(hidden_blog_resource.content)%>
+      </p>
+      <br />
+      <%= link_to  "回他一招>>>(共被回#{hidden_blog_resource.comments.size}招)", user_resource_comments_path(hidden_blog_resource.owner,hidden_blog_resource),:popup => true %>
+
+    </div>
+  </li>
+<% end %>
