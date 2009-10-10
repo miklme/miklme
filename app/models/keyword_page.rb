@@ -22,7 +22,7 @@ class KeywordPage < ActiveRecord::Base
   has_many :value_orders
   has_many :users,:through => :value_orders,:source => :user
   has_one :top_user,:through => :value_orders,:source => :user,:order => "value DESC"
-  has_many :users_by_value,:through => :value_orders,:source => :user, :order => "value DESC"
+  has_many :users_by_value,:through => :value_orders,:source => :user, :order => "value DESC,created_at DESC"
 
   validates_uniqueness_of :keyword,:message => "这个关键字已经存在了"
   validates_presence_of :keyword,:message => "关键字名不能为空"

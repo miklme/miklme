@@ -48,7 +48,7 @@ class KeywordPagesController < ApplicationController
     r.user_id
     end
     ids.uniq!
-    users=User.find(ids).sort_by { |u| u.field_value(@keyword_page)}
+    users=User.find(ids).sort_by { |u| [u.field_value(@keyword_page),u.created_at]}
     @users=users.reverse.paginate(:page => params[:page],:per_page => 10)
     @related_keywords=@keyword_page.related_keywords
   end
