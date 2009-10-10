@@ -55,26 +55,42 @@
             </p>
           <% end %>
           <% if logged_in? %>
-            <div class="item_blue">
-              创立领域时，领域名称请保持简洁、准确（最长为8个汉字）。如：“互联网”、“科幻世界”、“金融学“等。
-              英文领域名、名词除外。
-              <% form_for [@user,@keyword_page] do |f| %>
-                <div>
-                  <%= f.error_messages %>
-                </div>
-                <p>
-                  <%= f.text_field :keyword,:size => 20 %>
-                  <%= f.submit "创建这个领域" %>
-                </p>
-                <%= f.check_box :long_keyword %>
-                <%= f.label :long_keyword,"领域名称为电影、书籍、音乐名称等名词，或为英文领域名" %>
-              <% end %>
-
-            </div>
+            <% if current_user.total_value>20 %>
+              <div class="item_blue">
+                创立关键字时，关键字名称请保持简洁、准确（最长为8个汉字）。如：“互联网”、“科幻世界”、“金融学“等。
+                英文关键字名、名词除外。
+                <% form_for [@user,@keyword_page] do |f| %>
+                  <div>
+                    <%= f.error_messages %>
+                  </div>
+                  <p>
+                    <%= f.text_field :keyword,:size => 20 %>
+                    <%= f.submit "创建这个关键字" %>
+                  </p>
+                  <%= f.check_box :long_keyword %>
+                  <%= f.label :long_keyword,"关键字名称为电影、书籍、音乐名称等名词，或为英文关键字名" %>
+                <% end %>
+              </div>
+            <% else %>
+              <div class="item_blue">
+                创立关键字时，关键字名称请保持简洁、准确（最长为8个汉字）。如：“互联网”、“科幻世界”、“金融学“等。
+                英文关键字、名词除外。
+                <% form_for [@user,@keyword_page] do |f| %>
+                  <div>
+                    <%= f.error_messages %>
+                  </div>
+                  <p>
+                    <%= f.text_field :keyword,:size => 20,:disabled => true %>
+                    <%= f.submit "创建这个关键字" %>
+                  </p>
+                <% end %>
+                  <cite>对不起，只有总声望值大于20时才能创立关键字</cite>
+              </div>
+            <% end %>
           <% end %>
           <% if @hot_keyword_pages.present? %>
             <table>
-              <tr><th>人数最多领域</th><th>最新创立领域</th><th>话题最多领域</th><th>女生最爱领域</th></tr>
+              <tr><th>参与人数最多的关键字</th><th>最新创立关键字</th><th>想法最多关键字</th><th>女生最爱关键字</th></tr>
               <tr><td>
                   <ol>
                     <% for k in @hot_keyword_pages %>

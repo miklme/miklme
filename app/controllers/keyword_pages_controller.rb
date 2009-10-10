@@ -1,6 +1,6 @@
 class KeywordPagesController < ApplicationController
   before_filter :load_user,:only => [:destroy,:create,:update,:edit]
-  skip_before_filter :login_required,:only => [:show_hidden,:show,:by_time,:index,:auto_complete_for_keyword_page_keyword,:redirect]
+  skip_before_filter :login_required,:only => [:more,:show_hidden,:show,:by_time,:index,:auto_complete_for_keyword_page_keyword,:redirect]
   skip_before_filter :check_profile_status
   def index
     @user=current_user
@@ -28,7 +28,7 @@ class KeywordPagesController < ApplicationController
       v.user=@user
       v.actived=true
       v.save
-      flash[:notice]="创建成功。在这个领域内你的初始经验值为0"
+      flash[:notice]="创建成功。在这个关键字内你的初始声望为0"
       redirect_to keyword_page_path(@keyword_page)
     else
       render :action => :index,:layout => "related_keywords"

@@ -1,16 +1,18 @@
 <div class="item_blue">
-  <p>规则：在此领域内(也就是现在这个页面)，各方豪杰言论默认按其经验值降序排列(经验值显示为<cite>绿色</cite>数字)，经验值最高者为擂主。擂主言论排位居首，以轰击众人之视觉；并拥有极大之淫威（威力大小与经验值成正比），以决定谁人之言论可浮出水面，谁人之信息被灭其踪迹。
+  <p>规则：在这个页面内，各种和<strong>这个关键字有关</strong>的想法都汇集在了一起。声望值(<cite>绿色</cite>数字)是这些想法排序的<strong>唯一依据</strong>。
+  声望最高的人和他的想法排列在首位，并以此类推。你在各个关键字内的声望<strong>互不影响</strong>。</p>
+  <p>你可以<cite>提高</cite>／<strong>降低</strong>某人声望（通过"回他一招>>>"页面，<cite>提高</cite>／<strong>降低</strong>数值和你的声望值成正比）。
   </p>
   <p>
-    想让自己的言论长期置顶？设法提高经验值就行了。
+    想让自己的思想在这里被广泛传播？请设法提高声望。
   </p>
-  <%= link_to_remote "提高你在这个领域的经验值/邀请好友>>>",:url => {:action => :show_hidden} %>
+  <%= link_to_remote "提高你在这个关键字内的声望/邀请好友>>>",:url => {:action => :show_hidden} %>
   <ul id="hidden" style="display:none">
     <li>
-      被人施以好评，经验值提高；（经验值提高程度取决于施主的经验值高低）
+      被人施以好评，声望提高；（"回他一招>>>"页面）
     </li>
     <li>
-      被更多人关注，经验值提高。（请勿尝试马甲刷分等行为）。
+      被更多人关注，声望提高。（请勿尝试马甲刷分等行为）。
       <% if logged_in? and current_user.keyword_pages.include?(@keyword_page)%>
         可以发送这些话邀请你的好友，好友注册后，会自动关注你：
         <p class="item_blue"><cite>真实朋友:</cite>我<%= current_user.name %>，在玩一个很独特的应用，你也赶快来试试：<%= "http://mikl.me/users/new/#{current_user.id}/#{ValueOrder.find_by_user_id_and_keyword_page_id(current_user.id,@keyword_page.id).id}/realfriend" %></p>
@@ -24,8 +26,8 @@
   <div class="item_blue">你是老大。因此：
     <ul>
       <li>
-        <span>你能够<%=link_to "修改相关领域",keyword_page_related_keywords_path(@keyword_page),:popup => ['修改相关领域', 'height=500,width=450'] %>
-        </span>，如果这样，这个领域的条目就容易被相关领域的人看到。
+        <span>你能够<%=link_to "修改相关关键字",keyword_page_related_keywords_path(@keyword_page),:popup => ['修改相关关键字', 'height=500,width=450'] %>
+        </span>，如果这样，这个关键字的条目就容易被相关关键字的人看到。
       </li>
       <li>
         请注意自己言论的影响，以及出手轻重。
@@ -45,15 +47,15 @@
 
 <div id="form">
   <% if logged_in? %>
-    开始了，随便说点什么看看你的话被排在哪里，长短均可：
-    <% remote_form_for [@user,@blog_resource] do |f|%>
+    关于<strong><%= @keyword_page.keyword %></strong>，你能想到什么?长短均可。
+<% remote_form_for [@user,@blog_resource] do |f|%>
       <strong><%= f.error_messages %>
       </strong>
       <p><%= f.text_area :content,:cols => 45,:rows => 4 %>
         <!--
         靠，先不用这个了
         <li>
-        <%= fckeditor_textarea(:blog_resource,:content,:toolbarSet => "Easy",:width => '85%',:height => '150px') %>
+        <%#= fckeditor_textarea(:blog_resource,:content,:toolbarSet => "Easy",:width => '85%',:height => '150px') %>
         </li>
         -->
         <%= f.submit "完成",:class => "big_button"  %>

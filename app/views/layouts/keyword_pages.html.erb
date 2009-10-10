@@ -52,9 +52,9 @@
           <div id="sw_aside">
             <div id="sc_expPane">
               <div class="sw_menu" id="sw_rel">
-                <h2>目前所在领域</h2>
+                <h2>目前所在关键字</h2>
                 <span id="keyword_page"><%=h @keyword_page.keyword %></span>
-                <h2>相关领域</h2>
+                <h2>相关关键字</h2>
                 <ul>
                   <% if not @related_keywords.blank? %>
                     <% for related_keyword in @related_keywords %>
@@ -64,7 +64,7 @@
                     <% end %>
                   <% end %>
                 </ul>
-                <h2>该领域内用户TOP10</h2>
+                <h2>该关键字内用户TOP10</h2>
                 <ol>
                   <% for u in @keyword_page.users_by_value.ten %>
                     <li><%=link_to u.nick_name,user_path(u) %>（<cite><%= u.field_value(@keyword_page) %></cite>）</li>

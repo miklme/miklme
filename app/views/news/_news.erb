@@ -6,10 +6,10 @@
     <% if news.comment.action_one.present? and news.comment.action_two.present? -%>
       <%= news.comment.action_one -%>了我的<%=news.comment.action_two -%>
       <% if news.comment.rating>0 %>
-        (经验值+<%= news.comment.owner.field_value(news.comment.resource.keyword_page)/10+0.5 %>)
+        (声望+<%= news.comment.owner.field_value(news.comment.resource.keyword_page)/10+0.5 %>)
 
       <% elsif news.comment.rating<0 %>
-        (经验值-<%= news.comment.owner.field_value(news.comment.resource.keyword_page)/10+0.5 %>)
+        (声望-<%= news.comment.owner.field_value(news.comment.resource.keyword_page)/10+0.5 %>)
       <% end %>
       并
     <% end %>
@@ -38,12 +38,12 @@
     <%#*<cite><%=auto_link(news.resource.content)%></cite>%>
     <%#*<em><%= link_to "#{news.resource.comments.size}回应>>>",user_resource_comments_path(news.resource.owner,news.resource) %></em>%>
 
-    <%#*（领域： <%=link_to_page news.resource.keyword_page %>）%>
+    <%#*（关键字： <%=link_to_page news.resource.keyword_page %>）%>
   <%#*</p>%>
   -->
 <% elsif news.news_type=="be_follow" %>
   <p>
-    我被<%=link_to news.follower.name_or_nick_name(current_user),user_path(news.follower) %>关注，<span class="little_white">相应领域的经验值+3。</span>
+    我被<%=link_to news.follower.name_or_nick_name(current_user),user_path(news.follower) %>关注，<span class="little_white">相应关键字的声望+3。</span>
   </p>
 
 <% end %>

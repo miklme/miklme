@@ -8,7 +8,7 @@
     <%= link_to "#{f.owner.name_or_nick_name(current_user)}",user_path(f.resource.owner) -%>发表高论
     <cite><%=auto_link(f.resource.content) %></cite>
     <em><%= link_to "#{f.resource.comments.size}回应>>>",user_resource_comments_path(f.resource.owner,f.resource) %></em>
-    （领域： <%=link_to_page f.resource.keyword_page %>）
+    （关键字： <%=link_to_page f.resource.keyword_page %>）
   </p>
 <% elsif f.news_type=="comment" or f.news_type=="replied_comment"%>
   <p>
