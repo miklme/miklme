@@ -34,7 +34,7 @@ class BlogResourcesController < ApplicationController
       n.save
       render :update do |page|
         page.toggle "form"
-        page.insert_html :top,"succeed", "<p>发表成功。按照规则，你刚才的信息排在了第#{@keyword_page.by_value.reverse.index(@blog_resource)+1}条。需要刷新才能看到</p>"
+        page.insert_html :top,"succeed", "<p>发表成功。按照规则，你刚才的信息排在了第<strong>#{@keyword_page.by_value.reverse.index(@blog_resource)+1}</strong>条。需要刷新才能看到</p>"
         page.visual_effect(:appear,"succeed",:duration => 2)
       end
     else
