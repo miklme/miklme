@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
-  before_filter :load_user_and_resource
-  skip_before_filter :login_required,:only => [:index,:by_time]
+  before_filter :load_user_and_resource,:except => [:show_hidden]
+  skip_before_filter :login_required,:only => [:index,:by_time,:show_hidden]
   # GET /comments
   # GET /comments.xml
   
@@ -81,7 +81,11 @@ class CommentsController < ApplicationController
       format.xml  { head :ok }
     end
   end
-
+  def show_hidden
+    render :update do |page|
+      page.visual_effect :toggle_appear,"notice"
+    end
+  end
   private
 
   def load_user_and_resource

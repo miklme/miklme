@@ -1,6 +1,6 @@
 class KeywordPagesController < ApplicationController
   before_filter :load_user,:only => [:destroy,:create,:update,:edit]
-  skip_before_filter :login_required,:only => [:more,:show_hidden,:show,:by_time,:index,:auto_complete_for_keyword_page_keyword,:redirect]
+  skip_before_filter :login_required,:only => [:more,:show,:by_time,:index,:auto_complete_for_keyword_page_keyword,:redirect]
   skip_before_filter :check_profile_status
   def index
     @user=current_user
@@ -90,11 +90,7 @@ class KeywordPagesController < ApplicationController
     end
   end
 
-  def show_hidden
-    render :update do |page|
-      page.visual_effect :toggle_slide,"hidden"
-    end
-  end
+  
   def more
     k=KeywordPage.find(session[:current_keyword_page_id])
     resources=User.find(params[:id]).resources.find(:all,:limit => 23,:offset => 3,:order => "created_at DESC",:conditions => {:keyword_page_id => k.id})
