@@ -18,5 +18,5 @@ class BlogResource<Resource
   has_many :comments,:foreign_key => "resource_id",:dependent => :destroy
   has_many :commenters,:through => :comments,:source => :owner
 
-  validates_length_of :content,:minimum => 2
+  validates_presence_of :content
 end

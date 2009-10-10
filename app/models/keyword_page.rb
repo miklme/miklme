@@ -24,9 +24,9 @@ class KeywordPage < ActiveRecord::Base
   has_one :top_user,:through => :value_orders,:source => :user,:order => "value DESC"
   has_many :users_by_value,:through => :value_orders,:source => :user, :order => "value DESC"
 
-  validates_uniqueness_of :keyword
-  validates_presence_of :keyword
-  validates_length_of :keyword, :maximum => 50
+  validates_uniqueness_of :keyword,:message => "这个领域已经存在了"
+  validates_presence_of :keyword,:message => "领域名不能为空"
+  validates_length_of :keyword, :maximum => 8,:if => Proc.new {|k| !k.long_keyword},:message => "名称长度不符合要求"
   named_scope :user_fields, lambda { |user_id| {
       :include => :value_orders,
       :conditions => [ "value_orders.user_id = ?", user_id ]
@@ -48,7 +48,11 @@ class KeywordPage < ActiveRecord::Base
     end
     ss.reverse.paginate(:per_page => 15,:page => page)
   end
-
+def by_value
+      ss=self.resources.sort_by do |resource|
+      [self.value_orders.find_by_user_id(resource.owner).value,resource.created_at]
+    end
+end
   def top_resource
     ss=self.resources.sort_by do |resource|
       [self.value_orders.find_by_user_id(resource.owner).value,resource.created_at]
@@ -65,8 +69,8 @@ class KeywordPage < ActiveRecord::Base
     a.reverse.first(15)
   end
 
-  def self.long_name_keyword_pages
-    a=self.find(:all).sort_by {|k| k.keyword.length}
+  def self.many_resources_keyword_pages
+    a=self.find(:all).sort_by {|k| k.resources.size}
     a.reverse.first(15)
   end
 

@@ -10,11 +10,16 @@ class RepliedCommentsController < ApplicationController
     @replied_comment.owner=current_user
     if @replied_comment.save
       n=@replied_comment.parent_comment.owner.news.build
-      n.news_type="replied_comment"
+      n.news_type="be_replied_comment"
       n.resource=@resource
       n.comment=@replied_comment
       n.save
-      render :text => "回复成功"
+      n_2=current_user.news.build
+      n_2.news_type="replied_comment"
+      n_2.resource=@resource
+      n_2.comment=@replied_comment
+      n_2.save
+      redirect_to user_resource_comments_path(@resource.owner,@resource)
     else
       render :action => :new
     end

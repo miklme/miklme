@@ -4,13 +4,13 @@
   <p>
     想让自己的言论长期置顶？设法提高经验值就行了。
   </p>
-  <%= link_to_remote "如何提高你在这个领域的经验值>>>",:url => {:action => :show_hidden} %>
+  <%= link_to_remote "提高你在这个领域的经验值/邀请好友>>>",:url => {:action => :show_hidden} %>
   <ul id="hidden" style="display:none">
     <li>
-      被人施以好评（经验值提高程度取决于施主的经验值高低）
+      被人施以好评，经验值提高；（经验值提高程度取决于施主的经验值高低）
     </li>
     <li>
-      被更多人关注（请勿尝试马甲刷分等行为）。
+      被更多人关注，经验值提高。（请勿尝试马甲刷分等行为）。
       <% if logged_in? and current_user.keyword_pages.include?(@keyword_page)%>
         可以发送这些话邀请你的好友，好友注册后，会自动关注你：
         <p class="item_blue"><cite>真实朋友:</cite>我<%= current_user.name %>，在玩一个很独特的应用，你也赶快来试试：<%= "http://mikl.me/users/new/#{current_user.id}/#{ValueOrder.find_by_user_id_and_keyword_page_id(current_user.id,@keyword_page.id).id}/realfriend" %></p>
@@ -33,40 +33,58 @@
     </ul>
   </div>
 <% end %>
+
+
 <div class="sb_ph">
+
   共 <%= @resources.size %> 条 <!--
 有趣的分割点
 <span class="sc_bullet">·</span>%>
   -->
 </div>
-<div>
+
+<div id="form">
   <% if logged_in? %>
-    开始了，随便说点什么看看大家的反应，长短均可：
-    <% form_for [@user,@blog_resource] do |f|%>
-      <ul class="sb_results">
-        <li>
-          <strong><%= f.error_messages %>
-          </strong>
-        </li>
-        <li><p><%= f.text_area :content,:cols => 45,:rows => 5 %></p></li>
+    开始了，随便说点什么看看你的话被排在哪里，长短均可：
+    <% remote_form_for [@user,@blog_resource] do |f|%>
+      <strong><%= f.error_messages %>
+      </strong>
+      <p><%= f.text_area :content,:cols => 45,:rows => 4 %>
         <!--
         靠，先不用这个了
         <li>
         <%= fckeditor_textarea(:blog_resource,:content,:toolbarSet => "Easy",:width => '85%',:height => '150px') %>
         </li>
         -->
-        <li><p><%= f.submit "完成"  %></p>
-        </li>
-      </ul>
+        <%= f.submit "完成",:class => "big_button"  %>
+      <% end %>
     <% end %>
-  <% end %>
 </div>
+<div id="succeed" style="display:none">
+  <p>你也可以点击<%= link_to_remote ">这里",:url => {:controller => :blog_resources,:action => "say"} %>继续发言</p>
+</div>
+<!--
+基本没用了
+<span class="sb_pag">
+  <%= link_to "默认排序",keyword_page_path(@keyword_page) %>
+  <%= link_to "按发表时间排序",by_time_keyword_page_path(@keyword_page)%></span>
+-->
 <div id="results">
 
   <ol class="sb_results" id="wg0">
-    <%= render  :partial => "resources/resource",:collection => @resources  %>
+    <% for u in @users %>
+      <%= render :partial => "resources/resource",:object => u.resources.find(:first,:order => "created_at DESC",:conditions => {:keyword_page_id => @keyword_page.id}) %>
+      <%= render  :partial => "blog_resources/blog_resource",:collection => u.resources.find(:all,:limit => 2,:offset => 1,:order => "created_at DESC",:conditions => {:keyword_page_id => @keyword_page.id})  %>
+      <% if u.resources.find(:all,:order => "created_at DESC",:conditions => {:keyword_page_id => @keyword_page.id}).size>3 %>
+        <li>
+          <div class="margin_left" id="keyword_page"><%= link_to_remote "展开更多>>",:url => {:action => :more,:id => u.id}%>
+          </div>
+        </li>
+      <% end %>
+      <%= render  :partial => "blog_resources/hidden_blog_resource",:collection => u.resources.find(:all,:limit => 30,:offset => 3,:order => "created_at DESC",:conditions => {:keyword_page_id => @keyword_page.id})  %>
+    <% end %>
   </ol>
 </div>
 <div class="sb_pag">
-  <%= will_paginate @resources, :prev_label => '上一页', :next_label => '下一页' %>
+<%= will_paginate @users, :prev_label => '上一页', :next_label => '下一页' %>
 </div>

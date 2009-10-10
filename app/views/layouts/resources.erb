@@ -41,11 +41,11 @@
               <% else %>
                 我
               <% end %>
-              参与的领域：</h2>
+              擅长的领域：</h2>
             <div>
               <% for k in @user.appear_keyword_pages %>
                 <p>
-                  <%=link_to k.keyword,keyword_page_path(KeywordPage.find_by_keyword(k.keyword)) %>
+                  <span class="keyword_page"><%=link_to k.keyword,keyword_page_path(KeywordPage.find_by_keyword(k.keyword)) %></span>
                   <!--
                   隐藏领域的功能，暂时不打算使用
                   <% if @user.value_orders.find_by_keyword_page_id(k).hidden==false%>

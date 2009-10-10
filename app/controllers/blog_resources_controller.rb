@@ -1,6 +1,6 @@
 class BlogResourcesController < ApplicationController
   skip_before_filter :login_required,:only => [:show]
-  before_filter :load_user
+  before_filter :load_user,:except => [:say]
   def show
     @blog_resource=Resource.find(params[:id])
   end
@@ -27,12 +27,16 @@ class BlogResourcesController < ApplicationController
         v.save
       end
       flash[:keyword_page]=@blog_resource.keyword_page.id
-      redirect_to keyword_page_path(@blog_resource.keyword_page)
       n=current_user.news.create
       n.news_type="blog_resource"
       n.owner=current_user
       n.resource=@blog_resource
       n.save
+      render :update do |page|
+        page.toggle "form"
+        page.insert_html :top,"succeed", "<p>发表成功。按照规则，你刚才的信息排在了第#{@keyword_page.by_value.reverse.index(@blog_resource)+1}条。需要刷新才能看到</p>"
+        page.visual_effect(:appear,"succeed",:duration => 2)
+      end
     else
       redirect_to :back
     end
@@ -46,6 +50,13 @@ class BlogResourcesController < ApplicationController
       redirect_to keyword_page_path(@blog_resource.keyword_page)
     else
       render :action => :edit,:layout => "blog_resources"
+    end
+  end
+
+  def say
+    render :update do |page|
+      page.toggle "form"
+      page.toggle "succeed"
     end
   end
   

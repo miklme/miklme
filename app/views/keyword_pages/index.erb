@@ -37,18 +37,7 @@
               "function(element,value){" + remote_function(:url => {:action => :redirect},:with=>"'keyword='+element.value") + "}"%>
             <%=submit_tag "搜索全部" %>
           <% end %>
-          <% if logged_in? %>
-            <% form_for [@user,@keyword_page] do |f| %>
-              <p>
-                <%= f.error_messages %>
-              </p>
-              <%= text_field 'keyword_page','keyword',:size => 40 %>
-              <%= f.submit "创建这个领域" %>
-              <div class="auto_complete" id="keyword_page_keyword_auto_complete">
-              </div>
-              <%= auto_complete_field :keyword_page_keyword,:url => {:action => 'auto_complete_for_keyword_page_keyword'},:frequency => 0.1%>
-            <% end %>
-          <% end %>
+
         </div>
       </div>
     </div>
@@ -65,45 +54,65 @@
               <strong><%=h flash[:notice] %></strong>
             </p>
           <% end %>
-          <table>
-            <tr><th>热门领域</th><th>最新创立领域</th><th>名字最长领域</th><th>最受女生欢迎的领域</th></tr>
-            <tr><td>
-                <ol>
-                  <% for k in @hot_keyword_pages %>
-                    <li>
-                      <%=link_to k.keyword,keyword_page_path(k),:popup => true %>
-                    </li>
-                  <% end %>
-                </ol>
-              </td>
-              <td>
-                <ol>
-                  <% for k in @new_keyword_pages %>
-                    <li>
-                      <%= link_to k.keyword,keyword_page_path(k),:popup => true %>
-                    </li>
-                  <% end %>
-                </ol>
-              </td>
-              <td>
-                <ol>
-                  <% for k in @long_name_keyword_pages %>
-                    <li>
-                      <%= link_to k.keyword,keyword_page_path(k),:popup => true %>
-                    </li>
-                  <% end %>
-                </ol>
-              </td>
-              <td>
-                <ol>
-                  <% for p in @girls_pages %>
-                    <li>
-                      <%= link_to_page(p) %>
-                    </li>
-                  <% end %>
-                </ol>
-              </td></tr>
-          </table>
+          <% if logged_in? %>
+            <div class="item_blue">
+              创立领域时，领域名称请保持简洁、准确（最长为8个汉字）。如：“互联网”、“科幻世界”、“金融学“等。
+              英文领域名、名词除外。
+              <% form_for [@user,@keyword_page] do |f| %>
+                <div>
+                  <%= f.error_messages %>
+                </div>
+                <p>
+                  <%= f.text_field :keyword,:size => 20 %>
+                  <%= f.submit "创建这个领域" %>
+                </p>
+                <%= f.check_box :long_keyword %>
+                <%= f.label :long_keyword,"领域名称为电影、书籍、音乐名称等名词，或为英文领域名" %>
+              <% end %>
+
+            </div>
+          <% end %>
+          <% if @hot_keyword_pages.present? %>
+            <table>
+              <tr><th>人数最多领域</th><th>最新创立领域</th><th>话题最多领域</th><th>女生最爱领域</th></tr>
+              <tr><td>
+                  <ol>
+                    <% for k in @hot_keyword_pages %>
+                      <li>
+                        <%=link_to k.keyword,keyword_page_path(k),:popup => true %>
+                      </li>
+                    <% end %>
+                  </ol>
+                </td>
+                <td>
+                  <ol>
+                    <% for k in @new_keyword_pages %>
+                      <li>
+                        <%= link_to k.keyword,keyword_page_path(k),:popup => true %>
+                      </li>
+                    <% end %>
+                  </ol>
+                </td>
+                <td>
+                  <ol>
+                    <% for k in @many_resources_keyword_pages %>
+                      <li>
+                        <%= link_to k.keyword,keyword_page_path(k),:popup => true %>
+                      </li>
+                    <% end %>
+                  </ol>
+                </td>
+                <td>
+                  <ol>
+                    <% for p in @girls_pages %>
+                      <li>
+                        <%= link_to_page(p) %>
+                      </li>
+                    <% end %>
+                  </ol>
+                </td></tr>
+            </table>
+          <% end %>
         </div></div></div></div>
   <%= render :partial => "shared/footer" %>
 </body>

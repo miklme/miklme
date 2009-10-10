@@ -1,5 +1,15 @@
-<% form_for [@replied_comment], :url => { :controller => :replied_comments,:action => "create" } do |f| %>
-  <%= f.error_messages %>
-  <%= f.text_area :content,:size => "45x4" %>
-  <%= f.submit "就这样"%>
+<% form_for  ([@replied_comment]),:url => { :controller => :replied_comments,:action => "create" } do |f| %>
+  <p>给你的招式取个名字，句式：v.+"其"+n. <span class="sb_meta">（如：侮辱其人格，断其一指等等）</span>
+  </p>
+
+  <p>
+    <%=f.text_field :action_one,:size => 4%>其 <%= f.text_field :action_two,:size => 4 %>
+  </p>
+  回应内容
+  <p>
+    <%= f.text_area :content,:size => "48x4"%>
+  </p>
+  <p>
+    <%= f.submit '就这样'%>
+  </p>
 <% end %>

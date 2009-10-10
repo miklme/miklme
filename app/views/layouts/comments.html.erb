@@ -9,9 +9,7 @@
     <%= stylesheet_link_tag "result"  %>
   </head>
   <body>
-    <div style="background-image: url(/images/j2.jpg); opacity: 1" id="sw_im"><div class="sc_idk" id="sw_imL"></div>
-      <div class="sw_mbrand sw_drk"></div>
-    </div>
+    
     <div id="sw_page">
       <div id="sw_hdr">
         <div class="sw_tb"><%= link_to "Michael",keyword_pages_path %><%= link_to_me %></div>
@@ -21,24 +19,24 @@
     <div id="sw_content">
       <div id="sw_canvas">
         <div id="sw_aside">
+          <!--
           <div id="sw_nav">
             <ul>
-              <li class="sw_navA">
-                <%= link_to "评论按经验值排序",user_resource_comments_path(@user,@resource) %>
-              </li>
               <li class="sw_navA">
                 <%= link_to "评论按时间排序",by_time_user_resource_comments_path(@user,@resource) %>
               </li>
             </ul>
-          </div><div id="sc_expPane">
+          </div>
+          -->
+          <div id="sc_expPane">
             <div class="sw_menu" id="sw_rel">
-              <h2>条目所在领域</h2>
-              <cite><%=link_to @resource.keyword_page.keyword,keyword_page_path(KeywordPage.find_by_keyword(@resource.keyword_page.keyword)) %></cite>
+              <h2>言论所在领域</h2>
+              <span id="keyword_page"><%=link_to @resource.keyword_page.keyword,keyword_page_path(KeywordPage.find_by_keyword(@resource.keyword_page.keyword)) %></span>
               <h2>相关领域</h2>
               <ul>
                 <% if not @related_keywords.blank? %>
                   <% for related_keyword in @related_keywords %>
-                    <li>
+                    <li id="keyword_page">
                       <%= link_to highlight(related_keyword.name,@keyword_page.keyword),"/keyword_pages/#{KeywordPage.find_by_keyword(related_keyword.name).id}",:popup => true %>
                     </li>
                   <% end %>

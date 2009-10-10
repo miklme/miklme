@@ -13,16 +13,8 @@ class CommentsController < ApplicationController
       v.save
     end
     @related_keywords=@keyword_page.related_keywords
-    @comments=@resource.comments_by_value(params[:page])
-    @comment=@resource.comments.build
-  end
-
-  def by_time
-    @keyword_page=KeywordPage.find_by_keyword(@resource.keyword_page.keyword)
-    @related_keywords=@keyword_page.related_keywords
     @comments=@resource.comments_by_time(params[:page])
     @comment=@resource.comments.build
-    render :action => :index
   end
 
   # GET /comments/1

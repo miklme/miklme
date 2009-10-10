@@ -1,18 +1,36 @@
-<%@something=@resource.description%>
+<table>
+  <tbody>
+    <tr>
+      <td width="80"><%= render :partial => "shared/field_profile",:locals => {:user => @resource.owner,:keyword_page => @resource.keyword_page}%>
+      </td>
+      <td width="500">
+        <cite><%= @resource.created_at_s %></cite>
+        <p>
+          <%=auto_link(@resource.content)%>
+        </p>
+      </td>
+      <td width="100">
+      </td>
+    </tr>
+    <tr><td></td><td>
+      </td></tr>
+  </tbody>
+</table>
+<div class="dotted"></div>
 <% for comment in @comments %>
   <%= render :partial => "comment",:object => comment %>
 <% end %>
 
 <% if logged_in? %>
   <table class="item" cellspacing="5">
-      <tr>
-        <td width="60">
-          <%= render :partial => "shared/field_profile",:locals => {:user => current_user,:keyword_page => @resource.keyword_page}%>
-        </td>
-        <td width="520">
-          <%= render :partial => "form",:object => @comment %>
-        </td>
-      </tr>
+    <tr>
+      <td width="60">
+        <%= render :partial => "shared/field_profile",:locals => {:user => current_user,:keyword_page => @resource.keyword_page}%>
+      </td>
+      <td width="520">
+        <%= render :partial => "form",:object => @comment %>
+      </td>
+    </tr>
   </table>
 <% end %>
 

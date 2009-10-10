@@ -3,13 +3,13 @@
     <div>
       <div><%= link_to user.nick_name,user_path(user) %></div>
       <strong>（我已关注）</strong>
-      <cite><%=user.field_value(keyword_page) %></cite>
+      <p><cite><%=user.field_value(keyword_page) %></cite></p>
     </div>
   <% elsif current_user.followers.include?(user)%>
     <div>
       <div><%= link_to user.nick_name,user_path(user) %></div>
       <strong>（关注我的人）</strong>
-      <cite><%= "#{user.field_value(keyword_page)}" %></cite>
+      <p><cite><%= "#{user.field_value(keyword_page)}" %></cite></p>
     </div>
   <% else %>
     <div>

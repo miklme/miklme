@@ -3,7 +3,7 @@
   <div>
     该用户的哪个"领域"吸引了你，或者说你认为该用户在哪个"领域"内最为擅长
   <p>
-    <% for k in @user.keyword_pages %>
+    <% for k in @user.appear_keyword_pages %>
       <%= radio_button :keyword_page,:keyword,k.keyword %><%= k.keyword %>
     <% end %>
   </p>

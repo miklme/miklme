@@ -13,7 +13,8 @@ class News < ActiveRecord::Base
     paginate_by_user_id current_user.id,
       :per_page => 25,
       :page => page,
-      :order => "created_at DESC"
+      :order => "created_at DESC",
+      :conditions => "news_type='be_follow' or news_type='be_comment' or news_type='be_replied_comment'"
   end
 
   def self.list_friends_news(user,page)
@@ -24,7 +25,7 @@ class News < ActiveRecord::Base
       :per_page => 30,
       :page => page,
       :order  => "created_at DESC",
-      :conditions => "news_type='comment' or news_type='blog_resource'"
+      :conditions => "news_type='comment' or news_type='blog_resource' or news_type='replied_comment'"
   end
 
   def self.self_news_for_others(user,page)
@@ -32,7 +33,7 @@ class News < ActiveRecord::Base
       :per_page => 20,
       :page => page,
       :order => "created_at DESC",
-      :conditions => "news_type='comment' or news_type='blog_resource'"
+      :conditions => "news_type='comment' or news_type='blog_resource' or news_type='replied_comment'"
   end
 
 end

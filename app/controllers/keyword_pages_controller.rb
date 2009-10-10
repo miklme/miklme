@@ -9,7 +9,7 @@ class KeywordPagesController < ApplicationController
     end
     @hot_keyword_pages=KeywordPage.hot_keyword_pages
     @new_keyword_pages=KeywordPage.find(:all,:order => "created_at DESC",:limit => 15)
-    @long_name_keyword_pages=KeywordPage.long_name_keyword_pages
+    @many_resources_keyword_pages=KeywordPage.many_resources_keyword_pages
     @girls_pages=KeywordPage.girls_pages
     @news=Resource.blog_and_link_url_resources.recent
     gs=KeywordPage.find(:all).map do |k|
@@ -21,21 +21,18 @@ class KeywordPagesController < ApplicationController
   end
   
   def create
-    @keyword_page=KeywordPage.find_by_keyword(params[:keyword_page][:keyword])
-    if @keyword_page.present?
-      flash[:notice]="出了点小问题，这个领域已经存在"
-      redirect_to :back
-    else
-      k=KeywordPage.create(:keyword => params[:keyword_page][:keyword])
+    @keyword_page=KeywordPage.new(params[:keyword_page])
+    if @keyword_page.save
       v=ValueOrder.new
+      v.keyword_page=@keyword_page
       v.user=@user
-      v.keyword_page=k
       v.actived=true
       v.save
       flash[:notice]="创建成功。在这个领域内你的初始经验值为0"
-      redirect_to keyword_page_path(k)
+      redirect_to keyword_page_path(@keyword_page)
+    else
+      render :action => :index,:layout => "related_keywords"
     end
-
   end
    
   
@@ -46,8 +43,13 @@ class KeywordPagesController < ApplicationController
     end
     @keyword_page=KeywordPage.find(params[:id])
     session[:current_keyword_page_id]=(params[:id])
-    @resources=@keyword_page.resources_by_value(params[:page])
+    @resources=@keyword_page.resources
+    ids=@resources.map do |r|
+      r.user_id
+    end
+    ids.uniq!
     @related_keywords=@keyword_page.related_keywords
+    @users=User.find(ids).paginate(:page => params[:page],:per_page => 10)
   end
 
   def by_time
@@ -90,7 +92,20 @@ class KeywordPagesController < ApplicationController
 
   def show_hidden
     render :update do |page|
-      page.toggle "hidden"
+      page.visual_effect :toggle_slide,"hidden"
     end
   end
+  def more
+    k=KeywordPage.find(session[:current_keyword_page_id])
+    resources=User.find(params[:id]).resources.find(:all,:limit => 23,:offset => 3,:order => "created_at DESC",:conditions => {:keyword_page_id => k.id})
+    ids=resources.map do |r|
+      "hidden_"+r.id.to_s
+    end
+    render :update do |page|
+      for i in ids
+        page.visual_effect :toggle_blind,i
+      end
+    end
+  end
+
 end

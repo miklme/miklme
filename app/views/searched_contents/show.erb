@@ -17,9 +17,7 @@
                       <%=simple_format(auto_link(resource.content))%>
                     </p>
                     <span class="sb_meta">所在领域：<strong><%= resource.keyword_page.keyword %></strong></span>
-                    <ul class="sb_meta">
-                      <li><cite><%= link_to "回他一招！(共#{resource.comments.size}条)", user_resource_comments_path(resource.owner,resource),:popup => true %></cite></li>
-                    </ul>
+                    <%= link_to "回他一招！(共#{resource.comments.size}条)", user_resource_comments_path(resource.owner,resource),:popup => true %>
                   </td>
                   <!--
                   同以上，对用户体验不利
