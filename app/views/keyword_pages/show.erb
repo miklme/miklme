@@ -1,9 +1,9 @@
 <div class="item_blue">
   <p>规则：在这个页面内，各种和<strong><%=@keyword_page.keyword%></strong>有关的想法都汇集在了一起。声望值(<cite>绿色</cite>数字)是这些想法排序的<strong>唯一依据</strong>。
-  声望最高的人和他的想法排列在首位，并以此类推。你在各个关键字内的声望<strong>互不影响</strong>。</p>
+    声望最高的人和他的想法排列在首位，并以此类推。你在各个关键字内的声望<strong>互不影响</strong>。</p>
   <p>你可以<cite>提高</cite>／<strong>降低</strong>某人声望（通过"回他一招>>>"页面，<cite>提高</cite>／<strong>降低</strong>数值和你的声望值成正比）。
   </p>
- 
+
 </p>
 </div>
 <% if logged_in? and current_user.controlled_keywords.include?(@keyword_page.keyword).present? %>
@@ -19,19 +19,7 @@
     </ul>
   </div>
 <% end %>
-
-
-<div class="sb_ph">
-
-  共 <%= @resources.size %> 条 <!--
-有趣的分割点
-<span class="sc_bullet">·</span>%>
-  -->
-</div>
-
-<div id="form">
-  <% if logged_in? %>
-    关于<strong><%= @keyword_page.keyword %></strong>，你能想到什么?长短均可。 <%= link_to_remote "迅速提升在”#{@keyword_page.keyword}“中声望/邀请好友>>>",:url => {:controller => :comments,:action => :show_hidden} %>
+<div class="item_pink"><%= link_to_remote "迅速提升在”#{@keyword_page.keyword}“中声望/邀请好友>>>",:url => {:controller => :comments,:action => :show_hidden} %>
   <ul id="notice" style="display:none">
     <li>
       被人施以好评，声望提高；（"回他一招>>>"页面）
@@ -45,14 +33,28 @@
       <% end %>
     </li>
   </ul>
-<% remote_form_for [@user,@blog_resource] do |f|%>
+</div>
+
+<div class="sb_ph">
+
+  共 <%= @resources.size %> 条 <!--
+有趣的分割点
+<span class="sc_bullet">·</span>%>
+  -->
+</div>
+
+<div id="form">
+  <% if logged_in? %>
+    关于<strong><%= @keyword_page.keyword %></strong>，你能想到什么?长短均可。
+
+    <% remote_form_for [@user,@blog_resource] do |f|%>
       <strong><%= f.error_messages %>
       </strong>
       <p><%= f.text_area :content,:cols => 45,:rows => 4 %>
         <!--
         靠，先不用这个了
         <li>
-        <%#= fckeditor_textarea(:blog_resource,:content,:toolbarSet => "Easy",:width => '85%',:height => '150px') %>
+    <%#= fckeditor_textarea(:blog_resource,:content,:toolbarSet => "Easy",:width => '85%',:height => '150px') %>
         </li>
         -->
         <%= f.submit "完成",:class => "big_button"  %>
@@ -65,8 +67,8 @@
 <!--
 基本没用了
 <span class="sb_pag">
-  <%= link_to "默认排序",keyword_page_path(@keyword_page) %>
-  <%= link_to "按发表时间排序",by_time_keyword_page_path(@keyword_page)%></span>
+<%= link_to "默认排序",keyword_page_path(@keyword_page) %>
+<%= link_to "按发表时间排序",by_time_keyword_page_path(@keyword_page)%></span>
 -->
 <div id="results">
 
@@ -85,5 +87,5 @@
   </ol>
 </div>
 <div class="sb_pag">
-<%= will_paginate @users, :prev_label => '上一页', :next_label => '下一页' %>
+  <%= will_paginate @users, :prev_label => '上一页', :next_label => '下一页' %>
 </div>
