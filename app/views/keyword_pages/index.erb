@@ -55,7 +55,7 @@
             </p>
           <% end %>
           <% if logged_in? %>
-            <% if current_user.total_value>20 %>
+            <% if current_user.total_value>15 %>
               <div class="item_blue">
                 创立关键字时，关键字名称请保持简洁、准确（最长为8个汉字）。如：“互联网”、“科幻世界”、“金融学“等。
                 英文关键字名、名词除外。
@@ -84,7 +84,7 @@
                     <%= f.submit "创建这个关键字" %>
                   </p>
                 <% end %>
-                <cite>对不起，只有总声望值大于20时才能创立关键字</cite>
+                <cite>对不起，只有总声望值大于15时才能创立关键字</cite>
               </div>
             <% end %>
           <% end %>
