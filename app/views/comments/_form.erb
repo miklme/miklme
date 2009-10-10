@@ -4,13 +4,13 @@
     <% if !form.resource.commenters.include?(current_user) and form.resource.owner.last_ip!=current_user.last_ip%>
       <p>
         <%=f.radio_button :rating,-1%>
-        <strong>消灭此人
+        <strong>降低声望
         </strong>
         <em><%= link_to_remote "(#{comment_value(form.resource.keyword_page)}伤害)",:url => {:controller => :keyword_pages,:action => :show_hidden}%>
         <%=f.radio_button :rating,0%></em>
         不表态
         <%=f.radio_button :rating,1 %>
-        <cite>赞成此人
+        <cite>提升声望
         </cite>
         <em><%= link_to_remote "(#{comment_value(form.resource.keyword_page)}加成)",:url => {:controller => :keyword_pages,:action => :show_hidden}%>
         </em>
@@ -18,7 +18,7 @@
       <cite id="hidden" style="display:none">给别人伤害／加成的数值和你自己的声望成正比。</cite>
     <% end %>
 
-    <p>给你的招式取个名字，句式：v.+"其"+n. <span class="sb_meta">（如：侮辱其人格，断其一指等等）</span>
+    <p>玩一下，给你的招式取个名字：<span class="sb_meta">句式：v.+"其"+n. （如：侮辱其人格，断其一指等等）</span>
     </p>
     <p>
       <%=f.text_field :action_one,:size => 4%>其 <%= f.text_field :action_two,:size => 4 %>
