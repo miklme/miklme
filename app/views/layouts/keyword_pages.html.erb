@@ -59,7 +59,7 @@
                   <% if not @related_keywords.blank? %>
                     <% for related_keyword in @related_keywords %>
                       <li id="keyword_page">
-                        <span class="keyword_page"><%= link_to related_keyword.name,"/keyword_pages/#{KeywordPage.find_by_keyword(related_keyword.name).id}"%></span>
+                        <span class="keyword_page"><%= link_to related_keyword.name,keyword_page_path(related_keyword.keyword_page)%></span>
                       </li>
                     <% end %>
                   <% end %>
