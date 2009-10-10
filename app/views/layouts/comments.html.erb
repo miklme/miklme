@@ -37,7 +37,7 @@
                 <% if not @related_keywords.blank? %>
                   <% for related_keyword in @related_keywords %>
                     <li id="keyword_page">
-                      <%= link_to highlight(related_keyword.name,@keyword_page.keyword),"/keyword_pages/#{KeywordPage.find_by_keyword(related_keyword.name).id}",:popup => true %>
+                      <%= link_to related_keyword.name,"/keyword_pages/#{KeywordPage.find_by_keyword(related_keyword.name).id}" %>
                     </li>
                   <% end %>
                 <% end %>
