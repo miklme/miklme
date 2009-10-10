@@ -42,6 +42,7 @@ class KeywordPagesController < ApplicationController
       @blog_resource=current_user.blog_resources.build
     end
     @keyword_page=KeywordPage.find(params[:id])
+    @resources=@keyword_page.resources
     session[:current_keyword_page_id]=(params[:id])
     @related_keywords=@keyword_page.related_keywords
     @users=@keyword_page.users_by_value.paginate(:page => params[:page],:per_page => 10)
