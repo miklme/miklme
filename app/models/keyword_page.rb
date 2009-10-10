@@ -65,8 +65,7 @@ end
   end
 
   def self.hot_keyword_pages
-    a=self.find(:all).sort_by { |k| k.users.size }
-    a.reverse.first(15)
+    a=self.find(:all,:order => "updated_at DESC",:limit => 15)
   end
 
   def self.many_resources_keyword_pages
