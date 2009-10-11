@@ -6,17 +6,18 @@
   </p>
   <p>你在各个关键字内的声望<strong>互不影响</strong>。</p>
 </div>
-<div class="item_pink">
-  请记住，Mikl.me判断你的声望始终有一点基础：这个关键字需要有多人参与。所以，请<%= link_to_remote "邀请更多人／迅速提升在”#{@keyword_page.keyword}“中声望>>>",:url => {:controller => :comments,:action => :show_hidden} %>
-  <ul id="notice" style="display:none">
-    <li>
-      <% if logged_in? and current_user.keyword_pages.include?(@keyword_page)%>
+<% if logged_in? and @keyword_page.users.include?(current_user) %>
+  <div class="item_pink">
+    请记住，Mikl.me判断你的声望始终有一点基础：这个关键字需要有多人参与。所以，请<%= link_to_remote "邀请更多人／迅速提升在”#{@keyword_page.keyword}“中声望>>>",:url => {:controller => :comments,:action => :show_hidden} %>
+    <ul id="notice" style="display:none">
+      <li>
         <p class="item_pink"><cite>真实朋友:</cite>我<%= current_user.name %>，在玩一个很独特的应用，你也赶快来试试：<%= "http://mikl.me/users/new/#{current_user.id}/#{ValueOrder.find_by_user_id_and_keyword_page_id(current_user.id,@keyword_page.id).id}/realfriend" %></p>
         <p class="item_pink"><cite>匿名网友:</cite>我发现了一个很独特的平台，你快点注册，关注我一下：<%= "http://mikl.me/users/new/#{current_user.id}/#{ValueOrder.find_by_user_id_and_keyword_page_id(current_user.id,@keyword_page.id).id}/commonfriend" %></p>
-      <% end %>
-    </li>
-  </ul>
-</div>
+      </li>
+    </ul>
+  </div>
+<% end %>
+
 
 <div class="sb_ph">
 
