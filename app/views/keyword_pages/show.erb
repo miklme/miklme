@@ -79,7 +79,7 @@
           </div>
         </li>
       <% end %>
-      <%= render  :partial => "blog_resources/hidden_blog_resource",:collection => u.resources.find(:all,:limit => 30,:offset => 3,:order => "created_at DESC",:conditions => {:keyword_page_id => @keyword_page.id})  %>
+      <%= render  :partial => "blog_resources/hidden_blog_resource",:collection => u.resources.find(:all,:limit => 45,:offset => 3,:order => "created_at DESC",:conditions => {:keyword_page_id => @keyword_page.id})  %>
     <% end %>
   </ol>
 </div>
