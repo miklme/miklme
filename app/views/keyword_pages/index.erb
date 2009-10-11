@@ -29,14 +29,15 @@
         <div class="sw_bd">
 
 
-          <% form_tag :controller => :searched_contents,:action => :show do%>
-            <%= text_field 'keyword_page','keyword',:size => 40 %>
+          <%# form_tag :controller => :searched_contents,:action => :show do%>
+            搜索关键字：
+<%= text_field 'keyword_page','keyword',:size => 40 %>
             <div class="auto_complete" id="keyword_page_keyword_auto_complete">
             </div>
             <%= auto_complete_field :keyword_page_keyword,:url => {:action => 'auto_complete_for_keyword_page_keyword'},:after_update_element =>
               "function(element,value){" + remote_function(:url => {:action => :redirect},:with=>"'keyword='+element.value") + "}"%>
-            <%=submit_tag "搜索全部" %>
-          <% end %>
+            <%#=submit_tag "搜索全部" %>
+          <%# end %>
 
         </div>
       </div>

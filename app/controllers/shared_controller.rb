@@ -6,7 +6,4 @@ class SharedController < ApplicationController
   def principles
 
   end
-  def value
-    render :layout => false
-  end
 end
