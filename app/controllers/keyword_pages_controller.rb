@@ -7,6 +7,7 @@ class KeywordPagesController < ApplicationController
     if logged_in?
       @keyword_page=@user.keyword_pages.build
     end
+    @recent_resources=BlogResource.find(:all,:limit => 40,:order => "created_at DESC")
     @hot_keyword_pages=KeywordPage.hot_keyword_pages
     @new_keyword_pages=KeywordPage.find(:all,:order => "created_at DESC",:limit => 15)
     @many_resources_keyword_pages=KeywordPage.many_resources_keyword_pages

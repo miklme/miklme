@@ -29,15 +29,15 @@
         <div class="sw_bd">
 
 
-          <%# form_tag :controller => :searched_contents,:action => :show do%>
-            搜索关键字：
-<%= text_field 'keyword_page','keyword',:size => 40 %>
-            <div class="auto_complete" id="keyword_page_keyword_auto_complete">
-            </div>
-            <%= auto_complete_field :keyword_page_keyword,:url => {:action => 'auto_complete_for_keyword_page_keyword'},:after_update_element =>
-              "function(element,value){" + remote_function(:url => {:action => :redirect},:with=>"'keyword='+element.value") + "}"%>
-            <%#=submit_tag "搜索全部" %>
-          <%# end %>
+<%# form_tag :controller => :searched_contents,:action => :show do%>
+          搜索关键字：
+          <%= text_field 'keyword_page','keyword',:size => 40 %>
+          <div class="auto_complete" id="keyword_page_keyword_auto_complete">
+          </div>
+          <%= auto_complete_field :keyword_page_keyword,:url => {:action => 'auto_complete_for_keyword_page_keyword'},:after_update_element =>
+            "function(element,value){" + remote_function(:url => {:action => :redirect},:with=>"'keyword='+element.value") + "}"%>
+<%#=submit_tag "搜索全部" %>
+<%# end %>
 
         </div>
       </div>
@@ -73,23 +73,38 @@
             </div>
           <% end %>
           <h2 class="item_pink">你在想什么?</h2>
+          <ol class="sb_results" id="wg0">
+            <% for resource in @recent_resources %>
+              <li>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td width="500">
+                          <p>
+                            <%=simple_format(auto_link(resource.content))%>
+                          </p>
+                          <span class="sb_meta">关键字：<strong><%=link_to_page resource.keyword_page %></strong></span>
+                          <br />
+  <%= link_to "回他一招！(共#{resource.comments.size}招)", user_resource_comments_path(resource.owner,resource),:popup => true %>
+                        </td>
+                        <td width="80">
+                        <%= link_to resource.owner.nick_name,user_path(resource.owner) %><div><cite>声望：<%=resource.owner.field_value(resource.keyword_page)%></cite></div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+              </li>
+            <% end %>
+
+          </ol>
           <% if @hot_keyword_pages.present? %>
             <table>
-              <tr><th>最近更新的关键字</th><th>最新创立关键字</th><th>想法最多关键字</th><th>女生最多关键字</th></tr>
+              <tr><th>最近更新的关键字</th><th>想法最多关键字</th><th>女生最多之关键字</th></tr>
               <tr><td>
                   <ol>
                     <% for k in @hot_keyword_pages %>
                       <li>
                         <%=link_to k.keyword,keyword_page_path(k),:popup => true %>
-                      </li>
-                    <% end %>
-                  </ol>
-                </td>
-                <td>
-                  <ol>
-                    <% for k in @new_keyword_pages %>
-                      <li>
-                        <%= link_to k.keyword,keyword_page_path(k),:popup => true %>
                       </li>
                     <% end %>
                   </ol>
