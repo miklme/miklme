@@ -60,14 +60,14 @@
   <ol class="sb_results" id="wg0">
     <% for u in @users %>
       <%= render :partial => "resources/resource",:object => u.resources.find(:first,:order => "created_at DESC",:conditions => {:keyword_page_id => @keyword_page.id}) %>
-      <%= render  :partial => "blog_resources/blog_resource",:collection => u.resources.find(:all,:limit => 2,:offset => 1,:order => "created_at DESC",:conditions => {:keyword_page_id => @keyword_page.id})  %>
-      <% if u.resources.find(:all,:order => "created_at DESC",:conditions => {:keyword_page_id => @keyword_page.id}).size>3 %>
+      <%= render  :partial => "blog_resources/blog_resource",:collection => u.resources.find(:all,:limit => 4,:offset => 1,:order => "created_at DESC",:conditions => {:keyword_page_id => @keyword_page.id})  %>
+      <% if u.resources.find(:all,:order => "created_at DESC",:conditions => {:keyword_page_id => @keyword_page.id}).size>5 %>
         <li>
           <div class="margin_left" id="keyword_page"><%= link_to_remote "展开他的更多'想法'>>",:url => {:action => :more,:id => u.id}%>
           </div>
         </li>
       <% end %>
-      <%= render  :partial => "blog_resources/hidden_blog_resource",:collection => u.resources.find(:all,:limit => 45,:offset => 3,:order => "created_at DESC",:conditions => {:keyword_page_id => @keyword_page.id})  %>
+      <%= render  :partial => "blog_resources/hidden_blog_resource",:collection => u.resources.find(:all,:limit => 45,:offset => 5,:order => "created_at DESC",:conditions => {:keyword_page_id => @keyword_page.id})  %>
     <% end %>
   </ol>
 </div>
