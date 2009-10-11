@@ -88,7 +88,7 @@
   <%= link_to "回他一招！(共#{resource.comments.size}招)", user_resource_comments_path(resource.owner,resource),:popup => true %>
                         </td>
                         <td width="80">
-                        <%= link_to resource.owner.nick_name,user_path(resource.owner) %><div><cite>声望：<%=resource.owner.field_value(resource.keyword_page)%></cite></div>
+                        <%= link_to resource.owner.nick_name,user_path(resource.owner) %><div><cite>关键字声望：<%=resource.owner.field_value(resource.keyword_page)%></cite></div>
                         </td>
                       </tr>
                     </tbody>
