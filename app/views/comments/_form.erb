@@ -3,14 +3,14 @@
     <%= f.error_messages %>
     <% if !form.resource.commenters.include?(current_user) and form.resource.owner.last_ip!=current_user.last_ip%>
       <p>
+        <%=f.radio_button :rating,1 %>
+        <cite>同感
+        </cite>
+        <%=f.radio_button :rating,0%>
+        不表态
         <%=f.radio_button :rating,-1%>
         <strong>反对
         </strong>
-        <%=f.radio_button :rating,0%>
-        不表态
-        <%=f.radio_button :rating,1 %>
-        <cite>同意
-        </cite>
       </p>
     <% end %>
 
