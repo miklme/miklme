@@ -17,10 +17,6 @@
   </tbody>
 </table>
 <div class="dotted"></div>
-<% for comment in @comments %>
-  <%= render :partial => "comment",:object => comment %>
-<% end %>
-
 <% if logged_in? %>
   <table class="item" cellspacing="5">
     <tr>
@@ -33,5 +29,10 @@
     </tr>
   </table>
 <% end %>
+
+<% for comment in @comments %>
+  <%= render :partial => "comment",:object => comment %>
+<% end %>
+
 
 
