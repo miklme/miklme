@@ -94,7 +94,7 @@ class KeywordPagesController < ApplicationController
   
   def more
     k=KeywordPage.find(session[:current_keyword_page_id])
-    resources=User.find(params[:id]).resources.find(:all,:limit => 35,:offset => 3,:order => "created_at DESC",:conditions => {:keyword_page_id => k.id})
+    resources=User.find(params[:id]).resources.find(:all,:limit => 38,:offset => 3,:order => "created_at DESC",:conditions => {:keyword_page_id => k.id})
     ids=resources.map do |r|
       "hidden_"+r.id.to_s
     end
