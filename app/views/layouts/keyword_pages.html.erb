@@ -69,12 +69,6 @@
                     <% end %>
                   <% end %>
                 </ul>
-                <h2>该关键字内用户TOP10</h2>
-                <ol>
-                  <% for u in @user_s.reverse.first(10) %>
-                    <li><%=link_to u.nick_name,user_path(u) %>（<cite><%= u.field_value(@keyword_page) %></cite>）</li>
-                  <% end %>
-                </ol>
               </div>
             </div>
           </div>
