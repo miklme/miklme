@@ -54,7 +54,7 @@
                     <%= k.keyword %> <strong>(已隐藏)</strong><span class="little_white"><%= link_to "恢复",:controller => :keyword_pages,:action => :appear_field,:id => k %></span>
                   <% end %>
                   -->
-                  <cite>声望：<strong><%= k.field_value(@user) %></strong>,排名：(<span class="highlight"><%= ValueOrder.order(@user,KeywordPage.find_by_keyword(k.keyword)) %></span>/<%= k.users.size %>)
+                  <cite>声望：<strong><%= k.field_value(@user) %></strong>,排名：(<span class="highlight"><%= ValueOrder.order(@user,KeywordPage.find_by_keyword(k.keyword)) %></span>/<%= k.active_users.size %>)
                   </cite>
                 </p>
               <% end %>
