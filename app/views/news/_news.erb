@@ -43,7 +43,7 @@
   -->
 <% elsif news.news_type=="be_follow" %>
   <p>
-    我被<%=link_to news.follower.name_or_nick_name(current_user),user_path(news.follower) %>关注，<span class="little_white">相应关键字的声望+3。</span>
+    <%=link_to news.follower.name_or_nick_name(current_user),user_path(news.follower) %>关注了我，我的声望有所增加。
   </p>
   <% elsif  news.news_type=="be_replied_comment"%>
 <p>

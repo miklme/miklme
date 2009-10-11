@@ -1,29 +1,16 @@
 <div class="item_blue">
-  <p>你可以发表和“<%= @keyword_page.keyword %>”相关的想法，Mikl.me会自动计算出你这个想法的价值，进而评定出你在这个关键字内的声望值(用<cite>绿色数字</cite>表示)。</p>
-  <p>在这个页面内，各种和<strong><%=@keyword_page.keyword%></strong>有关的想法都汇集在了一起。声望值(<cite>绿色</cite>数字)是这些想法排序的<strong>唯一依据</strong>。
+  <p>你可以发表和“<%= @keyword_page.keyword %>”相关的想法，Mikl.me会自动计算出你这个想法的价值，进而评定出你在这个关键字内的声望值(用<cite>绿色数字</cite>表示)。
+  </p>
+  <p>在这个页面内，各种和<strong><%=@keyword_page.keyword%></strong>有关的想法都汇集在了一起。声望值是这些想法排序的<strong>唯一依据</strong>。
     声望最高的人和他的想法排列在首位，并以此类推。
   </p>
   <p>你在各个关键字内的声望<strong>互不影响</strong>。</p>
 </div>
-<% if logged_in? and current_user.controlled_keywords.include?(@keyword_page.keyword).present? %>
-  <div class="item_blue">你是老大。因此：
-    <ul>
-      <li>
-        <span>你能够<%=link_to "修改相关关键字",keyword_page_related_keywords_path(@keyword_page),:popup => ['修改相关关键字', 'height=500,width=450'] %>
-        </span>，如果这样，这个关键字的条目就容易被相关关键字的人看到。
-      </li>
-      <li>
-        请注意自己言论的影响，以及出手轻重。
-      </li>
-    </ul>
-  </div>
-<% end %>
-<div class="item_pink"><%= link_to_remote "迅速提升在”#{@keyword_page.keyword}“中声望/邀请好友>>>",:url => {:controller => :comments,:action => :show_hidden} %>
+<div class="item_pink">
+  请记住，Mikl.me判断你的声望始终有一点基础：这个关键字需要有多人参与。所以，请<%= link_to_remote "邀请更多人／迅速提升在”#{@keyword_page.keyword}“中声望>>>",:url => {:controller => :comments,:action => :show_hidden} %>
   <ul id="notice" style="display:none">
     <li>
-      被更多人关注，声望提高。（请勿尝试马甲刷分等行为）。
       <% if logged_in? and current_user.keyword_pages.include?(@keyword_page)%>
-        可以发送这些话邀请你的好友，好友注册后，会自动关注你：
         <p class="item_pink"><cite>真实朋友:</cite>我<%= current_user.name %>，在玩一个很独特的应用，你也赶快来试试：<%= "http://mikl.me/users/new/#{current_user.id}/#{ValueOrder.find_by_user_id_and_keyword_page_id(current_user.id,@keyword_page.id).id}/realfriend" %></p>
         <p class="item_pink"><cite>匿名网友:</cite>我发现了一个很独特的平台，你快点注册，关注我一下：<%= "http://mikl.me/users/new/#{current_user.id}/#{ValueOrder.find_by_user_id_and_keyword_page_id(current_user.id,@keyword_page.id).id}/commonfriend" %></p>
       <% end %>

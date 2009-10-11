@@ -38,7 +38,7 @@ class BeFollowsController < ApplicationController
     if @be_follow.save
       if params[:keyword_page].present? and @user.last_ip!=current_user.last_ip
         k=KeywordPage.find_by_keyword(params[:keyword_page][:keyword])
-        @user.change_value(k,3)
+        @user.change_value(k,1.9)
       end
       @user.save
       n=@user.news.create

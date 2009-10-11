@@ -55,6 +55,10 @@
                 <h2>目前所在关键字</h2>
                 <span id="keyword_page"><%=h @keyword_page.keyword %></span>
                 <h2>相关关键字</h2>
+                <% if logged_in? and current_user.controlled_keywords.include?(@keyword_page.keyword).present? %>
+                  <span><%=link_to "修改",keyword_page_related_keywords_path(@keyword_page),:popup => ['修改相关关键字', 'height=500,width=450'] %>
+                  </span>
+                <% end %>
                 <ul>
                   <% if not @related_keywords.blank? %>
                     <% for related_keyword in @related_keywords %>
