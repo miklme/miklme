@@ -35,9 +35,9 @@ class BlogResourcesController < ApplicationController
       n.resource=@blog_resource
       n.save
       render :update do |page|
-        page.toggle "form"
-        page.insert_html :top,"succeed", "<p>发表成功。按照规则，你刚才的信息排在了第<strong>#{@keyword_page.resources_by_value.index(@blog_resource)+1}</strong>条。需要刷新才能看到</p>"
+        page.replace_html "succeed", "<p>发表成功。按照规则，你刚才的信息排在了第<strong>#{@keyword_page.resources_by_value.index(@blog_resource)+1}</strong>条。</p>"
         page.visual_effect(:appear,"succeed",:duration => 2)
+        page.insert_html :top,"wg0",:partial => "resources/resource",:object => @blog_resource
       end
     else
       redirect_to :back

@@ -7,7 +7,7 @@
     <ul>
       <% if current_user.id==header.id %>
         <li>
-          <%= link_to_unless_current "个人主页",user_path(header) %>
+          <%= link_to_unless_current "回复我的",user_path(header) %>
         </li>
         <li>
           <%= link_to_unless_current "好友近况",user_news_index_path(current_user) %>
