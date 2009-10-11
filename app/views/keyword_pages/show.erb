@@ -1,5 +1,5 @@
 <div class="item_blue">
-  <p><strong>你可以发表和“<%= @keyword_page.keyword %>”相关的想法，Mikl.me会自动计算出你这个想法的价值，进而评定出你在这个关键字内的声望值</strong>(用<cite>绿色数字</cite>表示)。</p>
+  <p>你可以发表和“<%= @keyword_page.keyword %>”相关的想法，Mikl.me会自动计算出你这个想法的价值，进而评定出你在这个关键字内的声望值(用<cite>绿色数字</cite>表示)。</p>
   <p>在这个页面内，各种和<strong><%=@keyword_page.keyword%></strong>有关的想法都汇集在了一起。声望值(<cite>绿色</cite>数字)是这些想法排序的<strong>唯一依据</strong>。
     声望最高的人和他的想法排列在首位，并以此类推。
   </p>
@@ -49,7 +49,8 @@
       <p><%= f.text_area :content,:cols => 45,:rows => 4 %>
         <!--
         靠，先不用这个了
-        <li>
+        <li>git gui
+        ddddddddgt
     <%#= fckeditor_textarea(:blog_resource,:content,:toolbarSet => "Easy",:width => '85%',:height => '150px') %>
         </li>
         -->

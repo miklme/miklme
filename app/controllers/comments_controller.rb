@@ -83,7 +83,7 @@ class CommentsController < ApplicationController
   end
   def show_hidden
     render :update do |page|
-      page.visual_effect :toggle_appear,"notice"
+      page.toggle "notice"
     end
   end
   private
