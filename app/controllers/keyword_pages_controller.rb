@@ -60,9 +60,11 @@ class KeywordPagesController < ApplicationController
       @blog_resource=current_user.blog_resources.build
     end
     @keyword_page=KeywordPage.find(params[:id])
-    @resources=@keyword_page.resources_by_time(params[:page])
+    @resources=@keyword_page.resources.find(:all,:limit => 40,:order => "created_at DESC")
     @related_keywords=@keyword_page.related_keywords
-    render :action => :show
+    render :update do |page|
+      page.replace_html "results",:partial => "by_time"
+    end
   end
 
   def hide_field

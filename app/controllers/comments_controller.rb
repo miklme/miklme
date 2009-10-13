@@ -46,7 +46,7 @@ class CommentsController < ApplicationController
         elsif current_user.field_value(@resource.keyword_page)>=0 and params[:comment][:rating]=="-1"
           flash[:notice]="差评成功，对方降低了一定声望，不过你也有所降低。"
           u.change_value(@resource.keyword_page,-@resource.keyword_page.comment_value(current_user))
-          current_user.change_value(@resource.keyword_page,-@resource.keyword_page.comment_value(current_user)/2)
+          current_user.change_value(@resource.keyword_page,-@resource.keyword_page.comment_value(current_user)/3)
           current_user.save
         elsif params[:comment][:rating]=="1"
           flash[:notice]="回应成功"

@@ -46,12 +46,9 @@
 </div>
 <div id="succeed" style="display:none">
 </div>
-<!--
-基本没用了
 <span class="sb_pag">
 <%= link_to "默认排序",keyword_page_path(@keyword_page) %>
-<%= link_to "按发表时间排序",by_time_keyword_page_path(@keyword_page)%></span>
--->
+<%= link_to_remote "查看最新想法",:url => {:action => :by_time,:id => @keyword_page}%></span>
 <div id="results">
 
   <ol class="sb_results" id="wg0">
@@ -67,7 +64,8 @@
       <%= render  :partial => "blog_resources/hidden_blog_resource",:collection => u.resources.find(:all,:limit => 45,:offset => 5,:order => "created_at DESC",:conditions => {:keyword_page_id => @keyword_page.id})  %>
     <% end %>
   </ol>
+  <div class="sb_pag">
+    <%= will_paginate @users, :prev_label => '上一页', :next_label => '下一页' %>
+  </div>
 </div>
-<div class="sb_pag">
-  <%= will_paginate @users, :prev_label => '上一页', :next_label => '下一页' %>
-</div>
+
