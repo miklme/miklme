@@ -27,7 +27,7 @@
 
 <div id="form">
   <% if logged_in? %>
-    关于<strong><%= @keyword_page.keyword %></strong>，你能想到什么?Mikl.me拥有这样一种科技：它将根据你想法的价值<cite>智能地</cite>评估出你在这个关键字内的声望。
+    关于<strong><%= @keyword_page.keyword %></strong>，你能想到什么?Mikl.me拥有这样一种科技：它将根据你想法的价值<strong>智能地</strong>评估出你在这个关键字内的声望。
 
     <% remote_form_for [@user,@blog_resource] do |f|%>
       <strong><%= f.error_messages %>
