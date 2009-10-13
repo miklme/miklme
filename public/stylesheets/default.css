@@ -41,7 +41,7 @@ a:hover {
 #text { width:520px;line-height:22px }
 #text_wide {width:700px;line-height:22px}
 #text p { margin:7px 0 7px 0;
-    border-bottom-style: solid;
+    border-bottom-style: dashed;
     border-bottom-width: 1px;
     border-bottom-color: #4a4a4a;
     padding-bottom:5px
