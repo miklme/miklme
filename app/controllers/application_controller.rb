@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
     if logged_in?
       if current_user.name.blank? or current_user.nick_name.blank?
         redirect_to edit_user_path(current_user)
-        flash[:notice]="为了更好的体验Mikl.me的服务，请您完善个人资料。"
+        flash[:notice]="为了更好的体验Michael.me的服务，请您完善个人资料。"
       end
     end
   end

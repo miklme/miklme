@@ -6,4 +6,8 @@ class SharedController < ApplicationController
   def principles
 
   end
+
+  def xie_yi
+    
+  end
 end

@@ -6,7 +6,7 @@
 </div>
 <% if logged_in? and @keyword_page.users.include?(current_user) %>
   <div class="item_pink">
-    请记住，Mikl.me判断你的声望始终有一点基础：这个关键字需要有多人参与。所以，请<%= link_to_remote "邀请更多人>>>",:url => {:controller => :comments,:action => :show_hidden} %>
+    请记住，Michael判断你的声望始终有一点基础：这个关键字需要有多人参与。所以，请<%= link_to_remote "邀请更多人>>>",:url => {:controller => :comments,:action => :show_hidden} %>
     <ul id="notice" style="display:none">
       <li>
         <p class="item_pink"><cite>真实朋友:</cite>我<%= current_user.name %>，在玩一个很独特的应用，你也赶快来试试：<%= "http://mikl.me/users/new/#{current_user.id}/#{ValueOrder.find_by_user_id_and_keyword_page_id(current_user.id,@keyword_page.id).id}/realfriend" %></p>
@@ -27,7 +27,7 @@
 
 <div id="form">
   <% if logged_in? %>
-    关于<strong><%= @keyword_page.keyword %></strong>，你能想到什么?Mikl.me拥有这样一种科技：它将根据你想法的价值<strong>智能地</strong>评估出你在这个关键字内的声望。
+    关于<strong><%= @keyword_page.keyword %></strong>，你能想到什么?Michael拥有这样一种科技：它将根据你想法的价值<strong>智能地</strong>评估出你在这个关键字内的声望。
 
     <% remote_form_for [@user,@blog_resource] do |f|%>
       <strong><%= f.error_messages %>

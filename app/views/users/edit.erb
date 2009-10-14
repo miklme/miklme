@@ -13,7 +13,7 @@
         <% else %>
           <td><%= h @user.name %></td>
         <% end %>
-        <td>真实姓名不会以<strong>任何形式</strong>泄露(请相信Mikl.me)，除非你同意。通过真实姓名，朋友才会找到你。<strong>不可更改。</strong></td>
+        <td>真实姓名不会以<strong>任何形式</strong>泄露(请相信Michael)，除非你同意。通过真实姓名，朋友才会找到你。<strong>不可更改。</strong></td>
       </tr>
       <tr><td><%= f.label :sex,"性别*" %></td><td><%= f.radio_button :sex,1%>男<%= f.radio_button :sex,0 %>女</td></tr>
       <tr><td><%= f.label :birthday,'生日*' %></td><td><%= f.date_select :birthday,:start_year => 1970,:end_year => Time.now.year-8%></td><td>你的生日对于熟人或许很重要...</td></tr>
