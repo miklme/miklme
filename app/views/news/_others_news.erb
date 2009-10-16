@@ -10,7 +10,7 @@
   </p>
 <% elsif others_news.news_type=="comment"%>
   <p>
-    <%= link_to others_news.owner.nick_name,user_path(others_news.owner) %>
+    <%= link_to others_news.owner.name_or_nick_name(current_user),user_path(others_news.owner) %>
     <% if others_news.comment.action_one.present? and others_news.comment.action_two.present? %>
       <%= others_news.comment.action_one %>了<%=link_to others_news.resource.owner.name_or_nick_name(current_user),user_path(others_news.resource.owner)%>的<%=others_news.comment.action_two%>并
     <% end %>
@@ -22,7 +22,7 @@
   </p>
 <% elsif others_news.news_type=="replied_comment"%>
   <p>
-    <%= link_to others_news.owner.nick_name,user_path(others_news.owner) %>
+    <%= link_to others_news.owner.name_or_nick_name(current_user),user_path(others_news.owner) %>
     <% if others_news.comment.action_one.present? and others_news.comment.action_two.present? %>
       <%= others_news.comment.action_one %>了<%=link_to others_news.comment.parent_comment.owner.name_or_nick_name(current_user),user_path(others_news.resource.owner)%>的<%=others_news.comment.action_two%>并
     <% end %>

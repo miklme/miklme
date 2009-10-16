@@ -1,0 +1,35 @@
+
+
+<% if logged_in? %>
+  <ul>
+    <li>
+      <%= link_to "Michael",keyword_pages_path %>
+    </li>
+    <li>
+      <%= link_to_me %>
+    </li>
+    <% if not logged_in? %>
+      <li>
+        <%= link_to "登录",new_session_path %>
+      </li>
+    <% end %>
+    <li>
+      <%= link_to "注册新用户",new_user_path %>
+    </li>
+  </ul>
+<% else %>
+  <ul>
+    <li>
+      <%= link_to "Michael",keyword_pages_path %>
+    </li>
+    <li>
+      <%= link_to_me %>
+    </li>
+    <li>
+      <%= link_to "登录",new_session_path %>
+    </li>
+    <li>
+      <%= link_to "注册新用户",new_user_path %>
+    </li>
+  </ul>
+<% end %>

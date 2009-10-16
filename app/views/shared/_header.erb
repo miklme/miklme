@@ -10,7 +10,7 @@
           <%= link_to_unless_current "个人主页",user_path(header) %>
         </li>
         <li>
-          <%= link_to_unless_current "好友近况",user_news_index_path(current_user) %>
+          <%= link_to_unless_current "我的好友",user_news_index_path(current_user) %>
         </li>
         <li><%= link_to_unless_current"好友们的关键字",user_controlled_keywords_path(header) %>
         </li>

@@ -14,10 +14,10 @@ module ApplicationHelper
 
   def link_to_me
     if logged_in?
-      link_to "我的空间",user_path(current_user)
+      link_to "个人主页",user_path(current_user)
     else
       flash[:notice]='请登录以继续...'
-      link_to "我的空间",new_session_path
+      link_to "个人主页",new_session_path
     end
   end
   def link_to_resource(resource)
