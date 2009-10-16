@@ -18,9 +18,6 @@
   <div id="main">
     <div id="fixed">
       <div id="content">
-        <%if logged_in? -%>
-          <%= link_to '登出', logout_path %>
-        <%end%>
         <%if flash[:notice]%>
           <p id="registered_notice"><%=flash[:notice]%></p>
         <%end%>

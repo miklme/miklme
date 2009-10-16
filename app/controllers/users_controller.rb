@@ -62,7 +62,7 @@ class UsersController < ApplicationController
   def show
     @user=User.find(params[:id])
     @news=News.self_news_for_others(@user,params[:page])
-    @variable_title="我的新鲜事"
+    @variable_title="我的所有..."
     render :layout => "resources"
   end
   def search

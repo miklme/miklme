@@ -101,6 +101,7 @@ cite a{text-decoration:underline}
     float:left;
     width:100%;
 }
+
 #sw_content {
     min-height:344px;
     position:static;
@@ -466,7 +467,10 @@ a.sb_pagP, a.sb_pagN {
     color:#FFFFFF;
 }
 #sw_hdr .sw_tb a:hover{
-    color:AliceBlue
+    background:none;
+    text-decoration:underline
+
+
 }
 .sw_tb a, .sw_tb span {
     margin:0 0.5em;
@@ -1191,5 +1195,6 @@ position:relative;
 }
 .side{
     font-size:12px;
-    line-height: 24px;
+    line-height: 18px;
+    margin-bottom:9px
 }

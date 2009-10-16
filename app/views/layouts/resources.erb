@@ -8,6 +8,7 @@
     <%= stylesheet_link_tag 'default' %>
   </head>
   <body>
+    <%= render :partial => "shared/header",:object => @user %>
     <div id="main">
       <div id="content">
         <% if flash[:notice] or flash[:error] %>
@@ -19,28 +20,10 @@
           <div id="sidebar_top"></div>
           <div id="sidebar_text">
             <h2>
-              <% if not @user==current_user %>
-                <% if @user.sex==1 %>
-                  他
-                <% elsif @user.sex==0%>
-                  她
-                <% end %>
-              <% else %>
-                我
-              <% end %>
-              的个人信息：</h2>
+              个人信息：</h2>
             <p><%= render :partial => "shared/user_profile_full",:object => @user %></p>
             <h2>
-              <% if not @user==current_user %>
-                <% if @user.sex==1 %>
-                  他
-                <% elsif @user.sex==0%>
-                  她
-                <% end %>
-              <% else %>
-                我
-              <% end %>
-              在行的关键字：</h2>
+              擅长的关键字：</h2>
             <div>
               <% for k in @user.appear_keyword_pages %>
                 <p>
@@ -58,7 +41,6 @@
                 </p>
               <% end %>
             </div>
-            <h2><%= link_to "查找用户>>>",search_user_new_user_follow_path(@user) %></h2>
           </div>
           <div id="sidebar_bottom"></div>
         </div>

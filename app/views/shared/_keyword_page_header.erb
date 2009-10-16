@@ -5,19 +5,27 @@
     <li>
       <%= link_to "Michael",keyword_pages_path %>
     </li>
+
+  </ul>
+  <ul class="sw_right">
+    <li>
+      <%= link_to "查找用户>>>",search_user_new_user_follow_path(current_user) %>
+    </li>
+        |
     <li>
       <%= link_to "登出",session_path,:method => :delete %>
     </li>
+    |
     <li>
       <%= link_to "注册新用户",new_user_path %>
     </li>
   </ul>
-  <ul>
+  <ul class="sc_hl1">
     <li>
       <%= link_to "个人主页",user_path(current_user) %>
     </li>
     <li>
-      <%= link_to "好友近况",user_news_index_path(current_user) %>
+      <%= link_to "我的好友",user_news_index_path(current_user) %>
     </li>
     <li><%= link_to_unless_current"好友们的关键字",user_controlled_keywords_path(current_user) %>
     </li>
@@ -25,14 +33,19 @@
       <%= link_to_unless_current "个人设置",edit_user_path(current_user) %>
     </li>
   </ul>
+
 <% else %>
   <ul>
     <li>
       <%= link_to "Michael",keyword_pages_path %>
     </li>
+
+  </ul>
+  <ul class="sw_right">
     <li>
       <%= link_to "登录",new_session_path %>
     </li>
+    |
     <li>
       <%= link_to "注册新用户",new_user_path %>
     </li>

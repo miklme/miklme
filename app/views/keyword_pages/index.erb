@@ -5,22 +5,11 @@
   <div id="sw_page">
     <div id="sw_hdr">
       <div class="sw_tb">
-        <ul>
-          <li>
-            <%= link_to "Michael",keyword_pages_path %>
-          </li>
-          <li>
-            <%= link_to_me %>
-          </li>
-          <% if not logged_in? %>
-            <li>
-              <%= link_to "登录",new_session_path %>
-            </li>
-          <% end %>
-          <li>
-            <%= link_to "注册新用户",new_user_path %>
-          </li>
-        </ul>
+        <% if logged_in? %>
+          <%= render :partial => "shared/keyword_page_header",:object => current_user %>
+        <% else %>
+          <%= render :partial => "shared/keyword_page_header"%>
+        <% end %>
       </div>
       <div class="sw_tbb"></div>
       <div class="sw_box">
@@ -76,23 +65,23 @@
           <ol class="sb_results" id="wg0">
             <% for resource in @recent_resources %>
               <li>
-                  <table>
-                    <tbody>
-                      <tr>
-                        <td width="500">
-                          <p>
-                            <%=simple_format(auto_link(resource.content))%>
-                          </p>
-                          <span class="sb_meta">关键字：<strong><%=link_to_page resource.keyword_page %></strong></span>
-                          <br />
-  <%= link_to "回他一招！(共#{resource.comments.size}招)", user_resource_comments_path(resource.owner,resource),:popup => true %>
-                        </td>
-                        <td width="80">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td width="500">
+                        <p>
+                          <%=simple_format(auto_link(resource.content))%>
+                        </p>
+                        <span class="sb_meta">关键字：<strong><%=link_to_page resource.keyword_page %></strong></span>
+                        <br />
+                        <%= link_to "回他一招！(共#{resource.comments.size}招)", user_resource_comments_path(resource.owner,resource),:popup => true %>
+                      </td>
+                      <td width="80">
                         <%= link_to resource.owner.nick_name,user_path(resource.owner) %><div><cite>关键字声望：<%=resource.owner.field_value(resource.keyword_page)%></cite></div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </li>
             <% end %>
 
