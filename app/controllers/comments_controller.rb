@@ -41,24 +41,23 @@ class CommentsController < ApplicationController
     if @comment.save
       u=User.find(@comment.resource.owner)
       flash[:notice]="回应成功。"
-
-      #      if not u==current_user
-      current_v=current_user.field_value(@resource.keyword_page)
-      author_v=@resource.owner.field_value(@resource.keyword_page)
-      if current_v< author_v and params[:comment][:rating]=="-1"
-        u.change_value @resource.keyword_page,-@resource.keyword_page.lower_higher_bad(@resource)
-        u.save
-      elsif current_v>= author_v and params[:comment][:rating]=="-1"
-        u.change_value(@resource.keyword_page,-@resource.keyword_page.higher_lower_bad(@resource.owner))
-        u.save
-      elsif params[:comment][:rating]=="1" and  current_v>author_v
-        u.change_value @resource.keyword_page,@resource.keyword_page.higher_lower_good(current_user,@resource.owner)
-        u.save
-      elsif params[:comment][:rating]=="1" and  current_v<=author_v
-        u.change_value @resource.keyword_page,@resource.keyword_page.lower_higher_good(@resource)
-        u.save
+      if not u==current_user
+        current_v=current_user.field_value(@resource.keyword_page)
+        author_v=@resource.owner.field_value(@resource.keyword_page)
+        if current_v< author_v and params[:comment][:rating]=="-1"
+          u.change_value @resource.keyword_page,-@resource.keyword_page.lower_higher_bad(@resource)
+          u.save
+        elsif current_v>= author_v and params[:comment][:rating]=="-1"
+          u.change_value(@resource.keyword_page,-@resource.keyword_page.higher_lower_bad(@resource.owner))
+          u.save
+        elsif params[:comment][:rating]=="1" and  current_v>author_v
+          u.change_value @resource.keyword_page,@resource.keyword_page.higher_lower_good(current_user,@resource.owner)
+          u.save
+        elsif params[:comment][:rating]=="1" and  current_v<=author_v
+          u.change_value @resource.keyword_page,@resource.keyword_page.lower_higher_good(@resource)
+          u.save
+        end
       end
-      #      end
       n=@resource.owner.news.create
       n.news_type="be_comment"
       n.comment=@comment
