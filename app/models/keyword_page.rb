@@ -18,7 +18,6 @@ class KeywordPage < ActiveRecord::Base
   has_many :related_keywords
   has_many :resources
   has_many :blog_resources,:conditions => "type=BlogResource"
-  has_many :link_url_resources,:conditions => "type=LinkUrlResource"
   has_many :value_orders
   has_many :users,:through => :value_orders,:source => :user
   has_one :top_user,:through => :value_orders,:source => :user,:order => "value DESC"
