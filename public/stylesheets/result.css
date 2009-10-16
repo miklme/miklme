@@ -947,6 +947,7 @@ input.sw_q_nrw {
 #content {
     margin:0 0 0 -15px;
     max-width:666px;
+    padding:0 150px 0 0;
 }
 #results_area {
     float:left;
@@ -1187,4 +1188,8 @@ input {
 bottom:22px;
 float:right;
 position:relative;
+}
+.side{
+    font-size:12px;
+    line-height: 24px;
 }

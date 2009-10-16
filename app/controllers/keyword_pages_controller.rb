@@ -40,6 +40,7 @@ class KeywordPagesController < ApplicationController
   def show
     if logged_in?
       @user=current_user
+      @news=News.list_self_news_2(@user)
       @blog_resource=current_user.blog_resources.build
     end
     @keyword_page=KeywordPage.find(params[:id])
