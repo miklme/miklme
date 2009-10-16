@@ -1,36 +1,15 @@
 <div id="header">
   <div id="logo">
     <%= link_to "Michael",keyword_pages_path %>
-    <%= link_to_me %>
   </div>
   <div id="menu">
     <ul>
-      <% if current_user.id==header.id %>
-        <li>
-          <%= link_to_unless_current "个人主页",user_path(header) %>
-        </li>
-        <li>
-          <%= link_to_unless_current "我的好友",user_news_index_path(current_user) %>
-        </li>
-        <li><%= link_to_unless_current"好友们的关键字",user_controlled_keywords_path(header) %>
-        </li>
-      <% else %>
         <li>
           <%= link_to_unless_current "#{header.nick_name}的个人主页",user_path(header) %>
         </li>
         <li>
           <%= link_to_unless_current "#{header.nick_name}的好友",user_news_index_path(header) %>
         </li>
-      <% end %>
-
-      <% if header.id==current_user.id %>
-        <li>
-          <%= link_to_unless_current "个人设置",edit_user_path(current_user) %>
-        </li>
-        <li>
-          <%= link_to '登出', session_path,:method => :delete %>
-        </li>
       </ul>
-    <% end %>
   </div>
 </div>
