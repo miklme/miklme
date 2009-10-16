@@ -37,47 +37,58 @@ class KeywordPage < ActiveRecord::Base
     v.value
   end
 
-  def comment_value(current_user)
-    current_user.field_value(self)/10+0.5
+  def higher_lower_good(user1,user2)
+    (user1.field_value(self)-user2.field_value(self))/2
   end
+
+  def lower_higher_good(r)
+    0.15*r.good_commenters.size
+  end
+
+  def lower_higher_bad(r)
+    0.15*r.bad_commenters.size
+  end
+
+  def higher_lower_bad(user)
+    (user.field_value(self)/3).abs
+end
+def resources_by_value
+  ss=self.resources.sort_by do |resource|
+    [self.value_orders.find_by_user_id(resource.owner).value,resource.created_at]
+  end
+  ss.reverse
+end
+def top_resource
+  ss=self.resources.sort_by do |resource|
+    [self.value_orders.find_by_user_id(resource.owner).value,resource.created_at]
+  end
+  ss.reverse.first
+end
   
-  def resources_by_value
-    ss=self.resources.sort_by do |resource|
-      [self.value_orders.find_by_user_id(resource.owner).value,resource.created_at]
-    end
-    ss.reverse
-  end
-  def top_resource
-    ss=self.resources.sort_by do |resource|
-      [self.value_orders.find_by_user_id(resource.owner).value,resource.created_at]
-    end
-    ss.reverse.first
-  end
-  
-  def resources_by_time(page)
-    self.resources.paginate(:all,:order => "resources.created_at DESC",:per_page => 10,:page => page)
-  end
+def resources_by_time(page)
+  self.resources.paginate(:all,:order => "resources.created_at DESC",:per_page => 10,:page => page)
+end
 
-  def self.hot_keyword_pages
-    a=self.find(:all,:order => "updated_at DESC",:limit => 15)
-  end
+def self.hot_keyword_pages
+  a=self.find(:all,:order => "updated_at DESC",:limit => 15)
+end
 
-  def self.many_resources_keyword_pages
-    a=self.find(:all).sort_by {|k| k.resources.size}
-    a.reverse.first(15)
-  end
+def self.many_resources_keyword_pages
+  a=self.find(:all).sort_by {|k| k.resources.size}
+  a.reverse.first(15)
+end
 
-  def self.girls_pages
-    pages=self.find(:all).map do |k|
-      girls_amount=k.users.find(:all,:conditions => "sex=0").size
-      total_amount=k.users.find(:all).size+1
-      if (girls_amount/total_amount)>0.7
-        k
-      else
-        nil
-      end
+def self.girls_pages
+  pages=self.find(:all).map do |k|
+    girls_amount=k.users.find(:all,:conditions => "sex=0").size
+    total_amount=k.users.find(:all).size+1
+    if (girls_amount/total_amount)>0.7
+      k
+    else
+      nil
     end
-    pages=pages.compact.sort_by {|p| p.users.size}
-    pages.reverse
   end
+  pages=pages.compact.sort_by {|p| p.users.size}
+  pages.reverse
+end
 end

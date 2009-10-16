@@ -32,7 +32,7 @@ class CommentsController < ApplicationController
   # POST /comments.xml
   def create
     @comment = @resource.comments.build(params[:comment])
-    if not current_user.keyword_pages.include?(@keyword_page)
+    if not current_user.keyword_pages.include?(@resource.keyword_page)
       v=ValueOrder.find_by_keyword_page_id_and_user_id(@resource.keyword_page.id,current_user.id)
       v.actived=true
       v.save
@@ -40,20 +40,25 @@ class CommentsController < ApplicationController
     @comment.owner=current_user
     if @comment.save
       u=User.find(@comment.resource.owner)
-      if not u==current_user
-        if current_user.field_value(@resource.keyword_page)<0 and params[:comment][:rating]=="-1"
-          flash[:notice]="这个关键字内你的声望低于0了，暂时不能作出这种评价。"
-        elsif current_user.field_value(@resource.keyword_page)>=0 and params[:comment][:rating]=="-1"
-          flash[:notice]="差评成功，对方降低了一定声望，不过你也有所降低。"
-          u.change_value(@resource.keyword_page,-@resource.keyword_page.comment_value(current_user))
-          current_user.change_value(@resource.keyword_page,-@resource.keyword_page.comment_value(current_user)/3)
-          current_user.save
-        elsif params[:comment][:rating]=="1"
-          flash[:notice]="回应成功"
-          u.change_value @resource.keyword_page,@resource.keyword_page.comment_value(current_user)
-          u.save
-        end
+      flash[:notice]="回应成功。"
+
+      #      if not u==current_user
+      current_v=current_user.field_value(@resource.keyword_page)
+      author_v=@resource.owner.field_value(@resource.keyword_page)
+      if current_v< author_v and params[:comment][:rating]=="-1"
+        u.change_value @resource.keyword_page,-@resource.keyword_page.lower_higher_bad(@resource)
+        u.save
+      elsif current_v>= author_v and params[:comment][:rating]=="-1"
+        u.change_value(@resource.keyword_page,-@resource.keyword_page.higher_lower_bad(@resource.owner))
+        u.save
+      elsif params[:comment][:rating]=="1" and  current_v>author_v
+        u.change_value @resource.keyword_page,@resource.keyword_page.higher_lower_good(current_user,@resource.owner)
+        u.save
+      elsif params[:comment][:rating]=="1" and  current_v<=author_v
+        u.change_value @resource.keyword_page,@resource.keyword_page.lower_higher_good(@resource)
+        u.save
       end
+      #      end
       n=@resource.owner.news.create
       n.news_type="be_comment"
       n.comment=@comment
