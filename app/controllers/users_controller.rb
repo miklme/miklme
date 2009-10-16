@@ -61,8 +61,7 @@ class UsersController < ApplicationController
 
   def show
     @user=User.find(params[:id])
-    @news=News.list_self_news(@user,params[:page])
-    @self_news_for_others=News.self_news_for_others(@user,params[:page])
+    @news=News.self_news_for_others(@user,params[:page])
     @variable_title="我的新鲜事"
     render :layout => "resources"
   end

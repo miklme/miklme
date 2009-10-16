@@ -9,14 +9,6 @@ class News < ActiveRecord::Base
     User.find(self.follower_id)
   end
 
-  def self.list_self_news(current_user,page)
-    paginate_by_user_id current_user.id,
-      :per_page => 25,
-      :page => page,
-      :order => "created_at DESC",
-      :conditions => "news_type='be_follow' or news_type='be_comment' or news_type='be_replied_comment'"
-  end
-
   def self.list_self_news_2(current_user)
     find_all_by_user_id current_user.id,
       :order => "created_at DESC",
