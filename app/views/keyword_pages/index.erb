@@ -74,7 +74,7 @@
                         </p>
                         <span class="sb_meta">关键字：<strong><%=link_to_page resource.keyword_page %></strong></span>
                         <br />
-                        <%= link_to "回他一招！", user_resource_comments_path(resource.owner,resource),:popup => true %>
+                        <%= link_to "回应>>>", user_resource_comments_path(resource.owner,resource),:popup => true %>
                     <span class="amount">(<%=resource.comments.size  %>)</span>
                       </td>
                       <td width="80">

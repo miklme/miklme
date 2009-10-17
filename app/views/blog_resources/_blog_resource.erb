@@ -6,7 +6,7 @@
         <%=auto_link(blog_resource.content)%>
       </p>
       <br />
-      <%= link_to  "回他一招！", user_resource_comments_path(blog_resource.owner,blog_resource),:popup => true %><span class="amount">(<%=blog_resource.comments.size  %>)</span>
+      <%= link_to  "回应>>>", user_resource_comments_path(blog_resource.owner,blog_resource),:popup => true %><span class="amount">(<%=blog_resource.comments.size  %>)</span>
 
     </div>
   </li>

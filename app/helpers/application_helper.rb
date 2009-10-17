@@ -38,7 +38,7 @@ module ApplicationHelper
 
 
   def reply_him(resource)
-    link_to "回他一招！", user_resource_comments_path(resource.owner,resource),:popup => true
+    link_to "回应>>>", user_resource_comments_path(resource.owner,resource),:popup => true
 
   end
 
