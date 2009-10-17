@@ -31,6 +31,11 @@ a:hover{
     background-color:#003399;
     color:white
 }
+a:active{
+    background:#FF9933 none repeat scroll 0 0;
+    color:#FFFFFF;
+    text-decoration:none;
+}
 h3 a:visited {
     color:#663399
 }
@@ -342,7 +347,7 @@ a.sc_browseEntry:hover span {
     background-position:-102px -26px;
     text-decoration:none;
 }
- 
+
 .sb_results li{
     list-style-type:none;
     margin:0;
@@ -1189,9 +1194,9 @@ input {
     margin-left:80px
 }
 .more {
-bottom:22px;
-float:right;
-position:relative;
+    bottom:22px;
+    float:right;
+    position:relative;
 }
 .side{
     font-size:12px;

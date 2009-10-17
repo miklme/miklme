@@ -61,32 +61,34 @@
               <% end %>
             </div>
           <% end %>
-          <h2 class="item_pink">你在想什么?</h2>
-          <ol class="sb_results" id="wg0">
-            <% for resource in @recent_resources %>
-              <li>
-                <table>
-                  <tbody>
-                    <tr>
-                      <td width="500">
-                        <p>
-                          <%=simple_format(auto_link(resource.content))%>
-                        </p>
-                        <span class="sb_meta">关键字：<strong><%=link_to_page resource.keyword_page %></strong></span>
-                        <br />
-                        <%= link_to "回应>>>", user_resource_comments_path(resource.owner,resource),:popup => true %>
-                    <span class="amount">(<%=resource.comments.size  %>)</span>
-                      </td>
-                      <td width="80">
-                        <%= link_to resource.owner.nick_name,user_path(resource.owner) %><div><cite>关键字声望：<%=resource.owner.field_value(resource.keyword_page)%></cite></div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </li>
-            <% end %>
+          <% if @recent_resources.present? %>
+            <h2 class="item_pink">你在想什么?</h2>
+            <ol class="sb_results" id="wg0">
+              <% for resource in @recent_resources %>
+                <li>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td width="500">
+                          <p>
+                            <%=simple_format(auto_link(resource.content))%>
+                          </p>
+                          <span class="sb_meta">关键字：<strong><%=link_to_page resource.keyword_page %></strong></span>
+                          <br />
+                          <%= link_to "回应>>>", user_resource_comments_path(resource.owner,resource),:popup => true %>
+                          <span class="amount">(<%=resource.comments.size  %>)</span>
+                        </td>
+                        <td width="80">
+                          <%= link_to resource.owner.nick_name,user_path(resource.owner) %><div><cite>关键字声望：<%=resource.owner.field_value(resource.keyword_page)%></cite></div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </li>
+              <% end %>
 
-          </ol>
+            </ol>
+          <% end %>
           <% if @hot_keyword_pages.present? %>
             <table>
               <tr><th>最近更新的关键字</th><th>热门关键字</th><th>女生最多之关键字</th></tr>
