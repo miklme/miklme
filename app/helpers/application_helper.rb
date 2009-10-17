@@ -29,7 +29,7 @@ module ApplicationHelper
   end
   
   def link_to_page(keyword_page)
-    link_to keyword_page.keyword,keyword_page_path(keyword_page),:popup => true
+    link_to keyword_page.keyword,keyword_page_path(keyword_page)
   end
 
   def comment_value(keyword_page)
