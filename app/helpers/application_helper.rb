@@ -35,4 +35,11 @@ module ApplicationHelper
   def comment_value(keyword_page)
     current_user.field_value(keyword_page)/10+0.5
   end
+
+
+  def reply_him(resource)
+    link_to "回他一招！", user_resource_comments_path(resource.owner,resource),:popup => true
+
+  end
+
 end

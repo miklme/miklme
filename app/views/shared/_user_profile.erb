@@ -2,13 +2,13 @@
   <% if current_user.followings.include?(user_profile)  %>
     <div>
       <div><%= link_to user_profile.nick_name,user_path(user_profile) %></div>
-      <strong>（我已关注）</strong>
+      <strong>我已关注</strong>
       <cite><%= "总声望：#{user_profile.total_value}" %></cite>
     </div>
   <% elsif current_user.followers.include?(user_profile)%>
     <div>
       <div><%= link_to user_profile.nick_name,user_path(user_profile) %></div>
-      <strong>（关注我的人）</strong>
+      <strong>关注我的人</strong>
       <cite><%= "总声望：#{user_profile.total_value}" %></cite>
     </div>
   <% elsif user_profile==current_user%>

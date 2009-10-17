@@ -52,6 +52,7 @@
 <div id="results">
 
   <ol class="sb_results" id="wg0">
+    <div id="new"></div>
     <% for u in @users %>
       <%= render :partial => "resources/resource",:object => u.resources.find(:first,:order => "created_at DESC",:conditions => {:keyword_page_id => @keyword_page.id}) %>
       <%= render  :partial => "blog_resources/blog_resource",:collection => u.resources.find(:all,:limit => 4,:offset => 1,:order => "created_at DESC",:conditions => {:keyword_page_id => @keyword_page.id})  %>

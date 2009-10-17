@@ -17,7 +17,7 @@
                       <%=simple_format(auto_link(resource.content))%>
                     </p>
                     <span class="sb_meta">关键字：<strong><%= resource.keyword_page.keyword %></strong></span>
-                    <%= link_to "回他一招！(共#{resource.comments.size}条)", user_resource_comments_path(resource.owner,resource),:popup => true %>
+                    <%= link_to "回他一招！", user_resource_comments_path(resource.owner,resource),:popup => true %><span class="amount">(<%=resource.comments.size  %>)</span>
                   </td>
                   <td width="80"><div><%= link_to resource.owner.nick_name,user_path(resource.owner) %></div>
                     <cite><%= link_to_value_help %><%=resource.owner.total_value %></cite>

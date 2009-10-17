@@ -194,7 +194,7 @@ div#sw_nav li {
 }
 .item_pink{
     padding: 6px 12px;
-    border: 1px solid #d3d3d3;
+    border: 1px solid pink;
     background:#FFF6EE;
     vertical-align: text-top;
 
@@ -1084,7 +1084,7 @@ input.sw_q_nrw {
     margin-left:-10px;
 }
 strong {
-    color:#F92D09;
+    color:Rosybrown;
     font-weight:normal;
 }
 cite strong {
@@ -1197,4 +1197,7 @@ position:relative;
     font-size:12px;
     line-height: 18px;
     margin-bottom:9px
+}
+.amount{
+    color:#FF9966
 }

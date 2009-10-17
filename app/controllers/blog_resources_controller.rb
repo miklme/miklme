@@ -37,7 +37,8 @@ class BlogResourcesController < ApplicationController
       render :update do |page|
         page.replace_html "succeed", "<p>发表成功。按照规则，你的想法会根据你的声望排序。</p>"
         page.visual_effect(:appear,"succeed",:duration => 2)
-        page.insert_html :top,"wg0",:partial => "resources/resource",:object => @blog_resource
+        page.insert_html :top,"new",:partial => "resources/resource",:object => @blog_resource
+        page.visual_effect(:pulsate, "new",:duration => 4)
       end
     else
       redirect_to :back

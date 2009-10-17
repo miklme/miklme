@@ -9,8 +9,7 @@
         <%=auto_link(resource.content)%>
       </p>
       <br />
-      <%= link_to  "回他一招>>>(共被回#{resource.comments.size}招)", user_resource_comments_path(resource.owner,resource),:popup => true %>
-
+      <%= link_to "回他一招！", user_resource_comments_path(resource.owner,resource),:popup => true %><span class="amount">(<%=resource.comments.size  %>)</span>
     </div>
   </li>
 <% end %>
