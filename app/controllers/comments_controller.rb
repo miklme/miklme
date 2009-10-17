@@ -41,7 +41,7 @@ class CommentsController < ApplicationController
     if @comment.save
       u=User.find(@comment.resource.owner)
       flash[:notice]="回应成功。"
-      if  !u==current_user and @resource.commenters.rindex(current_user)==1 and @resource.owner.last_ip!=current_user.last_ip
+      if  u!=current_user and @resource.commenters.rindex(current_user)==0 and @resource.owner.last_ip!=current_user.last_ip
         current_v=current_user.field_value(@resource.keyword_page)
         author_v=@resource.owner.field_value(@resource.keyword_page)
         if current_v< author_v and params[:comment][:rating]=="-1"
