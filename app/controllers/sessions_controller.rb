@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
 
   def new
     if logged_in?
-      redirect_to user_path(current_user)
+      redirect_to keyword_pages_path
     end
     @user=User.new
   end
