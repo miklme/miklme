@@ -107,8 +107,14 @@ table .item{
     border-top-color: #a0a0a0;
 }
 .little_white{
-    font-size:12px
-
+    font-size:13px;
+}
+.big_white a{
+    color:white
+}
+.big_white a:hover{
+    background-color:#F26513;
+    text-decoration:none
 }
 #sidebar .keyword_page a{
 color:#FFA615;
