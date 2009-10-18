@@ -86,7 +86,6 @@ class KeywordPagesController < ApplicationController
     end
   end
 
-  
   def more
     k=KeywordPage.find(params[:keyword_page_id])
     resources=User.find(params[:id]).resources.find(:all,:limit => 38,:offset => 5,:order => "created_at DESC",:conditions => {:keyword_page_id => k.id})
@@ -98,6 +97,10 @@ class KeywordPagesController < ApplicationController
         page.visual_effect :toggle_blind,i
       end
     end
+  end
+
+  def show_keywords
+    
   end
 
 end
