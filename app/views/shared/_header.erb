@@ -7,7 +7,7 @@
     <div id="menu">
       <ul>
         <li>
-          <%= link_to_unless_current "#{header.nick_name}的个人主页",user_path(header) %>
+          <%= link_to_unless_current "#{header.nick_name}的主要信息",user_path(header) %>
         </li>
         <li>
           <%= link_to_unless_current "#{header.nick_name}的好友",user_news_index_path(header) %>

@@ -16,6 +16,34 @@
             <%= flash[:error] or flash[:notice]%>
           </div>
         <% end %>
+        <div id="sidebar">
+          <div id="sidebar_top"></div>
+          <div id="sidebar_text">
+            <h2>
+              个人信息：</h2>
+            <p><%= render :partial => "shared/user_profile_full",:object => @user %></p>
+            <h2>
+              擅长的关键字：</h2>
+            <div>
+              <% for k in @user.appear_keyword_pages %>
+                <p>
+                  <span class="keyword_page"><%=link_to k.keyword,keyword_page_path(KeywordPage.find_by_keyword(k.keyword)) %></span>
+                  <!--
+                  隐藏关键字的功能，暂时不打算使用
+                  <% if @user.value_orders.find_by_keyword_page_id(k).hidden==false%>
+                    <strong><%=link_to k.keyword,keyword_page_path(k) %></strong><span class="little_white"><%= link_to "  隐藏  ",:controller => :keyword_pages,:action => :hide_field,:id => k%></span>
+                  <% else %>
+                    <%= k.keyword %> <strong>(已隐藏)</strong><span class="little_white"><%= link_to "恢复",:controller => :keyword_pages,:action => :appear_field,:id => k %></span>
+                  <% end %>
+                  -->
+                  <cite>声望：<strong><%= k.field_value(@user) %></strong>,排名：(<span class="highlight"><%= ValueOrder.order(@user,KeywordPage.find_by_keyword(k.keyword)) %></span>/<%= k.active_users.size %>)
+                  </cite>
+                </p>
+              <% end %>
+            </div>
+          </div>
+          <div id="sidebar_bottom"></div>
+        </div>
         
         <%= @content_for_layout %>
       </div>

@@ -42,11 +42,13 @@ class KeywordPage < ActiveRecord::Base
   end
 
   def lower_higher_good(r)
-    0.15*r.good_commenters.size
+    s=r.good_commenters.size
+    0.15*(s**2-(s-1)**2)
   end
 
   def lower_higher_bad(r)
-    0.15*r.bad_commenters.size
+    b=r.bad_commenters.size
+    0.15*(b**2-(b-1)**2)
   end
 
   def higher_lower_bad(user)

@@ -12,14 +12,6 @@ module ApplicationHelper
     link_to "总声望"
   end
 
-  def link_to_me
-    if logged_in?
-      link_to "个人主页",user_path(current_user)
-    else
-      flash[:notice]='请登录以继续...'
-      link_to "个人主页",new_session_path
-    end
-  end
   def link_to_resource(resource)
     if resource.class.to_s=="LinkUrlResource"
       link_to resource.description_or_title,resource.link_url,:popup => true,:class => "title"
