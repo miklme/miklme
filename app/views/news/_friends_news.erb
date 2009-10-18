@@ -5,10 +5,11 @@
 
 <% if f.news_type=="blog_resource" %>
   <p>
-    <%= link_to "#{f.owner.name_or_nick_name(current_user)}",user_path(f.resource.owner) -%>发表高论
+    <%= link_to "#{f.owner.name_or_nick_name(current_user)}",user_path(f.resource.owner) -%>发表高见
     <cite><%=auto_link(f.resource.content) %></cite>
+    <span class="sb_meta">关键字： <%=link_to_page f.resource.keyword_page %></span>
+
     <em><%= link_to "#{f.resource.comments.size}回应>>>",user_resource_comments_path(f.resource.owner,f.resource) %></em>
-    （关键字： <%=link_to_page f.resource.keyword_page %>）
   </p>
 <% elsif f.news_type=="comment"%>
   <p>
@@ -22,7 +23,7 @@
     </cite>
     <em><%= link_to "#{f.resource.comments.size}回应>>>",user_resource_comments_path(f.resource.owner,f.resource) %></em>
   </p>
-  <% elsif f.news_type=="replied_comment" %>
+<% elsif f.news_type=="replied_comment" %>
   <p>
     <%= link_to f.owner.nick_name,user_path(f.owner) %>
     <% if f.comment.action_one.present? and f.comment.action_two.present? %>

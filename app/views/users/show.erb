@@ -1,6 +1,5 @@
 <div id="new_resource">
-  <h1><%= @variable_title %>
-  </h1>
+
 </div>
   <%= render :partial => "news/others_news",:collection => @news %>
   <%= will_paginate @news, :prev_label => '上一页', :next_label => '下一页' %>

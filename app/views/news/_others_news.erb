@@ -3,10 +3,10 @@
 
 <% if others_news.news_type=="blog_resource" %>
   <p>
-    <%= link_to "#{others_news.owner.name_or_nick_name(current_user)}",user_path(others_news.resource.owner) -%>发表高论
+    <%= link_to "#{others_news.owner.name_or_nick_name(current_user)}",user_path(others_news.resource.owner) -%>发表高见
     <cite><%= auto_link others_news.resource.content%></cite>
+    <span class="right">关键字： <%=link_to_page others_news.resource.keyword_page %></span>
     <em><%= link_to "#{others_news.resource.comments.size}回应>>>",user_resource_comments_path(others_news.resource.owner,others_news.resource) %></em>
-    （关键字： <%=link_to_page others_news.resource.keyword_page %>）
   </p>
 <% elsif others_news.news_type=="comment"%>
   <p>

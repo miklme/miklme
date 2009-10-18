@@ -17,9 +17,17 @@ cite{
     display:block
 }
 em,em a{color:white;
-        font-size:12px
+        font-size:12px;
+        font-style:normal
 }
-#logo a:hover {color:#BED7E6}
+em a:hover{
+    background:#F26513;
+    text-decoration:none
+
+}
+#logo a:hover {
+    text-decoration:underline
+}
 a:hover {
     text-decoration: underline;
 }
@@ -123,4 +131,7 @@ font-weight:bold;
 #sidebar .keyword_page a:hover{
     text-decoration:underline;
         background:none
+}
+.sb_meta {float:right;
+    color: #828282;
 }

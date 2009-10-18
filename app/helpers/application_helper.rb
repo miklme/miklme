@@ -9,7 +9,7 @@ module ApplicationHelper
   end
 
   def link_to_value_help
-    link_to "总声望"
+    "总声望"
   end
 
   def link_to_resource(resource)
