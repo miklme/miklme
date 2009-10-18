@@ -198,7 +198,7 @@ div#sw_nav li {
     border: 1px solid pink;
     background:#FFF6EE;
     vertical-align: text-top;
-margin-bottom:8px
+    margin-bottom:8px
 }
 .sw_menu {
     -moz-background-clip:border;
@@ -1190,20 +1190,33 @@ input {
 .amount{
     color:#FF9966
 }
-.title_1{
-font-size:24px;
-color:#494949;
-font-weight:bold
+.title_1 a{
+    font-size:24px;
+    color:#494949;
+    font-weight:bold
 }
-.title_2{
-color:#F76120;
-font-size:15px;
-margin-top:15px;
-font-weight:bold
+.title_1 a:hover{
+    color:black;
+    background:none
+}
+.title_2 a{
+    color:LightSalmon;
+    font-size:15px;
+    margin-top:15px;
+    font-weight:bold
+}
+.title_2 a:hover{
+    color:#F76120;
+    background:none
 
 }
-.title_3{
-margin-top:15px;
-font-size:20px;
-color:#006600;
+.title_3 a{
+    margin-top:15px;
+    font-size:20px;
+    color:MediumSeaGreen;
+}
+.title_3 a:hover{
+        background:none;
+        color:#006600
+
 }
