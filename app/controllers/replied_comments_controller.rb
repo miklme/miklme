@@ -1,4 +1,5 @@
 class RepliedCommentsController < ApplicationController
+  before_filter :find_parent,:only => :create
   def new
     @comment=Comment.find(params[:id])
     @resource=@comment.resource
@@ -10,9 +11,6 @@ class RepliedCommentsController < ApplicationController
   end
 
   def create
-    @user=User.find(params[:user_id])
-    @resource=Resource.find(params[:blog_resource_id])
-    @comment=Comment.find(params[:comment_id])
     @replied_comment=@resource.comments.build(params[:comment])
     @replied_comment.parent_comment=@comment
     @replied_comment.owner=current_user
@@ -27,11 +25,17 @@ class RepliedCommentsController < ApplicationController
       n_2.resource=@resource
       n_2.comment=@replied_comment
       n_2.save
-      redirect_to user_resource_comments_path(@resource.owner,@resource)
+      render :update do |page|
+        page.replace "form",:partial => "comments/comment",:object => @replied_comment
+      end
     else
       render :action => :new
     end
   end
-
+  private
+  def find_parent
+    @resource=Resource.find(params[:resource_id])
+    @comment=Comment.find(params[:comment_id])
+  end
 
 end
