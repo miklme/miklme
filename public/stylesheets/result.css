@@ -24,9 +24,7 @@ a {
     color:#336699;
     text-decoration:none;
 }
-a:visited {
-    color:#336699;
-}
+
 a:hover{
     background-color:#003399;
     color:white
@@ -36,9 +34,6 @@ a:active{
     background:#FF9933 none repeat scroll 0 0;
     color:#FFFFFF;
     text-decoration:none;
-}
-h3 a:visited {
-    color:#663399
 }
 h1, h2, h3, h4, h5, h6 {
     color:#666666;
@@ -63,7 +58,7 @@ h1 a {
 h2 {
     margin-top:5px;
 }
-h2, h2 a, h2 a:visited {
+h2, h2 a {
     color:#F76120;
 }
 h2 span {
@@ -809,9 +804,6 @@ input.sw_q_nrw {
     font-weight:200;
     text-decoration:underline;
 }
-.sb_adsW a:visited h3, .sb_adsN a:visited h3 {
-    color:#663399;
-}
 .sb_adsN h3 {
     display:block;
 }
@@ -927,9 +919,6 @@ input.sw_q_nrw {
     font-size:1em;
     margin:0;
     padding:4px 0 4px 10px;
-}
-#sw_uclr .sw_uclm li a:visited {
-    color:#0033CC;
 }
 #sw_uclr .sw_uclm li a:hover {
     -moz-background-clip:border;
