@@ -1,26 +1,24 @@
 <% form_for  ([form.resource.owner,:resource,form]) do |f| %>
   <div class="item_pink">
     <%= f.error_messages %>
-    <p>
-      <%=f.radio_button :rating,1 %>
-      <cite>同感
-      </cite>
-      <%=f.radio_button :rating,0%>
-      不表态
-      <%=f.radio_button :rating,-1%>
-      <strong>反对
-      </strong>
-    </p>
-    <p>玩一下，给你的动作取个名字：<span class="sb_meta">句式：v.+"其"+n. （如：侮辱其人格，断其一指等等）</span>
+    <p>玩一下，给你的动作取个名字：<span class="sb_meta">（如：侮辱其人格，断其一指等等）</span>
     </p>
     <p>
       <%=f.text_field :action_one,:size => 4%>其 <%= f.text_field :action_two,:size => 4 %>
     </p>
   </div>
-
-  回应内容
   <p>
-    <%= f.text_area :content,:size => "48x4"%>
+    <%=f.radio_button :rating,1 %>
+    <cite>同感
+    </cite>
+    <%=f.radio_button :rating,0%>
+    不表态
+    <%=f.radio_button :rating,-1%>
+    <strong>反对
+    </strong>
+  </p>
+  <p>
+    <%= f.text_area :content,:size => "48x3"%>
   </p>
   <p>
     <%= f.submit '就这样'%>

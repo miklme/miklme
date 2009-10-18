@@ -1,4 +1,7 @@
-<table class="item" cellspacing="5">
+
+<% x="comment_#{comment.id}" %>
+<% y="comments_for_#{comment.id}" %>
+<table class="item" cellspacing="5" id="<%=x%>">
   <tr>
     <td width="60px">
       <%= render :partial => "shared/field_profile",:locals => {:user => comment.owner,:keyword_page => comment.resource.keyword_page} %>
@@ -12,8 +15,8 @@
           <%="#{comment.resource.owner.nick_name}的#{comment.action_two}被#{comment.owner.nick_name}#{comment.action_one}了"  %>
         <% end %>
       </div>
-      <span><%= link_to "回应>>>",new_user_resource_comment_replied_comment_path(@user,@resource,comment) %></span>
-      <div id="replied_comments">
+      <span><%= link_to_remote "回应>>>",:url => {:controller => :replied_comments,:action => :new,:id => comment} %></span>
+      <div id="<%=y%>">
         <% for replied_comment in comment.replied_comments %>
           <%= render :partial  => "comment",:object => replied_comment %>
         <% end %>

@@ -1,17 +1,26 @@
-<% remote_form_for  ([@replied_comment.resource.owner,@replied_comment.resource,@replied_comment]) do |f| %>
-<div class="item_pink">
-<p>玩一下，给你的动作取个名字，句式：v.+"其"+n. <span class="sb_meta">（如：侮辱其人格，断其一指等等）</span>
-  </p>
-
-  <p>
-    <%=f.text_field :action_one,:size => 4%>其 <%= f.text_field :action_two,:size => 4 %>
-  </p>
-</div>
-  回应内容
-  <p>
-    <%= f.text_area :content,:size => "48x4"%>
-  </p>
-  <p>
-    <%= f.submit '就这样'%>
-  </p>
-<% end %>
+<table class="item" cellspacing="5" >
+  <tr>
+    <td width="60px">
+      <%= render :partial => "shared/field_profile",:locals => {:user => current_user,:keyword_page => form.resource.keyword_page} %>
+    </td>
+    <td width="520px">
+      <p><% remote_form_for  ([form.resource.owner,form.resource,form]),:url => {:controller => "replied_comments",:action => "create"} do |f| %>
+        <div class="item_pink">
+          <p>玩一下，给你的动作取个名字<span class="sb_meta">（如：侮辱其人格，断其一指等等）</span>
+          </p>
+          <p>
+            <%=f.text_field :action_one,:size => 4%>其 <%= f.text_field :action_two,:size => 4 %>
+          </p>
+        </div>
+        回应内容
+        <p>
+          <%= f.text_area :content,:size => "48x3"%>
+        </p>
+        <p>
+          <%= f.submit '就这样'%>
+        </p>
+      <% end %>
+      </p>
+    </td>
+  </tr>
+</table>

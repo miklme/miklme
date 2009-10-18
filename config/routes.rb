@@ -13,7 +13,7 @@ ActionController::Routing::Routes.draw do |map|
         comment.resources :replied_comments
       end
     end
-    user.resources :blog_resources
+    user.resources :blog_resources,:has_many => :comments
     user.resources :news
   end
   map.resource :session

@@ -1,10 +1,18 @@
 class RepliedCommentsController < ApplicationController
-  before_filter :find_user_and_resource_and_comment
   def new
+    @comment=Comment.find(params[:id])
+    @resource=@comment.resource
     @replied_comment=@resource.comments.build
+    x="comments_for_#{params[:id]}"
+    render :update do |page|
+      page.insert_html :top,"#{x}",:partial => "form",:object => @replied_comment
+    end
   end
 
   def create
+    @user=User.find(params[:user_id])
+    @resource=Resource.find(params[:blog_resource_id])
+    @comment=Comment.find(params[:comment_id])
     @replied_comment=@resource.comments.build(params[:comment])
     @replied_comment.parent_comment=@comment
     @replied_comment.owner=current_user
@@ -25,10 +33,5 @@ class RepliedCommentsController < ApplicationController
     end
   end
 
-  private
-  def find_user_and_resource_and_comment
-    @user=User.find(params[:user_id])
-    @resource=Resource.find(params[:resource_id])
-    @comment=Comment.find(params[:comment_id])
-  end
+
 end
