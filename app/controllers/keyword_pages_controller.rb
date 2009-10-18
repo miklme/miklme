@@ -6,17 +6,10 @@ class KeywordPagesController < ApplicationController
     if logged_in?
       @keyword_page=@user.keyword_pages.build
     end
-    @recent_resources=BlogResource.find(:all,:limit => 40,:order => "created_at DESC")
+    @recent_resources=BlogResource.find(:all,:limit => 32,:order => "created_at DESC")
     @hot_keyword_pages=KeywordPage.hot_keyword_pages
-    @new_keyword_pages=KeywordPage.find(:all,:order => "created_at DESC",:limit => 15)
     @many_resources_keyword_pages=KeywordPage.many_resources_keyword_pages
     @girls_pages=KeywordPage.girls_pages
-    @news=Resource.blog_and_link_url_resources.recent
-    gs=KeywordPage.find(:all).map do |k|
-      k.top_resource
-    end
-    gs=gs.compact.sort_by {|g| g.created_at}
-    @goods=gs.reverse.first(15)
     render :layout => "related_keywords"
   end
   

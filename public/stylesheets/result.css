@@ -31,6 +31,7 @@ a:hover{
     background-color:#003399;
     color:white
 }
+
 a:active{
     background:#FF9933 none repeat scroll 0 0;
     color:#FFFFFF;
@@ -40,7 +41,7 @@ h3 a:visited {
     color:#663399
 }
 h1, h2, h3, h4, h5, h6 {
-    color:#525051;
+    color:#666666;
     font-size:small;
     font-weight:200;
     margin:0;
@@ -60,7 +61,7 @@ h1 a {
     color:#FF6600;
 }
 h2 {
-    margin:0 0 0.62em;
+    margin-top:5px;
 }
 h2, h2 a, h2 a:visited {
     color:#F76120;
@@ -254,9 +255,7 @@ div#sw_nav li {
     border:1px solid #ABD9E9;
     padding:3px 9px;
 }
-#sw_refine li a:visited {
-    color:#0033CC;
-}
+
 #sw_refine h2 a, #sw_refine h2 a:hover {
     color:#898994;
     text-decoration:none;
@@ -382,7 +381,7 @@ a.sc_browseEntry:hover span {
     padding:0.3em 0.7em;
     text-align:center;
 }
-.sb_pag a, .sb_pag a:visited {
+.sb_pag a {
     color:#F76120;
 }
 a.sb_pagP, a.sb_pagN {
@@ -390,9 +389,7 @@ a.sb_pagP, a.sb_pagN {
     color:#0033CC;
     padding:0.38em 0.5em;
 }
-a.sb_pagP:visited, a.sb_pagN:visited {
-    color:#663399;
-}
+
 .sb_pag a:hover, a.sb_pagS {
     -moz-background-clip:border;
     -moz-background-inline-policy:continuous;
@@ -1061,9 +1058,7 @@ input.sw_q_nrw {
 .sb_tlst, .sb_tlst h3 a {
     display:inline-block;
 }
-#results h2 {
-    margin:0 0 0.19em;
-}
+
 .sc_seemore {
     margin-top:-0.56em;
     padding-bottom:1.37em;
@@ -1089,7 +1084,7 @@ input.sw_q_nrw {
     margin-left:-10px;
 }
 strong {
-    color:Rosybrown;
+    color:LightCoral;
     font-weight:normal;
 }
 cite strong {
@@ -1205,4 +1200,21 @@ input {
 }
 .amount{
     color:#FF9966
+}
+.title_1{
+font-size:24px;
+color:#494949;
+font-weight:bold
+}
+.title_2{
+color:#F76120;
+font-size:15px;
+margin-top:15px;
+font-weight:bold
+
+}
+.title_3{
+margin-top:15px;
+font-size:20px;
+color:#006600;
 }

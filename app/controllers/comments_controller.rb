@@ -85,11 +85,7 @@ class CommentsController < ApplicationController
       format.xml  { head :ok }
     end
   end
-  def show_hidden
-    render :update do |page|
-      page.toggle "notice"
-    end
-  end
+  
   private
 
   def load_user_and_resource

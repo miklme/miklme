@@ -27,6 +27,11 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def show_hidden
+    render :update do |page|
+      page.toggle "hidden"
+    end
+  end
   private
   def load_user
       @user=User.find(params[:user_id])
