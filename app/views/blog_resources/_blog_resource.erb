@@ -1,4 +1,3 @@
-<% if blog_resource.class.to_s=="BlogResource" %>
   <li>
     <span class="sb_meta"><%=distance_of_time_in_words(Time.now, blog_resource.created_at, true)%></span>
     <div class="margin_left">
@@ -10,4 +9,3 @@
 
     </div>
   </li>
-<% end %>

@@ -19,6 +19,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resource :session
   map.resources :keyword_pages do |keyword_page|
     keyword_page.resources :related_keywords
+    keyword_page.resources :resources
+    keyword_page.resources :blog_resources
   end
   map.activate '/activate/:activation_code', :controller => 'users', :action => 'activate'
   map.root :controller=>'sessions',:action=>'new'

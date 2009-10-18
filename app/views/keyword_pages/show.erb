@@ -29,14 +29,13 @@
   <% if logged_in? %>
     关于<strong><%= @keyword_page.keyword %></strong>，你能想到什么?Michael拥有这样一种科技：它将根据你想法的价值<strong>智能地</strong>评估出你在这个关键字内的声望。
 
-    <% remote_form_for [@user,@blog_resource] do |f|%>
+    <% remote_form_for [@keyword_page,@blog_resource] do |f|%>
       <strong><%= f.error_messages %>
       </strong>
       <p><%= f.text_area :content,:cols => 45,:rows => 4 %>
         <!--
         靠，先不用这个了
-        <li>git gui
-        ddddddddgt
+        <li>
     <%#= fckeditor_textarea(:blog_resource,:content,:toolbarSet => "Easy",:width => '85%',:height => '150px') %>
         </li>
         -->
@@ -58,7 +57,7 @@
       <%= render  :partial => "blog_resources/blog_resource",:collection => u.resources.find(:all,:limit => 4,:offset => 1,:order => "created_at DESC",:conditions => {:keyword_page_id => @keyword_page.id})  %>
       <% if u.resources.find(:all,:order => "created_at DESC",:conditions => {:keyword_page_id => @keyword_page.id}).size>5 %>
         <li>
-          <div class="margin_left" id="keyword_page"><%= link_to_remote "展开他的更多'想法'>>",:url => {:action => :more,:id => u.id}%>
+          <div class="margin_left" id="keyword_page"><%= link_to_remote "展开他的更多'想法'>>",:url => {:action => :more,:id => u.id,:keyword_page_id => @keyword_page.id}%>
           </div>
         </li>
       <% end %>

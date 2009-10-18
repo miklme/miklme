@@ -1,6 +1,5 @@
 class KeywordPagesController < ApplicationController
-  before_filter :load_user,:only => [:destroy,:create,:update,:edit]
-  skip_before_filter :login_required,:only => [:more,:show,:by_time,:index,:auto_complete_for_keyword_page_keyword,:redirect]
+  skip_before_filter :login_required,:except => [:create]
   skip_before_filter :check_profile_status
   def index
     @user=current_user
@@ -26,7 +25,7 @@ class KeywordPagesController < ApplicationController
     if @keyword_page.save
       v=ValueOrder.new
       v.keyword_page=@keyword_page
-      v.user=@user
+      v.user=current_user
       v.actived=true
       v.save
       flash[:notice]="创建成功。在这个关键字内你的初始声望为0"
@@ -38,16 +37,15 @@ class KeywordPagesController < ApplicationController
    
   
   def show
+    @keyword_page=KeywordPage.find(params[:id])
     if logged_in?
       @user=current_user
       @news=News.list_self_news_2(@user)
-      @blog_resource=current_user.blog_resources.build
+      @blog_resource=@keyword_page.blog_resources.build
     end
-    @keyword_page=KeywordPage.find(params[:id])
     @resources=@keyword_page.resources
-    session[:current_keyword_page_id]=(params[:id])
     ids=@resources.map do |r|
-    r.user_id
+      r.user_id
     end
     ids.uniq!
     @user_s=User.find(ids).sort_by { |u| [u.field_value(@keyword_page),u.created_at]}
@@ -97,7 +95,7 @@ class KeywordPagesController < ApplicationController
 
   
   def more
-    k=KeywordPage.find(session[:current_keyword_page_id])
+    k=KeywordPage.find(params[:keyword_page_id])
     resources=User.find(params[:id]).resources.find(:all,:limit => 38,:offset => 5,:order => "created_at DESC",:conditions => {:keyword_page_id => k.id})
     ids=resources.map do |r|
       "hidden_"+r.id.to_s

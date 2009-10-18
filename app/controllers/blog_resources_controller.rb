@@ -1,12 +1,7 @@
 class BlogResourcesController < ApplicationController
   skip_before_filter :login_required,:only => [:show]
-  before_filter :load_user,:except => [:say]
   def show
     @blog_resource=Resource.find(params[:id])
-  end
-
-  def edit
-    @blog_resource=BlogResource.find(params[:id])
   end
 
   def index
@@ -14,10 +9,10 @@ class BlogResourcesController < ApplicationController
   end
 
   def create
-    @keyword_page=KeywordPage.find(session[:current_keyword_page_id])
-    @blog_resource=@user.blog_resources.build(params[:blog_resource])
+    @keyword_page=KeywordPage.find(params[:keyword_page_id])
+    @blog_resource=@keyword_page.blog_resources.build(params[:blog_resource])
     @blog_resource.authority=true
-    @blog_resource.keyword_page=@keyword_page
+    @blog_resource.owner=current_user
     if @blog_resource.save
       @keyword_page.updated_at==Time.now
       @keyword_page.save
@@ -28,7 +23,6 @@ class BlogResourcesController < ApplicationController
         v.actived=true
         v.save
       end
-      flash[:keyword_page]=@blog_resource.keyword_page.id
       n=current_user.news.create
       n.news_type="blog_resource"
       n.owner=current_user
@@ -42,17 +36,6 @@ class BlogResourcesController < ApplicationController
       end
     else
       redirect_to :back
-    end
-  end
-
-  def update
-    @blog_resource=@user.blog_resources.find(params[:id])
-    @blog_resource.update_attributes(params[:blog_resource])
-    if @blog_resource.save
-      flash[:notice]="修改成功。"
-      redirect_to keyword_page_path(@blog_resource.keyword_page)
-    else
-      render :action => :edit,:layout => "blog_resources"
     end
   end
 
