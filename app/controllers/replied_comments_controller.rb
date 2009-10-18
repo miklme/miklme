@@ -27,6 +27,7 @@ class RepliedCommentsController < ApplicationController
       n_2.save
       render :update do |page|
         page.replace "form",:partial => "comments/comment",:object => @replied_comment
+        page.visual_effect :pulsate,"comment_#{@replied_comment.id}",:duration => 3
       end
     else
       render :action => :new
