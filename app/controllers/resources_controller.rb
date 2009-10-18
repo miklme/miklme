@@ -6,10 +6,6 @@ class ResourcesController < ApplicationController
     @resources=Resource.find_by_user(@user,params[:page])
   end
 
-  # GET /resources/1/edit
-  def edit
-    @resource = @user.resources.find(params[:id])
-  end
 
   # DELETE /resources/1
   # DELETE /resources/1.xml
