@@ -4,10 +4,6 @@ class BlogResourcesController < ApplicationController
     @blog_resource=Resource.find(params[:id])
   end
 
-  def index
-    @blog_resources=@user.blog_resources
-  end
-
   def create
     @keyword_page=KeywordPage.find(params[:keyword_page_id])
     @blog_resource=@keyword_page.blog_resources.build(params[:blog_resource])

@@ -54,15 +54,15 @@ class KeywordPagesController < ApplicationController
   end
 
   def by_time
+    @keyword_page=KeywordPage.find(params[:id])
     if logged_in?
       @user=current_user
-      @blog_resource=current_user.blog_resources.build
+      @blog_resource=@keyword_page.blog_resources.build
     end
-    @keyword_page=KeywordPage.find(params[:id])
     @resources=@keyword_page.resources.find(:all,:limit => 40,:order => "created_at DESC")
     @related_keywords=@keyword_page.related_keywords
     render :update do |page|
-      page.replace_html "results",:partial => "by_time"
+      page.replace "wg0",:partial => "by_time"
     end
   end
 
