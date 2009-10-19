@@ -12,14 +12,18 @@
         <%=h comment.created_at.advance(:hours => 8).to_s(:db)  %>
         <% if comment.action_one.present? %>
           ,
-          <%="#{comment.resource.owner.nick_name}的#{comment.action_two}被#{comment.owner.nick_name}#{comment.action_one}了"  %>
+          <% if comment.parent_comment.present? %>
+            <%="#{comment.owner.nick_name}#{comment.action_one}了#{comment.parent_comment.owner.nick_name}#{comment.action_two}"  %>
+        <% else %>
+          <%="#{comment.owner.nick_name}#{comment.action_one}了#{comment.resource.owner.nick_name}#{comment.action_two}"  %>
         <% end %>
+      <% end %>
       </div>
       <span><%= link_to_remote "回应>>>",:url => {:controller => :replied_comments,:action => :new,:id => comment} %></span>
       <div id="<%=y%>">
-        <% for replied_comment in comment.replied_comments %>
-          <%= render :partial  => "comment",:object => replied_comment %>
-        <% end %>
+      <% for replied_comment in comment.replied_comments %>
+        <%= render :partial  => "comment",:object => replied_comment %>
+      <% end %>
       </div>
     </td>
   </tr>
