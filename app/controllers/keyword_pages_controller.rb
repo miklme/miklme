@@ -5,6 +5,9 @@ class KeywordPagesController < ApplicationController
     @recent_keyword_pages=KeywordPage.recent_keyword_pages
     @many_resources_keyword_pages=KeywordPage.many_resources_keyword_pages
     @girls_pages=KeywordPage.girls_pages
+    us=User.find(:all).sort_by {|u| u.total_value}
+    us.reverse!.first(10)
+    @top_users=us
     @user=current_user
     if logged_in?
       @keyword_page=@user.keyword_pages.build
@@ -96,19 +99,25 @@ class KeywordPagesController < ApplicationController
     end
   end
 
+  def value
+    render :update do |page|
+      page.visual_effect :grow,"top"
+      page.visual_effect :shrink,"top",:delay => 5.8
+    end
+    end
 
-  #不打算使用这个功能了
-  #  def hide_field
-  #    v=ValueOrder.find_by_user_id_and_keyword_page_id(current_user.id,params[:id])
-  #    v.hidden=true
-  #    v.save
-  #    redirect_to :back
-  #  end
-  #
-  #  def appear_field
-  #    v=ValueOrder.find_by_user_id_and_keyword_page_id(current_user.id,params[:id])
-  #    v.hidden=false
-  #    v.save
-  #    redirect_to :back
-  #  end
-end
+    #不打算使用这个功能了
+    #  def hide_field
+    #    v=ValueOrder.find_by_user_id_and_keyword_page_id(current_user.id,params[:id])
+    #    v.hidden=true
+    #    v.save
+    #    redirect_to :back
+    #  end
+    #
+    #  def appear_field
+    #    v=ValueOrder.find_by_user_id_and_keyword_page_id(current_user.id,params[:id])
+    #    v.hidden=false
+    #    v.save
+    #    redirect_to :back
+    #  end
+  end

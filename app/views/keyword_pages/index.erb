@@ -45,6 +45,9 @@
               <div id="many" style="display:none">
                 <%=render :partial => "many_resources_keyword_pages" %>
               </div>
+              <div id="top" style="display:none">
+                <%=render :partial => "top_users" %>
+              </div>
             </div>
           </div>
         </div>
@@ -76,7 +79,7 @@
               <% end %>
             </div>
           <% end %>
-          <h2 class="title_3"><%= link_to "声望" %></h2>
+          <h2 class="title_3"><%= link_to_remote "声望",:url => {:action => :value}%></h2>
           <h3>不同的关键字内你的声望不同，各个声望互不影响，在语文方面的蹩脚想法不影响你在数学上的崇高地位，不用担心。</h3>
           <% if @recent_resources.present? %>
             <h2 class="item_pink">大家在想什么?</h2>
