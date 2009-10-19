@@ -19,4 +19,5 @@ class BlogResource<Resource
   has_many :bad_commenters,:through => :comments,:source => :owner,:conditions => "rating<0"
 
   validates_presence_of :content
+  validates_length_of :content,:maximum => 500
 end

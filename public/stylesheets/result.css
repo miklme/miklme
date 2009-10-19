@@ -1196,8 +1196,8 @@ input {
     color:MediumSeaGreen;
 }
 .title_3 a:hover{
-        background:none;
-        color:#006600
+    background:none;
+    color:#006600
 
 }
 .keyword_page_news {
@@ -1209,9 +1209,9 @@ input {
 
 }
 .comment_blank input,.comment_blank textarea{
-border:hidden
+    border:hidden
 }
 .comment_blank p{
-border:1px solid #D3D3D3;
+    border:1px solid #D3D3D3;
     padding: 4px;
 }
