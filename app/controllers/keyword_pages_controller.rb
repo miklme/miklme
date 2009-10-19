@@ -7,9 +7,6 @@ class KeywordPagesController < ApplicationController
       @keyword_page=@user.keyword_pages.build
     end
     @recent_resources=BlogResource.find(:all,:limit => 32,:order => "created_at DESC")
-    @hot_keyword_pages=KeywordPage.hot_keyword_pages
-    @many_resources_keyword_pages=KeywordPage.many_resources_keyword_pages
-    @girls_pages=KeywordPage.girls_pages
     render :layout => "related_keywords"
   end
   
@@ -59,20 +56,6 @@ class KeywordPagesController < ApplicationController
     end
   end
 
-  def hide_field
-    v=ValueOrder.find_by_user_id_and_keyword_page_id(current_user.id,params[:id])
-    v.hidden=true
-    v.save
-    redirect_to :back
-  end
-
-  def appear_field
-    v=ValueOrder.find_by_user_id_and_keyword_page_id(current_user.id,params[:id])
-    v.hidden=false
-    v.save
-    redirect_to :back
-  end
-
   def auto_complete_for_keyword_page_keyword
     keyword_pages=KeywordPage.find_with_ferret(params[:keyword_page][:keyword]+"~")
     @keyword_pages=keyword_pages.first(15)
@@ -99,8 +82,28 @@ class KeywordPagesController < ApplicationController
     end
   end
 
-  def show_keywords
-    
+  def keywords
+    @recent_keyword_oages=KeywordPage.recent_keyword_pages
+    @many_resources_keyword_pages=KeywordPage.many_resources_keyword_pages
+    @girls_pages=KeywordPage.girls_pages
+    render :update do |page|
+      page.replace_html "sw_rel",:partial => "many_resources_keyword_pages"
+    end
   end
 
+
+  #不打算使用这个功能了
+  #  def hide_field
+  #    v=ValueOrder.find_by_user_id_and_keyword_page_id(current_user.id,params[:id])
+  #    v.hidden=true
+  #    v.save
+  #    redirect_to :back
+  #  end
+  #
+  #  def appear_field
+  #    v=ValueOrder.find_by_user_id_and_keyword_page_id(current_user.id,params[:id])
+  #    v.hidden=false
+  #    v.save
+  #    redirect_to :back
+  #  end
 end

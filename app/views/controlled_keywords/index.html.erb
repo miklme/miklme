@@ -2,7 +2,7 @@
   <h1>我周围的"关键字" </h1>
   <% for u in @followings %>
     <p>
-      <%=link_to u.name_or_nick_name(current_user),user_path(u) %>：
+      <em><%=link_to u.name_or_nick_name(current_user),user_path(u) %></em>：
       <% for page in u.appear_keyword_pages %>
         <cite> 关键字：<%=link_to page.keyword,keyword_page_path(page) %>，声望：<%= page.field_value(u) %>
         </cite>

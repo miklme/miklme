@@ -12,22 +12,19 @@
     
     <div id="sw_page">
       <div id="sw_hdr">
-        <div class="sw_tb"><%= link_to "Michael",keyword_pages_path %></div>
+        <div class="sw_tb">
+            <% if logged_in? %>
+            <%= render :partial => "shared/keyword_page_header",:object => current_user %>
+          <% else %>
+            <%= render :partial => "shared/keyword_page_header"%>
+          <% end %>
+        </div>
         <div class="sw_tbb"></div>
       </div>
     </div>
     <div id="sw_content">
       <div id="sw_canvas">
         <div id="sw_aside">
-          <!--
-          <div id="sw_nav">
-            <ul>
-              <li class="sw_navA">
-                <%= link_to "评论按时间排序",by_time_user_resource_comments_path(@user,@resource) %>
-              </li>
-            </ul>
-          </div>
-          -->
           <div id="sc_expPane">
             <div class="sw_menu" id="sw_rel">
               <h2>该想法所在关键字</h2>

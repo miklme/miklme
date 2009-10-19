@@ -71,7 +71,7 @@ def resources_by_time(page)
   self.resources.paginate(:all,:order => "resources.created_at DESC",:per_page => 10,:page => page)
 end
 
-def self.hot_keyword_pages
+def self.recent_keyword_pages
   a=self.find(:all,:order => "updated_at DESC",:limit => 15)
 end
 

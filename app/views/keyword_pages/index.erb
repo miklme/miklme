@@ -34,8 +34,19 @@
     <div id="sw_content">
       <div id="sw_canvas">
         <div id="sw_aside">
-          <div id="sw_nav">
-
+          <div id="sc_expPane">
+            <div class="sw_menu" id="sw_rel">
+              <h2>相关关键字</h2>
+              <ul>
+                <% if not @related_keywords.blank? %>
+                  <% for related_keyword in @related_keywords %>
+                    <li id="keyword_page">
+                      <span class="keyword_page"><%= link_to related_keyword.name,keyword_page_path(related_keyword.keyword_page)%></span>
+                    </li>
+                  <% end %>
+                <% end %>
+              </ul>
+            </div>
           </div>
         </div>
         <div id="content">
@@ -46,7 +57,7 @@
           <% end %>
           <h2 class="title_1"><%= link_to "欢迎来到Michael" %></h2>
           <h3>Michael拥有一种科技，利用它，我们可以加速模拟现实当中，人们发表言论，获得认可，建立声望，功成名就的过程。在这里，你要做的只是发表你的想法，通过Michael的一些“魔法”，一段时间后你会看到你的声望值，它尽可能精确地反应了你在某一方面的知识水平与被认可程度。...简直就是另一个现实。</h3>
-          <h2 class="title_2"><%= link_to "关键字" %></h2>
+          <h2 class="title_2"><%= link_to_remote "关键字",:url => {:action => :keywords} %></h2>
           <h3>你的每个想法都需要围绕一个关键字展开，它可以是你的兴趣，爱好，特长，职业等等等等。在最上面可以搜索已有的关键字。
             <% if logged_in? %>
             </h3><h3> 如果没有，你可以 <%= link_to_remote "新建一个>>>" ,:url => {:action => :show_hidden}%></h3>
@@ -95,38 +106,6 @@
               <% end %>
 
             </ol>
-          <% end %>
-          <% if @hot_keyword_pages.present? %>
-            <table>
-              <tr><th>最近更新的关键字</th><th>热门关键字</th><th>女生最多之关键字</th></tr>
-              <tr><td>
-                  <ol>
-                    <% for k in @hot_keyword_pages %>
-                      <li>
-                        <%=link_to k.keyword,keyword_page_path(k),:popup => true %>
-                      </li>
-                    <% end %>
-                  </ol>
-                </td>
-                <td>
-                  <ol>
-                    <% for k in @many_resources_keyword_pages %>
-                      <li>
-                        <%= link_to k.keyword,keyword_page_path(k),:popup => true %>
-                      </li>
-                    <% end %>
-                  </ol>
-                </td>
-                <td>
-                  <ol>
-                    <% for p in @girls_pages %>
-                      <li>
-                        <%= link_to_page(p) %>
-                      </li>
-                    <% end %>
-                  </ol>
-                </td></tr>
-            </table>
           <% end %>
         </div></div></div></div>
   <%= render :partial => "shared/footer" %>

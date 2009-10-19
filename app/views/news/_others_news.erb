@@ -3,18 +3,18 @@
 
 <% if others_news.news_type=="blog_resource" %>
   <p>
-    <%= link_to "#{others_news.owner.name_or_nick_name(current_user)}",user_path(others_news.resource.owner) -%>发表高见
+    <em><%= link_to "#{others_news.owner.name_or_nick_name(current_user)}",user_path(others_news.resource.owner) -%></em>发表高见
     <cite><%= auto_link others_news.resource.content%></cite>
     <span class="right">关键字： <%=link_to_page others_news.resource.keyword_page %></span>
     <em><%= link_to "#{others_news.resource.comments.size}回应>>>",user_resource_comments_path(others_news.resource.owner,others_news.resource) %></em>
   </p>
 <% elsif others_news.news_type=="comment"%>
   <p>
-    <%= link_to others_news.owner.name_or_nick_name(current_user),user_path(others_news.owner) %>
+     <em><%= link_to others_news.owner.name_or_nick_name(current_user),user_path(others_news.owner) %> </em>
     <% if others_news.comment.action_one.present? and others_news.comment.action_two.present? %>
-      <%= others_news.comment.action_one %>了<%=link_to others_news.resource.owner.name_or_nick_name(current_user),user_path(others_news.resource.owner)%>的<%=others_news.comment.action_two%>并
+      <%= others_news.comment.action_one %>了 <em><%=link_to others_news.resource.owner.name_or_nick_name(current_user),user_path(others_news.resource.owner)%> </em>的<%=others_news.comment.action_two%>并
     <% end %>
-    回应<%= link_to others_news.resource.owner.name_or_nick_name(current_user),user_path(others_news.resource.owner) %>：
+    回应 <em><%= link_to others_news.resource.owner.name_or_nick_name(current_user),user_path(others_news.resource.owner) %> </em>：
     <cite>
       <%=truncate others_news.comment.content,:length => 140 %>
     </cite>
@@ -22,11 +22,11 @@
   </p>
 <% elsif others_news.news_type=="replied_comment"%>
   <p>
-    <%= link_to others_news.owner.name_or_nick_name(current_user),user_path(others_news.owner) %>
+    <em> <%= link_to others_news.owner.name_or_nick_name(current_user),user_path(others_news.owner) %> </em>
     <% if others_news.comment.action_one.present? and others_news.comment.action_two.present? %>
-      <%= others_news.comment.action_one %>了<%=link_to others_news.comment.parent_comment.owner.name_or_nick_name(current_user),user_path(others_news.resource.owner)%>的<%=others_news.comment.action_two%>并
+      <%= others_news.comment.action_one %>了 <em><%=link_to others_news.comment.parent_comment.owner.name_or_nick_name(current_user),user_path(others_news.resource.owner)%> </em>的<%=others_news.comment.action_two%>并
     <% end %>
-    回应<%= link_to others_news.comment.parent_comment.owner.name_or_nick_name(current_user),user_path(others_news.resource.owner) %>：
+    回应 <em><%= link_to others_news.comment.parent_comment.owner.name_or_nick_name(current_user),user_path(others_news.resource.owner) %> </em>：
     <cite>
       <%=truncate others_news.comment.content,:length => 140 %>
     </cite>

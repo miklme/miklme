@@ -1,0 +1,8 @@
+  <h2>热门关键字</h2>
+  <ul>
+    <% for k in @many_resources_keyword_pages %>
+      <li id="keyword_page">
+        <%= link_to k.keyword,keyword_page_path(k),:popup => true %>
+      </li>
+    <% end %>
+  </ul>

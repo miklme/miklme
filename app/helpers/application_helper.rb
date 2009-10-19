@@ -28,10 +28,4 @@ module ApplicationHelper
     current_user.field_value(keyword_page)/10+0.5
   end
 
-
-  def reply_him(resource)
-    link_to "回应>>>", user_resource_comments_path(resource.owner,resource),:popup => true
-
-  end
-
 end
