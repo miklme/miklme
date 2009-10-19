@@ -1,4 +1,4 @@
-body { margin:114px 0 0 0; line-height:16px; font-family: Arial,Helvetica,sans-serif;  background: url(../images/body_top_bckg.jpg) no-repeat center top #171c20; color:#bed7e6; font-size:14px;
+body { margin:114px 0 0 0; line-height:16px; font-family: Arial,Helvetica,sans-serif;  background: url(../images/body_top_bckg.jpg) no-repeat center top #171c20; color:#bed7e6; font-size:13px;
 
 }
 a { color:#FFA615;
@@ -17,7 +17,7 @@ cite{
     display:block
 }
 em,em a{color:white;
-        font-size:14px;
+        font-size:13px;
         font-style:normal
 }
 em a:hover{
