@@ -6,8 +6,8 @@ class KeywordPagesController < ApplicationController
     @many_resources_keyword_pages=KeywordPage.many_resources_keyword_pages
     @girls_pages=KeywordPage.girls_pages
     us=User.find(:all).sort_by {|u| u.total_value}
-    us.reverse!.first(10)
-    @top_users=us
+    us.reverse!
+    @top_users=us.first(15)
     @user=current_user
     if logged_in?
       @keyword_page=@user.keyword_pages.build
