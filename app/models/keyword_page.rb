@@ -72,12 +72,12 @@ def resources_by_time(page)
 end
 
 def self.recent_keyword_pages
-  a=self.find(:all,:order => "updated_at DESC",:limit => 15)
+  a=self.find(:all,:order => "updated_at DESC",:limit => 10)
 end
 
 def self.many_resources_keyword_pages
   a=self.find(:all).sort_by {|k| k.resources.size}
-  a.reverse.first(15)
+  a.reverse.first(10)
 end
 
 def self.girls_pages
@@ -91,6 +91,6 @@ def self.girls_pages
     end
   end
   pages=pages.compact.sort_by {|p| p.users.size}
-  pages.reverse
+  pages.reverse.first(10)
 end
 end

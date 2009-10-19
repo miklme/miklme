@@ -2,6 +2,9 @@ class KeywordPagesController < ApplicationController
   skip_before_filter :login_required,:except => [:create]
   skip_before_filter :check_profile_status
   def index
+    @recent_keyword_pages=KeywordPage.recent_keyword_pages
+    @many_resources_keyword_pages=KeywordPage.many_resources_keyword_pages
+    @girls_pages=KeywordPage.girls_pages
     @user=current_user
     if logged_in?
       @keyword_page=@user.keyword_pages.build
@@ -83,11 +86,13 @@ class KeywordPagesController < ApplicationController
   end
 
   def keywords
-    @recent_keyword_oages=KeywordPage.recent_keyword_pages
-    @many_resources_keyword_pages=KeywordPage.many_resources_keyword_pages
-    @girls_pages=KeywordPage.girls_pages
     render :update do |page|
-      page.replace_html "sw_rel",:partial => "many_resources_keyword_pages"
+      page.visual_effect :grow,"many"
+      page.visual_effect :shrink,"many",:delay => 4
+      page.visual_effect :grow,"recent",:delay => 5
+      page.visual_effect :shrink,"recent",:delay => 9
+      page.visual_effect :grow,"girl",:delay => 10
+      page.visual_effect :shrink,"girl",:delay => 14
     end
   end
 
