@@ -59,10 +59,11 @@
               <strong><%=h flash[:notice] %></strong>
             </p>
           <% end %>
-          <h2 class="title_1"><%= link_to "欢迎来到Michael" %></h2>
+          <h2 class="title_1"><%= link_to "模拟现实" %></h2>
           <h3>Michael拥有一种科技，利用它，我们可以加速模拟现实当中，人们发表言论，获得认可，建立声望，功成名就的过程。在这里，你要做的只是发表你的想法，通过Michael的一些“魔法”，一段时间后你会看到你的声望值，它尽可能精确地反应了你关于某一关键字的知识水平与被认可程度（如：数学、互联网、IT、美术等）。...简直就是另一个现实。</h3>
           <h2 class="title_2"><%= link_to_remote "关键字",:url => {:action => :keywords} %></h2>
-          <h3>你的每个想法都需要围绕一个关键字展开，它将是你的这一想法的中心和概括。在最上面可以搜索已有的关键字。
+          <h3>一个关键字就像现实当中的学科、行业，我们总是在意行业权威或是意见领袖们的看法。
+            在最上面可以搜索已有的关键字。
             <% if logged_in? %>
             </h3><h3> 如果没有，你可以 <%= link_to_remote "新建一个>>>" ,:url => {:action => :show_hidden}%></h3>
             <div class="item_blue" id="hidden" style="display:none">
@@ -81,7 +82,8 @@
             </div>
           <% end %>
           <h2 class="title_3"><%= link_to_remote "声望",:url => {:action => :value}%></h2>
-          <h3>不同的关键字内你的声望不同，各个声望互不影响，在语文方面的蹩脚想法不影响你在数学上的崇高地位，不用担心。</h3>
+          <h3>不同的关键字内你的声望不同，各个声望互不影响，在语文方面的蹩脚想法不影响你在数学上的崇高地位，不用担心。
+          <div><%= image_tag "value.jpg"%></div></h3>
           <% if @recent_resources.present? %>
             <h2 class="item_pink">大家在想什么?</h2>
             <ol class="sb_results" id="wg0">
