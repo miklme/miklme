@@ -27,6 +27,7 @@ class KeywordPagesController < ApplicationController
       flash[:notice]="创建成功。在这个关键字内你的初始声望为0"
       redirect_to keyword_page_path(@keyword_page)
     else
+      flash[:notice]="出了点小问题，这个关键字已经存在了。"
       render :action => :index,:layout => "related_keywords"
     end
   end
