@@ -91,6 +91,8 @@ class KeywordPagesController < ApplicationController
   def keywords
     render :update do |page|
       page.visual_effect :grow,"many"
+      page.visual_effect :blind_down,"about_keyword"
+      page.visual_effect :blind_up,"about_value"
       page.visual_effect :shrink,"many",:delay => 4
       page.visual_effect :grow,"recent",:delay => 5
       page.visual_effect :shrink,"recent",:delay => 9
@@ -102,22 +104,24 @@ class KeywordPagesController < ApplicationController
   def value
     render :update do |page|
       page.visual_effect :grow,"top"
+      page.visual_effect :blind_up,"about_keyword"
+      page.visual_effect :blind_down,"about_value"
       page.visual_effect :shrink,"top",:delay => 5.8
     end
-    end
-
-    #不打算使用这个功能了
-    #  def hide_field
-    #    v=ValueOrder.find_by_user_id_and_keyword_page_id(current_user.id,params[:id])
-    #    v.hidden=true
-    #    v.save
-    #    redirect_to :back
-    #  end
-    #
-    #  def appear_field
-    #    v=ValueOrder.find_by_user_id_and_keyword_page_id(current_user.id,params[:id])
-    #    v.hidden=false
-    #    v.save
-    #    redirect_to :back
-    #  end
   end
+
+  #不打算使用这个功能了
+  #  def hide_field
+  #    v=ValueOrder.find_by_user_id_and_keyword_page_id(current_user.id,params[:id])
+  #    v.hidden=true
+  #    v.save
+  #    redirect_to :back
+  #  end
+  #
+  #  def appear_field
+  #    v=ValueOrder.find_by_user_id_and_keyword_page_id(current_user.id,params[:id])
+  #    v.hidden=false
+  #    v.save
+  #    redirect_to :back
+  #  end
+end
