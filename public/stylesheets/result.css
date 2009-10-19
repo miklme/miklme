@@ -1220,3 +1220,11 @@ input {
         color:#006600
 
 }
+.keyword_page_news {
+    color:#727272
+}
+.keyword_page_news:hover{
+    color:black;
+    background:none
+
+}
