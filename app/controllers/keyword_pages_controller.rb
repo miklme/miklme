@@ -99,6 +99,9 @@ class KeywordPagesController < ApplicationController
       page.visual_effect :shrink,"recent",:delay => 9
       page.visual_effect :grow,"girl",:delay => 10
       page.visual_effect :shrink,"girl",:delay => 14
+      page.visual_effect :grow,"many",:delay => 15
+      page.visual_effect :shrink,"many",:delay => 19
+
     end
   end
 
@@ -107,7 +110,7 @@ class KeywordPagesController < ApplicationController
       page.visual_effect :grow,"top"
       page.visual_effect :blind_up,"about_keyword"
       page.visual_effect :blind_down,"about_value"
-      page.visual_effect :shrink,"top",:delay => 5.8
+      page.visual_effect :shrink,"top",:delay => 6.8
     end
   end
 
