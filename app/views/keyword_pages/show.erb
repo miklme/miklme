@@ -1,9 +1,3 @@
-<div class="item_blue">
-  <p>在这个页面内，声望值(<cite>绿色</cite>)是这些想法排序的<strong>唯一依据</strong>。
-    声望最高的人和他的想法排列在首位，并以此类推。
-  </p>
-  <p>你在各个关键字内的声望<strong>互不影响</strong>。</p>
-</div>
 <% if logged_in? and @keyword_page.users.include?(current_user) %>
   <div class="item_blue">
     请记住，Michael判断你的声望始终有一点基础：这个关键字需要有多人参与。所以，请<%= link_to_remote "邀请更多人>>>",:url => {:controller => :comments,:action => :show_hidden} %>
