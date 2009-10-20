@@ -8,7 +8,6 @@ class User < ActiveRecord::Base
   attr_accessor :password_confirmation
   attr_protected :value
   named_scope :ten,:limit => 10
-
   has_many :value_orders
   has_many :keyword_pages,:through => :value_orders,:source => :keyword_page
   has_many :appear_keyword_pages,:through => :value_orders,:source => :keyword_page,:conditions => "actived=true and value>0",:order => "value DESC"
@@ -114,5 +113,8 @@ class User < ActiveRecord::Base
     ks.compact
   end
 
-  
+  def self.top_15
+    us=User.find(:all).sort_by {|u| u.total_value}
+    us.reverse!
+  end
 end

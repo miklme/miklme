@@ -21,7 +21,6 @@ class KeywordPage < ActiveRecord::Base
   has_many :value_orders
   has_many :users,:through => :value_orders,:source => :user
   has_one :top_user,:through => :value_orders,:source => :user,:order => "value DESC"
-  has_many :users_by_value,:through => :value_orders,:source => :user, :order => "value DESC,created_at DESC"
   has_many :active_users,:through => :value_orders,:source => :user,:conditions => "value > 0"
   validates_uniqueness_of :keyword,:message => "这个关键字已经存在了"
   validates_presence_of :keyword,:message => "关键字名不能为空"
@@ -75,13 +74,24 @@ class KeywordPage < ActiveRecord::Base
     self.resources.paginate(:all,:order => "resources.created_at DESC",:per_page => 10,:page => page)
   end
 
+  def good_resources
+    users=self.active_users.first(5)
+    recent_resources=users.map do |u|
+      u.resources.find(:first,:order => "resources.created_at DESC",:conditions => {:keyword_page_id => self.id})
+    end
+    results=recent_resources.sort_by { |r| r.created_at }
+    results.reverse!
+  end
+  
   def self.recent_keyword_pages
     a=self.find(:all,:order => "updated_at DESC",:limit => 10)
   end
 
-  def self.many_resources_keyword_pages
-    a=self.find(:all).sort_by {|k| k.resources.size}
-    a.reverse.first(10)
+  def self.many_user_keyword_pages
+    a=self.find(:all).sort_by {|k| k.active_users.size}
+    x=a.reverse.first(5)
+    b=x.sort_by { |k| k.updated_at  }
+    b.reverse!
   end
 
   def self.girls_pages

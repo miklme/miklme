@@ -43,9 +43,6 @@
                 <div id="recent" style="display:none">
                   <%=render :partial => "recent_keyword_pages" %>
                 </div>
-                <div id="many" style="display:none">
-                  <%=render :partial => "many_resources_keyword_pages" %>
-                </div>
                 <div id="top" style="display:none">
                   <%=render :partial => "top_users" %>
                 </div>
@@ -98,33 +95,34 @@
             <h3>Michael建立了一套数学模型，用来估算这些现象对于一个人声望造成的影响。具体的你不用关心，你只看你名字旁边那个<cite>绿色</cite>的声望值就行了。</h3>
             <h3>同样的，在现实中，你认为一个人做饭做得好吃代表他英语学的好吗？不会的。因此你在各关键字内的声望互不影响。</h3>
           </div>
-          <% if @recent_resources.present? %>
-            <h2 class="item_pink">大家在想什么?</h2>
-            <ol class="sb_results" id="wg0">
-              <% for resource in @recent_resources %>
-                <li>
-                  <table>
-                    <tbody>
-                      <tr>
-                        <td width="500">
-                          <p>
-                            <%=simple_format(auto_link(resource.content))%>
-                          </p>
-                          <span class="sb_meta">关键字：<span id="keyword_page"><%=link_to_page resource.keyword_page %></span></span>
-                          <br />
-                          <%= link_to "回应>>>", user_resource_comments_path(resource.owner,resource),:popup => true %>
-                          <span class="amount">(<%=resource.comments.size  %>)</span>
-                        </td>
-                        <td width="80">
-                          <%= link_to resource.owner.nick_name,user_path(resource.owner) %><div><cite>关键字声望：<%=resource.owner.field_value(resource.keyword_page)%></cite></div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </li>
-              <% end %>
-
-            </ol>
+          <% if @many_user_keyword_pages.present? %>
+            来看看大家都在想什么吧：
+            <% for p in @many_user_keyword_pages %>
+              <h2 class="item_pink">关键字：<span id="keyword_page"><%= link_to_page(p) %> · · · · · ·</span></h2>
+              <ul class="sb_results" id="wg0">
+                <% for resource in p.good_resources %>
+                  <li>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td width="500">
+                            <p>
+                              <%=simple_format(auto_link(resource.content))%>
+                            </p>
+                            <br />
+                            <%= link_to "回应>>>", user_resource_comments_path(resource.owner,resource),:popup => true %>
+                            <span class="amount">(<%=resource.comments.size  %>)</span>
+                          </td>
+                          <td width="80">
+                            <%= link_to resource.owner.nick_name,user_path(resource.owner) %><div><cite>关键字声望：<%=resource.owner.field_value(resource.keyword_page)%></cite></div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </li>
+                <% end %>
+              </ul>
+            <% end %>
           <% end %>
         </div></div></div></div>
   <%= render :partial => "shared/footer" %>

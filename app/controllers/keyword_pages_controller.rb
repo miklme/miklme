@@ -3,16 +3,13 @@ class KeywordPagesController < ApplicationController
   skip_before_filter :check_profile_status
   def index
     @recent_keyword_pages=KeywordPage.recent_keyword_pages
-    @many_resources_keyword_pages=KeywordPage.many_resources_keyword_pages
     @girls_pages=KeywordPage.girls_pages
-    us=User.find(:all).sort_by {|u| u.total_value}
-    us.reverse!
-    @top_users=us.first(15)
+    @top_users=User.top_15
     @user=current_user
     if logged_in?
       @keyword_page=@user.keyword_pages.build
     end
-    @recent_resources=BlogResource.find(:all,:limit => 32,:order => "created_at DESC")
+    @many_user_keyword_pages=KeywordPage.many_user_keyword_pages.first(5)
     render :layout => "related_keywords"
   end
   
@@ -91,17 +88,16 @@ class KeywordPagesController < ApplicationController
 
   def keywords
     render :update do |page|
-      page.visual_effect :grow,"many"
+      page.visual_effect :grow,"recent"
       page.visual_effect :blind_down,"about_keyword"
       page.visual_effect :blind_up,"about_value"
-      page.visual_effect :shrink,"many",:delay => 4
-      page.visual_effect :grow,"recent",:delay => 5
-      page.visual_effect :shrink,"recent",:delay => 9
-      page.visual_effect :grow,"girl",:delay => 10
-      page.visual_effect :shrink,"girl",:delay => 14
-      page.visual_effect :grow,"many",:delay => 15
-      page.visual_effect :shrink,"many",:delay => 19
-
+      page.visual_effect :shrink,"recent",:delay => 4
+      page.visual_effect :grow,"girl",:delay => 5
+      page.visual_effect :shrink,"girl",:delay => 9
+      page.visual_effect :grow,"recent",:delay => 10
+      page.visual_effect :shrink,"recent",:delay => 14
+      page.visual_effect :grow,"girl",:delay => 15
+      page.visual_effect :shrink,"girl",:delay => 19
     end
   end
 

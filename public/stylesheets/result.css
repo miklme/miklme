@@ -345,7 +345,6 @@ a.sc_browseEntry:hover span {
     margin:0;
     padding:5px;
     border-bottom:1px dashed #CCCCCC;
-
 }
 .sb_results p {
     line-height:1.3em;
@@ -925,7 +924,7 @@ input.sw_q_nrw {
 
 #content {
     margin:0 0 0 -15px;
-    max-width:666px;
+    width:666px;
     padding:0 150px 0 0;
 }
 #results_area {
@@ -954,7 +953,6 @@ input.sw_q_nrw {
     width:100%;
 }
 .sb_results li, #results h2, .sc_seemore {
-    float:left;
     width:100%;
 }
 .sa_cc, #results h2 div, .sc_seemore a {
