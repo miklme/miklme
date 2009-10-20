@@ -35,7 +35,7 @@ class KeywordPage < ActiveRecord::Base
     v=ValueOrder.find_by_keyword_page_id_and_user_id(self.id,user.id)
     v.value
   end
-
+  
   def higher_lower_good(user1,user2)
     (user1.field_value(self)-user2.field_value(self))/2
   end
@@ -75,7 +75,11 @@ class KeywordPage < ActiveRecord::Base
   end
 
   def good_resources
-    users=self.active_users.first(5)
+    active_members=self.active_users
+    authors=self.resources.map do |r|
+      r.owner
+    end
+    users=(active_members&authors).first(5)
     recent_resources=users.map do |u|
       u.resources.find(:first,:order => "resources.created_at DESC",:conditions => {:keyword_page_id => self.id})
     end
