@@ -96,7 +96,7 @@
             <h3>同样的，在现实中，你认为一个人做饭做得好吃代表他英语学的好吗？不会的。因此你在各关键字内的声望互不影响。</h3>
           </div>
           <% if @many_user_keyword_pages.present? %>
-            来看看大家都在想什么吧：
+          <p>来看看大家都在想什么吧：</p>
             <% for p in @many_user_keyword_pages %>
               <h2 class="item_pink">关键字：<span id="keyword_page"><%= link_to_page(p) %> · · · · · ·</span></h2>
               <ul class="sb_results" id="wg0">
