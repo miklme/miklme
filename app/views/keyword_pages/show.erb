@@ -1,7 +1,7 @@
 <% if logged_in? and @keyword_page.users.include?(current_user) %>
   <div class="item_blue">
-    请记住，Michael判断你的声望始终有一点基础：这个关键字需要有多人参与。所以，请<%= link_to_remote "邀请更多人>>>",:url => {:controller => :comments,:action => :show_hidden} %>
-    <ul id="hidden" style="display:none">
+    请记住，Michael判断你的声望始终有一点基础：这个关键字需要有多人参与。所以，请邀请更多人：
+    <ul>
       <li>
         <p class="item_blue"><cite>真实朋友:</cite>我<%= current_user.name %>，在玩一个很独特的应用，你也赶快来试试：<%= "http://mikl.me/users/new/#{current_user.id}/#{ValueOrder.find_by_user_id_and_keyword_page_id(current_user.id,@keyword_page.id).id}/realfriend" %></p>
         <p class="item_blue"><cite>匿名网友:</cite>我发现了一个很独特的平台，你快点注册，关注我一下：<%= "http://mikl.me/users/new/#{current_user.id}/#{ValueOrder.find_by_user_id_and_keyword_page_id(current_user.id,@keyword_page.id).id}/commonfriend" %></p>
@@ -37,7 +37,7 @@
       <% end %>
     <% end %>
 </div>
-<div id="succeed" style="display:none">
+<div id="succeed">
 </div>
 <span class="sb_pag">
 <%= link_to "默认排序",keyword_page_path(@keyword_page) %>
