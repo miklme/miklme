@@ -10,7 +10,7 @@ class BlogResourcesController < ApplicationController
     @blog_resource.authority=true
     @blog_resource.owner=current_user
     if @blog_resource.save
-      @keyword_page.updated_at==Time.now
+      @keyword_page.updated_at=Time.now
       @keyword_page.save
       if not current_user.keyword_pages.include?(@keyword_page)
         v=ValueOrder.new

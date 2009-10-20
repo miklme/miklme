@@ -93,7 +93,7 @@ class KeywordPage < ActiveRecord::Base
 
   def self.many_user_keyword_pages
     amount=KeywordPage.find(:all).size/4.to_i
-    a=self.find(:all).sort_by {|k| [k.active_users.size,k.updated_at]}
+    a=self.find(:all).sort_by {|k| [k.active_users.size,k.created_at]}
     x=a.reverse.first(amount)
   end
 
