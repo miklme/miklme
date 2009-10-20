@@ -32,9 +32,18 @@ class ApplicationController < ActionController::Base
       page.toggle "hidden"
     end
   end
+
+  def comment_validation(comment)
+    u=User.find(comment.resource.owner)
+    if u!=current_user and comment.resource.commenters.find(:all,current_user.id).size==1 and comment.resource.owner.last_ip!=current_user.last_ip
+      true
+    else
+      false
+    end
+  end
   private
   def load_user
-      @user=User.find(params[:user_id])
+    @user=User.find(params[:user_id])
   end
 
 end

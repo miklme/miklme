@@ -14,7 +14,7 @@ class BlogResource<Resource
 #      :ferret => {:analyzer => analyzer}
 #    })
   has_many :comments,:foreign_key => "resource_id",:dependent => :destroy
-  has_many :commenters,:through => :comments,:source => :owner
+  has_many :commenters,:through => :comments,:source => :owner,:conditions => "parent_comment_id is NULL"
   has_many :good_commenters,:through => :comments,:source => :owner,:conditions => "rating>0"
   has_many :bad_commenters,:through => :comments,:source => :owner,:conditions => "rating<0"
 
