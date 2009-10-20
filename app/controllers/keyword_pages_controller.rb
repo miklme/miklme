@@ -9,7 +9,7 @@ class KeywordPagesController < ApplicationController
     if logged_in?
       @keyword_page=@user.keyword_pages.build
     end
-    @many_user_keyword_pages=KeywordPage.many_user_keyword_pages.first(5)
+    @many_user_keyword_pages=KeywordPage.many_user_keyword_pages.find(:all,:order => "updated_at DESC",:limit => 6)
     render :layout => "related_keywords"
   end
   
