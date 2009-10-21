@@ -2,7 +2,6 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :users,:collection => {:search => :get} do |user|
     user.resource :portrait
     user.resource :true_portrait
-    user.resources :searched_contents
     user.resources :controlled_keywords
     user.resources :be_follows
     user.resources :follows,:new => {:search_user => :get}

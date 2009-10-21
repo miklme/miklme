@@ -6,4 +6,7 @@ class NewsController < ApplicationController
     @followers=@user.followers
   end
 
+  def destroy
+    
+  end
 end
