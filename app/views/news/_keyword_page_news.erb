@@ -3,7 +3,7 @@
 <%=distance_of_time_in_words(Time.now, keyword_page_news.created_at, true)%></span>
 <% if keyword_page_news.news_type=="be_comment" %>
   <div class="side">
-    <%=link_to x,user_resource_comments_path(keyword_page_news.resource.owner,keyword_page_news.resource),:popup => true,:class => "keyword_page_news" %>
+    <%=link_to x,user_news_path(keyword_page_news.owner,keyword_page_news),:popup => true,:class => "keyword_page_news" %>
   </div>
 <% elsif keyword_page_news.news_type=="be_follow" %>
   <div class="side">
@@ -11,6 +11,6 @@
   </div>
 <% elsif  keyword_page_news.news_type=="be_replied_comment"%>
   <div class="side">
-    <%=link_to x,user_resource_comments_path(keyword_page_news.resource.owner,keyword_page_news.resource),:popup => true,:class => "keyword_page_news"%>
+    <%=link_to x,user_news_path(keyword_page_news.owner,keyword_page_news),:popup => true,:class => "keyword_page_news"%>
   </div>
 <% end %>
