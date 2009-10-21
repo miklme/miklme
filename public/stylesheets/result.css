@@ -87,6 +87,11 @@ cite a{text-decoration:underline}
     margin:0;
     float:right
 }
+
+.grey{
+    color:#A1A1A1;
+    margin:0;
+}
 .sb_alert {
     color:#D90026;
 }
@@ -355,20 +360,16 @@ a.sc_browseEntry:hover span {
     line-height:1.3em;
 }
 .sb_pag {
-    float:left;
     margin-bottom:20px;
     margin-top:20px;
     padding:0;
     width:100%;
 }
 
-.sb_pag a,.sb_pag span {
-    float:left;
-}
+
 
 .sb_pag a,.sb_pag span {
     border:1px solid #D4D4D4;
-    display:block;
     margin:0 0.38em 0 0;
     padding:0.3em 0.7em;
     text-align:center;
@@ -1075,8 +1076,8 @@ cite strong {
     font-style:normal;
 }
 h3 {
-text-indent:2em;
-line-height:20px
+    text-indent:2em;
+    line-height:20px
 }
 #content {
     padding-top:0.4em;

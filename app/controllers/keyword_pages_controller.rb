@@ -35,7 +35,7 @@ class KeywordPagesController < ApplicationController
     @keyword_page=KeywordPage.find(params[:id])
     if logged_in?
       @user=current_user
-      @news=News.list_self_news_2(@user)
+      @news=News.list_self_news(@user)
       @blog_resource=@keyword_page.blog_resources.build
     end
     @resources=@keyword_page.resources
@@ -43,8 +43,8 @@ class KeywordPagesController < ApplicationController
       r.user_id
     end
     ids.uniq!
-    @user_s=User.find(ids).sort_by { |u| [u.field_value(@keyword_page),u.created_at]}
-    @users=@user_s.reverse.paginate(:page => params[:page],:per_page => 10)
+    user_s=User.find(ids).sort_by { |u| [u.field_value(@keyword_page),u.created_at]}
+    @users=user_s.reverse.paginate(:page => params[:page],:per_page => 10)
     @related_keywords=@keyword_page.related_keywords
   end
 
