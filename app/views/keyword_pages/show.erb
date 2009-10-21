@@ -21,7 +21,7 @@
 
 <div id="form">
   <% if logged_in? %>
-    关于<strong><%= @keyword_page.keyword %></strong>，你能想到什么?
+    关于<strong><%= @keyword_page.keyword %></strong>，你有哪些真知灼见?
 
     <% remote_form_for [@keyword_page,@blog_resource] do |f|%>
       <strong><%= f.error_messages %>

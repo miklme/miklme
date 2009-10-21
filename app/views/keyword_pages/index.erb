@@ -67,7 +67,7 @@
             <% if logged_in? %>
               <h3> 如果没有，你可以 <%= link_to_remote "新建一个>>>" ,:url => {:action => :show_hidden}%></h3>
               <div class="item_blue" id="hidden" style="display:none">
-                请确保你能够为这个关键字提供一些有价值的信息。（最长8个汉字）
+                请确保你能够为这个关键字提供一些有价值的信息或想法。（最长8个汉字）
                 <% form_for [@user,@keyword_page] do |f| %>
                   <div>
                     <%= f.error_messages %>
@@ -96,7 +96,7 @@
             <h3>同样的，在现实中，你认为一个人做饭做得好吃代表他英语学的好吗？不会的。因此你在各关键字内的声望互不影响。</h3>
           </div>
           <% if @many_user_keyword_pages.present? %>
-            <p>来看看大家都在想什么吧：</p>
+            <p>看看牛人们都在想什么吧：</p>
             <% for p in @many_user_keyword_pages %>
               <h2 class="item_pink">关键字：<span id="keyword_page"><%= link_to_page(p) %> · · · · · ·</span></h2>
               <ul class="sb_results" id="wg0">
