@@ -35,9 +35,15 @@ class ApplicationController < ActionController::Base
 
   def comment_validation(comment)
     u=User.find(comment.resource.owner)
-    if u!=current_user and comment.resource.commenters.find(:all,current_user.id).size==1 and comment.resource.owner.last_ip!=current_user.last_ip
-      true
+    ips=comment.resource.keyword_page.users.map do |user|
+      user.last_ip
+    end
+    if ips.find{|ip| ip==u.last_ip}.size==1 and\
+        comment.resource.commenters.find(:all,current_user.id).size==1
+        true
     else
+      comment.rating=0
+      comment.save
       false
     end
   end
