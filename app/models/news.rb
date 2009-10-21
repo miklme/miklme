@@ -12,7 +12,7 @@ class News < ActiveRecord::Base
   def self.list_self_news(current_user)
     find_all_by_user_id current_user.id,
       :order => "created_at DESC",
-      :limit => 17,
+      :limit => 14,
       :conditions => "news_type='be_follow' or news_type='be_comment' or news_type='be_replied_comment'"
 
   end

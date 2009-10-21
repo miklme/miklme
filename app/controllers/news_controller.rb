@@ -8,7 +8,11 @@ class NewsController < ApplicationController
 
   def show
     keyword_page_news=News.find(params[:id])
-    redirect_to user_resource_comments_path(keyword_page_news.resource.owner,keyword_page_news.resource)
+    if keyword_page_news.news_type=="be_comment" or keyword_page_news.news_type=="be_replied_comment"
+      redirect_to user_resource_comments_path(keyword_page_news.resource.owner,keyword_page_news.resource)
+    elsif keyword_page_news.news_type=="be_follow"
+      redirect_to user_path(keyword_page_news.follower)
+    end
     if keyword_page_news.owner==current_user
       keyword_page_news.destroy
     end
