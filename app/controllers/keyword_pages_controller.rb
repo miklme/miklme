@@ -89,25 +89,17 @@ class KeywordPagesController < ApplicationController
 
   def keywords
     render :update do |page|
-      page.visual_effect :grow,"recent"
+      page.visual_effect :grow,"girl"
       page.visual_effect :blind_down,"about_keyword"
       page.visual_effect :blind_up,"about_value"
-      page.visual_effect :shrink,"recent",:delay => 4
-      page.visual_effect :grow,"girl",:delay => 5
-      page.visual_effect :shrink,"girl",:delay => 9
-      page.visual_effect :grow,"recent",:delay => 10
-      page.visual_effect :shrink,"recent",:delay => 14
-      page.visual_effect :grow,"girl",:delay => 15
-      page.visual_effect :shrink,"girl",:delay => 19
+      page.visual_effect :shrink,"girl",:delay => 4
     end
   end
 
   def value
     render :update do |page|
-      page.visual_effect :grow,"top"
       page.visual_effect :blind_up,"about_keyword"
       page.visual_effect :blind_down,"about_value"
-      page.visual_effect :shrink,"top",:delay => 6.8
     end
   end
 

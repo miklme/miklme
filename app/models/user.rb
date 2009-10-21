@@ -115,6 +115,6 @@ class User < ActiveRecord::Base
 
   def self.top_15
     us=User.find(:all).sort_by {|u| u.total_value}
-    us.reverse!
+    us.reverse!.first(15)
   end
 end
