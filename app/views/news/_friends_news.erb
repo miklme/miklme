@@ -29,7 +29,9 @@
     <% if f.comment.action_one.present? and f.comment.action_two.present? %>
       <%= f.comment.action_one %>了 <em><%=link_to f.comment.parent_comment.owner.name_or_nick_name(current_user),user_path(f.resource.owner)%> </em>的<%=f.comment.action_two%>并
     <% end %>
-    回应<%= link_to f.comment.parent_comment.owner.name_or_nick_name(current_user),user_path(f.resource.owner) %>：
+    回应
+<em><%= link_to f.comment.parent_comment.owner.name_or_nick_name(current_user),user_path(f.resource.owner) %>
+</em>：
     <cite>
       <%=truncate f.comment.content,:length => 140 %>
     </cite>
