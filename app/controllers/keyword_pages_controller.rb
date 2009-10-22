@@ -89,15 +89,13 @@ class KeywordPagesController < ApplicationController
 
   def keywords
     render :update do |page|
-      page.visual_effect :blind_down,"about_keyword"
-      page.visual_effect :blind_up,"about_value"
+      page.visual_effect :toggle_blind,"about_keyword"
     end
   end
 
   def value
     render :update do |page|
-      page.visual_effect :blind_up,"about_keyword"
-      page.visual_effect :blind_down,"about_value"
+      page.visual_effect :toggle_blind,"about_value"
     end
   end
 
