@@ -36,6 +36,9 @@
         <div id="sw_aside">
           <div id="sc_expPane">
             <div class="sw_menu" id="sw_rel">
+              <% if logged_in? %>
+                <%= render :partial => "my_keyword_pages" %>
+                <% end %>
               <% if @recent_keyword_pages.present? %>
                 <div id="girl" style="display:none">
                   <%=render :partial => "girls_keyword_pages" %>
@@ -43,6 +46,7 @@
                 <div id="recent">
                   <%=render :partial => "recent_keyword_pages" %>
                 </div>
+
                 <div id="top">
                   <%=render :partial => "top_users" %>
                 </div>
@@ -58,7 +62,7 @@
           <% end %>
           <h2 class="title_1"><%= link_to "欢迎进入Michael" %></h2>
           <h3>Michael的科技在于他对于现实的模拟，我们可以加速模拟现实当中人们发表言论，获得认可，建立声望，功成名就的过程。在Michael中，你要做的全部只是贡献一些你认为具有价值的想法。</h3>
-          <h2>如果你是刚刚才来到Michael，请一定先点击下面的两个链接来详细了解：</h2>
+          <p><cite>如果你是刚刚才来到Michael，请一定先点击下面的两个链接来详细了解：</cite></p>
           <h2 class="title_2"><%= link_to_remote "关键字>>>",:url => {:action => :keywords} %></h2>
           <div id="about_keyword" style="display:none">
             <h3>这里的关键字就像我们在搜索引擎当中常常搜索的关键字。现实中我们总会在意某方面的行业权威或是意见领袖的看法。类似的，在关键字页面中，我们会优先看到<cite>声望值</cite>高的人的言论。就像这样：
@@ -115,7 +119,7 @@
                             <span class="amount">(<%=resource.comments.size  %>)</span>
                           </td>
                           <td width="80">
-                            <%= link_to resource.owner.nick_name,user_path(resource.owner) %><div><cite>关键字声望：<%=resource.owner.field_value(resource.keyword_page)%></cite></div>
+                            <%= link_to resource.owner.nick_name,user_path(resource.owner) %><div><cite>声望：<%=resource.owner.field_value(resource.keyword_page)%></cite></div>
                           </td>
                         </tr>
                       </tbody>

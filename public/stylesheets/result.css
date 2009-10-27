@@ -143,10 +143,7 @@ cite a{text-decoration:underline}
     margin-top:1px;
     padding:4px 0;
 }
-#sw_aside a, #sw_aside em {
-    font-style:normal;
-    word-wrap:break-word;
-}
+
 div#sw_nav ul, div#sw_nav li, #sw_nav a {
     display:block;
     margin:0;
@@ -1129,7 +1126,6 @@ input {
 .twitter{font-size:larger}
 #keyword_page,#keyword_page a{
     color:#F76120;
-    font-weight:bold
 }
 #keyword_page a:hover{
     background:none;

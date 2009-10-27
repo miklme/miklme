@@ -24,7 +24,7 @@
     <li>
       <%= link_to "我的好友",user_news_index_path(current_user) %>
     </li>
-    <li><%= link_to_unless_current"我的关键字",user_controlled_keywords_path(current_user) %>
+    <li><%= link_to_unless_current"好友的关键字",user_controlled_keywords_path(current_user) %>
     </li>
     <li>
       <%= link_to_unless_current "个人设置",edit_user_path(current_user) %>

@@ -1,5 +1,4 @@
 <div id="text">
-  <h1>我周围的"关键字" </h1>
   <% for u in @followings %>
     <p>
       <em><%=link_to u.name_or_nick_name(current_user),user_path(u) %></em>：
