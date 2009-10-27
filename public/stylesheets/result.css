@@ -1175,7 +1175,6 @@ input {
 }
 .title_2 a{
     color:LightSalmon;
-    font-size:15px;
     margin-top:15px;
     font-weight:bold
 }
@@ -1186,7 +1185,6 @@ input {
 }
 .title_3 a{
     margin-top:15px;
-    font-size:20px;
     color:MediumSeaGreen;
 }
 .title_3 a:hover{
