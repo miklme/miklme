@@ -38,13 +38,8 @@ class KeywordPagesController < ApplicationController
       @news=News.list_self_news(@user)
       @blog_resource=@keyword_page.blog_resources.build
     end
-    @resources=@keyword_page.resources
-    ids=@resources.map do |r|
-      r.user_id
-    end
-    ids.uniq!
-    user_s=User.find(ids).sort_by { |u| [u.field_value(@keyword_page),u.created_at]}
-    @users=user_s.reverse.paginate(:page => params[:page],:per_page => 10)
+    users=@keyword_page.users_have_resources.sort_by { |u| [u.field_value(@keyword_page),u.created_at]}
+    @users=users.reverse.paginate(:page => params[:page],:per_page => 10)
     @related_keywords=@keyword_page.related_keywords
   end
 

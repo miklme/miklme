@@ -12,7 +12,7 @@
         <%= k.keyword %> <strong>(已隐藏)</strong><span class="little_white"><%= link_to "恢复",:controller => :keyword_pages,:action => :appear_field,:id => k %></span>
       <% end %>
       -->
-      <cite><%= k.field_value(current_user) %></cite>,排名：(<span class="highlight"><%= ValueOrder.order(current_user,KeywordPage.find_by_keyword(k.keyword)) %></span>/<%= k.active_users.size %>)
+      <cite><%= k.field_value(current_user) %></cite>,排名：(<span class="highlight"><%= ValueOrder.order(current_user,KeywordPage.find_by_keyword(k.keyword)) %></span>/<%= k.users_have_resources.size %>)
       
     </li>
   <% end %>

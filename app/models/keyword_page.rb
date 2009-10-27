@@ -86,7 +86,14 @@ class KeywordPage < ActiveRecord::Base
     results=recent_resources.sort_by { |r| r.created_at }
     results.reverse!
   end
-  
+
+  def users_have_resources
+    ids=self.resources.map do |r|
+      r.user_id
+    end
+    ids.uniq!
+    User.find(ids)
+  end
   def self.recent_keyword_pages
     a=self.find(:all,:order => "updated_at DESC",:limit => 10)
   end
@@ -110,4 +117,6 @@ class KeywordPage < ActiveRecord::Base
     pages=pages.compact.sort_by {|p| p.users.size}
     pages.reverse.first(10)
   end
+
+  
 end
