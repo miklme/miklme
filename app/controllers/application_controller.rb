@@ -37,8 +37,7 @@ class ApplicationController < ActionController::Base
     ips=comment.resource.keyword_page.users.map do |user|
       user.last_ip
     end
-    if ips.find{|ip| ip==current_user.last_ip}.size==1 and\
-        comment.resource.commenters.find(:all,current_user.id).size==1
+    if ips.find_all{|ip| ip==current_user.last_ip}.size==1 and  comment.resource.commenters.find(:all,current_user.id).size==1
         true
     else
       comment.rating=0

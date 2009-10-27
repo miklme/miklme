@@ -12,12 +12,11 @@ class Comment < ActiveRecord::Base
   validates_presence_of :content
 
   after_create :adjust_resource_updated_at
-
   private
 
   def adjust_resource_updated_at
     self.resource.updated_at=Time.now
     self.resource.save
   end
-  
+
 end
