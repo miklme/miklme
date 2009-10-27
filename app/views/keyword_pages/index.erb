@@ -64,29 +64,31 @@
           <p>在这里，读懂你自己。你要做的全部：</p>
           <ol>
             <li>
-              进入或<%= link_to_remote "创建" ,:url => {:action => :show_hidden}%>一个自己感兴趣的<span class="title_2"><%= link_to_remote "关键字>>>",:url => {:action => :keywords} %></span>;
-              <div class="item_blue" id="hidden" style="display:none">
-                请确保你能够为这个关键字提供一些有价值的信息或想法。（关键字最长8个汉字）
-                <% form_for [@user,@keyword_page] do |f| %>
-                  <div>
-                    <%= f.error_messages %>
-                  </div>
-                  <p>
-                    <%= f.text_field :keyword,:size => 20 %>
-                    <%= f.submit "创建这个关键字" %>
-                  </p>
-                  <%= f.check_box :long_keyword %>
-                  <%= f.label :long_keyword,"关键字名称为电影、书籍、音乐名称等名词，或为英文关键字名" %>
-                <% end %>
-              </div>
+              进入<% if logged_in? %>或<%= link_to_remote  '创建' ,:url => {:action => :show_hidden}%><% end %>一个自己感兴趣的<span class="title_2"><%= link_to_remote "关键字>>>",:url => {:action => :keywords} %></span>;
+              <% if logged_in? %>
+                <div class="item_blue" id="hidden" style="display:none">
+                  请确保你能够为这个关键字提供一些有价值的信息或想法。（关键字最长8个汉字）
+                  <% form_for [@user,@keyword_page] do |f| %>
+                    <div>
+                      <%= f.error_messages %>
+                    </div>
+                    <p>
+                      <%= f.text_field :keyword,:size => 20 %>
+                      <%= f.submit "创建这个关键字" %>
+                    </p>
+                    <%= f.check_box :long_keyword %>
+                    <%= f.label :long_keyword,"关键字名称为电影、书籍、音乐名称等名词，或为英文关键字名" %>
+                  <% end %>
+                </div>
+              <% end %>
+
               <div id="about_keyword" style="display:none">
                 <h3>这里的关键字就像我们在搜索引擎当中常常搜索的关键字。现实中我们总会在意某方面的行业权威或是意见领袖的看法。类似的，在关键字页面中，我们会优先看到<cite>声望值</cite>高的人的言论。就像这样：
                   <div><%= image_tag "value.jpe"%></div>
                   在最上面可以搜索已有的关键字。
                 </h3>
-                <% if logged_in? %>
 
-                <% end %>
+
               </div>
             </li>
             <li>
