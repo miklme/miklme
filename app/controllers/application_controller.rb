@@ -46,13 +46,6 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def lower_higher_good_validation(comment)
-    if comment.content.length>=6
-      true
-    else
-      false
-    end
-  end
   private
   def load_user
     @user=User.find(params[:user_id])
