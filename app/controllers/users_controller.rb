@@ -21,6 +21,8 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id]=@user.id
       flash[:notice] = "感谢注册，即刻体验Michael带给你的..."
+      current_user.last_ip=request.remote_ip
+      current_user.save
       redirect_to edit_user_path(current_user)
     else
       render :action => :new
@@ -52,7 +54,7 @@ class UsersController < ApplicationController
         flash[:notice]="你关注了#{User.find(session[:inviter_id]).name_or_nick_name(current_user)}"
         session[:relationship]=session[:inviter_id]=session[:value_order_id]=nil
       end
-      redirect_to(user_path(@user))
+      redirect_to keyword_pages_path
     else
       render :action => "edit"
     end
