@@ -17,15 +17,14 @@ class News < ActiveRecord::Base
 
   end
 
-  def self.list_friends_news(user,page)
+  def self.list_friends_news(user)
     following_ids=user.followings.map do |f|
       f.id
     end
-    self.paginate_by_user_id following_ids,
-      :per_page => 30,
-      :page => page,
+    self.find_all_by_user_id following_ids,
       :order  => "created_at DESC",
-      :conditions => "news_type='comment' or news_type='blog_resource' or news_type='replied_comment'"
+      :conditions => "news_type='comment' or news_type='blog_resource' or news_type='replied_comment'",
+      :limit => 32
   end
 
   def self.self_news_for_others(user,page)
