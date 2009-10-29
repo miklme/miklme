@@ -2,6 +2,7 @@ class Comment < ActiveRecord::Base
   belongs_to :owner,:class_name => "User",:foreign_key => "user_id"
   belongs_to :resource
   has_many :replied_comments,:class_name => "Comment",:foreign_key => "parent_comment_id"
+  has_many :replied_commenters,:through => :replied_comments,:source => :owner
   has_many :news,:dependent => :destroy
   belongs_to :parent_comment,:class_name => "Comment",:foreign_key => "parent_comment_id"
 
@@ -12,11 +13,20 @@ class Comment < ActiveRecord::Base
   validates_presence_of :content
 
   after_create :adjust_resource_updated_at
-  private
 
+  def parent
+    if self.parent_comment.present?
+      self.parent_comment
+    else
+      self.resource
+    end
+  end
+
+  private
   def adjust_resource_updated_at
     self.resource.updated_at=Time.now
     self.resource.save
   end
 
+  
 end

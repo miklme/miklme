@@ -1,4 +1,4 @@
-
+    <%  replied_commenters=@comment.replied_comments.map {|r| r.owner} %>
 <% x="form" %>
 <table class="item" cellspacing="5" id="<%=x%>" >
   <tr>
@@ -14,10 +14,23 @@
             <%=f.text_field :action_one,:size => 4%>其 <%= f.text_field :action_two,:size => 4 %>
           </p>
         </div>
-        回应内容
-        <p>
-          <%= f.text_area :content,:size => "48x3"%>
-        </p>
+        <div class="comment_blank">
+          <p>
+            <% if !replied_commenters.include?(current_user) %>
+              <%=f.radio_button :rating,1 %>
+              <cite>同感
+              </cite>
+              <%=f.radio_button :rating,0%>
+              不表态
+              <%=f.radio_button :rating,-1%>
+              <strong>反对
+              </strong>
+            <% else %>
+              <span class="grey">你已经表态过了</span>
+            <% end %>
+            <%= f.text_area :content,:size => "48x3"%>
+          </p>
+        </div>
         <p>
           <%= f.submit '就这样'%>
         </p>

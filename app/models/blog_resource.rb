@@ -15,8 +15,8 @@ class BlogResource<Resource
 #    })
   has_many :comments,:foreign_key => "resource_id",:dependent => :destroy
   has_many :commenters,:through => :comments,:source => :owner,:conditions => "parent_comment_id is NULL"
-  has_many :good_commenters,:through => :comments,:source => :owner,:conditions => "rating>0"
-  has_many :bad_commenters,:through => :comments,:source => :owner,:conditions => "rating<0"
+  has_many :good_commenters,:through => :comments,:source => :owner,:conditions => "rating>0 and parent_comment_id is NULL"
+  has_many :bad_commenters,:through => :comments,:source => :owner,:conditions => "rating<0 and parent_comment_id is NULL"
 
   validates_presence_of :content
   validates_length_of :content,:maximum => 500
