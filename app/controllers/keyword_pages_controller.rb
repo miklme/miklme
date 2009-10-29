@@ -88,19 +88,4 @@ class KeywordPagesController < ApplicationController
     end
   end
 
-
-  #不打算使用这个功能了
-  #  def hide_field
-  #    v=ValueOrder.find_by_user_id_and_keyword_page_id(current_user.id,params[:id])
-  #    v.hidden=true
-  #    v.save
-  #    redirect_to :back
-  #  end
-  #
-  #  def appear_field
-  #    v=ValueOrder.find_by_user_id_and_keyword_page_id(current_user.id,params[:id])
-  #    v.hidden=false
-  #    v.save
-  #    redirect_to :back
-  #  end
 end

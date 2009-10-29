@@ -45,10 +45,10 @@
                 <h2>目前所在关键字</h2>
                 <dl>
                   <dt>
-                <span id="current_page"><%=h @keyword_page.keyword %></span>
+                    <span id="current_page"><%=h @keyword_page.keyword %></span>
                   </dt>
                   <dd>
-                <span><%= my_value_here(@keyword_page) %></span>
+                    <span><%= my_value_here(@keyword_page) %></span>
                   </dd>
                 </dl>
                 <h2>相关关键字</h2>
@@ -76,9 +76,7 @@
           </div>
           <div id="content">
             <% if flash[:notice].present? %>
-              <p>
-                <strong><%=h flash[:notice] %></strong>
-              </p>
+                <%= flash[:notice] %>
             <% end %>
             <%= @content_for_layout %>
           </div></div></div></div>

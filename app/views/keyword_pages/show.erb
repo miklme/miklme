@@ -13,17 +13,13 @@
 <!--
 有趣的分割点
 <span class="sc_bullet">·</span>%>
-  -->
-  <%= render :partial => "form" %>
-<div id="succeed">
-</div>
+-->
+<%= render :partial => "form" %>
 <div ><span class="sb_pag">
-<%= link_to "默认排序",keyword_page_path(@keyword_page) %>
-<%= link_to_remote "查看最新",:url => {:action => :by_time,:id => @keyword_page}%></span></div>
+    <%= link_to "默认排序",keyword_page_path(@keyword_page) %>
+    <%= link_to_remote "查看最新",:url => {:action => :by_time,:id => @keyword_page}%></span></div>
 <div id="results">
-
   <ol class="sb_results" id="wg0">
-    <div id="new"></div>
     <% for u in @users %>
       <%= render :partial => "resources/resource",:object => u.resources.find(:first,:order => "created_at DESC",:conditions => {:keyword_page_id => @keyword_page.id}) %>
       <%= render  :partial => "blog_resources/blog_resource",:collection => u.resources.find(:all,:limit => 4,:offset => 1,:order => "created_at DESC",:conditions => {:keyword_page_id => @keyword_page.id})  %>
