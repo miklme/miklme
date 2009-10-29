@@ -1142,7 +1142,7 @@ input {
 #results li:hover{
     background-color:#F5f5f5
 }
-.left{float:left}
+.left{float:left;}
 .right{
     float:right
 }

@@ -61,10 +61,23 @@
             </p>
           <% end %>
           <h2 class="title_1"><%= link_to "欢迎来到Michael" %></h2>
-          <p>在这里，读懂你自己。你要做的全部：</p>
+          <p>在这里，Michael会智能地判断你的价值。就像 <%= link_to_remote "这样>>>",:url => {:action => :toggle_blind,:id => "like_this"} %>。你要做的全部：
+          </p>
+          <div id="like_this" style="display:none">
+            <table>
+              <th>
+              <tr>
+                <td>            <%= image_tag "like_this.jpe" %>
+                </td>
+                <td width="300px"><h3>左边这些全部都是由用户创建的关键字，进入它们可以看到围绕这一关键字的各种想法和讨论内容。随着讨论的进行，Michael就会判断出你有关这个关键字的<cite>声望</cite>(绿色数字)</h3></td>
+              </tr>
+              </th>
+            </table>
+          </div>
           <ol>
             <li>
-              进入<% if logged_in? %>或<%= link_to_remote  '创建' ,:url => {:action => :show_hidden}%><% end %>一个自己感兴趣的<span class="title_2"><%= link_to_remote "关键字>>>",:url => {:action => :keywords} %></span>;
+              进入<% if logged_in? %>或<%= link_to_remote  '创建' ,:url => {:action => :show_hidden}%><% end %>一个自己感兴趣的
+              <span class="title_2"><%= link_to_remote "关键字>>>(?)",:url => {:action => :toggle_blind,:id => "about_keyword"} %></span>;
               <% if logged_in? %>
                 <div class="item_blue" id="hidden" style="display:none">
                   请确保你能够为这个关键字提供一些有价值的信息或想法。（关键字最长8个汉字）
@@ -94,7 +107,7 @@
               在这个关键字页面中，邀请一些对这个"关键字"及其延伸可能感兴趣的朋友(邀请链接在关键字页面中)，一起来说些什么，就像一个简单的论坛。一定活跃人数是Michael完成后台计算的基础;
             </li>
             <li>
-              注意你关于这个关键字的<span class="title_3"><%= link_to_remote "声望>>>",:url => {:action => :value}%></span>，你参与的越多，时间越长，声望值越准确。<cite>它尽可能精确地反应了你有关这一关键字的知识水平与被认可程度。</cite>
+              注意你关于这个关键字的<span class="title_3"><%= link_to_remote "声望>>>(?)",:url => {:action => :toggle_blind,:id => "about_value"}%></span>，你参与的越多，时间越长，声望值越准确。<cite>它尽可能精确地反应了你有关这一关键字的知识水平与被认可程度。</cite>
               <div id="about_value" style="display:none">
                 <h3>Michael的科技在于他对现实的模拟。在现实当中，排除传媒等因素，人们建立声望的过程常常是别人对于自己观点、想法认可的过程。
                   在Michael这里，你可以在评论中表明你是否认可他的想法，这会影响他的声望：

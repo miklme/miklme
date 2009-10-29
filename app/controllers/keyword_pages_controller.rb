@@ -82,17 +82,12 @@ class KeywordPagesController < ApplicationController
     end
   end
 
-  def keywords
+  def toggle_blind
     render :update do |page|
-      page.visual_effect :toggle_blind,"about_keyword"
+      page.visual_effect :toggle_blind,params[:id]
     end
   end
 
-  def value
-    render :update do |page|
-      page.visual_effect :toggle_blind,"about_value"
-    end
-  end
 
   #不打算使用这个功能了
   #  def hide_field
