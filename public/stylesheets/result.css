@@ -1207,6 +1207,10 @@ input {
     background:none
 
 }
+
+dd{
+    margin-left:0
+}
 .comment_blank input,.comment_blank textarea{
     border:hidden
 }

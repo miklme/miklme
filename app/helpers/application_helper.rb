@@ -14,7 +14,7 @@ module ApplicationHelper
 
   def my_value_here(keyword_page)
     if logged_in?
-      "我在此的<cite>声望：#{current_user.field_value(keyword_page)}</cite>"
+      "我在此的声望：<cite>#{current_user.field_value(keyword_page)}</cite>"
     end
   end
   def link_to_page(keyword_page)
