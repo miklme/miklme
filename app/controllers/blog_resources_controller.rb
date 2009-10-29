@@ -25,7 +25,7 @@ class BlogResourcesController < ApplicationController
       n.resource=@blog_resource
       n.save
       render :update do |page|
-        page.replace_html "succeed", "<p>发表成功。按照规则，你的想法会根据你的声望排序。</p>"
+        page.replace_html "succeed", "<h2 class='item_pink'>发表成功。默认情况下，你的想法会根据你的声望排序。</h2>"
         page.insert_html :top,"new",:partial => "resources/resource",:object => @blog_resource
         page.visual_effect(:pulsate, "new",:duration => 4)
       end

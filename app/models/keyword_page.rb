@@ -33,7 +33,11 @@ class KeywordPage < ActiveRecord::Base
   
   def field_value(user)
     v=ValueOrder.find_by_keyword_page_id_and_user_id(self.id,user.id)
-    v.value
+    if v.present?
+      v.value
+    else
+      0.0
+    end
   end
   
   def higher_lower_good(user1,user2)

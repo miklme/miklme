@@ -3,18 +3,15 @@
    <em><%= link_to user_profile_full.nick_name,user_path(user_profile_full) %></em>
    <span class="highlight">我已关注</span>
     <em><%= link_to "取消关注",user_be_follow_path(user_profile_full,user_profile_full.be_follows.find_by_follower_id(current_user.id)),:method => :delete,:confirm => "确定么？以后你将不能看到该用户的所有近况了。" %></em>
-    <cite><%= "总声望：#{user_profile_full.total_value}" %></cite>
   </div>
 <% elsif user_profile_full==current_user%>
   <div>
     <em><%= link_to user_profile_full.nick_name,user_path(user_profile_full) %></em>
-    <cite><%=link_to_value_help%>：<%=user_profile_full.total_value%></cite>
   </div>
 <% else %>
   <div>
     <em><%= link_to user_profile_full.nick_name ,user_path(user_profile_full)%></em>
     <span class="big_white"><%= link_to "加关注！",new_user_be_follow_path(user_profile_full) %></span>
-    <cite><%="总声望：#{user_profile_full.total_value}" %></cite>
   </div>
 <% end %>
 <% if user_profile_full.province.present? %>

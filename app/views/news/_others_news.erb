@@ -18,6 +18,7 @@
     <cite>
       <%=truncate others_news.comment.content,:length => 140 %>
     </cite>
+    <span class="right">关键字： <%=link_to_page others_news.resource.keyword_page %></span>
     <em><%= link_to "回应>>>",user_resource_comments_path(others_news.resource.owner,others_news.resource) %></em><span class="highlight">(<%=others_news.resource.comments.size %>)</span>
   </p>
 <% elsif others_news.news_type=="replied_comment"%>
@@ -30,6 +31,7 @@
     <cite>
       <%=truncate others_news.comment.content,:length => 140 %>
     </cite>
+    <span class="right">关键字： <%=link_to_page others_news.resource.keyword_page %></span>
     <em><%= link_to "回应>>>",user_resource_comments_path(others_news.resource.owner,others_news.resource) %></em><span class="highlight">(<%=others_news.resource.comments.size %>)</span>
   </p>
 <%end  %>

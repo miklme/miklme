@@ -4,10 +4,6 @@ module ApplicationHelper
     User.find(id)
   end
 
-  def link_to_value_help
-    "总声望"
-  end
-
   def link_to_resource(resource)
     if resource.class.to_s=="LinkUrlResource"
       link_to resource.description_or_title,resource.link_url,:popup => true,:class => "title"
@@ -15,7 +11,12 @@ module ApplicationHelper
       link_to resource.description_or_title,user_blog_resource_path(resource.owner,resource),:popup => true,:class => "title"
     end
   end
-  
+
+  def my_value_here(keyword_page)
+    if logged_in?
+      "我在此的<cite>声望：#{current_user.field_value(keyword_page)}</cite>"
+    end
+  end
   def link_to_page(keyword_page)
     link_to keyword_page.keyword,keyword_page_path(keyword_page)
   end

@@ -66,7 +66,7 @@ class User < ActiveRecord::Base
     if v.present?
       v.value
     else
-      "<strong>无</strong>(未加入该关键字)"
+      0.0
     end
   end
 

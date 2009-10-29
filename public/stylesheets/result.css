@@ -1101,7 +1101,7 @@ div.auto_complete ul {
 }
 div.auto_complete ul li {
     margin:0;
-    padding:3px;
+    padding:6px;
     color:black;
     font-size:14px;
 }
@@ -1123,7 +1123,7 @@ input {
 #hover:hover{
     display:inline
 }
-.twitter{font-size:larger}
+.larger_font{font-size:14px}
 #keyword_page,#keyword_page a{
     color:#F76120;
 }
@@ -1131,7 +1131,14 @@ input {
     background:none;
     text-decoration:underline
 }
-
+#current_page,#current_page a{
+        color:#F76120;
+        font-weight:bold
+}
+#current_page a:hover{
+    background:none;
+    text-decoration:underline
+}
 #results li:hover{
     background-color:#F5f5f5
 }

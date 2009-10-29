@@ -1,0 +1,18 @@
+<div id="form">
+  <% if logged_in? %>
+    关于<span id="current_page"><%= @keyword_page.keyword %></span>，你有哪些真知灼见?
+
+    <% remote_form_for [@keyword_page,@blog_resource] do |f|%>
+      <strong><%= f.error_messages %>
+      </strong>
+      <p><%= f.text_area :content,:cols => 45,:rows => 4 %>
+        <!--
+        靠，先不用这个了
+        <li>
+    <%#= fckeditor_textarea(:blog_resource,:content,:toolbarSet => "Easy",:width => '85%',:height => '150px') %>
+        </li>
+        -->
+        <%= f.submit "完成",:class => "big_button"  %>
+      <% end %>
+    <% end %>
+</div>
