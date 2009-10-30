@@ -1,6 +1,6 @@
 <div id="form">
   <% if logged_in? %>
-    关于<span id="current_page"><%= @keyword_page.keyword %></span>，你有哪些真知灼见?写在下面，相当于<span class="highlight">立一个靶子</span>：
+    关于<span id="current_page"><%= @keyword_page.keyword %></span>，你有哪些真知灼见?写在下面，相当于<span class="highlight">立了一个靶子</span>：
 
     <% form_for [@keyword_page,@blog_resource] do |f|%>
       <strong><%= f.error_messages %>
@@ -12,7 +12,7 @@
     <%#= fckeditor_textarea(:blog_resource,:content,:toolbarSet => "Easy",:width => '85%',:height => '150px') %>
         </li>
         -->
-        <%= f.submit "立靶子！",:class => "big_button"  %>
+        <%= f.submit "就这样",:class => "big_button"  %>
       <% end %>
     <% end %>
 </div>
