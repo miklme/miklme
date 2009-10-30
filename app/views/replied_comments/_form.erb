@@ -15,7 +15,7 @@
         </div>
         <div class="comment_blank">
           <p>
-            <% if !@comment.replied_commenters.include?(current_user) %>
+            <% if !@comment.commenters.include?(current_user) %>
               <%=f.radio_button :rating,1 %>
               <cite>同感
               </cite>

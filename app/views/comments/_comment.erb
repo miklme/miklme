@@ -21,7 +21,7 @@
       </div>
       <span><%= link_to_remote "回应>>>",:url => {:controller => :replied_comments,:action => :new,:id => comment} %></span>
       <div id="<%=y%>">
-      <% for replied_comment in comment.replied_comments %>
+      <% for replied_comment in comment.comments %>
         <%= render :partial  => "comment",:object => replied_comment %>
       <% end %>
       </div>

@@ -9,7 +9,7 @@ ActionController::Routing::Routes.draw do |map|
     user.resources :resources,
       :collection => {:authority => :get,:not_authority => :get} do |resource|
       resource.resources :comments,:collection => {:by_time => :get} do |comment|
-        comment.resources :replied_comments
+        comment.resources :comments
       end
     end
     user.resources :blog_resources,:has_many => :comments

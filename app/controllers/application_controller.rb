@@ -48,18 +48,18 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def cheat_validation_2(replied_comment)
-    ips=replied_comment.resource.keyword_page.users.map do |user|
+  def cheat_validation_2(comment_comment)
+    ips=comment_comment.resource.keyword_page.users.map do |user|
       user.last_ip
     end
-    replied_commenters=replied_comment.parent_comment.replied_commenters
+    commenters=comment_comment.parent_comment.commenters
 #    if ips.find_all{|ip| ip==current_user.last_ip}.size==1 \
-        if replied_commenters.find_all{|u| u.id==current_user.id}.size==1\
-        and replied_comment.parent_comment.owner!=current_user
+        if commenters.find_all{|u| u.id==current_user.id}.size==1\
+#        and comment_comment.parent_comment.owner!=current_user
       true
     else
-      replied_comment.rating=0
-      replied_comment.save
+      comment_comment.rating=0
+      comment_comment.save
       false
     end
   end
