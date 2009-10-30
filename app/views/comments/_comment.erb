@@ -1,7 +1,7 @@
 
 <% x="comment_#{comment.id}" %>
 <% y="comments_for_#{comment.id}" %>
-<table class="item" cellspacing="5" id="<%=x%>">
+<table class="item" cellspacing="12" id="<%=x%>">
   <tr>
     <td width="60px">
       <%= render :partial => "shared/field_profile",:locals => {:user => comment.owner,:keyword_page => comment.resource.keyword_page} %>

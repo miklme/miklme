@@ -172,10 +172,9 @@ div#sw_nav li {
 
 
 .item {
-    padding: 6px 12px;
     border: 1px solid #d3d3d3;
     background: #FFF;
-    margin-bottom: 8px;
+    margin-top: 12px;
     vertical-align: text-top;
 }
 
