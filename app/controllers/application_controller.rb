@@ -5,6 +5,12 @@ class ApplicationController < ActionController::Base
   include AuthenticatedSystem
   before_filter :login_required,:check_profile_status
 
+  def auto_complete_for_keyword_page_keyword
+    keyword_pages=KeywordPage.find_with_ferret(params[:keyword_page][:keyword]+"~")
+    @keyword_pages=keyword_pages.find_all{|k| k.resources.size>=1}.first(15)
+    render :layout => false
+  end
+  
   def login_required
     if not logged_in?
       flash[:notice]='请登录以继续...'
@@ -24,12 +30,6 @@ class ApplicationController < ActionController::Base
     render :update do |page|
       page.hide "show"
       page.show "hide"
-    end
-  end
-
-  def show_hidden
-    render :update do |page|
-      page.toggle "hidden"
     end
   end
 

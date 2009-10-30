@@ -1093,6 +1093,7 @@ h3 {
 div.auto_complete {
     width: 350px;
     background: #fff ;
+    text-align:center
 }
 div.auto_complete ul {
     border:1px solid #888 ;
@@ -1114,6 +1115,9 @@ div.auto_complete ul strong.highlight {
     color: #800 ;
     margin:0;
     padding:0;
+}
+.search_bar {
+    text-align:center
 }
 input {
     padding-right: 3px;

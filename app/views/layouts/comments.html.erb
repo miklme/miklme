@@ -19,7 +19,15 @@
             <%= render :partial => "shared/keyword_page_header"%>
           <% end %>
         </div>
+
         <div class="sw_tbb"></div>
+        <div class="sw_box">
+          <h2><%= link_to "",keyword_pages_path,:class => "sw_logo"%>
+          </h2>
+          <div class="sw_bd">
+            <%= render :partial => "shared/search_bar" %>
+          </div>
+        </div>
       </div>
     </div>
     <div id="sw_content">
@@ -29,23 +37,13 @@
             <div class="sw_menu" id="sw_rel">
               <h2>目前所在关键字</h2>
               <dl>
-                  <dt>
-                <span id="current_page"><%=link_to_page @resource.keyword_page %></span>
-                  </dt>
-                  <dd>
-                <span><%= my_value_here(@keyword_page) %></span>
-                  </dd>
-                </dl>
-              <h2>相关关键字</h2>
-              <ul>
-                <% if not @related_keywords.blank? %>
-                  <% for related_keyword in @related_keywords %>
-                    <li id="keyword_page">
-                      <%= link_to related_keyword.name,keyword_page_path(related_keyword.keyword_page) %>
-                    </li>
-                  <% end %>
-                <% end %>
-              </ul>
+                <dt>
+                  <span id="current_page"><%=link_to_page @resource.keyword_page %></span>
+                </dt>
+                <dd>
+                  <span><%= my_value_here(@keyword_page) %></span>
+                </dd>
+              </dl>
             </div>
           </div>
         </div>

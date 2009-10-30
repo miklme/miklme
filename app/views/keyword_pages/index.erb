@@ -17,16 +17,7 @@
         </h2>
         <div class="sw_bd">
 
-
-          <% form_tag :controller => :keyword_pages,:action => :create do%>
-            <%= text_field 'keyword_page','keyword',:size => 40 %>
-            <div class="auto_complete" id="keyword_page_keyword_auto_complete">
-            </div>
-            <%= auto_complete_field :keyword_page_keyword,:url => {:action => 'auto_complete_for_keyword_page_keyword'},:after_update_element =>
-              "function(element,value){" + remote_function(:url => {:action => :redirect},:with=>"'keyword='+element.value") + "}"%>
-            <%=submit_tag "进入关键字" %>
-          <% end %>
-
+          <%= render :partial => "shared/search_bar" %>
         </div>
       </div>
     </div>

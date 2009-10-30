@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
-  before_filter :load_user_and_resource,:except => [:show_hidden]
-  skip_before_filter :login_required,:only => [:index,:by_time,:show_hidden]
+  before_filter :load_user_and_resource,:except =>  [:auto_complete_for_keyword_page_keyword]
+  skip_before_filter :login_required,:only => [:index,:auto_complete_for_keyword_page_keyword]
   # GET /comments
   # GET /comments.xml
   
@@ -12,17 +12,6 @@ class CommentsController < ApplicationController
     @related_keywords=@keyword_page.related_keywords
     @comments=@resource.comments_by_time(params[:page])
     @comment=@resource.comments.build
-  end
-
-  # GET /comments/1
-  # GET /comments/1.xml
-  def show
-    @comment = Comment.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @comment }
-    end
   end
 
   # POST /comments
