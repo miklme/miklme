@@ -23,7 +23,7 @@
               个人信息：</h2>
             <p><%= render :partial => "shared/user_profile_full",:object => @user %></p>
             <h2>
-              他的关键字信息：</h2>
+              他在意的关键字：</h2>
             <div>
               <% for k in @user.appear_keyword_pages %>
                 <p>
