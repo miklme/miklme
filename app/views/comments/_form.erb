@@ -11,7 +11,7 @@
     <p>
       <% if !form.resource.commenters.include?(current_user) %>
         <%=f.radio_button :rating,1 %>
-        <cite>同感
+        <cite>赞赏
         </cite>
         <%=f.radio_button :rating,0%>
         不表态
