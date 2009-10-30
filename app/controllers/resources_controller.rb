@@ -1,6 +1,6 @@
 class ResourcesController < ApplicationController
   before_filter :load_user,:except => :auto_complete_for_keyword_page_keyword
-  skip_before_filter :login_required,:only => [:index,:authority,:not_authority]
+  skip_before_filter :login_required,:only => [:index]
   
   def index
     @resources=Resource.find_by_user(@user,params[:page])
@@ -17,14 +17,6 @@ class ResourcesController < ApplicationController
       format.html { redirect_to(user_resources_url) }
       format.xml  { head :ok }
     end
-  end
-
-  def authority
-    @authority_resources=Resource.authority_resources(@user,params[:page])
-  end
-
-  def not_authority
-    @not_authority_resources=Resource.not_authority_resources(@user,params[:page])
   end
 
 

@@ -7,7 +7,6 @@ class BlogResourcesController < ApplicationController
   def create
     @keyword_page=KeywordPage.find(params[:keyword_page_id])
     @blog_resource=@keyword_page.blog_resources.build(params[:blog_resource])
-    @blog_resource.authority=true
     @blog_resource.owner=current_user
     if @blog_resource.save
       @keyword_page.updated_at=Time.now
@@ -27,7 +26,7 @@ class BlogResourcesController < ApplicationController
       flash[:notice]="<h2 class='item_pink'>发表成功。默认情况下，你的想法会根据你的<cite>声望</cite>排序，你可以在下面找找看。</h2>"
       redirect_to :back
     else
-      flash[:notice]="<p class='highlight'>内容太短了。</p>"
+      flash[:notice]="<p class='highlight'>对不起，你发表的内容有点短。</p>"
       redirect_to :back
     end
   end

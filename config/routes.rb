@@ -6,8 +6,7 @@ ActionController::Routing::Routes.draw do |map|
     user.resources :be_follows
     user.resources :follows,:new => {:search_user => :get}
     user.resources :keyword_pages
-    user.resources :resources,
-      :collection => {:authority => :get,:not_authority => :get} do |resource|
+    user.resources :resources do |resource|
       resource.resources :comments,:collection => {:by_time => :get} do |comment|
         comment.resources :comments
       end
