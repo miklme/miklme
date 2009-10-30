@@ -2,7 +2,7 @@
 <ul>
   <% for k in @recent_keyword_pages %>
     <li id="keyword_page">
-      <%=link_to k.keyword,keyword_page_path(k),:popup => true %>
+      <%=link_to k.keyword,keyword_page_path(k) %>
     </li>
   <% end %>
 </ul>

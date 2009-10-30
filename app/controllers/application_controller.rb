@@ -53,9 +53,9 @@ class ApplicationController < ActionController::Base
       user.last_ip
     end
     commenters=comment_comment.parent_comment.commenters
-#    if ips.find_all{|ip| ip==current_user.last_ip}.size==1 \
-        if commenters.find_all{|u| u.id==current_user.id}.size==1\
-#        and comment_comment.parent_comment.owner!=current_user
+    if ips.find_all{|ip| ip==current_user.last_ip}.size==1 \
+        and commenters.find_all{|u| u.id==current_user.id}.size==1\
+        and comment_comment.parent_comment.owner!=current_user
       true
     else
       comment_comment.rating=0
