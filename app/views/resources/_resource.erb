@@ -6,7 +6,7 @@
     <span class="sb_meta"><%=distance_of_time_in_words(Time.now, resource.created_at, true)%></span>
     <div class="margin_left">
       <p>
-        <%=auto_link(resource.content)%>
+        <%=truncate auto_link(resource.content),:length => 300%>
       </p>
       <br />
       <%= link_to "回应>>>", user_resource_comments_path(resource.owner,resource),:popup => true %><span class="amount">(<%=resource.comments.size  %>)</span>

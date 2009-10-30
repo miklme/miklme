@@ -2,7 +2,9 @@ class Comment < ActiveRecord::Base
   belongs_to :owner,:class_name => "User",:foreign_key => "user_id"
   belongs_to :resource
   has_many :replied_comments,:class_name => "Comment",:foreign_key => "parent_comment_id"
-  has_many :replied_commenters,:through => :replied_comments,:source => :owner
+  has_many :commenters,:through => :replied_comments,:source => :owner
+  has_many :good_commenters,:through => :replied_comments,:source => :owner,:conditions => "rating>0"
+  has_many :bad_commenters,:through => :replied_comments,:source => :owner,:conditions => "rating<0"
   has_many :news,:dependent => :destroy
   belongs_to :parent_comment,:class_name => "Comment",:foreign_key => "parent_comment_id"
 

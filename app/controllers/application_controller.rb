@@ -52,7 +52,7 @@ class ApplicationController < ActionController::Base
     ips=replied_comment.resource.keyword_page.users.map do |user|
       user.last_ip
     end
-    replied_commenters=replied_comment.parent_comment.replied_comments.map {|r| r.owner}
+    replied_commenters=replied_comment.parent_comment.replied_commenters
 #    if ips.find_all{|ip| ip==current_user.last_ip}.size==1 \
         if replied_commenters.find_all{|u| u.id==current_user.id}.size==1\
         and replied_comment.parent_comment.owner!=current_user

@@ -2,7 +2,7 @@
     <span class="sb_meta"><%=distance_of_time_in_words(Time.now, blog_resource.created_at, true)%></span>
     <div class="margin_left">
       <p>
-        <%=auto_link(blog_resource.content)%>
+        <%=truncate auto_link(blog_resource.content),:length => 300%>
       </p>
       <br />
       <%= link_to  "回应>>>", user_resource_comments_path(blog_resource.owner,blog_resource),:popup => true %><span class="amount">(<%=blog_resource.comments.size  %>)</span>
