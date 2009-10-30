@@ -30,8 +30,7 @@ class KeywordPagesController < ApplicationController
       @news=News.list_self_news(@user)
       @blog_resource=@keyword_page.blog_resources.build
     end
-    users=@keyword_page.users_have_resources
-    @users=users.reverse.paginate(:page => params[:page],:per_page => 10)
+    @users=@keyword_page.users_have_resources.paginate(:page => params[:page],:per_page => 10)
     @related_keywords=@keyword_page.related_keywords
   end
 

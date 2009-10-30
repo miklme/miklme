@@ -96,7 +96,7 @@ class KeywordPage < ActiveRecord::Base
     end
     ids.uniq!
     users=User.find(ids)
-    ordered=users.sort_by { |u| [u.field_value(self),u.created_at]}
+    ordered=users.sort_by { |u| [u.field_value(self),u.created_at]}.reverse
   end
   def self.recent_keyword_pages
     a=self.find(:all,:order => "updated_at DESC",:limit => 10)
