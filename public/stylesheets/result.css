@@ -924,6 +924,9 @@ input.sw_q_nrw {
     width:666px;
     padding:0 150px 0 0;
 }
+#content p{
+    line-height:162%
+}
 #results_area {
     float:left;
     padding-bottom:10px;
