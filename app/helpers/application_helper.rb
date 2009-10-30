@@ -12,4 +12,16 @@ module ApplicationHelper
   def link_to_page(keyword_page)
     link_to keyword_page.keyword,keyword_page_path(keyword_page)
   end
+
+  def order(user,keyword_page)
+    if !keyword_page.users_have_resources.include?(user)
+      user_order="N"
+    else
+      user_order=keyword_page.users_have_resources.index(user).+1
+    end
+    all_users=keyword_page.users_have_resources.size
+    "(<span class='highlight'>
+    #{user_order}
+      </span>/ #{all_users})"
+  end
 end

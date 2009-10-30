@@ -23,12 +23,12 @@
               个人信息：</h2>
             <p><%= render :partial => "shared/user_profile_full",:object => @user %></p>
             <h2>
-              在行的"关键字"：</h2>
+              他的关键字信息：</h2>
             <div>
               <% for k in @user.appear_keyword_pages %>
                 <p>
                   <span class="keyword_page"><%=link_to k.keyword,keyword_page_path(KeywordPage.find_by_keyword(k.keyword)) %></span>
-                  <cite>声望：<strong><%= k.field_value(@user) %></strong>,排名：(<span class="highlight"><%= ValueOrder.order(@user,KeywordPage.find_by_keyword(k.keyword)) %></span>/<%= k.users_have_resources.size %>)
+                  <cite>声望：<strong><%= k.field_value(@user) %></strong>,排名：<%= order(@user,k) %>
                   </cite>
                 </p>
               <% end %>
