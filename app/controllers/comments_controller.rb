@@ -7,10 +7,7 @@ class CommentsController < ApplicationController
   def index
     @keyword_page=KeywordPage.find_by_keyword(@resource.keyword_page.keyword)
     if logged_in? and !current_user.keyword_pages.include?(@keyword_page)
-      v=ValueOrder.new
-      v.user=current_user
-      v.keyword_page=@keyword_page
-      v.save
+      current_user.keyword_pages<<@keyword_page
     end
     @related_keywords=@keyword_page.related_keywords
     @comments=@resource.comments_by_time(params[:page])
@@ -32,11 +29,6 @@ class CommentsController < ApplicationController
   # POST /comments.xml
   def create
     @comment = @resource.comments.build(params[:comment])
-    if not current_user.keyword_pages.include?(@resource.keyword_page)
-      v=ValueOrder.find_by_keyword_page_id_and_user_id(@resource.keyword_page.id,current_user.id)
-      v.actived=true
-      v.save
-    end
     @comment.owner=current_user
     if @comment.save
       calculate_comment_value(@comment)

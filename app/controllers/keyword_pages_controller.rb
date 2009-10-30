@@ -1,38 +1,30 @@
 class KeywordPagesController < ApplicationController
-  skip_before_filter :login_required,:except => [:create]
+  skip_before_filter :login_required
   skip_before_filter :check_profile_status
   def index
     @recent_keyword_pages=KeywordPage.recent_keyword_pages
     @girls_pages=KeywordPage.girls_pages
-    @top_users=User.top_15
+    @top_users=User.top_10
     @user=current_user
-    if logged_in?
-      @keyword_page=@user.keyword_pages.build
-    end
     s=KeywordPage.many_user_keyword_pages.sort_by {|k| k.updated_at}
     @many_user_keyword_pages=s.reverse.first(6)
     render :layout => "related_keywords"
   end
   
   def create
-    @keyword_page=KeywordPage.new(params[:keyword_page])
-    if @keyword_page.save
-      v=ValueOrder.new
-      v.keyword_page=@keyword_page
-      v.user=current_user
-      v.actived=true
-      v.save
-      flash[:notice]="创建成功。在这个关键字内你的初始声望为0"
-      redirect_to keyword_page_path(@keyword_page)
-    else
-      flash[:notice]="出了点小问题，这个关键字已经存在了。"
-      render :action => :index,:layout => "related_keywords"
+    @keyword_page=KeywordPage.find_or_create_by_keyword(params[:keyword_page][:keyword])
+    if logged_in? and !current_user.keyword_pages.include?(@keyword_page)
+      current_user.keyword_pages<<@keyword_page
     end
+    redirect_to keyword_page_path(@keyword_page)
   end
    
   
   def show
     @keyword_page=KeywordPage.find(params[:id])
+    if logged_in? and !current_user.keyword_pages.include?(@keyword_page)
+      current_user.keyword_pages<<@keyword_page
+    end
     if logged_in?
       @user=current_user
       @news=News.list_self_news(@user)
@@ -58,7 +50,7 @@ class KeywordPagesController < ApplicationController
 
   def auto_complete_for_keyword_page_keyword
     keyword_pages=KeywordPage.find_with_ferret(params[:keyword_page][:keyword]+"~")
-    @keyword_pages=keyword_pages.first(15)
+    @keyword_pages=keyword_pages.find_all{|k| k.resources.size>=1}.first(15)
     render :layout => false
   end
 

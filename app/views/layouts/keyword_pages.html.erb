@@ -25,15 +25,14 @@
           <h2><%= link_to "",keyword_pages_path,:class => "sw_logo"%>
           </h2>
           <div class="sw_bd">
-<%# form_tag :controller => :searched_contents,:action => :show do%>
-            搜索关键字,很好用：
-            <%= text_field 'keyword_page','keyword',:size => 40 %>
-            <div class="auto_complete" id="keyword_page_keyword_auto_complete">
-            </div>
-            <%= auto_complete_field :keyword_page_keyword,:url => {:controller => :keyword_pages,:action => 'auto_complete_for_keyword_page_keyword'},:after_update_element =>
-              "function(element,value){" + remote_function(:url => {:controller => :keyword_pages,:action => :redirect},:with=>"'keyword='+element.value") + "}"%>
-<%#=submit_tag "搜索全部" %>
-<%# end %>
+            <% form_tag :controller => :keyword_pages,:action => :create do%>
+              <%= text_field 'keyword_page','keyword',:size => 40 %>
+              <div class="auto_complete" id="keyword_page_keyword_auto_complete">
+              </div>
+              <%= auto_complete_field :keyword_page_keyword,:url => {:controller => :keyword_pages,:action => 'auto_complete_for_keyword_page_keyword'},:after_update_element =>
+                "function(element,value){" + remote_function(:url => {:controller => :keyword_pages,:action => :redirect},:with=>"'keyword='+element.value") + "}"%>
+              <%=submit_tag "进入关键字" %>
+            <% end %>
           </div>
         </div>
       </div>
@@ -76,7 +75,7 @@
           </div>
           <div id="content">
             <% if flash[:notice].present? %>
-                <%= flash[:notice] %>
+              <%= flash[:notice] %>
             <% end %>
             <%= @content_for_layout %>
           </div></div></div></div>

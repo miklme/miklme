@@ -10,8 +10,7 @@ class User < ActiveRecord::Base
   named_scope :ten,:limit => 10
   has_many :value_orders
   has_many :keyword_pages,:through => :value_orders,:source => :keyword_page
-  has_many :appear_keyword_pages,:through => :value_orders,:source => :keyword_page,:conditions => "actived=true and value>0",:order => "value DESC",:limit => 10
-
+  has_many :appear_keyword_pages,:through => :value_orders,:source => :keyword_page,:order => "value DESC",:limit => 10
   has_many :news
   has_many :comments
   has_many :commented_resources,:through => :comments,:source => :resource
@@ -113,8 +112,8 @@ class User < ActiveRecord::Base
     ks.compact
   end
 
-  def self.top_15
+  def self.top_10
     us=User.find(:all).sort_by {|u| u.total_value}
-    us.reverse!.first(15)
+    us.reverse!.first(10)
   end
 end
