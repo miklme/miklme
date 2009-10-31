@@ -38,7 +38,7 @@ class ApplicationController < ActionController::Base
       user.last_ip
     end
     if ips.find_all{|ip| ip==current_user.last_ip}.size==1 and\
-        comment.resource.commenters.find_all{|u| u.id==current_user.id}.size==1 and\
+        comment.resource.commenters.find_all{|object| object.id==current_user.id}.size==1 and\
         comment.resource.owner!=current_user
       true
     else
@@ -54,7 +54,7 @@ class ApplicationController < ActionController::Base
     end
     commenters=comment_comment.parent_comment.commenters
     if ips.find_all{|ip| ip==current_user.last_ip}.size==1 \
-        and commenters.find_all{|u| u.id==current_user.id}.size==1\
+        and commenters.find_all{|object| object.id==current_user.id}.size==1\
         and comment_comment.parent_comment.owner!=current_user
       true
     else
@@ -65,23 +65,23 @@ class ApplicationController < ActionController::Base
   end
 
   def calculate_comment_value(comment)
-    u=User.find(comment.resource.owner)
+    object=comment.parent.owner
     a=choose_validater(comment)
     if a
       current_v=current_user.field_value(comment.resource.keyword_page)
-      author_v=comment.parent.owner.field_value(comment.resource.keyword_page)
+      author_v=object.field_value(comment.resource.keyword_page)
       if current_v<= author_v and comment.rating==-1
-        u.change_value comment.resource.keyword_page,-comment.resource.keyword_page.lower_higher_bad(comment.parent)
-        u.save
+        object.change_value comment.resource.keyword_page,-comment.resource.keyword_page.lower_higher_bad(comment.parent)
+        object.save
       elsif current_v>author_v and comment.rating==-1
-        u.change_value(comment.resource.keyword_page,-comment.resource.keyword_page.higher_lower_bad(comment.parent.owner))
-        u.save
+        object.change_value(comment.resource.keyword_page,-comment.resource.keyword_page.higher_lower_bad(comment.parent.owner))
+        object.save
       elsif comment.rating==1 and  current_v>author_v
-        u.change_value comment.resource.keyword_page,comment.resource.keyword_page.higher_lower_good(current_user,comment.parent.owner)
-        u.save
+        object.change_value comment.resource.keyword_page,comment.resource.keyword_page.higher_lower_good(current_user,comment.parent.owner)
+        object.save
       elsif comment.rating==1 and  current_v<=author_v
-        u.change_value comment.resource.keyword_page,comment.resource.keyword_page.lower_higher_good(comment.parent)
-        u.save
+        object.change_value comment.resource.keyword_page,comment.resource.keyword_page.lower_higher_good(comment.parent)
+        object.save
       end
     end
   end

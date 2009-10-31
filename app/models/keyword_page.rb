@@ -54,7 +54,11 @@ class KeywordPage < ActiveRecord::Base
 
   def lower_higher_bad(r)
     b=r.bad_commenters.size
-    0.15*(b**2-(b-1)**2)
+    if b>=2
+      0.15*(b**2-(b-1)**2)
+    else
+      0
+    end
   end
 
   def higher_lower_bad(user)
