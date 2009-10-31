@@ -3,7 +3,7 @@
 <% if logged_in? %>
   <ul>
     <li>
-      <%= link_to "Michael",keyword_pages_path %>
+      <%= link_to_unless_current "Michael",keyword_pages_path %>
     </li>
 
   </ul>
