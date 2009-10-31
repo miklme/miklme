@@ -19,7 +19,7 @@
         <% end %>
       <% end %>
       </div>
-      <span><%= link_to_remote "回应>>>",:url => {:controller => :replied_comments,:action => :new,:id => comment} %></span>
+      <span><%= link_to_remote "回复>>>",:url => {:controller => :replied_comments,:action => :new,:id => comment} %></span>
       <div id="<%=y%>">
       <% for replied_comment in comment.comments %>
         <%= render :partial  => "comment",:object => replied_comment %>

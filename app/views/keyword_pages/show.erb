@@ -25,7 +25,7 @@
       <%= render  :partial => "blog_resources/blog_resource",:collection => u.resources.find(:all,:limit => 3,:offset => 1,:order => "created_at DESC",:conditions => {:keyword_page_id => @keyword_page.id})  %>
       <% if u.resources.find(:all,:order => "created_at DESC",:conditions => {:keyword_page_id => @keyword_page.id}).size>4 %>
         <li>
-          <div class="margin_left" id="keyword_page"><%= link_to_remote "展开他的更多'想法'>>",:url => {:action => :more,:id => u.id,:keyword_page_id => @keyword_page.id}%>
+          <div class="margin_left" id="keyword_page"><%= link_to_remote '展开他的更早发言>>',:url => {:action => :more,:id => u.id,:keyword_page_id => @keyword_page.id}%>
           </div>
         </li>
       <% end %>

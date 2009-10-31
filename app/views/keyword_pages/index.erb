@@ -51,7 +51,7 @@
             </p>
           <% end %>
           <h2 class="title_1"><%= link_to "欢迎来到Michael" %></h2>
-          <p>在这里，Michael会智能地判断你的价值。就像 <%= link_to_remote "这样>>>",:url => {:action => :toggle_blind,:id => "like_this"} %>。你要做的全部：
+          <p>在这里，Michael会智能地判断你在哪方面较为擅长。就像 <%= link_to_remote "这样>>>",:url => {:action => :toggle_blind,:id => "like_this"} %>。你要做的全部：
           </p>
           <div id="like_this" style="display:none">
             <table>
@@ -59,7 +59,7 @@
               <tr>
                 <td>            <%= image_tag "like_this.jpe" %>
                 </td>
-                <td width="300px"><h3>左边这些全部是一些关键字，进入它们可以看到围绕这一关键字的各种想法和讨论内容。随着讨论的进行，Michael就会判断出你有关这个关键字的<cite>声望</cite>(绿色数字)</h3></td>
+                <td width="300px"><h3>这些全部是一些关键字，进入它们可以看到围绕这一关键字的各种想法和讨论内容。如果你也发表一些内容，Michael会神奇地依据你发表内容的价值判断出你在这个关键字内的<cite>声望</cite>(绿色数字)</h3></td>
               </tr>
               </th>
             </table>
@@ -67,17 +67,17 @@
           <ol>
             <li>
               进入一个自己感兴趣的
-              <span class="title_2"><%= link_to_remote "关键字>>>(?)",:url => {:action => :toggle_blind,:id => "about_keyword"} %></span>;
+              <span class="title_2"><%= link_to_remote "关键字>>>(?)",:url => {:action => :toggle_blind,:id => "about_keyword"} %></span>，就像进入一个论坛;
               <div id="about_keyword" style="display:none">
-                <h3>这里的关键字就像我们在搜索引擎当中常常搜索的关键字。Michael的科技在于他对现实的模拟。
-                  现实中我们总会在意某方面的行业权威或是意见领袖的看法。类似的，在关键字页面中，我们会优先看到<cite>声望值</cite>高的人的言论。就像这样：
+                <h3>这里的关键字就像我们在搜索引擎当中常常搜索的关键字。Michael判断的依据在于他对现实的模拟。
+                  现实中我们总会在意某方面的行业权威或是意见领袖的看法。类似的，在关键字页面中，帖子按照<cite>声望值</cite>来排序。就像这样：
                   <div><%= image_tag "value.jpe"%></div>
                   在上方的输入框中可以方便的进入某一关键字，并且输入时还会自动提示相关的关键字。
                 </h3>
               </div>
             </li>
             <li>
-              在这个关键字页面中，邀请一些对这个"关键字"及其延伸可能感兴趣的朋友(邀请链接在关键字页面中)，一起来头脑风暴，就像一个简单的论坛。一定活跃人数是Michael完成后台计算的基础;
+              在这个关键字页面中，邀请一些可能对这个关键字感兴趣的朋友(邀请链接在关键字页面中)，一起来头脑风暴，就像一个简单的论坛。一定活跃人数是Michael完成后台计算的基础;
             </li>
             <li>
               注意你关于这个关键字的<span class="title_3"><%= link_to_remote "声望>>>(?)",:url => {:action => :toggle_blind,:id => "about_value"}%></span>，你和大家参与的越多，声望值就越准确。<cite>它尽可能精确地反应了你有关这一关键字的知识水平与被认可程度。</cite>
@@ -97,7 +97,7 @@
           </ol>
 
           <% if @many_user_keyword_pages.present? %>
-            <p>看看牛人们的真知灼见吧：</p>
+            <p>下面是一小部分关键字和它们的内容：</p>
             <% for p in @many_user_keyword_pages %>
               <h2 class="item_pink">关键字：<span id="keyword_page"><%= link_to_page(p) %> · · · · · ·</span></h2>
               <ul class="sb_results" id="wg0">
@@ -111,7 +111,7 @@
                               <%=truncate auto_link(resource.content),:length => 300,:class => "larger_font"%>
                             </p>
                             <br />
-                            <%= link_to "回应>>>", user_resource_comments_path(resource.owner,resource),:popup => true %>
+                            <%= link_to "回复>>>", user_resource_comments_path(resource.owner,resource),:popup => true %>
                             <span class="amount">(<%=resource.comments.size  %>)</span>
                           </td>
                           <td width="80">
