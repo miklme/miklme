@@ -1,55 +1,54 @@
 <%@page_title='( Michael )'%>
-
-<body>
-  <div id="header">
-    <div id="logo"></div><div id="login">
-      <p> <% form_tag session_path do -%>
-          <%= label_tag 'username','用户名'%>
-          <%= text_field_tag 'username',params[:username] %>
-          <%= label_tag 'password','密码'%>
-          <%= password_field_tag 'password',params[:password]%></p>
-        <p> <%= check_box_tag 'remember_me', '1', @remember_me %>
-          <%= label_tag 'remember_me', '在这台电脑上记住我' %>
+<div id="header">
+  <div id="logo"></div>
+  <div id="login">
+    <p> <% form_tag session_path do -%>
+        <%= label_tag 'username','用户名'%>
+        <%= text_field_tag 'username',params[:username] %>
+        <%= label_tag 'password','密码'%>
+        <%= password_field_tag 'password',params[:password]%></p>
+      <p> <%= check_box_tag 'remember_me', '1', @remember_me %>
+        <%= label_tag 'remember_me', '在这台电脑上记住我' %>
+      </p>
+      <p><%= submit_tag '  进入Michael  ' %></p>
+    <% end -%>
+    <p></p>
+  </div>
+</div>
+<div id="main">
+  <div id="fixed">
+    <div id="content">
+      <%if flash[:notice]%>
+        <p id="registered_notice"><%=flash[:notice]%></p>
+      <%end%>
+      <%if flash[:error]%>
+        <p id="registered_notice"><%=flash[:error]%></p>
+      <%end%>
+      <div id="text">
+        <h1>在这里，读懂你自己</h1>
+        <p>
+          Michael(<strong>迈可</strong>)是一个神奇的平台，他将帮助你发现你自身的价值。
         </p>
-        <p><%= submit_tag '  进入Michael  ' %></p>
-      <% end -%>
-    </div>
-  </div>
-  <div id="main">
-    <div id="fixed">
-      <div id="content">
-        <%if flash[:notice]%>
-          <p id="registered_notice"><%=flash[:notice]%></p>
-        <%end%>
-        <%if flash[:error]%>
-          <p id="registered_notice"><%=flash[:error]%></p>
-        <%end%>
-        <div id="text">
-          <h1>在这里，读懂你自己</h1>
-          <p>
-            Michael(<strong>迈可</strong>)是一个神奇的平台，他将帮助你发现你自身的价值。
-          </p>
-          <p>
-            <strong>
+        <p>
+          <strong>
             Michael拥有一种科技：他提供了一种全新的信息检索机制，用以发掘有价值的想法和信息——他能够智能地判断这一想法的价值几何，并把无意义的琐碎的想法剔除掉，进而让你看到世界上究竟存在哪些真正卓越的想法。
-            </strong>
-            </p>
-          <p>在这里，你也可以容易地与拥有卓越想法的人们，以及你的朋友们互动。</p>
-          <p>
-            试一下，你就会相信。
-          </p>
-          <h1>2</h1>
-          <p>
-            <%= link_to ">注册新用户<",new_user_path %>  <%= link_to ">随便逛逛<",keyword_pages_path %>
-          </p>
-        </div>
-
+          </strong>
+        </p>
+        <p>在这里，你也可以容易地与拥有卓越想法的人们，以及你的朋友们互动。</p>
+        <p>
+          试一下，你就会相信。
+        </p>
+        <h1>2</h1>
+        <p>
+          <%= link_to ">注册新用户<",new_user_path %>  <%= link_to ">随便逛逛<",keyword_pages_path %>
+        </p>
       </div>
-      <!-- footer -->
-      <%=render :partial=>'shared/footer'%>
-      <!-- end footer -->
-    </div>
-  </div>
-  <!-- end main -->
 
-</body>
+    </div>
+    <!-- footer -->
+    <%=render :partial=>'shared/footer'%>
+    <!-- end footer -->
+  </div>
+</div>
+<!-- end main -->
+
