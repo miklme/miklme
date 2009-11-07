@@ -83,15 +83,12 @@ class KeywordPage < ActiveRecord::Base
 
   def good_resources
     active_members=self.active_users
-    authors=self.resources.map do |r|
-      r.owner
-    end
-    users=(active_members&authors).first(5)
+    authors=self.users_have_resources
+    users=(active_members&authors)
     recent_resources=users.map do |u|
-      u.resources.find(:first,:order => "resources.created_at DESC",:conditions => {:keyword_page_id => self.id})
+      u.resources.find(:all,:order => "resources.created_at DESC",:conditions => {:keyword_page_id => self.id})
     end
-    results=recent_resources.sort_by { |r| r.created_at }
-    results.reverse!
+    results=recent_resources.flatten.sort_by { |r| r.created_at }.reverse.first(5)
   end
 
   def users_have_resources
@@ -103,7 +100,7 @@ class KeywordPage < ActiveRecord::Base
     ordered=users.sort_by { |u| [u.field_value(self),u.created_at]}.reverse
   end
   def self.recent_keyword_pages
-    a=self.find(:all,:order => "updated_at DESC",:limit => 10)
+    a=self.find(:all,:order => "created_at DESC",:limit => 10)
   end
 
   def self.active_user_keyword_pages

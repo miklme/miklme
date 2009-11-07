@@ -43,7 +43,7 @@
                     <span><%= my_value_here(@keyword_page) %></span>
                   </dd>
                 </dl>
-                <h2>贴吧推广</h2>
+                <h2>相关贴吧</h2>
                 <% if logged_in? and current_user.controlled_keywords.include?(@keyword_page.keyword).present? %>
                   <span><%=link_to "修改",keyword_page_related_keywords_path(@keyword_page),:popup => ['修改推广贴吧', 'height=500,width=450'] %>
                   </span>

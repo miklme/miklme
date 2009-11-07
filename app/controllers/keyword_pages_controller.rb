@@ -2,12 +2,11 @@ class KeywordPagesController < ApplicationController
   skip_before_filter :login_required
   skip_before_filter :check_profile_status
   def index
-    @recent_keyword_pages=KeywordPage.recent_keyword_pages
-    @girls_pages=KeywordPage.girls_pages
-    @top_users=User.top_10
     @user=current_user
+    @recent_keyword_pages=KeywordPage.recent_keyword_pages
+    @top_users=User.top_10
     s=KeywordPage.active_user_keyword_pages.sort_by {|k| k.updated_at}
-    @many_user_keyword_pages=s.reverse.first(6)
+    @many_user_keyword_pages=s.reverse.first(5)
     render :layout => "related_keywords"
   end
   

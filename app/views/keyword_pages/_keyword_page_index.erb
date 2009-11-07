@@ -1,0 +1,25 @@
+<h2 class="item_pink">贴吧：<span id="keyword_page"><%= link_to_page(keyword_page) %> · · · · · ·</span>
+  <span class="sb_meta">最近更新：<%= distance_of_time_in_words(Time.now,keyword_page.updated_at, true) %></span></h2>
+<ul class="sb_results" id="wg0">
+  <% for resource in keyword_page.good_resources %>
+    <li>
+      <table>
+        <tbody>
+          <tr>
+            <td width="500">
+              <p>
+                <%=truncate auto_link(resource.content),:length => 300,:class => "larger_font"%>
+              </p>
+              <br />
+              <%= link_to "回复>>>", user_resource_comments_path(resource.owner,resource),:popup => true %>
+              <span class="amount">(<%=resource.comments.size  %>)</span>
+            </td>
+            <td width="80">
+              <%= link_to resource.owner.nick_name,user_path(resource.owner) %><div><cite>声望：<%=resource.owner.field_value(resource.keyword_page)%></cite></div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </li>
+  <% end %>
+</ul>

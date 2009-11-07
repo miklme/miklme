@@ -23,7 +23,12 @@
               个人信息：</h2>
             <p><%= render :partial => "shared/user_profile_full",:object => @user %></p>
             <h2>
-              他在意的贴吧：</h2>
+              <% if @user.sex==1 %>
+                他
+              <% else %>
+                她
+              <% end %>
+              擅长的：</h2>
             <div>
               <% for k in @user.appear_keyword_pages %>
                 <p>

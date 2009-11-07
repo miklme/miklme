@@ -30,9 +30,6 @@
                 <%= render :partial => "my_keyword_pages" %>
               <% end %>
               <% if @recent_keyword_pages.present? %>
-                <div id="girl" style="display:none">
-                  <%=render :partial => "girls_keyword_pages" %>
-                </div>
                 <div id="recent">
                   <%=render :partial => "recent_keyword_pages" %>
                 </div>
@@ -97,32 +94,8 @@
           </ol>
 
           <% if @many_user_keyword_pages.present? %>
-            <p>下面是一小部分贴吧和它们的内容：</p>
             <% for p in @many_user_keyword_pages %>
-              <h2 class="item_pink"><span id="keyword_page"><%= link_to_page(p) %> · · · · · ·</span></h2>
-              <ul class="sb_results" id="wg0">
-                <% for resource in p.good_resources %>
-                  <li>
-                    <table>
-                      <tbody>
-                        <tr>
-                          <td width="500">
-                            <p>
-                              <%=truncate auto_link(resource.content),:length => 300,:class => "larger_font"%>
-                            </p>
-                            <br />
-                            <%= link_to "回复>>>", user_resource_comments_path(resource.owner,resource),:popup => true %>
-                            <span class="amount">(<%=resource.comments.size  %>)</span>
-                          </td>
-                          <td width="80">
-                            <%= link_to resource.owner.nick_name,user_path(resource.owner) %><div><cite>声望：<%=resource.owner.field_value(resource.keyword_page)%></cite></div>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </li>
-                <% end %>
-              </ul>
+              <%= render :partial => "keyword_page_index",:locals => {:keyword_page => p} %>
             <% end %>
           <% end %>
         </div></div></div></div>

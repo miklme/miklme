@@ -865,9 +865,7 @@ input.sw_q_nrw {
 }
 .sb_adsW h2 {
 }
-.ja .sb_adsN h3, .ja .sb_adsW h3 {
-    font-size:120%;
-}
+
 #sw_uclr {
     z-index:9;
 }
@@ -1081,12 +1079,6 @@ h3 {
 #content {
     padding-top:0.4em;
 }
-.ja #results h2, .ja #results h3 {
-    font-size:120%;
-}
-.ja .sb_meta {
-    font-size:90%;
-}
 
 .highlight{color:#CC0033;}
 
@@ -1168,6 +1160,18 @@ input {
     bottom:22px;
     float:right;
     position:relative;
+}
+#more a{
+    color:#F76120;
+    font-weight:bold;
+    padding:5px 265px;
+}
+#more a:hover{
+    background:#F5F5F5
+}
+#more{
+        text-align:center
+
 }
 .side{
     font-size:12px;
@@ -1267,9 +1271,9 @@ dd{
     width:100px;
     border:none
 }
- .box_3 .btn:hover {
--moz-background-clip:border;
--moz-background-inline-policy:continuous;
--moz-background-origin:padding;
-background:transparent url(../images/btn.gif) no-repeat scroll 0 -30px;
- }
+.box_3 .btn:hover {
+    -moz-background-clip:border;
+    -moz-background-inline-policy:continuous;
+    -moz-background-origin:padding;
+    background:transparent url(../images/btn.gif) no-repeat scroll 0 -30px;
+}
