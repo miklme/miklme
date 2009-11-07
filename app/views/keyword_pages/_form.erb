@@ -1,18 +1,22 @@
 <div id="form">
   <% if logged_in? %>
-    关于<span id="current_page"><%= @keyword_page.keyword %></span>，你有哪些真知灼见?写在下面，相当于<span class="highlight">发一个帖子</span>：
-
     <% form_for [@keyword_page,@blog_resource] do |f|%>
       <strong><%= f.error_messages %>
       </strong>
-      <p><%= f.text_area :content,:cols => 55,:rows => 5 %>
+      <div class="box_2">
+        <%= f.text_area :content,:cols => 55,:rows => 5,:id => "publish_editor" %>
+      </div>
+      <div class="box_3">
+        <%= f.submit("",:id => "publisher_submit",:class => "btn") %>
+      </div>
+      <div>
         <!--
         靠，先不用这个了
         <li>
     <%#= fckeditor_textarea(:blog_resource,:content,:toolbarSet => "Easy",:width => '85%',:height => '150px') %>
         </li>
         -->
-        <%= f.submit "就这样",:class => "big_button"  %>
-      <% end %>
+      </div>
     <% end %>
+  <% end %>
 </div>

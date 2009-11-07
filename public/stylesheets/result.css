@@ -1,7 +1,3 @@
-* {
-    vertical-align: text-top;
-}
-
 body {
     -moz-background-clip:border;
     -moz-background-inline-policy:continuous;
@@ -1142,8 +1138,8 @@ input {
     text-decoration:underline
 }
 #current_page,#current_page a{
-        color:#F76120;
-        font-weight:bold
+    color:#F76120;
+    font-weight:bold
 }
 #current_page a:hover{
     background:none;
@@ -1228,3 +1224,52 @@ dd{
     border:1px solid #D3D3D3;
     padding: 4px;
 }
+
+.box_2 {
+    margin-top:5px;
+    padding-left:40px;
+    text-align:left;
+}
+.box_3 {
+    height:46px;
+    margin-left:50px;
+    text-align:right;
+    padding-right:100px}
+
+.box_2 textarea {
+    -moz-background-clip:border;
+    -moz-background-inline-policy:continuous;
+    -moz-background-origin:padding;
+    background:#FFFFFF none repeat scroll 0 0;
+    color:#666666;
+    font-size:14px;
+    height:140px;
+    line-height:19px;
+    margin:0;
+    overflow-x:hidden;
+    overflow-y:auto;
+    padding:0;
+    width:560px;
+    border-top:1px dashed #CCCCCC;
+    border-bottom:1px dashed #CCCCCC;
+    border-left:none;
+    border-right:none
+}
+
+.box_3 .btn {
+    display:none;
+    -moz-background-clip:border;
+    -moz-background-inline-policy:continuous;
+    -moz-background-origin:padding;
+    background:transparent url(../images/btn.gif) no-repeat scroll 0 0;
+    display:inline-block;
+    height:30px;
+    width:100px;
+    border:none
+}
+ .box_3 .btn:hover {
+-moz-background-clip:border;
+-moz-background-inline-policy:continuous;
+-moz-background-origin:padding;
+background:transparent url(../images/btn.gif) no-repeat scroll 0 -30px;
+ }
