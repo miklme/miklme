@@ -34,7 +34,7 @@
           <div id="sw_aside">
             <div id="sc_expPane">
               <div class="sw_menu" id="sw_rel">
-                <h2>目前所在关键字</h2>
+                <h2>目前所在贴吧</h2>
                 <dl>
                   <dt>
                     <span id="current_page"><%=h @keyword_page.keyword %></span>
@@ -43,9 +43,9 @@
                     <span><%= my_value_here(@keyword_page) %></span>
                   </dd>
                 </dl>
-                <h2>关键字推广</h2>
+                <h2>贴吧推广</h2>
                 <% if logged_in? and current_user.controlled_keywords.include?(@keyword_page.keyword).present? %>
-                  <span><%=link_to "修改",keyword_page_related_keywords_path(@keyword_page),:popup => ['修改推广关键字', 'height=500,width=450'] %>
+                  <span><%=link_to "修改",keyword_page_related_keywords_path(@keyword_page),:popup => ['修改推广贴吧', 'height=500,width=450'] %>
                   </span>
                 <% end %>
                 <ul>

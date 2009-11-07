@@ -7,7 +7,7 @@
   <p>
     <em> <%= link_to "#{f.owner.name_or_nick_name(current_user)}",user_path(f.resource.owner) -%> </em>发表高见
     <cite><%=auto_link(f.resource.content) %></cite>
-    <span class="sb_meta">关键字： <%=link_to_page f.resource.keyword_page %></span>
+    <span class="sb_meta">贴吧： <%=link_to_page f.resource.keyword_page %></span>
     <em><%= link_to "回复>>>",user_resource_comments_path(f.resource.owner,f.resource) %></em><span class="highlight">(<%=f.resource.comments.size %>)</span>
   </p>
 <% elsif f.news_type=="comment"%>
@@ -20,7 +20,7 @@
     <cite>
       <%=truncate f.comment.content,:length => 140 %>
     </cite>
-    <span class="sb_meta">关键字： <%=link_to_page f.resource.keyword_page %></span>
+    <span class="sb_meta">贴吧： <%=link_to_page f.resource.keyword_page %></span>
 
     <em><%= link_to "回复>>>",user_resource_comments_path(f.resource.owner,f.resource) %></em><span class="highlight">(<%=f.resource.comments.size %>)</span>
   </p>
@@ -36,7 +36,7 @@
     <cite>
       <%=truncate f.comment.content,:length => 140 %>
     </cite>
-    <span class="sb_meta">关键字： <%=link_to_page f.resource.keyword_page %></span>
+    <span class="sb_meta">贴吧： <%=link_to_page f.resource.keyword_page %></span>
     <em><%= link_to "回复>>>",user_resource_comments_path(f.resource.owner,f.resource) %></em><span class="highlight">(<%=f.resource.comments.size %>)</span>
   </p>
 <%end  %>

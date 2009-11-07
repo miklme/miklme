@@ -1,4 +1,4 @@
-<h1>新的关键字推广</h1>
+<h1>新的贴吧推广</h1>
 <p>
     <%= text_field_with_auto_complete :keyword_page,:keyword,{}, {:method => :get, :frequency => 0, :after_update_element =>
       "function(element,value){" + remote_function(:url => {:action => :create},:with=>"'keyword='+element.value") + "}" } %>
