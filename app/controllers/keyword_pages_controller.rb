@@ -6,7 +6,7 @@ class KeywordPagesController < ApplicationController
     @girls_pages=KeywordPage.girls_pages
     @top_users=User.top_10
     @user=current_user
-    s=KeywordPage.many_user_keyword_pages.sort_by {|k| k.updated_at}
+    s=KeywordPage.active_user_keyword_pages.sort_by {|k| k.updated_at}
     @many_user_keyword_pages=s.reverse.first(6)
     render :layout => "related_keywords"
   end

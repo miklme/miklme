@@ -106,10 +106,8 @@ class KeywordPage < ActiveRecord::Base
     a=self.find(:all,:order => "updated_at DESC",:limit => 10)
   end
 
-  def self.many_user_keyword_pages
-    amount=KeywordPage.find(:all).size/10.to_i
-    a=self.find(:all).sort_by {|k| k.active_users.size}
-    x=a.reverse.first(amount)
+  def self.active_user_keyword_pages
+    keyword_pages=self.find(:all).find_all{|k| k.active_users.size>=1}
   end
 
   def self.girls_pages
