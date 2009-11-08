@@ -3,21 +3,17 @@
   <h1>我的个人信息：</h1>
   <% form_for @user do |f|%>
     <%= f.error_messages %>
-       
+
     <table cellpadding="5" cellspacing="5">
-      <tr><td><%= f.label :nick_name,'名号*'%></td><td><%= f.text_field :nick_name,:size => 21 %></td><td>任何人都能看到，请随意填写。</td></tr>
+      <tr><td><%= f.label :nick_name,'名号＊'%></td><td><%= f.text_field :nick_name,:size => 21 %></td><td>任何人都能看到，请随意填写。</td></tr>
       <tr>
-        <td><%= f. label :name,'真实姓名*'%></td>
-        <% if @user.resources.blank? %>
-          <td><%= f.text_field :name,:size => 21 %></td>
-        <% else %>
-          <td><%= h @user.name %></td>
-        <% end %>
-        <td>真实姓名不会以<strong>任何形式</strong>泄露(请相信Michael)，除非你同意。通过真实姓名，朋友才会找到你。<strong>不可更改。</strong></td>
+        <td><%= f. label :name,'真实姓名'%></td>
+        <td><%= f.text_field :name,:size => 21 %></td>
+        <td>真实姓名不会以<strong>任何形式</strong>泄露(请相信Michael)。通过真实姓名，朋友才会找到你。如果你不放心，可以以后填写。</td>
       </tr>
-      <tr><td><%= f.label :sex,"性别*" %></td><td><%= f.radio_button :sex,1%>男<%= f.radio_button :sex,0 %>女</td></tr>
-      <tr><td><%= f.label :birthday,'生日*' %></td><td><%= f.date_select :birthday,:start_year => 1970,:end_year => Time.now.year-8%></td><td>你的生日对于熟人或许很重要...</td></tr>
-      <tr><td><%= f.label :address,"常居地" %></td><td><%= f.text_field :province,:size => 3 %>省<%= f.text_field :city,:size => 4 %>市</td></tr>
+      <tr><td><%= f.label :sex,"性别＊" %></td><td><%= f.radio_button :sex,1%>男<%= f.radio_button :sex,0 %>女</td></tr>
+      <tr><td><%= f.label :birthday,'生日＊' %></td><td><%= f.date_select :birthday,:start_year => 1970,:end_year => Time.now.year-8%></td><td>你的生日对于熟人或许很重要...</td></tr>
+      <tr><td><%= f.label :address,"常居地＊" %></td><td><%= f.text_field :province,:size => 3 %>省<%= f.text_field :city,:size => 4 %>市</td></tr>
 
     </table>
     <%= submit_tag '完毕，就这样'%>
