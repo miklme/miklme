@@ -19,8 +19,11 @@
         <div id="sidebar">
           <div id="sidebar_top"></div>
           <div id="sidebar_text">
+            <h2><%= link_to_unless_current "#{@user.nick_name}关注的人（#{@user.followings.size}）" ,user_follows_path(@user)%></h2>
+            <h2><%= link_to_unless_current "关注#{@user.nick_name}的人（#{@user.followers.size}）",user_be_follows_path(@user) %></h2>
             <h2>
               个人信息：</h2>
+
             <p><%= render :partial => "shared/user_profile_full",:object => @user %></p>
             <h2>
               <% if @user.sex==1 %>

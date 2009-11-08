@@ -16,16 +16,6 @@
             <%= flash[:error] or flash[:notice]%>
           </div>
         <% end %>
-        <div id="sidebar">
-          <div id="sidebar_top"></div>
-          <div id="sidebar_text">
-            <% if @user==current_user %>
-              <h2><%= link_to_unless_current "#{@user.nick_name}关注的人（#{@user.followings.size}）" ,user_follows_path(@user)%></h2>
-              <h2><%= link_to_unless_current "关注#{@user.nick_name}的人（#{@user.followers.size}）",user_be_follows_path(@user) %></h2>
-            <% end %>
-          </div>
-          <div id="sidebar_bottom"></div>
-        </div>
         <div id="text">
           <%= @content_for_layout %>
         </div>

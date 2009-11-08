@@ -11,7 +11,11 @@
     <li>
       <%= link_to "查找用户>>>",search_user_new_user_follow_path(current_user) %>
     </li>
-        |
+    |
+    <li>
+      <%= link_to_unless_current "个人设置",edit_user_path(current_user) %>
+    </li>
+    |
     <li>
       <%= link_to "登出",session_path,:method => :delete %>
     </li>
@@ -22,12 +26,12 @@
   </ul>
   <ul class="sc_hl1">
     <li>
-      <%= link_to "我的好友",user_news_index_path(current_user) %>
-    </li>
-    <li><%= link_to_unless_current"好友的贴吧",user_controlled_keywords_path(current_user) %>
+      <%= link_to "我的主页",user_path(current_user)  %>
     </li>
     <li>
-      <%= link_to_unless_current "个人设置",edit_user_path(current_user) %>
+      <%= link_to "好友新鲜事",user_news_index_path(current_user) %>
+    </li>
+    <li><%= link_to_unless_current"好友的贴吧",user_controlled_keywords_path(current_user) %>
     </li>
   </ul>
 

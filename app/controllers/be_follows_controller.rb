@@ -18,17 +18,6 @@ class BeFollowsController < ApplicationController
     end
   end
 
-  # GET /be_follows/1
-  # GET /be_follows/1.xml
-  def show
-    @be_follow = BeFollow.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @be_follow }
-    end
-  end
-
   # POST /be_follows
   # POST /be_follows.xml
   def create
