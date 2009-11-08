@@ -181,22 +181,20 @@ div#sw_nav li {
     vertical-align: text-top;
     background:#EEF9EB;
     border-right-color: #f5fef2;
-;
+    ;
     border-left-color: #f5fef2;
-;
+    ;
     border-bottom-color: #f5fef2;
 
 
     border-top-color: #f5fef2;
 }
-.item_orange {
-    padding: 6px 12px;
-    border: 1px solid #d3d3d3;
-    margin-bottom: 8px;
+.item_pink {
+    border: 7px solid#fdf8f8;
     vertical-align: text-top;
-    background:AliceBlue
+    background:#FFF6EE
 }
-.item_pink{
+.item_orange{
     padding: 6px 12px;
     border: 1px solid pink;
     background:#FFF6EE;
@@ -1178,7 +1176,7 @@ input {
     background:#F5F5F5
 }
 #more{
-        text-align:center
+    text-align:center
 
 }
 .side{
