@@ -1120,6 +1120,9 @@ input {
         color:#F76120;
         padding:10px 160px;
 }
+#welcome{
+    text-align:center
+}
 .more a:hover{
     background:none
 }
