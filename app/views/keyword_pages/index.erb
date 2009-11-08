@@ -26,9 +26,6 @@
         <div id="sw_aside">
           <div id="sc_expPane">
             <div class="sw_menu" id="sw_rel">
-              <% if logged_in? %>
-                <%= render :partial => "my_keyword_pages" %>
-              <% end %>
               <% if @recent_keyword_pages.present? %>
                 <div id="recent">
                   <%=render :partial => "recent_keyword_pages" %>
