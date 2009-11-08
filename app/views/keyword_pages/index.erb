@@ -26,15 +26,13 @@
         <div id="sw_aside">
           <div id="sc_expPane">
             <div class="sw_menu" id="sw_rel">
-              <% if @recent_keyword_pages.present? %>
-                <div id="recent">
-                  <%=render :partial => "recent_keyword_pages" %>
-                </div>
+              <div id="recent">
+                <%=render :partial => "recent_keyword_pages" %>
+              </div>
 
-                <div id="top">
-                  <%=render :partial => "top_users" %>
-                </div>
-              <% end %>
+              <div id="top">
+                <%=render :partial => "top_users" %>
+              </div>
             </div>
           </div>
         </div>
@@ -90,11 +88,12 @@
             </li>
           </ol>
 
-          <% if @many_user_keyword_pages.present? %>
-            <% for p in @many_user_keyword_pages %>
-              <%= render :partial => "keyword_page_index",:locals => {:keyword_page => p} %>
-            <% end %>
+          <% for p in @many_user_keyword_pages %>
+            <%= render :partial => "keyword_page_index",:object => p%>
           <% end %>
+          <div id="more_pages">
+            <%= link_to_remote "更多",:url => {:action => :more_pages} %>
+          </div>
         </div></div></div></div>
   <%= render :partial => "shared/footer" %>
 </body>

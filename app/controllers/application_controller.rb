@@ -93,6 +93,12 @@ class ApplicationController < ActionController::Base
       cheat_validation(comment)
     end
   end
+
+  def toggle_blind
+    render :update do |page|
+      page.visual_effect :toggle_blind,params[:id]
+    end
+  end
   private
   def load_user
     @user=User.find(params[:user_id])

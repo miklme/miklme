@@ -2,11 +2,11 @@ class KeywordPagesController < ApplicationController
   skip_before_filter :login_required
   skip_before_filter :check_profile_status
   def index
+    session[:offset]=nil
     @user=current_user
     @recent_keyword_pages=KeywordPage.recent_keyword_pages
     @top_users=User.top_10
-    s=KeywordPage.active_user_keyword_pages.sort_by {|k| k.updated_at}
-    @many_user_keyword_pages=s.reverse.first(5)
+    @many_user_keyword_pages=KeywordPage.active_user_keyword_pages.first(5)
     render :layout => "related_keywords"
   end
   
@@ -60,10 +60,17 @@ class KeywordPagesController < ApplicationController
     end
   end
 
-  def toggle_blind
+  
+
+  def more_pages
+    if session[:offset].blank?
+      session[:offset]=5
+    else
+      session[:offset]+=5
+    end
+    @keyword_pages=KeywordPage.active_user_keyword_pages[(session[:offset])..(session[:offset]+4)]
     render :update do |page|
-      page.visual_effect :toggle_blind,params[:id]
+      page.insert_html :before,"more_pages",:partial => "keyword_page_index",:collection => @keyword_pages
     end
   end
-
 end

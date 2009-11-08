@@ -29,7 +29,7 @@ class KeywordPage < ActiveRecord::Base
       :conditions => [ "value_orders.user_id = ?", user_id ]
     } }
   named_scope :hots,:limit => 10,:order => "users.size DESC"
-  
+
   def field_value(user)
     v=ValueOrder.find_by_keyword_page_id_and_user_id(self.id,user.id)
     if v.present?
@@ -88,7 +88,7 @@ class KeywordPage < ActiveRecord::Base
     recent_resources=users.map do |u|
       u.resources.find(:all,:order => "resources.created_at DESC",:conditions => {:keyword_page_id => self.id})
     end
-    results=recent_resources.flatten.sort_by { |r| r.created_at }.reverse.first(5)
+    results=recent_resources.flatten.sort_by { |r| r.created_at }.reverse.first(3)
   end
 
   def users_have_resources
@@ -104,7 +104,7 @@ class KeywordPage < ActiveRecord::Base
   end
 
   def self.active_user_keyword_pages
-    keyword_pages=self.find(:all).find_all{|k| k.active_users.size>=1}
+    keyword_pages=self.find(:all).find_all{|k| k.active_users.size>=1}.sort_by {|k| k.updated_at}.reverse
   end
 
   def self.girls_pages
@@ -120,6 +120,5 @@ class KeywordPage < ActiveRecord::Base
     pages=pages.compact.sort_by {|p| p.users.size}
     pages.reverse.first(10)
   end
-
   
 end

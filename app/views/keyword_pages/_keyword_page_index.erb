@@ -1,7 +1,7 @@
-<h2 class="item_orange">贴吧：<span id="keyword_page"><%= link_to_page(keyword_page) %> · · · · · ·</span>
-  <span class="sb_meta">最近更新：<%= distance_of_time_in_words(Time.now,keyword_page.updated_at, true) %></span></h2>
+<h2 class="item_orange">贴吧：<span id="keyword_page"><%= link_to_page(keyword_page_index) %> · · · · · ·</span>
+  <span class="sb_meta">最近更新：<%= distance_of_time_in_words(Time.now,keyword_page_index.updated_at, true) %></span></h2>
 <ul class="sb_results" id="wg0">
-  <% for resource in keyword_page.good_resources %>
+  <% for resource in keyword_page_index.good_resources %>
     <li>
       <table>
         <tbody>
