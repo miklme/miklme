@@ -2,7 +2,6 @@ class KeywordPagesController < ApplicationController
   skip_before_filter :login_required
   skip_before_filter :check_profile_status
   def index
-    session[:offset]=nil
     @user=current_user
     @recent_keyword_pages=KeywordPage.recent_keyword_pages
     @top_users=User.top_10
@@ -48,27 +47,27 @@ class KeywordPagesController < ApplicationController
 
 
   def more
-    k=KeywordPage.find(params[:keyword_page_id])
-    resources=User.find(params[:id]).resources.find(:all,:limit => 38,:offset => 4,:order => "created_at DESC",:conditions => {:keyword_page_id => k.id})
-    ids=resources.map do |r|
-      "hidden_"+r.id.to_s
+    if flash["resource_offset_of_#{params[:user_id]}"].blank?
+      flash["resource_offset_of_#{params[:user_id]}"]=4
+    else
+      flash["resource_offset_of_#{params[:user_id]}"]+=10
     end
+    k=KeywordPage.find(params[:keyword_page_id])
+    resources=User.find(params[:user_id]).resources.find(:all,:limit => 10,:offset => flash["resource_offset_of_#{params[:user_id]}"],:order => "created_at DESC",:conditions => {:keyword_page_id => k.id})
     render :update do |page|
-      for i in ids
-        page.visual_effect :toggle_blind,i
-      end
+      page.insert_html :before,"more_of_#{params[:user_id]}",:partial => "blog_resources/blog_resource",:collection => resources
     end
   end
 
   
 
   def more_pages
-    if session[:offset].blank?
-      session[:offset]=5
+    if flash[:keyword_page_offset].blank?
+      flash[:keyword_page_offset]=5
     else
-      session[:offset]+=5
+      flash[:keyword_page_offset]+=5
     end
-    @keyword_pages=KeywordPage.active_user_keyword_pages[(session[:offset])..(session[:offset]+4)]
+    @keyword_pages=KeywordPage.active_user_keyword_pages[(flash[:keyword_page_offset])..(flash[:keyword_page_offset]+4)]
     render :update do |page|
       page.insert_html :before,"more_pages",:partial => "keyword_page_index",:collection => @keyword_pages
     end

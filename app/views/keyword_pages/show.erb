@@ -24,12 +24,11 @@
       <%= render :partial => "resources/resource",:object => u.resources.find(:first,:order => "created_at DESC",:conditions => {:keyword_page_id => @keyword_page.id}) %>
       <%= render  :partial => "blog_resources/blog_resource",:collection => u.resources.find(:all,:limit => 3,:offset => 1,:order => "created_at DESC",:conditions => {:keyword_page_id => @keyword_page.id})  %>
       <% if u.resources.find(:all,:order => "created_at DESC",:conditions => {:keyword_page_id => @keyword_page.id}).size>4 %>
-        <li>
-          <div id="more"><%= link_to_remote '· · ·',:url => {:action => :more,:id => u.id,:keyword_page_id => @keyword_page.id}%>
-          </div>
+        <% user_id=u.id %>
+        <li id="more_of_<%=user_id%>">
+          <%= link_to_remote '· · ·',:url => {:action => :more,:user_id => u.id,:keyword_page_id => @keyword_page.id}%>
         </li>
       <% end %>
-      <%= render  :partial => "blog_resources/hidden_blog_resource",:collection => u.resources.find(:all,:limit => 45,:offset => 4,:order => "created_at DESC",:conditions => {:keyword_page_id => @keyword_page.id})  %>
     <% end %>
   </ol>
   <div class="sb_pag">
