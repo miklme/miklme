@@ -1,5 +1,5 @@
 class ResourcesController < ApplicationController
-  skip_before_filter :login_required,:only => [:show,:preview,:origin]
+  skip_before_filter :login_required,:except => [:new,:create]
 
   def new
 
