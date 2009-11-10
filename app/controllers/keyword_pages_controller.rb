@@ -1,6 +1,7 @@
 class KeywordPagesController < ApplicationController
   skip_before_filter :login_required
   skip_before_filter :check_profile_status
+  caches_page :index
   def index
     @user=current_user
     @recent_keyword_pages=KeywordPage.recent_keyword_pages
@@ -58,7 +59,7 @@ class KeywordPagesController < ApplicationController
     k=KeywordPage.find(params[:keyword_page_id])
     resources=User.find(params[:user_id]).resources.find(:all,:limit => 10,:offset => flash["resource_offset_of_#{params[:user_id]}"],:order => "created_at DESC",:conditions => {:keyword_page_id => k.id})
     render :update do |page|
-      page.insert_html :before,"more_of_#{params[:user_id]}",:partial => "blog_resources/blog_resource",:collection => resources
+      page.insert_html :before,"more_of_#{params[:user_id]}",:partial => "blog_resources/no_profile_blog_resource",:collection => resources
     end
   end
 

@@ -11,6 +11,10 @@ class CommentsController < ApplicationController
     end
     @comments=@resource.comments_by_time(params[:page])
     @comment=@resource.comments.build
+    respond_to do |format|
+      format.html
+      format.jpg
+    end
   end
 
   # POST /comments

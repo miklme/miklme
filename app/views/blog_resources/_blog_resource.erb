@@ -1,11 +1,13 @@
-  <li>
-    <span class="sb_meta"><%=distance_of_time_in_words(Time.now, blog_resource.created_at, true)%></span>
-    <div class="margin_left">
-      <p>
-        <%=truncate auto_link(blog_resource.content),:length => 300%>
-      </p>
-      <br />
-      <%= link_to  "回复>>>", user_resource_comments_path(blog_resource.owner,blog_resource),:popup => true %><span class="amount">(<%=blog_resource.comments.size  %>)</span>
-
-    </div>
-  </li>
+<li>
+  <span class="left"><%= render :partial => "shared/field_profile",:locals => {:user => blog_resource.owner,:keyword_page => blog_resource.keyword_page}%>
+  </span>
+  <span class="sb_meta"><%=distance_of_time_in_words(Time.now, blog_resource.created_at, true)%></span>
+  <div class="margin_left">
+    <p>
+      <%=truncate auto_link(blog_resource.content),:length => 300%>
+      <%= image_tag  user_blog_resource_path(blog_resource.owner,blog_resource, :jpg) %>
+    </p>
+    <br />
+    <%= link_to "回复>>>", user_resource_comments_path(blog_resource.owner,blog_resource),:popup => true %><span class="amount">(<%=blog_resource.comments.size  %>)</span>
+  </div>
+</li>

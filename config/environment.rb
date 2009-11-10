@@ -9,6 +9,7 @@ Rails::Initializer.run do |config|
   config.gem "ferret"
   config.gem "acts_as_ferret"
   config.gem "rmmseg"
+  config.gem "rmagick"
 #  config.gem "locale"
 #  config.gem "net-ssh"
 #  config.gem "net-ssh-gateway"

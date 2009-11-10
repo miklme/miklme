@@ -1,9 +1,22 @@
 class BlogResourcesController < ApplicationController
   skip_before_filter :login_required,:only => [:show]
-  def show
-    @blog_resource=Resource.find(params[:id])
+  def new
+    @keyword_page=KeywordPage.find(params[:id])
+    if logged_in?
+      @user=current_user
+      @news=News.list_self_news(@user)
+      @blog_resource=@keyword_page.blog_resources.build
+    end
+    keyword_pages=KeywordPage.find_with_ferret(@keyword_page.keyword+"~")-@keyword_page.to_a
+    @searched_keywords=keyword_pages.find_all{|k| k.resources.size>=1}.first(10)
+    #未使用用户自定义编辑贴吧功能
+    @related_keywords=@keyword_page.related_keywords
   end
 
+
+  def show
+    
+  end
   def create
     @keyword_page=KeywordPage.find(params[:keyword_page_id])
     @blog_resource=@keyword_page.blog_resources.build(params[:blog_resource])
