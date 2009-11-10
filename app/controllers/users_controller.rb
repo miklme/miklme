@@ -31,9 +31,11 @@ class UsersController < ApplicationController
 
   def edit
     @user=User.find(current_user)
-    @keyword_pages=@user.keyword_pages
   end
 
+  def edit_ajax
+    
+  end
   def manage_keywords
     render :update do |page|
       page.visual_effect(:appear, "my_keywords")

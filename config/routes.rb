@@ -1,5 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :users,:collection => {:search => :get} do |user|
+  map.resources :users,:collection => {:search => :get},:member => {:edit_ajax => :get} do |user|
     user.resource :portrait
     user.resource :true_portrait
     user.resources :controlled_keywords
