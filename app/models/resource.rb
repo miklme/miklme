@@ -21,11 +21,10 @@ class Resource < ActiveRecord::Base
   use_creation_date_based_directories true
   image_storage_format :jpg
   require_image false
-  missing_image_message  '被要求'
-  invalid_image_message '的格式无法被读取'
-  output_image_jpg_quality  85
+  invalid_image_message '的格式不对，或者不被支持'
+  output_image_jpg_quality  100
   preprocess_image do |image|
-    image.resize '200x200'
+    image.resize '1200x800'
   end
   has_many :comments,:foreign_key => "resource_id",:dependent => :destroy
   has_many :commenters,:through => :comments,:source => :owner,:conditions => "parent_comment_id is NULL"

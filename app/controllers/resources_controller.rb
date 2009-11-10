@@ -6,7 +6,14 @@ class ResourcesController < ApplicationController
   end
 
 
-  def show
+  def preview
+    @resource=Resource.find(params[:id])
+    respond_to do |format|
+      format.jpg
+    end
+  end
+
+  def origin
     @resource=Resource.find(params[:id])
     respond_to do |format|
       format.jpg
@@ -26,7 +33,7 @@ class ResourcesController < ApplicationController
       n.resource=@resource
       n.save
       flash[:notice]="<h2 class='item_orange'>发表成功。默认情况下，你发表的内容会根据你的<cite>声望</cite>排序，你可以在下面找找看。</h2>"
-      redirect_to :back
+      redirect_to keyword_page_path(@keyword_page)
     else
       render :action => :new,:layout => "keyword_pages"
     end

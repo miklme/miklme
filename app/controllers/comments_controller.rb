@@ -11,7 +11,7 @@ class CommentsController < ApplicationController
     @comments=@resource.comments_by_time(params[:page])
     @comment=@resource.comments.build
     respond_to do |format|
-      format.html {expire_page user_resource_path(@resource.owner,@resource,:jpg)}
+      format.html
       format.jpg
     end
   end

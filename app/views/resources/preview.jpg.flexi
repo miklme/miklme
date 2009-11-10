@@ -1,0 +1,4 @@
+@resource.operate do |image|
+   image.shadow
+image.resize '320x240',:crop => false
+ end

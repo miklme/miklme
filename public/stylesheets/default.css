@@ -20,6 +20,9 @@ em,em a{color:white;
         font-size:13px;
         font-style:normal
 }
+.fieldWithErrors{
+    display:inline
+}
 em a:hover{
     background:#F26513;
     text-decoration:none

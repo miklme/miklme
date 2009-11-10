@@ -7,8 +7,9 @@
         <cite><%= @resource.created_at_s %></cite>
         <p>
           <%=simple_format auto_link(@resource.content)%>
-          <%= image_tag user_resource_path(@resource.owner,@resource,:jpg) %>
-        </p>
+          </p>
+          <%= image_tag origin_user_resource_path(@resource.owner,@resource,:jpg) if @resource.has_image? %>
+        
       </td>
       <td width="100">
       </td>

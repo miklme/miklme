@@ -1,0 +1,3 @@
+@resource.operate do |image|
+   image.shadow
+ end

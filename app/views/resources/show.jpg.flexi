@@ -1,5 +1,0 @@
-@resource.operate do |image|
-   image.resize '320x240', :crop => true
-   image.unsharp_mask
-   image.shadow
- end
