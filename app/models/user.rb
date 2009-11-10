@@ -89,7 +89,7 @@ class User < ActiveRecord::Base
     user_ids=b.map do |a|
       a.user.id
     end
-    User.find(user_ids)
+    User.find_all_by_id(user_ids)
   end
 
   def name_or_nick_name(current_user)

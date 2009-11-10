@@ -19,18 +19,22 @@
     <%= link_to "默认排序",keyword_page_path(@keyword_page) %>
     <%= link_to_remote "传统时间排序",:url => {:action => :by_time,:id => @keyword_page}%></span></div>
 <div id="results">
-  <ol class="sb_results" id="wg0">
-    <% for u in @users %>
-      <%= render :partial => "resources/resource",:object => u.resources.find(:first,:order => "created_at DESC",:conditions => {:keyword_page_id => @keyword_page.id}) %>
-      <%= render  :partial => "resources/no_profile_resource",:collection => u.resources.find(:all,:limit => 3,:offset => 1,:order => "created_at DESC",:conditions => {:keyword_page_id => @keyword_page.id})  %>
-      <% if u.resources.find(:all,:order => "created_at DESC",:conditions => {:keyword_page_id => @keyword_page.id}).size>4 %>
-        <% user_id=u.id %>
-        <li id="more_of_<%=user_id%>">
-          <div class="more"><%= link_to_remote '· · ·',:url => {:action => :more,:user_id => u.id,:keyword_page_id => @keyword_page.id}%></div>
-        </li>
+  <% if @users.present? %>
+    <ol class="sb_results" id="wg0">
+
+      <% for u in @users  %>
+        <%= render :partial => "resources/resource",:object => u.resources.find(:first,:order => "created_at DESC",:conditions => {:keyword_page_id => @keyword_page.id}) %>
+        <%= render  :partial => "resources/no_profile_resource",:collection => u.resources.find(:all,:limit => 3,:offset => 1,:order => "created_at DESC",:conditions => {:keyword_page_id => @keyword_page.id})  %>
+        <% if u.resources.find(:all,:order => "created_at DESC",:conditions => {:keyword_page_id => @keyword_page.id}).size>4 %>
+          <% user_id=u.id %>
+          <li id="more_of_<%=user_id%>">
+            <div class="more"><%= link_to_remote '· · ·',:url => {:action => :more,:user_id => u.id,:keyword_page_id => @keyword_page.id}%></div>
+          </li>
+        <% end %>
       <% end %>
-    <% end %>
-  </ol>
+    </ol>
+  <% end %>
+
   <div class="sb_pag">
     <%= will_paginate @users, :prev_label => '上一页', :next_label => '下一页' %>
   </div>

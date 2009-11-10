@@ -1,5 +1,5 @@
 class ResourcesController < ApplicationController
-  skip_before_filter :login_required,:only => [:show]
+  skip_before_filter :login_required,:only => [:show,:preview,:origin]
 
   def new
 
@@ -39,11 +39,4 @@ class ResourcesController < ApplicationController
     end
   end
 
-  def say
-    render :update do |page|
-      page.toggle "form"
-      page.toggle "succeed"
-    end
-  end
-  
 end

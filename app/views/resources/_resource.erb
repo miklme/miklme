@@ -1,5 +1,15 @@
 <li>
   <span class="left"><%= render :partial => "shared/field_profile",:locals => {:user => resource.owner,:keyword_page => resource.keyword_page}%>
   </span>
-  <%= render :partial => "resources/resource_content",:object => resource %>
+    <span class="sb_meta"><%=distance_of_time_in_words(Time.now, resource.created_at, true)%></span>
+  <div class="margin_left">
+    <p>
+      <%=truncate auto_link(resource.content),:length => 300%>
+       </p>
+       <p>
+       <%=link_to(image_tag(preview_user_resource_path(resource.owner,resource, :jpg)),origin_user_resource_path(resource.owner,resource,:jpg), :popup => ['预览', 'height=400,width=540']) if resource.has_image? %>
+       </p>
+         <br />
+    <%= link_to "回复>>>", user_resource_comments_path(resource.owner,resource),:popup => true %><span class="amount">(<%=resource.comments.size  %>)</span>
+  </div>
 </li>

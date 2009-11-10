@@ -17,7 +17,6 @@ class KeywordPage < ActiveRecord::Base
   
   has_many :related_keywords
   has_many :resources
-  has_many :resources
   has_many :value_orders
   has_many :users,:through => :value_orders,:source => :user
   has_one :top_user,:through => :value_orders,:source => :user,:order => "value DESC"
@@ -95,8 +94,8 @@ class KeywordPage < ActiveRecord::Base
     ids=self.resources.map do |r|
       r.user_id
     end
-    ids.uniq!
-    users=User.find(ids)
+    ids=ids.uniq
+    users=User.find_all_by_id(ids)
     ordered=users.sort_by { |u| [u.field_value(self),u.created_at]}.reverse
   end
   def self.recent_keyword_pages
