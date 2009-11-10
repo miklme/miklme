@@ -19,5 +19,5 @@ class BlogResource<Resource
   has_many :bad_commenters,:through => :comments,:source => :owner,:conditions => "rating<0 and parent_comment_id is NULL"
 
   validates_presence_of :content
-  validates_length_of :content,:minimum => 8
+  validates_length_of :content,:maximum => 280
 end

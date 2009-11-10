@@ -9,7 +9,6 @@ class CommentsController < ApplicationController
     if logged_in? and !current_user.keyword_pages.include?(@keyword_page)
       current_user.keyword_pages<<@keyword_page
     end
-    @related_keywords=@keyword_page.related_keywords
     @comments=@resource.comments_by_time(params[:page])
     @comment=@resource.comments.build
   end

@@ -48,10 +48,17 @@
                   </span>
                 <% end %>
                 <ul>
+                  <% if not @searched_keywords.blank? %>
+                    <% for keyword in @searched_keywords %>
+                      <li id="keyword_page">
+                        <span><%= link_to keyword.keyword,keyword_page_path(keyword)%></span>
+                      </li>
+                    <% end %>
+                  <% end %>
                   <% if not @related_keywords.blank? %>
                     <% for related_keyword in @related_keywords %>
                       <li id="keyword_page">
-                        <span class="keyword_page"><%= link_to related_keyword.name,keyword_page_path(related_keyword.keyword_page)%></span>
+                        <span><%= link_to related_keyword.name,keyword_page_path(related_keyword.keyword_page)%></span>
                       </li>
                     <% end %>
                   <% end %>
