@@ -5,9 +5,7 @@ class CreateResources < ActiveRecord::Migration
       t.string :type
       t.boolean :shoulu,:default => true
       t.integer :user_id
-      #blog_resources
       t.string :title
-      #attributes for link_url resources
       t.string :form
       t.string :link_url
       t.string :description

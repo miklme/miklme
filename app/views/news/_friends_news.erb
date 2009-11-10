@@ -3,7 +3,7 @@
 <span class="right">
 <%=distance_of_time_in_words(Time.now, f.created_at, true)%></span>
 
-<% if f.news_type=="blog_resource" %>
+<% if f.news_type=="resource" %>
   <p>
     <em> <%= link_to "#{f.owner.name_or_nick_name(current_user)}",user_path(f.resource.owner) -%> </em>发表高见
     <cite><%=auto_link(f.resource.content) %></cite>

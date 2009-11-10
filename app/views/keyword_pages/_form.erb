@@ -1,6 +1,6 @@
 <div id="form">
   <% if logged_in? %>
-    <% form_for [@keyword_page,@blog_resource],:html => { :multipart => true } do |f|%>
+    <% form_for [@keyword_page,@resource],:html => { :multipart => true } do |f|%>
       <%= f.error_messages %>
       <div class="box_2">
         <%= f.text_area :content,:cols => 55,:rows => 5,:id => "publish_editor" %>
@@ -18,7 +18,7 @@
         <!--
         靠，先不用这个了
         <li>
-    <%#= fckeditor_textarea(:blog_resource,:content,:toolbarSet => "Easy",:width => '85%',:height => '150px') %>
+    <%#= fckeditor_textarea(:resource,:content,:toolbarSet => "Easy",:width => '85%',:height => '150px') %>
         </li>
         -->
       </div>

@@ -17,7 +17,7 @@ class KeywordPage < ActiveRecord::Base
   
   has_many :related_keywords
   has_many :resources
-  has_many :blog_resources
+  has_many :resources
   has_many :value_orders
   has_many :users,:through => :value_orders,:source => :user
   has_one :top_user,:through => :value_orders,:source => :user,:order => "value DESC"

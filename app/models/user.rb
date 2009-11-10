@@ -22,7 +22,7 @@ class User < ActiveRecord::Base
   has_many :followers,
     :through => :be_follows,
     :class_name => "User"
-  has_many :blog_resources
+  has_many :resources
   has_one :portrait
   has_one :true_portrait
 
@@ -57,7 +57,7 @@ class User < ActiveRecord::Base
     ids=users.map do |u|
       u.id
     end
-    BlogResource.find_all_by_user_id(ids,:order => "resources.created_at DESC")
+    Resource.find_all_by_user_id(ids,:order => "resources.created_at DESC")
   end
 
   def field_value(keyword_page)

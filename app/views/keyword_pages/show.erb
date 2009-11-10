@@ -21,8 +21,8 @@
 <div id="results">
   <ol class="sb_results" id="wg0">
     <% for u in @users %>
-      <%= render :partial => "blog_resources/blog_resource",:object => u.resources.find(:first,:order => "created_at DESC",:conditions => {:keyword_page_id => @keyword_page.id}) %>
-      <%= render  :partial => "blog_resources/no_profile_blog_resource",:collection => u.resources.find(:all,:limit => 3,:offset => 1,:order => "created_at DESC",:conditions => {:keyword_page_id => @keyword_page.id})  %>
+      <%= render :partial => "resources/resource",:object => u.resources.find(:first,:order => "created_at DESC",:conditions => {:keyword_page_id => @keyword_page.id}) %>
+      <%= render  :partial => "resources/no_profile_resource",:collection => u.resources.find(:all,:limit => 3,:offset => 1,:order => "created_at DESC",:conditions => {:keyword_page_id => @keyword_page.id})  %>
       <% if u.resources.find(:all,:order => "created_at DESC",:conditions => {:keyword_page_id => @keyword_page.id}).size>4 %>
         <% user_id=u.id %>
         <li id="more_of_<%=user_id%>">

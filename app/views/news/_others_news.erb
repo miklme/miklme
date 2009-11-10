@@ -1,7 +1,7 @@
 <span class="right">
 <%=distance_of_time_in_words(Time.now, others_news.created_at, true)%></span>
 
-<% if others_news.news_type=="blog_resource" %>
+<% if others_news.news_type=="resource" %>
   <p>
     <em><%= link_to "#{others_news.owner.name_or_nick_name(current_user)}",user_path(others_news.resource.owner) -%></em>发表高见
     <cite><%= auto_link others_news.resource.content%></cite>

@@ -27,7 +27,7 @@ class KeywordPagesController < ApplicationController
     if logged_in?
       @user=current_user
       @news=News.list_self_news(@user)
-      @blog_resource=@keyword_page.blog_resources.build
+      @resource=@keyword_page.resources.build
     end
     @users=@keyword_page.users_have_resources.paginate(:page => params[:page],:per_page => 10)
     keyword_pages=KeywordPage.find_with_ferret(@keyword_page.keyword+"~")-@keyword_page.to_a
@@ -40,7 +40,7 @@ class KeywordPagesController < ApplicationController
     @keyword_page=KeywordPage.find(params[:id])
     if logged_in?
       @user=current_user
-      @blog_resource=@keyword_page.blog_resources.build
+      @resource=@keyword_page.resources.build
     end
     @resources=@keyword_page.resources.find(:all,:limit => 40,:order => "created_at DESC")
     @related_keywords=@keyword_page.related_keywords
@@ -59,7 +59,7 @@ class KeywordPagesController < ApplicationController
     k=KeywordPage.find(params[:keyword_page_id])
     resources=User.find(params[:user_id]).resources.find(:all,:limit => 10,:offset => flash["resource_offset_of_#{params[:user_id]}"],:order => "created_at DESC",:conditions => {:keyword_page_id => k.id})
     render :update do |page|
-      page.insert_html :before,"more_of_#{params[:user_id]}",:partial => "blog_resources/no_profile_blog_resource",:collection => resources
+      page.insert_html :before,"more_of_#{params[:user_id]}",:partial => "resources/no_profile_resource",:collection => resources
     end
   end
 

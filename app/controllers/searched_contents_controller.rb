@@ -8,8 +8,8 @@ class SearchedContentsController < ApplicationController
       @keyword = session[:keyword]
     end
     s = Ferret::Search::SortField.new(:by_user_value, :reverse => true)
-    @blog_resources=BlogResource.find_with_ferret(@keyword+"~",:sort => s)
-    @resources=(@blog_resources).paginate(:page => params[:page],:per_page => 15)
+    @resources=Resource.find_with_ferret(@keyword+"~",:sort => s)
+    @resources=(@resources).paginate(:page => params[:page],:per_page => 15)
   end
 
 end
