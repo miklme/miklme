@@ -5,7 +5,7 @@
   <div class="margin_left">
     <p>
       <%=truncate auto_link(resource.content),:length => 300%>
-      <%= image_tag  user_resource_path(resource.owner,resource, :jpg) %>
+      <%= image_tag  user_resource_path(resource.owner,resource, :jpg) if resource.has_image? %>
     </p>
     <br />
     <%= link_to "回复>>>", user_resource_comments_path(resource.owner,resource),:popup => true %><span class="amount">(<%=resource.comments.size  %>)</span>

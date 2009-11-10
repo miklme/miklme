@@ -14,7 +14,7 @@
 有趣的分割点
 <span class="sc_bullet">·</span>%>
 -->
-<%= render :partial => "form" %>
+<%= render :partial => "resources/form" %>
 <div ><span class="sb_pag">
     <%= link_to "默认排序",keyword_page_path(@keyword_page) %>
     <%= link_to_remote "传统时间排序",:url => {:action => :by_time,:id => @keyword_page}%></span></div>

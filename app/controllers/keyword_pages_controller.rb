@@ -1,7 +1,6 @@
 class KeywordPagesController < ApplicationController
   skip_before_filter :login_required
   skip_before_filter :check_profile_status
-  caches_page :index
   def index
     @user=current_user
     @recent_keyword_pages=KeywordPage.recent_keyword_pages

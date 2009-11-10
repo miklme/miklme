@@ -26,11 +26,7 @@
 
             <p><%= render :partial => "shared/user_profile_full",:object => @user %></p>
             <h2>
-              <% if @user.sex==1 %>
-                他
-              <% else %>
-                她
-              <% end %>
+              <%= calling(@user) %>
               擅长的：</h2>
             <div>
               <% for k in @user.appear_keyword_pages %>

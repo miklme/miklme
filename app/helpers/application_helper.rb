@@ -24,4 +24,16 @@ module ApplicationHelper
     #{user_order}
       </span>/ #{all_users})"
   end
+
+  def calling(user)
+    if user!=current_user
+      if user.sex==1
+        "他"
+      else
+        "她"
+      end
+    else
+      "我"
+    end
+  end
 end

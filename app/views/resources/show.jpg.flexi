@@ -1,7 +1,5 @@
 @resource.operate do |image|
    image.resize '320x240', :crop => true
-    image.border :size => 1, :color => 'green'
-    image.text 'I like www'
    image.unsharp_mask
    image.shadow
  end

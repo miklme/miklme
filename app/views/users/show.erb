@@ -1,6 +1,10 @@
 <div id="new_resource">
 
 </div>
+<% if @user!=current_user %>
   <%= render :partial => "news/others_news",:collection => @news %>
   <%= will_paginate @news, :prev_label => '上一页', :next_label => '下一页' %>
+<% else %>
+  <%= render :partial => "news/friends_news",:collection => @friends_news %>
+<% end %>
 

@@ -1,0 +1,30 @@
+<div id="form">
+  <% if logged_in? %>
+    <% form_for [@keyword_page,@resource],:html => { :multipart => true } do |f|%>
+      <strong><%= f.error_messages %></strong>
+      <div class="box_2">
+        <%= f.text_area :content,:cols => 55,:rows => 5,:id => "publish_editor" %>
+      </div>
+      <div class="box_3">
+        <div class="right"><%= f.submit("",:id => "publisher_submit",:class => "btn") %></div>
+        <span class="left">插入图片：
+          <%= f.file_field :image_file,:size => 8%>
+        </span>
+        <span id="to_here">◄<span class="grey">到此为止</span></span>
+        <%= f.hidden_field :image_file_temp %>
+
+
+        <p class="left"><%= embedded_image_tag(@resource.operate { |img| img.resize 140 }) if @resource.has_image? %>
+        </p>
+      </div>
+      <div>
+        <!--
+        靠，先不用这个了
+        <li>
+    <%#= fckeditor_textarea(:resource,:content,:toolbarSet => "Easy",:width => '85%',:height => '150px') %>
+        </li>
+        -->
+      </div>
+    <% end %>
+  <% end %>
+</div>

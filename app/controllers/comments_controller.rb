@@ -3,7 +3,6 @@ class CommentsController < ApplicationController
   skip_before_filter :login_required,:only => [:index,:auto_complete_for_keyword_page_keyword]
   # GET /comments
   # GET /comments.xml
-  
   def index
     @keyword_page=KeywordPage.find_by_keyword(@resource.keyword_page.keyword)
     if logged_in? and !current_user.keyword_pages.include?(@keyword_page)
@@ -12,7 +11,7 @@ class CommentsController < ApplicationController
     @comments=@resource.comments_by_time(params[:page])
     @comment=@resource.comments.build
     respond_to do |format|
-      format.html
+      format.html {expire_page user_resource_path(@resource.owner,@resource,:jpg)}
       format.jpg
     end
   end

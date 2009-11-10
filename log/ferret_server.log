@@ -2420,3 +2420,736 @@ index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
 index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
 ############ registerclass KeywordPage
 index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "互联网~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "再创建一个~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "再创建一个~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "再创建一个~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "互联网~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "互联网~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "互联网~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "互联网~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "互联网~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "互联网~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "互联网~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "互联网~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "互联网~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "互联网~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "互联网~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "互联网~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "互联网~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "互联网~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "互联网~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "互联网~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "互联网~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "互联网~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "互联网~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "互联网~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "互联网~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "互联网~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "再创建一个~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "再创建一个~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+#method_missing(:add, [:keyword_page, {:key=>"KeywordPage-14", :class_name=>"KeywordPage", :id=>"14", :keyword=>"阿瑟斯是三十三岁"}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "再创建一个~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+#method_missing(:add, [:keyword_page, {:key=>"KeywordPage-14", :class_name=>"KeywordPage", :id=>"14", :keyword=>"阿瑟斯是三十三岁"}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+#method_missing(:add, [:keyword_page, {:key=>"KeywordPage-14", :class_name=>"KeywordPage", :id=>"14", :keyword=>"阿瑟斯是三十三岁"}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (6.5ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "互联网~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "互联网~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "互联网~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "增一颗~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+#method_missing(:find_ids, [:keyword_page, "阿瑟斯是三十三岁~", {:limit=>nil, :models=>[KeywordPage(id: integer, keyword: string, created_at: datetime, updated_at: datetime, long_keyword: boolean)], :offset=>nil}])
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>
+############ registerclass KeywordPage
+index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb69ddeb8>

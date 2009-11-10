@@ -1,27 +1,2 @@
-<div id="form">
-  <% if logged_in? %>
-    <% form_for [@keyword_page,@resource],:html => { :multipart => true } do |f|%>
-      <%= f.error_messages %>
-      <div class="box_2">
-        <%= f.text_area :content,:cols => 55,:rows => 5,:id => "publish_editor" %>
-      </div>
-      <div class="box_3">
 
-        <span id="to_here">◄<span class="grey">到此为止</span></span>
-                <span>上传图片</span>
-        <%= f.file_field :image_file %>
-        <span>引用图片</span>
-        <%= f.text_field :image_file_url %>
-        <%= f.submit("",:id => "publisher_submit",:class => "btn") %>
-      </div>
-      <div>
-        <!--
-        靠，先不用这个了
-        <li>
-    <%#= fckeditor_textarea(:resource,:content,:toolbarSet => "Easy",:width => '85%',:height => '150px') %>
-        </li>
-        -->
-      </div>
-    <% end %>
-  <% end %>
-</div>
+<%= render :partial => "form" %>
