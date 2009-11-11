@@ -24,7 +24,7 @@ class Comment < ActiveRecord::Base
     end
   end
 
-  def calculated_value
+  def changed_value
     k=self.resource.keyword_page
     current_v=self.owner.field_value(k)
     parent_v=self.parent.owner.field_value(k)

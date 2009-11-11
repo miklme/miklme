@@ -103,17 +103,17 @@ class ApplicationController < ActionController::Base
   def comment_notice(comment)
     k=comment.resource.keyword_page
     #自己比别人差，并差评别人
-    if comment.calculated_value<0 and comment.rating<0
-      "你试图pia飞#{comment.parent.owner.nick_name}，可是他比你声望高，你的pia被他反弹回来，声望<cite>#{comment.calculated_value}</cite>"
+    if comment.changed_value<0 and comment.rating<0
+      "你试图pia飞#{comment.parent.owner.nick_name}，可是他比你声望高，你的pia被他反弹回来，声望<cite>#{comment.changed_value}</cite>"
       #比别人差，但赞同别人
-    elsif comment.calculated_value<0 and comment.rating>0
-      "他的声望比你高，你借了光，声望增加<cite>#{comment.calculated_value.abs/2}</cite>"
+    elsif comment.changed_value<0 and comment.rating>0
+      "他的声望比你高，你借了光，声望增加<cite>#{comment.changed_value.abs/2}</cite>"
       #比别人好，赞同别人
-    elsif comment.calculated_value>0 and comment.rating>0
-      "你鼓励了后生。后生的声望增加<cite>#{comment.calculated_value.abs/2}</cite>"
+    elsif comment.changed_value>0 and comment.rating>0
+      "你鼓励了后生。后生的声望增加<cite>#{comment.changed_value.abs/2}</cite>"
       #比别人强，反驳对方
-    elsif comment.calculated_value>0 and comment.rating<0
-      "身为长辈的你打击了后生，后生的声望大降<cite>#{comment.calculated_value.abs}</cite>"
+    elsif comment.changed_value>0 and comment.rating<0
+      "身为长辈的你打击了后生，后生的声望大降<cite>#{comment.changed_value.abs}</cite>"
       #不表态
     elsif comment.rating==0
       "面无表情的你回复成功"

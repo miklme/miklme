@@ -25,16 +25,7 @@ class CommentsController < ApplicationController
     if @comment.save
       flash[:notice]=notice
       change_user_value(@comment)
-      n=@resource.owner.news.create
-      n.news_type="be_comment"
-      n.comment=@comment
-      n.resource=@resource
-      n.save
-      n_2=current_user.news.create
-      n_2.news_type="comment"
-      n_2.comment=@comment
-      n_2.resource=@resource
-      n_2.save
+      News.create_comment_news(@comment,@resource)
       redirect_to :back
     else
       redirect_to :back

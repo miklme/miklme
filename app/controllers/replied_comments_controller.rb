@@ -16,16 +16,7 @@ class RepliedCommentsController < ApplicationController
     @replied_comment.owner=current_user
     if @replied_comment.save
       change_user_value(@replied_comment)
-      n=@replied_comment.parent_comment.owner.news.build
-      n.news_type="be_comment"
-      n.resource=@resource
-      n.comment=@replied_comment
-      n.save
-      n_2=current_user.news.build
-      n_2.news_type="comment"
-      n_2.resource=@resource
-      n_2.comment=@replied_comment
-      n_2.save
+      News.create_replied_comment_news(@replied_comment, @resource)
       render :update do |page|
         page.replace "form",:partial => "comments/comment",:object => @replied_comment
         page.visual_effect :pulsate,"comment_#{@replied_comment.id}",:duration => 3
