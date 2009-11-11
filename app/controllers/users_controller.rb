@@ -50,7 +50,7 @@ class UsersController < ApplicationController
         b.user=User.find(session[:inviter_id])
         b.follower=current_user
         v=ValueOrder.find(session[:value_order_id])
-        v.value+=0.45
+        v.value+=1.0
         v.save
         b.save
         flash[:notice]="你关注了#{User.find(session[:inviter_id]).name_or_nick_name(current_user)}"
