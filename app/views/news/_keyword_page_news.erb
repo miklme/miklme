@@ -1,4 +1,4 @@
-<% x="“"+truncate(keyword_page_news.comment.try(:content),:length => 30).to_s+"”" %>
+<% x="“"+truncate(keyword_page_news.comment.try(:content),:length => 24).to_s+"”" %>
 
 
 <span class="sb_meta">
@@ -6,6 +6,11 @@
 <% if keyword_page_news.news_type=="be_comment" %>
   <div class="side">
     <%=link_to x,user_news_path(keyword_page_news.owner,keyword_page_news),:popup => true,:class => "keyword_page_news" %>
+    <cite>
+      <% if keyword_page_news.changed_value.present?  %>
+        <%= "+" if keyword_page_news.changed_value>=0 %>
+      <% end %>
+      <%= keyword_page_news.changed_value %></cite>
   </div>
 <% elsif keyword_page_news.news_type=="be_follow" %>
   <div class="side">

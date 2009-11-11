@@ -36,4 +36,5 @@ module ApplicationHelper
       "我"
     end
   end
+
 end

@@ -22,10 +22,12 @@ class CommentsController < ApplicationController
     @comment = @resource.comments.build(params[:comment])
     @comment.owner=current_user
     notice=comment_notice(@comment)
+    session[:before]=@resource.owner.field_value(@resource.keyword_page)
     if @comment.save
       flash[:notice]=notice
       change_user_value(@comment)
-      News.create_comment_news(@comment,@resource)
+      changed_value=@resource.owner.field_value(@resource.keyword_page)-session[:before]
+      News.create_comment_news(@comment,@resource,changed_value)
       redirect_to :back
     else
       redirect_to :back

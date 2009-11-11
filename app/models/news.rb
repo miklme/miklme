@@ -35,12 +35,12 @@ class News < ActiveRecord::Base
       :conditions => "news_type='comment' or news_type='resource' or news_type='replied_comment'"
   end
 
-  def self.create_comment_news(comment,resource)
+  def self.create_comment_news(comment,resource,changed_value)
     n=resource.owner.news.create
     n.news_type="be_comment"
     n.comment=comment
     n.resource=resource
-    n.changed_value=comment.changed_value
+    n.changed_value=changed_value
     n.save
     n_2=comment.owner.news.create
     n_2.news_type="comment"
@@ -49,24 +49,25 @@ class News < ActiveRecord::Base
     n_2.save
   end
 
-  def self.create_replied_comment_news(replied_comment,resource)
-      n=replied_comment.parent_comment.owner.news.build
-      n.news_type="be_comment"
-      n.resource=resource
-      n.comment=replied_comment
-      n.changed_value=replied_comment.changed_value
-      n.save
-      n_2=replied_comment.owner.news.build
-      n_2.news_type="comment"
-      n_2.resource=resource
-      n_2.comment=replied_comment
-      n_2.save
+  def self.create_replied_comment_news(replied_comment,resource,changed_value)
+    n=replied_comment.parent_comment.owner.news.build
+    n.news_type="be_comment"
+    n.resource=resource
+    n.comment=replied_comment
+    n.changed_value=changed_value
+    n.save
+    n_2=replied_comment.owner.news.build
+    n_2.news_type="comment"
+    n_2.resource=resource
+    n_2.comment=replied_comment
+    n_2.save
   end
+  
   def self.create_resource_news(resource)
-      n=resource.owner.news.create
-      n.news_type="resource"
-      n.owner=resource.owner
-      n.resource=resource
-      n.save
+    n=resource.owner.news.create
+    n.news_type="resource"
+    n.owner=resource.owner
+    n.resource=resource
+    n.save
   end
 end

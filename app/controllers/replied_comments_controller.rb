@@ -14,9 +14,11 @@ class RepliedCommentsController < ApplicationController
     @replied_comment=@resource.comments.build(params[:comment])
     @replied_comment.parent_comment=@comment
     @replied_comment.owner=current_user
+    session[:before]=@comment.owner.field_value(@comment.keyword_page)
     if @replied_comment.save
       change_user_value(@replied_comment)
-      News.create_replied_comment_news(@replied_comment, @resource)
+      changed_value=@comment.owner.field_value(@comment.keyword_page)-session[:before]
+      News.create_replied_comment_news(@replied_comment, @resource,changed_value)
       render :update do |page|
         page.replace "form",:partial => "comments/comment",:object => @replied_comment
         page.visual_effect :pulsate,"comment_#{@replied_comment.id}",:duration => 3
