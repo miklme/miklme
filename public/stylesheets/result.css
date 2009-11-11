@@ -1126,7 +1126,8 @@ input {
     text-align:center
 }
 .more a:hover{
-    background:none
+    background:none;
+    color:white
 }
 .more:hover{
     border-color:#FFA615;
