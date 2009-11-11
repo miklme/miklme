@@ -78,7 +78,7 @@
             <% end %>
             <% if logged_in? and @keyword_page.users.include?(current_user) %>
               <div class="item_blue">
-                Michael计算你在<span id="keyword_page">这个贴吧</span>的<cite>声望</cite>需要一定活跃人数，赶快邀请朋友们吧：
+                每邀请1个朋友，你在<span id="keyword_page">这个贴吧</span>的<cite>声望</cite>会提高1点。要不要邀请呢？
                 <ul>
                   <li>
                     <p>真实朋友：我<%= current_user.name %>，在玩一个很独特的应用，你也赶快来试试：<%= "http://mikl.me/users/new/#{current_user.id}/#{ValueOrder.find_by_user_id_and_keyword_page_id(current_user.id,@keyword_page.id).id}/realfriend" %></p>
