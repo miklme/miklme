@@ -38,31 +38,14 @@ class KeywordPage < ActiveRecord::Base
     end
   end
   
-  def higher_lower_good(user1,user2)
-    (user1.field_value(self)-user2.field_value(self))/2
+  def good_comment(user1,user2)
+    ((user1.field_value(self)-user2.field_value(self))/2).abs
   end
 
-  def lower_higher_good(r)
-    s=r.good_commenters.size
-    if s>=2
-      0.15*(s**2-(s-1)**2)
-    else
-      0
-    end
+  def bad_comment(user1,user2)
+    (user1.field_value(self)-user2.field_value(self)).abs
   end
-
-  def lower_higher_bad(r)
-    b=r.bad_commenters.size
-    if b>=2
-      0.15*(b**2-(b-1)**2)
-    else
-      0
-    end
-  end
-
-  def higher_lower_bad(user)
-    (user.field_value(self)/3).abs
-  end
+  
   def resources_by_value
     ss=self.resources.sort_by do |resource|
       [self.value_orders.find_by_user_id(resource.owner).value,resource.created_at]

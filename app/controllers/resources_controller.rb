@@ -1,6 +1,6 @@
 class ResourcesController < ApplicationController
   skip_before_filter :login_required,:except => [:new,:create]
-
+  caches_page :preview,:origin
   def new
 
   end

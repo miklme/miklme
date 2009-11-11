@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091110085334) do
+ActiveRecord::Schema.define(:version => 20091111020943) do
 
   create_table "addresses", :force => true do |t|
     t.string   "province"
@@ -124,9 +124,9 @@ ActiveRecord::Schema.define(:version => 20091110085334) do
   create_table "value_orders", :force => true do |t|
     t.integer "user_id"
     t.integer "keyword_page_id"
-    t.decimal "value",           :precision => 8, :scale => 2, :default => 0.0
-    t.boolean "hidden",                                        :default => false
-    t.boolean "actived",                                       :default => false
+    t.decimal "value",           :precision => 20, :scale => 8, :default => 0.0
+    t.boolean "hidden",                                         :default => false
+    t.boolean "actived",                                        :default => false
   end
 
 end

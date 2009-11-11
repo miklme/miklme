@@ -70,18 +70,18 @@ class ApplicationController < ActionController::Base
     if a
       current_v=current_user.field_value(comment.resource.keyword_page)
       author_v=object.field_value(comment.resource.keyword_page)
-      if current_v<= author_v and comment.rating==-1
-        object.change_value comment.resource.keyword_page,-comment.resource.keyword_page.lower_higher_bad(comment.parent)
-        object.save
+      if current_v<author_v and comment.rating==-1
+        current_user.change_value comment.resource.keyword_page,-comment.resource.keyword_page.bad_comment(current_user,object)
+        current_user.save
       elsif current_v>author_v and comment.rating==-1
-        object.change_value(comment.resource.keyword_page,-comment.resource.keyword_page.higher_lower_bad(comment.parent.owner))
+        object.change_value(comment.resource.keyword_page,-comment.resource.keyword_page.bad_comment(current_user,object))
         object.save
       elsif comment.rating==1 and  current_v>author_v
-        object.change_value comment.resource.keyword_page,comment.resource.keyword_page.higher_lower_good(current_user,comment.parent.owner)
+        object.change_value comment.resource.keyword_page,comment.resource.keyword_page.good_comment(current_user,object)
         object.save
-      elsif comment.rating==1 and  current_v<=author_v
-        object.change_value comment.resource.keyword_page,comment.resource.keyword_page.lower_higher_good(comment.parent)
-        object.save
+      elsif comment.rating==1 and  current_v<author_v
+        current_user.change_value comment.resource.keyword_page,comment.resource.keyword_page.good_comment(current_user,object)
+        current_user.save
       end
     end
   end
