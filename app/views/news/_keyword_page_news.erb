@@ -9,8 +9,4 @@
   <div class="side">
     <%=link_to keyword_page_news.follower.name_or_nick_name(current_user),user_news_path(keyword_page_news.owner,keyword_page_news) %>关注了我，我的声望有所增加。
   </div>
-<% elsif  keyword_page_news.news_type=="be_replied_comment"%>
-  <div class="side">
-    <%=link_to x,user_news_path(keyword_page_news.owner,keyword_page_news),:popup => true,:class => "keyword_page_news"%>
-  </div>
 <% end %>

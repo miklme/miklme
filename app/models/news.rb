@@ -13,7 +13,7 @@ class News < ActiveRecord::Base
     find_all_by_user_id current_user.id,
       :order => "created_at DESC",
       :limit => 10,
-      :conditions => "news_type='be_follow' or news_type='be_comment' or news_type='be_replied_comment'"
+      :conditions => "news_type='be_follow' or news_type='be_comment'"
 
   end
 
@@ -23,7 +23,7 @@ class News < ActiveRecord::Base
     end
     self.find_all_by_user_id following_ids,
       :order  => "created_at DESC",
-      :conditions => "news_type='comment' or news_type='resource' or news_type='replied_comment'",
+      :conditions => "news_type='comment' or news_type='resource'",
       :limit => 32
   end
 

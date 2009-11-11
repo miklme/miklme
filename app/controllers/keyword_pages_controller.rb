@@ -35,19 +35,6 @@ class KeywordPagesController < ApplicationController
     @related_keywords=@keyword_page.related_keywords
   end
 
-  def by_time
-    @keyword_page=KeywordPage.find(params[:id])
-    if logged_in?
-      @user=current_user
-      @resource=@keyword_page.resources.build
-    end
-    @resources=@keyword_page.resources.find(:all,:limit => 40,:order => "created_at DESC")
-    @related_keywords=@keyword_page.related_keywords
-    render :update do |page|
-      page.replace "wg0",:partial => "by_time"
-    end
-  end
-
 
   def more
     if flash["resource_offset_of_#{params[:user_id]}"].blank?
@@ -62,8 +49,6 @@ class KeywordPagesController < ApplicationController
     end
   end
 
-  
-
   def more_pages
     if flash[:keyword_page_offset].blank?
       flash[:keyword_page_offset]=5
@@ -74,5 +59,22 @@ class KeywordPagesController < ApplicationController
     render :update do |page|
       page.insert_html :before,"more_pages",:partial => "keyword_page_index",:collection => @keyword_pages
     end
+  end
+
+  def by_time
+        @keyword_page=KeywordPage.find(params[:id])
+    if logged_in? and !current_user.keyword_pages.include?(@keyword_page)
+      current_user.keyword_pages<<@keyword_page
+    end
+    if logged_in?
+      @user=current_user
+      @news=News.list_self_news(@user)
+      @resource=@keyword_page.resources.build
+    end
+    @resources=@keyword_page.resources.find(:all,:limit => 40,:order => "created_at DESC")
+    keyword_pages=KeywordPage.find_with_ferret(@keyword_page.keyword+"~")-@keyword_page.to_a
+    @searched_keywords=keyword_pages.find_all{|k| k.resources.size>=1}.first(10)
+    #未使用用户自定义编辑贴吧功能
+    @related_keywords=@keyword_page.related_keywords
   end
 end
