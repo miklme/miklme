@@ -112,8 +112,4 @@ class User < ActiveRecord::Base
     ks.compact
   end
 
-  def self.top_10
-    us=User.find(:all).sort_by {|u| u.total_value}
-    us.reverse!.first(10)
-  end
 end

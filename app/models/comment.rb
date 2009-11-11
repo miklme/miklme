@@ -15,7 +15,7 @@ class Comment < ActiveRecord::Base
   validates_presence_of :content
 
   after_create :adjust_resource_updated_at
-
+  
   def parent
     if self.parent_comment.present?
       self.parent_comment
@@ -24,11 +24,19 @@ class Comment < ActiveRecord::Base
     end
   end
 
+  def calculated_value
+    k=self.resource.keyword_page
+    current_v=self.owner.field_value(k)
+    parent_v=self.parent.owner.field_value(k)
+    current_v-parent_v
+  end
+  
   private
   def adjust_resource_updated_at
     self.resource.updated_at=Time.now
     self.resource.save
   end
 
+  
   
 end

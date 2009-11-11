@@ -21,9 +21,10 @@ class CommentsController < ApplicationController
   def create
     @comment = @resource.comments.build(params[:comment])
     @comment.owner=current_user
+    notice=comment_notice(@comment)
     if @comment.save
-      calculate_comment_value(@comment)
-      flash[:notice]="回应成功。"
+      flash[:notice]=notice
+      change_user_value(@comment)
       n=@resource.owner.news.create
       n.news_type="be_comment"
       n.comment=@comment

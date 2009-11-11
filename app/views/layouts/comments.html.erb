@@ -41,9 +41,9 @@
         </div>
         <div id="content">
           <% if flash[:notice].present? %>
-            <p>
-              <strong><%=h flash[:notice] %></strong>
-            </p>
+            <h2 class="item_orange">
+     <%= flash[:notice] %>
+            </h2>
           <% end %>
           <%= @content_for_layout %>
           <div class="sb_pag">

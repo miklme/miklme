@@ -15,7 +15,7 @@ class RepliedCommentsController < ApplicationController
     @replied_comment.parent_comment=@comment
     @replied_comment.owner=current_user
     if @replied_comment.save
-      calculate_comment_value(@replied_comment)
+      change_user_value(@replied_comment)
       n=@replied_comment.parent_comment.owner.news.build
       n.news_type="be_comment"
       n.resource=@resource

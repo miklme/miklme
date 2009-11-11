@@ -4,7 +4,6 @@ class KeywordPagesController < ApplicationController
   def index
     @user=current_user
     @recent_keyword_pages=KeywordPage.recent_keyword_pages
-    @top_users=User.top_10
     @many_user_keyword_pages=KeywordPage.active_user_keyword_pages.first(5)
     render :layout => "related_keywords"
   end

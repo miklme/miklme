@@ -1,8 +1,0 @@
-<h2>声望较高用户top10</h2>
-<ul>
-  <% for u in @top_users %>
-    <li>
-      <%= link_to u.nick_name,user_path(u),:popup => true %>
-    </li>
-  <% end %>
-</ul>

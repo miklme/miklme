@@ -1,4 +1,6 @@
 <% x="“"+truncate(keyword_page_news.comment.try(:content),:length => 30).to_s+"”" %>
+
+
 <span class="sb_meta">
 <%=distance_of_time_in_words(Time.now, keyword_page_news.created_at, true)%></span>
 <% if keyword_page_news.news_type=="be_comment" %>

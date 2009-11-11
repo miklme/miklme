@@ -35,7 +35,7 @@ class BeFollowsController < ApplicationController
       n.follower_id=current_user.id
       n.news_type="be_follow"
       n.save
-      flash[:notice] = "成功关注该用户，之后你会自动获得该用户的一些信息，现在你可以逛逛他的主页"
+      flash[:notice] = "已经关注他了，之后你的主页中会显示他的最新动态，现在你可以逛逛他的主页"
       redirect_to user_path(@user)
     else
       render  :action => "new"
