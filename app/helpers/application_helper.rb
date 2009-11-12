@@ -4,6 +4,10 @@ module ApplicationHelper
     User.find(id)
   end
 
+  def link_to_origin(resource)
+      link_to(image_tag(preview_user_resource_path(resource.owner,resource, :jpg)),origin_user_resource_path(resource.owner,resource,:jpg), :popup => ['预览', 'height=400,width=540']) if resource.has_image? 
+  end
+
   def my_value_here(keyword_page)
     if logged_in?
       "我在此的声望：<cite>#{current_user.field_value(keyword_page)}</cite>"

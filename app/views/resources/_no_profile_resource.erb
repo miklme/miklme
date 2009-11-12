@@ -5,8 +5,7 @@
       <%=truncate auto_link(no_profile_resource.content),:length => 300%>
     </p>
     <p>
-      <%=link_to(image_tag(preview_user_resource_path(no_profile_resource.owner,no_profile_resource, :jpg)),origin_user_resource_path(no_profile_resource.owner,no_profile_resource,:jpg), :popup => ['预览', 'height=400,width=540']) if no_profile_resource.has_image? %>
-    </p>
+    <%=link_to_origin(no_profile_resource) %>    </p>
     <br />
     <%= link_to "回复>>>", user_resource_comments_path(no_profile_resource.owner,no_profile_resource),:popup => true %><span class="amount">(<%=no_profile_resource.comments.size  %>)</span>
   </div>
