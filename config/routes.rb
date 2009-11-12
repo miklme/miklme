@@ -19,7 +19,7 @@ ActionController::Routing::Routes.draw do |map|
     keyword_page.resources :resources
   end
   map.activate '/activate/:activation_code', :controller => 'users', :action => 'activate'
-  map.root :controller=>'sessions',:action=>'new'
+  map.root :controller=>'keyword_pages',:action=>'index'
   map.invite '/users/new/:inviter_id/:value_order_id/:relationship',:controller => 'users',:action => "invite"
   # Sample resource route with options:
   #   map.resources :products, :member => { :short => :get, :toggle => :post }, :collection => { :sold => :get }

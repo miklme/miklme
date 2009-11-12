@@ -9,19 +9,15 @@
   </head>
   <body>
     <div id="header">
-      <div id="logo"><%= link_to @title,new_session_path %></div>
+      <div id="logo"><%= link_to @title,keyword_pages_path %></div>
       <div id="menu"></div>
     </div>
-      <div id="main">
-        <div id="content">
-          <% if flash[:notice] or flash[:error] %>
-            <div id="notice">
-              <%= flash[:error] or flash[:notice]%>
-            </div>
-          <% end %>
-          <%= @content_for_layout %>
-        </div>
-        <%=render :partial=>'shared/footer'%>
+    <div id="main">
+      <div id="content">
+        <%= flash %>
+        <%= @content_for_layout %>
       </div>
+      <%=render :partial=>'shared/footer'%>
+    </div>
   </body>
 </html>

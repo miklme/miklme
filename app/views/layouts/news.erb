@@ -11,16 +11,13 @@
     <%= render :partial => "shared/header",:object => @user%>
     <div id="main">
       <div id="content">
-        <% if flash[:notice] or flash[:error] %>
-          <div id="notice">
-            <%= flash[:error] or flash[:notice]%>
+            <%   if flash[:notice].present?%>  <p class="notice"><%=flash[:notice] %></p>  <% end %>
+            <%   if flash[:error].present?%> <p class="error"> <%=flash[:error]  %></p> <% end %>
+          <div id="text">
+            <%= @content_for_layout %>
           </div>
-        <% end %>
-        <div id="text">
-          <%= @content_for_layout %>
         </div>
+        <%= render :partial => "shared/footer" %>
       </div>
-      <%= render :partial => "shared/footer" %>
-    </div>
-  </body>
-</html>
+    </body>
+  </html>

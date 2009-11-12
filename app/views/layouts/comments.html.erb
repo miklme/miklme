@@ -40,11 +40,8 @@
           </div>
         </div>
         <div id="content">
-          <% if flash[:notice].present? %>
-            <h2 class="item_orange">
-     <%= flash[:notice] %>
-            </h2>
-          <% end %>
+            <%   if flash[:notice].present?%>  <p class="notice"><%=flash[:notice] %></p>  <% end %>
+            <%   if flash[:error].present?%> <p class="error"> <%=flash[:error]  %></p> <% end %>
           <%= @content_for_layout %>
           <div class="sb_pag">
             <%= will_paginate @comments, :prev_label => '上一页', :next_label => '下一页' %>

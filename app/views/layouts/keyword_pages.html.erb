@@ -4,6 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta content="Mikl,Michael,Mikl.me,Michael网络,贴吧,声望,在线声望" name="keywords"/>
     <title>( Michael )</title>
     <%= javascript_include_tag :defaults,:cache => true  %>
     <%= stylesheet_link_tag "result"  %>
@@ -31,51 +32,10 @@
       </div>
       <div id="sw_content">
         <div id="sw_canvas">
-          <div id="sw_aside">
-            <div id="sc_expPane">
-              <div class="sw_menu" id="sw_rel">
-                <dl>
-                  <dt>
-                    <span id="current_page"><%=h @keyword_page.keyword %></span>
-                  </dt>
-                  <dd>
-                    <span><%= my_value_here(@keyword_page) %></span>
-                  </dd>
-                </dl>
-                <h2>相关贴吧</h2>
-                <% if logged_in? and current_user.controlled_keywords.include?(@keyword_page.keyword).present? %>
-                  <span><%=link_to "修改",keyword_page_related_keywords_path(@keyword_page),:popup => ['修改推广贴吧', 'height=500,width=450'] %>
-                  </span>
-                <% end %>
-                <ul>
-                  <% if not @searched_keywords.blank? %>
-                    <% for keyword in @searched_keywords %>
-                      <li id="keyword_page">
-                        <span><%= link_to keyword.keyword,keyword_page_path(keyword)%></span>
-                      </li>
-                    <% end %>
-                  <% end %>
-                  <% if not @related_keywords.blank? %>
-                    <% for related_keyword in @related_keywords %>
-                      <li id="keyword_page">
-                        <span><%= link_to related_keyword.name,keyword_page_path(KeywordPage.find_by_keyword(related_keyword.name))%></span>
-                      </li>
-                    <% end %>
-                  <% end %>
-                </ul>
-                <% if logged_in? %>
-                  <h2>
-                    最近回复我的
-                  </h2>
-                  <%= render :partial => "news/keyword_page_news",:collection => @news %>
-                <% end %>
-              </div>
-            </div>
-          </div>
+          <%= render :partial => "keyword_page_side" %>
           <div id="content">
-            <% if flash[:notice].present? %>
-              <%= flash[:notice] %>
-            <% end %>
+            <%   if flash[:notice].present?%>  <p class="notice"><%=flash[:notice] %></p>  <% end %>
+            <%   if flash[:error].present?%> <p class="error"> <%=flash[:error]  %></p> <% end %>
             <% if logged_in? and @keyword_page.users.include?(current_user) %>
               <div class="item_blue">
                 每邀请1个朋友，你在<span id="keyword_page">这个贴吧</span>的<cite>声望</cite>会提高1点。要不要邀请呢？
