@@ -1,12 +1,9 @@
-
-
+<ul>
+<li>
+  <%= link_to_unless_current "Michael",keyword_pages_path %>
+</li>
+</ul>
 <% if logged_in? %>
-  <ul>
-    <li>
-      <%= link_to_unless_current "Michael",keyword_pages_path %>
-    </li>
-
-  </ul>
   <ul class="sw_right">
     <li>
       <%= link_to "查找用户>>>",search_user_new_user_follow_path(current_user) %>
@@ -27,30 +24,17 @@
 <% else %>
   <ul>
     <li>
-      <%= link_to_unless_current "Michael",keyword_pages_path %>
-    </li>
-
-  </ul>
-  <ul>
-    <li>
       <% form_tag session_path do -%>
-      <li>
         <%= label_tag 'username','1'%>
-        <%= text_field_tag 'username',params[:username],:size => 10,:class => "input" %>
-      </li>
-      <li>
+        <%= text_field_tag 'username',params[:username],:size => 30,:class => "input" %>
         <%= label_tag 'password','2'%>
-        <%= password_field_tag 'password',params[:password],:size => 10,:class => "input"%>
-      </li>
-      <li>
+        <%= password_field_tag 'password',params[:password],:size => 30,:class => "input"%>
         <%= check_box_tag 'remember_me', '1', @remember_me %>
         <%= label_tag 'remember_me', '记住' %>
         <%= submit_tag '登录' %>
+        |
+        <%= link_to "注册",new_user_path %>
       <% end -%>
-    </li>
-    |
-    <li>
-      <%= link_to "注册新用户",new_user_path %>
     </li>
   </ul>
 <% end %>

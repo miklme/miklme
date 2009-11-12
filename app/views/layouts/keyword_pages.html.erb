@@ -21,21 +21,15 @@
             <%= render :partial => "shared/keyword_page_header"%>
           <% end %>
         </div>
-        <div class="sw_tbb"></div>
-        <div class="sw_box">
-          <h2><%= link_to "",keyword_pages_path,:class => "sw_logo"%>
-          </h2>
-          <div class="sw_bd">
-            <%= render :partial => "shared/search_bar" %>
-          </div>
-        </div>
       </div>
       <div id="sw_content">
         <div id="sw_canvas">
-          <%= render :partial => "keyword_page_side" %>
+          <%= render :partial => "keyword_pages/keyword_page_side" %>
           <div id="content">
             <%   if flash[:notice].present?%>  <p class="notice"><%=flash[:notice] %></p>  <% end %>
             <%   if flash[:error].present?%> <p class="error"> <%=flash[:error]  %></p> <% end %>
+ <%= render :partial => "shared/search_bar" %>
+
             <% if logged_in? and @keyword_page.users.include?(current_user) %>
               <div class="item_blue">
                 每邀请1个朋友，你在<span id="keyword_page">这个贴吧</span>的<cite>声望</cite>会提高1点。要不要邀请呢？

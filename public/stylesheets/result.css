@@ -38,10 +38,7 @@ h1, h2, h3, h4, h5, h6 {
     margin:0;
     padding:0;
 }
-h1 {
-    color:#898994;
-    font-size:93%;
-}
+
 #mm_header h1, .sb_ph h1 {
     text-transform:uppercase;
 }
@@ -81,7 +78,7 @@ cite a{text-decoration:underline}
 .sb_meta{
     color:#A1A1A1;
     margin:0;
-    float:right
+    float:right;
 }
 
 .grey{
@@ -198,12 +195,13 @@ div#sw_nav li {
     border-right:none;
     border-width:1px;
     border-color:pink;
-    color:#F76120
+    color:#F76120;
+    margin:5px
 }
 .error{
     color:#CC0033;
     padding: 6px 12px;
-    margin-bottom: 8px;
+    margin: 8px;
     vertical-align: text-top;
     background:#EEF9EB;
     border: 3px solid #f5fef2;
@@ -376,19 +374,12 @@ a.sb_pagP, a.sb_pagN {
     padding-top:0.5em;
 }
 #sw_hdr {
-    min-height:100px;
+    height:100px;
     min-width:980px;
     position:relative;
     z-index:4;
 }
-#sw_tbbg {
-    -moz-background-clip:border;
-    -moz-background-inline-policy:continuous;
-    -moz-background-origin:padding;
-    background:#525051 url(../images/j.png) repeat-x scroll 0 -83px;
-    height:1.85em;
-    margin-bottom:-1.85em;
-}
+
 #sw_ltxt {
     color:#0033CC;
     font-size:170%;
@@ -402,7 +393,7 @@ a.sb_pagP, a.sb_pagN {
     min-height:14px;
     padding:0.35em 0;
     width:100%;
-    font-weight:bold
+    font-weight:bold;
 }
 .sw_tb a {
     font-weight:normal
@@ -517,13 +508,8 @@ a.sw_logo:hover{
     top:-9em;
     z-index:-1;
 }
-.sw_box a:hover {
-    text-decoration:none;
-}
-.sw_box img {
-    float:left;
-    margin:-13px 0 0 17px;
-}
+
+
 #sw_hdr #sb_form, #sw_hdr .sw_box {
     margin:0;
     padding:47px 0 0 20px;
@@ -564,7 +550,12 @@ a.sw_logo:hover{
 .sb_form_align {
 }
 #username,#password{
-    height:20px
+    border:1px solid grey;
+    font-size:12px;
+    background-color: #eaeaea;
+}
+#username:hover,#password:hover,#username:focus,#password:focus{
+        background-color: white;
 }
 #sw_hdr #sch_scopes li a {
     padding-bottom:1px;
@@ -1009,15 +1000,13 @@ div.auto_complete ul strong.highlight {
     padding:0;
 }
 .search_bar {
-    text-align:center
+    text-align:center;
+    margin:10px
 }
-input {
-    padding-right: 3px;
-    padding-left: 3px;
-    padding-bottom: 3px;
-    padding-top: 3px;
+.search_input{
+    text-align:center;
+    padding:4px
 }
-
 #hover:hover{
     display:inline
 }
