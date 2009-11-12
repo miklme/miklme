@@ -1,3 +1,8 @@
+<%= render :partial => "resources/form" %>
+<div ><span class="sb_pag">
+    <%= link_to_unless_current "按作者声望排序",keyword_page_path(@keyword_page) %>
+    <%= link_to_unless_current "传统时间排序",by_time_keyword_page_path(@keyword_page)%></span>
+</div>
 <div id="results">
 
   <ol class="sb_results" id="wg0">
