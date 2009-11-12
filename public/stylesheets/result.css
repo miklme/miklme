@@ -258,9 +258,7 @@ div#sw_nav li {
 #sw_refine ul {
     padding-left:5px;
 }
-#sw_refine .sw_more ul {
-    padding:0;
-}
+
 .sb_tc .sb_te, .sb_to .sb_tce {
     display:none;
 }
@@ -903,12 +901,7 @@ input.sw_q_nrw {
     margin:1.54em auto 0.8em;
     width:100%;
 }
-.sb_results li, #results h2, .sc_seemore {
-    width:100%;
-}
-.sa_cc, #results h2 div, .sc_seemore a {
-    max-width:590px;
-}
+
 .sb_results li li {
     float:none;
     width:auto;
@@ -982,14 +975,7 @@ input.sw_q_nrw {
     display:inline-block;
 }
 
-.sc_seemore {
-    margin-top:-0.56em;
-    padding-bottom:1.37em;
-}
-.sc_seemore a {
-    color:#525051;
-    text-decoration:underline;
-}
+
 #content .sw_box .sw_t {
     display:none;
 }
@@ -1119,15 +1105,15 @@ input {
     padding:10px 100px
 }
 .more a{
-        color:#F76120;
-        padding:10px 160px;
+    color:#F76120;
+    padding:10px 140px;
 }
 #welcome{
     text-align:center
 }
 .more a:hover{
     background:none;
-    color:white
+    color:#F76120;
 }
 .more:hover{
     border-color:#FFA615;
@@ -1205,9 +1191,9 @@ dd{
     padding-right:100px}
 
 #to_here{
-bottom:20px;
-position:relative;
-left:-17em;
+    bottom:20px;
+    position:relative;
+    left:-17em;
 }
 #resource_image_file{
     vertical-align:top

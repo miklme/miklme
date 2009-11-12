@@ -8,7 +8,7 @@
         <% if u.resources.find(:all,:order => "created_at DESC",:conditions => {:keyword_page_id => @keyword_page.id}).size>4 %>
           <% user_id=u.id %>
           <li id="more_of_<%=user_id%>">
-            <div class="more"><%= link_to_remote '· · ·',:url => {:action => :more,:user_id => u.id,:keyword_page_id => @keyword_page.id}%></div>
+            <div class="more"><%= link_to_remote '· · · · · ·',:url => {:action => :more,:user_id => u.id,:keyword_page_id => @keyword_page.id}%></div>
           </li>
         <% end %>
       <% end %>
