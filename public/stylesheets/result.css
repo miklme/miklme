@@ -1150,6 +1150,9 @@ dd{
 .fieldWithErrors{
     display:inline
 }
+.cadet_blue{
+    color:CadetBlue
+}
 .box_2 textarea {
     -moz-background-clip:border;
     -moz-background-inline-policy:continuous;
