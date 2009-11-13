@@ -20,6 +20,9 @@ em,em a{color:white;
         font-size:13px;
         font-style:normal
 }
+.notice{
+    color:white
+}
 .fieldWithErrors{
     display:inline
 }

@@ -30,7 +30,7 @@
           <%   if flash[:error].present?%> <p class="error"> <%=flash[:error]  %></p> <% end %>
           <div id="welcome">
          <%= render :partial => "shared/search_bar" %>
-            <h2 class="title_1"><%= link_to "欢迎来到Michael" %></h2>
+            <h2 class="title_1"><%= link_to "解脱。" %></h2>
             <p>在这里，Michael会智能地判断你在哪方面较为擅长。就像 <%= link_to_remote "这样>>>",:url => {:action => :toggle_blind,:id => "like_this"} %>。你要做的全部：
             </p>
             <div id="like_this" style="display:none">
