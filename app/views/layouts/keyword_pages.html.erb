@@ -28,8 +28,12 @@
           <div id="content">
             <%   if flash[:notice].present?%>  <p class="notice"><%=flash[:notice] %></p>  <% end %>
             <%   if flash[:error].present?%> <p class="error"> <%=flash[:error]  %></p> <% end %>
- <%= render :partial => "shared/search_bar" %>
-
+            <%= render :partial => "shared/search_bar" %>
+            <% if Resource.find_by_keyword_page_id(@keyword_page).blank?%>
+              <div class="item_blue">
+                目前这个贴吧内还没有任何发言。幸运的是，你可以作为第一个发言的人。
+              </div>
+            <% end %>
             <% if logged_in? and @keyword_page.users.include?(current_user) %>
               <div class="item_blue">
                 每多1个人关注你，你在<span id="keyword_page">这个贴吧</span>的<cite>声望</cite>会提高1点。要不要邀请朋友关注自己呢？

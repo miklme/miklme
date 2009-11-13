@@ -34,11 +34,12 @@
             <p>Michael的牛逼将带你解脱这样一种困境：因为自己的言论缺乏影响力而不愿贡献内容。有了Michael，一切都有点不一样了。Michael提供了一个完美的解决这一问题方案。
               要想被Michael玩转，只需三步：
             </p>
+            <div class="item_blue">
             <ol>
               <li>
                 在一个
                 <span class="title_2"><%= link_to_remote "贴吧(?)",:url => {:action => :toggle_blind,:id => "about_keyword"} %></span>（譬如<%= link_to "互联网",keyword_page_path(KeywordPage.find_by_keyword("互联网")) %>贴吧）内，发个帖子，
-                并看看自己的帖子排在了哪里（由于你的<span class="title_3"><%= link_to_remote "声望(?)",:url => {:action => :toggle_blind,:id => "about_value"}%></span>为0，理应排在后面）；
+                并看看自己的帖子排在了哪里。由于你的<span class="title_3"><%= link_to_remote "声望(?)",:url => {:action => :toggle_blind,:id => "about_value"}%></span>为0，理应排在后面
                 <div id="about_keyword" style="display:none">
                   <h3>贴吧的回复关系用线条表示地非常明确，并且发帖时可以插入图片。在贴吧中，默认情况下帖子按照<cite>声望值</cite>来排序。就像这样：
                     <div><%= image_tag "value.jpe"%></div>
@@ -70,12 +71,13 @@
               <li>
                 以<%= link_to "互联网",keyword_page_path(KeywordPage.find_by_keyword("互联网")) %>
                 贴吧为例，在这个贴吧内，回复一个叫做 <%= link_to "Michael",user_path(User.find(1)) %>的人的某一个帖子，并在回复中选择
-                <%= radio_button_tag "rating",1%><cite>赞赏</cite>；
+           <cite>赞赏</cite>
               </li>
               <li>
                 再看看你原先发表的帖子排在了哪里，并理解一下Michael的按照<cite>声望</cite>排序的功能。
               </li>
             </ol>
+            </div>
             <p>你肯定说了，这样会不会造成大量无意义的回复，会不会出现刷声望值的情况，会不会造成社区的混乱等等。好在Michael不是你，这些问题已经被解决掉了，停止你母猪一般的思维吧。</p>
             <p>开始爽吧，或是滚蛋。</p>
           </div>
