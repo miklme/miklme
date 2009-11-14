@@ -31,7 +31,7 @@
           <div id="welcome">
             <%= render :partial => "shared/search_bar" %>
             <h2 class="title_1"><%= link_to "社会投票系统" %></h2>
-            <p>Michael是一个看上去简单，背后却极复杂的投票系统。简单来说，我们可以提出各种话题——热门社会话题、大众生活话题、甚至个人隐私话题等等等等。结果是，我们能够看到，参与这一话题讨论的每个<span id="keyword_page">人(注意，不是他的言论)</span>的被认可程度。这个被认可程度用一个数字表示——<span class="title_3"><%= link_to_remote "声望(?)",:url => {:action => :toggle_blind,:id => "about_value"}%></span>
+            <p>Michael是一个看上去简单，背后却极复杂的投票系统。简单来说，我们可以提出各种简短话题——热门社会话题、大众生活话题、甚至XX门等等等等。结果是，我们能够看到，参与这一话题讨论的每个<span id="keyword_page">人(注意，不是他的言论)</span>的被认可程度。这个被认可程度用一个数字表示——<span class="title_3"><%= link_to_remote "声望(?)",:url => {:action => :toggle_blind,:id => "about_value"}%></span>
               。 如果一个人的声望高，也就意味着他的话更被别人认可，他的观点更能代表大众的看法，他更接近这一话题的意见领袖。
             </p>
             <div id="about_value" style="display:none">
