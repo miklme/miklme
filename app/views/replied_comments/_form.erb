@@ -17,12 +17,12 @@
           <p>
             <% if !@comment.commenters.include?(current_user) %>
               <%=f.radio_button :rating,1 %>
-              <cite>赞赏
+              <cite>赞同
               </cite>
               <%=f.radio_button :rating,0%>
               <span class="grey">不表态</span>
               <%=f.radio_button :rating,-1%>
-              <strong>pia飞
+              <strong>反对
               </strong>
             <% else %>
               <span class="grey">你已经表态过了</span>

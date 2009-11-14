@@ -6,11 +6,11 @@ module ApplicationHelper
 
   def attitude(comment)
     if comment.rating==1
-      "<cite>赞赏</cite>"
+      "<cite>赞同</cite>"
     elsif comment.rating==0
       "<span class='grey'>不表态</span>"
     elsif comment.rating==-1
-      "<strong>pia飞</strong>"
+      "<strong>反对</strong>"
     end
   end
   def link_to_origin(resource)
