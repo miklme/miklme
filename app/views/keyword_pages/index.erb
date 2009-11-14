@@ -32,53 +32,53 @@
             <%= render :partial => "shared/search_bar" %>
             <h2 class="title_1"><%= link_to "社会投票系统" %></h2>
             <p>Michael是一个看上去简单，背后却极复杂的投票系统。简单来说，我们可以提出各种话题——热门社会话题、大众生活话题、个人爱好问题等等等等。结果是，我们能够看到，参与这一话题讨论的每个<span id="keyword_page">人(注意，不是他的话)</span>的被认可程度。这个被认可程度用一个数字表示——<span class="title_3"><%= link_to_remote "声望(?)",:url => {:action => :toggle_blind,:id => "about_value"}%></span>
-           。 如果一个人的声望高，也就意味着他的话更被别人认可，他的观点更能代表大众的看法，他更接近这一话题的意见领袖。
+              。 如果一个人的声望高，也就意味着他的话更被别人认可，他的观点更能代表大众的看法，他更接近这一话题的意见领袖。
             </p>
+            <div id="about_value" style="display:none">
+              <h3>你可以在评论中表明你的态度，这会影响<strong>双方</strong>的声望：
+                <div>
+                  <%=radio_button_tag :rating,1 %>
+                  <cite>赞赏
+                  </cite>
+                  <%=radio_button_tag :rating,0%>
+                  不表态
+                  <%=radio_button_tag :rating,-1%>
+                  <strong>pia飞
+                  </strong>
+                </div>
+              </h3>
+              <h3>
+                现实中有这样一些现象：声望较高的人对某事的态度会产生更大的影响；一个人对另一个人的盛赞最多能使那个人变得和自己一样有名，而不是比自己更有名；
+                只有一个人否定另外一个人不会对他造成太恶劣的影响，而一群人否定一个人就会使他的声望受到很大影响；同时，一个很有名望的人否定一个普通人，对于普通人造成的影响也不容忽视。
+              </h3>
+              <h3>复杂就在这个地方，不过你只需要注意你的<cite>声望值</cite>就行了。</h3>
+              <h3>你在各话题内的声望互不影响。</h3>
+            </div>
             <p>如果你足够聪明，那么应该能够想象这样的系统对于我们的意义。</p>
             <div class="item_blue">
               <h2>我们来这样开始：</h2>
-            <ol>
-              <li>
-                在一个
-                <span class="title_2"><%= link_to_remote "话题(?)",:url => {:action => :toggle_blind,:id => "about_keyword"} %></span>（譬如<%= link_to "互联网",keyword_page_path(KeywordPage.find_by_keyword("互联网")) %>）内，发个帖子，
-                并看看自己的帖子排在了哪里。由于你的为0，理应排在后面
-                <div id="about_keyword" style="display:none">
-                  <h3>话题的回复关系用线条表示地非常明确，并且发帖时可以插入图片。在话题中，默认情况下帖子按照<cite>声望值</cite>来排序。就像这样：
-                    <div><%= image_tag "value.jpe"%></div>
-                    在上方的输入框中可以方便的进入某一话题，并且输入时还会自动提示类似的话题。
-                  </h3>
-                </div>
-                <div id="about_value" style="display:none">
-                  <h3>Michael的科技在于他对现实的模拟。在现实当中，排除传媒等因素，人们建立声望的过程常常是别人对于自己观点、想法认可的过程。
-                    在Michael这里，你可以在评论中表明你是否认可他的想法，这会影响他的声望：
-                    <div>
-                      <%=radio_button_tag :rating,1 %>
-                      <cite>赞赏
-                      </cite>
-                      <%=radio_button_tag :rating,0%>
-                      不表态
-                      <%=radio_button_tag :rating,-1%>
-                      <strong>pia飞
-                      </strong>
-                    </div>
-                  </h3>
-                  <h3>
-                    现实中有这样一些现象：声望较高的人对某事的态度会产生更大的影响；一个人对另一个人的盛赞最多能使那个人变得和自己一样有名，而不是比自己更有名；
-                    只有一个人否定另外一个人不会对他造成太恶劣的影响，而一群人否定一个人就会使他的声望受到很大影响；同时，一个很有名望的人否定一个普通人，对于普通人造成的影响也不容忽视。
-                  </h3>
-                  <h3>Michael建立了一套数学模型，用来估算这些现象对于一个人声望造成的影响。具体的你不用关心，你只看你名字旁边那个<cite>绿色</cite>的声望值就行了。</h3>
-                  <h3>同样的，在现实中，你认为一个人做饭做得好吃代表他英语学的好吗？不会的。因此你在各话题内的声望互不影响。</h3>
-                </div>
-              </li>
-              <li>
-                以<%= link_to "互联网",keyword_page_path(KeywordPage.find_by_keyword("互联网")) %>
-                话题为例，在这个话题内，回复一个叫做 <%= link_to "Michael",user_path(User.find(1)) %>的人的某一个帖子，并在回复中选择
-           <cite>赞赏</cite>
-              </li>
-              <li>
-                再看看你原先发表的帖子排在了哪里，并理解一下Michael的按照<cite>声望</cite>排序的功能。
-              </li>
-            </ol>
+              <ol>
+                <li>
+                  在一个
+                  <span class="title_2"><%= link_to_remote "话题(?)",:url => {:action => :toggle_blind,:id => "about_keyword"} %></span>（譬如<%= link_to "互联网",keyword_page_path(KeywordPage.find_by_keyword("互联网")) %>）内，发个帖子，
+                  并看看自己的帖子排在了哪里。由于你的为0，理应排在后面
+                  <div id="about_keyword" style="display:none">
+                    <h3>话题的回复关系用线条表示地非常明确，并且发帖时可以插入图片。在话题中，默认情况下帖子按照<cite>声望值</cite>来排序。就像这样：
+                      <div><%= image_tag "value.jpe"%></div>
+                      在上方的输入框中可以方便的进入某一话题，并且输入时还会自动提示类似的话题。
+                    </h3>
+                  </div>
+
+                </li>
+                <li>
+                  以<%= link_to "互联网",keyword_page_path(KeywordPage.find_by_keyword("互联网")) %>
+                  话题为例，在这个话题内，回复一个叫做 <%= link_to "Michael",user_path(User.find(1)) %>的人的某一个帖子，并在回复中选择
+                  <cite>赞赏</cite>
+                </li>
+                <li>
+                  再看看你原先发表的帖子排在了哪里，并理解一下Michael的按照<cite>声望</cite>排序的功能。
+                </li>
+              </ol>
             </div>
             <p>开始爽吧，或是滚蛋。</p>
           </div>
