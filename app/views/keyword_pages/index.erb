@@ -61,7 +61,7 @@
                 <li>
                   在一个
                   <span class="title_2"><%= link_to_remote "话题(?)",:url => {:action => :toggle_blind,:id => "about_keyword"} %></span>（譬如<%= link_to "互联网",keyword_page_path(KeywordPage.find_by_keyword("互联网")) %>）内，发个帖子，
-                  并看看自己的帖子排在了哪里。由于你的为0，理应排在后面
+                  并看看自己的帖子排在了哪里。由于你的<cite>声望</cite>为0，理应排在后面
                   <div id="about_keyword" style="display:none">
                     <h3>话题的回复关系用线条表示地非常明确，并且发帖时可以插入图片。在话题中，默认情况下帖子按照<cite>声望值</cite>来排序。就像这样：
                       <div><%= image_tag "value.jpe"%></div>
