@@ -7,23 +7,24 @@
       <%= render :partial => "shared/field_profile",:locals => {:user => comment.owner,:keyword_page => comment.resource.keyword_page} %>
     </td>
     <td width="520px">
-      <p><%=h comment.content  %></p>
+      <p>      <%= attitude(comment) %>
+      <%=h comment.content  %></p>
       <div class="sb_meta">
         <%=h comment.created_at.advance(:hours => 8).to_s(:db)  %>
         <% if comment.action_one.present? %>
           ,
           <% if comment.parent_comment.present? %>
             <%="#{comment.owner.nick_name}#{comment.action_one}了#{comment.parent_comment.owner.nick_name}#{comment.action_two}"  %>
-        <% else %>
-          <%="#{comment.owner.nick_name}#{comment.action_one}了#{comment.resource.owner.nick_name}#{comment.action_two}"  %>
+          <% else %>
+            <%="#{comment.owner.nick_name}#{comment.action_one}了#{comment.resource.owner.nick_name}#{comment.action_two}"  %>
+          <% end %>
         <% end %>
-      <% end %>
       </div>
       <span><%= link_to_remote "回复>>>",:url => {:controller => :replied_comments,:action => :new,:id => comment} %></span>
       <div id="<%=y%>">
-      <% for replied_comment in comment.comments %>
-        <%= render :partial  => "comment",:object => replied_comment %>
-      <% end %>
+        <% for replied_comment in comment.comments %>
+          <%= render :partial  => "comment",:object => replied_comment %>
+        <% end %>
       </div>
     </td>
   </tr>

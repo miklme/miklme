@@ -23,7 +23,6 @@ class KeywordPage < ActiveRecord::Base
   has_many :active_users,:through => :value_orders,:source => :user,:conditions => "value > 0"
   validates_uniqueness_of :keyword,:message => "这个话题已经存在了"
   validates_presence_of :keyword,:message => "话题名不能为空"
-  validates_length_of :keyword,:within => 1..20
   named_scope :user_fields, lambda { |user_id| {
       :include => :value_orders,
       :conditions => [ "value_orders.user_id = ?", user_id ]

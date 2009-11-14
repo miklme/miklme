@@ -4,8 +4,17 @@ module ApplicationHelper
     User.find(id)
   end
 
+  def attitude(comment)
+    if comment.rating==1
+      "<cite>赞赏</cite>"
+    elsif comment.rating==0
+      "<span class='grey'>不表态</span>"
+    elsif comment.rating==-1
+      "<strong>pia飞</strong>"
+    end
+  end
   def link_to_origin(resource)
-      link_to(image_tag(preview_user_resource_path(resource.owner,resource, :jpg)),origin_user_resource_path(resource.owner,resource,:jpg), :popup => ['预览', 'height=400,width=540']) if resource.has_image? 
+    link_to(image_tag(preview_user_resource_path(resource.owner,resource, :jpg)),origin_user_resource_path(resource.owner,resource,:jpg), :popup => ['预览', 'height=400,width=540']) if resource.has_image?
   end
 
   def my_value_here(keyword_page)
