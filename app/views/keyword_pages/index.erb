@@ -31,9 +31,16 @@
           <div id="welcome">
             <%= render :partial => "shared/search_bar" %>
             <h2 class="title_1"><%= link_to "社会投票系统" %></h2>
-            <p>Michael是一个看上去简单，背后却极复杂的投票系统。简单来说，我们可以提出各种简短话题——热门社会话题、大众生活话题、甚至个人偏好问题等等。结果是，我们能够看到，参与这一话题讨论的每个<span id="keyword_page">人(注意，不是他的言论)</span>的被认可程度。这个被认可程度用一个数字表示——<span class="title_3"><%= link_to_remote "声望(?)",:url => {:action => :toggle_blind,:id => "about_value"}%></span>
+            <p>Michael是一个看上去简单，背后却极复杂的投票系统。简单来说，我们可以提出各种简短<span class="title_2"><%= link_to_remote "话题(?)",:url => {:action => :toggle_blind,:id => "about_keyword"} %></span>
+              ——热门社会话题、大众生活话题、甚至个人偏好问题等等。结果是，我们能够看到，参与这一话题讨论的每个<span id="keyword_page">人(注意，不是他的言论)</span>的被认可程度。这个被认可程度用一个数字表示——<span class="title_3"><%= link_to_remote "声望(?)",:url => {:action => :toggle_blind,:id => "about_value"}%></span>
               。 如果一个人的声望高，也就意味着他的话更被别人认可，他的观点更能代表大众的看法，他更接近这一话题的意见领袖。
             </p>
+            <div id="about_keyword" style="display:none">
+              <h3>话题的回复关系用线条表示地非常明确，并且发帖时可以插入图片。在话题中，默认情况下帖子按照<cite>声望值</cite>来排序。就像这样：
+                <div><%= image_tag "value.jpe"%></div>
+                在上方的输入框中可以方便的进入某一话题，并且输入时还会自动提示类似的话题。
+              </h3>
+            </div>
             <div id="about_value" style="display:none">
               <h3>你可以在评论中表明你的态度，这会影响<strong>双方</strong>的声望：
                 <div>
@@ -59,16 +66,9 @@
               <h2>我们来这样开始：</h2>
               <ol>
                 <li>
-                  在一个
-                  <span class="title_2"><%= link_to_remote "话题(?)",:url => {:action => :toggle_blind,:id => "about_keyword"} %></span>（譬如<%= link_to "互联网",keyword_page_path(KeywordPage.find_by_keyword("互联网")) %>）内，发个帖子，
+                  在一个话题
+                  （譬如<%= link_to "互联网",keyword_page_path(KeywordPage.find_by_keyword("互联网")) %>）内，发个帖子，
                   并看看自己的帖子排在了哪里。由于你的<cite>声望</cite>为0，理应排在后面
-                  <div id="about_keyword" style="display:none">
-                    <h3>话题的回复关系用线条表示地非常明确，并且发帖时可以插入图片。在话题中，默认情况下帖子按照<cite>声望值</cite>来排序。就像这样：
-                      <div><%= image_tag "value.jpe"%></div>
-                      在上方的输入框中可以方便的进入某一话题，并且输入时还会自动提示类似的话题。
-                    </h3>
-                  </div>
-
                 </li>
                 <li>
                   以<%= link_to "互联网",keyword_page_path(KeywordPage.find_by_keyword("互联网")) %>
