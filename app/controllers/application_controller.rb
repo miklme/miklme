@@ -105,10 +105,10 @@ class ApplicationController < ActionController::Base
     #自己比别人差，并差评别人
     if comment.changed_value<0 and comment.rating<0
       "你试图反对#{comment.parent.owner.nick_name}，可是他比你声望高，你被反弹了，声望<cite>#{comment.changed_value}</cite>"
-      #比别人差，但赞同别人
+      #比别人差，但支持别人
     elsif comment.changed_value<0 and comment.rating>0
       "他的声望比你高，你借了光，声望增加<cite>#{comment.changed_value.abs/2}</cite>"
-      #比别人好，赞同别人
+      #比别人好，支持别人
     elsif comment.changed_value>0 and comment.rating>0
       "你鼓励了后生。后生的声望增加<cite>#{comment.changed_value.abs/2}</cite>"
       #比别人强，反驳对方

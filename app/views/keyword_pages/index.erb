@@ -50,7 +50,7 @@
                     <p>声望值在你和别人互相回复帖子时，或是你和别人互相关注时发生改变。关注别人时，被关注者在<strong>某话题内</strong>（取决于关注者的选择）的声望＋1，而回复别人时，这一话题内<strong>双方</strong>的声望都可能改变。在回复中你可以表明你的态度，这会对双方声望造成不同的影响：
                     <p>
                       <%=radio_button_tag :rating,1 %>
-                      <cite>赞同
+                      <cite>支持
                       </cite>
                       <%=radio_button_tag :rating,0%>
                       不表态
@@ -81,7 +81,7 @@
                 <li>
                   以<%= link_to "互联网",keyword_page_path(KeywordPage.find_by_keyword("互联网")) %>
                   话题为例，在这个话题内，回复一个叫做 <%= link_to "Michael",user_path(User.find(1)) %>的人的某一个帖子，并在回复中选择
-                  <cite>赞同</cite>
+                  <cite>支持</cite>
                 </li>
                 <li>
                   再看看你原先发表的帖子排在了哪里，并理解一下Michael的按照<cite>声望</cite>排序的功能。

@@ -6,7 +6,7 @@ module ApplicationHelper
 
   def attitude(comment)
     if comment.rating==1
-      "<cite>赞同</cite>"
+      "<cite>支持</cite>"
     elsif comment.rating==0
       "<span class='grey'>不表态</span>"
     elsif comment.rating==-1
