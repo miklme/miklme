@@ -3,17 +3,17 @@
     <div>
       <div><%= link_to user.nick_name,user_path(user) %></div>
       <strong>我已关注</strong>
-      <p><cite><%=user.field_value(keyword_page) %></cite></p>
+      <p><cite><%=number_with_precision user.field_value(keyword_page) %></cite></p>
     </div>
   <% else %>
     <div>
       <div><%= link_to user.nick_name ,user_path(user)%></div>
-      <cite><%="#{user.field_value(keyword_page)}" %></cite>
+      <cite><%=number_with_precision user.field_value(keyword_page)%></cite>
     </div>
   <% end %>
 <% else %>
   <div>
     <div><%= link_to user.nick_name ,user_path(user)%></div>
-    <cite><%="#{user.field_value(keyword_page)}" %></cite>
+    <cite><%=number_with_precision user.field_value(keyword_page)%></cite>
   </div>
 <% end %>

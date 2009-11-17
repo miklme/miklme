@@ -29,7 +29,7 @@
               <% for k in @user.appear_keyword_pages %>
                 <p>
                   <span class="keyword_page"><%=link_to k.keyword,keyword_page_path(KeywordPage.find_by_keyword(k.keyword)) %></span>
-                  <cite>声望：<strong><%= k.field_value(@user) %></strong>,排名：<%= order(@user,k) %>
+                  <cite>声望：<strong><%=number_with_precision k.field_value(@user) %></strong>,排名：<%= order(@user,k) %>
                   </cite>
                 </p>
               <% end %>
