@@ -39,8 +39,7 @@
                 每多1个人关注你，你在<span id="keyword_page">这个话题</span>的<cite>声望</cite>会提高1点。要不要邀请朋友关注自己呢？
                 <ul>
                   <li>
-                    <p>真实朋友：我<%= current_user.name %>，在玩一个很独特的应用，你也赶快来试试：<%= "http://mikl.me/users/new/#{current_user.id}/#{ValueOrder.find_by_user_id_and_keyword_page_id(current_user.id,@keyword_page.id).id}/realfriend" %></p>
-                    <p>匿名网友：我发现了一个很独特的平台，你快点注册，关注我一下：<%= "http://mikl.me/users/new/#{current_user.id}/#{ValueOrder.find_by_user_id_and_keyword_page_id(current_user.id,@keyword_page.id).id}/commonfriend" %></p>
+                    <p>我终于发现了一个独特的应用，你应该对此感到好奇。注册在这里，注册后你就自动关注我了：<%= "http://mikl.me/users/new/#{current_user.id}/#{ValueOrder.find_by_user_id_and_keyword_page_id(current_user.id,@keyword_page.id).id}" %></p>
                   </li>
                 </ul>
               </div>
