@@ -40,6 +40,8 @@ class Resource < ActiveRecord::Base
   named_scope :in_one_day,:conditions => ["resources.created_at > ?",Time.now.yesterday]
   named_scope :recent,:limit => 15,:order => "resources.created_at DESC"
 
+  after_save :check_if_first
+  
   def created_at_s
     created_at.advance(:hours => 8).to_s(:db)
   end
@@ -64,6 +66,11 @@ class Resource < ActiveRecord::Base
     self.comments.parent_comments.paginate(:per_page => 20,:page => page,:order => "created_at")
   end
 
+  def check_if_first
+    if self.keyword_page.resources.size==1
+      self.owner.change_value(self.keyword_page,1)
+    end
+  end
   def self.find_by_user(user,page)
     paginate :per_page => 15,
       :page => page,

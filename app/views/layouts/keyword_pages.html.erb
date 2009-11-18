@@ -31,7 +31,7 @@
             <%= render :partial => "shared/search_bar" %>
             <% if Resource.find_by_keyword_page_id(@keyword_page).blank?%>
               <div class="item_blue">
-                <span class="cadet_blue">目前这个话题内还没有任何发言。幸运的是，你可以作为第一个发言的人。</span>
+                <span class="cadet_blue">目前这个话题内还没有任何发言。幸运的是，如果你发言，你就有<cite>1点</cite>初始声望。</span>
               </div>
             <% end %>
             <% if logged_in? and @keyword_page.users.include?(current_user) %>

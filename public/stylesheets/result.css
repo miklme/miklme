@@ -911,6 +911,10 @@ dd{
 .cadet_blue{
     color:CadetBlue
 }
+.cadet_blue cite{
+  color:#006600;
+
+}
 .box_2 textarea {
     -moz-background-clip:border;
     -moz-background-inline-policy:continuous;
