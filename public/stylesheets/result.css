@@ -39,7 +39,22 @@ h1, h2, h3, h4, h5, h6 {
     margin:0;
     padding:0;
 }
-
+#sw_hdr form{
+    display:inline
+}
+.search_user_input{
+    font-size:12px;
+}
+input{
+    color:cadetblue
+}
+.register{
+    color:#4F463F;
+    font-size:14px;
+ }
+.search_user{
+    display:inline
+}
 #welcome p{
     color:#666666;
 }
@@ -416,12 +431,7 @@ a.sb_pagP, a.sb_pagN {
 
 
 }
-.sw_tb a, .sw_tb span {
-    margin:0 0.5em;
-}
-.sw_tb a span, .sw_tb span a {
-    margin:0;
-}
+
 .sw_tbb {
     -moz-background-clip:border;
     -moz-background-inline-policy:continuous;
@@ -492,7 +502,7 @@ a.sw_logo:hover{
 #username,#password{
     border:1px solid grey;
     font-size:12px;
-    background-color: #eaeaea;
+    background-color: GhostWhite;
 }
 #username:hover,#password:hover,#username:focus,#password:focus{
     background-color: white;

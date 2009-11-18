@@ -16,15 +16,15 @@ class KeywordPagesController < ApplicationController
   end
   
   def create
-    @keyword_page=KeywordPage.find_or_create_by_keyword(params[:keyword_page][:keyword])
-    if logged_in? and !current_user.keyword_pages.include?(@keyword_page)
-      current_user.keyword_pages<<@keyword_page
-    end
-    if @keyword_page.keyword.present?
+    begin
+      @keyword_page=KeywordPage.find_or_create_by_keyword(params[:keyword_page][:keyword])
+      if logged_in? and !current_user.keyword_pages.include?(@keyword_page)
+        current_user.keyword_pages<<@keyword_page
+      end
       redirect_to keyword_page_path(@keyword_page)
-    else
-      redirect_to :back
     end
+  rescue
+    redirect_to :back
   end
    
   

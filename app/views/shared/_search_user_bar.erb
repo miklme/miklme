@@ -1,0 +1,7 @@
+<div class="search_user">
+  <% form_tag :controller => :users,:action => :search do%>
+    <%= text_field :user,:name,:size => 16,:value => "用户ID/昵称/真实姓名",:class => "search_user_input"  %>
+    <%=submit_tag "查找用户",:class => "search_user_input"%>
+  <%end  %>
+
+</div>

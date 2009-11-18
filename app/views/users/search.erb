@@ -1,5 +1,1 @@
-<% if @result.blank? %>
   <%= render :partial => "shared/user_profile_full",:collection => @results %>
-<% elsif @results.blank? %>
-  <%= render :partial => "shared/user_profile_full",:object => @result%>
-<% end %>

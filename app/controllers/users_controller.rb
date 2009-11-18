@@ -67,15 +67,15 @@ class UsersController < ApplicationController
   def show
     @user=User.find(params[:id])
     @news=News.self_news_for_others(@user,params[:page])
+    @friends_news=News.list_friends_news(@user)
     render :layout => "resources"
   end
   def search
     @user=current_user
-    if params[:user][:name] and params[:user][:id].blank?
-      @results=User.scoped_by_name(params[:user][:name])
-    elsif params[:user][:id] and params[:user][:name].blank?
-      @result=User.find_by_id(params[:user][:id])
-    end
+     by_name=User.find_all_by_name(params[:user][:name])
+     by_nick_name=User.find_all_by_nick_name(params[:user][:name])
+     by_id=User.find_all_by_id(params[:user][:name])
+     @results=(by_name+by_nick_name+by_id).uniq
     render :layout => "news"
   end
 end
