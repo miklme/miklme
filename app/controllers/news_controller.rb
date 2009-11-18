@@ -12,4 +12,5 @@ class NewsController < ApplicationController
       keyword_page_news.destroy
     end
   end
+
 end

@@ -7,6 +7,13 @@ class KeywordPagesController < ApplicationController
     @many_user_keyword_pages=KeywordPage.active_user_keyword_pages.first(5)
     render :layout => "related_keywords"
   end
+
+  def friends
+    @user=current_user
+    @recent_keyword_pages=KeywordPage.recent_keyword_pages
+    @friends_news=News.list_friends_news(@user)
+    render :layout => "related_keywords"
+  end
   
   def create
     @keyword_page=KeywordPage.find_or_create_by_keyword(params[:keyword_page][:keyword])
@@ -14,7 +21,7 @@ class KeywordPagesController < ApplicationController
       current_user.keyword_pages<<@keyword_page
     end
     if @keyword_page.keyword.present?
-    redirect_to keyword_page_path(@keyword_page)
+      redirect_to keyword_page_path(@keyword_page)
     else
       redirect_to :back
     end
@@ -64,20 +71,4 @@ class KeywordPagesController < ApplicationController
     end
   end
 
-#  def by_time
-#        @keyword_page=KeywordPage.find(params[:id])
-#    if logged_in? and !current_user.keyword_pages.include?(@keyword_page)
-#      current_user.keyword_pages<<@keyword_page
-#    end
-#    if logged_in?
-#      @user=current_user
-#      @news=News.list_self_news(@user)
-#      @resource=@keyword_page.resources.build
-#    end
-#    @resources=@keyword_page.resources.find(:all,:limit => 40,:order => "created_at DESC")
-#    keyword_pages=KeywordPage.find_with_ferret(@keyword_page.keyword+"~")-@keyword_page.to_a
-#    @searched_keywords=keyword_pages.find_all{|k| k.resources.size>=1}.first(10)
-#   未使用用户自定义编辑话题功能
-#    @related_keywords=@keyword_page.related_keywords
-#  end
 end

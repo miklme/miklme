@@ -67,7 +67,6 @@ class UsersController < ApplicationController
   def show
     @user=User.find(params[:id])
     @news=News.self_news_for_others(@user,params[:page])
-    @friends_news=News.list_friends_news(@user)
     render :layout => "resources"
   end
   def search

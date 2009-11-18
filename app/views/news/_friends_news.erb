@@ -1,27 +1,31 @@
 <% f=friends_news %>
-
-<span class="right">
-<%=distance_of_time_in_words(Time.now, f.created_at, true)%></span>
-
+<li>
 <% if f.news_type=="resource" %>
-  <p>
+  <div>
     <em> <%= link_to "#{f.owner.name_or_nick_name(current_user)}",user_path(f.resource.owner) -%> </em>发表高见
-    <cite><%=auto_link(f.resource.content) %></cite>
-    <span class="sb_meta">话题： <%=link_to_page f.resource.keyword_page %></span>
-    <em><%= link_to "回复>>>",user_resource_comments_path(f.resource.owner,f.resource) %></em><span class="highlight">(<%=f.resource.comments.size %>)</span>
-  </p>
+    <span class="sb_meta">
+<%=distance_of_time_in_words(Time.now, f.created_at, true)%></span>
+    <p><%=auto_link(f.resource.content) %></p>
+    <span class="sb_meta">话题： <span  id="keyword_page"><%=link_to_page f.resource.keyword_page %></span></span>
+             <br />
+    <em><%= link_to "回复>>>",user_resource_comments_path(f.resource.owner,f.resource) %></em><span class="amount">(<%=f.resource.comments.size %>)</span>
+  </div>
 <% elsif f.news_type=="comment"%>
-  <p>
+  <div>
     <em><%= link_to f.owner.nick_name,user_path(f.owner) %> </em>
     <% if f.comment.action_one.present? and f.comment.action_two.present? %>
       <%= f.comment.action_one %>了 <em><%=link_to f.comment.parent.owner.name_or_nick_name(current_user),user_path(f.comment.parent.owner)%> </em>的<%=f.comment.action_two%>并
     <% end %>
     回应 <em><%= link_to f.comment.parent.owner.name_or_nick_name(current_user),user_path(f.comment.parent.owner) %> </em>：
-    <cite>
+  <span class="sb_meta">
+<%=distance_of_time_in_words(Time.now, f.created_at, true)%></span>
+    <p>
       <%=truncate f.comment.content,:length => 140 %>
-    </cite>
-    <span class="sb_meta">话题： <%=link_to_page f.resource.keyword_page %></span>
-    <em><%= link_to "回复>>>",user_resource_comments_path(f.resource.owner,f.resource) %></em><span class="highlight">(<%=f.resource.comments.size %>)</span>
-  </p>
+    </p>
+    <span class="sb_meta">话题： <span id="keyword_page"><%=link_to_page f.resource.keyword_page %></span></span>
+            <br />
+    <em><%= link_to "回复>>>",user_resource_comments_path(f.resource.owner,f.resource) %></em><span class="amount">(<%=f.resource.comments.size %>)</span>
+  </div>
 <%end  %>
 
+</li>

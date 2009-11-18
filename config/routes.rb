@@ -14,7 +14,7 @@ ActionController::Routing::Routes.draw do |map|
     user.resources :news
   end
   map.resource :session
-  map.resources :keyword_pages,:member => {:by_time => :get} do |keyword_page|
+  map.resources :keyword_pages,:collection => {:friends => :get} do |keyword_page|
     keyword_page.resources :related_keywords
     keyword_page.resources :resources
   end
