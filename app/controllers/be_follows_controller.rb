@@ -3,6 +3,7 @@ class BeFollowsController < ApplicationController
   layout "news"
 
   def index
+    @be_follow=BeFollow.new
     @be_follows=@user.be_follows
     @followers=@user.followers
     respond_to do |format|
@@ -23,9 +24,9 @@ class BeFollowsController < ApplicationController
       n.follower_id=current_user.id
       n.news_type="be_follow"
       n.save
-      redirect_to user_path(user)
+      redirect_to :back
     else
-      redirect_to user_path(user)
+      redirect_to :back
     end
   end
 

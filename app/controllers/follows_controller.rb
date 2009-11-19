@@ -10,10 +10,4 @@ class FollowsController < ApplicationController
       format.xml  { render :xml => @follows }
     end
   end
-
-
-
-  def search_user
-
-  end
 end
