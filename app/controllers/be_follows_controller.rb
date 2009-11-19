@@ -21,14 +21,10 @@ class BeFollowsController < ApplicationController
   # POST /be_follows
   # POST /be_follows.xml
   def create
-    @be_follow = BeFollow.new(params[:be_follow])
+    @be_follow = BeFollow.new
     @be_follow.user=@user
     @be_follow.follower=current_user
     if @be_follow.save
-      if params[:keyword_page].present? and @user.last_ip!=current_user.last_ip
-        k=KeywordPage.find_by_keyword(params[:keyword_page][:keyword])
-        @user.change_value(k,1.0)
-      end
       @user.save
       n=@user.news.create
       n.owner=@user
@@ -38,7 +34,7 @@ class BeFollowsController < ApplicationController
       flash[:notice] = "已经关注他了，之后你的主页中会显示他的最新动态，现在你可以逛逛他的主页"
       redirect_to user_path(@user)
     else
-      render  :action => "new"
+     redirect_to :back
     end
   end
 
@@ -66,7 +62,7 @@ class BeFollowsController < ApplicationController
     @be_follow.destroy
     @be_follow.user.save
     respond_to do |format|
-      format.html { redirect_to(user_follows_path(current_user)) }
+      format.html { redirect_to :back }
       format.xml  { head :ok }
     end
   end

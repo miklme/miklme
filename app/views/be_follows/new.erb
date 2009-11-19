@@ -1,12 +1,4 @@
 <% form_for [@user,@be_follow] do |f| %>
   <%= f.error_messages %>
-  <div>
-    你认为该用户有关哪个"话题"内最为在行
-    <p>
-      <% for k in @user.appear_keyword_pages %>
-        <%= radio_button :keyword_page,:keyword,k.keyword %><%= k.keyword %>
-      <% end %>
-    </p>
-  </div>
   <%= f.submit "就这样"%>
 <% end %>
