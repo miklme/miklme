@@ -33,15 +33,6 @@ class UsersController < ApplicationController
     @user=User.find(current_user)
   end
 
-  def edit_ajax
-    
-  end
-  def manage_keywords
-    render :update do |page|
-      page.visual_effect(:appear, "my_keywords")
-    end
-  end
-  
   def update
     @user = User.find(params[:id])
     if  @user.update_attributes(params[:user])
@@ -66,16 +57,18 @@ class UsersController < ApplicationController
 
   def show
     @user=User.find(params[:id])
+    @be_follow=BeFollow.new
     @news=News.self_news_for_others(@user,params[:page])
     @friends_news=News.list_friends_news(@user)
     render :layout => "resources"
   end
   def search
     @user=current_user
-     by_name=User.find_all_by_name(params[:user][:name])
-     by_nick_name=User.find_all_by_nick_name(params[:user][:name])
-     by_id=User.find_all_by_id(params[:user][:name])
-     @results=(by_name+by_nick_name+by_id).uniq
+    by_name=User.find_all_by_name(params[:user][:name])
+    by_nick_name=User.find_all_by_nick_name(params[:user][:name])
+    by_id=User.find_all_by_id(params[:user][:name])
+    @results=(by_name+by_nick_name+by_id).uniq
     render :layout => "news"
   end
+
 end
