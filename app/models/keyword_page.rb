@@ -20,7 +20,7 @@ class KeywordPage < ActiveRecord::Base
   has_many :value_orders
   has_many :users,:through => :value_orders,:source => :user
   has_one :top_user,:through => :value_orders,:source => :user,:order => "value DESC"
-  has_many :active_users,:through => :value_orders,:source => :user,:conditions => "value > 0"
+  has_many :active_users,:through => :value_orders,:source => :user,:conditions => "value > 1"
   validates_uniqueness_of :keyword,:message => "这个话题已经存在了"
   validates_presence_of :keyword,:message => "话题名不能为空"
   named_scope :user_fields, lambda { |user_id| {
