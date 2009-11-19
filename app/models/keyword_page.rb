@@ -20,7 +20,8 @@ class KeywordPage < ActiveRecord::Base
   has_many :value_orders
   has_many :users,:through => :value_orders,:source => :user
   has_one :top_user,:through => :value_orders,:source => :user,:order => "value DESC"
-  has_many :active_users,:through => :value_orders,:source => :user,:conditions => "value > 1"
+  has_many :value_above_one,:through => :value_orders,:source => :user,:conditions => "value > 1"
+  has_many :value_above_zero,:through => :value_orders,:source => :user,:conditions => "value > 0"
   validates_uniqueness_of :keyword,:message => "这个话题已经存在了"
   validates_presence_of :keyword,:message => "话题名不能为空"
   named_scope :user_fields, lambda { |user_id| {
@@ -64,7 +65,7 @@ class KeywordPage < ActiveRecord::Base
   end
 
   def good_resources
-    active_members=self.active_users
+    active_members=self.value_above_zero
     authors=self.users_have_resources
     users=(active_members&authors)
     recent_resources=users.map do |u|
@@ -86,7 +87,7 @@ class KeywordPage < ActiveRecord::Base
   end
 
   def self.active_user_keyword_pages
-    keyword_pages=self.find(:all).find_all{|k| k.active_users.size>=1}.sort_by {|k| k.updated_at}.reverse
+    keyword_pages=self.find(:all).find_all{|k| k.value_above_one.size>=1}.sort_by {|k| k.updated_at}.reverse
   end
 
   def self.girls_pages
