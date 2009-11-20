@@ -22,8 +22,8 @@ class KeywordPage < ActiveRecord::Base
   has_one :top_user,:through => :value_orders,:source => :user,:order => "value DESC"
   has_many :value_above_one,:through => :value_orders,:source => :user,:conditions => "value > 1"
   has_many :value_above_zero,:through => :value_orders,:source => :user,:conditions => "value > 0"
-  validates_uniqueness_of :keyword,:message => "这个话题已经存在了"
-  validates_presence_of :keyword,:message => "话题名不能为空"
+  validates_uniqueness_of :keyword,:message => "这个世界已经存在了"
+  validates_presence_of :keyword,:message => "世界名不能为空"
   named_scope :user_fields, lambda { |user_id| {
       :include => :value_orders,
       :conditions => [ "value_orders.user_id = ?", user_id ]

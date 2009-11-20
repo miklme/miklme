@@ -9,12 +9,12 @@
       <%= render :partial => "shared/search_user_bar" %>
     </li>
     <li>
-      <%= link_to "登出",session_path,:method => :delete %>
+      <%= link_to "离开",session_path,:method => :delete %>
     </li>
   </ul>
   <ul class="sc_hl1">
     <li>
-      <%= link_to "我的主页",user_path(current_user)  %>
+      <%= link_to "我的'空间'",user_path(current_user)  %>
     </li>
   </ul>
 
@@ -28,7 +28,7 @@
         <%= password_field_tag 'password',params[:password],:size => 30,:class => "input"%>
         <%= check_box_tag 'remember_me', '1', @remember_me %>
         <%= label_tag 'remember_me', '记住' %>
-        <%= submit_tag '登录' %>
+        <%= submit_tag '进入' %>
       <% end -%>
     </li>
     <li>

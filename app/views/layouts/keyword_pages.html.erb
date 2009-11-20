@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-    <meta content="Mikl,Michael,Mikl.me,Michael网络,话题,声望,在线声望" name="keywords"/>
+    <meta content="Mikl,Michael,Mikl.me,Michael网络,世界,生命值,在线生命值" name="keywords"/>
     <title>( Michael )</title>
     <%= javascript_include_tag :defaults,:cache => true  %>
     <%= stylesheet_link_tag "result"  %>
@@ -29,12 +29,12 @@
             <%= render :partial => "shared/search_bar" %>
             <% if Resource.find_by_keyword_page_id(@keyword_page).blank?%>
               <div class="item_blue">
-                <span class="cadet_blue">目前这个话题内还没有任何发言。幸运的是，如果你发言，你就有<cite>1点</cite>初始声望。</span>
+                <span class="cadet_blue">目前这个世界内还没有任何发言。幸运的是，如果你发言，你就有<cite>1点</cite>初始生命值。</span>
               </div>
             <% end %>
             <% if logged_in? and @keyword_page.users.include?(current_user) %>
               <div class="item_blue">
-                每邀请1个朋友关注你，你在<span id="keyword_page">这个话题</span>的<cite>声望</cite>会提高1点。要不要邀请呢？
+                每邀请1个朋友关注你，你在<span id="keyword_page">这个世界</span>的<cite>生命值</cite>会提高1点。要不要邀请呢？
                 <ul>
                   <li>
                     <p>我终于发现了一个独特的应用，你应该对此感到好奇。注册在这里，注册后你就自动关注我了：<%= "http://mikl.me/users/new/#{current_user.id}/#{ValueOrder.find_by_user_id_and_keyword_page_id(current_user.id,@keyword_page.id).id}" %></p>

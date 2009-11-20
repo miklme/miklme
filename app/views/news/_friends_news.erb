@@ -6,7 +6,7 @@
     <span class="sb_meta">
 <%=distance_of_time_in_words(Time.now, f.created_at, true)%></span>
     <p><%=auto_link(f.resource.content) %></p>
-    <span class="sb_meta">话题： <span  id="keyword_page"><%=link_to_page f.resource.keyword_page %></span></span>
+    <span class="sb_meta">世界： <span  id="keyword_page"><%=link_to_page f.resource.keyword_page %></span></span>
              <br />
     <em><%= link_to "回复>>>",user_resource_comments_path(f.resource.owner,f.resource) %></em><span class="amount">(<%=f.resource.comments.size %>)</span>
   </div>
@@ -22,7 +22,7 @@
     <p>
       <%=truncate f.comment.content,:length => 140 %>
     </p>
-    <span class="sb_meta">话题： <span id="keyword_page"><%=link_to_page f.resource.keyword_page %></span></span>
+    <span class="sb_meta">世界： <span id="keyword_page"><%=link_to_page f.resource.keyword_page %></span></span>
             <br />
     <em><%= link_to "回复>>>",user_resource_comments_path(f.resource.owner,f.resource) %></em><span class="amount">(<%=f.resource.comments.size %>)</span>
   </div>
