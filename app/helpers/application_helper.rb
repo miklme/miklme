@@ -10,7 +10,7 @@ module ApplicationHelper
     elsif comment.rating==0
       "<span class='grey'>不表态</span>"
     elsif comment.rating==-1
-      "<strong>反对</strong>"
+      "<strong>攻击</strong>"
     end
   end
   def link_to_origin(resource)
