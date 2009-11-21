@@ -26,14 +26,17 @@ a:hover .amount{
 li:hover .reply_link {
     display:inline;
     float:right;
+    margin-right:100px;
+    padding-left:20px;
+    padding-right:20px
 }
 
 .reply_link{
     display:none;
 }
- a:hover .reply_link{
-        background-color:#003399;
-    color:white
+a:hover .reply_link{
+    background-color:#003399;
+    color:white;
 }
 em{
     font-style:normal
@@ -130,22 +133,20 @@ cite a{text-decoration:underline}
     background:#F7F7F7 none repeat scroll 0 0;
     border-bottom:1px solid #D8DFEA;}
 #sw_hdr, #sw_content, #sw_main, #sw_foot {
-    float:left;
     width:100%;
 }
 
 #sw_content {
     min-height:344px;
-    position:static;
     z-index:3;
+    width:800px;
+    margin:auto
 }
 .item p{margin-top:0px;
         margin-bottom:1em}
 
 .blog{line-height:15px}
-#sw_canvas {
-    padding:0 0 0 15px;
-}
+
 #sw_main {
     -moz-background-clip:border;
     -moz-background-inline-policy:continuous;
@@ -157,10 +158,8 @@ cite a{text-decoration:underline}
 }
 #sw_aside {
     color:#525051;
-    float:left;
+    float:right;
     width:185px;
-    position: absolute;
-    left: 0px;
 }
 #sw_aside ul, #sw_aside li {
     list-style-type:none;
@@ -196,7 +195,6 @@ div#sw_nav li {
 }
 
 #results{max-width:590px}
-#sw_canvas{padding-left:195px}
 
 
 .item {
@@ -394,9 +392,9 @@ a.sb_pagP, a.sb_pagN {
 }
 #sw_hdr {
     height:100px;
-    min-width:980px;
+    width:800px;
     position:relative;
-    z-index:4;
+    margin:auto
 }
 
 #sw_ltxt {
@@ -571,9 +569,7 @@ a.sw_logo {
 }
 
 #content {
-    margin:0 0 0 -15px;
-    width:666px;
-    padding:0 150px 0 0;
+    width:600px;
 }
 #content p{
     line-height:162%
@@ -653,9 +649,6 @@ cite strong {
     font-style:normal;
 }
 
-#content {
-    padding-top:0.4em;
-}
 
 
 div.auto_complete {
@@ -808,34 +801,8 @@ div.auto_complete ul strong.highlight {
 }
 
 #sw_hdr{
-    background-image: url(../images/j2.jpg);
     background-repeat: repeat-y;
 }
-.feed-header ul {
-    border-bottom:1px solid #B8D4E8;
-    list-style-image:none;
-    list-style-position:outside;
-    list-style-type:none;
-    margin-left:60px;
-    padding:0 10px;}
-
-.feed-header li.current {
-    background-color:#FFFFFF;
-    border-color:#B8D4E8 #B8D4E8 -moz-use-text-color;
-    border-style:solid solid none;
-    border-width:1px 1px 0;
-    bottom:-1px;
-    position:relative;
-}
-.feed-header li.current {
-    padding:3px 10px 7px;
-}
-.feed-header li {
-    float:left;
-    margin-right:3px;
-    padding:5px 10px;
-}
-
 dd{
     margin-left:0
 }

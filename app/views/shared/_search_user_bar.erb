@@ -1,6 +1,6 @@
 <div class="search_user">
   <% form_tag :controller => :users,:action => :search do%>
-    <%= text_field :user,:name,:size => 16,:value => "用户ID/昵称/真实姓名",:class => "search_user_input",:onfocus => "if (value =='用户ID/昵称/真实姓名'){value =''}",
+    <%= text_field :user,:name,:size => 18,:value => "用户ID/昵称/真实姓名",:class => "search_user_input",:onfocus => "if (value =='用户ID/昵称/真实姓名'){value =''}",
     :onblur => "if (value ==''){value='用户ID/昵称/真实姓名'}"%>
     <%=submit_tag "寻找用户",:class => "search_user_input"%>
   <%end  %>

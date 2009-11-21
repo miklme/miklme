@@ -21,7 +21,6 @@
         </div>
       </div>
       <div id="sw_content">
-        <div id="sw_canvas">
           <%= render :partial => "keyword_pages/keyword_page_side" %>
           <div id="content">
             <%   if flash[:notice].present?%>  <p class="notice"><%=flash[:notice] %></p>  <% end %>
@@ -53,7 +52,7 @@
             -->
 
             <%= @content_for_layout %>
-          </div></div></div></div>
+          </div></div></div>
     <%= render :partial => "shared/footer" %>
   </body>
 </html>
