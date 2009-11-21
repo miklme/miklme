@@ -104,7 +104,10 @@ h1 {margin:30px 0 0 0; padding:5px 0 7px 45px; text-transform:uppercase; font-si
 #text .right{
     color: #828282;
 }
-.highlight{color: #f6a1a1;
+.highlight,.amount{color: #f6a1a1;
+}
+a:hover .amount{
+    color:white
 }
 .bold{font-weight:bold}
 h3{

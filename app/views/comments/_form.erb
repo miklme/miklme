@@ -1,7 +1,7 @@
 <% form_for  ([form.resource.owner,:resource,form]) do |f| %>
   <div class="item_pink">
     <%= f.error_messages %>
-    <p>玩一下，给你的动作取个名字：<span class="sb_meta">（如：侮辱其人格，断其一指等等）</span>
+    <p>给你的动作取个名字：<span class="sb_meta">（如：侮辱其人格，断其一指等等）</span>
     </p>
     <p>
       <%=f.text_field :action_one,:size => 4%>其 <%= f.text_field :action_two,:size => 4 %>

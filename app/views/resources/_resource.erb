@@ -8,7 +8,6 @@
        </p>
        <p>
        <%= link_to_origin(resource) %>       </p>
-         <br />
-    <%= link_to "回复>>>", user_resource_comments_path(resource.owner,resource),:popup => true %><span class="amount">(<%=resource.comments.size  %>)</span>
+         <%= link_to_resource_comments_path(resource) %>
   </div>
 </li>

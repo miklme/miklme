@@ -28,7 +28,7 @@ class ResourcesController < ApplicationController
       @keyword_page.updated_at=Time.now
       @keyword_page.save
       News.create_resource_news(@resource)
-      flash[:notice]="发表成功。默认情况下，你发表的内容会根据你的<cite>生命值</cite>排序，你可以在下面找找看。"
+      flash[:notice]="默认情况下，你的世界观会根据你的<cite>生命值</cite>排序，你可以在下面找找看。"
       redirect_to keyword_page_path(@keyword_page)
     else
       render :action => :new,:layout => "keyword_pages"

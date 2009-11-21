@@ -116,7 +116,7 @@ class ApplicationController < ActionController::Base
       "身为长辈的你打击了后生，后生的生命值大降<cite>#{comment.changed_value.abs}</cite>"
       #不表态
     elsif comment.rating==0
-      "面无表情的你回复成功"
+      "面无表情的你回应成功"
     end
   end
 

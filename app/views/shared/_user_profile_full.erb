@@ -1,7 +1,7 @@
 <% if current_user.followings.include?(user_profile_full)  %>
   <div>
     <em><%= link_to user_profile_full.nick_name,user_path(user_profile_full) %></em>
-    <span class="highlight">我已关注</span>
+    <span class="highlight">已关注</span>
     <em><%= link_to "取消关注",user_be_follow_path(user_profile_full,user_profile_full.be_follows.find_by_follower_id(current_user.id)),:method => :delete,:confirm => "确定取消关注？" %></em>
   </div>
 <% elsif user_profile_full==current_user%>

@@ -1,8 +1,8 @@
 <% if logged_in? %>
   <% if current_user.followings.include?(user)  %>
     <div>
-      <div><%= link_to user.nick_name,user_path(user) %></div>
-      <strong>我已关注</strong>
+      <div><%= link_to user.nick_name,user_path(user) %>
+        <strong>已关注</strong></div>
       <p><cite><%=number_with_precision user.field_value(keyword_page) %></cite></p>
     </div>
   <% else %>

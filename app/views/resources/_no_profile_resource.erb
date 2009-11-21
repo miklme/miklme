@@ -6,7 +6,5 @@
     </p>
     <p>
     <%=link_to_origin(no_profile_resource) %>    </p>
-    <br />
-    <%= link_to "回复>>>", user_resource_comments_path(no_profile_resource.owner,no_profile_resource),:popup => true %><span class="amount">(<%=no_profile_resource.comments.size  %>)</span>
-  </div>
+  <%= link_to_resource_comments_path(no_profile_resource) %>  </div>
 </li>

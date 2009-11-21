@@ -22,7 +22,6 @@
       </div>
       <div id="sw_content">
 
-        <div id="sw_canvas">
           <div id="sw_aside">
             <div id="sc_expPane">
               <div class="sw_menu" id="sw_rel">
@@ -43,7 +42,7 @@
                 <dt>开始体验之前，<%= link_to_remote "阅读一些有益且必要的说明",:url => {:action => :toggle_blind,:id => "first"} %>，或者忽略介绍并毫无目的地体验、离开，由你选择</dt>
                 <dd id="first" style="display:none">
                   <p>这里有各种各样<span class="title_2">世界</span>。
-                    在某一个世界内人们可以发表对于这个世界的观点，简称世界观。你的任务是维护世界的和平和世界观的正确性——帮助拥有正确世界观的人们升入天堂，错误世界观的人们进入地狱。<span class="title_3">生命值</span>越高就越接近天堂，反之就越接近地狱。
+                    在某一个世界内人们可以发表对于这个世界的观点，简称世界观。你的任务是维护各个世界内世界观的正确性——帮助拥有正确世界观的人们升入天堂，错误世界观的人们进入地狱。<span class="title_3">生命值</span>越高就越接近天堂，反之就越接近地狱。
                   </p>
                   <dl>
                     <dt>浅尝辄止，或者<%= link_to_remote "了解更多",:url => {:action => :toggle_blind,:id => "second"} %>，由你选择。
@@ -86,7 +85,7 @@
                   </li>
                   <li>
                     以<%= link_to "互联网",keyword_page_path(KeywordPage.find_by_keyword("互联网")) %>
-                    世界为例，在这个世界内，回复一个叫做 <%= link_to "Michael",user_path(User.find(1)) %>的人的某一个帖子，并在回复中选择
+                    世界为例，在这个世界内，回应一个叫做 <%= link_to "Michael",user_path(User.find(1)) %>的人的某一个帖子，并在回应中选择
                     <cite>支持</cite>
                   </li>
                   <li>
@@ -103,7 +102,7 @@
               </p>
             </div>
             <%= yield %>
-          </div></div></div></div>
+          </div></div></div>
     <%= render :partial => "shared/footer" %>
 
   </body>

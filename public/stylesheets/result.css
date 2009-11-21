@@ -20,6 +20,21 @@ a {
     color:#336699;
     text-decoration:none;
 }
+a:hover .amount{
+    color:white
+}
+li:hover .reply_link {
+    display:inline;
+    float:right;
+}
+
+.reply_link{
+    display:none;
+}
+ a:hover .reply_link{
+        background-color:#003399;
+    color:white
+}
 em{
     font-style:normal
 }
@@ -48,7 +63,7 @@ h1, h2, h3, h4, h5, h6 {
 .register{
     color:#4F463F;
     font-size:14px;
- }
+}
 .search_user{
     display:inline
 }
@@ -315,6 +330,12 @@ div#sw_nav li {
     margin:0;
     padding:5px;
     border-bottom:1px dashed #CCCCCC;
+}
+#min_height{
+    min-height:50px;    /*高度最小值设置为：100px*/
+    height:auto !important; /*兼容FF,IE7也支持 !important标签*/
+    height:50px; /*兼容ie6*/
+    overflow:visible;
 }
 .sb_results p {
     line-height:1.3em;
@@ -705,9 +726,16 @@ div.auto_complete ul strong.highlight {
 .margin_top{
     margin-top:5px
 }
+#mrjin {
+    background:#ccc;
+    min-height:100px;    /*高度最小值设置为：100px*/
+    height:auto !important; /*兼容FF,IE7也支持 !important标签*/
+    height:100px; /*兼容ie6*/
+    overflow:visible;
+}
 .margin_left{
-
-    margin-left:80px
+    margin-left:80px;
+    margin-bottom:20px
 }
 
 .more{
