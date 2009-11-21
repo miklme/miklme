@@ -8,7 +8,7 @@
       <p><%=auto_link(f.resource.content) %></p>
       <span class="sb_meta">世界： <span  id="keyword_page"><%=link_to_page f.resource.keyword_page %></span></span>
       <br />
-      <em><%= link_to_resource_comments_path(f.resource) %></em>
+      <em><%= link_to "详细>>",user_resource_comments_path(f.resource.owner,f.resource) %></em>
     </div>
   <% elsif f.news_type=="comment"%>
     <div>
@@ -24,7 +24,7 @@
       </p>
       <span class="sb_meta">世界： <span id="keyword_page"><%=link_to_page f.resource.keyword_page %></span></span>
       <br />
-      <em><%= link_to_resource_comments_path(f.resource) %></em>
+      <em><%= link_to "详细>>",user_resource_comments_path(f.resource.owner,f.resource) %></em>
     </div>
   <%end  %>
 

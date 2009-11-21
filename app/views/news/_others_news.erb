@@ -6,7 +6,7 @@
     <em><%= link_to "#{others_news.owner.name_or_nick_name(current_user)}",user_path(others_news.resource.owner) -%></em>发表世界观
     <cite><%= auto_link others_news.resource.content%></cite>
     <span class="right">世界： <%=link_to_page others_news.resource.keyword_page %></span>
-    <em><%= link_to_resource_comments_path(others_news.resource) %></em>
+    <em><%= link_to "详细>>",user_resource_comments_path(others_news.resource.owner,others_news.resource) %></em>
   </p>
 <% elsif others_news.news_type=="comment"%>
   <p>
@@ -19,7 +19,7 @@
       <%=truncate others_news.comment.content,:length => 140 %>
     </cite>
     <span class="right">世界： <%=link_to_page others_news.resource.keyword_page %></span>
-    <em><%= link_to_resource_comments_path(others_news.resource) %></em>
+    <em><%= link_to "详细>>",user_resource_comments_path(others_news.resource.owner,others_news.resource) %></em>
   </p>
 <%end  %>
 

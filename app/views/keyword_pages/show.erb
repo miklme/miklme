@@ -1,6 +1,7 @@
 
   <%= render :partial => "resources/form" %>
 <div id="results">
+  <h2>天堂</h2>
     <ol class="sb_results" id="wg0">
 
       <% for u in @users  %>
@@ -14,7 +15,6 @@
         <% end %>
       <% end %>
     </ol>
-
   <div class="sb_pag">
     <%= will_paginate @users, :prev_label => '上一页', :next_label => '下一页' %>
   </div>
