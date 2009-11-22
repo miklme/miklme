@@ -6,11 +6,11 @@ module ApplicationHelper
 
   def attitude(comment)
     if comment.rating==1
-      "<cite>支持</cite>"
+      "<cite>支持#{comment.parent.owner.nick_name}</cite>"
     elsif comment.rating==0
       "<span class='grey'>不表态</span>"
     elsif comment.rating==-1
-      "<strong>攻击</strong>"
+      "<strong>攻击#{comment.parent.owner.nick_name}</strong>"
     end
   end
   def link_to_origin(resource)
@@ -19,7 +19,7 @@ module ApplicationHelper
 
   def my_value_here(keyword_page)
     if logged_in?
-      "我在此的生命值：<cite>#{current_user.field_value(keyword_page)}</cite>"
+      "我的生命值：<cite>#{current_user.field_value(keyword_page)}</cite>"
     end
   end
   def link_to_page(keyword_page)
@@ -58,5 +58,18 @@ module ApplicationHelper
 
   def link_to_reply_path(comment)
     link_to_remote "回应#{comment.owner.nick_name}",:url => {:controller => :replied_comments,:action => :new,:id => comment}
+  end
+
+  def variable_content(resource)
+    user_order=resource.keyword_page.users_have_resources.index(resource.owner).+1
+    v1=17-user_order
+    if v1>=2
+      v2=v1
+    elsif v1<2
+      v2=2
+    end
+    "<p style='font-size:#{v2}px'>"+\
+      auto_link(resource.content)+\
+      "</p>"
   end
 end

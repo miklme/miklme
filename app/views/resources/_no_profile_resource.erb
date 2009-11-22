@@ -1,9 +1,7 @@
 <li>
   <span class="sb_meta"><%=distance_of_time_in_words(Time.now, no_profile_resource.created_at, true)%></span>
-  <div class="margin_left">
-    <p>
-      <%=truncate auto_link(no_profile_resource.content),:length => 300%>
-    </p>
+  <div class="margin_bottom">
+    <%= variable_content(no_profile_resource) %>
     <p>
     <%=link_to_origin(no_profile_resource) %>    </p>
   <%= link_to_resource_comments_path(no_profile_resource) %>  </div>
