@@ -194,9 +194,37 @@ div#sw_nav li {
     background-color:#E5E5E5;
 }
 
-#results{max-width:590px}
 
-
+#results h2{
+    font-size:15px;
+    text-align:center;
+    font-family: 微软雅黑,Arial,Helvetica,sans-serif;
+    letter-spacing: 10px;
+}
+#tiantang{
+    background-image: url(../images/heaven.png);
+    background-repeat: repeat-x;
+    padding-bottom:37px;
+    padding-top:23px;
+}
+#diyu{
+    background-image: url(../images/diyu.png);
+    background-repeat: repeat-x;
+    padding-top:37px;
+    padding-bottom:23px;
+    background-position: left bottom;
+}
+#diyu .highlight{
+    vertical-align: bottom;
+}
+.highlight{
+    color:#F92D09
+}
+.comfort{
+    color:#006600
+}
+#results ol{
+}
 .item {
     border: 1px solid #d3d3d3;
     background: #FFF;
@@ -582,8 +610,6 @@ a.sw_logo {
 #results_container {
     padding:0 15px;
 }
-#results {
-}
 #sidebar {
     float:left;
     margin:0 -264px 0 19px;
@@ -736,7 +762,7 @@ div.auto_complete ul strong.highlight {
     background-color:#FFF6EE;
     text-align:center;
     border: 1px solid #fdf8f8;
-    padding:10px 100px
+    padding:10px 80px
 }
 .more a{
     color:#F76120;
