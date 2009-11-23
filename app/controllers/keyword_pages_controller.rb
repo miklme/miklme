@@ -48,7 +48,7 @@ class KeywordPagesController < ApplicationController
 
   def more
     if flash["resource_offset_of_#{params[:user_id]}"].blank?
-      flash["resource_offset_of_#{params[:user_id]}"]=0
+      flash["resource_offset_of_#{params[:user_id]}"]=1
     else
       flash["resource_offset_of_#{params[:user_id]}"]+=10
     end

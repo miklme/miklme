@@ -5,11 +5,7 @@
       </td>
       <td width="500">
         <cite><%= @resource.created_at_s %></cite>
-        <p>
-          <%=simple_format auto_link(@resource.content)%>
-          </p>
-          <%= image_tag origin_user_resource_path(@resource.owner,@resource,:jpg) if @resource.has_image? %>
-        
+        <%= render :partial => "resources/bubble_resource",:object => @resource %>
       </td>
       <td width="100">
       </td>

@@ -2,28 +2,34 @@
 <li>
   <% if f.news_type=="resource" %>
     <div>
-      <em> <%= link_to "#{f.owner.name_or_nick_name(current_user)}",user_path(f.resource.owner) -%> </em>发表世界观
+     <%= link_to "#{f.owner.name_or_nick_name(current_user)}",user_path(f.resource.owner) -%> 在<span  id="keyword_page"><%=link_to_page f.resource.keyword_page %></span>内发表世界观：
       <span class="sb_meta">
       <%=distance_of_time_in_words(Time.now, f.created_at, true)%></span>
-      <p><%=auto_link(f.resource.content) %></p>
-      <span class="sb_meta">世界： <span  id="keyword_page"><%=link_to_page f.resource.keyword_page %></span></span>
-      <br />
-      <em><%= link_to "详细>>",user_resource_comments_path(f.resource.owner,f.resource) %></em>
+      <table cellspacing="0" cellpadding="0" border="0"><tbody>
+          <tr>
+            <td width="40" height="30" class="lt"/><td height="30" class="ct"/><td width="40" height="30" class="rt"/></tr>
+          <tr><td width="40" valign="top" class="lm"><img src="../images/td_arrow.gif"/></td><td valign="top" class="origin"> 
+              <p>
+              <%=auto_link(f.resource.content) %>
+              </p>
+              <p>
+              <%= link_to_origin(f.resource) %>       </p>
+              <em><%= link_to "详细>>",user_resource_comments_path(f.resource.owner,f.resource) %></em>
+            </td><td width="40" class="rm"/></tr>
+          <tr><td width="40" height="20" class="lb"/><td height="20" class="cb"/><td width="40" height="20" class="rb"/></tr></tbody></table>
     </div>
   <% elsif f.news_type=="comment"%>
     <div>
-      <em><%= link_to f.owner.nick_name,user_path(f.owner) %> </em>
+      <%= link_to f.owner.nick_name,user_path(f.owner) %>
       <% if f.comment.action_one.present? and f.comment.action_two.present? %>
-        <%= f.comment.action_one %>了 <em><%=link_to f.comment.parent.owner.name_or_nick_name(current_user),user_path(f.comment.parent.owner)%> </em>的<%=f.comment.action_two%>并
+        <%= f.comment.action_one %>了 <%=link_to f.comment.parent.owner.name_or_nick_name(current_user),user_path(f.comment.parent.owner)%>的<%=f.comment.action_two%>并
       <% end %>
-      回应 <em><%= link_to f.comment.parent.owner.name_or_nick_name(current_user),user_path(f.comment.parent.owner) %> </em>：
+      在<span  id="keyword_page"><%=link_to_page f.resource.keyword_page %></span>内回应<%= link_to f.comment.parent.owner.name_or_nick_name(current_user),user_path(f.comment.parent.owner) %> ：
       <span class="sb_meta">
       <%=distance_of_time_in_words(Time.now, f.created_at, true)%></span>
       <p>
         <%=truncate f.comment.content,:length => 140 %>
       </p>
-      <span class="sb_meta">世界： <span id="keyword_page"><%=link_to_page f.resource.keyword_page %></span></span>
-      <br />
       <em><%= link_to "详细>>",user_resource_comments_path(f.resource.owner,f.resource) %></em>
     </div>
   <%end  %>

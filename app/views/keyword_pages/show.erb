@@ -1,17 +1,19 @@
 
 <%= render :partial => "resources/form" %>
-<div id="results">
+<div class="sb_results">
   <div id="tiantang"><h2 class="comfort">天堂</h2></div>
 
 
   <% for u in @users  %>
-    <%= render  :partial => "resources/bubble_resource",:object => u.resources.find(:first,:order => "created_at DESC",:conditions => {:keyword_page_id => @keyword_page.id})  %>
-    <ol class="sb_results" id="wg0">
-      <% user_id=u.id %>
-      <li id="more_of_<%=user_id%>">
-        <div class="more"><%= link_to_remote '· · · · · ·',:url => {:action => :more,:user_id => u.id,:keyword_page_id => @keyword_page.id}%></div>
-      </li>
-    </ol>
+    <div class="order_profile"><%= render :partial => "shared/field_profile",:locals => {:user => u,:keyword_page => @keyword_page}%>
+    </div>
+    <%= render  :partial => "resources/no_profile_resource",:object => u.resources.find(:first,:order => "created_at DESC",:conditions => {:keyword_page_id => @keyword_page.id})  %>
+    <% user_id=u.id %>
+    
+    <div id="more_of_<%=user_id%>">
+      <div class="more"><%= link_to_remote '· · · · · ·',:url => {:action => :more,:user_id => u.id,:keyword_page_id => @keyword_page.id}%></div>
+    </div>
+  <div class="double_dot">差距</div>
   <% end %>
   <div id="diyu">
     <h2 class="highlight">地狱</h2>

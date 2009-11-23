@@ -3,6 +3,10 @@
 </h2>
 <ul class="sb_results" id="wg0">
   <% for resource in keyword_page_index.good_resources %>
-    <%= render "resources/resource",:object => resource %>
+  <li>
+    <span class="left"><%= render :partial => "shared/field_profile",:locals => {:user => resource.owner,:keyword_page => resource.keyword_page}%>
+    </span>
+    <%= render "resources/bubble_resource",:object => resource %>
+  </li>
   <% end %>
 </ul>
