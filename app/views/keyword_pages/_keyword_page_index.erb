@@ -6,7 +6,7 @@
   <li>
     <span class="left"><%= render :partial => "shared/field_profile",:locals => {:user => resource.owner,:keyword_page => resource.keyword_page}%>
     </span>
-    <%= render "resources/bubble_resource",:object => resource %>
+    <%= render "resources/resource_left",:object => resource %>
   </li>
   <% end %>
 </ul>

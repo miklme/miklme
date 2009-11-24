@@ -23,23 +23,32 @@ a {
 a:hover .amount{
     color:white
 }
-li:hover .reply_link {
+li:hover .reply_link,.right_bubble:hover .reply_link {
     display:inline;
     float:right;
-    margin-right:100px;
-    padding-left:20px;
-    padding-right:20px
 }
 .order_profile{
     float:right;
-    margin:20px
+    margin-top:20px;
+    margin-left:20px;
+    margin-right:20px
 }
 .reply_link{
     display:none;
+    font-size:12px
+}
+.zhan_wei{
+    min-height:15px;    /*高度最小值设置为：100px*/
+    height:auto !important; /*兼容FF,IE7也支持 !important标签*/
+    height:15px; /*兼容ie6*/
+    overflow:visible;
 }
 a:hover .reply_link{
     background-color:#003399;
     color:white;
+}
+.right_bubble{
+    float:right
 }
 em{
     font-style:normal;
@@ -251,7 +260,6 @@ td.lm {
 td.origin {
     background-image:url(../images/td_05.gif);
     color:#000000;
-    line-height:18px;
     text-align:left;
     word-wrap:break-word;}
 .tip_i {
@@ -371,6 +379,7 @@ td.rb {
     margin-top:20px;
     padding:0;
     width:100%;
+    font-weight:bold
 }
 
 
@@ -383,6 +392,7 @@ td.rb {
 }
 .sb_pag a {
     color:#F76120;
+    font-weight:normal
 }
 a.sb_pagP, a.sb_pagN {
     border:medium none;
@@ -720,9 +730,7 @@ div.auto_complete ul strong.highlight {
     background:none;
     text-decoration:underline
 }
-.sb_results li:hover,.sb_results li:hover{
-    background-color:#F5f5f5
-}
+
 .door{font-size:25px}
 .left{float:left;}
 .right{
@@ -763,29 +771,26 @@ div.auto_complete ul strong.highlight {
     letter-spacing: 8px;
 }
 .more{
-    font-weight:bold;
-    background-color:#FFF6EE;
+    font-weight:normal;
     text-align:center;
-    border: 1px solid #fdf8f8;
     clear:both;
-
+    float:right;
+    margin-right:100px;
+    margin-top:5px;
+    margin-bottom:5px
 }
 .more a{
-    color:#F76120;
+    color:grey;
 }
 #welcome{
     text-align:center
 }
 .more a:hover{
-    background:none;
-    color:#F76120;
-}
-.more:hover{
-    border-color:#FFA615;
-    border-width:1px;
+    background-color:#773333;
+    border-color:#FF9999 #FF3333 #FF3333 #FF9999;
     border-style:solid;
-    background-color:#FBEFDB;
-    color:#F76120;
+    border-width:1px;
+    color:#FFFFFF;
 }
 
 .side{

@@ -31,6 +31,10 @@ class Resource < ActiveRecord::Base
   has_many :good_commenters,:through => :comments,:source => :owner,:conditions => "rating>0 and parent_comment_id is NULL"
   has_many :bad_commenters,:through => :comments,:source => :owner,:conditions => "rating<0 and parent_comment_id is NULL"
 
+  named_scope :resources_at_keyword_page , lambda { |keyword_page|
+    {:order => "created_at DESC", :conditions => {:keyword_page_id => keyword_page.id} }
+  }
+
   validates_presence_of :content
   validates_length_of :content,:maximum => 280
   belongs_to :keyword_page
