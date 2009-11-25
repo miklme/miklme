@@ -4,7 +4,7 @@
   <% if params[:page].to_i==1 or params[:page].blank?%>
     <div id="tiantang"><h2 class="comfort">天堂</h2></div>
   <% end %>
-
+<div class="border">
   <% for u in @users  %>
     <div class="order_profile"><%= render :partial => "shared/field_profile",:locals => {:user => u,:keyword_page => @keyword_page}%>
     </div>
@@ -17,7 +17,7 @@
     <% end %>
     <div class="double_dot">差距</div>
   <% end %>
-
+</div>
   <% if params[:page].to_i==(@keyword_page.users_have_resources.size/@per_page.to_f).ceil or @keyword_page.users_have_resources.size<@per_page%>
     <div id="diyu">
       <h2 class="highlight">地狱</h2>
@@ -27,4 +27,5 @@
     <%= will_paginate @users, :previous_label => '<cite> ←天堂方向</cite>', :next_label => '<em class="highlight">地狱方向→</em>' %>
   </div>
 </div>
+
 
