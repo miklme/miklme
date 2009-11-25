@@ -157,9 +157,7 @@ cite a{text-decoration:underline}
     margin:auto
 }
 .border{
-    border-right:3px dotted #cccccc;
-    padding-right:3px;
-    width:660px
+    width:600px
 }
 .item p{margin-top:0px;
         margin-bottom:1em}
@@ -355,7 +353,9 @@ td.rb {
 #sw_aside a.sc_va1 {
     padding:0;
 }
-
+.sb_results{
+    width:550px
+}
 .sb_results li{
     list-style-type:none;
     margin:0;
@@ -383,37 +383,52 @@ td.rb {
     margin-bottom:20px;
     margin-top:20px;
     padding:0;
-    width:100%;
-    font-weight:bold
+    float:right;
+    width:20px;
+    font-weight:bold;
+    text-align:center
 }
-
-
+.next_page{
+    color:#F92D09;
+}
+.prev_page{
+    color:#006600;
+}
+.next_page,.prev_page{
+    font-weight:bold;
+    font-size:12px;
+    border:none
+}
+.sb_pag .next_page:hover,.sb_pag .prev_page:hover{
+    border:1px solid #FFA615;
+    background:#FBEFDB none repeat scroll 0 0;
+}
+.sb_pag .prev_page,.sb_pag .next_page{
+    border-left:none
+}
+.sb_pag .current{
+    font-weight:bold;
+    border-left:8px solid #5b5b5b;
+}
 
 .sb_pag a,.sb_pag span {
-    border:1px solid #D4D4D4;
-    margin:0 0.38em 0 0;
-    padding:0.3em 0.7em;
-    text-align:center;
-}
-.sb_pag a {
-    color:#F76120;
-    font-weight:normal
-}
-a.sb_pagP, a.sb_pagN {
-    border:medium none;
-    color:#0033CC;
-    padding:0.38em 0.5em;
+    display:block;
+    border-left:8px dotted #AAAAAA;
+    padding-top:20px;
+    padding-bottom:20px;
+    margin:0px
 }
 
-.sb_pag a:hover, a.sb_pagS {
+.sb_pag a:hover {
     -moz-background-clip:border;
     -moz-background-inline-policy:continuous;
     -moz-background-origin:padding;
-    background:#FBEFDB none repeat scroll 0 0;
-    border:1px solid #FFA615;
+    background:none;
+    border-left:8px solid #5b5b5b;
     text-decoration:none;
     color:#F76120
 }
+/*#FBEFDB是一个颜色，bing原先hover:link的颜色*/
 a.sb_pagP {
     margin-right:0.7em;
     padding-left:0;
