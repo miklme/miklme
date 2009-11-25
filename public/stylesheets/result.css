@@ -413,7 +413,7 @@ td.rb {
 
 .sb_pag a,.sb_pag span {
     display:block;
-    border-left:8px dotted #AAAAAA;
+    border-left:8px solid #AAAAAA;
     padding-top:20px;
     padding-bottom:20px;
     margin:0px
