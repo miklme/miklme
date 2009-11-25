@@ -3,20 +3,7 @@
   <% if f.news_type=="resource" %>
     <div>
      <%= link_to "#{f.owner.name_or_nick_name(current_user)}",user_path(f.resource.owner) -%> 在<span  id="keyword_page"><%=link_to_page f.resource.keyword_page %></span>内发表世界观：
-      <span class="sb_meta">
-      <%=distance_of_time_in_words(Time.now, f.created_at, true)%></span>
-      <table cellspacing="0" cellpadding="0" border="0"><tbody>
-          <tr>
-            <td width="40" height="30" class="lt"/><td height="30" class="ct"/><td width="40" height="30" class="rt"/></tr>
-          <tr><td width="40" valign="top" class="lm"><img src="../images/td_arrow.gif"/></td><td valign="top" class="origin"> 
-              <p>
-              <%=auto_link(f.resource.content) %>
-              </p>
-              <p>
-              <%= link_to_origin(f.resource) %>       </p>
-              <em><%= link_to "详细>>",user_resource_comments_path(f.resource.owner,f.resource) %></em>
-            </td><td width="40" class="rm"/></tr>
-          <tr><td width="40" height="20" class="lb"/><td height="20" class="cb"/><td width="40" height="20" class="rb"/></tr></tbody></table>
+      <%= render :partial => "resources/resource_left",:object => f.resource %>
     </div>
   <% elsif f.news_type=="comment"%>
     <div>
