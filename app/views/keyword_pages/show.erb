@@ -5,7 +5,7 @@
     <%= will_paginate @users, :previous_label => '<cite>↑ 天堂方向</cite>', :next_label => '地狱方向 ↓ ' %>
   </div>
   
-  <div class="sb_results">
+  <div class="shijieguan sb_results">
     <% if params[:page].to_i==1 or params[:page].blank?%>
       <div id="tiantang"><h2 class="comfort">天堂</h2></div>
     <% end %>

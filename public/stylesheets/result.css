@@ -367,7 +367,7 @@ td.rb {
     padding:0;
 }
 .sb_results{
-    width:550px
+    width:550px;
 }
 .sb_results li{
     list-style-type:none;
@@ -386,11 +386,10 @@ td.rb {
     line-height:1.3em;
     margin:0;
 }
-.sb_results .sb_meta li, .sp_pss li, .sb_sitespec li {
-    display:inline;
-    line-height:1.3em;
-}
 
+.shijieguan{
+    float:left
+}
 
 .sb_pag {
     margin-bottom:20px;
