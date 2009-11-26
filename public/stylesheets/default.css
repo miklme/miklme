@@ -149,3 +149,28 @@ font-weight:bold;
 .sb_meta {float:right;
     color: #828282;
 }
+td.lt {
+    background-image:url(../images/td_01.gif);}
+td.ct {
+    background-image:url(../images/td_02.gif);}
+td.rt {
+    background-image:url(../images/td_03.gif);}
+td.lm {
+    background-image:url(../images/td_04.gif);}
+td.origin {
+    background-image:url(../images/td_05.gif);
+    color:#000000;
+    text-align:left;
+    word-wrap:break-word;}
+.tip_i {
+    color:#AFAFAF;
+    font-size:12px;
+}
+td.rm {
+    background-image:url(../images/td_06.gif);}
+td.lb {
+    background-image:url(../images/td_07.gif);}
+td.cb {
+    background-image:url(../images/td_08.gif);}
+td.rb {
+    background-image:url(../images/td_09.gif);}

@@ -64,7 +64,7 @@ module ApplicationHelper
     users=resource.keyword_page.users_have_resources
     user_order=users.index(resource.owner).to_i+1
     #计算字体大小的公式
-    v=(1-(user_order-1).to_f/(users.size-1).to_f)*9+9
+    v=(1-(user_order-1).to_f/(users.size-1).to_f)*10+8
     "<span style='font-size:#{v}px'>"+\
       auto_link(resource.content)+\
       "</span>"
@@ -73,6 +73,7 @@ module ApplicationHelper
   def variable_nick_name(user,keyword_page)
     user_order=keyword_page.users_have_resources.index(user).to_i+1
     users=keyword_page.users_have_resources
+    #计算用户名大小的公式
     v=(1-(user_order-1).to_f/(users.size-1).to_f)*21+9
     "<div style='font-size:#{v}px'>"+\
       link_to(user.nick_name,user_path(user)) +\

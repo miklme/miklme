@@ -37,12 +37,12 @@
             <%   if flash[:error].present?%> <p class="error"> <%=flash[:error]  %></p> <% end %>
             <div id="welcome">
               <%= render :partial => "shared/search_bar" %>
-              <h2 class="title_1"><%= link_to "最真实的游戏——天堂与地狱" %></h2>
+              <h2 class="title_1">最真实的游戏——<span class="tiantang">天堂</span>与<span class="diyu">地狱</span></h2>
               <dl>
                 <dt>开始体验之前，<%= link_to_remote "阅读一些有益且必要的说明",:url => {:action => :toggle_blind,:id => "first"} %>，或者忽略介绍并毫无目的地体验、离开，由你选择</dt>
                 <dd id="first" style="display:none">
                   <p>这里有各种各样<span class="title_2">世界</span>。
-                    在某一个世界内人们可以发表对于这个世界的观点，简称世界观。你的任务是维护各个世界内世界观的正确性——帮助拥有正确世界观的人们升入天堂，错误世界观的人们进入地狱。<span class="title_3">生命值</span>越高就越接近天堂，反之就越接近地狱。
+                    在某一个世界内人们可以发表对于这个世界的观点，简称世界观。你的任务是<strong>维护各个世界的稳定与和谐</strong>——帮助拥有正确世界观的人们升入天堂，错误世界观的人们进入地狱。<span class="title_3">生命值</span>越高就越接近天堂，反之就越接近地狱。
                   </p>
                   <dl>
                     <dt>浅尝辄止，或者<%= link_to_remote "了解更多",:url => {:action => :toggle_blind,:id => "second"} %>，由你选择。
@@ -80,21 +80,20 @@
                 <ol>
                   <li>
                     在一个世界
-                    （譬如<%= link_to "互联网",keyword_page_path(KeywordPage.find_by_keyword("互联网")) %>）内，发个帖子，
-                    并看看自己的帖子排在了哪里。由于你的<cite>生命值</cite>为0，理应排在后面
+                    （譬如<%= link_to "互联网",keyword_page_path(KeywordPage.find_by_keyword("互联网")) %>）内，发表你的世界观；
+                    由于你的<cite>生命值</cite>为0，你就快要下地狱了～；
                   </li>
                   <li>
                     以<%= link_to "互联网",keyword_page_path(KeywordPage.find_by_keyword("互联网")) %>
-                    世界为例，在这个世界内，回应一个叫做 <%= link_to "Michael",user_path(User.find(1)) %>的人的某一个帖子，并在回应中选择
-                    <cite>支持</cite>
+                    世界为例，在这个世界内，回应一个叫做 <%= link_to "Michael",user_path(User.find(1)) %>的人的某个世界观，并选择你对他的世界观的态度；
                   </li>
                   <li>
-                    再看看你原先发表的帖子排在了哪里，并理解一下Michael的按照<cite>生命值</cite>排序的功能。
+                    看看现在你是接近天堂了呢还是接近地狱。
                   </li>
                 </ol>
               </div>
             </div>
-            <div class="tab"><span class="blue_tab"><%= link_to_unless_current "大家的世界观",keyword_pages_path %></span>
+            <div class="tab"><span class="blue_tab"><%= link_to_unless_current "所有世界",keyword_pages_path %></span>
               <% if logged_in? %>
                 <span class="blue_tab"><%= link_to_unless_current "好友的动作" ,friends_keyword_pages_path%></span>
               <% end %>

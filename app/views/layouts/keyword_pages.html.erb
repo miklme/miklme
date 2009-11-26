@@ -28,7 +28,7 @@
             <%= render :partial => "shared/search_bar" %>
             <% if Resource.find_by_keyword_page_id(@keyword_page).blank?%>
               <div class="item_blue">
-                <span class="cadet_blue">天堂与地狱贴在了一起，这个世界还没有人。幸运的是，如果你成为第一个发表世界观的人，你将拥有<cite>1点</cite>初始生命值。</span>
+                <span class="cadet_blue">天堂与地狱贴在了一起，这个世界还没有人。幸运的是，如果你成为第一个发表世界观的人，你将拥有<cite>1点</cite>生命值。</span>
               </div>
             <% end %>
             <% if logged_in? and @keyword_page.users.include?(current_user) %>
