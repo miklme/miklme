@@ -1,4 +1,6 @@
 <% for p in @many_user_keyword_pages %>
   <%= render :partial => "keyword_page_index",:object => p%>
 <% end %>
+<div id="more_pages">
   <div class="more"><%= link_to_remote  " 更多· · ·",:url => {:action => :more_pages} %></div>
+</div>
