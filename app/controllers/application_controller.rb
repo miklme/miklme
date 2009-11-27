@@ -39,7 +39,7 @@ class ApplicationController < ActionController::Base
     end
     if ips.find_all{|ip| ip==current_user.last_ip}.size==1 and\
         comment.resource.commenters.find_all{|object| object.id==current_user.id}.size==1 and\
-   if     comment.resource.owner!=current_user
+        comment.resource.owner!=current_user
       true
     else
       comment.rating=0
@@ -55,7 +55,7 @@ class ApplicationController < ActionController::Base
     commenters=comment_comment.parent_comment.commenters
     if ips.find_all{|ip| ip==current_user.last_ip}.size==1 and\
         commenters.find_all{|object| object.id==current_user.id}.size==1 and\
-      if  comment_comment.parent_comment.owner!=current_user
+        comment_comment.parent_comment.owner!=current_user
       true
     else
       comment_comment.rating=0
@@ -63,7 +63,7 @@ class ApplicationController < ActionController::Base
       false
     end
   end
- def good_comment(user1,user2)
+  def good_comment(user1,user2)
     ((user1.value-user2.value)/2).abs
   end
 
