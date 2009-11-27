@@ -18,7 +18,6 @@ class BeFollowsController < ApplicationController
     @be_follow.user=user
     @be_follow.follower=current_user
     if @be_follow.save
-      user.save
       n=user.news.create
       n.owner=user
       n.follower_id=current_user.id
@@ -33,7 +32,6 @@ class BeFollowsController < ApplicationController
   def destroy
     @be_follow = BeFollow.find(params[:id])
     @be_follow.destroy
-    @be_follow.user.save
     respond_to do |format|
       format.html { redirect_to :back }
       format.xml  { head :ok }

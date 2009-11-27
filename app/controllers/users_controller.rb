@@ -35,12 +35,11 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if  @user.update_attributes(params[:user])
-      if session[:inviter_id].present?   and @user.last_ip!=User.find(session[:inviter_id]).last_ip
+      if session[:inviter_id].present?  and same_ip_validation(@user,User.find(session[:inviter_id]))
         b=BeFollow.new
         b.user=User.find(session[:inviter_id])
         b.follower=current_user
-        b.user.value+=1
-        b.user.save
+        b.save
         flash[:notice]="你关注了#{User.find(session[:inviter_id]).name_or_nick_name(current_user)}"
         session[:relationship]=session[:inviter_id]=nil
       end

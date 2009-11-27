@@ -127,7 +127,13 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  
+  def same_ip_validation(user1,user2)
+    if user1.last_ip!=user2.last_ip
+      true
+    else
+      false
+    end
+  end
   
   private
   def load_user
