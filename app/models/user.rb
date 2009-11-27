@@ -6,8 +6,7 @@ class User < ActiveRecord::Base
   include Authentication::ByCookieToken
 
   attr_accessor :password_confirmation
-  attr_protected :value
-  named_scope :ten,:limit => 10
+  
   has_many :value_orders
   has_many :keyword_pages,:through => :value_orders,:source => :keyword_page
   has_many :appear_keyword_pages,:through => :value_orders,:source => :keyword_page,:order => "value DESC",:limit => 10
@@ -58,21 +57,6 @@ class User < ActiveRecord::Base
       u.id
     end
     Resource.find_all_by_user_id(ids,:order => "resources.created_at DESC")
-  end
-
-  def field_value(keyword_page)
-    v=ValueOrder.find_by_keyword_page_id_and_user_id(keyword_page.id,self.id)
-    if v.present?
-      v.value
-    else
-      0.0
-    end
-  end
-
-  def change_value(keyword_page,value)
-    v=ValueOrder.find_by_keyword_page_id_and_user_id(keyword_page.id,self.id)
-    v.value+=value
-    v.save
   end
 
   def total_value

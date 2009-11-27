@@ -3,17 +3,17 @@
     <div>
       <%= variable_nick_name(user,keyword_page) %>
       <div id="noticed">已关注</div>
-      <cite><%=number_with_precision user.field_value(keyword_page) %></cite>
+      <cite><%=number_with_precision user.value %></cite>
     </div>
   <% else %>
     <div>
       <%= variable_nick_name(user,keyword_page) %>
-      <cite><%=number_with_precision user.field_value(keyword_page)%></cite>
+      <cite><%=number_with_precision user.value%></cite>
     </div>
   <% end %>
 <% else %>
   <div>
       <%= variable_nick_name(user,keyword_page) %>
-    <cite><%=number_with_precision user.field_value(keyword_page)%></cite>
+    <cite><%=number_with_precision user.value%></cite>
   </div>
 <% end %>

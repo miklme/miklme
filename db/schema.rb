@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091111042208) do
+ActiveRecord::Schema.define(:version => 20091127081127) do
 
   create_table "addresses", :force => true do |t|
     t.string   "province"
@@ -108,7 +108,7 @@ ActiveRecord::Schema.define(:version => 20091111042208) do
     t.string   "nick_name",                 :limit => 20
     t.integer  "terms"
     t.date     "birthday"
-    t.string   "username",                                :null => false
+    t.string   "username",                                                                                :null => false
     t.integer  "mobile_phone"
     t.string   "email"
     t.string   "province"
@@ -119,6 +119,7 @@ ActiveRecord::Schema.define(:version => 20091111042208) do
     t.string   "last_ip"
     t.integer  "inviter_id"
     t.integer  "inviter_value_order_id"
+    t.decimal  "value",                                   :precision => 20, :scale => 8, :default => 0.0
   end
 
   add_index "users", ["username"], :name => "index_users_on_username"

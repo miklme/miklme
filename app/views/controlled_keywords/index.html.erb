@@ -3,7 +3,7 @@
     <p>
       <em><%=link_to u.name_or_nick_name(current_user),user_path(u) %></em>：
       <% for page in u.appear_keyword_pages %>
-        <cite> 世界：<%=link_to page.keyword,keyword_page_path(page) %>，生命值：<%= page.field_value(u) %>
+        <cite> 世界：<%=link_to page.keyword,keyword_page_path(page) %>
         </cite>
       <% end %>
     </p>

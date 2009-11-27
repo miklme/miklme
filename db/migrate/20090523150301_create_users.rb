@@ -8,6 +8,7 @@ class CreateUsers < ActiveRecord::Migration
       t.datetime :remember_token_expires_at
       t.string :nick_name,:limit=>20
       t.decimal  :value,:default=>0,:precision => 8,:scale => 1
+      #若有更多的个人信息，那么再增加一个模型和users表关联
       t.integer :terms
       t.date :birthday
       t.string :username,:null => false

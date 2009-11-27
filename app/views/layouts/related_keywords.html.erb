@@ -22,86 +22,87 @@
       </div>
       <div id="sw_content">
 
-          <div id="sw_aside">
-            <div id="sc_expPane">
-              <div class="sw_menu" id="sw_rel">
-                <div id="recent">
-                  <%=render :partial => "recent_keyword_pages" %>
-                </div>
+        <div id="sw_aside">
+          <div id="sc_expPane">
+            <div class="sw_menu" id="sw_rel">
+              <span><%= my_value %></span>
+              <div id="recent">
+                <%=render :partial => "recent_keyword_pages" %>
               </div>
             </div>
           </div>
-          <div id="content">
+        </div>
+        <div id="content">
 
-            <%   if flash[:notice].present?%>  <p class="notice"><%=flash[:notice] %></p>  <% end %>
-            <%   if flash[:error].present?%> <p class="error"> <%=flash[:error]  %></p> <% end %>
-            <div id="welcome">
-              <%= render :partial => "shared/search_bar" %>
-              <h2 class="title_1">最真实的游戏——<span class="tiantang">天堂</span>与<span class="diyu">地狱</span></h2>
-              <dl>
-                <dt>开始体验之前，<%= link_to_remote "阅读一些有益且必要的说明",:url => {:action => :toggle_blind,:id => "first"} %>，或者忽略介绍并毫无目的地体验、离开，由你选择</dt>
-                <dd id="first" style="display:none">
-                  <p>这里有各种各样<span class="title_2">世界</span>。
-                    在某一个世界内人们可以发表对于这个世界的观点，简称世界观。你的任务是<strong>维护各个世界的稳定与和谐</strong>——帮助拥有正确世界观的人们升入天堂，错误世界观的人们进入地狱。<span class="title_3">生命值</span>越高就越接近天堂，反之就越接近地狱。
-                  </p>
-                  <dl>
-                    <dt>浅尝辄止，或者<%= link_to_remote "了解更多",:url => {:action => :toggle_blind,:id => "second"} %>，由你选择。
-                    </dt>
-                    <dd id="second" style="display:none">
-                      <p> 在上方的传送门中可以方便的进入某一世界，并且传送时还会自动提示进入相似的世界。</p>
-                      <p>
-                        进入一个世界后，你会看到各种世界观。每当你进入一个新的世界，你就拥有了一个新的转世和生命，因此在不同的世界中，你拥有不同的生命值。
-                      </p>
-                      <p><cite>生命值</cite>在<strong>1)邀请朋友关注你</strong>时，或<strong>2)你和别人互相回应</strong>时发生改变。邀请朋友关注你时，你在<strong>某世界内</strong>（取决于你把哪个世界的邀请发送给朋友）的生命值＋1，而回应别人时，这一世界内<strong>双方</strong>的生命值都可能改变——取决于你的选择：                  <%=radio_button_tag :rating,1 %>
-                        <cite>支持
-                        </cite>
-                        <%=radio_button_tag :rating,0%>
-                        不作为
-                        <%=radio_button_tag :rating,-1%>
-                        <strong>攻击
-                        </strong>
-                      </p>
-                      <div>
-                        这里有几种情况：
-                        <ul>
-                          <li>当你比对方生命值高，<cite>支持</cite>他，他的生命值会提高；<strong>攻击</strong>他，他的生命值会降低；</li>
-                          <li>当你比对方生命值低，<cite>支持</cite>他，你的生命值会提高；<strong>攻击</strong>他，你的生命值会降低。</li>
-                          <li>当你和对方的生命值相同时，无论如何回应，双方的生命值都不会改变。</li>
-                        </ul>
-                      </div>
+          <%   if flash[:notice].present?%>  <p class="notice"><%=flash[:notice] %></p>  <% end %>
+          <%   if flash[:error].present?%> <p class="error"> <%=flash[:error]  %></p> <% end %>
+          <div id="welcome">
+            <%= render :partial => "shared/search_bar" %>
+            <h2 class="title_1">最真实的游戏——<span class="tiantang">天堂</span>与<span class="diyu">地狱</span></h2>
+            <dl>
+              <dt>开始体验之前，<%= link_to_remote "阅读一些有益且必要的说明",:url => {:action => :toggle_blind,:id => "first"} %>，或者忽略介绍并毫无目的地体验、离开，由你选择</dt>
+              <dd id="first" style="display:none">
+                <p>这里有各种各样<span class="title_2">世界</span>。
+                  在某一个世界内人们可以发表对于这个世界的观点，简称世界观。你的任务是<strong>维护各个世界的稳定与和谐</strong>——帮助拥有正确世界观的人们升入天堂，错误世界观的人们进入地狱。<span class="title_3">生命值</span>越高就越接近天堂，反之就越接近地狱。
+                </p>
+                <dl>
+                  <dt>浅尝辄止，或者<%= link_to_remote "了解更多",:url => {:action => :toggle_blind,:id => "second"} %>，由你选择。
+                  </dt>
+                  <dd id="second" style="display:none">
+                    <p> 在上方的传送门中可以方便的进入某一世界，并且传送时还会自动提示进入相似的世界。</p>
+                    <p>
+                      进入一个世界后，你会看到各种世界观。每当你进入一个新的世界，你就拥有了一个新的转世和生命，因此在不同的世界中，你拥有不同的生命值。
+                    </p>
+                    <p><cite>生命值</cite>在<strong>1)邀请朋友关注你</strong>时，或<strong>2)你和别人互相回应</strong>时发生改变。邀请朋友关注你时，你在<strong>某世界内</strong>（取决于你把哪个世界的邀请发送给朋友）的生命值＋1，而回应别人时，这一世界内<strong>双方</strong>的生命值都可能改变——取决于你的选择：                  <%=radio_button_tag :rating,1 %>
+                      <cite>支持
+                      </cite>
+                      <%=radio_button_tag :rating,0%>
+                      不作为
+                      <%=radio_button_tag :rating,-1%>
+                      <strong>攻击
+                      </strong>
+                    </p>
+                    <div>
+                      这里有几种情况：
+                      <ul>
+                        <li>当你比对方生命值高，<cite>支持</cite>他，他的生命值会提高；<strong>攻击</strong>他，他的生命值会降低；</li>
+                        <li>当你比对方生命值低，<cite>支持</cite>他，你的生命值会提高；<strong>攻击</strong>他，你的生命值会降低。</li>
+                        <li>当你和对方的生命值相同时，无论如何回应，双方的生命值都不会改变。</li>
+                      </ul>
+                    </div>
 
-                      <h3>开始体验，或者离开，由你选择。</h3>
-                    </dd>
-                  </dl>
-                </dd>
-              </dl>
-              <div class="item_blue">
-                <h2>我们来这样开始：</h2>
-                <ol>
-                  <li>
-                    在一个世界
-                    （譬如<%= link_to "互联网",keyword_page_path(KeywordPage.find_by_keyword("互联网")) %>）内，发表你的世界观；
-                    由于你的<cite>生命值</cite>为0，你就快要下地狱了～；
-                  </li>
-                  <li>
-                    以<%= link_to "互联网",keyword_page_path(KeywordPage.find_by_keyword("互联网")) %>
-                    世界为例，在这个世界内，回应一个叫做 <%= link_to "Michael",user_path(User.find(1)) %>的人的某个世界观，并选择你对他的世界观的态度；
-                  </li>
-                  <li>
-                    看看现在你是接近天堂了呢还是接近地狱。
-                  </li>
-                </ol>
-              </div>
+                    <h3>开始体验，或者离开，由你选择。</h3>
+                  </dd>
+                </dl>
+              </dd>
+            </dl>
+            <div class="item_blue">
+              <h2>我们来这样开始：</h2>
+              <ol>
+                <li>
+                  在一个世界
+                  （譬如<%= link_to "互联网",keyword_page_path(KeywordPage.find_by_keyword("互联网")) %>）内，发表你的世界观；
+                  由于你的<cite>生命值</cite>为0，你就快要下地狱了～；
+                </li>
+                <li>
+                  以<%= link_to "互联网",keyword_page_path(KeywordPage.find_by_keyword("互联网")) %>
+                  世界为例，在这个世界内，回应一个叫做 <%= link_to "Michael",user_path(User.find(1)) %>的人的某个世界观，并选择你对他的世界观的态度；
+                </li>
+                <li>
+                  看看现在你是接近天堂了呢还是接近地狱。
+                </li>
+              </ol>
             </div>
-            <div class="tab"><span class="blue_tab"><%= link_to_unless_current "所有世界",keyword_pages_path %></span>
-              <% if logged_in? %>
-                <span class="blue_tab"><%= link_to_unless_current "好友的动作" ,friends_keyword_pages_path%></span>
-              <% end %>
-              <p class="item_blue">
-              </p>
-            </div>
-            <%= yield %>
-          </div></div></div>
+          </div>
+          <div class="tab"><span class="blue_tab"><%= link_to_unless_current "所有世界",keyword_pages_path %></span>
+            <% if logged_in? %>
+              <span class="blue_tab"><%= link_to_unless_current "好友的动作" ,friends_keyword_pages_path%></span>
+            <% end %>
+            <p class="item_blue">
+            </p>
+          </div>
+          <%= yield %>
+        </div></div></div>
     <%= render :partial => "shared/footer" %>
 
   </body>

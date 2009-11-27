@@ -19,9 +19,7 @@ class KeywordPage < ActiveRecord::Base
   has_many :resources
   has_many :value_orders
   has_many :users,:through => :value_orders,:source => :user
-  has_one :top_user,:through => :value_orders,:source => :user,:order => "value DESC"
-  has_many :value_above_one,:through => :value_orders,:source => :user,:conditions => "value > 1"
-  has_many :value_above_zero,:through => :value_orders,:source => :user,:conditions => "value > 0"
+  has_one :top_user,:through => :value_orders,:source => :user,:order => "users.value DESC"
   validates_uniqueness_of :keyword,:message => "这个世界已经存在了"
   validates_presence_of :keyword,:message => "世界名不能为空"
   named_scope :user_fields, lambda { |user_id| {
@@ -30,42 +28,9 @@ class KeywordPage < ActiveRecord::Base
     } }
   named_scope :hots,:limit => 10,:order => "users.size DESC"
 
-  def field_value(user)
-    v=ValueOrder.find_by_keyword_page_id_and_user_id(self.id,user.id)
-    if v.present?
-      v.value
-    else
-      0.0
-    end
-  end
-  
-  def good_comment(user1,user2)
-    ((user1.field_value(self)-user2.field_value(self))/2).abs
-  end
-
-  def bad_comment(user1,user2)
-    (user1.field_value(self)-user2.field_value(self)).abs
-  end
-  
-  def resources_by_value
-    ss=self.resources.sort_by do |resource|
-      [self.value_orders.find_by_user_id(resource.owner).value,resource.created_at]
-    end
-    ss.reverse
-  end
-  def top_resource
-    ss=self.resources.sort_by do |resource|
-      [self.value_orders.find_by_user_id(resource.owner).value,resource.created_at]
-    end
-    ss.reverse.first
-  end
-  
-  def resources_by_time(page)
-    self.resources.paginate(:all,:order => "resources.created_at DESC",:per_page => 10,:page => page)
-  end
-
+ 
   def good_resources
-    active_members=self.value_above_zero
+    active_members=User.find(:all,:conditions => "value>0")
     authors=self.users_have_resources
     users=(active_members&authors)
     recent_resources=users.map do |u|
@@ -80,14 +45,14 @@ class KeywordPage < ActiveRecord::Base
     end
     ids=ids.uniq
     users=User.find_all_by_id(ids)
-    ordered=users.sort_by { |u| [u.field_value(self),u.created_at]}.reverse
+    ordered=users.sort_by { |u| [u.value,u.created_at]}.reverse
   end
   def self.recent_keyword_pages
     a=self.find(:all,:order => "created_at DESC",:limit => 10)
   end
 
   def self.active_user_keyword_pages
-    keyword_pages=self.find(:all).find_all{|k| k.value_above_one.size>=1}.sort_by {|k| k.updated_at}.reverse
+    keyword_pages=self.find(:all,:include => :users,:conditions => "users.value>1",:order => "keyword_pages.updated_at DESC")
   end
 
   def self.girls_pages

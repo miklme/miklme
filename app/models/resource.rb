@@ -34,7 +34,7 @@ class Resource < ActiveRecord::Base
   named_scope :resources_at_keyword_page , lambda { |keyword_page|
     {:order => "created_at DESC", :conditions => {:keyword_page_id => keyword_page.id} }
   }
-
+  named_scope :resources_by_value,:include => :owner,:order => "users.value DESC"
   validates_presence_of :content
   validates_length_of :content,:maximum => 280
   belongs_to :keyword_page
@@ -44,8 +44,6 @@ class Resource < ActiveRecord::Base
   named_scope :in_one_day,:conditions => ["resources.created_at > ?",Time.now.yesterday]
   named_scope :recent,:limit => 15,:order => "resources.created_at DESC"
 
-  after_save :check_if_first
-  
   def created_at_s
     created_at.advance(:hours => 8).to_s(:db)
   end
@@ -61,7 +59,7 @@ class Resource < ActiveRecord::Base
   def comments_by_value(page)
     cs=self.comments.parent_comments
     comments=cs.sort_by do |c|
-      c.owner.field_value(c.resource.keyword_page)
+      c.owner.value
     end
     comments.reverse.paginate(:per_page => 25,:page => page)
   end
@@ -70,11 +68,6 @@ class Resource < ActiveRecord::Base
     self.comments.parent_comments.paginate(:per_page => 20,:page => page,:order => "created_at")
   end
 
-  def check_if_first
-    if self.keyword_page.resources.size==1
-      self.owner.change_value(self.keyword_page,1)
-    end
-  end
   def self.find_by_user(user,page)
     paginate :per_page => 15,
       :page => page,

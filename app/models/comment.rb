@@ -25,9 +25,8 @@ class Comment < ActiveRecord::Base
   end
 
   def changed_value
-    k=self.resource.keyword_page
-    current_v=self.owner.field_value(k)
-    parent_v=self.parent.owner.field_value(k)
+    current_v=self.owner.value
+    parent_v=self.parent.owner.value
     current_v-parent_v
   end
   

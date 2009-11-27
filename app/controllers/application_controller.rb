@@ -37,9 +37,9 @@ class ApplicationController < ActionController::Base
     ips=comment.resource.keyword_page.users.map do |user|
       user.last_ip
     end
-    if ips.find_all{|ip| ip==current_user.last_ip}.size==1 and\
-        comment.resource.commenters.find_all{|object| object.id==current_user.id}.size==1 and\
-        comment.resource.owner!=current_user
+#    if ips.find_all{|ip| ip==current_user.last_ip}.size==1 and\
+#        comment.resource.commenters.find_all{|object| object.id==current_user.id}.size==1 and\
+   if     comment.resource.owner!=current_user
       true
     else
       comment.rating=0
@@ -53,9 +53,9 @@ class ApplicationController < ActionController::Base
       user.last_ip
     end
     commenters=comment_comment.parent_comment.commenters
-    if ips.find_all{|ip| ip==current_user.last_ip}.size==1 and\
-        commenters.find_all{|object| object.id==current_user.id}.size==1 and\
-        comment_comment.parent_comment.owner!=current_user
+#    if ips.find_all{|ip| ip==current_user.last_ip}.size==1 and\
+#        commenters.find_all{|object| object.id==current_user.id}.size==1 and\
+      if  comment_comment.parent_comment.owner!=current_user
       true
     else
       comment_comment.rating=0
@@ -63,24 +63,31 @@ class ApplicationController < ActionController::Base
       false
     end
   end
+ def good_comment(user1,user2)
+    ((user1.value-user2.value)/2).abs
+  end
 
+  def bad_comment(user1,user2)
+    (user1.value-user2.value).abs
+  end
+  
   def change_user_value(comment)
     object=comment.parent.owner
     a=choose_validater(comment)
     if a
-      current_v=current_user.field_value(comment.resource.keyword_page)
-      author_v=object.field_value(comment.resource.keyword_page)
+      current_v=current_user.value
+      author_v=object.value
       if current_v<author_v and comment.rating==-1
-        current_user.change_value comment.resource.keyword_page,-comment.resource.keyword_page.bad_comment(current_user,object)
+        current_user.value+=(-bad_comment(current_user,object))
         current_user.save
       elsif current_v>author_v and comment.rating==-1
-        object.change_value(comment.resource.keyword_page,-comment.resource.keyword_page.bad_comment(current_user,object))
+        object.value+=(-bad_comment(current_user,object))
         object.save
       elsif comment.rating==1 and  current_v>author_v
-        object.change_value comment.resource.keyword_page,comment.resource.keyword_page.good_comment(current_user,object)
+        object.value+=(good_comment(current_user,object))
         object.save
       elsif comment.rating==1 and  current_v<author_v
-        current_user.change_value comment.resource.keyword_page,comment.resource.keyword_page.good_comment(current_user,object)
+        current_user.value+=(good_comment(current_user,object))
         current_user.save
       end
     end

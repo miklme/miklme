@@ -17,9 +17,9 @@ module ApplicationHelper
     link_to(image_tag(preview_user_resource_path(resource.owner,resource, :jpg)),origin_user_resource_path(resource.owner,resource,:jpg), :popup => ['预览', 'height=400,width=540']) if resource.has_image?
   end
 
-  def my_value_here(keyword_page)
+  def my_value
     if logged_in?
-      "我的生命值：<cite>#{current_user.field_value(keyword_page)}</cite>"
+      "我的生命值：<cite>#{current_user.value}</cite>"
     end
   end
   def link_to_page(keyword_page)
