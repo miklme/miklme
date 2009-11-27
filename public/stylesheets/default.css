@@ -15,7 +15,10 @@ strong {color :#fefefe;
     display:inline;
     margin-left:10px
 }
-
+#hp{
+    font-size:25px;
+    color:white
+}
 cite{
     font-style: normal;
     font-size:13px;

@@ -25,7 +25,7 @@
         <div id="sw_aside">
           <div id="sc_expPane">
             <div class="sw_menu" id="sw_rel">
-              <span><%= my_value %></span>
+              <div><%= my_value %></div>
               <div id="recent">
                 <%=render :partial => "recent_keyword_pages" %>
               </div>
@@ -51,9 +51,9 @@
                   <dd id="second" style="display:none">
                     <p> 在上方的传送门中可以方便的进入某一世界，并且传送时还会自动提示进入相似的世界。</p>
                     <p>
-                      进入一个世界后，你会看到各种世界观。每当你进入一个新的世界，你就拥有了一个新的转世和生命，因此在不同的世界中，你拥有不同的生命值。
+                      进入一个世界后，你会看到各种气泡状的“世界观”。
                     </p>
-                    <p><cite>生命值</cite>在<strong>1)邀请朋友关注你</strong>时，或<strong>2)你和别人互相回应</strong>时发生改变。邀请朋友关注你时，你在<strong>某世界内</strong>（取决于你把哪个世界的邀请发送给朋友）的生命值＋1，而回应别人时，这一世界内<strong>双方</strong>的生命值都可能改变——取决于你的选择：                  <%=radio_button_tag :rating,1 %>
+                    <p><cite>生命值</cite>在<strong>1)邀请朋友关注你</strong>时，或<strong>2)你和别人互相回应</strong>时发生改变。邀请朋友关注你时，你的生命值＋1，而回应别人时，<strong>双方</strong>的生命值都可能改变——取决于你的选择：                  <%=radio_button_tag :rating,1 %>
                       <cite>支持
                       </cite>
                       <%=radio_button_tag :rating,0%>

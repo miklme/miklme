@@ -1,19 +1,17 @@
 <div id="sw_aside">
   <div id="sc_expPane">
     <div class="sw_menu" id="sw_rel">
-      <dl>
-        <dt>
-          当前世界
-        </dt>
-        <dd>
-          <span id="current_page"><%=h @keyword_page.keyword %></span>
-        </dd>
-      </dl>
+      <div><%= my_value %></div>
+      <% if logged_in? %>
+        <div>
+          我在<span id="current_page"><%=h @keyword_page.keyword %></span>中的排名：
+        <%= order(current_user,@keyword_page) %></div>
+      <% end %>
       <h2>相关世界</h2>
       <!--暂时取消用户自定义的相关世界
       <% if logged_in? and current_user.controlled_keywords.include?(@keyword_page.keyword).present? %>
-              <span><%=link_to "修改",keyword_page_related_keywords_path(@keyword_page),:popup => ['修改推广世界', 'height=500,width=450'] %>
-              </span>
+                <span><%=link_to "修改",keyword_page_related_keywords_path(@keyword_page),:popup => ['修改推广世界', 'height=500,width=450'] %>
+                </span>
       <% end %>
       -->
       <ul>

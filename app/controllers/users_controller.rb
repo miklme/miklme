@@ -11,7 +11,6 @@ class UsersController < ApplicationController
     session[:user_id]=nil
     @user=User.new
     session[:inviter_id]=params[:inviter_id]
-    session[:value_order_id]=params[:value_order_id]
     render :action => :new
   end
   
@@ -36,16 +35,14 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if  @user.update_attributes(params[:user])
-      if session[:inviter_id].present? and @user.last_ip!=User.find(session[:inviter_id]).last_ip
+      if session[:inviter_id].present?   and @user.last_ip!=User.find(session[:inviter_id]).last_ip
         b=BeFollow.new
         b.user=User.find(session[:inviter_id])
         b.follower=current_user
-        v=ValueOrder.find(session[:value_order_id])
-        v.value+=1.0
-        v.save
-        b.save
+        b.user.value+=1
+        b.user.save
         flash[:notice]="你关注了#{User.find(session[:inviter_id]).name_or_nick_name(current_user)}"
-        session[:relationship]=session[:inviter_id]=session[:value_order_id]=nil
+        session[:relationship]=session[:inviter_id]=nil
       end
       flash[:notice]="你终于注册成功了。在开始之前，建议你先仔细看下说明"
       redirect_to keyword_pages_path

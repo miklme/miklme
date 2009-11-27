@@ -33,10 +33,10 @@
             <% end %>
             <% if logged_in? and @keyword_page.users.include?(current_user) %>
               <div class="item_blue">
-                每邀请1个朋友关注你，你在<span id="keyword_page">这个世界</span>的<cite>生命值</cite>会提高1点。要不要邀请呢？
+                每邀请1个朋友关注你，你<cite>生命值</cite>会提高1点。要不要邀请呢？
                 <ul>
                   <li>
-                    <p>我终于发现了一个独特的应用，你应该对此感到好奇。注册在这里，注册后你就自动关注我了：<%= "http://mikl.me/users/new/#{current_user.id}/#{ValueOrder.find_by_user_id_and_keyword_page_id(current_user.id,@keyword_page.id).id}" %></p>
+                    <p>我终于发现了一个独特的应用，你应该对此感到好奇。注册在这里，注册后你就自动关注我了：<%= "http://mikl.me/users/new/#{current_user.id}/" %></p>
                   </li>
                 </ul>
               </div>
