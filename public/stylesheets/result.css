@@ -288,6 +288,10 @@ td.origin {
     color:#000000;
     text-align:left;
     word-wrap:break-word;}
+td.origin textarea{
+    color:#666666;
+    font-size:14px;
+}
 .tip_i {
     color:#AFAFAF;
     font-size:12px;
