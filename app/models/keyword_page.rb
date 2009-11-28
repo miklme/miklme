@@ -27,18 +27,7 @@ class KeywordPage < ActiveRecord::Base
       :conditions => [ "value_orders.user_id = ?", user_id ]
     } }
   named_scope :hots,:limit => 10,:order => "users.size DESC"
-
  
-  def good_resource
-    active_members=User.find(:all,:conditions => "value>0")
-    authors=self.users_have_resources
-    users=(active_members&authors)
-    recent_resources=users.map do |u|
-      u.resources.find(:all,:order => "resources.created_at DESC",:conditions => {:keyword_page_id => self.id})
-    end
-    results=recent_resources.flatten.sort_by { |r| r.created_at }.reverse.first
-  end
-
   def users_have_resources
     ids=self.resources.map do |r|
       r.user_id
@@ -51,8 +40,8 @@ class KeywordPage < ActiveRecord::Base
     a=self.find(:all,:order => "created_at DESC",:limit => 10)
   end
 
-  def self.active_user_keyword_pages
-    keyword_pages=self.find(:all,:limit => 5,:include => :resources,:conditions => "resources.keyword_page_id is not NULL",:order => "keyword_pages.updated_at DESC")
+  def self.active_user_keyword_pages(offset)
+    keyword_pages=self.find(:all,:limit => 5,:offset => offset,:include => :resources,:conditions => "resources.keyword_page_id is not NULL",:order => "keyword_pages.updated_at DESC")
   end
 
   def self.girls_pages

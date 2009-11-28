@@ -31,18 +31,22 @@ class Resource < ActiveRecord::Base
   has_many :good_commenters,:through => :comments,:source => :owner,:conditions => "rating>0 and parent_comment_id is NULL"
   has_many :bad_commenters,:through => :comments,:source => :owner,:conditions => "rating<0 and parent_comment_id is NULL"
 
+
+  default_scope :order => "resources.created_at DESC"
+  named_scope :in_one_day,:conditions => ["resources.created_at > ?",Time.now.yesterday]
+  named_scope :recent,:limit => 15,:order => "resources.created_at DESC"
   named_scope :resources_at_keyword_page , lambda { |keyword_page|
     {:order => "created_at DESC", :conditions => {:keyword_page_id => keyword_page.id} }
   }
   named_scope :resources_by_value,:include => :owner,:order => "users.value DESC"
+  named_scope :good_resource,:include => :owner,:conditions => "users.value>0",:order => "resources.created_at DESC",:limit => 1
+
   validates_presence_of :content
   validates_length_of :content,:maximum => 280
   belongs_to :keyword_page
   has_many :news,:dependent => :destroy
   belongs_to :owner,:class_name => 'User',:foreign_key =>"user_id"
-  default_scope :order => "created_at DESC"
-  named_scope :in_one_day,:conditions => ["resources.created_at > ?",Time.now.yesterday]
-  named_scope :recent,:limit => 15,:order => "resources.created_at DESC"
+  
 
   def created_at_s
     created_at.advance(:hours => 8).to_s(:db)

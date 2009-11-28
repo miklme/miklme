@@ -4,7 +4,7 @@ class KeywordPagesController < ApplicationController
   def index
     @user=current_user
     @news=News.list_self_news(@user) if logged_in?
-    @many_user_keyword_pages=KeywordPage.active_user_keyword_pages
+    @many_user_keyword_pages=KeywordPage.active_user_keyword_pages(0)
     render :layout => "related_keywords"
   end
 
@@ -67,7 +67,7 @@ class KeywordPagesController < ApplicationController
     else
       flash[:keyword_page_offset]+=5
     end
-    @keyword_pages=KeywordPage.active_user_keyword_pages[(flash[:keyword_page_offset])..(flash[:keyword_page_offset]+4)]
+    @keyword_pages=KeywordPage.active_user_keyword_pages(flash[:keyword_page_offset])
     render :update do |page|
       page.insert_html :before,"more_pages",:partial => "keyword_page_index",:collection => @keyword_pages
     end
