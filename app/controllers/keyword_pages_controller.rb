@@ -4,8 +4,7 @@ class KeywordPagesController < ApplicationController
   def index
     @user=current_user
     @news=News.list_self_news(@user) if logged_in?
-    @recent_keyword_pages=KeywordPage.recent_keyword_pages
-    @many_user_keyword_pages=KeywordPage.active_user_keyword_pages.first(5)
+    @many_user_keyword_pages=KeywordPage.active_user_keyword_pages
     render :layout => "related_keywords"
   end
 

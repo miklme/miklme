@@ -52,7 +52,7 @@ class KeywordPage < ActiveRecord::Base
   end
 
   def self.active_user_keyword_pages
-    keyword_pages=self.find(:all,:include => :resources,:conditions => "resources.keyword_page_id is not NULL",:order => "keyword_pages.updated_at DESC")
+    keyword_pages=self.find(:all,:limit => 5,:include => :resources,:conditions => "resources.keyword_page_id is not NULL",:order => "keyword_pages.updated_at DESC")
   end
 
   def self.girls_pages
