@@ -3,7 +3,15 @@
       <tr>
         <td width="40" height="30" class="lt"/><td height="30" class="ct"/><td width="40" height="30" class="rt"/></tr>
       <tr><td width="40" valign="top" class="lm"></td><td valign="top" class="origin"> <span class="tip_i"><%=distance_of_time_in_words(Time.now, resource_right.created_at, true)%></span>
-        <%= variable_content(resource_right)%>
+          <%= variable_content(resource_right)%>
+          <% if resource_right.owner==current_user %>
+            <%= in_place_editor "resource_content_#{resource_right.id}",{
+              :url => url_for(:controller => :resources,:action => "set_resource_content", :id => resource_right.id),
+              :rows => 4,:cancel_text => "取消",:save_text => "就这样",:loading_text => "请稍等...",
+              :saving_text => "保存中...",
+              :click_to_edit_text => "点击就可以编辑！"
+            } %>
+          <% end %>
           <p>
             <%= link_to_origin(resource_right) %>
           </p>

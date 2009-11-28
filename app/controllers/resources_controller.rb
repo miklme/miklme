@@ -1,4 +1,5 @@
 class ResourcesController < ApplicationController
+  in_place_edit_for :resource,:content
   skip_before_filter :login_required,:except => [:new,:create]
   caches_page :preview,:origin
   def new
@@ -35,4 +36,5 @@ class ResourcesController < ApplicationController
     end
   end
 
+  
 end

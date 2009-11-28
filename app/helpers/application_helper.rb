@@ -65,7 +65,7 @@ module ApplicationHelper
     user_order=users.index(resource.owner).to_i+1
     #计算字体大小的公式
     v=(1-(user_order-1).to_f/(users.size-1).to_f)*10+8
-    "<span style='font-size:#{v}px'>"+\
+    "<span style='font-size:#{v}px' id='resource_content_#{resource.id}'>"+\
       auto_link(resource.content)+\
       "</span>"
   end
