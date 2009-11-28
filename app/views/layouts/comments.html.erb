@@ -23,11 +23,10 @@
     </div>
     <div id="sw_content">
         <div id="sw_aside">
-          <div id="sc_expPane">
             <div class="sw_menu" id="sw_rel">
-              <span><%= link_to "<<返回关键字",keyword_page_path(@resource.keyword_page) %></span>
+              <div><%= my_value %></div>
+              <div class="side"><%= link_to "<<返回关键字",keyword_page_path(@resource.keyword_page) %></div>
             </div>
-          </div>
         </div>
         <div id="content">
             <%   if flash[:notice].present?%>  <p class="notice"><%=flash[:notice] %></p>  <% end %>
