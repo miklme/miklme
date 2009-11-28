@@ -27,6 +27,16 @@ li:hover .reply_link,.right_bubble:hover .reply_link {
     display:inline;
     float:right;
 }
+.say{
+    padding-left:12px;
+    padding-top:6px;
+    vertical-align: text-top;
+    border-left:none;
+    border-right:none;
+    border-width:1px;
+    border-top:2px dashed pink;
+    color:#F76120;
+}
 .order_profile{
     float:right;
     margin-top:20px;
