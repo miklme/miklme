@@ -20,8 +20,8 @@ class KeywordPage < ActiveRecord::Base
   has_many :value_orders
   has_many :users,:through => :value_orders,:source => :user
   has_one :top_user,:through => :value_orders,:source => :user,:order => "users.value DESC"
-  validates_uniqueness_of :keyword,:message => "这个世界已经存在了"
-  validates_presence_of :keyword,:message => "世界名不能为空"
+  validates_uniqueness_of :keyword,:message => "这个关键字已经存在了"
+  validates_presence_of :keyword,:message => "关键字名不能为空"
   named_scope :user_fields, lambda { |user_id| {
       :include => :value_orders,
       :conditions => [ "value_orders.user_id = ?", user_id ]
@@ -29,14 +29,14 @@ class KeywordPage < ActiveRecord::Base
   named_scope :hots,:limit => 10,:order => "users.size DESC"
 
  
-  def good_resources
+  def good_resource
     active_members=User.find(:all,:conditions => "value>0")
     authors=self.users_have_resources
     users=(active_members&authors)
     recent_resources=users.map do |u|
       u.resources.find(:all,:order => "resources.created_at DESC",:conditions => {:keyword_page_id => self.id})
     end
-    results=recent_resources.flatten.sort_by { |r| r.created_at }.reverse.first(3)
+    results=recent_resources.flatten.sort_by { |r| r.created_at }.reverse.first
   end
 
   def users_have_resources

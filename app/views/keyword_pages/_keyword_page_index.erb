@@ -1,12 +1,10 @@
 <h2 class="item_orange">
-  世界：<span id="keyword_page"><%= link_to_page(keyword_page_index) %> · · · · · ·</span>
+  关键字：<span id="keyword_page"><%= link_to_page(keyword_page_index) %> · · · · · ·</span>
 </h2>
 <ul class="sb_results" id="wg0">
-  <% for resource in keyword_page_index.good_resources %>
   <li>
-    <span class="left"><%= render :partial => "shared/field_profile",:locals => {:user => resource.owner,:keyword_page => resource.keyword_page}%>
+    <span class="left"><%= render :partial => "shared/field_profile",:locals => {:user => keyword_page_index.good_resource.owner,:keyword_page => keyword_page_index.good_resource.keyword_page}%>
     </span>
-    <%= render "resources/resource_left",:object => resource %>
+    <%= render "resources/resource_left",:object => keyword_page_index.good_resource %>
   </li>
-  <% end %>
 </ul>

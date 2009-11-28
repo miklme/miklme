@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-    <meta content="Mikl,Michael,Mikl.me,Michael网络,世界,生命值,在线生命值" name="keywords"/>
+    <meta content="Mikl,Michael,Mikl.me,Michael网络,关键字,生命值,在线生命值" name="keywords"/>
     <title>( Michael )</title>
     <%= javascript_include_tag :defaults,:cache => true  %>
     <%= stylesheet_link_tag "result"  %>
@@ -26,9 +26,12 @@
           <div id="sc_expPane">
             <div class="sw_menu" id="sw_rel">
               <div><%= my_value %></div>
-              <div id="recent">
-                <%=render :partial => "recent_keyword_pages" %>
-              </div>
+              <% if logged_in? %>
+                <h2>
+                  最近回应我的
+                </h2>
+                <%= render :partial => "news/keyword_page_news",:collection => @news %>
+              <% end %>
             </div>
           </div>
         </div>
@@ -39,62 +42,39 @@
           <div id="welcome">
             <%= render :partial => "shared/search_bar" %>
             <h2 class="title_1">最真实的游戏——<span class="tiantang">天堂</span>与<span class="diyu">地狱</span></h2>
-            <dl>
-              <dt>开始体验之前，<%= link_to_remote "阅读一些有益且必要的说明",:url => {:action => :toggle_blind,:id => "first"} %>，或者忽略介绍并毫无目的地体验、离开，由你选择</dt>
-              <dd id="first" style="display:none">
-                <p>这里有各种各样<span class="title_2">世界</span>。
-                  在某一个世界内人们可以发表对于这个世界的观点，简称世界观。你的任务是<strong>维护各个世界的稳定与和谐</strong>——帮助拥有正确世界观的人们升入天堂，错误世界观的人们进入地狱。<span class="title_3">生命值</span>越高就越接近天堂，反之就越接近地狱。
-                </p>
-                <dl>
-                  <dt>浅尝辄止，或者<%= link_to_remote "了解更多",:url => {:action => :toggle_blind,:id => "second"} %>，由你选择。
-                  </dt>
-                  <dd id="second" style="display:none">
-                    <p> 在上方的传送门中可以方便的进入某一世界，并且传送时还会自动提示进入相似的世界。</p>
-                    <p>
-                      进入一个世界后，你会看到各种气泡状的“世界观”。
-                    </p>
-                    <p><cite>生命值</cite>在<strong>1)邀请朋友关注你</strong>时，或<strong>2)你和别人互相回应</strong>时发生改变。邀请朋友关注你时，你的生命值＋1，而回应别人时，<strong>双方</strong>的生命值都可能改变——取决于你的选择：                  <%=radio_button_tag :rating,1 %>
-                      <cite>支持
-                      </cite>
-                      <%=radio_button_tag :rating,0%>
-                      不作为
-                      <%=radio_button_tag :rating,-1%>
-                      <strong>攻击
-                      </strong>
-                    </p>
-                    <div>
-                      这里有几种情况：
-                      <ul>
-                        <li>当你比对方生命值高，<cite>支持</cite>他，他的生命值会提高；<strong>攻击</strong>他，他的生命值会降低；</li>
-                        <li>当你比对方生命值低，<cite>支持</cite>他，你的生命值会提高；<strong>攻击</strong>他，你的生命值会降低。</li>
-                        <li>当你和对方的生命值相同时，无论如何回应，双方的生命值都不会改变。</li>
-                      </ul>
-                    </div>
-
-                    <h3>开始体验，或者离开，由你选择。</h3>
-                  </dd>
-                </dl>
-              </dd>
-            </dl>
             <div class="item_blue">
-              <h2>我们来这样开始：</h2>
+              <h2>说明：</h2>
               <ol>
                 <li>
-                  在一个世界
-                  （譬如<%= link_to "互联网",keyword_page_path(KeywordPage.find_by_keyword("互联网")) %>）内，发表你的世界观；
-                  由于你的<cite>生命值</cite>为0，你就快要下地狱了～；
+                  <p>这里有各种各样<span class="title_2">关键字</span>(关键字一律用<span id="keyword_page">橙色</span>表示)。
+                    在某一个关键字内人们可以发表和这个关键字有关的，气泡状的言论。你的任务是<strong>维护你感兴趣关键字内言论的稳定与和谐</strong>——帮助拥有正确言论的人们升入天堂，错误言论的人们进入地狱。一个人的<span class="title_3">生命值</span>(一律用<cite>绿色</cite>表示)越高就越接近天堂，反之就越接近地狱。
+                    “天堂”“地狱”是针对关键字而言，每个关键字内都有一个“天堂”和“地狱”。
+                  </p>
                 </li>
                 <li>
-                  以<%= link_to "互联网",keyword_page_path(KeywordPage.find_by_keyword("互联网")) %>
-                  世界为例，在这个世界内，回应一个叫做 <%= link_to "Michael",user_path(User.find(1)) %>的人的某个世界观，并选择你对他的世界观的态度；
-                </li>
-                <li>
-                  看看现在你是接近天堂了呢还是接近地狱。
+                  <p>你怎样才能使某人的生命值降低或提高呢？我们先来了解一下互相回应时人们的生命值如何变化。回应别人时（包括直接回应气泡状的发言，以及回应回应气泡状发言的发言），<strong>双方（你和你回应的言论的发表者）</strong>的生命值都可能改变——取决于你的选择：                  <%=radio_button_tag :rating,1 %>
+                    <cite>支持
+                    </cite>
+                    <%=radio_button_tag :rating,0%>
+                    不表态
+                    <%=radio_button_tag :rating,-1%>
+                    <strong>攻击
+                    </strong>
+                  </p>
+                  <div>
+                    这里仅有这几种情况：
+                    <ul>
+                      <li>当你比对方生命值高，<cite>支持</cite>他，他的生命值会提高；<strong>攻击</strong>他，他的生命值会降低；</li>
+                      <li>当你比对方生命值低，<cite>支持</cite>他，你的生命值会提高；<strong>攻击</strong>他，你的生命值会降低。</li>
+                      <li>当你和对方的生命值相同时，无论如何回应，双方的生命值都不会改变。</li>
+                    </ul>
+                  </div>
+                  <p>除了互相回应以外，每多一个人关注自己，自己的生命值也会提高<cite>1点</cite>。想要详细了解<cite>生命值</cite>如何计算，请在上方输入“生命值算法”并点击“进入关键字”。</p>
                 </li>
               </ol>
             </div>
           </div>
-          <div class="tab"><span class="blue_tab"><%= link_to_unless_current "所有世界",keyword_pages_path %></span>
+          <div class="tab"><span class="blue_tab"><%= link_to_unless_current "近期热门关键字",keyword_pages_path %></span>
             <% if logged_in? %>
               <span class="blue_tab"><%= link_to_unless_current "好友的动作" ,friends_keyword_pages_path%></span>
             <% end %>

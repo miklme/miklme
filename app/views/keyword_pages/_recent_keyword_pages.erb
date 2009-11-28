@@ -1,8 +1,0 @@
-<h2>最新诞生的世界</h2>
-<ul>
-  <% for k in @recent_keyword_pages %>
-    <li id="keyword_page">
-      <%=link_to k.keyword,keyword_page_path(k) %>
-    </li>
-  <% end %>
-</ul>

@@ -3,6 +3,7 @@ class KeywordPagesController < ApplicationController
   skip_before_filter :check_profile_status
   def index
     @user=current_user
+    @news=News.list_self_news(@user) if logged_in?
     @recent_keyword_pages=KeywordPage.recent_keyword_pages
     @many_user_keyword_pages=KeywordPage.active_user_keyword_pages.first(5)
     render :layout => "related_keywords"
@@ -43,7 +44,7 @@ class KeywordPagesController < ApplicationController
     session[:page]=params[:page]
     keyword_pages=KeywordPage.find_with_ferret(@keyword_page.keyword+"~")-@keyword_page.to_a
     @searched_keywords=keyword_pages.find_all{|k| k.resources.size>=1}.first(8)
-    #未使用用户自定义编辑世界功能
+    #未使用用户自定义编辑关键字功能
     @related_keywords=@keyword_page.related_keywords
   end
 
