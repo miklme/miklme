@@ -1,10 +1,14 @@
-<h2 class="item_orange">
-  关键字：<span id="keyword_page"><%= link_to_page(keyword_page_index) %> · · · · · ·</span>
-</h2>
-<ul class="sb_results" id="wg0">
-  <li>
-    <span class="left"><%= render :partial => "shared/field_profile",:locals => {:user => keyword_page_index.good_resource.owner,:keyword_page => keyword_page_index.good_resource.keyword_page}%>
-    </span>
-    <%= render "resources/resource_left",:object => keyword_page_index.good_resource %>
-  </li>
-</ul>
+
+<% r=keyword_page_index.good_resource %>
+<% if r.present? %>
+  <h2 class="item_orange">
+    关键字：<span id="keyword_page"><%= link_to_page(keyword_page_index) %> · · · · · ·</span>
+  </h2>
+  <ul class="sb_results" id="wg0">
+    <li>
+      <span class="left"><%= render :partial => "shared/field_profile",:locals => {:user => keyword_page_index.good_resource.owner,:keyword_page => keyword_page_index.good_resource.keyword_page}%>
+      </span>
+      <%= render "resources/resource_left",:object => keyword_page_index.good_resource %>
+    </li>
+  </ul>
+<% end %>
