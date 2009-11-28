@@ -15,6 +15,7 @@ body {
     margin:0;
     min-width:980px;
     padding:0;
+    color:#333333
 }
 a {
     color:#336699;
@@ -97,7 +98,7 @@ h1, h2, h3, h4, h5, h6 {
     color:#666666;
 }
 #welcome h3,#welcome dt{
-    color:black;
+    color:#333333;
     line-height:162%;
 }
 input{
@@ -285,7 +286,7 @@ td.lm {
     background-image:url(../images/td_04.gif);}
 td.origin {
     background-image:url(../images/td_05.gif);
-    color:#000000;
+    color:#333333;
     text-align:left;
     word-wrap:break-word;}
 td.origin textarea{
