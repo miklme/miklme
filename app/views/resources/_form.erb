@@ -2,29 +2,28 @@
   <% if logged_in? %>
     <% form_for [@keyword_page,@resource],:html => { :multipart => true } do |f|%>
       <strong><%= f.error_messages %></strong>
-      <div class="box_2">
-        <%= f.text_area :content,:cols => 55,:rows => 5,:id => "publish_editor" %>
-      </div>
+      <table cellspacing="0" cellpadding="0" border="0" ><tbody>
+          <tr>
+            <td width="40" height="30" class="lt"/><td height="30" class="ct"/><td width="40" height="30" class="rt"/></tr>
+          <tr><td width="40" valign="top" class="lm"><%= image_tag "td_arrow.gif"%></td><td valign="top" class="origin">
+              <div class="box_2">
+                <%= f.text_area :content,:cols => 55,:rows => 5,:id => "publish_editor" %>
+              </div>
+
+            </td><td width="40" class="rm"/></tr>
+          <tr><td width="40" height="20" class="lb"/><td height="20" class="cb"/><td width="40" height="20" class="rb"/></tr></tbody></table>
+
       <div class="box_3">
         <div class="right"><%= f.submit("",:id => "publisher_submit",:class => "btn") %></div>
-       <span class="left">
-         <%= image_tag "picture.png" %> 
+        <span class="left">
+          <%= image_tag "picture.png" %>
           <%= f.file_field :image_file,:size => 8%>
         </span>
         <span id="to_here">◄<span class="grey">只能写到这里~</span></span>
         <%= f.hidden_field :image_file_temp %>
 
-
         <p class="left"><%= embedded_image_tag(@resource.operate { |img| img.shadow }) if @resource.has_image? %>
         </p>
-      </div>
-      <div>
-        <!--
-        靠，先不用这个了
-        <li>
-    <%#= fckeditor_textarea(:resource,:content,:toolbarSet => "Easy",:width => '85%',:height => '150px') %>
-        </li>
-        -->
       </div>
     <% end %>
   <% end %>

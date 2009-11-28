@@ -853,8 +853,6 @@ dd{
 }
 
 .box_2 {
-    margin-top:5px;
-    padding-left:40px;
     text-align:left;
 }
 .box_3 {
@@ -864,9 +862,9 @@ dd{
     padding-right:100px}
 
 #to_here{
-    bottom:20px;
     position:relative;
-    left:-17em;
+    bottom:3em;
+    left:-13em;
 }
 #resource_image_file{
     vertical-align:top
@@ -894,11 +892,10 @@ dd{
     overflow-x:hidden;
     overflow-y:auto;
     padding:0;
-    width:560px;
-    border-top:1px dashed #CCCCCC;
-    border-bottom:1px dashed #CCCCCC;
-    border-left:none;
-    border-right:none
+    border-top:2px groove #aaaaaa;
+    border-left:2px groove #aaaaaa;
+    border-right:1px solid #eeeeee;
+    border-bottom:1px solid #eeeeee;
 }
 
 .box_3 .btn {
