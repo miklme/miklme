@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
   end
   def check_profile_status
     if logged_in?
-      if current_user.nick_name.blank?
+      if current_user.nick_name.blank? or current_user.city.blank?
         redirect_to edit_user_path(current_user)
         flash[:notice]="完善你的个人资料，否则你什么都干不了"
       end
