@@ -43,7 +43,7 @@ class UsersController < ApplicationController
         flash[:notice]="你关注了#{User.find(session[:inviter_id]).name_or_nick_name(current_user)}"
         session[:relationship]=session[:inviter_id]=nil
       end
-      flash[:notice]="你终于注册成功了。在开始之前，建议你先仔细看下说明"
+      flash[:notice]="你终于注册成功了。在开始之前，请按照说明一步步来。"
       redirect_to keyword_pages_path
     else
       render :action => "edit"

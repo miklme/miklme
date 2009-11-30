@@ -1,32 +1,30 @@
 <div id="sw_aside">
-    <div class="sw_menu" id="sw_rel">
-      <div><%= my_value %></div>
-      <% if logged_in? %>
-        <div>
-          我在<span id="current_page"><%=h @keyword_page.keyword %></span>中的排名：
-        <%= order(current_user,@keyword_page) %></div>
-      <% end %>
-      <h2>相关关键字</h2>
-      <!--暂时取消用户自定义的相关关键字
-      <% if logged_in? and current_user.controlled_keywords.include?(@keyword_page.keyword).present? %>
+  <div class="sw_menu" id="sw_rel">
+    <h2>相关关键字</h2>
+    <!--暂时取消用户自定义的相关关键字
+    <% if logged_in? and current_user.controlled_keywords.include?(@keyword_page.keyword).present? %>
                 <span><%=link_to "修改",keyword_page_related_keywords_path(@keyword_page),:popup => ['修改推广关键字', 'height=500,width=450'] %>
                 </span>
-      <% end %>
-      -->
-      <ul>
-        <% if not @searched_keywords.blank? %>
-          <% for keyword in @searched_keywords %>
-            <li id="keyword_page">
-              <span><%= link_to keyword.keyword,keyword_page_path(keyword)%></span>
-            </li>
-          <% end %>
+    <% end %>
+    -->
+    <ul>
+      <% if not @searched_keywords.blank? %>
+        <% for keyword in @searched_keywords %>
+          <li id="keyword_page">
+            <span><%= link_to keyword.keyword,keyword_page_path(keyword)%></span>
+          </li>
         <% end %>
-      </ul>
-      <% if logged_in? %>
-        <h2>
-          最近回应我的
-        </h2>
-        <%= render :partial => "news/keyword_page_news",:collection => @news %>
       <% end %>
-    </div>
+    </ul>
+    <% if logged_in? %>
+    <div><%= my_value %></div>
+      <div>
+        我在<span id="current_page"><%=h @keyword_page.keyword %></span>中的排名：
+      <%= order(current_user,@keyword_page) %></div>
+      <h2>
+        最近回应我的
+      </h2>
+      <%= render :partial => "news/keyword_page_news",:collection => @news %>
+    <% end %>
+  </div>
 </div>

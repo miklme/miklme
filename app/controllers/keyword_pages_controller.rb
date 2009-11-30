@@ -4,15 +4,12 @@ class KeywordPagesController < ApplicationController
   def index
     @user=current_user
     @news=News.list_self_news(@user) if logged_in?
-    @many_user_keyword_pages=KeywordPage.active_user_keyword_pages(0)
+    @many_user_keyword_pages=KeywordPage.find(:all).find_all{|page| page.users_have_resources.size>=3}.sort_by{|page| page.updated_at}.reverse.first(15)
+    @friends_news=News.list_friends_news(@user) if logged_in?
     render :layout => "related_keywords"
   end
 
   def friends
-    @user=current_user
-    @recent_keyword_pages=KeywordPage.recent_keyword_pages
-    @friends_news=News.list_friends_news(@user)
-    render :layout => "related_keywords"
   end
   
   def create

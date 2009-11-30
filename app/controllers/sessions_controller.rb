@@ -27,7 +27,7 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_id]=nil
-    flash[:notice] = "成功离开Michael"
+  flash[:notice] = "成功离开Michael"
     redirect_to keyword_pages_path
 end
 

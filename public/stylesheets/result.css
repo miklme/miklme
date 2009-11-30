@@ -11,7 +11,7 @@ body {
     font-style:normal;
     font-variant:normal;
     font-weight:normal;
-    line-height:normal;
+    line-height:normal;h
     margin:0;
     min-width:980px;
     padding:0;
@@ -76,8 +76,6 @@ a:active{
 }
 h1, h2, h3, h4, h5, h6 {
     color:#666666;
-    font-size:small;
-    font-weight:200;
     margin:0;
     padding:0;
 }
@@ -101,16 +99,24 @@ h1, h2, h3, h4, h5, h6 {
     color:#333333;
     line-height:162%;
 }
-input{
-    background:#FFFFFF none repeat scroll 0 0;
-    border:2px solid #DDDDDD;
-    padding:2px;
+
+.register{
+    background:#FFF6EE none repeat scroll 0 0;
+    border-color:pink -moz-use-text-color;
+    border-style:dotted none dashed;
+    border-width:3px 1px 2px;
+    color:#F76120;
+    float:right;
+    margin:1em;
+    padding:15px;
+    text-align:center;
+    width:200px;
 }
-input:hover{
-    border-color:#BBBBBB;
-}
-input:focus{
-    border-color:#007934;
+#register{
+    margin:20px;
+    padding:10px 20px;
+    font-weight:bold
+
 }
 h1 a {
     color:#FF6600;
@@ -309,7 +315,7 @@ td.rb {
     padding: 6px 12px;
     background:#F3FAFF;
     position:relative;
-    top: 16px;
+    top: 6px;
     border-top: 1px solid #f7fcff;
     border-left: 3px solid #f7fcff;
     border-right: 3px solid #f7fcff;
@@ -318,6 +324,8 @@ td.rb {
 .blue_tab a{
     font-weight:normal
 }
+.discuss span{
+    margin-left:10px}
 .item_pink {
     border: 5px solid #fdf8f8;
     vertical-align: text-top;
@@ -339,10 +347,14 @@ td.rb {
 .error{
     color:#CC0033;
     padding: 6px 12px;
-    margin: 8px;
+    background:#FFF6EE;
     vertical-align: text-top;
-    background:#F3FAFF;
-    border: 3px solid #f5fef2;
+    margin-bottom:8px;
+    border-left:none;
+    border-right:none;
+    border-top:1px solid #F76120;
+    border-bottom:1px solid #F76120;
+    margin:5px
 }
 .sw_menu {
     -moz-background-clip:border;
@@ -646,9 +658,16 @@ a.sw_logo {
     width:600px;
 }
 #content p{
-    line-height:162%
+    line-height:162%;
 }
-
+.interview p{
+    margin-top:0.2em;
+    margin-bottom:1.2em;
+}
+.interview{
+    padding-left:50px;
+    padding-right:50px;
+}
 #sidebar {
     float:left;
     margin:0 -264px 0 19px;
@@ -813,11 +832,6 @@ div.auto_complete ul strong.highlight {
     color:#FFFFFF;
 }
 
-.side{
-    font-size:12px;
-    line-height: 18px;
-    margin-bottom:9px
-}
 .amount{
     color:#FF9966
 }
@@ -844,15 +858,26 @@ div.auto_complete ul strong.highlight {
     color:#006600;
     font-weight:bold
 }
-.keyword_page_news {
-    color:#727272
+.keyword_page_news a {
+    font-size:12px;
+    color:#888888
 }
-.keyword_page_news:hover{
+.keyword_page_news{
+        line-height: 18px;
+margin-bottom:5px
+}
+.keyword_page_news a:hover{
     color:black;
     background:none
-
 }
-
+.friend_news a{
+    font-size:12px;
+    color:#888888
+}
+.friend_news a:hover{
+    background:none;
+    color:black
+}
 #sw_hdr{
     background-repeat: repeat-y;
 }

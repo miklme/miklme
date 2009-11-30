@@ -19,7 +19,7 @@ module ApplicationHelper
 
   def my_value
     if logged_in?
-      "我的生命值：<span id='hp'>#{number_with_precision current_user.value}</span>"
+      "<h2>我的生命值：<span id='hp'>#{number_with_precision current_user.value}</span></h2>"
     end
   end
   def link_to_page(keyword_page)
@@ -79,4 +79,5 @@ module ApplicationHelper
       link_to(user.nick_name,user_path(user)) +\
       "</div>"
   end
+
 end

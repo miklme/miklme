@@ -15,83 +15,96 @@
         <div class="sw_tb">
           <% if logged_in? %>
             <%= render :partial => "shared/keyword_page_header",:object => current_user %>
-          <% else %>
-            <%= render :partial => "shared/keyword_page_header"%>
-          <% end %>
+          </div>
         </div>
-      </div>
-      <div id="sw_content">
+        <div id="sw_content">
 
-        <div id="sw_aside">
+          <div id="sw_aside">
             <div class="sw_menu" id="sw_rel">
               <div><%= my_value %></div>
-              <% if logged_in? %>
-                <h2>
-                  最近回应我的
-                </h2>
-                <%= render :partial => "news/keyword_page_news",:collection => @news %>
-              <% end %>
+              <h2>
+                最近回应我的
+              </h2>
+              <%= render :partial => "news/keyword_page_news",:collection => @news %>
             </div>
+          </div>
+          <div id="content">
+
+            <%   if flash[:notice].present?%>  <p class="notice"><%=flash[:notice] %></p>  <% end %>
+            <%   if flash[:error].present?%> <p class="error"> <%=flash[:error]  %></p> <% end %>
+            <div id="welcome">
+              <%= render :partial => "shared/search_bar" %>
+              <div class="item_blue">
+                <h2 class="title_1">最真实的游戏——<span class="tiantang">天堂</span>与<span class="diyu">地狱</span></h2>
+                <h4>保持耐心，我们这样开始</h4>
+                <ol>
+                  <li><p>
+                      如果你是初次来到mikl.me，或者刚刚注册成功，那么请直接在上面输入“mikl.me第一步”（不含引号）来开始。在今后的任何时候，你都可以输入“mikl.me第一步”这个关键字来进入
+                      mikl.me的教程。要知道，“mikl.me第一步”本身就是一个关键字，不过里面的主要内容由开发者而非用户发布而已。进入后你看到景象的和进入其他的任何关键字差不多。
+                    </p>
+                  </li>
+                  <li>
+                    <p>在现在或者以后的任何时候，你都可以用下面的链接邀请朋友（可选）。邀请朋友之后，他会自动关注你。要知道，让别人关注你有时是很有用的招数。</p>
+                    <p class="item" >我发现了一个独特的应用，你应该对此感到好奇。注册在这里，注册后你就自动关注我了：<%= "http://mikl.me/users/new/#{current_user.id}/" %>
+                    </p>
+                  </li>
+                </ol>
+              </div>
+            </div>
+            <div class="tab">
+              <span class="blue_tab"><%= link_to_unless_current "好友的动作" ,keyword_pages_path%></span>
+              <p class="item_blue">
+              </p>
+            </div>
+            <ul class="sb_results" id="wg0">
+              <%= render :partial => "news/friends_news",:collection=> @friends_news%>
+            </ul>
+          <% else %>
+            <%= render :partial => "shared/keyword_page_header"%>
+          </div>
         </div>
-        <div id="content">
+        <div id="sw_content">
+
 
           <%   if flash[:notice].present?%>  <p class="notice"><%=flash[:notice] %></p>  <% end %>
           <%   if flash[:error].present?%> <p class="error"> <%=flash[:error]  %></p> <% end %>
           <div id="welcome">
             <%= render :partial => "shared/search_bar" %>
-            <h2 class="title_1">最真实的游戏——<span class="tiantang">天堂</span>与<span class="diyu">地狱</span></h2>
+
             <div class="item_blue">
-              <h2>说明：</h2>
-              <ol>
-                <li>
-                  <p>这里有各种各样<span class="title_2">关键字</span>(关键字一律用<span id="keyword_page">橙色</span>表示)。
-                    在某一个关键字内人们可以发表和这个关键字有关的，气泡状的言论。你的任务是<cite>维护你感兴趣关键字内言论的稳定与和谐</cite>——帮助拥有正确言论的人们升入天堂，错误言论的人们进入地狱。一个人的<span class="title_3">生命值</span>(一律用<cite>绿色</cite>表示)越高就越接近天堂，反之就越接近地狱。
-                    “天堂”“地狱”是针对关键字而言，每个关键字内都有一个“天堂”和“地狱”。
-                  </p>
-                </li>
-                <li>
-                  <p>你怎样才能使某人的生命值降低或提高呢？我们先来了解一下互相回应时人们的生命值如何变化。回应别人时（包括直接回应气泡状的发言，以及回应回应气泡状发言的发言），<cite>双方（你和你回应的言论的发表者）</cite>的生命值都可能改变——取决于你的选择：                  <%=radio_button_tag :rating,1 %>
-                    <cite>支持
-                    </cite>
-                    <%=radio_button_tag :rating,0%>
-                    不表态
-                    <%=radio_button_tag :rating,-1%>
-                    <strong>攻击
-                    </strong>
-                  </p>
-                  <p>
-                    可以按以下两种情况来理解生命值的变化情况：
-                  </p>
-                  <ul>
-                    <li>
-                      无论是哪一方回应对方，在选择<cite>支持</cite>时，生命值低者提高生命，提高的数值为二者生命值之差的绝对值的1/2，而生命值高者数值不变；
-                    </li>
-                    <li>
-                      无论是哪一方回应对方，在选择<strong>攻击</strong>时，生命值低者降低双方生命值之差的绝对值，生命值高者数值不变。
-                    </li>
-                  </ul>
-                  <p>想要更详细了解<cite>生命值</cite>如何计算，以及举例，请在上方输入“生命值算法”并点击“进入关键字”。</p>
-                </li>
-                <li>
-                  除互相回应以外，每多一个人关注自己，自己的生命值也会提高<cite>1点</cite>。
-                  <% if logged_in? %>
-                    要不要邀请朋友注册并关注自己呢？
-                    <p class="item" >我终于发现了一个独特的应用，你应该对此感到好奇。注册在这里，注册后你就自动关注我了：<%= "http://mikl.me/users/new/#{current_user.id}/" %>
-                    </p>
-                  <% end %>
-                </li>
-              </ol>
+              <h2 class="title_1">最真实的游戏——<span class="tiantang">天堂</span>与<span class="diyu">地狱</span></h2>
+              <h5>别再怀疑，Michael是真的游戏。</h5>
             </div>
           </div>
-          <div class="tab"><span class="blue_tab"><%= link_to_unless_current "近期热门关键字",keyword_pages_path %></span>
-            <% if logged_in? %>
-              <span class="blue_tab"><%= link_to_unless_current "好友的动作" ,friends_keyword_pages_path%></span>
-            <% end %>
-            <p class="item_blue">
+          <div class="interview">
+            <h3 class="register">
+              还没有Michael帐户？
+              <%= button_to "立刻注册!",new_user_path,:id => "register" %>
+            </h3>
+            <h3>比拼自我影响力的游戏</h3>
+            <p>
+              在Michael上，我们游戏的筹码是自己说话的影响力——你越厉害，任何所说的话就会引起越多人的关注，就会有越多人回应自己。想体验振臂一呼，应者云集的感觉吗？
             </p>
+            <h3>回应认识和不认识的人</h3>
+            <p>
+              你可以支持或者攻击别人，这将使他的影响力发生变化。当然前提是你足够强大。
+            </p>
+            <h3>关注自己感兴趣的人</h3>
+            <p>在Michael，你同样可以关注自己的朋友或感兴趣的人，这样你就不会错过他的一举一动，并随时了解他“影响力”的变化。</p>
+            <h3>
+              在感兴趣的关键字内发言
+            </h3>
+            <p>
+              在上面的输入框中可以进入自己感兴趣的关键字（请留心输入框的自动提示功能，这里的自动提示将比你见过的更加智能）。进入关键字之后，你就能够看到不同影响力的人们围绕这个关键字在说什么，同时你也可以发言，看看自己的影响力和别人相比怎样。
+            </p>
+
+
           </div>
-          <%= yield %>
-        </div></div></div>
+
+        <% end %>
+
+        <%= yield %>
+      </div></div>
     <%= render :partial => "shared/footer" %>
 
   </body>

@@ -4,8 +4,8 @@
 <span class="sb_meta">
 <%=distance_of_time_in_words(Time.now, keyword_page_news.created_at, true)%></span>
 <% if keyword_page_news.news_type=="be_comment" %>
-  <div class="side">
-    <%=link_to x,user_news_path(keyword_page_news.owner,keyword_page_news),:popup => true,:class => "keyword_page_news" %>
+  <div class="keyword_page_news">
+    <%=link_to x,user_news_path(keyword_page_news.owner,keyword_page_news),:popup => true %>
     <cite>
       <% if keyword_page_news.changed_value.present?  %>
         <%= "+" if keyword_page_news.changed_value>=0 %>
@@ -13,7 +13,7 @@
       <%= keyword_page_news.changed_value %></cite>
   </div>
 <% elsif keyword_page_news.news_type=="be_follow" %>
-  <div class="side">
+  <div class="keyword_page_news">
     <%=link_to keyword_page_news.follower.name_or_nick_name(current_user),user_news_path(keyword_page_news.owner,keyword_page_news) %>关注了我。
   </div>
 <% end %>
