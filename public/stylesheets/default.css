@@ -1,19 +1,19 @@
 body { margin:114px 0 0 0; line-height:16px; font-family: Arial,Helvetica,sans-serif;  background: url(../images/body_top_bckg.jpg) no-repeat center top #171c20; color:#bed7e6; font-size:13px;
 
 }
-a { color:#FFA615;
+a { color:white;
     font-weight: bold;
     text-decoration: none;
 }
 .title  {color:white;
-    font-weight: normal;
+         font-weight: normal;
 }
 strong {color :#fefefe;
         font-weight: normal;
 }
 #new_be_follow{
     display:inline;
-    margin-left:10px
+    margin-left:10pxcite
 }
 #hp{
     font-size:25px;
@@ -22,7 +22,6 @@ strong {color :#fefefe;
 cite{
     font-style: normal;
     font-size:13px;
-    display:block
 }
 em,em a{color:white;
         font-size:13px;
@@ -34,7 +33,7 @@ em,em a{color:white;
 .fieldWithErrors{
     display:inline
 }
-em a:hover{
+em a:hover,a:hover{
     background:#F26513;
     text-decoration:none
 
@@ -43,7 +42,6 @@ em a:hover{
     text-decoration:underline
 }
 a:hover {
-    text-decoration: underline;
 }
 #sidebar a {color:white;
             font-weight: bold;
@@ -62,7 +60,11 @@ a:hover {
 #content {width:780px; margin:0 auto;}
 #text { width:520px;line-height:22px }
 #text_wide {width:700px;line-height:22px}
-#text p { margin:7px 0 7px 0;
+#text p { margin-bottom:7px;
+    margin-top:0px
+}
+.dashed{
+    margin:7px 0 7px 0;
     border-bottom-style: dashed;
     border-bottom-width: 1px;
     border-bottom-color: #4a4a4a;
@@ -142,15 +144,15 @@ table .item{
     text-decoration:none
 }
 #sidebar .keyword_page a{
-color:#FFA615;
-font-weight:bold;
+    color:#FFA615;
+    font-weight:bold;
 }
 #sidebar .keyword_page a:hover{
     text-decoration:underline;
-        background:none
+    background:none
 }
 .sb_meta {float:right;
-    color: #828282;
+          color: #828282;
 }
 td.lt {
     background-image:url(../images/td_01.gif);}

@@ -2,20 +2,17 @@
 <li>
   <% if f.news_type=="resource" %>
     <div>
-     <%= link_to "#{f.owner.name_or_nick_name(current_user)}",user_path(f.resource.owner) -%> 在<%=link_to_page f.resource.keyword_page %>内发言：
+     <%= link_to "#{f.owner.name_or_nick_name(current_user)}",user_path(f.resource.owner) -%> 在<%=link_to_page f.resource.keyword_page %>中发言：
       <%= render :partial => "resources/resource_left",:object => f.resource %>
     </div>
   <% elsif f.news_type=="comment"%>
     <div>
-      <%= link_to f.owner.nick_name,user_path(f.owner) %>
-      <% if f.comment.action_one.present? and f.comment.action_two.present? %>
-        <%= f.comment.action_one %>了 <%=link_to f.comment.parent.owner.name_or_nick_name(current_user),user_path(f.comment.parent.owner)%>的<%=f.comment.action_two%>并
-      <% end %>
-      在<%=link_to_page f.resource.keyword_page %>内回应<%= link_to f.comment.parent.owner.name_or_nick_name(current_user),user_path(f.comment.parent.owner) %> ：
+      在<%=link_to_page f.resource.keyword_page %>中，
+      <%= comment_action(f.comment) %>
       <span class="sb_meta">
       <%=distance_of_time_in_words(Time.now, f.created_at, true)%></span>
       <p class="friend_news">
-        <%= image_tag "quote_l.gif" %> <%=link_to truncate(f.comment.content,:length => 140),user_resource_comments_path(f.resource.owner,f.resource) %>
+        <%= image_tag "quote_l.gif" %> <%=link_to truncate(h(f.comment.content),:length => 140),user_resource_comments_path(f.resource.owner,f.resource) %>
 
       </p>
     </div>

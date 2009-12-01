@@ -17,14 +17,15 @@ class News < ActiveRecord::Base
 
   end
 
-  def self.list_friends_news(user)
+  def self.list_friends_news(user,offset)
     following_ids=user.followings.map do |f|
       f.id
     end
     self.find_all_by_user_id following_ids,
       :order  => "created_at DESC",
       :conditions => "news_type='comment' or news_type='resource'",
-      :limit => 32
+      :limit => 20,
+      :offset => offset
   end
 
   def self.self_news_for_others(user,page)

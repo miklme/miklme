@@ -10,7 +10,7 @@
     <ul>
       <% if not @searched_keywords.blank? %>
         <% for keyword in @searched_keywords %>
-          <li id="keyword_page">
+          <li>
             <span><%= link_to keyword.keyword,keyword_page_path(keyword)%></span>
           </li>
         <% end %>

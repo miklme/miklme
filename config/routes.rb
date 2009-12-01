@@ -4,7 +4,7 @@ ActionController::Routing::Routes.draw do |map|
     user.resource :true_portrait
     user.resources :controlled_keywords
     user.resources :be_follows
-    user.resources :follows,:new => {:search_user => :get}
+    user.resources :follows,:collection => {:top_20 => :get}
     user.resources :keyword_pages
     user.resources :resources ,:member => {:origin => :get,:preview => :get} do |resource|
       resource.resources :comments,:collection => {:by_time => :get} do |comment|

@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-    <meta content="Mikl,Michael,Mikl.me,Michael网络,关键字,生命值,在线生命值" name="keywords"/>
+    <meta content="Mikl,Michael,Mikl.me,Michael网络,米可网络,米可,关键字,声望,在线声望" name="keywords"/>
     <title>( Michael )</title>
     <%= javascript_include_tag :defaults,:cache => true  %>
     <%= stylesheet_link_tag "result"  %>
@@ -35,12 +35,12 @@
             <div id="welcome">
               <%= render :partial => "shared/search_bar" %>
               <div class="item_blue">
-                <h2 class="title_1">最真实的游戏——<span class="tiantang">天堂</span>与<span class="diyu">地狱</span></h2>
+                <h3>最真实的游戏——<span class="title_1">Michael<span class="yinyi">(米可)</span>网络</span></h3>
                 <h4>保持耐心，我们这样开始</h4>
                 <ol>
                   <li><p>
                       如果你是初次来到mikl.me，或者刚刚注册成功，那么请直接在上面输入“mikl.me第一步”（不含引号）来开始。在今后的任何时候，你都可以输入“mikl.me第一步”这个关键字来进入
-                      mikl.me的教程。要知道，“mikl.me第一步”本身就是一个关键字，不过里面的主要内容由开发者而非用户发布而已。进入后你看到景象的和进入其他的任何关键字差不多。
+                      mikl.me的教程。要知道，“mikl.me第一步”本身就是一个关键字，进入后你看到景象的和进入其他的任何关键字差不多，只是其内的主要内容由开发者而非用户发布而已。
                     </p>
                   </li>
                   <li>
@@ -59,6 +59,7 @@
             <ul class="sb_results" id="wg0">
               <%= render :partial => "news/friends_news",:collection=> @friends_news%>
             </ul>
+            <div class="more"><%= link_to_remote  " 更多好友动作· · ·",:url => {:action => :more_friends_news} %></div>
           <% else %>
             <%= render :partial => "shared/keyword_page_header"%>
           </div>
@@ -72,7 +73,7 @@
             <%= render :partial => "shared/search_bar" %>
 
             <div class="item_blue">
-              <h2 class="title_1">最真实的游戏——<span class="tiantang">天堂</span>与<span class="diyu">地狱</span></h2>
+              <h3>最真实的游戏——<span class="title_1">Michael<span class="yinyi">(米可)</span>网络</span></h3>
               <h5>别再怀疑，Michael是真的游戏。</h5>
             </div>
           </div>

@@ -7,18 +7,11 @@
       <%= render :partial => "shared/field_profile",:locals => {:user => comment.owner,:keyword_page => comment.resource.keyword_page} %>
     </td>
     <td width="520px">
-      <p>      <%= attitude(comment) %>
+      <p>     
       <%=h comment.content  %></p>
       <div class="sb_meta">
-        <%=h comment.created_at.advance(:hours => 8).to_s(:db)  %>
-        <% if comment.action_one.present? %>
-          ,
-          <% if comment.parent_comment.present? %>
-            <%="#{comment.owner.nick_name}#{comment.action_one}了#{comment.parent_comment.owner.nick_name}#{comment.action_two}"  %>
-          <% else %>
-            <%="#{comment.owner.nick_name}#{comment.action_one}了#{comment.resource.owner.nick_name}#{comment.action_two}"  %>
-          <% end %>
-        <% end %>
+        <%= comment_action(comment) %>
+        <%=distance_of_time_in_words(Time.now, comment.created_at, false) %>
       </div>
       <span><%=link_to_reply_path(comment)%></span>
       <div id="<%=y%>">

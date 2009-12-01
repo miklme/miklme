@@ -4,7 +4,7 @@
     <span class="sb_meta"><%=distance_of_time_in_words(Time.now, resource.created_at, true)%></span>
   <div class="margin_left">
     <p>
-      <%=truncate auto_link(resource.content),:length => 300%>
+      <%=auto_link(h(resource.content))%>
        </p>
        <p>
        <%= link_to_origin(resource) %>       </p>

@@ -5,7 +5,7 @@ class KeywordPagesController < ApplicationController
     @user=current_user
     @news=News.list_self_news(@user) if logged_in?
     @many_user_keyword_pages=KeywordPage.find(:all).find_all{|page| page.users_have_resources.size>=3}.sort_by{|page| page.updated_at}.reverse.first(15)
-    @friends_news=News.list_friends_news(@user) if logged_in?
+    @friends_news=News.list_friends_news(@user,0) if logged_in?
     render :layout => "related_keywords"
   end
 
@@ -58,15 +58,15 @@ class KeywordPagesController < ApplicationController
     end
   end
 
-  def more_pages
-    if flash[:keyword_page_offset].blank?
-      flash[:keyword_page_offset]=5
+  def more_friends_news
+    if flash[:friends_news_offset].blank?
+      flash[:friends_news_offset]=20
     else
-      flash[:keyword_page_offset]+=5
+      flash[:friends_news_offset]+=20
     end
-    @keyword_pages=KeywordPage.active_user_keyword_pages(flash[:keyword_page_offset])
+    @friends_news=News.list_friends_news(current_user,flash[:friends_news_offset])
     render :update do |page|
-      page.insert_html :before,"more_pages",:partial => "keyword_page_index",:collection => @keyword_pages
+      page.insert_html :bottom,"wg0",:partial => "news/friends_news",:collection => @friends_news
     end
   end
 

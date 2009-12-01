@@ -1,1 +1,5 @@
-  <%= render :partial => "shared/user_profile_full",:collection => @results %>
+
+<% for r in @results %>
+<div class="dashed"><%= render :partial => "shared/user_profile_full",:object => r%>
+</div>
+<% end %>

@@ -40,7 +40,7 @@ class UsersController < ApplicationController
         b.user=User.find(session[:inviter_id])
         b.follower=current_user
         b.save
-        flash[:notice]="你关注了#{User.find(session[:inviter_id]).name_or_nick_name(current_user)}"
+        flash[:notice]="你现在关注了#{User.find(session[:inviter_id]).name_or_nick_name(current_user)}。在你关注一个人之后，首页里就会显示他的最新动态。"
         session[:relationship]=session[:inviter_id]=nil
       end
       flash[:notice]="你终于注册成功了。在开始之前，请按照说明一步步来。"
@@ -55,7 +55,7 @@ class UsersController < ApplicationController
     @user=User.find(params[:id])
     @be_follow=BeFollow.new
     @news=News.self_news_for_others(@user,params[:page])
-    @friends_news=News.list_friends_news(@user)
+    @friends_news=News.list_friends_news(@user,0)
     render :layout => "resources"
   end
   def search

@@ -4,22 +4,13 @@ module ApplicationHelper
     User.find(id)
   end
 
-  def attitude(comment)
-    if comment.rating==1
-      "<cite>支持#{comment.parent.owner.nick_name}</cite>"
-    elsif comment.rating==0
-      "<span class='grey'>不表态</span>"
-    elsif comment.rating==-1
-      "<strong>攻击#{comment.parent.owner.nick_name}</strong>"
-    end
-  end
   def link_to_origin(resource)
     link_to(image_tag(preview_user_resource_path(resource.owner,resource, :jpg)),origin_user_resource_path(resource.owner,resource,:jpg), :popup => ['预览', 'height=400,width=540']) if resource.has_image?
   end
 
   def my_value
     if logged_in?
-      "<h2>我的生命值：<span id='hp'>#{number_with_precision current_user.value}</span></h2>"
+      "<h2>我的声望：<span id='hp'>#{number_with_precision current_user.value}</span></h2>"
     end
   end
   def link_to_page(keyword_page)
@@ -66,7 +57,7 @@ module ApplicationHelper
     #计算字体大小的公式
     v=(1-(user_order-1).to_f/(users.size-1).to_f)*10+8
     "<span style='font-size:#{v}px' id='resource_content_#{resource.id}'>"+\
-      auto_link(resource.content)+\
+      auto_link(h(resource.content))+\
       "</span>"
   end
 
@@ -80,4 +71,20 @@ module ApplicationHelper
       "</div>"
   end
 
+  def comment_action(comment)
+    if comment.rating==1
+      attitude="<cite>支持</cite>"
+    elsif comment.rating==0
+      attitude="回应"
+    elsif comment.rating==-1
+      attitude="<strong>攻击</strong>"
+    end
+    if comment.action_one.present?
+      action="#{h comment.action_one}了#{comment.parent.owner.nick_name}#{h comment.action_two}"+"并"
+    end
+    owner=link_to comment.parent.owner.nick_name,user_path(comment.parent.owner)
+    user=link_to comment.owner.nick_name,user_path(comment.owner)
+    user+action.to_s+\
+    attitude+"了"+owner
+  end
 end

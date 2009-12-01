@@ -1,9 +1,9 @@
 <ul class="auto_complete_list">
   <% if @keyword_pages.present? %>
     <% for k in @keyword_pages %>
-      <li class="auto_complete_item"><%= k.keyword %></li>
+      <li class="auto_complete_item"><%=h k.keyword %></li>
     <% end %>
   <% else %>
-    <li class="auto_complete_item"><strong><%=params[:keyword_page][:keyword] %></strong>关键字内暂时还没有人发言</li>
+    <li class="auto_complete_item"><strong><%=h params[:keyword_page][:keyword] %></strong>关键字内暂时还没有人发言</li>
   <% end %>
 </ul>

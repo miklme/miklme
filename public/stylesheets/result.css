@@ -152,7 +152,10 @@ cite a{text-decoration:underline}
     float:right;
     font-size:12px
 }
+.sb_meta a{
+        color:#A1A1A1;
 
+}
 .grey{
     color:#A1A1A1;
     margin:0;
@@ -244,11 +247,8 @@ div#sw_nav li {
 #diyu{
     border-top:10px dashed #f9d9d4;
 }
-.tiantang{
-    border-top:6px dotted #E6F4FF;
+.yinyi{
     color:#59c1ff;
-    font-size:24px
-
 }
 .diyu{
     font-size:24px;
@@ -315,7 +315,7 @@ td.rb {
     padding: 6px 12px;
     background:#F3FAFF;
     position:relative;
-    top: 6px;
+    top: 15px;
     border-top: 1px solid #f7fcff;
     border-left: 3px solid #f7fcff;
     border-right: 3px solid #f7fcff;
@@ -813,18 +813,26 @@ div.auto_complete ul strong.highlight {
     font-weight:normal;
     text-align:center;
     clear:both;
+    margin-left:280px;
+    margin-top:5px;
+    margin-bottom:5px
+}
+.more_of_him{
     float:right;
+    font-weight:normal;
+    text-align:center;
+    clear:both;
     margin-right:100px;
     margin-top:5px;
     margin-bottom:5px
 }
-.more a{
+.more a,.more_of_him a{
     color:grey;
 }
 #welcome{
     text-align:center
 }
-.more a:hover{
+.more a:hover,.more_of_him a:hover{
     background-color:#773333;
     border-color:#FF9999 #FF3333 #FF3333 #FF9999;
     border-style:solid;
@@ -836,7 +844,7 @@ div.auto_complete ul strong.highlight {
     color:#FF9966
 }
 .title_1 {
-    font-size:16px;
+    font-size:18px;
     color:#494949;
     font-weight:bold
 }
@@ -863,8 +871,8 @@ div.auto_complete ul strong.highlight {
     color:#888888
 }
 .keyword_page_news{
-        line-height: 18px;
-margin-bottom:5px
+    line-height: 18px;
+    margin-bottom:5px
 }
 .keyword_page_news a:hover{
     color:black;

@@ -25,6 +25,8 @@ class User < ActiveRecord::Base
   has_one :portrait
   has_one :true_portrait
 
+  named_scope :by_value,:order => "value DESC"
+
   accepts_nested_attributes_for :true_portrait, :allow_destroy => true
   accepts_nested_attributes_for :portrait, :allow_destroy => true
   accepts_nested_attributes_for :keyword_pages, :allow_destroy => true
@@ -67,7 +69,7 @@ class User < ActiveRecord::Base
     vs=ValueOrder.find_all_by_keyword_page_id_and_user_id(ids,self.id)
     vs.sum {|item| item.value}
   end
-  #Below methods are the user self,he is active,not positive.ie.He treat others as friends/strangers.
+#  Below methods are the user self,he is active,not positive.ie.He treat others as friends/strangers.
   def followings
     b=BeFollow.scoped_by_follower_id(self.id)
     user_ids=b.map do |a|

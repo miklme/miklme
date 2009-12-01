@@ -1,4 +1,4 @@
-<% x="“"+truncate(keyword_page_news.comment.try(:content),:length => 24).to_s+"”" %>
+<% x="“"+truncate(h(keyword_page_news.comment.try(:content)),:length => 24).to_s+"”" %>
 
 
 <span class="sb_meta">
