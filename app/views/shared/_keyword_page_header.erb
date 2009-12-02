@@ -6,7 +6,7 @@
 <% if logged_in? %>
   <ul class="sw_right">
     <li>
-<%= link_to_unless_current "邀请(+1)",new_user_invite_path(current_user) %>
+<%= link_to_unless_current "邀请(<cite>+1</cite>)",new_user_invite_path(current_user) %>
     </li>
     <li>
       <%= render :partial => "shared/search_user_bar" %>
@@ -17,7 +17,7 @@
   </ul>
   <ul class="sw_left">
     <li id="my_space">
-      <%= link_to "<<我的空间",user_path(current_user)  %>
+      <%= link_to "<<<我的空间",user_path(current_user)  %>
     </li>
   </ul>
 

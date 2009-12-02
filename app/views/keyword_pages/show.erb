@@ -17,7 +17,7 @@
       <% user_id=u.id %>
       <% if u.resources.resources_at_keyword_page(@keyword_page).size>1 %>
         <div id="more_of_<%=user_id%>">
-          <span class="more_of_him"><%= link_to_remote '他在这个关键字的更多发言· · ·',:url => {:action => :more,:user_id => u.id,:keyword_page_id => @keyword_page.id}%></span>
+          <span class="more_of_him"><%= link_to_remote '他在这里的更多发言· · ·',:url => {:action => :more,:user_id => u.id,:keyword_page_id => @keyword_page.id}%></span>
         </div>
       <% end %>
       <div class="double_dot">差距</div>

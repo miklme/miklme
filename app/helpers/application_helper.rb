@@ -43,7 +43,7 @@ module ApplicationHelper
 
   def link_to_resource_comments_path(resource)
     "<span class='reply_botton'>"+\
-      link_to("<span class='reply_link'>回应#{resource.owner.nick_name}<span class='amount'>(#{resource.comments.size})</span></span>", user_resource_comments_path(resource.owner,resource),:popup => true)+\
+      link_to("<span class='reply_link'>回应#{resource.owner.nick_name}<span class='amount'>(#{resource.comments.size})</span>>></span>", user_resource_comments_path(resource.owner,resource),:popup => true)+\
       "</span>"
   end
 
