@@ -886,6 +886,9 @@ div.auto_complete ul strong.highlight {
 #sw_hdr{
     background-repeat: repeat-y;
 }
+.top td{
+    vertical-align: top;
+}
 dd{
     margin-left:0
 }
