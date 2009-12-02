@@ -7,7 +7,7 @@
       <%= render :partial => "shared/field_profile",:locals => {:user => comment.owner,:keyword_page => comment.resource.keyword_page} %>
     </td>
     <td width="520px">
-      <p>     
+      <p>
       <%=h comment.content  %></p>
       <div class="sb_meta">
         <%= comment_action(comment) %>

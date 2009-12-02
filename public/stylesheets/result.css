@@ -300,6 +300,7 @@ td.origin textarea{
 .tip_i {
     color:#AFAFAF;
     font-size:12px;
+     float:right
 }
 td.rm {
     background-image:url(../images/td_06.gif);}
