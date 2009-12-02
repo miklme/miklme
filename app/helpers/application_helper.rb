@@ -55,7 +55,7 @@ module ApplicationHelper
     users=User.find(:all,:order => "value DESC")
     user_order=users.index(resource.owner).to_i+1
     #计算字体大小的公式
-    v=(1-(user_order-1).to_f/(users.size-1).to_f)*10+8
+    v=(1-(user_order-1).to_f/(users.size-1).to_f)*8+8
     "<span style='font-size:#{v}px' id='resource_content_#{resource.id}'>"+\
       auto_link(h(resource.content))+\
       "</span>"
@@ -65,7 +65,7 @@ module ApplicationHelper
     users=User.find(:all,:order => "value DESC")
     user_order=users.index(user).to_i+1
     #计算用户名大小的公式
-    v=(1-(user_order-1).to_f/(users.size-1).to_f)*21+9
+    v=(1-(user_order-1).to_f/(users.size-1).to_f)*16+9
     "<div style='font-size:#{v}px'>"+\
       link_to(user.nick_name,user_path(user)) +\
       "</div>"

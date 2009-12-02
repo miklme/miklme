@@ -896,7 +896,7 @@ dd{
     margin-left:0
 }
 .td_content{
-    width:520px
+    width:405px
 }
 .comment_blank input,.comment_blank textarea{
     border:hidden
@@ -906,7 +906,7 @@ dd{
     padding: 4px;
 }
 .comment_blank textarea{
-    font-size:12px
+    font-size:13px
 }
 .box_2 {
     text-align:left;

@@ -23,7 +23,7 @@
         我在<span id="current_page"><%=h @keyword_page.keyword %></span>中的排名：
       <%= order(current_user,@keyword_page) %></div>
       <h2>
-        最近回应我的
+        最新回应我的
       </h2>
       <%= render :partial => "news/keyword_page_news",:collection => @news %>
     <% end %>
