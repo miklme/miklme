@@ -14,9 +14,8 @@
       </td></tr>
   </tbody>
 </table>
-<div class="dotted"></div>
 <% if logged_in? %>
-  <table class="item" cellspacing="12">
+  <table class="qiantao" cellspacing="12">
     <tr>
       <td width="60">
         <%= render :partial => "shared/field_profile",:locals => {:user => current_user,:keyword_page => @resource.keyword_page}%>
@@ -31,6 +30,5 @@
 <% for comment in @comments %>
   <%= render :partial => "comment",:object => comment %>
 <% end %>
-
 
 

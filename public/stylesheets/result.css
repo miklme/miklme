@@ -269,6 +269,13 @@ div#sw_nav li {
     vertical-align: text-top;
 }
 
+.qiantao{
+    border: 1px solid #d3d3d3;
+    background: #FFF;
+    margin-top: 12px;
+    vertical-align: text-top;
+    border-top:none
+}
 .item_blue {
     padding: 6px 12px;
     margin-bottom: 8px;
@@ -300,7 +307,7 @@ td.origin textarea{
 .tip_i {
     color:#AFAFAF;
     font-size:12px;
-     float:right
+    float:right
 }
 td.rm {
     background-image:url(../images/td_06.gif);}
@@ -886,7 +893,7 @@ dd{
     border:hidden
 }
 .comment_blank p{
-    border:1px solid #D3D3D3;
+    border:1px dashed #888888;
     padding: 4px;
 }
 
