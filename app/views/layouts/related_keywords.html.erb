@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-    <meta content="Mikl,Michael,Mikl.me,Michael网络,米可网络,米可,关键字,声望,在线声望" name="keywords"/>
+    <meta content="Mikl,Michael,Mikl.me,Michael网络,米可网络,米可,关键字,生命值,在线生命值" name="keywords"/>
     <title>( Michael )</title>
     <%= javascript_include_tag :defaults,:cache => true  %>
     <%= stylesheet_link_tag "result"  %>
@@ -39,20 +39,18 @@
                 <h4>保持耐心，我们这样开始</h4>
                 <ol>
                   <li><p>
-                      如果你是初次来到mikl.me，或者刚刚注册成功，那么请直接在上面输入“mikl.me第一步”（不含引号）来开始。在今后的任何时候，你都可以输入“mikl.me第一步”这个关键字来进入
-                      mikl.me的教程。要知道，“mikl.me第一步”本身就是一个关键字，进入后你看到景象的和进入其他的任何关键字差不多，只是其内的主要内容由开发者而非用户发布而已。
+                      如果你是初次来到mikl.me，或者刚刚注册成功，那么请直接在上面输入“mikl.me第一步”（不含引号），并点击“进入关键字”来开始。在今后的任何时候，你都可以输入“mikl.me第一步”这个关键字来进入
+                      mikl.me的教程，并参与反馈。
                     </p>
                   </li>
                   <li>
-                    <p>在现在或者以后的任何时候，你都可以用下面的链接邀请朋友（可选）。邀请朋友之后，他会自动关注你。要知道，让别人关注你有时是很有用的招数。</p>
-                    <p class="item" >我发现了一个独特的应用，你应该对此感到好奇。注册在这里，注册后你就自动关注我了：<%= "http://mikl.me/users/new/#{current_user.id}/" %>
-                    </p>
+                    <p>在现在或者以后的任何时候，点击右上方的“邀请”邀请好友加入Michael(米可)，将会使你获益匪浅。</p>
                   </li>
                 </ol>
               </div>
             </div>
             <div class="tab">
-              <span class="blue_tab"><%= link_to_unless_current "好友的动作" ,keyword_pages_path%></span>
+              <span class="blue_tab">好友的动作</span>
               <p class="item_blue">
               </p>
             </div>

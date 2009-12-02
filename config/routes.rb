@@ -1,5 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :users,:collection => {:search => :get} do |user|
+    user.resources :invites
     user.resource :portrait
     user.resource :true_portrait
     user.resources :controlled_keywords

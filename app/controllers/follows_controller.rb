@@ -11,8 +11,4 @@ class FollowsController < ApplicationController
     end
   end
 
-  def top_20
-    @followings=@user.followings.find(:all,:limit => 20,:order => "value DESC")
-    render :layout => "related_keywords"
-  end
 end

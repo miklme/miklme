@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-    <meta content="Mikl,Michael,Mikl.me,Michael网络,关键字,声望,在线声望" name="keywords"/>
+    <meta content="Mikl,Michael,Mikl.me,Michael网络,关键字,生命值,在线生命值" name="keywords"/>
     <title>( Michael )</title>
     <%= javascript_include_tag :defaults,:cache => true  %>
     <%= stylesheet_link_tag "result"  %>
@@ -28,7 +28,7 @@
             <%= render :partial => "shared/search_bar" %>
             <% if Resource.find_by_keyword_page_id(@keyword_page).blank?%>
               <div class="item_blue">
-                <span class="cadet_blue">天堂与地狱贴在了一起，这个关键字内还没有人发言。</span>
+                <span class="cadet_blue">目前这个关键字内还没有人发言。</span>
               </div>
             <% end %>
             <% if logged_in? and @keyword_page.users.include?(current_user) %>

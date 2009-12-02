@@ -11,7 +11,7 @@ body {
     font-style:normal;
     font-variant:normal;
     font-weight:normal;
-    line-height:normal;h
+    line-height:normal;
     margin:0;
     min-width:980px;
     padding:0;
@@ -84,6 +84,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .search_user_input{
     font-size:12px;
+    padding:0
 }
 .register{
     color:#4F463F;
@@ -153,7 +154,7 @@ cite a{text-decoration:underline}
     font-size:12px
 }
 .sb_meta a{
-        color:#A1A1A1;
+    color:#A1A1A1;
 
 }
 .grey{
@@ -169,9 +170,6 @@ cite a{text-decoration:underline}
 .title:hover{
     background:#F7F7F7 none repeat scroll 0 0;
     border-bottom:1px solid #D8DFEA;}
-#sw_hdr, #sw_content, #sw_main, #sw_foot {
-    width:100%;
-}
 
 #sw_content {
     min-height:344px;
@@ -516,8 +514,12 @@ a.sb_pagP, a.sb_pagN {
     margin:0;
     padding:0;
 }
-.sw_tb ul.sc_hl1 {
+.sw_tb ul.sw_left {
     float:left;
+}
+.sw_left li{
+    border-right:1px solid #FFFFFF;
+    padding:0 0.8em;
 }
 .sw_tb ul.sw_right {
     float:right;
@@ -531,14 +533,12 @@ a.sb_pagP, a.sb_pagN {
     margin:0;
     padding:0;
 }
-#sw_hdr .sw_tb a {
+.sw_tb a{
     color:#FFFFFF;
 }
-#sw_hdr .sw_tb a:hover{
+.sw_tb a:hover{
     background:none;
     text-decoration:underline
-
-
 }
 
 .sw_tbb {
@@ -569,29 +569,16 @@ a.sw_logo:hover{
 
 
 
-#sw_hdr #sb_form, #sw_hdr .sw_box {
-    margin:0;
-    padding:47px 0 0 20px;
-}
-#sw_hdr .sw_bd {
-    margin-top:-2.43em;
-}
 
 #sw_hdr .sw_tb #sch_scopes li a, #sw_hdr .sw_tb #sch_scopes .sc_active span {
     margin:0 1em 0 0.67em;
 }
-#sw_hdr .sc_hl1 li a {
-    border-left:1px solid #CCCCCC;
-    margin-top:-1px;
-    padding:0 0 0 18px;
+#sw_hdr .sw_left li{
+    padding:0 0.8em;
 }
-#sw_hdr #sch_scopes li a {
-    border:0 none;
-    margin-top:0;
-    padding:0;
-}
-.sw_right li span {
-    margin:0 0.85em;
+.sw_right li{
+    padding:0 0.80em;
+    border-right:1px solid #FFFFFF;
 }
 .sw_box h1 {
     color:#525051;
@@ -615,9 +602,7 @@ a.sw_logo:hover{
 #username:hover,#password:hover,#username:focus,#password:focus{
     background-color: white;
 }
-#sw_hdr #sch_scopes li a {
-    padding-bottom:1px;
-}
+
 
 a.sw_logo {
     width:160px;
@@ -760,6 +745,10 @@ div.auto_complete ul strong.highlight {
 #keyword_page a:hover{
     color:#f7ab89;
     background:none;
+}
+#my_space a{
+}
+#my_space a:hover{
 }
 #current_page,#current_page a{
     color:#F76120;

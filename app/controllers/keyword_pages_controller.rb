@@ -9,9 +9,6 @@ class KeywordPagesController < ApplicationController
     render :layout => "related_keywords"
   end
 
-  def friends
-  end
-  
   def create
     begin
       @keyword_page=KeywordPage.find_or_create_by_keyword(params[:keyword_page][:keyword])

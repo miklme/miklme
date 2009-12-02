@@ -39,7 +39,8 @@ em a:hover,a:hover{
 
 }
 #logo a:hover {
-    text-decoration:underline
+    text-decoration:underline;
+    background:none
 }
 a:hover {
 }

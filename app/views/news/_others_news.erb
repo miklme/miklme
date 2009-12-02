@@ -4,7 +4,7 @@
 <% if others_news.news_type=="resource" %>
   <div class="dashed">
     <em><%= link_to "#{others_news.owner.name_or_nick_name(current_user)}",user_path(others_news.resource.owner) -%></em>
-    在<span  id="keyword_page"><%=link_to_page others_news.resource.keyword_page %></span>内发言
+    在<span  id="keyword_page"><%=link_to_page others_news.resource.keyword_page %></span>内说：
     <p><%= auto_link h(others_news.resource.content)%></p>
     <div><%= link_to "详细>>",user_resource_comments_path(others_news.resource.owner,others_news.resource) %></div>
   </div>
