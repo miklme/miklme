@@ -28,9 +28,9 @@ class CommentsController < ApplicationController
       change_user_value(@comment)
       changed_value=@resource.owner.value-session[:before]
       News.create_comment_news(@comment,@resource,changed_value)
-      redirect_to :back
+      redirect_to user_resource_comments_path(@resource.owner,@resource)
     else
-      redirect_to :back
+      redirect_to user_resource_comments_path(@resource.owner,@resource)
     end
   end
 

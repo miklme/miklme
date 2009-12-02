@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
       self.current_user = user
       new_cookie_flag = (params[:remember_me] == "1")
       new_cookie_flag
-      redirect_to :back
+      redirect_to keyword_pages_path
       current_user.last_ip=request.remote_ip
       current_user.save
       flash[:notice] = "成功登入，即刻体验."

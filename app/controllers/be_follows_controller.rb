@@ -23,9 +23,9 @@ class BeFollowsController < ApplicationController
       n.follower_id=current_user.id
       n.news_type="be_follow"
       n.save
-      redirect_to :back
+      redirect_to user_path(user)
     else
-      redirect_to :back
+      redirect_to user_path(user)
     end
   end
 
@@ -33,7 +33,7 @@ class BeFollowsController < ApplicationController
     @be_follow = BeFollow.find(params[:id])
     @be_follow.destroy
     respond_to do |format|
-      format.html { redirect_to :back }
+      format.html { redirect_to user_path(@be_follow.user) }
       format.xml  { head :ok }
     end
   end
