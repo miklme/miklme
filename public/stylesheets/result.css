@@ -150,10 +150,14 @@ cite a{text-decoration:underline}
     float:right;
     font-size:12px
 }
-.sb_meta a{
+.sentence{
+    margin-left:10px;
     color:#A1A1A1;
-
 }
+.sentence a{
+    color:#A1A1A1;
+}
+
 .grey{
     color:#A1A1A1;
     margin:0;
@@ -174,9 +178,7 @@ cite a{text-decoration:underline}
     width:800px;
     margin:auto
 }
-#comment_content{
-    margin:auto;
-}
+
 #user a{
     color:#336699
 }
@@ -892,6 +894,9 @@ div.auto_complete ul strong.highlight {
 }
 dd{
     margin-left:0
+}
+.td_content{
+    width:520px
 }
 .comment_blank input,.comment_blank textarea{
     border:hidden

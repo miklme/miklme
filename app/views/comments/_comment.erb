@@ -6,14 +6,14 @@
     <td width="60px">
       <%= render :partial => "shared/field_profile",:locals => {:user => comment.owner,:keyword_page => comment.resource.keyword_page} %>
     </td>
-    <td>
+    <td class="td_content">
       <p>
-      <%=variable_content comment%></p>
-      <span><%=link_to_reply_path(comment)%></span>
-      <div class="sb_meta">
-        <%= comment_action(comment) %>
+      <%=variable_content comment%>      <span class="sentence">
+        <%= comment_action(comment) %>,
         <%=distance_of_time_in_words(Time.now, comment.created_at, false) %>
-      </div>
+      </span></p>
+      <span><%=link_to_reply_path(comment)%></span>
+
 
       <div id="<%=y%>">
         <% for replied_comment in comment.comments %>

@@ -1,11 +1,11 @@
 <% form_for  ([form.resource.owner,:resource,form]) do |f| %>
   <div class="item_pink">
     <%= f.error_messages %>
-    <p>给你的动作取个名字：<span class="sb_meta">（如：侮辱其人格，断其一指等等）</span>
-    </p>
-    <p>
+    <div>给你的动作取个名字：<span class="sb_meta">（如：侮辱其人格，断其一指等等）</span>
+    </div>
+    <div>
       <%=f.text_field :action_one,:size => 4%>其 <%= f.text_field :action_two,:size => 4 %>
-    </p>
+    </div>
   </div>
   <div class="comment_blank">
     <% if !form.resource.commenters.include?(current_user) %>

@@ -4,14 +4,14 @@
     <td width="60px">
       <%= render :partial => "shared/field_profile",:locals => {:user => current_user,:keyword_page => @resource.keyword_page} %>
     </td>
-    <td>
+    <td class="td_content">
       <p><%  remote_form_for  ([@replied_comment]),:url => { :controller => :replied_comments,:action => "create",:resource_id => @resource,:comment_id => @comment } do |f| %>
         <div class="item_pink">
-          <p>给你的动作取个名字<span class="sb_meta">（如：侮辱其人格，断其一指等等）</span>
-          </p>
-          <p>
+          <div>给你的动作取个名字<span class="sb_meta">（如：侮辱其人格，断其一指等等）</span>
+          </div>
+          <div>
             <%=f.text_field :action_one,:size => 4%>其 <%= f.text_field :action_two,:size => 4 %>
-          </p>
+          </div>
         </div>
         <div class="comment_blank">
           <% if !@comment.commenters.include?(current_user) %>
