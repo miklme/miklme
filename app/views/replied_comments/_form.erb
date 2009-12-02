@@ -4,7 +4,7 @@
     <td width="60px">
       <%= render :partial => "shared/field_profile",:locals => {:user => current_user,:keyword_page => @resource.keyword_page} %>
     </td>
-    <td width="520px">
+    <td>
       <p><%  remote_form_for  ([@replied_comment]),:url => { :controller => :replied_comments,:action => "create",:resource_id => @resource,:comment_id => @comment } do |f| %>
         <div class="item_pink">
           <p>给你的动作取个名字<span class="sb_meta">（如：侮辱其人格，断其一指等等）</span>
@@ -14,8 +14,8 @@
           </p>
         </div>
         <div class="comment_blank">
-          <p>
-            <% if !@comment.commenters.include?(current_user) %>
+          <% if !@comment.commenters.include?(current_user) %>
+            <div>
               <%=f.radio_button :rating,1 %>
               <cite>支持
               </cite>
@@ -24,10 +24,11 @@
               <%=f.radio_button :rating,-1%>
               <strong>攻击
               </strong>
-            <% else %>
-              <span class="grey">你已经表态过了</span>
-            <% end %>
-            <%= f.text_area :content,:size => "48x3"%>
+            </div>
+          <% else %>
+            <div class="grey">你已经表态过了</div>
+          <% end %>
+          <%= f.text_area :content,:size => "48x3"%>
           </p>
         </div>
         <p>

@@ -24,10 +24,6 @@ a {
 a:hover .amount{
     color:white
 }
-li:hover .reply_link,.right_bubble:hover .reply_link {
-    display:inline;
-    float:right;
-}
 .say{
     padding-left:12px;
     padding-top:6px;
@@ -45,8 +41,9 @@ li:hover .reply_link,.right_bubble:hover .reply_link {
     margin-right:20px
 }
 .reply_link{
-    display:none;
-    font-size:12px
+    font-size:12px;
+    display:inline;
+    float:right;
 }
 .zhan_wei{
     min-height:15px;    /*高度最小值设置为：100px*/
@@ -149,7 +146,7 @@ cite a{text-decoration:underline}
 }
 .sb_meta{
     color:#A1A1A1;
-    margin:0;
+    margin-left:10px;
     float:right;
     font-size:12px
 }
@@ -176,6 +173,16 @@ cite a{text-decoration:underline}
     z-index:3;
     width:800px;
     margin:auto
+}
+#comment_content{
+    margin:auto;
+}
+#user a{
+    color:#336699
+}
+#user a:hover{
+    background-color:#003399;
+    color:white;
 }
 .border{
     width:600px
@@ -618,14 +625,8 @@ a.sw_logo {
 #sb_form a.sw_logo {
     margin-right:5px;
 }
-#sw_content .sw_mbrand {
-    color:#FFFFFF;
-    left:0;
-    top:36px;
-}
-#sw_content.lit .sw_mbrand {
-    color:#006DD4;
-}
+
+
 
 #footer {
     border-top:1px solid #F1F1F1;
@@ -895,11 +896,13 @@ dd{
 .comment_blank input,.comment_blank textarea{
     border:hidden
 }
-.comment_blank p{
+.comment_blank{
     border:1px dashed #888888;
     padding: 4px;
 }
-
+.comment_blank textarea{
+    font-size:12px
+}
 .box_2 {
     text-align:left;
 }

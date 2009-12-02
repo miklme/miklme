@@ -8,21 +8,21 @@
     </p>
   </div>
   <div class="comment_blank">
-    <p>
-      <% if !form.resource.commenters.include?(current_user) %>
+    <% if !form.resource.commenters.include?(current_user) %>
+      <div>
         <%=f.radio_button :rating,1 %>
         <cite>支持
         </cite>
         <%=f.radio_button :rating,0%>
-      <span class="grey">不表态</span>
+        <span class="grey">不表态</span>
         <%=f.radio_button :rating,-1%>
         <strong>攻击
         </strong>
-      <% else %>
-        <span class="grey">你已经表态过了</span>
-      <% end %>
-      <%= f.text_area :content,:size => "48x3"%>
-    </p>
+      </div>
+    <% else %>
+      <div class="grey">你已经表态过了</div>
+    <% end %>
+    <%= f.text_area :content,:size => "48x3"%>
   </div>
   <p>
     <%= f.submit '就这样'%>

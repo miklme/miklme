@@ -52,7 +52,7 @@ module ApplicationHelper
   end
 
   def variable_content(resource)
-    users=resource.keyword_page.users_have_resources
+    users=User.find(:all,:order => "value DESC")
     user_order=users.index(resource.owner).to_i+1
     #计算字体大小的公式
     v=(1-(user_order-1).to_f/(users.size-1).to_f)*10+8
@@ -61,9 +61,9 @@ module ApplicationHelper
       "</span>"
   end
 
-  def variable_nick_name(user,keyword_page)
-    user_order=keyword_page.users_have_resources.index(user).to_i+1
-    users=keyword_page.users_have_resources
+  def variable_nick_name(user)
+    users=User.find(:all,:order => "value DESC")
+    user_order=users.index(user).to_i+1
     #计算用户名大小的公式
     v=(1-(user_order-1).to_f/(users.size-1).to_f)*21+9
     "<div style='font-size:#{v}px'>"+\
@@ -85,6 +85,6 @@ module ApplicationHelper
     owner=link_to comment.parent.owner.nick_name,user_path(comment.parent.owner)
     user=link_to comment.owner.nick_name,user_path(comment.owner)
     user+action.to_s+\
-    attitude+"了"+owner
+      attitude+"了"+owner
   end
 end

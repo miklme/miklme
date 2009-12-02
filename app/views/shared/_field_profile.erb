@@ -1,19 +1,19 @@
 <% if logged_in?%>
   <% if current_user.followings.include?(user)  %>
     <div>
-      <%= variable_nick_name(user,keyword_page) %>
+      <%= variable_nick_name(user) %>
       <div id="noticed">已关注</div>
       <cite><%=number_with_precision user.value %></cite>
     </div>
   <% else %>
     <div>
-      <%= variable_nick_name(user,keyword_page) %>
+      <%= variable_nick_name(user) %>
       <cite><%=number_with_precision user.value%></cite>
     </div>
   <% end %>
 <% else %>
   <div>
-      <%= variable_nick_name(user,keyword_page) %>
+      <%= variable_nick_name(user) %>
     <cite><%=number_with_precision user.value%></cite>
   </div>
 <% end %>

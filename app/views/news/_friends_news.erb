@@ -12,7 +12,7 @@
       <span class="sb_meta">
       <%=distance_of_time_in_words(Time.now, f.created_at, true)%></span>
       <p class="friend_news">
-        <%= image_tag "quote_l.gif" %> <%=link_to truncate(h(f.comment.content),:length => 140),user_resource_comments_path(f.resource.owner,f.resource),:popup => true %>
+        <%= image_tag "quote_l.gif" %> <%=link_to variable_content(f.comment),user_resource_comments_path(f.resource.owner,f.resource),:popup => true %>
 
       </p>
     </div>

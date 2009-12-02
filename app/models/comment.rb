@@ -13,7 +13,7 @@ class Comment < ActiveRecord::Base
   named_scope :recent_comments,:limit => 3,:order => 'comments.created_at DESC'
   named_scope :parent_comments,:conditions => "parent_comment_id is NULL"
   validates_presence_of :content
-
+  validates_length_of :content,:maximum => 280
   after_create :adjust_resource_updated_at
   
   def parent

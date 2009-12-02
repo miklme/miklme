@@ -18,10 +18,10 @@
 <% if logged_in? %>
   <table class="qiantao" cellspacing="12">
     <tr>
-      <td width="60">
+      <td width="60px">
         <%= render :partial => "shared/field_profile",:locals => {:user => current_user,:keyword_page => @resource.keyword_page}%>
       </td>
-      <td width="520">
+      <td>
         <%= render :partial => "form",:object => @comment %>
       </td>
     </tr>
