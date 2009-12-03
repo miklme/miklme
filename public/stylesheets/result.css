@@ -892,6 +892,7 @@ div.auto_complete ul strong.highlight {
 .top td{
     vertical-align: top;
 }
+.weight{font-weight:bold}
 dd{
     margin-left:0
 }

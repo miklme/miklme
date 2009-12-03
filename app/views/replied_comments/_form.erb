@@ -17,13 +17,11 @@
           <% if !@comment.commenters.include?(current_user) %>
             <div>
               <%=f.radio_button :rating,1 %>
-              <cite>支持
-              </cite>
+              <%= support(@comment.owner) %>
               <%=f.radio_button :rating,0%>
               <span class="grey">不表态</span>
               <%=f.radio_button :rating,-1%>
-              <strong>攻击
-              </strong>
+              <%= attack(@comment.owner) %>
             </div>
           <% else %>
             <div class="grey">你已经表态过了</div>

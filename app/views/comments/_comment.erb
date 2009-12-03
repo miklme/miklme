@@ -9,8 +9,7 @@
     <td class="td_content">
       <p>
       <%=variable_content comment%>      <span class="sentence">
-        <%= comment_action(comment) %>,
-        <%=distance_of_time_in_words(Time.now, comment.created_at, false) %>
+        <%= comment_action(comment) %>
       </span></p>
       <span><%=link_to_reply_path(comment)%></span>
 

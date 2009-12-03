@@ -87,4 +87,24 @@ module ApplicationHelper
     user+action.to_s+\
       attitude+"了"+owner
   end
+
+  def support(object)
+    if current_user.value>=object.value
+      sentence="<span class='weight'>对方</span>生命值"+"+"+number_with_precision((current_user.value-object.value)/2,:precision => 1)
+    elsif current_user.value<object.value
+      sentence="<span class='weight'>你</span>的生命值"+"+"+number_with_precision((object.value-current_user.value)/2,:precision => 1)
+    end
+    "<cite>支持
+        </cite>(#{sentence})"
+  end
+
+  def attack(object)
+    if current_user.value>=object.value
+      sentence="<span class='weight'>对方</span>生命值"+"-"+number_with_precision(current_user.value-object.value,:precision => 1)
+    elsif current_user.value<object.value
+      sentence="<span class='weight'>你</span>的生命值"+"-"+number_with_precision(object.value-current_user.value,:precision => 1)
+    end
+    "<strong>攻击
+        </strong>(#{sentence})"
+  end
 end

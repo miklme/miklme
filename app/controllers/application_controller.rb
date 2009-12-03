@@ -38,8 +38,7 @@ class ApplicationController < ActionController::Base
       user.last_ip
     end
     if ips.find_all{|ip| ip==current_user.last_ip}.size==1 and\
-        comment.resource.commenters.find_all{|object| object.id==current_user.id}.size==1 and\
-        comment.resource.owner!=current_user
+        comment.resource.commenters.find_all{|object| object.id==current_user.id}.size==1
       true
     else
       comment.rating=0
@@ -54,8 +53,7 @@ class ApplicationController < ActionController::Base
     end
     commenters=comment_comment.parent_comment.commenters
     if ips.find_all{|ip| ip==current_user.last_ip}.size==1 and\
-        commenters.find_all{|object| object.id==current_user.id}.size==1 and\
-        comment_comment.parent_comment.owner!=current_user
+        commenters.find_all{|object| object.id==current_user.id}.size==1
       true
     else
       comment_comment.rating=0
@@ -108,7 +106,6 @@ class ApplicationController < ActionController::Base
   end
 
   def comment_notice(comment)
-    k=comment.resource.keyword_page
     #自己比别人差，并差评别人
     if comment.changed_value<0 and comment.rating<0
       "你试图攻击#{comment.parent.owner.nick_name}，可是对方生命值比你高，你被反弹，生命值<cite>#{comment.changed_value}</cite>"

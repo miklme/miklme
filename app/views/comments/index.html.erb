@@ -6,7 +6,16 @@
       </td>
       <td width="500">
         <cite><%= @resource.created_at_s %></cite>
-        <%= render :partial => "resources/resource_left",:object => @resource %>
+        <<table cellspacing="0" cellpadding="0" border="0" ><tbody>
+    <tr>
+      <td width="40" height="30" class="lt"/><td height="30" class="ct"/><td width="40" height="30" class="rt"/></tr>
+    <tr><td width="40" valign="top" class="lm"><%= image_tag "td_arrow.gif"%></td><td valign="top" class="origin"> 
+        <%= variable_content(@resource)%>
+
+        <p>
+        <%= link_to_origin(@resource) %> </p>
+      </td><td width="40" class="rm"/></tr>
+    <tr><td width="40" height="20" class="lb"/><td height="20" class="cb"/><td width="40" height="20" class="rb"/></tr></tbody></table>
       </td>
       <td width="100">
       </td>
