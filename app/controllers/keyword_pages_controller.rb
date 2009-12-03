@@ -32,7 +32,7 @@ class KeywordPagesController < ApplicationController
       @news=News.list_self_news(@user)
       @resource=@keyword_page.resources.build
     end
-    @per_page=2
+    @per_page=5
     @users=@keyword_page.users_have_resources.paginate(:page => params[:page],:per_page => @per_page)
     session[:page]=params[:page]
     keyword_pages=KeywordPage.find_with_ferret(@keyword_page.keyword+"~")-@keyword_page.to_a
