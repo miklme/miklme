@@ -32,7 +32,7 @@ class KeywordPagesController < ApplicationController
       @news=News.list_self_news(@user)
       @resource=@keyword_page.resources.build
     end
-    @per_page=10
+    @per_page=2
     @users=@keyword_page.users_have_resources.paginate(:page => params[:page],:per_page => @per_page)
     session[:page]=params[:page]
     keyword_pages=KeywordPage.find_with_ferret(@keyword_page.keyword+"~")-@keyword_page.to_a
@@ -44,9 +44,9 @@ class KeywordPagesController < ApplicationController
 
   def more
     if flash["resource_offset_of_#{params[:user_id]}"].blank?
-      flash["resource_offset_of_#{params[:user_id]}"]=1
+      flash["resource_offset_of_#{params[:user_id]}"]=20
     else
-      flash["resource_offset_of_#{params[:user_id]}"]+=10
+      flash["resource_offset_of_#{params[:user_id]}"]+=20
     end
     k=KeywordPage.find(params[:keyword_page_id])
     resources=User.find(params[:user_id]).resources.find(:all,:limit => 10,:offset => flash["resource_offset_of_#{params[:user_id]}"],:order => "created_at DESC",:conditions => {:keyword_page_id => k.id})

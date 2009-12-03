@@ -1,33 +1,31 @@
 
 <%= render :partial => "resources/form" %>
-<div class="border">
-  <div class="sb_pag">
-    <%= will_paginate @users, :previous_label => '<cite>↑ 天堂方向</cite>', :next_label => '地狱方向 ↓ ' %>
-  </div>
-  
   <div class="shijieguan sb_results">
     <% if params[:page].to_i==1 or params[:page].blank?%>
-      <div id="tiantang"><h2 class="comfort">天堂</h2></div>
+      <div id="tiantang"><h2 class="comfort">话语权强势</h2></div>
     <% end %>
 
     <% for u in @users  %>
       <div class="order_profile"><%= render :partial => "shared/field_profile",:locals => {:user => u,:keyword_page => @keyword_page}%>
       </div>
-      <%= render  :partial => "resources/resource_right",:object => u.resources.resources_at_keyword_page(@keyword_page).first %>
+      <%= render  :partial => "resources/resource_right",:collection => u.resources.resources_at_keyword_page(@keyword_page).first(20)%>
+
       <% user_id=u.id %>
-      <% if u.resources.resources_at_keyword_page(@keyword_page).size>1 %>
+      <% if u.resources.resources_at_keyword_page(@keyword_page).size>20%>
         <div id="more_of_<%=user_id%>">
           <span class="more_of_him"><%= link_to_remote '他在这里的更多发言· · ·',:url => {:action => :more,:user_id => u.id,:keyword_page_id => @keyword_page.id}%></span>
         </div>
       <% end %>
-      <div class="double_dot">差距</div>
+
+      <div class="double_dot">不同作者的分割线</div>
     <% end %>
     <% if params[:page].to_i==(@keyword_page.users_have_resources.size/@per_page.to_f).ceil or @keyword_page.users_have_resources.size<=@per_page%>
       <div id="diyu">
-        <h2 class="highlight">地狱</h2>
+        <h2 class="highlight">话语权弱势</h2>
       </div>
     <% end %>
-
+    <div class="fanye">
+      <%= will_paginate @users, :previous_label => '<cite>↑ 强势</cite>', :next_label => '弱势 ↓ ' %>
+    </div>
   </div>
-</div>
 

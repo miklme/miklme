@@ -8,7 +8,7 @@ class CommentsController < ApplicationController
     if logged_in? and !current_user.keyword_pages.include?(@keyword_page)
       current_user.keyword_pages<<@keyword_page
     end
-    @comments=@resource.comments_by_time(params[:page])
+    @comments=@resource.comments.parent_comments.by_time.paginate(:page => params[:page],:per_page => 10)
     @comment=@resource.comments.build
     respond_to do |format|
       format.html

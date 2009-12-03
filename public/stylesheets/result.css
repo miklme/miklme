@@ -655,6 +655,8 @@ a.sw_logo {
 }
 #content p{
     line-height:162%;
+    margin-bottom:10px;
+    margin-top:0
 }
 .interview p{
     margin-top:0.2em;
@@ -670,9 +672,6 @@ a.sw_logo {
     padding:0 15px 0 0;
     width:230px;
     word-wrap:break-word;
-}
-#results_area .sb_pag {
-    padding:1.25em 0 1.54em;
 }
 .mktmsg, .dnsmsg, .msg {
     float:left;
@@ -896,6 +895,33 @@ div.auto_complete ul strong.highlight {
 dd{
     margin-left:0
 }
+.fanye {
+padding:1.25em 0 1.54em;
+float:left;
+margin:10px;
+padding:0;
+width:100%;
+}
+.fanye span,.fanye a {
+float:left;
+}
+
+
+.fanye a:hover{
+background:#FBEFDB none repeat scroll 0 0;
+border:1px solid #FFA615;
+text-decoration:none;
+}
+.fanye a, .fanye a:visited {
+color:#F76120;
+}
+.fanye a, .fanye span {
+border:1px solid #D4D4D4;
+display:block;
+margin:0 0.38em 0 0;
+padding:0.3em 0.7em;
+text-align:center;}
+
 .td_content{
     width:405px
 }

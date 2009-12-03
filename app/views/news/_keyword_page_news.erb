@@ -1,8 +1,6 @@
 <% x="“"+truncate(h(keyword_page_news.comment.try(:content)),:length => 24).to_s+"”" %>
 
 
-<span class="sb_meta">
-<%=distance_of_time_in_words(Time.now, keyword_page_news.created_at, true)%></span>
 <% if keyword_page_news.news_type=="be_comment" %>
   <div class="keyword_page_news">
     <%=link_to x,user_news_path(keyword_page_news.owner,keyword_page_news),:popup => true %>
