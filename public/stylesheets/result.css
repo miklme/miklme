@@ -24,6 +24,9 @@ a {
 a:hover .amount{
     color:white
 }
+.bold{
+    font-weight:bold
+}
 .say{
     padding-left:12px;
     padding-top:6px;

@@ -37,7 +37,7 @@ class KeywordPagesController < ApplicationController
     session[:page]=params[:page]
     keyword_pages=KeywordPage.find_with_ferret(@keyword_page.keyword+"~")-@keyword_page.to_a
     @searched_keywords=keyword_pages.find_all{|k| k.resources.size>=1}.first(8)
-    #未使用用户自定义编辑关键字功能
+    #未使用用户自定义编辑话题功能
     @related_keywords=@keyword_page.related_keywords
   end
 

@@ -29,7 +29,7 @@ class ResourcesController < ApplicationController
       @keyword_page.updated_at=Time.now
       @keyword_page.save
       News.create_resource_news(@resource)
-      flash[:notice]="成功。你和你的发言出现在下方的某个位置（字体大小、排位高低取决于你的<cite>生命值</cite>）。"
+      flash[:notice]="成功。你和你的发言出现在下方的某个位置（字体大小、排位高低取决于你的<cite>声望</cite>）。"
       redirect_to keyword_page_path(@keyword_page)
     else
       render :action => :new,:layout => "keyword_pages"

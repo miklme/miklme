@@ -110,7 +110,7 @@
         body: ""
       messages:
         inclusion: "不包含于列表中"
-        exclusion: "是保留关键字"
+        exclusion: "是保留话题"
         invalid: "是无效的"
         confirmation: "与确认值不匹配"
         accepted: "必须是可被接受的"

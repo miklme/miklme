@@ -8,10 +8,10 @@ zh-CN:
         description: 链接描述
         link_url: 地址
         title: 标题
-        keywords: 关键字
+        keywords: 话题
         content: 内容
       related_keyword:
-        name: "相关关键字"
+        name: "相关话题"
       user:
         username: "用户名"
         name: "姓名"  #g

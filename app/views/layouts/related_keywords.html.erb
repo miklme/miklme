@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-    <meta content="Mikl,Michael,Mikl.me,Michael网络,米可网络,米可,关键字,生命值,在线生命值" name="keywords"/>
+    <meta content="Mikl,Michael,Mikl.me,Michael网络,米可网络,米可,话题,声望,在线声望" name="keywords"/>
     <title>( Michael )</title>
     <%= javascript_include_tag :defaults,:cache => true  %>
     <%= stylesheet_link_tag "result"  %>
@@ -35,12 +35,9 @@
             <div id="welcome">
               <%= render :partial => "shared/search_bar" %>
               <div class="item_blue">
-                <h3>最真实的游戏——<span class="title_1">Michael<span class="yinyi">(米可)</span>网络</span></h3>
-                <h4>保持耐心，我们这样开始</h4>
+                <h3><span class="title_1">舆论风向标<span class="yinyi"></span></span></h3>
                 <p>
-                  如果你是初次来到mikl.me，或者刚刚注册成功，那么请直接在上面输入“mikl.me第一步”（不含引号），并点击“进入关键字”来开始。在今后的任何时候，你都可以输入“mikl.me第一步”这个关键字来进入
-                  mikl.me的教程，并参与反馈。
-                </p>
+                  Michael是舆论分析的工具，帮助你了解人们对于公共事件的看法。如果你的发言被许多人认可，你会成为意见领袖从而影响更多人。             </p>
               </div>
             </div>
             <div class="tab">
@@ -65,8 +62,8 @@
             <%= render :partial => "shared/search_bar" %>
 
             <div class="item_blue">
-              <h3>最真实的游戏——<span class="title_1">Michael<span class="yinyi">(米可)</span>网络</span></h3>
-              <h5>别再怀疑，Michael是真的游戏。</h5>
+              <h3><span class="title_1">舆论风向标<span class="yinyi"></span></span></h3>
+              <h5>在公共知识领域，Michael帮助你了解什么样的意见更被支持。</h5>
             </div>
           </div>
           <div class="interview">
@@ -74,24 +71,14 @@
               还没有Michael帐户？
               <%= button_to "立刻注册!",new_user_path,:id => "register" %>
             </h3>
-            <h3>比拼自我影响力的游戏</h3>
+            <h3>舆论分析工具</h3>
             <p>
-              在Michael上，我们游戏的筹码是自己说话的影响力——你越厉害，任何所说的话就会引起越多人的关注，就会有越多人回应自己。想体验振臂一呼，应者云集的感觉吗？
+              在Michael上，针对不同的<span class="bold">公共事件</span>，你能够看到大多数人认同哪一种观点，同时你可决定谁能成为意见领袖。
             </p>
-            <h3>回应认识和不认识的人</h3>
+            <h3>发掘事实上的意见领袖</h3>
             <p>
-              你可以支持或者攻击别人，这将使他的影响力发生变化。当然前提是你足够强大。
+              一个人对于公共事件的看法、观点越被认同，他就能够获得越高的声望。
             </p>
-            <h3>关注自己感兴趣的人</h3>
-            <p>在Michael，你同样可以关注自己的朋友或感兴趣的人，这样你就不会错过他的一举一动，并随时了解他“影响力”的变化。</p>
-            <h3>
-              在感兴趣的关键字内发言
-            </h3>
-            <p>
-              在上面的输入框中可以进入自己感兴趣的关键字（请留心输入框的自动提示功能，这里的自动提示将比你见过的更加智能）。进入关键字之后，你就能够看到不同影响力的人们围绕这个关键字在说什么，同时你也可以发言，看看自己的影响力和别人相比怎样。
-            </p>
-
-
           </div>
 
         <% end %>

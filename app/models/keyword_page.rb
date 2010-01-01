@@ -20,8 +20,8 @@ class KeywordPage < ActiveRecord::Base
   has_many :value_orders
   has_many :users,:through => :value_orders,:source => :user
   has_one :top_user,:through => :value_orders,:source => :user,:order => "users.value DESC"
-  validates_uniqueness_of :keyword,:message => "这个关键字已经存在了"
-  validates_presence_of :keyword,:message => "关键字名不能为空"
+  validates_uniqueness_of :keyword,:message => "这个话题已经存在了"
+  validates_presence_of :keyword,:message => "话题名不能为空"
   named_scope :of_some_user, lambda { |user_id| {
       :include => :value_orders,
       :conditions => [ "value_orders.user_id = ?", user_id ]

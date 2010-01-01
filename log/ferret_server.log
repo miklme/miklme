@@ -310,7 +310,7 @@ index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6febf6c>
 index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6febf6c>
 ############ registerclass KeywordPage
 index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6febf6c>
-#method_missing(:add, [:keyword_page, {:key=>"KeywordPage-35", :class_name=>"KeywordPage", :id=>"35", :keyword=>"关键字"}])
+#method_missing(:add, [:keyword_page, {:key=>"KeywordPage-35", :class_name=>"KeywordPage", :id=>"35", :keyword=>"话题"}])
 ############ registerclass KeywordPage
 index for class KeywordPage: #<ActsAsFerret::LocalIndex:0xb6febf6c>
 ############ registerclass KeywordPage
