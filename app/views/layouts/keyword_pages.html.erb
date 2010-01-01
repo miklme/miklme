@@ -21,30 +21,40 @@
         </div>
       </div>
       <div id="sw_content">
-          <%= render :partial => "keyword_pages/keyword_page_side" %>
-          <div id="content">
-            <%   if flash[:notice].present?%>  <p class="notice"><%=flash[:notice] %></p>  <% end %>
-            <%   if flash[:error].present?%> <p class="error"> <%=flash[:error]  %></p> <% end %>
-            <%= render :partial => "shared/search_bar" %>
-            <% if Resource.find_by_keyword_page_id(@keyword_page).blank?%>
-              <div class="item_blue">
-                <span class="cadet_blue">目前这个话题内还没有人发言。</span>
-              </div>
-            <% end %>
-            <% if logged_in? and @keyword_page.users.include?(current_user) %>
-              <div class="say">
-                对于<span id="current_page"><%=@keyword_page.keyword  %></span>，你有什么想说的呢？
-              </div>
+        <%= render :partial => "keyword_pages/keyword_page_side" %>
+        <div id="content">
+          <%   if flash[:notice].present?%>  <p class="notice"><%=flash[:notice] %></p>  <% end %>
+          <%   if flash[:error].present?%> <p class="error"> <%=flash[:error]  %></p> <% end %>
+          <%= render :partial => "shared/search_bar" %>
+          <% if Resource.find_by_keyword_page_id(@keyword_page).blank?%>
+            <div class="item_blue">
+              <span class="cadet_blue">目前这个话题内还没有人发言。</span>
+            </div>
+          <% end %>
+          <% if logged_in? and @keyword_page.users.include?(current_user) %>
+            <div class="say">
+              <h4>话题简介：              <input type="button" id="edit_description" value="我要写简介"></input>
+              </h4>
+              <p id="keyword_page_description"><%=h @keyword_page.description %></p>
+              <%=  in_place_editor  "keyword_page_description",{
+                :url => url_for(:controller => :keyword_pages,:action => "set_keyword_page_description", :id => @keyword_page.id),
+                :rows => 6,:cols => 52,:cancel_text => "取消",:save_text => "就这样",:loading_text => "请稍等...",
+                :saving_text => "保存中...",
+                :external_control => "edit_description"
+              } %>
+            </div>
+            <div class="say" id="current_page">
+              你的看法：
+            </div>
+          <% end %>
 
-            <% end %>
+          <!--
+          有趣的分割点
+          <span class="sc_bullet">·</span>%>
+          -->
 
-            <!--
-            有趣的分割点
-            <span class="sc_bullet">·</span>%>
-            -->
-
-            <%= @content_for_layout %>
-          </div></div></div>
+          <%= @content_for_layout %>
+        </div></div></div>
     <%= render :partial => "shared/footer" %>
   </body>
 </html>

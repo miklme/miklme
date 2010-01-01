@@ -1,6 +1,7 @@
 class KeywordPagesController < ApplicationController
   skip_before_filter :login_required
   skip_before_filter :check_profile_status
+  in_place_edit_for :keyword_page,:description
   def index
     @user=current_user
     @news=News.list_self_news(@user) if logged_in?
