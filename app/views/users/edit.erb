@@ -12,7 +12,7 @@
         <td>真实姓名不会以<strong>任何形式</strong>泄露(请相信Michael)。通过真实姓名，朋友才会找到你。不放心的话以后再说吧。</td>
       </tr>
       <tr><td><%= f.label :sex,"性别＊" %></td><td><%= f.radio_button :sex,1%>男<%= f.radio_button :sex,0 %>女</td></tr>
-      <tr><td><%= f.label :birthday,'生日＊' %></td><td><%= f.date_select :birthday,:start_year => 1970,:end_year => Time.now.year-8%></td><td>你的生日对于熟人或许很重要...</td></tr>
+      <tr><td><%= f.label :birthday,'生日＊' %></td><td><%= f.date_select :birthday,:start_year => 1970,:end_year => Time.zone.now.year-8%></td><td>你的生日对于熟人或许很重要...</td></tr>
       <tr><td><%= f.label :address,"常居地＊" %></td><td><%= f.text_field :province,:size => 3 %>省<%= f.text_field :city,:size => 4 %>市</td></tr>
 
     </table>

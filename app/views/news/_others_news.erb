@@ -1,5 +1,5 @@
 <span class="right">
-<%=distance_of_time_in_words(Time.now, others_news.created_at, true)%></span>
+<%=distance_of_time_in_words(Time.zone.now, others_news.created_at, true)%></span>
 
 <% if others_news.news_type=="resource" %>
   <div class="dashed">

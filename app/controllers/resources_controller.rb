@@ -26,7 +26,7 @@ class ResourcesController < ApplicationController
     @resource=@keyword_page.resources.build(params[:resource])
     @resource.owner=current_user
     if @resource.save
-      @keyword_page.updated_at=Time.now
+      @keyword_page.updated_at=Time.zone.now
       @keyword_page.save
       News.create_resource_news(@resource)
       flash[:notice]="成功。你和你的发言出现在下方的某个位置（字体大小、排位高低取决于你的<cite>声望</cite>）。"

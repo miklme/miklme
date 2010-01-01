@@ -33,7 +33,11 @@ class Resource < ActiveRecord::Base
 
 
   default_scope :order => "resources.created_at DESC"
-  named_scope :in_one_day,:conditions => ["resources.created_at > ?",Time.now.yesterday]
+  named_scope :in_one_day,:conditions => ["resources.created_at > ?",Time.zone.now.yesterday]
+  named_scope :in_hours, lambda { |hours|
+    { :conditions => ['created_at > ?', Time.zone.now.advance(:hours => -hours)] }
+  }
+
   named_scope :recent,:limit => 15,:order => "resources.created_at DESC"
   named_scope :resources_at_keyword_page , lambda { |keyword_page|
     {:order => "created_at DESC", :conditions => {:keyword_page_id => keyword_page.id} }

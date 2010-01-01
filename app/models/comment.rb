@@ -32,7 +32,7 @@ class Comment < ActiveRecord::Base
   
   private
   def adjust_resource_updated_at
-    self.resource.updated_at=Time.now
+    self.resource.updated_at=Time.zone.now
     self.resource.save
   end
 
