@@ -43,7 +43,7 @@ class UsersController < ApplicationController
         flash[:notice]="你现在关注了#{User.find(session[:inviter_id]).name_or_nick_name(current_user)}。在你关注一个人之后，首页里就会显示他的最新动态。"
         session[:relationship]=session[:inviter_id]=nil
       end
-      flash[:notice]="你终于注册成功了。在开始之前，请按照说明一步步来。"
+      flash[:notice]="你终于注册成功了。"
       redirect_to keyword_pages_path
     else
       render :action => "edit"
