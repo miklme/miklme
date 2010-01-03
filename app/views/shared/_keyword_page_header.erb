@@ -5,14 +5,19 @@
 </ul>
 <% if logged_in? %>
   <ul class="sw_right">
+
     <li>
-<%= link_to_unless_current "邀请(<cite>+1</cite>)",new_user_invite_path(current_user) %>
+      <%= link_to_unless_current "邀请(<cite>+1</cite>)",new_user_invite_path(current_user) %>
     </li>
     <li>
       <%= render :partial => "shared/search_user_bar" %>
     </li>
     <li>
       <%= link_to "离开",session_path,:method => :delete %>
+    </li>
+    <li>
+      <%= link_to "意见反馈",keyword_page_path(KeywordPage.find_by_keyword("意见反馈")),:id => "feedback" %>
+
     </li>
   </ul>
   <ul class="sw_left">

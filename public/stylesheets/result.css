@@ -47,6 +47,12 @@ a:hover .amount{
     display:inline;
     float:right;
 }
+.fdbk_tab_left:hover {
+right:-1px;
+}
+#feedback{
+    color:red
+}
 .zhan_wei{
     min-height:15px;    /*高度最小值设置为：100px*/
     height:auto !important; /*兼容FF,IE7也支持 !important标签*/
