@@ -21,7 +21,7 @@
           <tr><td><%= f.label :username,'登录帐号，请使用合法字符' %></td><td>        <%= f.text_field :username,:size => 23 %></td></tr>
           <tr><td><%= f.label :password,'密码，至少6位' %></td><td>  <%= f.password_field :password,:size => 23 %></td></tr>
           <tr><td><%= f.label :password_confirmation,'密码确认' %></td><td>  <%= f.password_field :password_confirmation,:size => 23 %></td></tr>
-          <tr><td><%= f.check_box :terms%> <%= f.label :terms,'我同意Michael的' %><%=link_to "《使用协议》",:controller => :shared,:action => :xie_yi %></td><td><%=f.submit '注册'%></td></tr>
+          <tr><td><%= f.check_box :terms%> <%= f.label :terms,'我同意网站的' %><%=link_to "《使用协议》",:controller => :shared,:action => :xie_yi %></td><td><%=f.submit '注册'%></td></tr>
         </table>
       <% end -%>
     </div>
