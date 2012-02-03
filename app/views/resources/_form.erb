@@ -15,10 +15,12 @@
 
       <div class="box_3">
         <div class="right"><%= f.submit("",:id => "publisher_submit",:class => "btn") %></div>
-        <span class="left">
+     <!-- 暂时隐藏上传图片功能
+     <span class="left">
           <%= image_tag "picture.png" %>
           <%= f.file_field :image_file,:size => 8%>
         </span>
+     -->
         <span id="to_here">◄<span class="grey">只能写到这里~</span></span>
         <%= f.hidden_field :image_file_temp %>
 
