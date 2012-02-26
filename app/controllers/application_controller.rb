@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   before_filter :login_required,:check_profile_status
 
   def auto_complete_for_keyword_page_keyword
-    keyword_pages=KeywordPage.find_with_ferret(params[:keyword_page][:keyword]+"~")
+    keyword_pages=KeywordPage.find_by_keyword(params[:keyword_page][:keyword])
     @keyword_pages=keyword_pages.find_all{|k| k.resources.size>=1}.first(15)
     render :layout => false
   end

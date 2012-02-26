@@ -36,7 +36,7 @@ class KeywordPagesController < ApplicationController
     @per_page=5
     @users=@keyword_page.users_have_resources.paginate(:page => params[:page],:per_page => @per_page)
     session[:page]=params[:page]
-    keyword_pages=KeywordPage.find_with_ferret(@keyword_page.keyword)
+    keyword_pages=KeywordPage.find_by_keyword(@keyword_page.keyword)
     @searched_keywords=keyword_pages.find_all{|k| k.resources.size>=1}.first(8)
     #未使用用户自定义编辑话题功能
     @related_keywords=@keyword_page.related_keywords
