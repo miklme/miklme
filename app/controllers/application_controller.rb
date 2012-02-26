@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
 
   def auto_complete_for_keyword_page_keyword
     keyword_pages=KeywordPage.find_by_keyword(params[:keyword_page][:keyword])
-    @keyword_pages=keyword_pages.find_all{|k| k.resources.size>=1}.first(15)
+    @keyword_pages=keyword_pages.all.first(15)
     render :layout => false
   end
   
