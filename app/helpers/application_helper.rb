@@ -10,7 +10,7 @@ module ApplicationHelper
 
   def my_value
     if logged_in?
-      "<h2>我的声望：<span id='hp'>#{number_with_precision (current_user.value, :precision => 2)}</span></h2>"
+      "<h2>我的声望：<span id='hp'>#{number_with_precision(current_user.value, :precision => 2)}</span></h2>"
     end
   end
   def link_to_page(keyword_page)
