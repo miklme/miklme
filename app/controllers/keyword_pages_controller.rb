@@ -5,7 +5,7 @@ class KeywordPagesController < ApplicationController
   def index
     @user=current_user
     @news=News.list_self_news(@user) if logged_in?
-    @many_user_keyword_pages=KeywordPage.find(:all).find_all{|page| page.resources.in_hours(72).size>=3}.reverse.first(15)
+    @many_user_keyword_pages=KeywordPage.find(:all).find_all{|page| page.resources.in_hours(720).size>=3}.reverse.first(15)
     @friends_news=News.list_friends_news(@user,0) if logged_in?
     render :layout => "related_keywords"
   end
